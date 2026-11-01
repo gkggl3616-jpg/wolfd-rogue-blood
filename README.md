@@ -35,7 +35,7 @@ Bu komuttaki yürütme seçeneği yalnızca bu işlem için geçerlidir; sistem 
 4 paketin dizinleri okundu: **41.560 dizin/dosya kaydı**, **139 tanımlı komut**, **73 atanmış komut**. Bütün `AddAction` ve `rangebind` satırları listelendi. Komutların oyun içinde çalışması doğrulanmadı. Bazı komutlar aynı tuşu paylaşır; bazıları yalnızca motor tanımıdır.
 
 - [Bütün kontroller ve çakışmalar](docs/KONTROLLER.md)
-- [Paket envanteri ve SHA-256 değerleri (gzip)](docs/archive-inventory.json.gz)
+- [Paket özeti ve SHA-256 değerleri](docs/archive-summary.json)
 - [Sonradan oyun bağlantısı eklemek](docs/ENTEGRASYON.md)
 
 Taramanın yeniden üretilmesi:
@@ -45,6 +45,8 @@ python tools/scan_xfs.py "C:\oyun-paketlerinin-klasoru"
 ```
 
 Araç sadece dosyaları okur. Kaynak `.xfs` paketlerini değiştirmez veya çalıştırmaz. Paketlerin tamamı açılmadı; bütün dizin indeksleri ve `autoexec.cfg` kontrol içeriği çözüldü. Tanınmayan dosya adı baytları envanterde `�` ile gösterilebilir; dizin kayıtlarının sayısı ve konumları korunur.
+
+Tam kayıt listesi tarama sırasında yerelde `docs/archive-inventory.json` ve sıkıştırılmış `.json.gz` kopyası olarak üretilir. Depoda daha küçük `archive-summary.json` raporu bulunur.
 
 ## Sonradan eklenecekler
 

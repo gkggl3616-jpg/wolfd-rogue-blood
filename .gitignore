@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/
+*.xfs
+*.log
+.venv/
+docs/archive-inventory.json
+docs/archive-inventory.json.gz

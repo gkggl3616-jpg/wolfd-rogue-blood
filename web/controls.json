@@ -1,0 +1,1607 @@
+{
+  "title": "Wolf Rogue Blood",
+  "source": "2490271990696398.xfs / Root/autoexec.cfg",
+  "scope": "Statik yapılandırma taraması. Komut tanımı, oyun modunda çalıştığını kanıtlamaz. Klavye adları Windows DirectInput tarama kodu yorumudur; bölgesel noktalama değişebilir. Fare düğmeleri dosyadaki ham kodlarıyla korunmuştur.",
+  "controls": [
+    {
+      "action": "Forward",
+      "id": 0,
+      "label": "İleri",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "W",
+          "raw": "##17"
+        }
+      ],
+      "mobile": "Sol sanal çubuk",
+      "status": "atanmış"
+    },
+    {
+      "action": "Backward",
+      "id": 1,
+      "label": "Geri",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "S",
+          "raw": "##31"
+        }
+      ],
+      "mobile": "Sol sanal çubuk",
+      "status": "atanmış"
+    },
+    {
+      "action": "Activate",
+      "id": 2,
+      "label": "Etkileşim",
+      "bindings": [
+        {
+          "device": "Fare",
+          "key": "Fare düğmesi ##4 (etkileşim)",
+          "raw": "##4"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "Reload",
+      "id": 3,
+      "label": "Şarjör değiştir",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "R",
+          "raw": "##19"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "TurnAround",
+      "id": 4,
+      "label": "Arkaya dön",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Backspace",
+          "raw": "##14"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Duck",
+      "id": 5,
+      "label": "Eğil",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Sol Ctrl",
+          "raw": "##29"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "Jump",
+      "id": 6,
+      "label": "Zıpla",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Space",
+          "raw": "##57"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "Speed",
+      "id": 7,
+      "label": "Hız / yürü-koş",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Sol Shift",
+          "raw": "##42"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "Fire",
+      "id": 8,
+      "label": "Ateş",
+      "bindings": [
+        {
+          "device": "Fare",
+          "key": "Fare düğmesi ##3 (ateş)",
+          "raw": "##3"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "Strafe",
+      "id": 9,
+      "label": "Yana hareket kipi",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Sol Alt",
+          "raw": "##56"
+        }
+      ],
+      "mobile": "Sol sanal çubuk",
+      "status": "atanmış"
+    },
+    {
+      "action": "Left",
+      "id": 10,
+      "label": "Sola dön",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Sol ok",
+          "raw": "##203"
+        }
+      ],
+      "mobile": "Sağ bakış alanı",
+      "status": "atanmış"
+    },
+    {
+      "action": "Right",
+      "id": 11,
+      "label": "Sağa dön",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Sağ ok",
+          "raw": "##205"
+        }
+      ],
+      "mobile": "Sağ bakış alanı",
+      "status": "atanmış"
+    },
+    {
+      "action": "StrafeLeft",
+      "id": 13,
+      "label": "Sola hareket",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "A",
+          "raw": "##30"
+        }
+      ],
+      "mobile": "Sol sanal çubuk",
+      "status": "atanmış"
+    },
+    {
+      "action": "StrafeRight",
+      "id": 14,
+      "label": "Sağa hareket",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "D",
+          "raw": "##32"
+        }
+      ],
+      "mobile": "Sol sanal çubuk",
+      "status": "atanmış"
+    },
+    {
+      "action": "LookUp",
+      "id": 16,
+      "label": "Yukarı bak",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Yukarı",
+          "raw": "##200"
+        }
+      ],
+      "mobile": "Sağ bakış alanı",
+      "status": "atanmış"
+    },
+    {
+      "action": "LookDown",
+      "id": 17,
+      "label": "Aşağı bak",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Aşağı",
+          "raw": "##208"
+        }
+      ],
+      "mobile": "Sağ bakış alanı",
+      "status": "atanmış"
+    },
+    {
+      "action": "LeanLeft",
+      "id": 18,
+      "label": "Sola eğil",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "LeanRight",
+      "id": 19,
+      "label": "Sağa eğil",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "E",
+          "raw": "##18"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Weapon_1",
+      "id": 20,
+      "label": "Weapon 1",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_2",
+      "id": 21,
+      "label": "Weapon 2",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_3",
+      "id": 22,
+      "label": "Weapon 3",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_4",
+      "id": 23,
+      "label": "Weapon 4",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_5",
+      "id": 24,
+      "label": "Weapon 5",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_6",
+      "id": 25,
+      "label": "Weapon 6",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_7",
+      "id": 26,
+      "label": "Weapon 7",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_8",
+      "id": 27,
+      "label": "Weapon 8",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_9",
+      "id": 28,
+      "label": "Weapon 9",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_10",
+      "id": 29,
+      "label": "Weapon 10",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_11",
+      "id": 30,
+      "label": "Weapon 11",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_12",
+      "id": 31,
+      "label": "Weapon 12",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_13",
+      "id": 32,
+      "label": "Weapon 13",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_14",
+      "id": 33,
+      "label": "Weapon 14",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_15",
+      "id": 34,
+      "label": "Weapon 15",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_16",
+      "id": 35,
+      "label": "Weapon 16",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_17",
+      "id": 36,
+      "label": "Weapon 17",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_18",
+      "id": 37,
+      "label": "Weapon 18",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_19",
+      "id": 38,
+      "label": "Weapon 19",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_20",
+      "id": 39,
+      "label": "Weapon 20",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_21",
+      "id": 40,
+      "label": "Weapon 21",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_22",
+      "id": 41,
+      "label": "Weapon 22",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_23",
+      "id": 42,
+      "label": "Weapon 23",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_24",
+      "id": 43,
+      "label": "Weapon 24",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_25",
+      "id": 44,
+      "label": "Weapon 25",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_26",
+      "id": 45,
+      "label": "Weapon 26",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_27",
+      "id": 46,
+      "label": "Weapon 27",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_28",
+      "id": 47,
+      "label": "Weapon 28",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_29",
+      "id": 48,
+      "label": "Weapon 29",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_30",
+      "id": 49,
+      "label": "Weapon 30",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_31",
+      "id": 50,
+      "label": "Weapon 31",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_32",
+      "id": 51,
+      "label": "Weapon 32",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_33",
+      "id": 52,
+      "label": "Weapon 33",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_34",
+      "id": 53,
+      "label": "Weapon 34",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_35",
+      "id": 54,
+      "label": "Weapon 35",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_36",
+      "id": 55,
+      "label": "Weapon 36",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_37",
+      "id": 56,
+      "label": "Weapon 37",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_38",
+      "id": 57,
+      "label": "Weapon 38",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_39",
+      "id": 58,
+      "label": "Weapon 39",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Weapon_40",
+      "id": 59,
+      "label": "Weapon 40",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "NextAmmo",
+      "id": 60,
+      "label": "Mermi türü",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F",
+          "raw": "##33"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ZoomIn",
+      "id": 61,
+      "label": "Yakınlaştır",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ZoomOut",
+      "id": 62,
+      "label": "Uzaklaştır",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "QuickSave",
+      "id": 64,
+      "label": "Quick Save",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "QuickLoad",
+      "id": 65,
+      "label": "Quick Load",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "PrevWeapon",
+      "id": 66,
+      "label": "Önceki silah",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "NextWeapon",
+      "id": 67,
+      "label": "Sonraki silah",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Score",
+      "id": 68,
+      "label": "Skor tablosu",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Tab",
+          "raw": "##15"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Mission",
+      "id": 69,
+      "label": "Görev",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "P",
+          "raw": "##25"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MouseAim",
+      "id": 70,
+      "label": "Mouse Aim",
+      "bindings": [],
+      "mobile": "Sağ bakış alanı",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "CursorTog",
+      "id": 71,
+      "label": "Cursor Tog",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "CenterView",
+      "id": 72,
+      "label": "Bakışı ortala",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "End",
+          "raw": "##207"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "HolsterWeapon",
+      "id": 73,
+      "label": "Silahı indir",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "H",
+          "raw": "##35"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "SendMessage",
+      "id": 74,
+      "label": "Sohbet",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Enter",
+          "raw": "##28"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "IncLayout",
+      "id": 75,
+      "label": "Inc Layout",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "DecLayout",
+      "id": 76,
+      "label": "Dec Layout",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Inventory",
+      "id": 77,
+      "label": "Envanter",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "M",
+          "raw": "##50"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ChangeCharacter",
+      "id": 78,
+      "label": "Karakter / dönüşüm",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "3",
+          "raw": "##4"
+        }
+      ],
+      "mobile": "Ana dokunmatik düğme",
+      "status": "atanmış"
+    },
+    {
+      "action": "ChangePistol",
+      "id": 79,
+      "label": "Tabanca",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "2",
+          "raw": "##3"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ChangeRifle",
+      "id": 80,
+      "label": "Tüfek",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "1",
+          "raw": "##2"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ChangeGrenade",
+      "id": 81,
+      "label": "El bombası",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "4",
+          "raw": "##5"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ChangeBomb",
+      "id": 82,
+      "label": "Bomba",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "5",
+          "raw": "##6"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "NextWeapon_6",
+      "id": 83,
+      "label": "Next Weapon 6",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_1",
+      "id": 84,
+      "label": "Choose 1",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_2",
+      "id": 85,
+      "label": "Choose 2",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_3",
+      "id": 86,
+      "label": "Choose 3",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_4",
+      "id": 87,
+      "label": "Choose 4",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_5",
+      "id": 88,
+      "label": "Choose 5",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Choose_6",
+      "id": 89,
+      "label": "Choose 6",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "DuckLock",
+      "id": 92,
+      "label": "Eğilme kilidi",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "LastWeapon",
+      "id": 93,
+      "label": "Son silah",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Q",
+          "raw": "##16"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "CompassToggle",
+      "id": 101,
+      "label": "Pusula",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ViewKeys",
+      "id": 102,
+      "label": "Tuş bilgisi",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "N",
+          "raw": "##49"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ViewIntel",
+      "id": 103,
+      "label": "Bilgi ekranı",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "I",
+          "raw": "##23"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MoveBody",
+      "id": 104,
+      "label": "Gövde taşı",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "G",
+          "raw": "##34"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Flashlight",
+      "id": 105,
+      "label": "Fener",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "L",
+          "raw": "##38"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Radio",
+      "id": 106,
+      "label": "Telsiz",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "V",
+          "raw": "##47"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ViewZAxis",
+      "id": 107,
+      "label": "View ZAxis",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Number_1",
+      "id": 120,
+      "label": "Number 1",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "1",
+          "raw": "##2"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_2",
+      "id": 121,
+      "label": "Number 2",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "2",
+          "raw": "##3"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_3",
+      "id": 122,
+      "label": "Number 3",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "3",
+          "raw": "##4"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_4",
+      "id": 123,
+      "label": "Number 4",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "4",
+          "raw": "##5"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_5",
+      "id": 124,
+      "label": "Number 5",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "5",
+          "raw": "##6"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_6",
+      "id": 125,
+      "label": "Number 6",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "6",
+          "raw": "##7"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_7",
+      "id": 126,
+      "label": "Number 7",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "7",
+          "raw": "##8"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_8",
+      "id": 127,
+      "label": "Number 8",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "8",
+          "raw": "##9"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_9",
+      "id": 128,
+      "label": "Number 9",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "9",
+          "raw": "##10"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Number_0",
+      "id": 129,
+      "label": "Number 0",
+      "bindings": [],
+      "mobile": "Silah / seçim menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "RadioMessage1",
+      "id": 130,
+      "label": "Radio Message1",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Z",
+          "raw": "##44"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "RadioMessage2",
+      "id": 131,
+      "label": "Radio Message2",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "X",
+          "raw": "##45"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "RadioMessage3",
+      "id": 132,
+      "label": "Radio Message3",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "C",
+          "raw": "##46"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MouseSensitiveUp",
+      "id": 133,
+      "label": "Mouse Sensitive Up",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "]",
+          "raw": "##27"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MouseSensitiveDown",
+      "id": 134,
+      "label": "Mouse Sensitive Down",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "[",
+          "raw": "##26"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ScreenGammaUp",
+      "id": 135,
+      "label": "Screen Gamma Up",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "'",
+          "raw": "##40"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "ScreenGammaDown",
+      "id": 136,
+      "label": "Screen Gamma Down",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": ";",
+          "raw": "##39"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "EffectVolumeUp",
+      "id": 137,
+      "label": "Effect Volume Up",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": ".",
+          "raw": "##52"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "EffectVolumeDown",
+      "id": 138,
+      "label": "Effect Volume Down",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": ",",
+          "raw": "##51"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MakeScreenShot",
+      "id": 139,
+      "label": "Ekran görüntüsü",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F8",
+          "raw": "##66"
+        }
+      ],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "atanmış"
+    },
+    {
+      "action": "Messenger",
+      "id": 140,
+      "label": "Mesajlar",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F5",
+          "raw": "##63"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "LeaveUnassigned",
+      "id": 201,
+      "label": "Leave Unassigned",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Axis3",
+      "id": -3,
+      "label": "Axis3",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Axis2",
+      "id": -2,
+      "label": "Axis2",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "Axis1",
+      "id": -1,
+      "label": "Axis1",
+      "bindings": [],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "AxisYaw",
+      "id": -10001,
+      "label": "Axis Yaw",
+      "bindings": [],
+      "mobile": "Sağ bakış alanı",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "AxisPitch",
+      "id": -10002,
+      "label": "Axis Pitch",
+      "bindings": [],
+      "mobile": "Sağ bakış alanı",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "AxisLeftRight",
+      "id": -10003,
+      "label": "Axis Left Right",
+      "bindings": [],
+      "mobile": "Sol sanal çubuk",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "AxisForwardBackward",
+      "id": -10004,
+      "label": "Axis Forward Backward",
+      "bindings": [],
+      "mobile": "Sol sanal çubuk",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "NormalMessage",
+      "id": 150,
+      "label": "Normal Message",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "TeamMessage",
+      "id": 94,
+      "label": "Takım sohbeti",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F2",
+          "raw": "##60"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "PrideMessage",
+      "id": 151,
+      "label": "Klan sohbeti",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F4",
+          "raw": "##62"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Yes",
+      "id": 108,
+      "label": "Evet",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "Y",
+          "raw": "##21"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "No",
+      "id": 109,
+      "label": "Hayır",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "N",
+          "raw": "##49"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MedicalKit",
+      "id": 141,
+      "label": "Medical Kit",
+      "bindings": [],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "tanımlı, tuş atanmamış"
+    },
+    {
+      "action": "QuickWeapon1",
+      "id": 142,
+      "label": "Hızlı silah 1",
+      "bindings": [
+        {
+          "device": "Fare",
+          "key": "Fare tekerleği",
+          "raw": "##z-axis"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "QuickWeapon2",
+      "id": 143,
+      "label": "Hızlı silah 2",
+      "bindings": [
+        {
+          "device": "Fare",
+          "key": "Fare tekerleği",
+          "raw": "##z-axis"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "WolfSteamPackUse",
+      "id": 144,
+      "label": "Kurt güç paketi",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F",
+          "raw": "##33"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "WolfMedicalKitUse",
+      "id": 145,
+      "label": "Kurt sağlık kiti",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "T",
+          "raw": "##20"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "MultiWeaponChange",
+      "id": 146,
+      "label": "Çoklu silah değişimi",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "B",
+          "raw": "##48"
+        }
+      ],
+      "mobile": "Silah / seçim menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "InGameWeaponView",
+      "id": 147,
+      "label": "Silahı incele",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "`",
+          "raw": "##41"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Graffiti",
+      "id": 148,
+      "label": "Grafiti",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "H",
+          "raw": "##35"
+        }
+      ],
+      "mobile": "Diğer kontroller menüsü",
+      "status": "atanmış"
+    },
+    {
+      "action": "Recording",
+      "id": 149,
+      "label": "Kayıt",
+      "bindings": [
+        {
+          "device": "##keyboard",
+          "key": "F9",
+          "raw": "##67"
+        }
+      ],
+      "mobile": "Araçlar / motor uyarlaması gerekli",
+      "status": "atanmış"
+    }
+  ],
+  "unboundKeys": [
+    "Tarama kodu 221",
+    "Tarama kodu 220",
+    "Tarama kodu 219",
+    "Tarama kodu 211",
+    "Tarama kodu 210",
+    "Tarama kodu 209",
+    "Tarama kodu 201",
+    "Tarama kodu 199",
+    "Tarama kodu 197",
+    "Tarama kodu 184",
+    "Tarama kodu 183",
+    "Tarama kodu 181",
+    "Tarama kodu 157",
+    "Tarama kodu 156",
+    "Tarama kodu 88",
+    "Tarama kodu 87",
+    "Tarama kodu 83",
+    "Tarama kodu 82",
+    "Tarama kodu 81",
+    "Tarama kodu 80",
+    "Tarama kodu 79",
+    "Tarama kodu 78",
+    "Tarama kodu 77",
+    "Tarama kodu 76",
+    "Tarama kodu 75",
+    "Tarama kodu 74",
+    "Tarama kodu 73",
+    "Tarama kodu 72",
+    "Tarama kodu 71",
+    "Tarama kodu 70",
+    "Tarama kodu 69",
+    "Tarama kodu 68",
+    "Tarama kodu 65",
+    "Tarama kodu 64",
+    "Tarama kodu 61",
+    "Tarama kodu 59",
+    "Tarama kodu 58",
+    "Tarama kodu 55",
+    "Tarama kodu 54",
+    "Tarama kodu 53",
+    "Tarama kodu 43",
+    "Tarama kodu 37",
+    "Tarama kodu 36",
+    "Tarama kodu 24",
+    "Tarama kodu 22",
+    "Tarama kodu 13",
+    "Tarama kodu 12",
+    "0"
+  ]
+}

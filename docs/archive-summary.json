@@ -1,0 +1,77 @@
+[
+  {
+    "archive": "0229738003335681.xfs",
+    "bytes": 3318236571,
+    "sha256": "cec4886764c5688575344840a34875d749c86bc3e443f4ee396466ea0705e614",
+    "entries": 39874,
+    "extensions": {
+      "[no suffix]": 1274,
+      ".dat": 229,
+      ".txt": 474,
+      ".xml": 4,
+      ".scc": 43,
+      ".ltb": 3255,
+      ".lta": 111,
+      ".dtx": 33624,
+      ".path": 15,
+      ".pathdata": 6,
+      ".ltc": 92,
+      ".blk": 1,
+      ".db": 41,
+      ".wav": 116,
+      ".spr": 460,
+      ".ttf": 12,
+      ".ttc": 1,
+      ".psd": 3,
+      ".jpg": 1,
+      ".pcx": 4,
+      ".png": 2,
+      ".tfg": 53,
+      ".fxf": 1,
+      ".cfv": 1,
+      ".kfv": 1,
+      ".mfv": 1,
+      ".fcf": 1,
+      ".sfv": 1,
+      ".bmp": 1,
+      ".psh": 1,
+      ".vsh": 1,
+      ".obj": 1,
+      ".ifl": 1,
+      ".svn-base": 31,
+      ".tfs": 11
+    }
+  },
+  {
+    "archive": "2490271990696398.xfs",
+    "bytes": 3874,
+    "sha256": "e707fb130a8760c0c243f9abb517cc725107b59001717165731f21106ea70c5e",
+    "entries": 3,
+    "extensions": {
+      "[no suffix]": 1,
+      ".cfg": 2
+    }
+  },
+  {
+    "archive": "6951536488312223.xfs",
+    "bytes": 899883,
+    "sha256": "d4e0d3a9f34524769a8783038bb94db2c742557599050cab56438f27d870dc57",
+    "entries": 32,
+    "extensions": {
+      ".ini": 2,
+      ".dat": 1,
+      ".bmp": 29
+    }
+  },
+  {
+    "archive": "7353907685236998.xfs",
+    "bytes": 206983867,
+    "sha256": "5170424124630a0712fa4a42f14ebf1927151db759ba4f2310445b9dafc80219",
+    "entries": 1651,
+    "extensions": {
+      "[no suffix]": 179,
+      ".wav": 1466,
+      ".ogg": 6
+    }
+  }
+]
