@@ -1,10 +1,10 @@
 {
   "application": "Wolf Rogue Blood",
   "artifact": "WolfRogueBlood-debug.apk",
-  "bytes": 61598814,
-  "sha256": "d90d50136db6dd64294ce7a70d456a1c2580df30b0508acd57d6488473ab2205",
+  "bytes": 328402545,
+  "sha256": "87a2cc04f12d926702614fd8d732c362749d26e8266fcbfb88764c3e9912f176",
   "godotVersion": "4.7.2.stable",
-  "version": "0.3.0-offline",
+  "version": "0.4.0-offline",
   "package": "com.wolfrogue.blood",
   "buildType": "debug",
   "abis": [
@@ -14,8 +14,8 @@
   "approvedCharacterPairs": [
     "pedro-re"
   ],
-  "pythonTests": 22,
-  "godotSmokeAssertions": 44,
+  "pythonTests": 28,
+  "godotSmokeAssertions": 60,
   "physicalAndroidDeviceTested": false,
   "fullOriginalGamePort": false,
   "signatureVerified": true,
@@ -31,5 +31,13 @@
   "modeVerifiedSourceMaps": 18,
   "playableOriginalMaps": 0,
   "sourceModeVariants": 62,
-  "selectedMapCatalogEmbedded": true
+  "selectedMapCatalogEmbedded": true,
+  "convertedWorldGeometries": 19,
+  "explorableSourceMaps": 18,
+  "sourceMapPhysicsQa": "19/19 passed",
+  "portedFirstPersonWeapons": 1,
+  "equipmentGatedWolfRunItem": 19601,
+  "allMapScenesEmbedded": true,
+  "inventoryRulesEmbedded": true,
+  "weaponAndHandSceneEmbedded": true
 }
