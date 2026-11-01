@@ -119,9 +119,29 @@ def audit(folder):
     skeletons=collections.defaultdict(list)
     for model in models:
         if model['status']=='parsed':skeletons[model['skeletonSha256']].append(model['path'])
+    approved=[]
+    roster_path=ROOT/'assets/roster.json'
+    if roster_path.exists():
+        roster=json.loads(roster_path.read_text(encoding='utf-8'))
+        if not check_roster(roster):
+            by_id={r['id']:r for r in records}
+            for character in roster['characters']:
+                pair=[]
+                for form in ('human','wolf'):
+                    asset=character[form];record=by_id.get(asset.get('sourceDefinition'))
+                    model=model_lookup.get(normalize('Root/'+record['model'])) if record else None
+                    converted=ROOT/asset.get('projectAsset','__missing__')
+                    if model and model.get('sha256')==asset.get('sourceModelSha256') and model.get('skeletonSha256')==asset.get('skeletonSha256') and converted.is_file() and hashlib.sha256(converted.read_bytes()).hexdigest()==asset.get('modelSha256'):
+                        pair.append(record)
+                if len(pair)==2:
+                    approved.append(character['id'])
+                    for record in pair:record.update(included=True,runtimeStatus='reviewed_offline_prototype',approvedPair=character['id'])
     summary=dict(archivesEntries=len(entries),modelDefinitions=len(records),uniqueReferencedModels=len({normalize(r['model']) for r in records}),characterDirectoryModels=len(models),parsedModels=sum(m['status']=='parsed' for m in models),dependencyEdges=len(dependencies),missingChildModels=sum(not e['exists'] for e in dependencies),exactSkeletonEdges=sum(e.get('skeletonExact') is True for e in dependencies),differentSkeletonEdges=sum(e.get('skeletonExact') is False for e in dependencies),differentBindPoseEdges=sum(e.get('bindPoseExact') is False for e in dependencies),skeletonGroups=len(skeletons),structuralCandidates=sum(r['structuralCandidate'] for r in records),approvedCharacters=0,issues=dict(collections.Counter(issue for r in records for issue in r['issues'])))
+    summary['approvedCharacters']=len(approved)
     full=dict(schemaVersion=1,title='Wolf Rogue Blood',scope='Statik model/iskelet/animasyon denetimi. Mesh geometrisi ve animasyonların görsel sonucu oyun motorunda doğrulanmadı.',summary=summary,models=models,definitions=records,dependencies=dependencies,skeletonGroups=dict(skeletons))
     catalog=dict(schemaVersion=1,title='Wolf Rogue Blood',summary=summary,scope=full['scope'],characters=records,androidBuild=dict(status='blocked',apkProduced=False,blockers=['editable_game_engine_project_missing','android_game_runtime_missing','converted_and_visually_validated_assets_missing','account_and_gameplay_server_source_missing']))
+    if approved:
+        catalog['androidBuild']=dict(status='offline_prototype_debug',apkProduced=True,physicalDeviceTested=False,productionReady=False,blockers=[],scope='One reviewed human/wolf pair; offline training arena. Original online game services are not implemented.')
     return full,catalog
 
 def main():
@@ -133,9 +153,9 @@ def main():
     (ROOT/'docs/character-summary.json').write_text(json.dumps(full['summary'],ensure_ascii=False,indent=2),encoding='utf-8')
     report=['# Wolf Rogue Blood — karakter denetimi','',full['scope'],'','## Sayımlar','']
     report += [f'- {key}: {value}' for key,value in full['summary'].items() if not isinstance(value,dict)]
-    report += ['','Model kayıtları kostüm/varyantları ve NPC tanımlarını da kapsar. Bunlar benzersiz oynanabilir karakter sayısı değildir. Yaklaşık 130 karakter iddiası bu sayımla doğrulanmış sayılmaz.','','## Dahil edilmeyenler','','Hiçbir karakter otomatik olarak oyuna eklenmedi. İnsan/kurt eşi, model/kaplama bağımlılığı, iskelet ve oynanabilir animasyon kontrolünde sorun bulunanlar engellenir. Yapısal adaylar da motor aktarımı ve görsel test yapılana kadar onaylı kadroya giremez.','','Kemik adları ve hiyerarşisi eşitliği, dinlenme pozu eşitliği veya görsel animasyon uyumluluğu anlamına gelmez. İnsan ve kurt iskeletlerinin birbiriyle aynı olması beklenmez; her form kendi animasyon sağlayıcısıyla karşılaştırılır.','','## Kayıtlar','','| Kimlik | İsim | Form | Animasyon | Eş adayları | Sorunlar |','|---|---|---|---:|---|---|']
+    report += ['','Model kayıtları kostüm/varyantları ve NPC tanımlarını da kapsar. Bunlar benzersiz oynanabilir karakter sayısı değildir. Yaklaşık 130 karakter iddiası bu sayımla doğrulanmış sayılmaz.','','## Kadro kuralı','','Karakterler otomatik eklenmez. Yalnızca açıkça onaylanan ve kaynak/dönüşüm özetleri eşleşen çiftler çevrimdışı deneme sürümüne alınır. Pedro RE insan/kurt çifti için örnek duruş/koşu/saldırı görüntüleri ve Godot otomatik oyun testleri kontrol edildi. Bu, bütün animasyonların kare kare veya fiziksel Android cihazda test edildiği anlamına gelmez. Diğer karakterler kapalı kalır.','','Kemik adları ve hiyerarşisi eşitliği, dinlenme pozu eşitliği veya görsel animasyon uyumluluğu anlamına gelmez. İnsan ve kurt iskeletlerinin birbiriyle aynı olması beklenmez; her form kendi animasyon sağlayıcısıyla karşılaştırılır.','','## Kayıtlar','','| Kimlik | İsim | Form | Animasyon | Eş adayları | Durum / sorunlar |','|---|---|---|---:|---|---|']
     for row in catalog['characters']:
-        report.append(f"| {row['id']} | {row['name'].replace('|','/')} | {row['form']} | {row['animationClipCount']} | {', '.join(row['counterpartIds']) or 'yok'} | {', '.join(row['issues']) or 'Motor/görsel onay bekliyor'} |")
+        report.append(f"| {row['id']} | {row['name'].replace('|','/')} | {row['form']} | {row['animationClipCount']} | {', '.join(row['counterpartIds']) or 'yok'} | {'Deneme sürümünde: '+row['approvedPair'] if row['included'] else ', '.join(row['issues']) or 'Motor/görsel onay bekliyor'} |")
     report+=['','## Tekrar üretim','','`python tools/audit_characters.py "paket-klasoru"`','','LTB şema başvurusu: https://github.com/Five-Damned-Dollarz/io_scene_lithtech/blob/master/src/reader_ltb_pc.py. Ayrıştırıcı yalnızca standart kütüphane kullanır; dışarıdan indirilen kodu çalıştırmaz.']
     (ROOT/'docs/KARAKTERLER.md').write_text('\n'.join(report),encoding='utf-8')
     print(json.dumps(full['summary'],ensure_ascii=True))

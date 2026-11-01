@@ -1,0 +1,70 @@
+{
+  "human": {
+    "file": "human.glb",
+    "sha256": "3eb4384905ed85fce741e3334f63b45162b2de43439ad18ebd6f3cc07a568957",
+    "modelSha256": "17da8550877a6e23fe601d892984b8e4504b56288a96c272169bf126fbbbc077",
+    "skeletonSha256": "6e33553b2da5dda7b335c5f9f5b4d254358eece1ba63a2ddfbd0158cfbd334e4",
+    "animationClips": [
+      "idle",
+      "run",
+      "jump",
+      "attack",
+      "reload",
+      "crouch",
+      "crouch_run"
+    ],
+    "sourceClips": {
+      "idle": "LSt",
+      "run": "LRF",
+      "jump": "LJJ",
+      "attack": "URi1Fi",
+      "reload": "URi1Re",
+      "crouch": "LC",
+      "crouch_run": "LCWF"
+    },
+    "vertices": 5318,
+    "triangles": 5434,
+    "omittedOptionalMeshes": [],
+    "definition": "Model0",
+    "name": "Pedro_RE",
+    "source": "Root/wt_chars/newchars/pedro_re/pedro_re.ltb",
+    "donor": "root/wt_chars/models/wt_new_man_ch.ltb",
+    "bindPoseExact": false
+  },
+  "wolf": {
+    "file": "wolf.glb",
+    "sha256": "28d41df143e8ac18f90f1d7f75b161391e6885fb552f654b4622d7ce1e4a9291",
+    "modelSha256": "1e458a8b98e878d1d9cbe5ac16ba5d94d2a59bb11a7100e56d9c3653e4138e05",
+    "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+    "animationClips": [
+      "idle",
+      "run",
+      "jump",
+      "attack",
+      "roar",
+      "crouch",
+      "crouch_run"
+    ],
+    "sourceClips": {
+      "idle": "LSt",
+      "run": "LRF",
+      "jump": "LJJ",
+      "attack": "UMFi1",
+      "roar": "T_CRY",
+      "crouch": "LC",
+      "crouch_run": "LCWF"
+    },
+    "vertices": 6175,
+    "triangles": 5838,
+    "omittedOptionalMeshes": [
+      "Tattoo_body",
+      "Tattoo_Arm_L",
+      "Tattoo_Arm_R"
+    ],
+    "definition": "Model2",
+    "name": "Pedro_RE Wolf",
+    "source": "Root/wt_chars/newchars/pedro_re wolf/pedro_re wolf.ltb",
+    "donor": "root/wt_chars/models/r1_wolf.ltb",
+    "bindPoseExact": true
+  }
+}

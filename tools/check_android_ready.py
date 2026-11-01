@@ -1,5 +1,6 @@
 """Check actual Android game prerequisites. Does not create a panel-only APK."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from audit_characters import check_roster
@@ -12,8 +13,14 @@ def check(root=ROOT):
     blockers=check_roster(roster)
     if not roster.get('characters'):blockers.append('Onaylı insan/kurt karakter çifti yok.')
     project=branding.get('androidGameProject')
-    if not project or not (root/project).is_dir():blockers.append('Android hedefli düzenlenebilir oyun motoru projesi yok.')
-    return dict(ready=not blockers,apkProduced=False,blockers=blockers)
+    if not project or not (root/project/'project.godot').is_file():blockers.append('Android hedefli düzenlenebilir oyun motoru projesi yok.')
+    for character in roster.get('characters',[]):
+        for form in ('human','wolf'):
+            asset=character.get(form,{})
+            path=root/asset.get('projectAsset','__missing_asset__')
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=asset.get('modelSha256'):
+                blockers.append(f'{character.get("id")}: {form} converted model missing or hash changed')
+    return dict(ready=not blockers,apkProduced=branding.get('apkProduced',False),buildType=branding.get('androidBuildType'),physicalAndroidDeviceTested=branding.get('physicalAndroidDeviceTested',False),blockers=blockers)
 
 if __name__=='__main__':
     result=check();print(json.dumps(result,ensure_ascii=True,indent=2))

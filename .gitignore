@@ -6,3 +6,8 @@ data/
 .venv/
 docs/archive-inventory.json
 docs/archive-inventory.json.gz
+godot/.godot/
+godot/.godot-test/
+*.keystore
+*.apk
+*.aab

@@ -16,23 +16,23 @@ Statik model/iskelet/animasyon denetimi. Mesh geometrisi ve animasyonların gör
 - differentBindPoseEdges: 439
 - skeletonGroups: 23
 - structuralCandidates: 205
-- approvedCharacters: 0
+- approvedCharacters: 1
 
 Model kayıtları kostüm/varyantları ve NPC tanımlarını da kapsar. Bunlar benzersiz oynanabilir karakter sayısı değildir. Yaklaşık 130 karakter iddiası bu sayımla doğrulanmış sayılmaz.
 
-## Dahil edilmeyenler
+## Kadro kuralı
 
-Hiçbir karakter otomatik olarak oyuna eklenmedi. İnsan/kurt eşi, model/kaplama bağımlılığı, iskelet ve oynanabilir animasyon kontrolünde sorun bulunanlar engellenir. Yapısal adaylar da motor aktarımı ve görsel test yapılana kadar onaylı kadroya giremez.
+Karakterler otomatik eklenmez. Yalnızca açıkça onaylanan ve kaynak/dönüşüm özetleri eşleşen çiftler çevrimdışı deneme sürümüne alınır. Pedro RE insan/kurt çifti için örnek duruş/koşu/saldırı görüntüleri ve Godot otomatik oyun testleri kontrol edildi. Bu, bütün animasyonların kare kare veya fiziksel Android cihazda test edildiği anlamına gelmez. Diğer karakterler kapalı kalır.
 
 Kemik adları ve hiyerarşisi eşitliği, dinlenme pozu eşitliği veya görsel animasyon uyumluluğu anlamına gelmez. İnsan ve kurt iskeletlerinin birbiriyle aynı olması beklenmez; her form kendi animasyon sağlayıcısıyla karşılaştırılır.
 
 ## Kayıtlar
 
-| Kimlik | İsim | Form | Animasyon | Eş adayları | Sorunlar |
+| Kimlik | İsim | Form | Animasyon | Eş adayları | Durum / sorunlar |
 |---|---|---|---:|---|---|
-| Model0 | Pedro_RE | human | 552 | Model2, Model475 | Motor/görsel onay bekliyor |
+| Model0 | Pedro_RE | human | 552 | Model2, Model475 | Deneme sürümünde: pedro-re |
 | Model1 | Christopher_RE | human | 552 | Model3, Model471 | Motor/görsel onay bekliyor |
-| Model2 | Pedro_RE Wolf | wolf | 75 | Model0, Model474 | Motor/görsel onay bekliyor |
+| Model2 | Pedro_RE Wolf | wolf | 75 | Model0, Model474 | Deneme sürümünde: pedro-re |
 | Model3 | Christopher_RE Wolf | wolf | 75 | Model1, Model470 | Motor/görsel onay bekliyor |
 | Model4 | SSLeut | wolf | 72 | yok | counterpart_not_found |
 | Model5 | Hero_Casual | wolf | 68 | yok | counterpart_not_found |

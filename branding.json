@@ -4,8 +4,10 @@
   "windowsBinaryName": "WolfRogue.dat",
   "windowsBinaryPath": "legacy/WolfRogue.dat",
   "androidPackage": "com.wolfrogue.blood",
-  "androidGameProject": null,
-  "apkProduced": false,
+  "androidGameProject": "godot",
+  "apkProduced": true,
   "binaryContentsModified": false,
-  "note": "The renamed Windows binary is a byte-identical reference copy. Embedded resources, original service references and signatures are preserved."
+  "note": "The renamed Windows binary is a byte-identical reference copy. Embedded resources, original service references and signatures are preserved.",
+  "androidBuildType": "debug-offline-prototype",
+  "physicalAndroidDeviceTested": false
 }

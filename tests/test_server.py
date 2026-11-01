@@ -74,10 +74,13 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request('/api/state',headers={'Origin':'https://evil.example'})[0],403)
         self.assertEqual(self.request('/../server.py')[0],404)
     def test_static_assets_and_actions(self):
-        for path in ('/','/app.js','/style.css','/controls.json'): self.assertEqual(self.request(path)[0],200)
+        for path in ('/','/app.js','/style.css','/controls.json','/characters.json'): self.assertEqual(self.request(path)[0],200)
         controls=json.loads(self.request('/controls.json')[1])['controls']
         self.assertEqual(len(controls),139)
         self.assertEqual(sum(bool(c['bindings']) for c in controls),73)
         self.assertEqual(next(c for c in controls if c['action']=='Forward')['bindings'][0]['key'],'W')
+    def test_godot_heartbeat_updates_connection_state(self):
+        _,raw=self.request('/api/state',headers={'X-WolfRogue-Client':'godot'})
+        self.assertTrue(json.loads(raw)['gameConnected'])
 
 if __name__=='__main__': unittest.main()

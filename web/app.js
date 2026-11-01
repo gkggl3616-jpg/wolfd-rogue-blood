@@ -55,9 +55,9 @@ function renderCharacterAudit(){
  if(!characterAudit)return;
  const query=$('characterSearch').value.toLocaleLowerCase('tr-TR'),filter=$('characterFilter').value;
  const rows=characterAudit.characters.filter(c=>(filter==='all'||(filter==='issues'&&c.issues.length)||(filter==='candidate'&&c.structuralCandidate))&&JSON.stringify(c).toLocaleLowerCase('tr-TR').includes(query));
- $('characterCount').textContent=`${rows.length} kayıt gösteriliyor · Oyuna dahil edilen: 0`;
+ $('characterCount').textContent=`${rows.length} kayıt gösteriliyor · Onaylı karakter çifti: ${characterAudit.summary.approvedCharacters}`;
  $('characterRows').replaceChildren();
- for(const c of rows){const row=el('tr'),name=el('td',`${c.name} · ${c.id}`);name.append(el('small',c.model));row.append(name,el('td',c.form==='human'?'İnsan':'Kurt'),el('td',String(c.animationClipCount)),el('td',c.counterpartIds.join(', ')||'Doğrulanamadı'),el('td',c.issues.map(i=>issueLabels[i]||i).join('; ')||'Yapısal aday · motor/görsel onay bekliyor'));$('characterRows').append(row);}
+ for(const c of rows){const row=el('tr'),name=el('td',`${c.name} · ${c.id}`);name.append(el('small',c.model));row.append(name,el('td',c.form==='human'?'İnsan':'Kurt'),el('td',String(c.animationClipCount)),el('td',c.counterpartIds.join(', ')||'Doğrulanamadı'),el('td',c.included?'Deneme sürümünde · Pedro RE':(c.issues.map(i=>issueLabels[i]||i).join('; ')||'Yapısal aday · motor/görsel onay bekliyor')));$('characterRows').append(row);}
  if(!rows.length){const row=el('tr'),cell=el('td','Eşleşen kayıt yok.','empty');cell.colSpan=5;row.append(cell);$('characterRows').append(row);}
 }
 $('characterSearch').oninput=renderCharacterAudit;$('characterFilter').onchange=renderCharacterAudit;

@@ -47,12 +47,17 @@ class AssetTests(unittest.TestCase):
         for field,value in [('engineImported',False),('visualValidation','pending'),('pairConfirmed',False)]:
             roster=self.valid_roster();roster['characters'][0][field]=value;self.assertTrue(check_roster(roster))
     def test_no_approved_roster_means_no_android_release(self):
-        result=check();self.assertFalse(result['ready']);self.assertFalse(result['apkProduced'])
-    def test_audit_has_no_automatically_included_characters(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'assets').mkdir()
+            (root/'branding.json').write_text(json.dumps(dict(androidGameProject=None,apkProduced=False)))
+            (root/'assets/roster.json').write_text(json.dumps(dict(schemaVersion=1,characters=[])))
+            result=check(root);self.assertFalse(result['ready']);self.assertFalse(result['apkProduced'])
+    def test_audit_only_includes_the_reviewed_pair(self):
         root=Path(__file__).resolve().parents[1]
         report=json.loads((root/'web/characters.json').read_text(encoding='utf-8'))
         self.assertEqual(report['summary']['parsedModels'],539)
-        self.assertTrue(all(not c['included'] for c in report['characters']))
+        self.assertEqual({c['id'] for c in report['characters'] if c['included']},{'Model0','Model2'})
+        self.assertTrue(check()['ready'])
         raw=json.loads(gzip.decompress((root/'docs/character-audit.json.gz').read_bytes()))
         self.assertEqual(len(raw['models']),539)
         self.assertEqual(sum(len(m['dependencies']) for m in raw['models']),445)

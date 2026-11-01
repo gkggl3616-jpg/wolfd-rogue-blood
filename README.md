@@ -1,84 +1,76 @@
 # Wolf Rogue Blood
 
-PC paketlerinden çıkarılan kontrol/karakter raporları, mobil giriş laboratuvarı ve yerel yönetici paneli. Yeni ürün adı **Wolf Rogue Blood**, kısa adı **Wolf Rogue**, ana Windows dosya adı **WolfRogue.dat**.
+Godot 4.7.2 ile yeni yazılmış **oynanabilir çevrimdışı deneme arenası**, mobil kontroller, yerel yönetici paneli ve PC varlıklarının karakter/iskelet denetimi.
 
-**Bu sürüm bir başlangıç projesidir. Orijinal PC oyununun mobil portu veya oynanabilir bir oyun değildir.** Oyun motoru, kaynak proje, oturum sunucusu ve gerçek oyuncu veritabanı verilmediği için bunlarla bağlantı kurulmadı. Yerel oyuncular panelde oluşturulur; PC oyununun hesaplarını etkilemez.
+Bu, özgün Windows oyununun tam portu değildir. Tek onaylı insan/kurt çiftiyle ilk oynanabilir sürümdür; yaklaşık 130 karakter, özgün haritalar ve çevrimiçi sistemler tamamlanmış değildir.
 
-## Başlat
+## Oyunu aç
 
-Python 3.10 veya sonrası yeterlidir; ek paket kurulumu gerekmez.
+Godot içinde [godot/project.godot](godot/project.godot) dosyasını içe aktar ve F5'e bas. Projeye ait ana sahne, fizik, karakterler, temel oyun mantığı ve Android dışa aktarma ayarları artık bu klasördedir. [Oyun kontrolleri ve kapsam](godot/README.md).
+
+- Pedro RE insan/kurt dönüşümü, her formda 7 iskelet klibi.
+- 90 saniye / 10 hedeflik arena, can, mermi, şarjör, pençe saldırısı ve yeniden başlatma.
+- Sol hareket çubuğu, sağ bakış alanı, nişan, ateş, fiziksel eğilme, zıplama ve koşu.
+- Yerel nakit, KP, altın, GP ve geliştirme yöneticisi.
+
+Android çıktısı `WolfRogueBlood-debug.apk` adıyla üretilir. Geliştirme imzası, arm64 + armv7, yatay ekran. Fiziksel telefonda test edilmedi ve mağaza yayını değildir.
+
+## Chrome yerel paneli
+
+Python 3.10+ yeterlidir; ek Python paketi gerekmez:
 
 ```powershell
 python server.py
 ```
 
-Chrome'da http://localhost:8765 adresini aç. Windows'ta sunucuyu arka planda başlatıp Chrome'u açmak için:
+Chrome'da http://localhost:8765 adresini aç. Alternatif: `powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1` (yalnızca bu işlem için).
+
+Panel test oyuncusu oluşturur; nakit/KP/altın/GP ekler ve son 100 işlemi gösterir. Kayıtlar `data/players.sqlite3` içinde kalır ve Git'e gönderilmez. Aynı işlem kimliğiyle yinelenen istek ikinci kez ödeme yapmaz.
+
+**PC Godot sürümü:** Paneldeki ilk test oyuncusuna bağlanır; yönetici eklemeleri ve arena ödülleri bu oyuncuya işlenir. **Android:** Kendi cihazındaki yerel kayıt ve oyun içi yönetici menüsü kullanılır; telefondaki localhost PC anlamına gelmez. Panel yalnızca 127.0.0.1 üzerinden dinler, internet yönetim sistemi değildir.
+
+## Karakterler
+
+- 539 karakter klasörü modeli tam olarak ayrıştırıldı.
+- Yapılandırmada 620 varyant/NPC kaydı ve 398 benzersiz model başvurusu var. Bunlar benzersiz oynanabilir karakter sayısı değildir.
+- 445 ortak animasyon dosyası bağlantısının hepsi bulundu. 393 bağlantıda kemik adları/hiyerarşi aynı; 52'sinde fark var.
+- Aynı hiyerarşi aynı dinlenme pozu veya görsel animasyon kalitesi demek değildir. 23 ayrı hiyerarşi grubu tespit edildi.
+- İnsan/kurt eşi belirsiz, kaynakları eksik veya iskelet uyumu doğrulanmamış karakterler kadroya alınmaz. 205 kayıt yapısal adaydır; otomatik oyun kadrosu değildir.
+- Şu an yalnızca **Pedro RE, Model0 + Model2** çifti kabul edildi. Kaynak/dönüşüm özetleri [assets/roster.json](assets/roster.json) ve oyun kopyasında tutulur. Oyun da bu onay listesini okur.
+
+[Karakter raporu](docs/KARAKTERLER.md) · [Özet](docs/character-summary.json) · [Tam denetim (gzip)](docs/character-audit.json.gz)
+
+Kabul edilen çiftin duruş, koşu ve saldırı örnek kareleri çevrimdışı render edilip incelendi. Godot kaynak içe aktarımı ve otomatik oyun testleri geçti. Bütün animasyon kareleri veya fiziksel Android performansı test edildiği iddia edilmez. Kurt modelindeki üç isteğe bağlı, çalışma anında doku alan dövme katmanı taban dönüşümde dışarıda bırakıldı; taban gövde/baş/tüy/zırh kaplamaları mevcuttur.
+
+## Kontrollerin kaynağı
+
+İlk paketlerin ayar taraması: 139 tanımlı komut, 73 atanmış komut. [Bütün kontrol tanımları](docs/KONTROLLER.md) ve [ilk paket özeti](docs/archive-summary.json). Bu arşiv, yeni deneme arenasında 139 komutun hepsinin uygulanmış olduğu anlamına gelmez; arenanın uygulanmış tuşları Godot README'sinde listelenir.
+
+## WolfRogue.dat
+
+[legacy/WolfRogue.dat](legacy/WolfRogue.dat), sağlanan Windows istemcisinin istenen yeni dosya adıyla hazırlanmış birebir kopyasıdır. [SHA-256 kaydı](legacy/binary-manifest.json). Bu dosya kaynak kod veya APK değildir ve Android paketine eklenmez. Özgün klasöre dokunulmadı. Gömülü eski ürün adları, imzalar ve hizmet başvuruları binary içinde değiştirilmedi; bunların tümünü yeniden markalamak kaynak projeden yeniden derleme gerektirir.
+
+## Yeniden üretim
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
+python tools/scan_xfs.py "paket-klasoru"
+python tools/audit_characters.py "yeni-paket-klasoru"
+python -m pip install -r tools/requirements.txt
+python tools/convert_character.py "yeni-paket-klasoru" --output godot/assets/characters/pedro-re
 ```
 
-Bu komuttaki yürütme seçeneği yalnızca bu işlem için geçerlidir; sistem ayarını değiştirmez. Farklı port: `python server.py --port 8766`.
+Son komut varlıkları yeniden üretir. Özetler değişirse onay listesi de tekrar doğrulanmalıdır. Büyük özgün `.xfs` paketleri depoda yoktur. Tam ilk paket envanteri yerelde üretilir; karakter denetim verisi depoda sıkıştırılmıştır.
 
-## Hazır özellikler
-
-- Test oyuncusu oluşturma ve seçme.
-- Nakit, KP, altın ve GP (gelişim puanı) verme.
-- SQLite üzerinde kalıcı kayıt ve son 100 işlemin geçmişi.
-- Miktar sınırları, atomik bakiye güncellemesi ve aynı işlem kimliğinde çift ödeme engeli.
-- Dokunmatik hareket çubuğu, bakış alanı, ateş, eğilme, zıplama, şarjör, dönüşüm ve silah seçimi.
-- Bütün bulunan komutlar için ek dokunmatik düğmeler; hassasiyet ve tam ekran.
-- Tuş arşivinde arama, PC atamaları ve önerilen mobil karşılıkları.
-- İnsan/kurt eş adayları, animasyon ve iskelet farkları için karakter denetimi ekranı.
-
-## Yeni karakter incelemesi
-
-Yeni paketteki 539 karakter klasörü modeli tamamen ayrıştırıldı. Model yapılandırmasında 620 varyant/NPC kaydı ve 398 benzersiz model başvurusu var; bunlar 620 farklı oynanabilir karakter anlamına gelmez. Yaklaşık 130 karakter sayısı doğrulanmadı.
-
-445 ortak animasyon modeli bağlantısının tamamı bulundu. 393 bağlantıda kemik adları ve hiyerarşisi aynı; 52 bağlantıda fark var. Dinlenme pozları ayrıca karşılaştırılır; aynı hiyerarşi tek başına animasyonun görsel olarak doğru olduğu anlamına gelmez.
-
-[Karakter raporu](docs/KARAKTERLER.md), [sayısal özet](docs/character-summary.json) ve [tam denetim verisi](docs/character-audit.json.gz) depodadır. `assets/roster.json` yalnızca onaylı oyun kadrosudur ve şu an boştur. Eşi eksik, eşleşmesi belirsiz, iskeleti/animasyonu doğrulanmamış karakterler otomatik dahil edilmez. Yapısal adaylar da motor aktarımı ve görsel testten geçmelidir.
-
-```powershell
-python tools/audit_characters.py "C:\oyun-paketlerinin-klasoru"
-python tools/check_android_ready.py
-```
-
-İkinci komut şu an eksik oyun projesini/onaylı karakterleri raporlayarak 2 koduyla çıkar; APK üretildiği iddia edilmez. Eksik olanlar: Android hedefi olan düzenlenebilir motor projesi ve oyun mantığı, dönüştürülmüş modeller/animasyonlar, motor içi test ve gerçek oyun/hesap sunucusu kaynakları. Windows istemci programı ve DLL'ler bunların yerine geçmez.
-
-## WolfRogue.dat adlandırması
-
-[legacy/WolfRogue.dat](legacy/WolfRogue.dat) istenen yeni adla kopyalanmış Windows istemci programıdır. [Dosya özeti](legacy/binary-manifest.json) özgün dosyayla byte eşitliğini doğrular. Bu dosya kaynak kod veya Android uygulaması değildir. Özgün klasöre dokunulmadı; gömülü ürün adları, imzalar ve hizmet adresleri binary içinde değiştirilmedi. Bunların bütünüyle yeniden markalanması kaynak projeden yeniden derleme ister. Bu referans kopyanın bağımsız çalıştığı iddia edilmez.
-
-## Tarama
-
-4 paketin dizinleri okundu: **41.560 dizin/dosya kaydı**, **139 tanımlı komut**, **73 atanmış komut**. Bütün `AddAction` ve `rangebind` satırları listelendi. Komutların oyun içinde çalışması doğrulanmadı. Bazı komutlar aynı tuşu paylaşır; bazıları yalnızca motor tanımıdır.
-
-- [Bütün kontroller ve çakışmalar](docs/KONTROLLER.md)
-- [Paket özeti ve SHA-256 değerleri](docs/archive-summary.json)
-- [Sonradan oyun bağlantısı eklemek](docs/ENTEGRASYON.md)
-
-Taramanın yeniden üretilmesi:
-
-```powershell
-python tools/scan_xfs.py "C:\oyun-paketlerinin-klasoru"
-```
-
-Araç sadece dosyaları okur. Kaynak `.xfs` paketlerini değiştirmez veya çalıştırmaz. Paketlerin tamamı açılmadı; bütün dizin indeksleri ve `autoexec.cfg` kontrol içeriği çözüldü. Tanınmayan dosya adı baytları envanterde `�` ile gösterilebilir; dizin kayıtlarının sayısı ve konumları korunur.
-
-Tam kayıt listesi tarama sırasında yerelde `docs/archive-inventory.json` ve sıkıştırılmış `.json.gz` kopyası olarak üretilir. Depoda daha küçük `archive-summary.json` raporu bulunur.
-
-## Sonradan eklenecekler
-
-Gerçek oyun için motor projesi (Unity/Godot/Unreal vb.), oyun sahneleri/kuralları, sunucu kaynakları, kimlik doğrulama ve oyuncu veritabanı gerekir. Android/iOS derlemesi henüz yok. Mobil düğmelerin motor içindeki davranışları oyun adaptörüyle uygulanmalı.
-
-Panel yalnızca `127.0.0.1` üzerinden dinler. İnternete açılacak bir yönetim sistemi olarak tasarlanmadı; yayın öncesinde hesap doğrulama, yönetici rolleri ve sunucu tarafı yetkilendirme gerekir. Oyuncu verileri `data/players.sqlite3` içinde saklanır ve Git'e gönderilmez.
-
-Orijinal `.xfs` dosyaları bu depoya eklenmedi. Bu depo panel, tarama aracı ve raporları içerir. Büyük oyun paketleri için ayrı varlık depolaması/LFS düzeni gerekir. GitHub normal Git deposunda 100 MiB üstü dosyaları kabul etmez: [GitHub dosya sınırları](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
-
-## Kontrol
+## Kontrol ve Android derlemesi
 
 ```powershell
 python -m unittest discover -s tests -v
 node --check web/app.js
+python tools/check_android_ready.py
+godot --headless --path godot --fixed-fps 60 --script res://tests/smoke.gd
+powershell -NoProfile -ExecutionPolicy Bypass -File tools/build_android.ps1 -Godot "godot-program-yolu"
 ```
+
+Android için eşleşen Godot 4.7.2 şablonları, JDK 17 ve Android SDK gerekir. Bu bilgisayarda kuruldu. [Godot'un resmi Android dışa aktarma yönergeleri](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html). Son derlemenin özeti [docs/android-build.json](docs/android-build.json) içindedir.
+
+Geliştirme anahtarı ve özel oyuncu kayıtları depoya eklenmez. Ses, nihai silah sanatları, çevrimiçi maç/hesap sunucusu, bütün karakterlerin aktarımı ve özgün haritalar sonraki geliştirme işleridir.

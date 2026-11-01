@@ -11,7 +11,7 @@
   "differentBindPoseEdges": 439,
   "skeletonGroups": 23,
   "structuralCandidates": 205,
-  "approvedCharacters": 0,
+  "approvedCharacters": 1,
   "issues": {
     "counterpart_not_found": 84,
     "counterpart_requires_review": 226,

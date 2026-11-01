@@ -1,5 +1,7 @@
 # Motor ve sunucu bağlantısı
 
+Godot çevrimdışı arenası artık `godot/` klasöründedir. PC çalışma zamanı `/api/state` üzerinden ilk yerel test oyuncusuna bağlanır; token ile ödül/yönetici eklemelerini aynı `/api/grants` uç noktasına gönderir. Android sürümü kendi `user://wallet.json` kaydını kullanır. Aşağıdaki web kontrol sözleşmesi ayrı tarayıcı laboratuvarına aittir; Godot kendi yerel girişlerini kullanır.
+
 ## Mobil girişler
 
 `web/app.js`, `window` üzerinde `wrb:input` olayları yayınlar. Bu olay bir tarayıcı kontrol sözleşmesidir; mevcut PC istemcisini kontrol etmez.

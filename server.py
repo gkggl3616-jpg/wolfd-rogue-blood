@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import secrets
 import sqlite3
+import time
 import uuid
 
 ROOT = Path(__file__).resolve().parent
@@ -90,6 +91,7 @@ class Store:
 def make_server(port=8765, data_dir=None):
     store=Store((Path(data_dir) if data_dir else ROOT/'data')/'players.sqlite3')
     token=secrets.token_urlsafe(32)
+    game_last_seen=[0.0]
     allowed_hosts={f'localhost:{port}',f'127.0.0.1:{port}'}
     allowed_origins={f'http://{host}' for host in allowed_hosts}
 
@@ -113,7 +115,11 @@ def make_server(port=8765, data_dir=None):
         def do_GET(self):
             if not self.trusted(): return self.send(403,dict(error='Yalnızca yerel erişim.'))
             route=self.path.split('?')[0]
-            if route=='/api/state': return self.send(200,dict(**store.snapshot(),token=token))
+            if route=='/api/state':
+                if self.headers.get('X-WolfRogue-Client')=='godot':game_last_seen[0]=time.monotonic()
+                state=store.snapshot()
+                state['gameConnected']=game_last_seen[0]>0 and time.monotonic()-game_last_seen[0]<10
+                return self.send(200,dict(**state,token=token))
             paths={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/controls.json':'controls.json','/characters.json':'characters.json'}
             file=paths.get(route)
             if not file: return self.send(404,dict(error='Sayfa bulunamadı.'))

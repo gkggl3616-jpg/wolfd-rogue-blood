@@ -1,6 +1,57 @@
 {
   "schemaVersion": 1,
   "title": "Wolf Rogue Blood",
-  "policy": "Only explicitly confirmed human/wolf pairs with complete models, compatible animation rigs, successful engine import and passed visual validation may be admitted.",
-  "characters": []
+  "policy": "Only explicitly confirmed human/wolf pairs with complete base models, compatible animation rigs, successful engine import and sampled visual validation are admitted to this offline prototype. All other characters remain excluded.",
+  "characters": [
+    {
+      "id": "pedro-re",
+      "displayName": "Pedro RE",
+      "pairConfirmed": true,
+      "engineImported": true,
+      "visualValidation": "passed",
+      "visualValidationScope": "Blender Cycles sample renders: idle/run/attack at frame 8 for both forms; Godot 4.7.2 headless import and gameplay smoke tests. Not a full animation QA or physical Android device test.",
+      "physicalAndroidDeviceTested": false,
+      "engineTest": "godot/tests/smoke.gd",
+      "human": {
+        "sourceDefinition": "Model0",
+        "sourceModelSha256": "17da8550877a6e23fe601d892984b8e4504b56288a96c272169bf126fbbbc077",
+        "modelSha256": "3eb4384905ed85fce741e3334f63b45162b2de43439ad18ebd6f3cc07a568957",
+        "skeletonSha256": "6e33553b2da5dda7b335c5f9f5b4d254358eece1ba63a2ddfbd0158cfbd334e4",
+        "animationSetSha256": "8ded97c23217e85f6a4eb5e569bd58ab4f3efc627e8bf4db982175e367a6d249",
+        "animationClips": [
+          "idle",
+          "run",
+          "jump",
+          "attack",
+          "reload",
+          "crouch",
+          "crouch_run"
+        ],
+        "missingDependencies": [],
+        "skeletonCompatible": true,
+        "asset": "res://assets/characters/pedro-re/human.glb",
+        "projectAsset": "godot/assets/characters/pedro-re/human.glb"
+      },
+      "wolf": {
+        "sourceDefinition": "Model2",
+        "sourceModelSha256": "1e458a8b98e878d1d9cbe5ac16ba5d94d2a59bb11a7100e56d9c3653e4138e05",
+        "modelSha256": "28d41df143e8ac18f90f1d7f75b161391e6885fb552f654b4622d7ce1e4a9291",
+        "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+        "animationSetSha256": "b1d6f7de7f0fadee91962a4f0fdabb142295283387c277969c4a40bc5370665e",
+        "animationClips": [
+          "idle",
+          "run",
+          "jump",
+          "attack",
+          "roar",
+          "crouch",
+          "crouch_run"
+        ],
+        "missingDependencies": [],
+        "skeletonCompatible": true,
+        "asset": "res://assets/characters/pedro-re/wolf.glb",
+        "projectAsset": "godot/assets/characters/pedro-re/wolf.glb"
+      }
+    }
+  ]
 }

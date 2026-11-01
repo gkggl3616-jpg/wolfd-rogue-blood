@@ -14,7 +14,7 @@
     "differentBindPoseEdges": 439,
     "skeletonGroups": 23,
     "structuralCandidates": 205,
-    "approvedCharacters": 0,
+    "approvedCharacters": 1,
     "issues": {
       "counterpart_not_found": 84,
       "counterpart_requires_review": 226,
@@ -37,7 +37,7 @@
       "identity": "pedrore",
       "meshIdentity": "pedrore",
       "skeletonSha256": "6e33553b2da5dda7b335c5f9f5b4d254358eece1ba63a2ddfbd0158cfbd334e4",
-      "included": false,
+      "included": true,
       "counterpartIds": [
         "Model2",
         "Model475"
@@ -46,7 +46,8 @@
         "WT_Chars\\NewChars\\Pedro_RE wolf\\Pedro_RE Wolf.ltb"
       ],
       "structuralCandidate": true,
-      "runtimeStatus": "excluded_pending_engine_and_visual_validation"
+      "runtimeStatus": "reviewed_offline_prototype",
+      "approvedPair": "pedro-re"
     },
     {
       "id": "Model1",
@@ -83,7 +84,7 @@
       "identity": "pedrore",
       "meshIdentity": "pedrore",
       "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
-      "included": false,
+      "included": true,
       "counterpartIds": [
         "Model0",
         "Model474"
@@ -92,7 +93,8 @@
         "WT_Chars\\NewChars\\Pedro_RE\\Pedro_RE.ltb"
       ],
       "structuralCandidate": true,
-      "runtimeStatus": "excluded_pending_engine_and_visual_validation"
+      "runtimeStatus": "reviewed_offline_prototype",
+      "approvedPair": "pedro-re"
     },
     {
       "id": "Model3",
@@ -15080,13 +15082,11 @@
     }
   ],
   "androidBuild": {
-    "status": "blocked",
-    "apkProduced": false,
-    "blockers": [
-      "editable_game_engine_project_missing",
-      "android_game_runtime_missing",
-      "converted_and_visually_validated_assets_missing",
-      "account_and_gameplay_server_source_missing"
-    ]
+    "status": "offline_prototype_debug",
+    "apkProduced": true,
+    "physicalDeviceTested": false,
+    "productionReady": false,
+    "blockers": [],
+    "scope": "One reviewed human/wolf pair; offline training arena. Original online game services are not implemented."
   }
 }
