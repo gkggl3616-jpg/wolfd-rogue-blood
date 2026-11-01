@@ -47,3 +47,18 @@ document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{releaseAll
 $('extraToggle').onclick=()=>{$('extras').hidden=!$('extras').hidden;$('extraToggle').setAttribute('aria-expanded',String(!$('extras').hidden));};
 $('fullScreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('arena').requestFullscreen();}catch{toast('Bu tarayıcıda tam ekran açılamadı.',true);}};
 Promise.all([refresh(),request('/controls.json').then(data=>{controlData=data;$('controlStats').textContent=`${data.controls.length} tanımlı komut · ${data.controls.filter(c=>c.bindings.length).length} atanmış komut · kaynak: autoexec.cfg`;$('scope').textContent=data.scope;renderControls();for(const c of data.controls){const button=el('button',c.label);button.dataset.action=c.action;button.title=`${c.action} (${c.id})`;bindAction(button);$('extraActions').append(button);}})]).catch(e=>toast(e.message,true));
+
+// Audit candidates never populate assets/roster.json automatically.
+let characterAudit=null;
+const issueLabels={model_missing:'Model bulunamadı',model_parse_failed:'Model okunamadı',skin_or_render_style_missing:'Kaplama / görünüm dosyası eksik',animation_model_missing:'Animasyon modeli eksik',skeleton_requires_review:'İskelet farkı incelenmeli',playable_animation_missing:'Hareketli animasyon bulunamadı',counterpart_not_found:'İnsan/kurt eşi doğrulanamadı',counterpart_ambiguous:'Birden fazla eş adayı',counterpart_requires_review:'Eş adayında kontrol gerekiyor'};
+function renderCharacterAudit(){
+ if(!characterAudit)return;
+ const query=$('characterSearch').value.toLocaleLowerCase('tr-TR'),filter=$('characterFilter').value;
+ const rows=characterAudit.characters.filter(c=>(filter==='all'||(filter==='issues'&&c.issues.length)||(filter==='candidate'&&c.structuralCandidate))&&JSON.stringify(c).toLocaleLowerCase('tr-TR').includes(query));
+ $('characterCount').textContent=`${rows.length} kayıt gösteriliyor · Oyuna dahil edilen: 0`;
+ $('characterRows').replaceChildren();
+ for(const c of rows){const row=el('tr'),name=el('td',`${c.name} · ${c.id}`);name.append(el('small',c.model));row.append(name,el('td',c.form==='human'?'İnsan':'Kurt'),el('td',String(c.animationClipCount)),el('td',c.counterpartIds.join(', ')||'Doğrulanamadı'),el('td',c.issues.map(i=>issueLabels[i]||i).join('; ')||'Yapısal aday · motor/görsel onay bekliyor'));$('characterRows').append(row);}
+ if(!rows.length){const row=el('tr'),cell=el('td','Eşleşen kayıt yok.','empty');cell.colSpan=5;row.append(cell);$('characterRows').append(row);}
+}
+$('characterSearch').oninput=renderCharacterAudit;$('characterFilter').onchange=renderCharacterAudit;
+request('/characters.json').then(data=>{characterAudit=data;$('characterStats').textContent=`${data.summary.parsedModels} model okundu · ${data.summary.modelDefinitions} varyant kaydı · ${data.summary.approvedCharacters} onaylı karakter`;$('characterScope').textContent=data.scope;renderCharacterAudit();}).catch(e=>{$('characterStats').textContent='Karakter raporu yüklenemedi.';toast(e.message,true);});

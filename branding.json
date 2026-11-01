@@ -1,0 +1,11 @@
+{
+  "displayName": "Wolf Rogue Blood",
+  "shortName": "Wolf Rogue",
+  "windowsBinaryName": "WolfRogue.dat",
+  "windowsBinaryPath": "legacy/WolfRogue.dat",
+  "androidPackage": "com.wolfrogue.blood",
+  "androidGameProject": null,
+  "apkProduced": false,
+  "binaryContentsModified": false,
+  "note": "The renamed Windows binary is a byte-identical reference copy. Embedded resources, original service references and signatures are preserved."
+}

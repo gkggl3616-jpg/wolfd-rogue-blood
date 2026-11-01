@@ -1,0 +1,22 @@
+{
+  "archivesEntries": 39884,
+  "modelDefinitions": 620,
+  "uniqueReferencedModels": 398,
+  "characterDirectoryModels": 539,
+  "parsedModels": 539,
+  "dependencyEdges": 445,
+  "missingChildModels": 0,
+  "exactSkeletonEdges": 393,
+  "differentSkeletonEdges": 52,
+  "differentBindPoseEdges": 439,
+  "skeletonGroups": 23,
+  "structuralCandidates": 205,
+  "approvedCharacters": 0,
+  "issues": {
+    "counterpart_not_found": 84,
+    "counterpart_requires_review": 226,
+    "counterpart_ambiguous": 106,
+    "skin_or_render_style_missing": 5,
+    "skeleton_requires_review": 89
+  }
+}

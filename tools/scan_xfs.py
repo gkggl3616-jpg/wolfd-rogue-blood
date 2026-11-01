@@ -69,6 +69,37 @@ def recover_small(path,entry):
             except zlib.error: pass
     raise ValueError('Not a supported single-stream entry')
 
+def recover_entry(path, entry, max_bytes=128*1024*1024):
+    """Decode complete XFS block chains, including the final short block."""
+    if not 0 <= entry['size'] <= max_bytes:
+        raise ValueError('Entry exceeds extraction limit')
+    if entry['flag'] != 1:
+        raise ValueError('Unsupported XFS entry compression flag')
+    with Path(path).open('rb') as stream:
+        stream.seek(entry['offset'])
+        packed=stream.read(entry['packed'])
+    cursor=0; output=bytearray()
+    def take(length):
+        nonlocal cursor
+        if cursor+length>len(packed): raise ValueError('Truncated XFS block')
+        part=packed[cursor:cursor+length]; cursor+=length
+        return part
+    while cursor<len(packed):
+        length=int.from_bytes(take(3),'little'); expected=65536
+        if length & 0x800000:
+            expected=length & 0x7fffff
+            if not 0<expected<=65536: raise ValueError('Invalid XFS short block size')
+            length=int.from_bytes(take(3),'little')
+        take(2)  # Archive-specific checksum; zlib validates its own checksum below.
+        decoder=zlib.decompressobj()
+        block=decoder.decompress(take(length),expected+1)
+        if not decoder.eof or decoder.unused_data or len(block)!=expected:
+            raise ValueError('Invalid XFS compressed block')
+        output.extend(block)
+        if len(output)>entry['size']: raise ValueError('XFS entry size overflow')
+    if len(output)!=entry['size']: raise ValueError('XFS entry size mismatch')
+    return bytes(output)
+
 def mobile(action):
     if action in ('Forward','Backward','StrafeLeft','StrafeRight','Strafe','AxisLeftRight','AxisForwardBackward'): return 'Sol sanal çubuk'
     if action in ('Left','Right','LookUp','LookDown','AxisYaw','AxisPitch','MouseAim'): return 'Sağ bakış alanı'

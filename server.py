@@ -114,7 +114,7 @@ def make_server(port=8765, data_dir=None):
             if not self.trusted(): return self.send(403,dict(error='Yalnızca yerel erişim.'))
             route=self.path.split('?')[0]
             if route=='/api/state': return self.send(200,dict(**store.snapshot(),token=token))
-            paths={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/controls.json':'controls.json'}
+            paths={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/controls.json':'controls.json','/characters.json':'characters.json'}
             file=paths.get(route)
             if not file: return self.send(404,dict(error='Sayfa bulunamadı.'))
             mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8'}[Path(file).suffix]

@@ -1,6 +1,6 @@
 # Wolf Rogue Blood
 
-PC paketlerinden çıkarılan kontrol raporu, mobil giriş laboratuvarı ve yerel yönetici paneli.
+PC paketlerinden çıkarılan kontrol/karakter raporları, mobil giriş laboratuvarı ve yerel yönetici paneli. Yeni ürün adı **Wolf Rogue Blood**, kısa adı **Wolf Rogue**, ana Windows dosya adı **WolfRogue.dat**.
 
 **Bu sürüm bir başlangıç projesidir. Orijinal PC oyununun mobil portu veya oynanabilir bir oyun değildir.** Oyun motoru, kaynak proje, oturum sunucusu ve gerçek oyuncu veritabanı verilmediği için bunlarla bağlantı kurulmadı. Yerel oyuncular panelde oluşturulur; PC oyununun hesaplarını etkilemez.
 
@@ -29,6 +29,26 @@ Bu komuttaki yürütme seçeneği yalnızca bu işlem için geçerlidir; sistem 
 - Dokunmatik hareket çubuğu, bakış alanı, ateş, eğilme, zıplama, şarjör, dönüşüm ve silah seçimi.
 - Bütün bulunan komutlar için ek dokunmatik düğmeler; hassasiyet ve tam ekran.
 - Tuş arşivinde arama, PC atamaları ve önerilen mobil karşılıkları.
+- İnsan/kurt eş adayları, animasyon ve iskelet farkları için karakter denetimi ekranı.
+
+## Yeni karakter incelemesi
+
+Yeni paketteki 539 karakter klasörü modeli tamamen ayrıştırıldı. Model yapılandırmasında 620 varyant/NPC kaydı ve 398 benzersiz model başvurusu var; bunlar 620 farklı oynanabilir karakter anlamına gelmez. Yaklaşık 130 karakter sayısı doğrulanmadı.
+
+445 ortak animasyon modeli bağlantısının tamamı bulundu. 393 bağlantıda kemik adları ve hiyerarşisi aynı; 52 bağlantıda fark var. Dinlenme pozları ayrıca karşılaştırılır; aynı hiyerarşi tek başına animasyonun görsel olarak doğru olduğu anlamına gelmez.
+
+[Karakter raporu](docs/KARAKTERLER.md), [sayısal özet](docs/character-summary.json) ve [tam denetim verisi](docs/character-audit.json.gz) depodadır. `assets/roster.json` yalnızca onaylı oyun kadrosudur ve şu an boştur. Eşi eksik, eşleşmesi belirsiz, iskeleti/animasyonu doğrulanmamış karakterler otomatik dahil edilmez. Yapısal adaylar da motor aktarımı ve görsel testten geçmelidir.
+
+```powershell
+python tools/audit_characters.py "C:\oyun-paketlerinin-klasoru"
+python tools/check_android_ready.py
+```
+
+İkinci komut şu an eksik oyun projesini/onaylı karakterleri raporlayarak 2 koduyla çıkar; APK üretildiği iddia edilmez. Eksik olanlar: Android hedefi olan düzenlenebilir motor projesi ve oyun mantığı, dönüştürülmüş modeller/animasyonlar, motor içi test ve gerçek oyun/hesap sunucusu kaynakları. Windows istemci programı ve DLL'ler bunların yerine geçmez.
+
+## WolfRogue.dat adlandırması
+
+[legacy/WolfRogue.dat](legacy/WolfRogue.dat) istenen yeni adla kopyalanmış Windows istemci programıdır. [Dosya özeti](legacy/binary-manifest.json) özgün dosyayla byte eşitliğini doğrular. Bu dosya kaynak kod veya Android uygulaması değildir. Özgün klasöre dokunulmadı; gömülü ürün adları, imzalar ve hizmet adresleri binary içinde değiştirilmedi. Bunların bütünüyle yeniden markalanması kaynak projeden yeniden derleme ister. Bu referans kopyanın bağımsız çalıştığı iddia edilmez.
 
 ## Tarama
 

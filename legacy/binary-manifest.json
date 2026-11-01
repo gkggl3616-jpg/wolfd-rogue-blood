@@ -1,0 +1,10 @@
+{
+  "displayName": "Wolf Rogue Blood",
+  "file": "WolfRogue.dat",
+  "bytes": 7081520,
+  "sha256": "e791b9bd18492f51ca37546ac50fe9e344aa1f351b2c067e9c1a5b74e0502d14",
+  "sourceSha256": "e791b9bd18492f51ca37546ac50fe9e344aa1f351b2c067e9c1a5b74e0502d14",
+  "byteIdentical": true,
+  "format": "Windows PE x86 (32-bit)",
+  "executed": false
+}
