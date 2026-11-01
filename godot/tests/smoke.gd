@@ -22,6 +22,7 @@ func run():
 	root.add_child(game)
 	await frames(3)
 	if not ensure(game.player.anim != null,"animated character imported"):return
+	if not ensure(not game.player.third_person and not game.player.human.visible and game.player.camera_arm.spring_length == 0,"human starts in first person"):return
 	for clip in ["idle","run","jump","attack","reload","crouch","crouch_run"]:
 		if not ensure(game.player.anim.has_animation(clip),"human clip "+clip):return
 	game.start_round()
@@ -85,10 +86,12 @@ func run():
 	await frames(5)
 	if not ensure(not game.player.crouching and game.player.capsule.height > 1.7,"standing restores collision height when there is clearance"):return
 	game.player.switch_form()
+	if not ensure(game.player.third_person and game.player.camera_arm.spring_length > 3,"wolf has a collision-aware third-person camera"):return
 	if not ensure(game.player.is_wolf and game.player.wolf.visible and not game.player.human.visible,"human transforms to wolf"):return
 	for clip in ["idle","run","jump","attack","roar","crouch","crouch_run"]:
 		if not ensure(game.player.anim.has_animation(clip),"wolf clip "+clip):return
 	game.player.switch_form()
+	if not ensure(not game.player.third_person and game.player.camera_arm.spring_length == 0,"returning to human restores first person"):return
 	game.player.shot_cooldown = 0
 	game.attack()
 	if not ensure(game.ammo == 29,"firing consumes ammunition"):return

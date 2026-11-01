@@ -1,0 +1,3196 @@
+{
+  "count": 114,
+  "headerVersions": {
+    "85": 114
+  },
+  "note": "114 world data files, including mode/event variants. This is not a verified count of distinct playable menu maps.",
+  "selectionPending": true,
+  "maps": [
+    {
+      "number": 1,
+      "path": "03gate.dat",
+      "formatVersion": 85,
+      "bytes": 34082443,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 57,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11039
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "path": "03gate_dark.dat",
+      "formatVersion": 85,
+      "bytes": 33977227,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 63,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11039
+        },
+        {
+          "mapId": 63,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11039
+        },
+        {
+          "mapId": 63,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11039
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "path": "amap.dat",
+      "formatVersion": 85,
+      "bytes": 2093642,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 4,
+      "path": "armor.dat",
+      "formatVersion": 85,
+      "bytes": 8560449,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 20,
+          "mode": "FM_BOMB",
+          "nameStringId": 11014
+        },
+        {
+          "mapId": 20,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11014
+        },
+        {
+          "mapId": 20,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11014
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "path": "arrival.dat",
+      "formatVersion": 85,
+      "bytes": 3930309,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 7,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_TUTORIAL_BATTLECLASSIC",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11000
+        },
+        {
+          "mapId": 7,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11000
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "path": "arrival_copa2019.dat",
+      "formatVersion": 85,
+      "bytes": 4089366,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 7,
+      "path": "arrival_night.dat",
+      "formatVersion": 85,
+      "bytes": 4374918,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 8,
+      "path": "arrival_ramadan.dat",
+      "formatVersion": 85,
+      "bytes": 7988893,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 9,
+      "path": "arrival_wolfrush.dat",
+      "formatVersion": 85,
+      "bytes": 8379977,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 10,
+      "path": "arrival_wtk.dat",
+      "formatVersion": 85,
+      "bytes": 3897171,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 11,
+      "path": "arrival_wtk2019.dat",
+      "formatVersion": 85,
+      "bytes": 4125698,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 12,
+      "path": "base_3275.dat",
+      "formatVersion": 85,
+      "bytes": 7504000,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 4,
+          "mode": "FM_BOMB",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "GAME_MODE_PRIDE_LADDER_ICE_HOLD_HUMAN_VS_HUMAN",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "GAME_MODE_PRIDE_LADDER_BOMB_INSTALL_HUMAN_VS_HUMAN",
+          "nameStringId": 11018
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "path": "base_3275_conq.dat",
+      "formatVersion": 85,
+      "bytes": 7489006,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 4,
+          "mode": "FM_FLAG",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11018
+        },
+        {
+          "mapId": 4,
+          "mode": "GAME_MODE_PRIDE_LADDER_FLAG_EX",
+          "nameStringId": 11018
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "path": "base_3276.dat",
+      "formatVersion": 85,
+      "bytes": 1783038,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 15,
+      "path": "battle zone.dat",
+      "formatVersion": 85,
+      "bytes": 3057508,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 0,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_TUTORIAL_BATTLE_WOLF_WOLF",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_HEROC_PISTOL",
+          "nameStringId": 11001
+        },
+        {
+          "mapId": 0,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11001
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "path": "battle zone_wtas.dat",
+      "formatVersion": 85,
+      "bytes": 8153832,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 58,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_HEROC_PISTOL",
+          "nameStringId": 11040
+        },
+        {
+          "mapId": 58,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11040
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "path": "battlezone_l.dat",
+      "formatVersion": 85,
+      "bytes": 1880267,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 53,
+          "mode": "FM_LADDER_MP_HUMANVSWOLF",
+          "nameStringId": 11034
+        },
+        {
+          "mapId": 53,
+          "mode": "FM_LADDER_MP_CLASSIC",
+          "nameStringId": 11034
+        },
+        {
+          "mapId": 53,
+          "mode": "FM_LADDER_MP_WOLFCLASSIC",
+          "nameStringId": 11034
+        },
+        {
+          "mapId": 53,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11033
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "path": "bmap.dat",
+      "formatVersion": 85,
+      "bytes": 1684360,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 19,
+      "path": "border_island.dat",
+      "formatVersion": 85,
+      "bytes": 49477567,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 16,
+          "mode": "FM_BOMB",
+          "nameStringId": 11064
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "path": "break_out.dat",
+      "formatVersion": 85,
+      "bytes": 11807782,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 108,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11060
+        },
+        {
+          "mapId": 109,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11060
+        },
+        {
+          "mapId": 110,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11060
+        },
+        {
+          "mapId": 111,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11060
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "path": "bridge_r.dat",
+      "formatVersion": 85,
+      "bytes": 13000974,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 41,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11037
+        },
+        {
+          "mapId": 41,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11037
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "path": "bunker.dat",
+      "formatVersion": 85,
+      "bytes": 23488642,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 66,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11045
+        },
+        {
+          "mapId": 70,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11045
+        },
+        {
+          "mapId": 78,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11045
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "path": "bursa.dat",
+      "formatVersion": 85,
+      "bytes": 46337040,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 24,
+      "path": "cage.dat",
+      "formatVersion": 85,
+      "bytes": 7724869,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 50,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11030
+        },
+        {
+          "mapId": 50,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11030
+        },
+        {
+          "mapId": 50,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11030
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "path": "camp_redroof.dat",
+      "formatVersion": 85,
+      "bytes": 88844539,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 26,
+      "path": "cappadocia_mansion.dat",
+      "formatVersion": 85,
+      "bytes": 59381364,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 27,
+      "path": "cappadocia_mansion_wtk.dat",
+      "formatVersion": 85,
+      "bytes": 61866775,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 28,
+      "path": "carnival_factory.dat",
+      "formatVersion": 85,
+      "bytes": 45150687,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 29,
+      "path": "castle.dat",
+      "formatVersion": 85,
+      "bytes": 10789397,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 43,
+          "mode": "FM_FLAG",
+          "nameStringId": 11003
+        },
+        {
+          "mapId": 43,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11003
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "path": "castlefelipe.dat",
+      "formatVersion": 85,
+      "bytes": 9604665,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 60,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11042
+        },
+        {
+          "mapId": 60,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11042
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "path": "city_arena.dat",
+      "formatVersion": 85,
+      "bytes": 9790010,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 18,
+          "mode": "FM_BOMB",
+          "nameStringId": 11019
+        },
+        {
+          "mapId": 18,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11019
+        },
+        {
+          "mapId": 18,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11019
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "path": "city_arena_wolfrush.dat",
+      "formatVersion": 85,
+      "bytes": 11020599,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 67,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11043
+        },
+        {
+          "mapId": 71,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11043
+        },
+        {
+          "mapId": 79,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11043
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "path": "covolt bridge.dat",
+      "formatVersion": 85,
+      "bytes": 4414563,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 2,
+          "mode": "FM_FLAG",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_TUTORIAL_FLOGCLASSIC_WOLF",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_HEROC_SNIPER",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 2,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11004
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "path": "covolt bridge/covolt bridge_celebrity.dat",
+      "formatVersion": 85,
+      "bytes": 3710621,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 81,
+          "mode": "FM_FLAG_CELEBRITY_CLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 81,
+          "mode": "FM_FLAG_CELEBRITY_WOLFCLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 81,
+          "mode": "FM_FLAG_CELEBRITY_HUMANvsWOLF",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 81,
+          "mode": "FM_FLAG_CELEBRITY",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 81,
+          "mode": "FM_FLAG_CELEBRITY_GRENADE",
+          "nameStringId": 11004
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "path": "covolt bridge/covolt bridge_celebrity_christmas.dat",
+      "formatVersion": 85,
+      "bytes": 7101335,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 98,
+          "mode": "FM_FLAG_CELEBRITY_CLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 98,
+          "mode": "FM_FLAG_CELEBRITY_WOLFCLASSIC",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 98,
+          "mode": "FM_FLAG_CELEBRITY_HUMANvsWOLF",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 98,
+          "mode": "FM_FLAG_CELEBRITY",
+          "nameStringId": 11004
+        },
+        {
+          "mapId": 98,
+          "mode": "FM_FLAG_CELEBRITY_GRENADE",
+          "nameStringId": 11004
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "path": "cqc zone.dat",
+      "formatVersion": 85,
+      "bytes": 5786195,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 46,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11025
+        },
+        {
+          "mapId": 46,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11025
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "path": "crash bridge.dat",
+      "formatVersion": 85,
+      "bytes": 13640059,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 40,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11002
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "path": "desertrim.dat",
+      "formatVersion": 85,
+      "bytes": 33427367,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 105,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11053
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "path": "deserttemple.dat",
+      "formatVersion": 85,
+      "bytes": 22674301,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 87,
+          "mode": "FM_BOMB",
+          "nameStringId": 11050
+        },
+        {
+          "mapId": 87,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11050
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "path": "encounter.dat",
+      "formatVersion": 85,
+      "bytes": 28063883,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 41,
+      "path": "explosivearsenal.dat",
+      "formatVersion": 85,
+      "bytes": 19642262,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 62,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11048
+        },
+        {
+          "mapId": 62,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11048
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "path": "factory.dat",
+      "formatVersion": 85,
+      "bytes": 7355027,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 10,
+          "mode": "FM_BOMB",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "GAME_MODE_PRIDE_LADDER_ICE_HOLD_HUMAN_VS_HUMAN",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 10,
+          "mode": "GAME_MODE_PRIDE_LADDER_BOMB_INSTALL_HUMAN_VS_HUMAN",
+          "nameStringId": 11026
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "path": "factory_rush.dat",
+      "formatVersion": 85,
+      "bytes": 14961657,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 65,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 69,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 73,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11026
+        },
+        {
+          "mapId": 77,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11026
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "path": "frozen.dat",
+      "formatVersion": 85,
+      "bytes": 14192924,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 17,
+          "mode": "FM_FLAG",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_BOMB",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11005
+        },
+        {
+          "mapId": 17,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11005
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "path": "frozen_wolf.dat",
+      "formatVersion": 85,
+      "bytes": 12507447,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 46,
+      "path": "gobekli_tepe.dat",
+      "formatVersion": 85,
+      "bytes": 11266304,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 47,
+      "path": "gobekli_tepe_ramadan.dat",
+      "formatVersion": 85,
+      "bytes": 16019457,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 48,
+      "path": "gravity_training.dat",
+      "formatVersion": 85,
+      "bytes": 20121080,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 13,
+          "mode": "FM_FLAG",
+          "nameStringId": 11062
+        },
+        {
+          "mapId": 13,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11062
+        },
+        {
+          "mapId": 13,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11062
+        },
+        {
+          "mapId": 13,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11062
+        },
+        {
+          "mapId": 13,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11062
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "path": "iquitos.dat",
+      "formatVersion": 85,
+      "bytes": 35904316,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 50,
+      "path": "jungle.dat",
+      "formatVersion": 85,
+      "bytes": 53745416,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 51,
+      "path": "junk_field.dat",
+      "formatVersion": 85,
+      "bytes": 8546928,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 19,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_HEROC_SNIPER",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 19,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11021
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "path": "junk_field_wolfrush.dat",
+      "formatVersion": 85,
+      "bytes": 11309867,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 84,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 85,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 86,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11021
+        },
+        {
+          "mapId": 83,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11021
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "path": "leviathan.dat",
+      "formatVersion": 85,
+      "bytes": 42532094,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 54,
+      "path": "lima_street.dat",
+      "formatVersion": 85,
+      "bytes": 28057905,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 55,
+      "path": "lima_street_copa2019.dat",
+      "formatVersion": 85,
+      "bytes": 28104534,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 56,
+      "path": "machupicchu_boss.dat",
+      "formatVersion": 85,
+      "bytes": 21779619,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 89,
+          "mode": "GAME_MODE_WOLF_RUSH_BOSS",
+          "nameStringId": 11051
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "path": "museum.dat",
+      "formatVersion": 85,
+      "bytes": 22904984,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 112,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11061
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "path": "paien_attack.dat",
+      "formatVersion": 85,
+      "bytes": 51756980,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 106,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11056
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "path": "paien_lab.dat",
+      "formatVersion": 85,
+      "bytes": 4914159,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 3,
+          "mode": "FM_FLAG",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_TUTORIAL_FLOGCLASSIC",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_HEROC_PISTOL",
+          "nameStringId": 11006
+        },
+        {
+          "mapId": 3,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11006
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "path": "paien_lab_copa2019.dat",
+      "formatVersion": 85,
+      "bytes": 5503968,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 61,
+      "path": "paien_lab_door.dat",
+      "formatVersion": 85,
+      "bytes": 4974936,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 107,
+          "mode": "FM_FLAG",
+          "nameStringId": 11058
+        },
+        {
+          "mapId": 107,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11058
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "path": "paien_lab_wtk2019.dat",
+      "formatVersion": 85,
+      "bytes": 5171910,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 63,
+      "path": "paienlab_ex.dat",
+      "formatVersion": 85,
+      "bytes": 17831752,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 61,
+          "mode": "FM_BATTLE",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 61,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 10047
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "path": "paienlab_ex/paienlab_ex_celebrity.dat",
+      "formatVersion": 85,
+      "bytes": 17812876,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 82,
+          "mode": "FM_FLAG_CELEBRITY_CLASSIC",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 82,
+          "mode": "FM_FLAG_CELEBRITY_WOLFCLASSIC",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 82,
+          "mode": "FM_FLAG_CELEBRITY_HUMANvsWOLF",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 82,
+          "mode": "FM_FLAG_CELEBRITY",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 82,
+          "mode": "FM_FLAG_CELEBRITY_GRENADE",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 99,
+          "mode": "FM_FLAG_CELEBRITY_CLASSIC",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 99,
+          "mode": "FM_FLAG_CELEBRITY_WOLFCLASSIC",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 99,
+          "mode": "FM_FLAG_CELEBRITY_HUMANvsWOLF",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 99,
+          "mode": "FM_FLAG_CELEBRITY",
+          "nameStringId": 10047
+        },
+        {
+          "mapId": 99,
+          "mode": "FM_FLAG_CELEBRITY_GRENADE",
+          "nameStringId": 10047
+        }
+      ]
+    },
+    {
+      "number": 65,
+      "path": "petra.dat",
+      "formatVersion": 85,
+      "bytes": 8678168,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 45,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_HEROC_SNIPER",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11022
+        },
+        {
+          "mapId": 45,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11022
+        }
+      ]
+    },
+    {
+      "number": 66,
+      "path": "post_bomb.dat",
+      "formatVersion": 85,
+      "bytes": 32061448,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 97,
+          "mode": "FM_BOMB",
+          "nameStringId": 11052
+        }
+      ]
+    },
+    {
+      "number": 67,
+      "path": "power plant.dat",
+      "formatVersion": 85,
+      "bytes": 4898300,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 9,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11007
+        }
+      ]
+    },
+    {
+      "number": 68,
+      "path": "purge.dat",
+      "formatVersion": 85,
+      "bytes": 10212547,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 100,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11054
+        },
+        {
+          "mapId": 101,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11054
+        },
+        {
+          "mapId": 102,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11054
+        },
+        {
+          "mapId": 103,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11054
+        }
+      ]
+    },
+    {
+      "number": 69,
+      "path": "rose.dat",
+      "formatVersion": 85,
+      "bytes": 8954788,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 11,
+          "mode": "FM_FLAG",
+          "nameStringId": 11008
+        },
+        {
+          "mapId": 11,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11008
+        },
+        {
+          "mapId": 11,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11008
+        }
+      ]
+    },
+    {
+      "number": 70,
+      "path": "rose_bomb.dat",
+      "formatVersion": 85,
+      "bytes": 9216825,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 11,
+          "mode": "FM_BOMB",
+          "nameStringId": 11008
+        },
+        {
+          "mapId": 11,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11008
+        },
+        {
+          "mapId": 11,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11008
+        }
+      ]
+    },
+    {
+      "number": 71,
+      "path": "rose_wolf.dat",
+      "formatVersion": 85,
+      "bytes": 8669488,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 11,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11008
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "path": "ruins.dat",
+      "formatVersion": 85,
+      "bytes": 16013135,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 68,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11046
+        },
+        {
+          "mapId": 72,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11046
+        },
+        {
+          "mapId": 76,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11046
+        }
+      ]
+    },
+    {
+      "number": 73,
+      "path": "ruins_boss.dat",
+      "formatVersion": 85,
+      "bytes": 13322144,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 90,
+          "mode": "GAME_MODE_WOLF_RUSH_BOSS",
+          "nameStringId": 11046
+        }
+      ]
+    },
+    {
+      "number": 74,
+      "path": "ruins_tdm.dat",
+      "formatVersion": 85,
+      "bytes": 18468830,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 88,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11046
+        }
+      ]
+    },
+    {
+      "number": 75,
+      "path": "safranbolu.dat",
+      "formatVersion": 85,
+      "bytes": 42335943,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 76,
+      "path": "sakura.dat",
+      "formatVersion": 85,
+      "bytes": 7075820,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 26,
+          "mode": "FM_BOMB",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11010
+        }
+      ]
+    },
+    {
+      "number": 77,
+      "path": "sakura_ai.dat",
+      "formatVersion": 85,
+      "bytes": 7073305,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 78,
+      "path": "sand storm.dat",
+      "formatVersion": 85,
+      "bytes": 9053178,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 47,
+          "mode": "FM_BOMB",
+          "nameStringId": 11009
+        },
+        {
+          "mapId": 47,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11009
+        },
+        {
+          "mapId": 47,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11009
+        }
+      ]
+    },
+    {
+      "number": 79,
+      "path": "sand storm_wtk2019.dat",
+      "formatVersion": 85,
+      "bytes": 9338965,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 80,
+      "path": "scent_conq.dat",
+      "formatVersion": 85,
+      "bytes": 7080371,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 26,
+          "mode": "FM_FLAG",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11010
+        },
+        {
+          "mapId": 26,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11010
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "path": "screen_shot.dat",
+      "formatVersion": 85,
+      "bytes": 671327,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 82,
+      "path": "secretlab.dat",
+      "formatVersion": 85,
+      "bytes": 9386053,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 51,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11031
+        },
+        {
+          "mapId": 51,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11031
+        },
+        {
+          "mapId": 51,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11031
+        }
+      ]
+    },
+    {
+      "number": 83,
+      "path": "secretlab_ex.dat",
+      "formatVersion": 85,
+      "bytes": 26603976,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 64,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11049
+        },
+        {
+          "mapId": 64,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11049
+        },
+        {
+          "mapId": 64,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11049
+        }
+      ]
+    },
+    {
+      "number": 84,
+      "path": "ship.dat",
+      "formatVersion": 85,
+      "bytes": 12767125,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 31,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_BATTLEC_KNIFE",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_HEROC_KNIFE",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_HEROC_PISTOL",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11020
+        }
+      ]
+    },
+    {
+      "number": 85,
+      "path": "ship_bomb.dat",
+      "formatVersion": 85,
+      "bytes": 12771748,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 31,
+          "mode": "FM_BOMB",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11020
+        },
+        {
+          "mapId": 31,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11020
+        }
+      ]
+    },
+    {
+      "number": 86,
+      "path": "snowball.dat",
+      "formatVersion": 85,
+      "bytes": 29487551,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 87,
+      "path": "station.dat",
+      "formatVersion": 85,
+      "bytes": 4506099,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 6,
+          "mode": "FM_FLAG",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_BOMB",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11011
+        },
+        {
+          "mapId": 6,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11011
+        }
+      ]
+    },
+    {
+      "number": 88,
+      "path": "storage.dat",
+      "formatVersion": 85,
+      "bytes": 1763484,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 89,
+      "path": "storage_bomb.dat",
+      "formatVersion": 85,
+      "bytes": 9120029,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 8,
+          "mode": "FM_BOMB",
+          "nameStringId": 11023
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11023
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11023
+        }
+      ]
+    },
+    {
+      "number": 90,
+      "path": "storage_conq.dat",
+      "formatVersion": 85,
+      "bytes": 8310320,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 8,
+          "mode": "FM_FLAG",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11012
+        }
+      ]
+    },
+    {
+      "number": 91,
+      "path": "storage_death.dat",
+      "formatVersion": 85,
+      "bytes": 9464586,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 8,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_BATTLEC_PISTOL",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_HEROC_PISTOL",
+          "nameStringId": 11012
+        },
+        {
+          "mapId": 8,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11012
+        }
+      ]
+    },
+    {
+      "number": 92,
+      "path": "street.dat",
+      "formatVersion": 85,
+      "bytes": 11706445,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 34,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_HEROC_SNIPER",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11024
+        },
+        {
+          "mapId": 34,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11024
+        }
+      ]
+    },
+    {
+      "number": 93,
+      "path": "street_ai.dat",
+      "formatVersion": 85,
+      "bytes": 11643048,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 94,
+      "path": "stronghold_ctf.dat",
+      "formatVersion": 85,
+      "bytes": 7196602,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 95,
+      "path": "stronghold_dm.dat",
+      "formatVersion": 85,
+      "bytes": 7860271,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 54,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11035
+        },
+        {
+          "mapId": 54,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11035
+        },
+        {
+          "mapId": 54,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11035
+        },
+        {
+          "mapId": 54,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11035
+        },
+        {
+          "mapId": 54,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": null
+        }
+      ]
+    },
+    {
+      "number": 96,
+      "path": "survival.dat",
+      "formatVersion": 85,
+      "bytes": 170818614,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 97,
+      "path": "taksim.dat",
+      "formatVersion": 85,
+      "bytes": 17113863,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 49,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_TUTORIAL_BATTLE_WOLF_WOLF",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11029
+        },
+        {
+          "mapId": 49,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11029
+        }
+      ]
+    },
+    {
+      "number": 98,
+      "path": "the_disappearance.dat",
+      "formatVersion": 85,
+      "bytes": 41788345,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 104,
+          "mode": "GAME_MODE_WOLF_RUSH_INFINITY",
+          "nameStringId": 11055
+        }
+      ]
+    },
+    {
+      "number": 99,
+      "path": "thesilo.dat",
+      "formatVersion": 85,
+      "bytes": 24512421,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 59,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11041
+        },
+        {
+          "mapId": 59,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11041
+        }
+      ]
+    },
+    {
+      "number": 100,
+      "path": "topkapisarayi.dat",
+      "formatVersion": 85,
+      "bytes": 32652982,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 56,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11038
+        },
+        {
+          "mapId": 56,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11038
+        }
+      ]
+    },
+    {
+      "number": 101,
+      "path": "tournament.dat",
+      "formatVersion": 85,
+      "bytes": 14361920,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 33,
+          "mode": "FM_BOMB",
+          "nameStringId": 11015
+        },
+        {
+          "mapId": 33,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11015
+        }
+      ]
+    },
+    {
+      "number": 102,
+      "path": "two temple_conq.dat",
+      "formatVersion": 85,
+      "bytes": 4396738,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 1,
+          "mode": "FM_FLAG",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11013
+        }
+      ]
+    },
+    {
+      "number": 103,
+      "path": "twotemple.dat",
+      "formatVersion": 85,
+      "bytes": 4455709,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 1,
+          "mode": "FM_BOMB",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_BOMBWOLF",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_BOMBC_GRENADE",
+          "nameStringId": 11013
+        },
+        {
+          "mapId": 1,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11013
+        }
+      ]
+    },
+    {
+      "number": 104,
+      "path": "twotemple_ai.dat",
+      "formatVersion": 85,
+      "bytes": 4443505,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 105,
+      "path": "twotemple_ex.dat",
+      "formatVersion": 85,
+      "bytes": 3950323,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 106,
+      "path": "underworld.dat",
+      "formatVersion": 85,
+      "bytes": 9478500,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 48,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11027
+        },
+        {
+          "mapId": 48,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11027
+        }
+      ]
+    },
+    {
+      "number": 107,
+      "path": "underworld_r.dat",
+      "formatVersion": 85,
+      "bytes": 13790304,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 55,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_ICEHOLD",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_ICEHOLDC_SNIPER",
+          "nameStringId": null
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_ICEHOLDC_GRENADE",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 55,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": null
+        }
+      ]
+    },
+    {
+      "number": 108,
+      "path": "underworld_r_wolfrush.dat",
+      "formatVersion": 85,
+      "bytes": 8723476,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 93,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 94,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 95,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11036
+        },
+        {
+          "mapId": 96,
+          "mode": "FM_AI_WOLFRUSH",
+          "nameStringId": 11036
+        }
+      ]
+    },
+    {
+      "number": 109,
+      "path": "w_district.dat",
+      "formatVersion": 85,
+      "bytes": 13142931,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 52,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_WOLFHUNT_REVOLT",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_WOLFHUNT_COUNTERATTACK",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_WOLFHUNT_DOMINATE",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11032
+        },
+        {
+          "mapId": 52,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11032
+        }
+      ]
+    },
+    {
+      "number": 110,
+      "path": "wolf_city.dat",
+      "formatVersion": 85,
+      "bytes": 5654288,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 5,
+          "mode": "FM_FLAG",
+          "nameStringId": 11016
+        },
+        {
+          "mapId": 5,
+          "mode": "FM_ADVANCED",
+          "nameStringId": 11016
+        },
+        {
+          "mapId": 5,
+          "mode": "FM_FLAGWOLFWAR",
+          "nameStringId": 11016
+        },
+        {
+          "mapId": 5,
+          "mode": "FM_FLAGC_GRENADE",
+          "nameStringId": 11016
+        }
+      ]
+    },
+    {
+      "number": 111,
+      "path": "wolf_city_wolf.dat",
+      "formatVersion": 85,
+      "bytes": 5087956,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 5,
+          "mode": "FM_FLAGWOLF",
+          "nameStringId": 11016
+        }
+      ]
+    },
+    {
+      "number": 112,
+      "path": "wt_mardin_stonehouse.dat",
+      "formatVersion": 85,
+      "bytes": 58510316,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 14,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11063
+        }
+      ]
+    },
+    {
+      "number": 113,
+      "path": "wt_mardin_stonehouse/wt_mardin_stonehouse_ramadan.dat",
+      "formatVersion": 85,
+      "bytes": 64617417,
+      "selected": false,
+      "menuDefinitions": []
+    },
+    {
+      "number": 114,
+      "path": "zeppelin.dat",
+      "formatVersion": 85,
+      "bytes": 5280736,
+      "selected": false,
+      "menuDefinitions": [
+        {
+          "mapId": 12,
+          "mode": "FM_BATTLE",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_BATTLEC_SNIPER",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_DM_WOLFvsWOLF",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_BATTLE_C_HEAVYWEAPON",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_BATTLEC_GRENADE",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_LADDER_DM_HUMANVSWOLF",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_LADDER_DM_CLASSIC",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_LADDER_DM_WOLFCLASSIC",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_HERO_BATTLE",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_HEROC_SNIPER",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_HEROC_GRENADE",
+          "nameStringId": 11017
+        },
+        {
+          "mapId": 12,
+          "mode": "FM_HEROC_HEAVYWEAPON",
+          "nameStringId": 11017
+        }
+      ]
+    }
+  ],
+  "filesWithMenuDefinition": 77,
+  "filesWithoutMenuDefinition": 37
+}

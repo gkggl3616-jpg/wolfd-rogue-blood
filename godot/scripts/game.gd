@@ -65,7 +65,7 @@ func _ready():
 	update_hud()
 
 func setup_inputs():
-	var keys = {"forward":KEY_W,"backward":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"crouch":KEY_CTRL,"sprint":KEY_SHIFT,"reload":KEY_R,"transform":KEY_3,"view":KEY_V,"pause":KEY_ESCAPE,"admin":KEY_F10}
+	var keys = {"forward":KEY_W,"backward":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"crouch":KEY_CTRL,"sprint":KEY_SHIFT,"reload":KEY_R,"transform":KEY_3,"pause":KEY_ESCAPE,"admin":KEY_F10}
 	for action in keys:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
@@ -228,7 +228,7 @@ func show_menu(title, text, button, callback):
 	body.custom_minimum_size = Vector2(480,100)
 	overlay_box.add_child(body)
 	menu_button(button,callback)
-	var help = label("PC: WASD · Space zıpla · Ctrl eğil · Shift koş\n3 dönüşüm · Fare ateş / nişan · R şarjör / kükreme\nV kamera · F10 yönetici · Esc duraklat\nTelefonda sol çubuk ve sağ bakış alanını kullan.",15)
+	var help = label("PC: WASD · Space zıpla · Ctrl eğil · Shift koş\n3 dönüşüm · Fare ateş / nişan · R şarjör / kükreme\nİnsan: birinci şahıs · Kurt: üçüncü şahıs\nF10 yönetici · Esc duraklat",15)
 	help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	overlay_box.add_child(help)
 

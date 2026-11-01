@@ -4,11 +4,12 @@ var game
 var is_wolf = false
 var yaw = 0.0
 var pitch = -0.12
-var third_person = true
+var third_person = false
 var human: Node3D
 var wolf: Node3D
 var camera: Camera3D
 var pivot: Node3D
+var camera_arm: SpringArm3D
 var shot_cooldown = 0.0
 var action_time = 0.0
 var anim: AnimationPlayer
@@ -36,15 +37,21 @@ func _ready():
 		model.rotation.y = PI
 		add_child(model)
 	wolf.visible = false
+	human.visible = false
 	pivot = Node3D.new()
 	pivot.position.y = 1.55
 	add_child(pivot)
+	camera_arm = SpringArm3D.new()
+	camera_arm.collision_mask = 1
+	camera_arm.margin = 0.2
+	camera_arm.add_excluded_object(get_rid())
+	pivot.add_child(camera_arm)
 	camera = Camera3D.new()
-	camera.position = Vector3(0.5, 0.45, 3.4)
 	camera.fov = 74
 	camera.near = 0.08
-	pivot.add_child(camera)
+	camera_arm.add_child(camera)
 	camera.current = true
+	apply_camera_form()
 	choose_animation_player()
 	play_clip("idle")
 
@@ -75,9 +82,7 @@ func switch_form():
 	if not game.running or game.menu_open:
 		return
 	is_wolf = not is_wolf
-	if is_wolf:
-		third_person = true
-		camera.position = Vector3(0.5,0.45,3.4)
+	apply_camera_form()
 	game.reloading = 0.0
 	human.visible = not is_wolf and third_person
 	wolf.visible = is_wolf
@@ -86,12 +91,15 @@ func switch_form():
 	game.announce("Kurt formu" if is_wolf else "İnsan formu")
 	game.update_hud()
 
+func apply_camera_form():
+	third_person = is_wolf
+	camera_arm.spring_length = 3.4 if is_wolf else 0.0
+	camera.position = Vector3(0.4,0.35,0) if is_wolf else Vector3(0,0.03,-0.06)
+	human.visible = false
+	wolf.visible = is_wolf
+
 func toggle_camera():
-	third_person = not third_person
-	if is_wolf:
-		third_person = true
-	human.visible = not is_wolf and third_person
-	camera.position = Vector3(0.5, 0.45, 3.4) if third_person else Vector3(0, 0.03, -0.06)
+	apply_camera_form()
 
 func _physics_process(delta):
 	shot_cooldown = maxf(0, shot_cooldown - delta)
@@ -134,8 +142,6 @@ func _physics_process(delta):
 	move_and_slide()
 	if Input.is_action_just_pressed("transform"):
 		switch_form()
-	if Input.is_action_just_pressed("view"):
-		toggle_camera()
 	if Input.is_action_just_pressed("reload"):
 		game.reload_weapon()
 	if Input.is_action_pressed("fire") and shot_cooldown <= 0:
