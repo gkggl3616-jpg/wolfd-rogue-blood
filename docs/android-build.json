@@ -1,10 +1,10 @@
 {
   "application": "Wolf Rogue Blood",
   "artifact": "WolfRogueBlood-debug.apk",
-  "bytes": 61586292,
-  "sha256": "ad41f378e0124e783da63a664eed1a34a0a027d208ba2a59e7eb7e794bf3f08a",
+  "bytes": 61598814,
+  "sha256": "d90d50136db6dd64294ce7a70d456a1c2580df30b0508acd57d6488473ab2205",
   "godotVersion": "4.7.2.stable",
-  "version": "0.2.0-offline",
+  "version": "0.3.0-offline",
   "package": "com.wolfrogue.blood",
   "buildType": "debug",
   "abis": [
@@ -14,8 +14,8 @@
   "approvedCharacterPairs": [
     "pedro-re"
   ],
-  "pythonTests": 17,
-  "godotSmokeAssertions": 32,
+  "pythonTests": 22,
+  "godotSmokeAssertions": 44,
   "physicalAndroidDeviceTested": false,
   "fullOriginalGamePort": false,
   "signatureVerified": true,
@@ -26,5 +26,10 @@
   "minimumAndroidSdk": 24,
   "targetAndroidSdk": 36,
   "zipIntegrityVerified": true,
-  "approvedRosterEmbedded": true
+  "approvedRosterEmbedded": true,
+  "selectedSourceMaps": 19,
+  "modeVerifiedSourceMaps": 18,
+  "playableOriginalMaps": 0,
+  "sourceModeVariants": 62,
+  "selectedMapCatalogEmbedded": true
 }

@@ -12,6 +12,17 @@ Godot içinde [godot/project.godot](godot/project.godot) dosyasını içe aktar 
 - 90 saniye / 10 hedeflik arena, can, mermi, şarjör, pençe saldırısı ve yeniden başlatma.
 - Sol hareket çubuğu, sağ bakış alanı, nişan, ateş, fiziksel eğilme, zıplama ve koşu.
 - Yerel nakit, KP, altın, GP ve geliştirme yöneticisi.
+- İnsan birinci şahısta, kurt çarpışma kontrollü üçüncü şahıs kamerayla oynanır.
+
+## Seçilen haritalar ve mod sınırları
+
+Kullanıcının seçtiği 19 dosya korundu: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. Bunların 18'i kaynak ikili tablolarda `(dünya kategorisi, harita kimliği)` ile modlara bağlandı. 62 mod/alt mod kaydı var; insan/kurt ve silah kısıtlaması varyantları birleştirilmedi. Örneğin Cappadocia Destruction, Ruins Wolf Rush, Secret Lab ve Gate Dark Wolfhunt modlarına bağlıdır. Aynı numarayı başka kategoride kullanan bir kayıt eşleşme sayılmaz.
+
+**46 · Göbekli Tepe:** Tam dosya adına ait mod bağlantısı doğrulanamadı. Seçim kaydı korunur ve kapalıdır; 47 numaralı gece/etkinlik sürümü yerine eklenmedi. Kaynakta tanımı bulunmayan 15000/15001 mod bağlantıları da beklemeye alındı.
+
+Oyun menüsünde ve localhost panelindeki **Mod ve haritalar** bölümünde önce mod seçilir, sadece o moda bağlı seçili haritalar listelenir. Özgün harita sahneleri ve mod kuralları henüz aktarılmadı; bu liste onları oynanabilir yapmaz. Bu nedenle başlatma kapalıdır. Rastgele seçim yalnızca aynı modun hazır haritalarından yapılabilir; hazır harita yoksa başka moda veya deneme arenasına geçmez.
+
+[Harita–mod listesi](docs/SECILEN_HARITA_MODLARI.md) · [Kaynak kanıtları](docs/selected-map-modes.json). Yeniden üretmek için: `python tools/build_map_catalog.py "yeni-paket-klasoru"`.
 
 Android çıktısı `WolfRogueBlood-debug.apk` adıyla üretilir. Geliştirme imzası, arm64 + armv7, yatay ekran. Fiziksel telefonda test edilmedi ve mağaza yayını değildir.
 

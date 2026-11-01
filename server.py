@@ -120,7 +120,7 @@ def make_server(port=8765, data_dir=None):
                 state=store.snapshot()
                 state['gameConnected']=game_last_seen[0]>0 and time.monotonic()-game_last_seen[0]<10
                 return self.send(200,dict(**state,token=token))
-            paths={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/controls.json':'controls.json','/characters.json':'characters.json'}
+            paths={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/controls.json':'controls.json','/characters.json':'characters.json','/maps.json':'maps.json'}
             file=paths.get(route)
             if not file: return self.send(404,dict(error='Sayfa bulunamadı.'))
             mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8'}[Path(file).suffix]

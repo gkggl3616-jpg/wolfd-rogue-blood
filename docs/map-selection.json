@@ -4,14 +4,14 @@
     "85": 114
   },
   "note": "114 world data files, including mode/event variants. This is not a verified count of distinct playable menu maps.",
-  "selectionPending": true,
+  "selectionPending": false,
   "maps": [
     {
       "number": 1,
       "path": "03gate.dat",
       "formatVersion": 85,
       "bytes": 34082443,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 57,
@@ -25,7 +25,7 @@
       "path": "03gate_dark.dat",
       "formatVersion": 85,
       "bytes": 33977227,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 63,
@@ -650,7 +650,7 @@
       "path": "cappadocia_mansion.dat",
       "formatVersion": 85,
       "bytes": 59381364,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": []
     },
     {
@@ -752,7 +752,7 @@
       "path": "city_arena.dat",
       "formatVersion": 85,
       "bytes": 9790010,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 18,
@@ -1183,7 +1183,7 @@
       "path": "frozen.dat",
       "formatVersion": 85,
       "bytes": 14192924,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 17,
@@ -1240,7 +1240,7 @@
       "path": "gobekli_tepe.dat",
       "formatVersion": 85,
       "bytes": 11266304,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": []
     },
     {
@@ -1298,7 +1298,7 @@
       "path": "jungle.dat",
       "formatVersion": 85,
       "bytes": 53745416,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": []
     },
     {
@@ -1482,7 +1482,7 @@
       "path": "museum.dat",
       "formatVersion": 85,
       "bytes": 22904984,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 112,
@@ -1496,7 +1496,7 @@
       "path": "paien_attack.dat",
       "formatVersion": 85,
       "bytes": 51756980,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 106,
@@ -1510,7 +1510,7 @@
       "path": "paien_lab.dat",
       "formatVersion": 85,
       "bytes": 4914159,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 3,
@@ -1752,7 +1752,7 @@
       "path": "petra.dat",
       "formatVersion": 85,
       "bytes": 8678168,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 45,
@@ -1945,7 +1945,7 @@
       "path": "ruins.dat",
       "formatVersion": 85,
       "bytes": 16013135,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 68,
@@ -2126,7 +2126,7 @@
       "path": "secretlab.dat",
       "formatVersion": 85,
       "bytes": 9386053,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 51,
@@ -2150,7 +2150,7 @@
       "path": "secretlab_ex.dat",
       "formatVersion": 85,
       "bytes": 26603976,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 64,
@@ -2174,7 +2174,7 @@
       "path": "ship.dat",
       "formatVersion": 85,
       "bytes": 12767125,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 31,
@@ -2459,7 +2459,7 @@
       "path": "street.dat",
       "formatVersion": 85,
       "bytes": 11706445,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 34,
@@ -2601,7 +2601,7 @@
       "path": "taksim.dat",
       "formatVersion": 85,
       "bytes": 17113863,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 49,
@@ -2713,7 +2713,7 @@
       "path": "topkapisarayi.dat",
       "formatVersion": 85,
       "bytes": 32652982,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 56,
@@ -3061,7 +3061,7 @@
       "path": "wolf_city.dat",
       "formatVersion": 85,
       "bytes": 5654288,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 5,
@@ -3192,5 +3192,26 @@
     }
   ],
   "filesWithMenuDefinition": 77,
-  "filesWithoutMenuDefinition": 37
+  "filesWithoutMenuDefinition": 37,
+  "userSelectedNumbers": [
+    58,
+    59,
+    65,
+    72,
+    1,
+    2,
+    26,
+    31,
+    44,
+    46,
+    50,
+    110,
+    57,
+    100,
+    97,
+    92,
+    82,
+    83,
+    84
+  ]
 }

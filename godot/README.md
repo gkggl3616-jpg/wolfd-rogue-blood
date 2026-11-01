@@ -8,7 +8,9 @@ Godot'ta bu klasördeki `project.godot` dosyasını içe aktar; F6 ile sahneyi v
 - Kontrol edilen Pedro RE insan/kurt çifti; diğer karakterler eklenmedi.
 - Her formda 7 iskelet klibi: duruş, koşu, zıplama, saldırı, eğilme, eğilerek ilerleme; insanda şarjör, kurtta kükreme.
 - Sol sanal çubuk + sağ bakış + eylem düğmeleri; çoklu dokunma bırakma durumları otomatik testte kontrol edildi.
-- PC: WASD, Space, Ctrl, Shift, 3 dönüşüm, sol fare ateş/pençe, sağ fare nişan, R şarjör/kükreme, V kamera, Esc duraklat, F10 yönetici.
+- İnsan birinci şahısta, kurt çarpışma kontrollü üçüncü şahıs kamerayla oynanır.
+- PC: WASD, Space, Ctrl, Shift, 3 dönüşüm, sol fare ateş/pençe, sağ fare nişan, R şarjör/kükreme, Esc duraklat, F10 yönetici.
+- Mod ve harita listesi: seçilen 19 dosyadan 18'inin kaynak mod bağlantısı doğrulandı. Yalnızca seçilen moda bağlı haritalar listelenir. Özgün sahneler/mod kuralları aktarılana kadar başlatma kapalıdır. Göbekli Tepe (#46) bağlantısı belirsiz olduğu için kapalı kalır.
 - Android yerel yönetici menüsü nakit/KP/altın/GP verir; kayıt yalnızca o cihazdadır.
 - PC'de localhost:8765 paneli açık ve bir test oyuncusu varsa ilk oyuncuya bağlanır. Bu bir canlı sunucu yönetim sistemi değildir.
 

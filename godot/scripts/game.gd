@@ -3,6 +3,12 @@ extends Node3D
 const PlayerScript = preload("res://scripts/player.gd")
 const EnemyScript = preload("res://scripts/enemy.gd")
 const TouchScript = preload("res://scripts/touch.gd")
+const MapCatalogScript = preload("res://scripts/map_catalog.gd")
+var map_catalog
+var mode_picker: OptionButton
+var map_picker: OptionButton
+var map_status: Label
+var map_start: Button
 var player
 var running = false
 var menu_open = true
@@ -34,6 +40,7 @@ var test_mode = false
 var character_info = {}
 
 func _ready():
+	map_catalog = MapCatalogScript.new()
 	var roster = JSON.parse_string(FileAccess.get_file_as_string("res://assets/roster.json"))
 	if not roster is Dictionary or not roster.get("characters") is Array or roster.characters.is_empty():
 		push_error("Onaylı insan/kurt çifti bulunamadı; oyun başlatılmadı.")
@@ -61,7 +68,7 @@ func _ready():
 	grant_http.timeout = 3.0
 	add_child(grant_http)
 	grant_http.request_completed.connect(on_grant)
-	show_menu("WOLF ROGUE BLOOD", "ÇEVRİMDIŞI DENEME ARENASI\nPedro RE · İnsan / Kurt\n90 saniyede 10 hedefi etkisiz hale getir.", "Arenaya gir", start_round)
+	show_home()
 	update_hud()
 
 func setup_inputs():
@@ -202,10 +209,17 @@ func build_ui():
 	overlay_box.add_theme_constant_override("separation",14)
 	overlay.add_child(overlay_box)
 
+func center_overlay(dimensions):
+	overlay.offset_left = -dimensions.x / 2.0
+	overlay.offset_right = dimensions.x / 2.0
+	overlay.offset_top = -dimensions.y / 2.0
+	overlay.offset_bottom = dimensions.y / 2.0
+
 func clear_overlay():
 	for child in overlay_box.get_children():
 		overlay_box.remove_child(child)
 		child.queue_free()
+	center_overlay(Vector2(560,490))
 	overlay.show()
 	menu_open = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -231,6 +245,69 @@ func show_menu(title, text, button, callback):
 	var help = label("PC: WASD · Space zıpla · Ctrl eğil · Shift koş\n3 dönüşüm · Fare ateş / nişan · R şarjör / kükreme\nİnsan: birinci şahıs · Kurt: üçüncü şahıs\nF10 yönetici · Esc duraklat",15)
 	help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	overlay_box.add_child(help)
+	menu_button("Mod ve harita listesi", show_maps)
+
+func show_home():
+	show_menu("WOLF ROGUE BLOOD", "ÇEVRİMDIŞI DENEME ARENASI\nPedro RE · İnsan / Kurt\n90 saniyede 10 hedefi etkisiz hale getir.", "Deneme arenasına gir", start_round)
+
+func show_maps():
+	clear_overlay()
+	center_overlay(Vector2(560,600))
+	overlay_box.add_child(label("MOD VE HARİTALAR",26))
+	overlay_box.add_child(label("19 seçim · 18 doğrulanmış mod eşleşmesi",16))
+	mode_picker = OptionButton.new()
+	mode_picker.custom_minimum_size.y = 44
+	mode_picker.fit_to_longest_item = false
+	for mode in map_catalog.data.modes:
+		mode_picker.add_item(mode.sourceName, int(mode.id))
+	overlay_box.add_child(mode_picker)
+	map_picker = OptionButton.new()
+	map_picker.custom_minimum_size.y = 44
+	map_picker.fit_to_longest_item = false
+	overlay_box.add_child(map_picker)
+	map_status = label("",16)
+	map_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	map_status.custom_minimum_size = Vector2(480,96)
+	overlay_box.add_child(map_status)
+	map_start = menu_button("Haritayı başlat", start_selected_map)
+	mode_picker.item_selected.connect(func(_index): refresh_mode_maps())
+	map_picker.item_selected.connect(func(_index): refresh_map_status())
+	menu_button("Geri", func():
+		if running:
+			pause_game_menu()
+		else:
+			show_home()
+	)
+	refresh_mode_maps()
+
+func refresh_mode_maps():
+	map_picker.clear()
+	for entry in map_catalog.maps_for_mode(mode_picker.get_selected_id()):
+		map_picker.add_item("%d · %s" % [int(entry.number),entry.displayName], int(entry.number))
+	refresh_map_status()
+
+func refresh_map_status():
+	if map_picker.item_count == 0:
+		map_status.text = "Bu mod için doğrulanmış seçili harita yok."
+		map_start.disabled = true
+		return
+	var reason = map_catalog.unavailable_reason(mode_picker.get_selected_id(), map_picker.get_selected_id())
+	map_status.text = (reason if reason != "" else "Harita hazır.") + "\n46 · Göbekli Tepe: mod eşleşmesi bekleniyor."
+	map_start.disabled = reason != ""
+
+func start_selected_map():
+	# Recheck on activation as well as when rendering the button.
+	var mode_id = mode_picker.get_selected_id()
+	var map_number = map_picker.get_selected_id()
+	var reason = map_catalog.unavailable_reason(mode_id, map_number)
+	if reason != "":
+		map_status.text = reason
+		return
+	# Catalog entries remain disabled until their dedicated gameplay scene exists.
+	get_tree().change_scene_to_file(map_catalog.map_record(map_number).asset)
+
+func pause_game_menu():
+	show_menu("DURAKLATILDI","İnsan ve kurt formlarını aynı arenada dene.","Devam et",resume)
 
 func resume():
 	menu_open = false
@@ -263,7 +340,7 @@ func pause_game():
 	if menu_open:
 		resume()
 	else:
-		show_menu("DURAKLATILDI","İnsan ve kurt formlarını aynı arenada dene.","Devam et",resume)
+		pause_game_menu()
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -488,5 +565,5 @@ func show_admin():
 		if running:
 			resume()
 		else:
-			show_menu("WOLF ROGUE BLOOD","Çevrimdışı deneme arenası · Pedro RE insan/kurt çifti","Arenaya gir",start_round)
+			show_home()
 	)

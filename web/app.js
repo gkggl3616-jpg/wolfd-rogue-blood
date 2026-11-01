@@ -62,3 +62,17 @@ function renderCharacterAudit(){
 }
 $('characterSearch').oninput=renderCharacterAudit;$('characterFilter').onchange=renderCharacterAudit;
 request('/characters.json').then(data=>{characterAudit=data;$('characterStats').textContent=`${data.summary.parsedModels} model okundu · ${data.summary.modelDefinitions} varyant kaydı · ${data.summary.approvedCharacters} onaylı karakter`;$('characterScope').textContent=data.scope;renderCharacterAudit();}).catch(e=>{$('characterStats').textContent='Karakter raporu yüklenemedi.';toast(e.message,true);});
+
+let mapCatalog=null;
+function renderMaps(){
+ if(!mapCatalog)return;
+ const mode=$('mapMode').value,query=$('mapSearch').value.toLocaleLowerCase('tr-TR');
+ const modes=new Map(mapCatalog.modes.map(m=>[m.id,m]));
+ const rows=mapCatalog.maps.filter(m=>(mode==='all'||(m.allowedModeIds.includes(Number(mode))&&modes.get(Number(mode))?.mapNumbers.includes(m.number)))&&`${m.number} ${m.displayName} ${m.path}`.toLocaleLowerCase('tr-TR').includes(query));
+ $('mapCount').textContent=`${rows.length} harita gösteriliyor · Rastgele seçim yalnızca seçilen modun hazır haritalarıyla sınırlıdır. Şu an hazır özgün harita: 0.`;
+ $('mapRows').replaceChildren();
+ for(const m of rows){const row=el('tr'),name=el('td',`${m.number} · ${m.displayName}`);name.append(el('small',m.path));row.append(name,el('td',m.allowedModeIds.map(id=>modes.get(id)?.sourceName||String(id)).join(' · ')||'Doğrulanamadı'),el('td',m.allowedModeIds.length?'Mod eşleşmesi doğrulandı · sahne aktarımı bekleniyor':'Mod eşleşmesi bekleniyor · seçime kapalı'));$('mapRows').append(row);}
+ if(!rows.length){const row=el('tr'),cell=el('td','Bu filtrede seçilmiş harita yok.','empty');cell.colSpan=3;row.append(cell);$('mapRows').append(row);}
+}
+$('mapMode').onchange=renderMaps;$('mapSearch').oninput=renderMaps;
+request('/maps.json').then(data=>{mapCatalog=data;$('mapStats').textContent=`${data.maps.length} seçili harita · ${data.maps.filter(m=>m.allowedModeIds.length).length} doğrulanmış eşleşme · ${data.modes.length} kaynak mod / alt mod`;for(const m of data.modes){const option=el('option',m.sourceName);option.value=String(m.id);$('mapMode').append(option);}renderMaps();}).catch(e=>{$('mapStats').textContent='Mod–harita listesi yüklenemedi.';toast(e.message,true);});

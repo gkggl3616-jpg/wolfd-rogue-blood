@@ -1,5 +1,7 @@
 # Wolf Rogue Blood — harita seçimi
 
+**Seçim yapıldı:** 58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84. Güncel mod eşleşmeleri [seçilen haritalar raporunda](SECILEN_HARITA_MODLARI.md). Aşağıdaki 114 dosya ilk taramanın tam envanteridir.
+
 Paket içinde 114 harita veri dosyası bulundu. Tamamının başlığı LithTech dünya formatı v85 olarak doğrulandı. Mod/etkinlik varyantları ayrı dosyalardır; 114 benzersiz oynanabilir harita olduğu iddia edilmez. 77 dosya, mevcut metin yapılandırmalarındaki menü/mod tanımlarıyla eşleştirildi. Diğer 37 dosyanın bu tanımlarla bağlantısı doğrulanmadı; bu, harita dosyasının bozuk veya kullanılamaz olduğunu göstermez. Hiçbiri bu seçim listesi nedeniyle otomatik oyuna eklenmez.
 
 | No | Dosya |

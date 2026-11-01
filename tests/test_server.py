@@ -68,6 +68,12 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request('/api/grants',payload,headers)[0],200)
         self.assertEqual(self.request('/api/grants',payload,headers)[0],200)
         state=json.loads(self.request('/api/state')[1]); self.assertEqual(state['players'][0]['gp'],250)
+    def test_map_catalog_is_served_with_exact_selection(self):
+        status,raw=self.request('/maps.json')
+        self.assertEqual(status,200)
+        catalog=json.loads(raw)
+        self.assertEqual(len(catalog['maps']),19)
+        self.assertFalse(any(m['enabled'] for m in catalog['maps']))
     def test_origin_and_token(self):
         self.assertEqual(self.request('/api/players',{'name':'Bad'})[0],403)
         self.assertEqual(self.request('/api/state',headers={'Host':'evil.example'})[0],403)

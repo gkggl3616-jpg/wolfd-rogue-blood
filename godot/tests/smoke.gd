@@ -21,6 +21,19 @@ func run():
 	game.test_mode = true
 	root.add_child(game)
 	await frames(3)
+	if not ensure(game.map_catalog.valid and game.map_catalog.data.maps.size() == 19,"exactly nineteen selected maps load"):return
+	if not ensure(game.map_catalog.belongs_to_mode(3001,26) and not game.map_catalog.belongs_to_mode(1001,26),"Cappadocia belongs to destruction and cannot leak into deathmatch"):return
+	if not ensure(game.map_catalog.belongs_to_mode(6010,72) and not game.map_catalog.belongs_to_mode(3001,72),"Ruins is restricted to its wolf rush modes"):return
+	if not ensure(game.map_catalog.belongs_to_mode(5000,82) and not game.map_catalog.belongs_to_mode(1001,82),"Secret Lab is restricted to wolfhunt"):return
+	if not ensure(game.map_catalog.map_record(46).allowedModeIds.is_empty() and game.map_catalog.map_record(47).is_empty(),"unverified Gobekli is retained without substituting the night variant"):return
+	if not ensure(game.map_catalog.random_ready_map(1001).is_empty() and game.map_catalog.random_ready_map(-1).is_empty(),"random map selection cannot fall back to unready or unrelated maps"):return
+	game.show_maps()
+	if not ensure(game.map_start.disabled and game.map_picker.item_count > 0,"mode picker shows linked maps while unfinished maps cannot start"):return
+	await frames(3)
+	if not ensure(game.overlay.get_global_rect().position.y >= 0 and game.overlay.get_global_rect().end.y <= root.size.y,"map selection panel fits the landscape screen"):return
+	game.start_selected_map()
+	if not ensure(not game.running and game.menu_open,"activation rechecks readiness and cannot launch the training arena as a source map"):return
+	game.show_home()
 	if not ensure(game.player.anim != null,"animated character imported"):return
 	if not ensure(not game.player.third_person and not game.player.human.visible and game.player.camera_arm.spring_length == 0,"human starts in first person"):return
 	for clip in ["idle","run","jump","attack","reload","crouch","crouch_run"]:
