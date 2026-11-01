@@ -5,7 +5,8 @@ $projectDir = $PSScriptRoot
 $listen = Get-NetTCPConnection -LocalAddress 127.0.0.1 -LocalPort $Port -State Listen -ErrorAction SilentlyContinue
 if (-not $listen) {
     $serverScript = Join-Path $projectDir 'server.py'
-    Start-Process -FilePath $pythonCommand -ArgumentList @('"' + $serverScript + '"', '--port', $Port) -WorkingDirectory $projectDir -WindowStyle Hidden
+    $serverArguments = @("`"$serverScript`"", '--port', "$Port")
+    Start-Process -FilePath $pythonCommand -ArgumentList $serverArguments -WorkingDirectory $projectDir -WindowStyle Hidden
     for ($attempt = 0; $attempt -lt 40; $attempt++) {
         Start-Sleep -Milliseconds 200
         try { $state = Invoke-RestMethod -Uri "http://localhost:$Port/api/state"; if ($state.mode -eq 'local-development') { break } } catch { }
