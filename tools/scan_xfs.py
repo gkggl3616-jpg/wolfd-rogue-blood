@@ -86,15 +86,22 @@ def recover_entry(path, entry, max_bytes=128*1024*1024):
         return part
     while cursor<len(packed):
         length=int.from_bytes(take(3),'little'); expected=65536
+        stored=bool(length & 0x400000)
         if length & 0x800000:
-            expected=length & 0x7fffff
+            expected=length & 0x3fffff
             if not 0<expected<=65536: raise ValueError('Invalid XFS short block size')
-            length=int.from_bytes(take(3),'little')
+            length=expected if stored else int.from_bytes(take(3),'little')
+        else:
+            length &= 0x3fffff
+            if stored and length!=expected:raise ValueError('Invalid XFS stored full block size')
         take(2)  # Archive-specific checksum; zlib validates its own checksum below.
-        decoder=zlib.decompressobj()
-        block=decoder.decompress(take(length),expected+1)
-        if not decoder.eof or decoder.unused_data or len(block)!=expected:
-            raise ValueError('Invalid XFS compressed block')
+        if stored:
+            block=take(length)
+        else:
+            decoder=zlib.decompressobj()
+            block=decoder.decompress(take(length),expected+1)
+            if not decoder.eof or decoder.unused_data or len(block)!=expected:
+                raise ValueError('Invalid XFS compressed block')
         output.extend(block)
         if len(output)>entry['size']: raise ValueError('XFS entry size overflow')
     if len(output)!=entry['size']: raise ValueError('XFS entry size mismatch')

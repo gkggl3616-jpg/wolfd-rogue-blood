@@ -18,6 +18,19 @@ var move_axis = Vector2.ZERO
 var body_shape: CollisionShape3D
 var capsule: CapsuleShape3D
 var crouching = false
+var wolf_running = false
+var movement_clock = 0.0
+var last_forward_press = -10.0
+var forward_held = false
+var movement_speed = 0.0
+var normal_run_toggled = false
+var viewmodel: Node3D
+var weapon_anim: AnimationPlayer
+var weapon_info = {}
+var weapon_clip = ""
+var weapon_action_time = 0.0
+var fire_sound: AudioStreamPlayer
+var reload_sound: AudioStreamPlayer
 
 func _ready():
 	collision_layer = 1
@@ -51,6 +64,27 @@ func _ready():
 	camera.near = 0.08
 	camera_arm.add_child(camera)
 	camera.current = true
+	weapon_info = JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapons/ak47/weapon.json"))
+	viewmodel = load("res://assets/weapons/ak47/viewmodel.glb").instantiate()
+	var weapon_pos = weapon_info.godotPosition
+	viewmodel.position = Vector3(weapon_pos[0],weapon_pos[1],weapon_pos[2])
+	# Legacy first-person animations face +Z; Godot cameras face -Z.
+	viewmodel.scale.z *= -1
+	camera.add_child(viewmodel)
+	weapon_anim = viewmodel.find_children("*","AnimationPlayer",true,false)[0]
+	for clip in ["idle","walk"]:
+		weapon_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
+	for mesh in viewmodel.find_children("*","MeshInstance3D",true,false):
+		mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	fire_sound = AudioStreamPlayer.new()
+	fire_sound.stream = load(weapon_info.sounds.fire.asset)
+	fire_sound.volume_db = -12
+	fire_sound.max_polyphony = 4
+	add_child(fire_sound)
+	reload_sound = AudioStreamPlayer.new()
+	reload_sound.stream = load(weapon_info.sounds.reload.asset)
+	reload_sound.volume_db = -14
+	add_child(reload_sound)
 	apply_camera_form()
 	choose_animation_player()
 	play_clip("idle")
@@ -62,13 +96,33 @@ func choose_animation_player():
 	current_clip = ""
 	if anim:
 		for name in anim.get_animation_list():
-			if name in ["idle", "run", "crouch", "crouch_run"]:
+			if name in ["idle", "run", "crouch", "crouch_run", "wolf_run"]:
 				anim.get_animation(name).loop_mode = Animation.LOOP_LINEAR
 
 func play_clip(clip):
 	if anim and anim.has_animation(clip) and current_clip != clip:
 		anim.play(clip, 0.12)
 		current_clip = clip
+
+func play_weapon_clip(clip, duration = 0.0):
+	if weapon_anim and weapon_anim.has_animation(clip):
+		weapon_anim.play(clip,0.06)
+		weapon_clip = clip
+		weapon_action_time = duration
+
+func play_weapon_sound(action):
+	if game.test_mode:
+		return
+	if action == "fire":
+		fire_sound.play()
+	elif action == "reload":
+		reload_sound.play()
+
+func _exit_tree():
+	if is_instance_valid(fire_sound):
+		fire_sound.stop()
+	if is_instance_valid(reload_sound):
+		reload_sound.stop()
 
 func look(delta: Vector2):
 	if not game.running or game.menu_open:
@@ -82,10 +136,15 @@ func switch_form():
 	if not game.running or game.menu_open:
 		return
 	is_wolf = not is_wolf
+	reset_locomotion()
 	apply_camera_form()
 	game.reloading = 0.0
+	reload_sound.stop()
+	weapon_action_time = 0
 	human.visible = not is_wolf and third_person
 	wolf.visible = is_wolf
+	if viewmodel:
+		viewmodel.visible = not is_wolf
 	choose_animation_player()
 	action_time = 0.3
 	game.announce("Kurt formu" if is_wolf else "İnsan formu")
@@ -101,22 +160,51 @@ func apply_camera_form():
 func toggle_camera():
 	apply_camera_form()
 
+func reset_locomotion():
+	wolf_running = false
+	last_forward_press = -10.0
+	forward_held = false
+	move_axis = Vector2.ZERO
+	normal_run_toggled = false
+
+func register_forward_press():
+	var gap = movement_clock - last_forward_press
+	last_forward_press = movement_clock
+	if gap <= float(game.equipment.rules.mobileAdaptation.doubleTapSeconds) and can_wolf_run():
+		wolf_running = true
+		last_forward_press = -10.0
+		game.announce("Kurt koşusu")
+
+func can_wolf_run():
+	return is_wolf and game.equipment.has_wolf_ability() and not crouching and game.running and not game.menu_open
+
 func _physics_process(delta):
+	movement_clock += delta
 	shot_cooldown = maxf(0, shot_cooldown - delta)
 	action_time = maxf(0, action_time - delta)
+	weapon_action_time = maxf(0, weapon_action_time-delta)
 	if not is_on_floor():
 		velocity.y -= 20.0 * delta
 	if not game.running or game.menu_open:
+		reset_locomotion()
 		velocity.x = 0
 		velocity.z = 0
 		move_and_slide()
 		return
 	var axis = Input.get_vector("left", "right", "forward", "backward") + move_axis
 	axis = axis.limit_length(1.0)
+	var forward_now = axis.y < -0.65
+	if forward_now and not forward_held:
+		register_forward_press()
+	forward_held = forward_now
+	if not can_wolf_run() or not forward_now or Input.is_action_pressed("crouch"):
+		wolf_running = false
 	var direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized()
 	var speed = 6.0 if is_wolf else 4.1
-	if Input.is_action_pressed("sprint"):
-		speed *= 1.3
+	if wolf_running:
+		speed *= float(game.equipment.rules.mobileAdaptation.wolfRunMultiplier)
+	elif (Input.is_action_pressed("sprint") or normal_run_toggled) and axis.length() > 0.1:
+		speed *= float(game.equipment.rules.mobileAdaptation.normalSprintMultiplier)
 	crouching = Input.is_action_pressed("crouch")
 	if not crouching and capsule.height < 1.8:
 		var clearance = PhysicsShapeQueryParameters3D.new()
@@ -133,6 +221,7 @@ func _physics_process(delta):
 	pivot.position.y = lerpf(pivot.position.y,1.05 if crouching else 1.55,delta*14)
 	if crouching:
 		speed *= 0.5
+	movement_speed = speed if axis.length() > 0.1 else 0.0
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not crouching:
 		velocity.y = 6.3
 		play_clip("jump")
@@ -147,5 +236,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("fire") and shot_cooldown <= 0:
 		game.attack()
 	if action_time <= 0:
-		play_clip(("crouch_run" if axis.length()>0.15 else "crouch") if crouching else ("run" if axis.length() > 0.15 else "idle"))
+		play_clip("wolf_run" if wolf_running else (("crouch_run" if axis.length()>0.15 else "crouch") if crouching else ("run" if axis.length() > 0.15 else "idle")))
+	if not is_wolf and weapon_action_time <= 0:
+		var next_weapon_clip = "walk" if axis.length() > 0.15 else "idle"
+		if weapon_clip != next_weapon_clip:
+			play_weapon_clip(next_weapon_clip)
 	camera.fov = lerpf(camera.fov, 53.0 if Input.is_action_pressed("aim") and not is_wolf else 74.0, delta * 10)

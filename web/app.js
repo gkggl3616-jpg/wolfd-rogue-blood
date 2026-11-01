@@ -69,9 +69,9 @@ function renderMaps(){
  const mode=$('mapMode').value,query=$('mapSearch').value.toLocaleLowerCase('tr-TR');
  const modes=new Map(mapCatalog.modes.map(m=>[m.id,m]));
  const rows=mapCatalog.maps.filter(m=>(mode==='all'||(m.allowedModeIds.includes(Number(mode))&&modes.get(Number(mode))?.mapNumbers.includes(m.number)))&&`${m.number} ${m.displayName} ${m.path}`.toLocaleLowerCase('tr-TR').includes(query));
- $('mapCount').textContent=`${rows.length} harita gösteriliyor · Rastgele seçim yalnızca seçilen modun hazır haritalarıyla sınırlıdır. Şu an hazır özgün harita: 0.`;
+ $('mapCount').textContent=`${rows.length} harita gösteriliyor · ${mapCatalog.maps.filter(m=>m.previewAvailable).length} haritada Godot / APK içinde gezinti önizlemesi var. Tamamlanmış özgün oyun modu: 0.`;
  $('mapRows').replaceChildren();
- for(const m of rows){const row=el('tr'),name=el('td',`${m.number} · ${m.displayName}`);name.append(el('small',m.path));row.append(name,el('td',m.allowedModeIds.map(id=>modes.get(id)?.sourceName||String(id)).join(' · ')||'Doğrulanamadı'),el('td',m.allowedModeIds.length?'Mod eşleşmesi doğrulandı · sahne aktarımı bekleniyor':'Mod eşleşmesi bekleniyor · seçime kapalı'));$('mapRows').append(row);}
+ for(const m of rows){const row=el('tr'),name=el('td',`${m.number} · ${m.displayName}`);name.append(el('small',m.path));row.append(name,el('td',m.allowedModeIds.map(id=>modes.get(id)?.sourceName||String(id)).join(' · ')||'Doğrulanamadı'),el('td',m.previewAvailable?'Gezinti önizlemesi var · mod kuralları bekleniyor':(m.allowedModeIds.length?'Mod eşleşmesi doğrulandı · sahne aktarımı bekleniyor':'Mod eşleşmesi bekleniyor · seçime kapalı')));$('mapRows').append(row);}
  if(!rows.length){const row=el('tr'),cell=el('td','Bu filtrede seçilmiş harita yok.','empty');cell.colSpan=3;row.append(cell);$('mapRows').append(row);}
 }
 $('mapMode').onchange=renderMaps;$('mapSearch').oninput=renderMaps;

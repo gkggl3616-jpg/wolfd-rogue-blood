@@ -20,6 +20,22 @@ def check(root=ROOT):
             path=root/asset.get('projectAsset','__missing_asset__')
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=asset.get('modelSha256'):
                 blockers.append(f'{character.get("id")}: {form} converted model missing or hash changed')
+    if project and (root/project/'project.godot').is_file():
+        game=root/project
+        required=['assets/maps/previews.json','assets/items/rules.json','assets/weapons/ak47/weapon.json']
+        for name in required:
+            if not (game/name).is_file():blockers.append('Eksik oyun verisi: '+name)
+        if (game/required[0]).is_file():
+            previews=json.loads((game/required[0]).read_text(encoding='utf-8'))
+            for record in previews:
+                asset=game/record['previewAsset'].removeprefix('res://')
+                if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest()!=record['sha256'] or not record['previewValidated']:
+                    blockers.append('Harita önizlemesi doğrulanmadı: '+str(record['number']))
+        if (game/required[2]).is_file():
+            weapon=json.loads((game/required[2]).read_text(encoding='utf-8'))
+            asset=game/'assets/weapons/ak47/viewmodel.glb'
+            if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest()!=weapon['sha256']:
+                blockers.append('Birinci şahıs silah varlığı doğrulanmadı.')
     return dict(ready=not blockers,apkProduced=branding.get('apkProduced',False),buildType=branding.get('androidBuildType'),physicalAndroidDeviceTested=branding.get('physicalAndroidDeviceTested',False),blockers=blockers)
 
 if __name__=='__main__':

@@ -1,0 +1,62 @@
+{
+  "file": "viewmodel.glb",
+  "sha256": "1199d2c3bd28b5053ae43cb99bd5490e4e8fbb7715d91387bd0ecbbd73653210",
+  "modelSha256": "db9f7572c063482eba267a32741da0dbd5d1a429d083b3c476d40d5ef7fdb51d",
+  "skeletonSha256": "5e14732cc5c070b6cd461bf0937be44c4e19c2c0ced968a6efdbb99c1168975e",
+  "animationClips": [
+    "idle",
+    "walk",
+    "fire",
+    "reload",
+    "select"
+  ],
+  "sourceClips": {
+    "idle": "idle0",
+    "walk": "Walk",
+    "fire": "Fire",
+    "reload": "Reload",
+    "select": "Select"
+  },
+  "vertices": 6653,
+  "triangles": 5909,
+  "omittedOptionalMeshes": [],
+  "name": "AK-47",
+  "sourceDefinition": "Weapon11",
+  "source": "root/wt_guns/models_pv/wt_pv_akei47.ltb",
+  "sourceSha256": "db9f7572c063482eba267a32741da0dbd5d1a429d083b3c476d40d5ef7fdb51d",
+  "sourceTableSha256": "264e84f8be53cc661934eae4d7fbdaf6702c612de19f7dd891c12e8cbd61ca8c",
+  "position": [
+    0.19,
+    -0.37,
+    0.72
+  ],
+  "shotsPerClip": 30,
+  "fireIntervalMs": 150.0,
+  "reloadSeconds": 2.5,
+  "omittedAttachmentVariants": [
+    "WT_PV_AKEI47_MUZ-01",
+    "WT_PV_AKEI47_MUZ-02",
+    "WT_PV_AKEI47_MUZ-03",
+    "WT_PV_AKEI47_MUZ-04",
+    "WT_PV_AKEI47_BUTT-01"
+  ],
+  "fullWeaponSystem": false,
+  "godotPosition": [
+    0.19,
+    -0.37,
+    -0.72
+  ],
+  "godotReflectZ": true,
+  "sounds": {
+    "fire": {
+      "asset": "res://assets/weapons/ak47/fire.wav",
+      "source": "root/wt_snd/mainweapon/akei47/akei47_fire.wav",
+      "sha256": "0d2fa1151d316903cbc4ce67e5fce23e82fce093ef563b40143d014949e6471e"
+    },
+    "reload": {
+      "asset": "res://assets/weapons/ak47/reload.wav",
+      "source": "root/wt_snd/mainweapon/akei47/akei47_reload.wav",
+      "sha256": "f1c69c299c550fdad9c747423a5d73ccffc2bd1a5721c306b60ff0ef25ff09b8"
+    }
+  }
+}

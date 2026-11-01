@@ -83,6 +83,8 @@ def build(folder):
     for entry in selection['maps']:entry['selected']=entry['number'] in SELECTED
     selection['selectionPending']=False;selection['userSelectedNumbers']=list(SELECTED)
     selected=[];undefined=[]
+    preview_path=ROOT/'godot/assets/maps/previews.json'
+    previews={int(p['number']):p for p in json.loads(preview_path.read_text(encoding='utf-8'))} if preview_path.exists() else {}
     for entry in selection['maps']:
         if not entry['selected']:continue
         path=normalized('worlds/retailmultiplayer/'+entry['path'])
@@ -90,7 +92,8 @@ def build(folder):
         undefined.extend(dict(mapNumber=entry['number'],**link) for link in unknown)
         ids=sorted({r['modeId'] for r in matches})
         display=next((r['sourceName'] for r in matches),Path(entry['path']).stem.replace('_',' ').title())
-        selected.append(dict(number=entry['number'],path=entry['path'],displayName=display,allowedModeIds=ids,modeEvidence=matches,status='mode_verified_asset_pending' if ids else 'mode_unverified',enabled=False,asset=None,sourceBytes=entry['bytes']))
+        preview=previews.get(entry['number'],{})
+        selected.append(dict(number=entry['number'],path=entry['path'],displayName=display,allowedModeIds=ids,modeEvidence=matches,status='mode_verified_gameplay_pending' if ids and preview.get('previewValidated') else ('mode_verified_asset_pending' if ids else 'mode_unverified'),enabled=False,asset=None,previewAvailable=bool(ids and preview.get('previewValidated')),sourceBytes=entry['bytes']))
     for mode in modes:
         mode['mapNumbers']=[m['number'] for m in selected if mode['id'] in m['allowedModeIds']]
         mode['implementationStatus']='catalog_only'
@@ -103,7 +106,7 @@ def main():
     result=build(args.folder)
     for name in ['godot/assets/maps/catalog.json','docs/selected-map-modes.json','web/maps.json']:
         path=ROOT/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
-    lines=['# Seçilen haritalar ve doğrulanan modlar','','19 kullanıcı seçimi. Mod eşleşmeleri yeni ikili tablolardan kategori + harita kimliği üzerinden alınır; isim benzerliği kullanılmaz. Eşleşme, harita dönüşümü veya mod oyun mantığının tamamlandığı anlamına gelmez.','','| No | Harita | Doğrulanan modlar |','|---:|---|---|']
+    lines=['# Seçilen haritalar ve doğrulanan modlar','','19 kullanıcı seçimi. Mod eşleşmeleri yeni ikili tablolardan kategori + harita kimliği üzerinden alınır; isim benzerliği kullanılmaz. 19 temel geometri dönüştürüldü ve doğma noktaları/üretilen çarpışmalar motor içinde kontrol edildi. Eşleşmesi doğrulanan 18 haritada gezinti önizlemesi açılır; özgün mod kuralları hâlâ bekliyor. Tam harita/mod portu değildir.','','| No | Harita | Doğrulanan modlar |','|---:|---|---|']
     mode_lookup={m['id']:m for m in result['modes']}
     for m in result['maps']:
         lines.append(f"| {m['number']} | {m['displayName']} | {', '.join(mode_lookup[i]['sourceName'] for i in m['allowedModeIds']) or 'Doğrulanamadı; seçime kapalı'} |")

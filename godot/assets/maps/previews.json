@@ -1,0 +1,6305 @@
+[
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 1.0,
+    "previewAsset": "res://assets/maps/geometry/1.glb",
+    "previewValidated": true,
+    "sha256": "785a8db074120e61017e813e3a3ba14b87b35276f426ae24cf6418fd37835155",
+    "sourceSha256": "2423cbce1de18545d4d6053e0768515559cdf2b1c0bbf1aaff7f2845a55a7690",
+    "startPoints": [
+      {
+        "name": "BlueStartPoint1",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          38.9119987487793
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2432.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint2",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          41.984001159668
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2624.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint3",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          45.0559997558594
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2816.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint4",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          38.9119987487793
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2432.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint5",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          41.984001159668
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2624.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint6",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          45.0559997558594
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2816.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint7",
+        "position": [
+          0.0,
+          0.100000239908695,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint8",
+        "position": [
+          0.0,
+          0.0999995246529579,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint1",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint2",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -41.984001159668
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2624.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint3",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -45.0559997558594
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2816.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint4",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint5",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -41.984001159668
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2624.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint6",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -45.0559997558594
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2816.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint7",
+        "position": [
+          0.0,
+          0.100000001490116,
+          -39.9360008239746
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          2496.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint8",
+        "position": [
+          0.0,
+          0.100000001490116,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 2.0,
+    "previewAsset": "res://assets/maps/geometry/2.glb",
+    "previewValidated": true,
+    "sha256": "edf4ecb5e9289f7fba7779325f12b6ef3e6dce99923d45ccfc6e0316947b1b7b",
+    "sourceSha256": "bf672208cad7a8cb3727e5d059954ad4765e1fe2b1a5fcfec0ad43e744754d6e",
+    "startPoints": [
+      {
+        "name": "BlueStartPoint1",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          38.9119987487793
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2432.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint2",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          41.984001159668
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2624.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint3",
+        "position": [
+          -4.09600019454956,
+          0.100000239908695,
+          45.0559997558594
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          -2816.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint4",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          38.9119987487793
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2432.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint5",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          41.984001159668
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2624.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint6",
+        "position": [
+          4.09600019454956,
+          0.0999995246529579,
+          45.0559997558594
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          -2816.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint7",
+        "position": [
+          0.0,
+          0.100000239908695,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint8",
+        "position": [
+          0.0,
+          0.0999995246529579,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint16",
+        "position": [
+          6.14400005340576,
+          0.0999995246529579,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          384.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint15",
+        "position": [
+          8.19200038909912,
+          0.099999763071537,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          512.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint14",
+        "position": [
+          8.19200038909912,
+          0.099999763071537,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          512.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint13",
+        "position": [
+          6.14400005340576,
+          0.099999763071537,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          384.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint9",
+        "position": [
+          -6.14400005340576,
+          0.099999763071537,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          -384.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint10",
+        "position": [
+          -8.19200038909912,
+          0.099999763071537,
+          40.9599990844727
+        ],
+        "sourcePosition": [
+          -512.0,
+          64.0,
+          -2560.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint11",
+        "position": [
+          -8.19200038909912,
+          0.099999763071537,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          -512.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "BlueStartPoint12",
+        "position": [
+          -6.14400005340576,
+          0.099999763071537,
+          44.0320014953613
+        ],
+        "sourcePosition": [
+          -384.0,
+          64.0,
+          -2752.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint1",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint2",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -41.984001159668
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2624.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint3",
+        "position": [
+          4.09600019454956,
+          0.100000001490116,
+          -45.0559997558594
+        ],
+        "sourcePosition": [
+          256.0,
+          64.0,
+          2816.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint4",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint5",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -41.984001159668
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2624.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint6",
+        "position": [
+          -4.09600019454956,
+          0.100000001490116,
+          -45.0559997558594
+        ],
+        "sourcePosition": [
+          -256.0,
+          64.0,
+          2816.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint7",
+        "position": [
+          0.0,
+          0.100000001490116,
+          -39.9360008239746
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          2496.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint8",
+        "position": [
+          0.0,
+          0.100000001490116,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          0.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint16",
+        "position": [
+          -8.19200038909912,
+          0.100000239908695,
+          -40.9599990844727
+        ],
+        "sourcePosition": [
+          -512.0,
+          64.0,
+          2560.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint15",
+        "position": [
+          -8.19200038909912,
+          0.100000239908695,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          -512.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint14",
+        "position": [
+          -6.14400005340576,
+          0.100000001490116,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          -384.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint13",
+        "position": [
+          -6.14400005340576,
+          0.100000001490116,
+          -40.9599990844727
+        ],
+        "sourcePosition": [
+          -384.0,
+          64.0,
+          2560.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint12",
+        "position": [
+          6.14400005340576,
+          0.100000001490116,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          384.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint11",
+        "position": [
+          6.14400005340576,
+          0.099999763071537,
+          -40.9599990844727
+        ],
+        "sourcePosition": [
+          384.0,
+          64.0,
+          2560.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint10",
+        "position": [
+          8.19200038909912,
+          0.099999763071537,
+          -40.9599990844727
+        ],
+        "sourcePosition": [
+          512.0,
+          64.0,
+          2560.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint9",
+        "position": [
+          8.19200038909912,
+          0.099999763071537,
+          -44.0320014953613
+        ],
+        "sourcePosition": [
+          512.0,
+          64.0,
+          2752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 26.0,
+    "previewAsset": "res://assets/maps/geometry/26.glb",
+    "previewValidated": true,
+    "sha256": "c71b34e44515f9fcba94df6e6c7fa62259d0b36f9380be03efe250d7797197cd",
+    "sourceSha256": "acb33a0eda970243ce377b02088925882ef0544117f2aa2e96cd8bb978592283",
+    "startPoints": [
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          1.21599996089935,
+          -0.136700063943863,
+          -1.15199995040894
+        ],
+        "sourcePosition": [
+          76.0,
+          256.0,
+          72.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          3.26399993896484,
+          -0.136700063943863,
+          -1.15199995040894
+        ],
+        "sourcePosition": [
+          204.0,
+          256.0,
+          72.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          0.19200000166893,
+          -0.18023481965065,
+          -2.36800003051758
+        ],
+        "sourcePosition": [
+          12.0,
+          256.0,
+          148.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          2.24000000953674,
+          -0.136700540781021,
+          -2.36800003051758
+        ],
+        "sourcePosition": [
+          140.0,
+          256.0,
+          148.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -0.0640000030398369,
+          -0.220868498086929,
+          0.448000013828278
+        ],
+        "sourcePosition": [
+          -4.0,
+          256.0,
+          -28.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          1.98399996757507,
+          -0.136700063943863,
+          0.448000013828278
+        ],
+        "sourcePosition": [
+          124.0,
+          256.0,
+          -28.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          0.832000017166138,
+          -0.136700063943863,
+          1.98399996757507
+        ],
+        "sourcePosition": [
+          52.0,
+          256.0,
+          -124.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          2.62400007247925,
+          -0.136700063943863,
+          1.98399996757507
+        ],
+        "sourcePosition": [
+          164.0,
+          256.0,
+          -124.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          71.4240036010742,
+          2.58960056304932,
+          -39.8079986572266
+        ],
+        "sourcePosition": [
+          4464.0,
+          384.0,
+          2488.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          71.4240036010742,
+          2.58960056304932,
+          -38.7840003967285
+        ],
+        "sourcePosition": [
+          4464.0,
+          384.0,
+          2424.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          73.4720001220703,
+          2.58960056304932,
+          -37.7599983215332
+        ],
+        "sourcePosition": [
+          4592.0,
+          384.0,
+          2360.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          73.4720001220703,
+          2.58960103988647,
+          -39.8079986572266
+        ],
+        "sourcePosition": [
+          4592.0,
+          384.0,
+          2488.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          73.4720001220703,
+          2.58960103988647,
+          -38.7840003967285
+        ],
+        "sourcePosition": [
+          4592.0,
+          384.0,
+          2424.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          69.3759994506836,
+          2.58960008621216,
+          -37.7599983215332
+        ],
+        "sourcePosition": [
+          4336.0,
+          384.0,
+          2360.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          69.3759994506836,
+          2.58960008621216,
+          -38.7840003967285
+        ],
+        "sourcePosition": [
+          4336.0,
+          384.0,
+          2424.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          69.3759994506836,
+          2.58960008621216,
+          -39.8079986572266
+        ],
+        "sourcePosition": [
+          4336.0,
+          384.0,
+          2488.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 31.0,
+    "previewAsset": "res://assets/maps/geometry/31.glb",
+    "previewValidated": true,
+    "sha256": "ceb14918241a10770e3cadac87c2caa60d3ff1f6646bf65d639aadece260b857",
+    "sourceSha256": "1bc264a0e0fffbe895851ee676f8d32fe6760559863a699e613b734cc59a27bd",
+    "startPoints": [
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          -68.2239990234375,
+          -43.931999206543,
+          16.1760082244873
+        ],
+        "sourcePosition": [
+          -4264.0,
+          -2624.0,
+          -1011.00048828125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -69.9680023193359,
+          -43.931999206543,
+          16.1760005950928
+        ],
+        "sourcePosition": [
+          -4373.0,
+          -2624.0,
+          -1011.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -69.9680023193359,
+          -43.931999206543,
+          14.6400003433228
+        ],
+        "sourcePosition": [
+          -4373.0,
+          -2624.0,
+          -915.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -69.9680023193359,
+          -43.931999206543,
+          19.2479915618896
+        ],
+        "sourcePosition": [
+          -4373.0,
+          -2624.0,
+          -1202.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -69.9680023193359,
+          -43.931999206543,
+          17.7119922637939
+        ],
+        "sourcePosition": [
+          -4373.0,
+          -2624.0,
+          -1106.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          -68.2239990234375,
+          -43.931999206543,
+          17.7119998931885
+        ],
+        "sourcePosition": [
+          -4264.0,
+          -2624.0,
+          -1107.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -68.224006652832,
+          -43.931999206543,
+          19.2479991912842
+        ],
+        "sourcePosition": [
+          -4264.00048828125,
+          -2624.0,
+          -1203.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -68.2239990234375,
+          -43.931999206543,
+          14.6400003433228
+        ],
+        "sourcePosition": [
+          -4264.0,
+          -2624.0,
+          -915.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          42.3520011901855,
+          -43.931999206543,
+          24.223991394043
+        ],
+        "sourcePosition": [
+          2647.0,
+          -2616.0,
+          -1513.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          42.3520011901855,
+          -43.931999206543,
+          22.1759967803955
+        ],
+        "sourcePosition": [
+          2647.0,
+          -2616.0,
+          -1385.99975585938
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          42.3520011901855,
+          -43.931999206543,
+          20.1280078887939
+        ],
+        "sourcePosition": [
+          2647.0,
+          -2616.0,
+          -1258.00048828125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          42.3520011901855,
+          -43.931999206543,
+          18.0800151824951
+        ],
+        "sourcePosition": [
+          2647.0,
+          -2616.0,
+          -1130.0009765625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          44.6559982299805,
+          -43.7271995544434,
+          18.0799999237061
+        ],
+        "sourcePosition": [
+          2791.0,
+          -2586.0,
+          -1130.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          44.6559982299805,
+          -43.7271995544434,
+          22.1760082244873
+        ],
+        "sourcePosition": [
+          2791.0,
+          -2586.0,
+          -1386.00048828125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          44.6559982299805,
+          -43.7271995544434,
+          20.1280078887939
+        ],
+        "sourcePosition": [
+          2791.0,
+          -2586.0,
+          -1258.00048828125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          44.6559982299805,
+          -43.7271995544434,
+          24.2239761352539
+        ],
+        "sourcePosition": [
+          2791.0,
+          -2586.0,
+          -1513.99853515625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 44.0,
+    "previewAsset": "res://assets/maps/geometry/44.glb",
+    "previewValidated": true,
+    "sha256": "0c2fdd0f2b9a45b1a8f1234cc9cc69d205d616a5d9ef52cfa9e893d7105d18eb",
+    "sourceSha256": "82964c307de1684cc5f4a35ef5ec6cf5ff588ff128602a92d026b1f2433fff8c",
+    "startPoints": [
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          -101.85124206543,
+          24.931999206543,
+          42.9853553771973
+        ],
+        "sourcePosition": [
+          -6365.70263671875,
+          1744.0,
+          -2686.58471679688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          -103.131233215332,
+          24.931999206543,
+          44.1097793579102
+        ],
+        "sourcePosition": [
+          -6445.7021484375,
+          1744.0,
+          -2756.861328125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -100.510406494141,
+          24.931999206543,
+          44.3506965637207
+        ],
+        "sourcePosition": [
+          -6281.900390625,
+          1744.0,
+          -2771.91845703125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -101.790420532227,
+          24.931999206543,
+          45.4751167297363
+        ],
+        "sourcePosition": [
+          -6361.9013671875,
+          1744.0,
+          -2842.19482421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          -99.4255828857422,
+          24.931999206543,
+          45.460018157959
+        ],
+        "sourcePosition": [
+          -6214.09912109375,
+          1744.0,
+          -2841.25122070313
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          -100.705596923828,
+          24.931999206543,
+          46.5844459533691
+        ],
+        "sourcePosition": [
+          -6294.099609375,
+          1744.0,
+          -2911.52783203125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          -98.3407669067383,
+          24.931999206543,
+          46.5693588256836
+        ],
+        "sourcePosition": [
+          -6146.2978515625,
+          1744.0,
+          -2910.5849609375
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -99.6207580566406,
+          24.931999206543,
+          47.6937828063965
+        ],
+        "sourcePosition": [
+          -6226.29736328125,
+          1744.0,
+          -2980.861328125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          44.416561126709,
+          24.931999206543,
+          -8.1820707321167
+        ],
+        "sourcePosition": [
+          2776.03515625,
+          1768.0,
+          511.37939453125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          46.2569313049316,
+          24.931999206543,
+          -6.34170722961426
+        ],
+        "sourcePosition": [
+          2891.05810546875,
+          1768.0,
+          396.356689453125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          48.097282409668,
+          24.931999206543,
+          -4.50138092041016
+        ],
+        "sourcePosition": [
+          3006.080078125,
+          1768.0,
+          281.336303710938
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          49.9376487731934,
+          24.931999206543,
+          -2.66098046302795
+        ],
+        "sourcePosition": [
+          3121.10302734375,
+          1768.0,
+          166.311279296875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          44.4467277526855,
+          24.931999206543,
+          -4.5314998626709
+        ],
+        "sourcePosition": [
+          2777.92041015625,
+          1768.0,
+          283.21875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          46.2870788574219,
+          24.931999206543,
+          -2.69115042686462
+        ],
+        "sourcePosition": [
+          2892.9423828125,
+          1768.0,
+          168.196899414063
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          48.1274528503418,
+          24.931999206543,
+          -0.850802719593048
+        ],
+        "sourcePosition": [
+          3007.9658203125,
+          1768.0,
+          53.1751708984375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          42.6063423156738,
+          24.931999206543,
+          -6.37188673019409
+        ],
+        "sourcePosition": [
+          2662.896484375,
+          1768.0,
+          398.242919921875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 46.0,
+    "previewAsset": "res://assets/maps/geometry/46.glb",
+    "previewValidated": true,
+    "sha256": "e0aed24193592286edb5f8e662cf7510746098cda37151c3d48711669f6ead22",
+    "sourceSha256": "ce87574c36265dfe48f8d5412161226a66e6e9b07e685250aefd6c4152f2c1a7",
+    "startPoints": [
+      {
+        "name": "GameStartPoint_R12",
+        "position": [
+          0.307585924863815,
+          -12.7096996307373,
+          23.9918556213379
+        ],
+        "sourcePosition": [
+          19.22412109375,
+          -544.0,
+          -1499.49096679688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R09",
+        "position": [
+          0.307589828968048,
+          -12.7096996307373,
+          24.8878479003906
+        ],
+        "sourcePosition": [
+          19.224365234375,
+          -544.0,
+          -1555.49047851563
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R11",
+        "position": [
+          0.307589828968048,
+          -12.7096996307373,
+          22.1358509063721
+        ],
+        "sourcePosition": [
+          19.224365234375,
+          -544.0,
+          -1383.49072265625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R10",
+        "position": [
+          0.307597666978836,
+          -12.7096996307373,
+          23.0958518981934
+        ],
+        "sourcePosition": [
+          19.224853515625,
+          -544.0,
+          -1443.49072265625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R16",
+        "position": [
+          25.65159034729,
+          -12.7096996307373,
+          22.6478519439697
+        ],
+        "sourcePosition": [
+          1603.22436523438,
+          -544.0,
+          -1415.49072265625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R13",
+        "position": [
+          25.5875968933105,
+          -12.7096996307373,
+          21.559850692749
+        ],
+        "sourcePosition": [
+          1599.22485351563,
+          -544.0,
+          -1347.49072265625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R15",
+        "position": [
+          25.6515979766846,
+          -12.7096996307373,
+          23.7998561859131
+        ],
+        "sourcePosition": [
+          1603.22485351563,
+          -544.0,
+          -1487.49096679688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R14",
+        "position": [
+          25.6516017913818,
+          -12.7097005844116,
+          24.8878479003906
+        ],
+        "sourcePosition": [
+          1603.22509765625,
+          -544.0,
+          -1555.49047851563
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          0.819593727588654,
+          -12.7093334197998,
+          -54.1521530151367
+        ],
+        "sourcePosition": [
+          51.224609375,
+          -544.0,
+          3384.50952148438
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          0.819593727588654,
+          -12.7093486785889,
+          -53.1281509399414
+        ],
+        "sourcePosition": [
+          51.224609375,
+          -544.0,
+          3320.50952148438
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          0.819589853286743,
+          -12.7093181610107,
+          -55.1121482849121
+        ],
+        "sourcePosition": [
+          51.224365234375,
+          -544.0,
+          3444.50927734375
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          0.819589853286743,
+          -12.7093620300293,
+          -52.2321472167969
+        ],
+        "sourcePosition": [
+          51.224365234375,
+          -544.0,
+          3264.50927734375
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          26.0355968475342,
+          -12.7093544006348,
+          -52.6801490783691
+        ],
+        "sourcePosition": [
+          1627.22485351563,
+          -544.0,
+          3292.50927734375
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          26.0355892181396,
+          -12.70934009552,
+          -53.5761566162109
+        ],
+        "sourcePosition": [
+          1627.22436523438,
+          -544.0,
+          3348.509765625
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          26.0355930328369,
+          -12.7093257904053,
+          -54.6001472473145
+        ],
+        "sourcePosition": [
+          1627.224609375,
+          -544.0,
+          3412.50927734375
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          26.0355968475342,
+          -12.7093677520752,
+          -51.7201499938965
+        ],
+        "sourcePosition": [
+          1627.22485351563,
+          -544.0,
+          3232.50927734375
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [
+      "texfx/sky/sky19_bk.dtx",
+      "texfx/sky/sky19_fr.dtx",
+      "texfx/sky/sky19_lf.dtx",
+      "texfx/sky/sky19_rt.dtx",
+      "texfx/sky/sky19_up.dtx"
+    ],
+    "number": 50.0,
+    "previewAsset": "res://assets/maps/geometry/50.glb",
+    "previewValidated": true,
+    "sha256": "515f3bcf3ba59b2c55607098a51527e28337e130d06a97664cabbc2b9a99b449",
+    "sourceSha256": "c8ff237cc46cb1029f2f157a41746a1c6edf0ce4b74569dc6ff05869b5439edf",
+    "startPoints": [
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -58.2080001831055,
+          -37.8689002990723,
+          -4.12799978256226
+        ],
+        "sourcePosition": [
+          -3638.0,
+          -2237.9521484375,
+          258.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -58.2080001831055,
+          -37.8689002990723,
+          -16.1599998474121
+        ],
+        "sourcePosition": [
+          -3638.0,
+          -2237.9521484375,
+          1010.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -58.2080001831055,
+          -37.8689002990723,
+          -6.17600011825562
+        ],
+        "sourcePosition": [
+          -3638.0,
+          -2237.9521484375,
+          386.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -58.431999206543,
+          -31.3404979705811,
+          -23.07200050354
+        ],
+        "sourcePosition": [
+          -3652.0,
+          -2016.9521484375,
+          1442.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -58.2080001831055,
+          -37.8665008544922,
+          -2.07999992370605
+        ],
+        "sourcePosition": [
+          -3638.0,
+          -2237.9521484375,
+          130.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          -58.2080001831055,
+          -37.8665008544922,
+          -13.0880002975464
+        ],
+        "sourcePosition": [
+          -3638.0,
+          -2237.9521484375,
+          818.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -56.3839988708496,
+          -31.3404979705811,
+          -22.0480003356934
+        ],
+        "sourcePosition": [
+          -3524.0,
+          -2016.9521484375,
+          1378.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R09",
+        "position": [
+          39.2959976196289,
+          -37.8665008544922,
+          14.9440078735352
+        ],
+        "sourcePosition": [
+          2455.99975585938,
+          -2233.9521484375,
+          -934.00048828125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R11",
+        "position": [
+          39.2960052490234,
+          -37.8689002990723,
+          5.72801160812378
+        ],
+        "sourcePosition": [
+          2456.00024414063,
+          -2233.9521484375,
+          -358.000732421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R10",
+        "position": [
+          39.2960090637207,
+          -37.8500671386719,
+          11.8720035552979
+        ],
+        "sourcePosition": [
+          2456.00048828125,
+          -2233.9521484375,
+          -742.000244140625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R16",
+        "position": [
+          38.3040008544922,
+          -31.3404979705811,
+          22.112003326416
+        ],
+        "sourcePosition": [
+          2394.0,
+          -2016.9521484375,
+          -1382.00024414063
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R13",
+        "position": [
+          40.3520011901855,
+          -31.3404979705811,
+          23.1359958648682
+        ],
+        "sourcePosition": [
+          2522.0,
+          -2016.9521484375,
+          -1445.99975585938
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R15",
+        "position": [
+          39.296012878418,
+          -37.8665008544922,
+          1.63199996948242
+        ],
+        "sourcePosition": [
+          2456.00073242188,
+          -2233.9521484375,
+          -102.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R14",
+        "position": [
+          39.2960014343262,
+          -37.8689002990723,
+          3.6800000667572
+        ],
+        "sourcePosition": [
+          2456.0,
+          -2233.9521484375,
+          -230.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 57.0,
+    "previewAsset": "res://assets/maps/geometry/57.glb",
+    "previewValidated": true,
+    "sha256": "bf5ad094e1efdb0681dd3c1bda1e6175973f1f86196c571cf49e14f39815bfca",
+    "sourceSha256": "8d723cf567fca56b833dccf66136458ed1b1f79856c7af20ae7d4422c16e377f",
+    "startPoints": [
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -37.1022186279297,
+          2.36849975585938,
+          14.1070470809937
+        ],
+        "sourcePosition": [
+          -2318.888671875,
+          277.216796875,
+          -881.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -34.2862205505371,
+          2.36849975585938,
+          12.5710468292236
+        ],
+        "sourcePosition": [
+          -2142.888671875,
+          277.216796875,
+          -785.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -37.1022186279297,
+          2.36850023269653,
+          12.5710468292236
+        ],
+        "sourcePosition": [
+          -2318.888671875,
+          277.216796875,
+          -785.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -37.1022186279297,
+          2.38469982147217,
+          15.8990468978882
+        ],
+        "sourcePosition": [
+          -2318.888671875,
+          277.216796875,
+          -993.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -34.2862205505371,
+          2.36849975585938,
+          16.1550464630127
+        ],
+        "sourcePosition": [
+          -2142.888671875,
+          277.216796875,
+          -1009.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          -35.3102188110352,
+          2.36849975585938,
+          14.1070470809937
+        ],
+        "sourcePosition": [
+          -2206.888671875,
+          277.216796875,
+          -881.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -31.9822196960449,
+          2.36849975585938,
+          12.5710468292236
+        ],
+        "sourcePosition": [
+          -1998.888671875,
+          277.216796875,
+          -785.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -31.4702186584473,
+          2.36849975585938,
+          15.8990468978882
+        ],
+        "sourcePosition": [
+          -1966.888671875,
+          277.216796875,
+          -993.6904296875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          40.7039985656738,
+          2.36849975585938,
+          13.8240003585815
+        ],
+        "sourcePosition": [
+          2544.0,
+          238.0,
+          -864.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          40.7039985656738,
+          2.36849975585938,
+          15.1040000915527
+        ],
+        "sourcePosition": [
+          2544.0,
+          238.0,
+          -944.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          40.7039985656738,
+          2.36849975585938,
+          16.6399993896484
+        ],
+        "sourcePosition": [
+          2544.0,
+          238.0,
+          -1040.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          39.423999786377,
+          2.36849975585938,
+          13.8240003585815
+        ],
+        "sourcePosition": [
+          2464.0,
+          238.0,
+          -864.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          39.423999786377,
+          2.3684995174408,
+          15.1040000915527
+        ],
+        "sourcePosition": [
+          2464.0,
+          238.0,
+          -944.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          39.423999786377,
+          2.36849927902222,
+          16.6399993896484
+        ],
+        "sourcePosition": [
+          2464.0,
+          238.0,
+          -1040.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          37.8880004882813,
+          2.36849975585938,
+          13.8240003585815
+        ],
+        "sourcePosition": [
+          2368.0,
+          238.0,
+          -864.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          37.8880004882813,
+          2.3684995174408,
+          15.1040000915527
+        ],
+        "sourcePosition": [
+          2368.0,
+          238.0,
+          -944.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 58.0,
+    "previewAsset": "res://assets/maps/geometry/58.glb",
+    "previewValidated": true,
+    "sha256": "4a7b90e52b48c411c75eafa8ae5fba8096737111e93a92f27a2fb107c96f4e82",
+    "sourceSha256": "065c2ac232bbae75d3f0b99303c4f53c503bae0652759b8f39a231e81a6370c7",
+    "startPoints": [
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -22.384672164917,
+          5.21999979019165,
+          45.2799911499023
+        ],
+        "sourcePosition": [
+          -1399.0419921875,
+          447.579895019531,
+          -2829.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -20.3366718292236,
+          5.21999979019165,
+          43.9999847412109
+        ],
+        "sourcePosition": [
+          -1271.0419921875,
+          447.579895019531,
+          -2749.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -20.336669921875,
+          5.21999979019165,
+          42.4639892578125
+        ],
+        "sourcePosition": [
+          -1271.04187011719,
+          447.579895019531,
+          -2653.99926757813
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -22.3846817016602,
+          5.21999979019165,
+          43.9999809265137
+        ],
+        "sourcePosition": [
+          -1399.04260253906,
+          447.579895019531,
+          -2749.99877929688
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          -20.3366737365723,
+          5.21999979019165,
+          45.2799835205078
+        ],
+        "sourcePosition": [
+          -1271.04211425781,
+          447.579895019531,
+          -2829.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -22.3846740722656,
+          5.21999979019165,
+          41.1839828491211
+        ],
+        "sourcePosition": [
+          -1399.04211425781,
+          447.579895019531,
+          -2573.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          -20.3366737365723,
+          5.21999979019165,
+          41.1839828491211
+        ],
+        "sourcePosition": [
+          -1271.04211425781,
+          447.579895019531,
+          -2573.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -22.3846759796143,
+          5.21999979019165,
+          42.4639854431152
+        ],
+        "sourcePosition": [
+          -1399.04223632813,
+          447.579895019531,
+          -2653.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint08",
+        "position": [
+          15.1040000915527,
+          2.65999984741211,
+          -43.2639999389648
+        ],
+        "sourcePosition": [
+          944.0,
+          320.0,
+          2704.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint07",
+        "position": [
+          17.1520004272461,
+          2.65999984741211,
+          -43.2639999389648
+        ],
+        "sourcePosition": [
+          1072.0,
+          320.0,
+          2704.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint06",
+        "position": [
+          15.1040000915527,
+          2.65999984741211,
+          -42.2400016784668
+        ],
+        "sourcePosition": [
+          944.0,
+          320.0,
+          2640.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint05",
+        "position": [
+          17.1520004272461,
+          2.65999984741211,
+          -40.1920013427734
+        ],
+        "sourcePosition": [
+          1072.0,
+          320.0,
+          2512.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint03",
+        "position": [
+          17.1520004272461,
+          2.65999984741211,
+          -41.2159996032715
+        ],
+        "sourcePosition": [
+          1072.0,
+          320.0,
+          2576.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint02",
+        "position": [
+          15.1040000915527,
+          2.65999984741211,
+          -41.2159996032715
+        ],
+        "sourcePosition": [
+          944.0,
+          320.0,
+          2576.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint01",
+        "position": [
+          17.1520004272461,
+          2.65999984741211,
+          -42.2400016784668
+        ],
+        "sourcePosition": [
+          1072.0,
+          320.0,
+          2640.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "RedStartPoint04",
+        "position": [
+          15.2623338699341,
+          2.65999984741211,
+          -40.1582717895508
+        ],
+        "sourcePosition": [
+          953.895874023438,
+          377.848999023438,
+          2509.89208984375
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 59.0,
+    "previewAsset": "res://assets/maps/geometry/59.glb",
+    "previewValidated": true,
+    "sha256": "cb905b5058aee6c3806a5152b5dbd568a2488b3aa5e3def34f2c4bbeb17b2f93",
+    "sourceSha256": "8dcd49e9fd285414db6c26c8706f690d7bd5df44b4d5c3c3a13c289d890c0327",
+    "startPoints": [
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          43.8400001525879,
+          125.027992248535,
+          -16.5120010375977
+        ],
+        "sourcePosition": [
+          2740.0,
+          7872.0,
+          1032.00012207031
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          45.8880004882813,
+          125.027992248535,
+          -14.46399974823
+        ],
+        "sourcePosition": [
+          2868.0,
+          7872.0,
+          904.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          45.8880004882813,
+          125.027992248535,
+          -16.511999130249
+        ],
+        "sourcePosition": [
+          2868.0,
+          7872.0,
+          1032.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          44.8639984130859,
+          125.027992248535,
+          -16.5119953155518
+        ],
+        "sourcePosition": [
+          2804.0,
+          7872.0,
+          1031.99975585938
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          44.8639984130859,
+          125.027992248535,
+          -15.4880018234253
+        ],
+        "sourcePosition": [
+          2804.0,
+          7872.0,
+          968.000122070312
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          45.8880043029785,
+          125.027992248535,
+          -15.4879999160767
+        ],
+        "sourcePosition": [
+          2868.00024414063,
+          7872.0,
+          968.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          42.8160018920898,
+          125.027992248535,
+          -16.511999130249
+        ],
+        "sourcePosition": [
+          2676.0,
+          7872.0,
+          1032.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_red",
+        "position": [
+          43.8400001525879,
+          125.027992248535,
+          -15.4879999160767
+        ],
+        "sourcePosition": [
+          2740.0,
+          7872.0,
+          968.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          -61.8880004882813,
+          125.027992248535,
+          16.8960018157959
+        ],
+        "sourcePosition": [
+          -3868.0,
+          7872.0,
+          -1056.00012207031
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          -60.8639984130859,
+          125.027992248535,
+          17.9199981689453
+        ],
+        "sourcePosition": [
+          -3804.0,
+          7872.0,
+          -1119.99987792969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          -62.9119987487793,
+          125.027992248535,
+          17.9200000762939
+        ],
+        "sourcePosition": [
+          -3932.0,
+          7872.0,
+          -1120.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          -63.9360008239746,
+          125.027992248535,
+          17.9199981689453
+        ],
+        "sourcePosition": [
+          -3996.0,
+          7872.0,
+          -1119.99987792969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          -61.8880004882813,
+          125.027992248535,
+          17.9199981689453
+        ],
+        "sourcePosition": [
+          -3868.0,
+          7872.0,
+          -1119.99987792969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -63.9360008239746,
+          125.027992248535,
+          15.8720016479492
+        ],
+        "sourcePosition": [
+          -3996.0,
+          7872.0,
+          -992.000122070312
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          -63.9360008239746,
+          125.027992248535,
+          16.8960018157959
+        ],
+        "sourcePosition": [
+          -3996.0,
+          7872.0,
+          -1056.00012207031
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_blue",
+        "position": [
+          -62.9119987487793,
+          125.027992248535,
+          16.8959980010986
+        ],
+        "sourcePosition": [
+          -3932.0,
+          7872.0,
+          -1055.99987792969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          -62.2364311218262,
+          125.027992248535,
+          16.3286647796631
+        ],
+        "sourcePosition": [
+          -3889.77685546875,
+          7907.30419921875,
+          -1020.54156494141
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint2",
+        "position": [
+          -0.959999978542328,
+          125.027992248535,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          -60.0,
+          7904.0,
+          128.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint3",
+        "position": [
+          0.319999992847443,
+          125.027992248535,
+          24.576000213623
+        ],
+        "sourcePosition": [
+          20.0,
+          7888.0,
+          -1536.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint4",
+        "position": [
+          8.25599956512451,
+          125.027992248535,
+          4.60799980163574
+        ],
+        "sourcePosition": [
+          516.0,
+          7904.0,
+          -288.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint5",
+        "position": [
+          17.4720001220703,
+          125.027992248535,
+          8.19200038909912
+        ],
+        "sourcePosition": [
+          1092.0,
+          7904.0,
+          -512.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint6",
+        "position": [
+          17.4720001220703,
+          125.027992248535,
+          -10.2399997711182
+        ],
+        "sourcePosition": [
+          1092.0,
+          7888.0,
+          640.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint7",
+        "position": [
+          34.8800010681152,
+          125.027992248535,
+          5.63199996948242
+        ],
+        "sourcePosition": [
+          2180.0,
+          7904.0,
+          -352.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint8",
+        "position": [
+          43.5839996337891,
+          125.027992248535,
+          -15.8719997406006
+        ],
+        "sourcePosition": [
+          2724.0,
+          7904.0,
+          992.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint9",
+        "position": [
+          29.7600002288818,
+          125.027992248535,
+          19.9680004119873
+        ],
+        "sourcePosition": [
+          1860.0,
+          7904.0,
+          -1248.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -35.7760009765625,
+          125.027992248535,
+          11.7760000228882
+        ],
+        "sourcePosition": [
+          -2236.0,
+          7904.0,
+          -736.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          -53.1839981079102,
+          125.027992248535,
+          -6.14400005340576
+        ],
+        "sourcePosition": [
+          -3324.0,
+          7904.0,
+          384.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -48.0639991760254,
+          125.027992248535,
+          -18.9440002441406
+        ],
+        "sourcePosition": [
+          -3004.0,
+          7920.0,
+          1184.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          -35.7760009765625,
+          125.027992248535,
+          -0.256000012159348
+        ],
+        "sourcePosition": [
+          -2236.0,
+          7904.0,
+          16.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          -21.4400005340576,
+          125.027992248535,
+          -23.5520000457764
+        ],
+        "sourcePosition": [
+          -1340.0,
+          7904.0,
+          1472.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint19",
+        "position": [
+          -22.7199993133545,
+          125.027992248535,
+          -3.58400011062622
+        ],
+        "sourcePosition": [
+          -1420.0,
+          7904.0,
+          224.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint20",
+        "position": [
+          -17.3439998626709,
+          125.027992248535,
+          3.07200002670288
+        ],
+        "sourcePosition": [
+          -1084.0,
+          7888.0,
+          -192.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 65.0,
+    "previewAsset": "res://assets/maps/geometry/65.glb",
+    "previewValidated": true,
+    "sha256": "2d7cae7168593580905b55aed98f4252a7593c76d97ed21ce7ba504217443f2e",
+    "sourceSha256": "097d1f6c1c056ffe742dd56165ce56f61a1e5dcd487dfa3c3cd8b0a84696c6f3",
+    "startPoints": [
+      {
+        "name": "GameStartPoint21",
+        "position": [
+          -47.4879989624023,
+          -78.6921157836914,
+          -87.0996856689453
+        ],
+        "sourcePosition": [
+          -2968.0,
+          -4789.99951171875,
+          5443.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -42.3680000305176,
+          -79.1852188110352,
+          -88.0436859130859
+        ],
+        "sourcePosition": [
+          -2648.0,
+          -4819.99951171875,
+          5502.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint22",
+        "position": [
+          -42.3680000305176,
+          -79.9129104614258,
+          -90.1716842651367
+        ],
+        "sourcePosition": [
+          -2648.0,
+          -4865.99951171875,
+          5635.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint23",
+        "position": [
+          -47.4879989624023,
+          -79.3310089111328,
+          -89.227668762207
+        ],
+        "sourcePosition": [
+          -2968.0,
+          -4829.99951171875,
+          5576.7294921875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint24",
+        "position": [
+          -40.3199996948242,
+          -79.783073425293,
+          -90.1716842651367
+        ],
+        "sourcePosition": [
+          -2520.0,
+          -4878.99951171875,
+          5635.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint26",
+        "position": [
+          -45.439998626709,
+          -78.6930770874023,
+          -87.0996856689453
+        ],
+        "sourcePosition": [
+          -2840.0,
+          -4789.99951171875,
+          5443.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint27",
+        "position": [
+          -45.439998626709,
+          -79.4272232055664,
+          -89.2276840209961
+        ],
+        "sourcePosition": [
+          -2840.0,
+          -4834.99951171875,
+          5576.73046875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint25",
+        "position": [
+          -40.3520011901855,
+          -79.1655578613281,
+          -88.0437164306641
+        ],
+        "sourcePosition": [
+          -2522.0,
+          -4817.99951171875,
+          5502.732421875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint28",
+        "position": [
+          -54.9440002441406,
+          -78.9777755737305,
+          78.1483154296875
+        ],
+        "sourcePosition": [
+          -3434.0,
+          -4807.99951171875,
+          -4884.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint29",
+        "position": [
+          -59.0400009155273,
+          -79.6144638061523,
+          78.1483154296875
+        ],
+        "sourcePosition": [
+          -3690.0,
+          -4846.99951171875,
+          -4884.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint30",
+        "position": [
+          -61.0880012512207,
+          -80.0972747802734,
+          78.1483154296875
+        ],
+        "sourcePosition": [
+          -3818.0,
+          -4877.99951171875,
+          -4884.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -61.0880012512207,
+          -80.4133529663086,
+          80.1963119506836
+        ],
+        "sourcePosition": [
+          -3818.0,
+          -4896.99951171875,
+          -5012.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint31",
+        "position": [
+          -56.8959999084473,
+          -79.2180099487305,
+          78.1483154296875
+        ],
+        "sourcePosition": [
+          -3556.0,
+          -4823.99951171875,
+          -4884.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint32",
+        "position": [
+          -56.8959999084473,
+          -79.5909271240234,
+          80.1963119506836
+        ],
+        "sourcePosition": [
+          -3556.0,
+          -4843.99951171875,
+          -5012.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint33",
+        "position": [
+          -59.0400009155273,
+          -79.930534362793,
+          80.1962814331055
+        ],
+        "sourcePosition": [
+          -3690.0,
+          -4865.99951171875,
+          -5012.267578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint34",
+        "position": [
+          -54.9440002441406,
+          -79.3614196777344,
+          80.1963119506836
+        ],
+        "sourcePosition": [
+          -3434.0,
+          -4830.99951171875,
+          -5012.26953125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 72.0,
+    "previewAsset": "res://assets/maps/geometry/72.glb",
+    "previewValidated": true,
+    "sha256": "3a41118a3dc6d9d2ea5d49ca789a825489dc625b97b41ecb225afb86e96f26bf",
+    "sourceSha256": "9faf63784fb4951990d57ea89a3949da7be8ceea38ff37c03f5a565d7f885584",
+    "startPoints": [
+      {
+        "name": "GameStartPoint87",
+        "position": [
+          0.0,
+          4.18920040130615,
+          -1.02400004863739
+        ],
+        "sourcePosition": [
+          0.0,
+          416.0,
+          64.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint88",
+        "position": [
+          1.02400004863739,
+          4.18920040130615,
+          0.0
+        ],
+        "sourcePosition": [
+          64.0,
+          416.0,
+          0.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint89",
+        "position": [
+          -1.02400004863739,
+          4.18920040130615,
+          2.04800009727478
+        ],
+        "sourcePosition": [
+          -64.0,
+          416.0,
+          -128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint90",
+        "position": [
+          1.02400004863739,
+          4.18920040130615,
+          2.04800009727478
+        ],
+        "sourcePosition": [
+          64.0,
+          416.0,
+          -128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint91",
+        "position": [
+          -1.02400004863739,
+          4.18920040130615,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          -64.0,
+          416.0,
+          128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint92",
+        "position": [
+          1.02400004863739,
+          4.18920040130615,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          64.0,
+          416.0,
+          128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint93",
+        "position": [
+          -1.02400004863739,
+          4.18920040130615,
+          0.0
+        ],
+        "sourcePosition": [
+          -64.0,
+          416.0,
+          0.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint94",
+        "position": [
+          0.0,
+          4.18920040130615,
+          1.02400004863739
+        ],
+        "sourcePosition": [
+          0.0,
+          416.0,
+          -64.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint73",
+        "position": [
+          -34.7840003967285,
+          5.03396081924438,
+          -27.4400005340576
+        ],
+        "sourcePosition": [
+          -2174.0,
+          384.0,
+          1715.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint74",
+        "position": [
+          -33.8240013122559,
+          5.03412961959839,
+          -28.4640007019043
+        ],
+        "sourcePosition": [
+          -2114.0,
+          384.0,
+          1779.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint75",
+        "position": [
+          -33.9360008239746,
+          5.02942514419556,
+          -26.5599994659424
+        ],
+        "sourcePosition": [
+          -2121.0,
+          384.0,
+          1660.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint76",
+        "position": [
+          -33.007999420166,
+          5.02980327606201,
+          -27.6319999694824
+        ],
+        "sourcePosition": [
+          -2063.0,
+          384.0,
+          1727.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint83",
+        "position": [
+          -31.0240001678467,
+          5.01484537124634,
+          -30.5599994659424
+        ],
+        "sourcePosition": [
+          -1939.0,
+          384.0,
+          1910.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint84",
+        "position": [
+          -30.1119995117188,
+          5.01653718948364,
+          -31.7280006408691
+        ],
+        "sourcePosition": [
+          -1882.0,
+          384.0,
+          1983.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint85",
+        "position": [
+          -30.0,
+          5.00075674057007,
+          -29.5359992980957
+        ],
+        "sourcePosition": [
+          -1875.0,
+          384.0,
+          1846.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint86",
+        "position": [
+          -29.07200050354,
+          5.0019154548645,
+          -30.6399993896484
+        ],
+        "sourcePosition": [
+          -1817.0,
+          384.0,
+          1915.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          30.92799949646,
+          5.04320001602173,
+          -30.6240005493164
+        ],
+        "sourcePosition": [
+          1933.0,
+          384.0,
+          1914.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          29.6480007171631,
+          5.04320001602173,
+          -31.6800003051758
+        ],
+        "sourcePosition": [
+          1853.0,
+          384.0,
+          1980.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          29.9039993286133,
+          5.04320001602173,
+          -29.6800003051758
+        ],
+        "sourcePosition": [
+          1869.0,
+          384.0,
+          1855.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          28.6240005493164,
+          5.04320001602173,
+          -30.7040004730225
+        ],
+        "sourcePosition": [
+          1789.0,
+          384.0,
+          1919.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          33.8559989929199,
+          5.04320001602173,
+          -26.92799949646
+        ],
+        "sourcePosition": [
+          2116.0,
+          384.0,
+          1683.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          33.007999420166,
+          5.04320001602173,
+          -28.0319995880127
+        ],
+        "sourcePosition": [
+          2063.0,
+          384.0,
+          1752.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          32.9440002441406,
+          5.04320001602173,
+          -25.9039993286133
+        ],
+        "sourcePosition": [
+          2059.0,
+          384.0,
+          1619.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          31.8400001525879,
+          5.04320001602173,
+          -26.92799949646
+        ],
+        "sourcePosition": [
+          1990.0,
+          384.0,
+          1683.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint33",
+        "position": [
+          33.7120018005371,
+          5.01165866851807,
+          27.07200050354
+        ],
+        "sourcePosition": [
+          2107.0,
+          384.0,
+          -1692.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint34",
+        "position": [
+          32.7680015563965,
+          5.0122504234314,
+          28.1119995117188
+        ],
+        "sourcePosition": [
+          2048.0,
+          384.0,
+          -1757.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint35",
+        "position": [
+          32.4799995422363,
+          4.99677085876465,
+          25.8880004882813
+        ],
+        "sourcePosition": [
+          2030.0,
+          384.0,
+          -1618.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint36",
+        "position": [
+          31.4720001220703,
+          5.00034666061401,
+          26.8799991607666
+        ],
+        "sourcePosition": [
+          1967.0,
+          384.0,
+          -1680.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint43",
+        "position": [
+          30.3199996948242,
+          5.04320001602173,
+          30.5599994659424
+        ],
+        "sourcePosition": [
+          1895.0,
+          384.0,
+          -1910.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint44",
+        "position": [
+          29.2479991912842,
+          5.06605386734009,
+          31.5200004577637
+        ],
+        "sourcePosition": [
+          1828.0,
+          384.0,
+          -1970.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint45",
+        "position": [
+          29.1040000915527,
+          5.05251550674438,
+          29.3439998626709
+        ],
+        "sourcePosition": [
+          1819.0,
+          384.0,
+          -1834.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint46",
+        "position": [
+          28.0160007476807,
+          5.07702016830444,
+          30.2880001068115
+        ],
+        "sourcePosition": [
+          1751.0,
+          384.0,
+          -1893.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint53",
+        "position": [
+          -29.9200000762939,
+          5.04320192337036,
+          31.7919998168945
+        ],
+        "sourcePosition": [
+          -1870.0,
+          384.0,
+          -1987.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint54",
+        "position": [
+          -30.7999992370605,
+          5.0360312461853,
+          30.6879997253418
+        ],
+        "sourcePosition": [
+          -1925.0,
+          384.0,
+          -1918.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint55",
+        "position": [
+          -28.8320007324219,
+          5.04320192337036,
+          30.6560001373291
+        ],
+        "sourcePosition": [
+          -1802.0,
+          384.0,
+          -1916.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint56",
+        "position": [
+          -29.7119998931885,
+          5.03261137008667,
+          29.5359992980957
+        ],
+        "sourcePosition": [
+          -1857.0,
+          384.0,
+          -1846.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint63",
+        "position": [
+          -33.5040016174316,
+          5.06883001327515,
+          28.4799995422363
+        ],
+        "sourcePosition": [
+          -2094.0,
+          384.0,
+          -1780.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint64",
+        "position": [
+          -34.4000015258789,
+          5.09473276138306,
+          27.3759994506836
+        ],
+        "sourcePosition": [
+          -2150.0,
+          384.0,
+          -1711.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint65",
+        "position": [
+          -32.4640007019043,
+          5.0655369758606,
+          27.488000869751
+        ],
+        "sourcePosition": [
+          -2029.0,
+          384.0,
+          -1718.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint66",
+        "position": [
+          -33.4080009460449,
+          5.09471988677979,
+          26.3840007781982
+        ],
+        "sourcePosition": [
+          -2088.0,
+          384.0,
+          -1649.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 82.0,
+    "previewAsset": "res://assets/maps/geometry/82.glb",
+    "previewValidated": true,
+    "sha256": "59e6d0d31caf2c916deb8fa6fef394bb3d500f614db9838c5ff5fc6c3fcc4d8a",
+    "sourceSha256": "caf1756f4025e845146d714138cd13e3c432443272c324d32c7100d419a55ab0",
+    "startPoints": [
+      {
+        "name": "GameStartPoint_R00",
+        "position": [
+          18.3953990936279,
+          27.1817989349365,
+          44.4028129577637
+        ],
+        "sourcePosition": [
+          1149.71240234375,
+          1828.67712402344,
+          -2775.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint19",
+        "position": [
+          18.3953990936279,
+          27.2608966827393,
+          50.5468139648438
+        ],
+        "sourcePosition": [
+          1149.71240234375,
+          1828.0556640625,
+          -3159.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint20",
+        "position": [
+          21.4673976898193,
+          27.1842594146729,
+          46.450813293457
+        ],
+        "sourcePosition": [
+          1341.71240234375,
+          1828.0556640625,
+          -2903.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint21",
+        "position": [
+          18.3953990936279,
+          27.1825389862061,
+          48.4988136291504
+        ],
+        "sourcePosition": [
+          1149.71240234375,
+          1828.0556640625,
+          -3031.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -18.4686012268066,
+          27.1839237213135,
+          -5.77318572998047
+        ],
+        "sourcePosition": [
+          -1154.28759765625,
+          1828.0556640625,
+          360.824096679688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          21.4673976898193,
+          27.1828804016113,
+          44.4028129577637
+        ],
+        "sourcePosition": [
+          1341.71240234375,
+          1828.0556640625,
+          -2775.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          -20.5166015625,
+          27.1871433258057,
+          -8.84518527984619
+        ],
+        "sourcePosition": [
+          -1282.28759765625,
+          1828.0556640625,
+          552.824096679688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          -18.4686012268066,
+          27.1829662322998,
+          -3.72518944740295
+        ],
+        "sourcePosition": [
+          -1154.28759765625,
+          1828.0556640625,
+          232.824340820313
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          21.4673976898193,
+          27.1853828430176,
+          48.4988136291504
+        ],
+        "sourcePosition": [
+          1341.71240234375,
+          1828.0556640625,
+          -3031.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          -20.5166015625,
+          27.1817207336426,
+          -2.70118761062622
+        ],
+        "sourcePosition": [
+          -1282.28759765625,
+          1828.0556640625,
+          168.82421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          21.4673976898193,
+          27.1863689422607,
+          50.5468139648438
+        ],
+        "sourcePosition": [
+          1341.71240234375,
+          1828.0556640625,
+          -3159.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R",
+        "position": [
+          18.3953990936279,
+          27.1817989349365,
+          46.450813293457
+        ],
+        "sourcePosition": [
+          1149.71240234375,
+          1828.0556640625,
+          -2903.17578125
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          -20.5166015625,
+          27.1861953735352,
+          -6.79718732833862
+        ],
+        "sourcePosition": [
+          -1282.28759765625,
+          1828.0556640625,
+          424.82421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint22",
+        "position": [
+          -20.5166015625,
+          27.1848468780518,
+          -4.74918746948242
+        ],
+        "sourcePosition": [
+          -1282.28759765625,
+          1828.0556640625,
+          296.82421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint23",
+        "position": [
+          -18.4686012268066,
+          27.1848812103271,
+          -7.8211874961853
+        ],
+        "sourcePosition": [
+          -1154.28759765625,
+          1828.0556640625,
+          488.82421875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_B",
+        "position": [
+          -5.1566014289856,
+          22.1809005737305,
+          18.8028125762939
+        ],
+        "sourcePosition": [
+          -322.28759765625,
+          1508.0556640625,
+          -1175.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_red00",
+        "position": [
+          -0.0366015620529652,
+          22.1809005737305,
+          32.1148109436035
+        ],
+        "sourcePosition": [
+          -2.28759765625,
+          1508.0556640625,
+          -2007.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_red01",
+        "position": [
+          2.01139855384827,
+          22.1809005737305,
+          32.1148109436035
+        ],
+        "sourcePosition": [
+          125.71240234375,
+          1508.0556640625,
+          -2007.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          7.13140249252319,
+          22.1809005737305,
+          20.8508129119873
+        ],
+        "sourcePosition": [
+          445.712646484375,
+          1508.0556640625,
+          -1303.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -5.1566014289856,
+          22.1809005737305,
+          19.826810836792
+        ],
+        "sourcePosition": [
+          -322.28759765625,
+          1508.0556640625,
+          -1239.17565917969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          2.01139855384827,
+          22.1809005737305,
+          11.6348161697388
+        ],
+        "sourcePosition": [
+          125.71240234375,
+          1508.0556640625,
+          -727.176025390625
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          7.13139820098877,
+          22.1809005737305,
+          19.8268127441406
+        ],
+        "sourcePosition": [
+          445.71240234375,
+          1508.0556640625,
+          -1239.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          7.13139820098877,
+          22.1809005737305,
+          21.874813079834
+        ],
+        "sourcePosition": [
+          445.71240234375,
+          1508.0556640625,
+          -1367.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          2.01139855384827,
+          22.1809005737305,
+          9.58681011199951
+        ],
+        "sourcePosition": [
+          125.71240234375,
+          1508.0556640625,
+          -599.175659179688
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -0.0366015620529652,
+          22.1809005737305,
+          11.6348123550415
+        ],
+        "sourcePosition": [
+          -2.28759765625,
+          1508.0556640625,
+          -727.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -5.1566014289856,
+          22.1809005737305,
+          21.874813079834
+        ],
+        "sourcePosition": [
+          -322.28759765625,
+          1508.0556640625,
+          -1367.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -0.0366015620529652,
+          22.1809005737305,
+          30.0668106079102
+        ],
+        "sourcePosition": [
+          -2.28759765625,
+          1508.0556640625,
+          -1879.17565917969
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          2.01139855384827,
+          22.1809005737305,
+          30.0668125152588
+        ],
+        "sourcePosition": [
+          125.71240234375,
+          1508.0556640625,
+          -1879.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -0.0366015620529652,
+          22.1809005737305,
+          9.58681297302246
+        ],
+        "sourcePosition": [
+          -2.28759765625,
+          1508.0556640625,
+          -599.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          -5.1566014289856,
+          22.1809005737305,
+          20.8508129119873
+        ],
+        "sourcePosition": [
+          -322.28759765625,
+          1508.0556640625,
+          -1303.17578125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 83.0,
+    "previewAsset": "res://assets/maps/geometry/83.glb",
+    "previewValidated": true,
+    "sha256": "25d0221b8709f6c79e15c918b1c5293634c9a57f9c99378532da4ac3d55a8edd",
+    "sourceSha256": "1c882f8e85fe0fd6f619a57615e0d44e19ca50279cfeb22c70ff46caac56077a",
+    "startPoints": [
+      {
+        "name": "GameStartPoint_R00",
+        "position": [
+          17.4080009460449,
+          5.10139274597168,
+          23.5520000457764
+        ],
+        "sourcePosition": [
+          1088.0,
+          448.621459960938,
+          -1472.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint19",
+        "position": [
+          17.4080009460449,
+          5.10298204421997,
+          29.6959991455078
+        ],
+        "sourcePosition": [
+          1088.0,
+          448.0,
+          -1856.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint20",
+        "position": [
+          20.4799995422363,
+          5.10203886032104,
+          25.6000003814697
+        ],
+        "sourcePosition": [
+          1280.0,
+          448.0,
+          -1600.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint21",
+        "position": [
+          17.4080009460449,
+          5.10268402099609,
+          27.6480007171631
+        ],
+        "sourcePosition": [
+          1088.0,
+          448.0,
+          -1728.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -19.4559993743896,
+          5.10307788848877,
+          -26.6239986419678
+        ],
+        "sourcePosition": [
+          -1216.0,
+          448.0,
+          1663.99987792969
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          20.4799995422363,
+          5.10139274597168,
+          23.552001953125
+        ],
+        "sourcePosition": [
+          1280.0,
+          448.0,
+          -1472.00012207031
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          -21.503999710083,
+          5.10611820220947,
+          -29.6959972381592
+        ],
+        "sourcePosition": [
+          -1344.0,
+          448.0,
+          1855.99987792969
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          -19.4559993743896,
+          5.1020975112915,
+          -24.5760021209717
+        ],
+        "sourcePosition": [
+          -1216.0,
+          448.0,
+          1536.00012207031
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          20.4799995422363,
+          5.10314464569092,
+          27.6480007171631
+        ],
+        "sourcePosition": [
+          1280.0,
+          448.0,
+          -1728.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          -21.503999710083,
+          5.10190439224243,
+          -23.5520000457764
+        ],
+        "sourcePosition": [
+          -1344.0,
+          448.0,
+          1472.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          20.4799995422363,
+          5.10513067245483,
+          29.6959972381592
+        ],
+        "sourcePosition": [
+          1280.0,
+          448.0,
+          -1855.99987792969
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R",
+        "position": [
+          17.4080009460449,
+          5.10203886032104,
+          25.5999984741211
+        ],
+        "sourcePosition": [
+          1088.0,
+          448.0,
+          -1599.99987792969
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          -21.503999710083,
+          5.10453510284424,
+          -27.6480007171631
+        ],
+        "sourcePosition": [
+          -1344.0,
+          448.0,
+          1728.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint22",
+        "position": [
+          -21.503999710083,
+          5.10321950912476,
+          -25.6000003814697
+        ],
+        "sourcePosition": [
+          -1344.0,
+          448.0,
+          1600.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint23",
+        "position": [
+          -19.4559993743896,
+          5.10405874252319,
+          -28.6720008850098
+        ],
+        "sourcePosition": [
+          -1216.0,
+          448.0,
+          1792.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_B",
+        "position": [
+          -6.14400005340576,
+          0.100000478327274,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          -384.0,
+          128.0,
+          128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_red00",
+        "position": [
+          -1.02400004863739,
+          0.0999995246529579,
+          11.2639999389648
+        ],
+        "sourcePosition": [
+          -64.0,
+          128.0,
+          -704.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_red01",
+        "position": [
+          1.02400004863739,
+          0.0999995246529579,
+          11.2639999389648
+        ],
+        "sourcePosition": [
+          64.0,
+          128.0,
+          -704.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          6.14400386810303,
+          0.100000478327274,
+          0.0
+        ],
+        "sourcePosition": [
+          384.000244140625,
+          128.0,
+          0.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -6.14400005340576,
+          0.100000478327274,
+          -1.02400195598602
+        ],
+        "sourcePosition": [
+          -384.0,
+          128.0,
+          64.0001220703125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          1.02400004863739,
+          0.100000001490116,
+          -9.21599578857422
+        ],
+        "sourcePosition": [
+          64.0,
+          128.0,
+          575.999755859375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          6.14400005340576,
+          0.100000478327274,
+          -1.02400004863739
+        ],
+        "sourcePosition": [
+          384.0,
+          128.0,
+          64.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          6.14400005340576,
+          0.100000478327274,
+          1.02400004863739
+        ],
+        "sourcePosition": [
+          384.0,
+          128.0,
+          -64.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          1.02400004863739,
+          0.100000001490116,
+          -11.2640018463135
+        ],
+        "sourcePosition": [
+          64.0,
+          128.0,
+          704.000122070313
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -1.02400004863739,
+          0.100000001490116,
+          -9.21599960327148
+        ],
+        "sourcePosition": [
+          -64.0,
+          128.0,
+          576.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -6.14400005340576,
+          0.100000478327274,
+          1.02400004863739
+        ],
+        "sourcePosition": [
+          -384.0,
+          128.0,
+          -64.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -1.02400004863739,
+          0.100000001490116,
+          9.21599769592285
+        ],
+        "sourcePosition": [
+          -64.0,
+          128.0,
+          -575.999877929688
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          1.02400004863739,
+          0.100000001490116,
+          9.21599960327148
+        ],
+        "sourcePosition": [
+          64.0,
+          128.0,
+          -576.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -1.02400004863739,
+          0.100000001490116,
+          -11.2639999389648
+        ],
+        "sourcePosition": [
+          -64.0,
+          128.0,
+          704.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          -6.14400005340576,
+          0.100000478327274,
+          0.0
+        ],
+        "sourcePosition": [
+          -384.0,
+          128.0,
+          0.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 84.0,
+    "previewAsset": "res://assets/maps/geometry/84.glb",
+    "previewValidated": true,
+    "sha256": "318609b27056af3990e613062693fbbf80423ad27af4b7c8982464fef9fa4de7",
+    "sourceSha256": "e086cc3d24271cd2abbd772494fc4857f203d5dde22cb4bb85c3e119b161a660",
+    "startPoints": [
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -69.6320037841797,
+          -3.99599981307983,
+          6.14399242401123
+        ],
+        "sourcePosition": [
+          -4352.0,
+          -128.0,
+          -383.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -69.6320037841797,
+          -3.99599981307983,
+          4.09599590301514
+        ],
+        "sourcePosition": [
+          -4352.0,
+          -128.0,
+          -255.999755859375
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          -69.6320037841797,
+          -3.99599981307983,
+          -4.09599208831787
+        ],
+        "sourcePosition": [
+          -4352.0,
+          -128.0,
+          255.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -69.6320037841797,
+          -3.99599981307983,
+          -6.14398431777954
+        ],
+        "sourcePosition": [
+          -4352.0,
+          -128.0,
+          383.9990234375
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          -68.6080017089844,
+          -3.99599981307983,
+          -6.14400005340576
+        ],
+        "sourcePosition": [
+          -4288.0,
+          -130.0,
+          384.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          -68.6080017089844,
+          -3.99599981307983,
+          4.09600019454956
+        ],
+        "sourcePosition": [
+          -4288.0,
+          -130.0,
+          -256.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint19",
+        "position": [
+          -68.6080017089844,
+          -3.99599981307983,
+          -4.09599208831787
+        ],
+        "sourcePosition": [
+          -4288.0,
+          -130.0,
+          255.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint20",
+        "position": [
+          -68.6080017089844,
+          -3.99599981307983,
+          6.14397668838501
+        ],
+        "sourcePosition": [
+          -4288.0,
+          -130.0,
+          -383.99853515625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          68.7200012207031,
+          -3.99609994888306,
+          6.55999231338501
+        ],
+        "sourcePosition": [
+          4295.0,
+          -120.0,
+          -409.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          68.7200012207031,
+          -3.99609994888306,
+          4.51199626922607
+        ],
+        "sourcePosition": [
+          4295.0,
+          -120.0,
+          -281.999755859375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          68.7200012207031,
+          -5.6929497718811,
+          -3.67999219894409
+        ],
+        "sourcePosition": [
+          4295.0,
+          -120.0,
+          229.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          68.7200012207031,
+          -5.69285202026367,
+          -5.72798442840576
+        ],
+        "sourcePosition": [
+          4295.0,
+          -120.0,
+          357.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          69.7440032958984,
+          -5.05285882949829,
+          -5.72800016403198
+        ],
+        "sourcePosition": [
+          4359.0,
+          -122.0,
+          358.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          69.7440032958984,
+          -3.99609994888306,
+          4.51200771331787
+        ],
+        "sourcePosition": [
+          4359.0,
+          -122.0,
+          -282.00048828125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          69.7440032958984,
+          -5.05285882949829,
+          -3.67999219894409
+        ],
+        "sourcePosition": [
+          4359.0,
+          -122.0,
+          229.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          69.7440032958984,
+          -3.99609994888306,
+          6.55997657775879
+        ],
+        "sourcePosition": [
+          4359.0,
+          -122.0,
+          -409.99853515625
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 92.0,
+    "previewAsset": "res://assets/maps/geometry/92.glb",
+    "previewValidated": true,
+    "sha256": "47f9f5bcbe15753e8bfbe9faba53cb0f7df2ce55a830067bea7a3607719adf76",
+    "sourceSha256": "e9777f0d2a4d2e4f6c20ca9971b9589aa4f9fbb1819718e46f7859032c86110a",
+    "startPoints": [
+      {
+        "name": "GameStartPoint15",
+        "position": [
+          -69.0872650146484,
+          2.39935541152954,
+          -5.11999225616455
+        ],
+        "sourcePosition": [
+          -4317.9541015625,
+          325.041381835938,
+          319.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint16",
+        "position": [
+          -69.0872650146484,
+          2.39935493469238,
+          -8.19198417663574
+        ],
+        "sourcePosition": [
+          -4317.9541015625,
+          325.041381835938,
+          511.9990234375
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint17",
+        "position": [
+          -67.0392684936523,
+          1.71669018268585,
+          -8.19200038909912
+        ],
+        "sourcePosition": [
+          -4189.9541015625,
+          291.041381835938,
+          512.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint19",
+        "position": [
+          -67.0392684936523,
+          1.71668970584869,
+          -5.11999225616455
+        ],
+        "sourcePosition": [
+          -4189.9541015625,
+          291.041381835938,
+          319.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -69.0872650146484,
+          2.39933633804321,
+          1.02399218082428
+        ],
+        "sourcePosition": [
+          -4317.9541015625,
+          325.041381835938,
+          -63.99951171875
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint14",
+        "position": [
+          -69.0872650146484,
+          2.39935493469238,
+          -2.04800391197205
+        ],
+        "sourcePosition": [
+          -4317.9541015625,
+          325.041381835938,
+          128.000244140625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint18",
+        "position": [
+          -67.0392684936523,
+          1.71669018268585,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          -4189.9541015625,
+          291.041381835938,
+          128.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint20",
+        "position": [
+          -67.0392684936523,
+          1.71665585041046,
+          1.02397656440735
+        ],
+        "sourcePosition": [
+          -4189.9541015625,
+          291.041381835938,
+          -63.99853515625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          66.7047348022461,
+          2.56049251556396,
+          -2.14400792121887
+        ],
+        "sourcePosition": [
+          4169.0458984375,
+          397.041381835938,
+          134.00048828125
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          66.7047348022461,
+          3.69228029251099,
+          -5.21600389480591
+        ],
+        "sourcePosition": [
+          4169.0458984375,
+          493.041381835938,
+          326.000244140625
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          66.7047348022461,
+          4.44680166244507,
+          -7.26399230957031
+        ],
+        "sourcePosition": [
+          4169.0458984375,
+          589.041381835938,
+          453.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          66.7047348022461,
+          5.57858848571777,
+          -10.3359842300415
+        ],
+        "sourcePosition": [
+          4169.0458984375,
+          653.041381835938,
+          645.9990234375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          67.7287368774414,
+          5.57859468460083,
+          -10.3360004425049
+        ],
+        "sourcePosition": [
+          4233.0458984375,
+          651.041381835938,
+          646.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          67.7287368774414,
+          3.69227504730225,
+          -5.21599197387695
+        ],
+        "sourcePosition": [
+          4233.0458984375,
+          491.041381835938,
+          325.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          67.7287368774414,
+          4.44680070877075,
+          -7.26399230957031
+        ],
+        "sourcePosition": [
+          4233.0458984375,
+          587.041381835938,
+          453.99951171875
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          67.7287368774414,
+          2.56049776077271,
+          -2.14402341842651
+        ],
+        "sourcePosition": [
+          4233.0458984375,
+          395.041381835938,
+          134.00146484375
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint21",
+        "position": [
+          -39.3912658691406,
+          9.39640045166016,
+          -27.6480007171631
+        ],
+        "sourcePosition": [
+          -2461.9541015625,
+          469.041381835938,
+          1728.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint22",
+        "position": [
+          -21.4712657928467,
+          0.180699914693832,
+          -16.8959999084473
+        ],
+        "sourcePosition": [
+          -1341.9541015625,
+          85.0413818359375,
+          1056.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint24",
+        "position": [
+          -22.4952659606934,
+          0.180670589208603,
+          5.88800001144409
+        ],
+        "sourcePosition": [
+          -1405.9541015625,
+          117.041381835938,
+          -368.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint25",
+        "position": [
+          -21.9832649230957,
+          6.32469987869263,
+          -2.30399990081787
+        ],
+        "sourcePosition": [
+          -1373.9541015625,
+          485.041381835938,
+          144.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint26",
+        "position": [
+          -4.31926584243774,
+          0.180700391530991,
+          16.8959999084473
+        ],
+        "sourcePosition": [
+          -269.9541015625,
+          133.041381835938,
+          -1056.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint27",
+        "position": [
+          4.64073419570923,
+          6.83669996261597,
+          16.1280002593994
+        ],
+        "sourcePosition": [
+          290.0458984375,
+          501.041381835938,
+          -1008.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint3",
+        "position": [
+          7.71273422241211,
+          6.32469987869263,
+          -14.8479995727539
+        ],
+        "sourcePosition": [
+          482.0458984375,
+          485.041381835938,
+          928.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint5",
+        "position": [
+          52.2567329406738,
+          6.32469940185547,
+          -28.92799949646
+        ],
+        "sourcePosition": [
+          3266.0458984375,
+          469.041381835938,
+          1808.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint6",
+        "position": [
+          21.5367336273193,
+          6.32469987869263,
+          -2.55999994277954
+        ],
+        "sourcePosition": [
+          1346.0458984375,
+          485.041381835938,
+          160.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint7",
+        "position": [
+          16.6727352142334,
+          0.18107208609581,
+          3.83999991416931
+        ],
+        "sourcePosition": [
+          1042.0458984375,
+          101.041381835938,
+          -240.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint9",
+        "position": [
+          0.0327343754470348,
+          6.32469987869263,
+          -27.6480007171631
+        ],
+        "sourcePosition": [
+          2.0458984375,
+          485.041381835938,
+          1728.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -58.8472671508789,
+          0.180700391530991,
+          8.19200038909912
+        ],
+        "sourcePosition": [
+          -3677.9541015625,
+          133.041381835938,
+          -512.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint2",
+        "position": [
+          -52.7032661437988,
+          6.32469987869263,
+          -27.6480007171631
+        ],
+        "sourcePosition": [
+          -3293.9541015625,
+          485.041381835938,
+          1728.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint8",
+        "position": [
+          54.3047332763672,
+          6.32469987869263,
+          7.16800022125244
+        ],
+        "sourcePosition": [
+          3394.0458984375,
+          485.041381835938,
+          -448.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint23",
+        "position": [
+          -8.4152660369873,
+          0.180699676275253,
+          -25.6000003814697
+        ],
+        "sourcePosition": [
+          -525.9541015625,
+          85.0413818359375,
+          1600.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 97.0,
+    "previewAsset": "res://assets/maps/geometry/97.glb",
+    "previewValidated": true,
+    "sha256": "c8a1a1e23bb3a94319e50ef3aa4c096b4d9900e591a71862dc19e598ab0579c4",
+    "sourceSha256": "0bfa4ef0f5a53f91348ab4d433f3f7b8cb840470ada8d276d6e3108ef5a69ccb",
+    "startPoints": [
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          -2.04800009727478,
+          0.210400193929672,
+          35.8400001525879
+        ],
+        "sourcePosition": [
+          -128.0,
+          160.0,
+          -2240.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint07",
+        "position": [
+          -2.04800009727478,
+          0.210400193929672,
+          37.8880004882813
+        ],
+        "sourcePosition": [
+          -128.0,
+          160.0,
+          -2368.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint08",
+        "position": [
+          33.7919998168945,
+          0.210400193929672,
+          -1.91999995708466
+        ],
+        "sourcePosition": [
+          2112.0,
+          160.0,
+          120.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint09",
+        "position": [
+          33.7919998168945,
+          0.210400193929672,
+          -0.38400000333786
+        ],
+        "sourcePosition": [
+          2112.0,
+          160.0,
+          24.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          35.8400001525879,
+          0.210400193929672,
+          -0.38400000333786
+        ],
+        "sourcePosition": [
+          2240.0,
+          160.0,
+          24.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          35.8400001525879,
+          0.210400193929672,
+          -1.91999995708466
+        ],
+        "sourcePosition": [
+          2240.0,
+          160.0,
+          120.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint12",
+        "position": [
+          0.0,
+          0.210400193929672,
+          37.8880004882813
+        ],
+        "sourcePosition": [
+          0.0,
+          160.0,
+          -2368.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint13",
+        "position": [
+          0.0,
+          0.210400193929672,
+          35.8400001525879
+        ],
+        "sourcePosition": [
+          0.0,
+          160.0,
+          -2240.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          1.02400004863739,
+          0.210399717092514,
+          -35.8400001525879
+        ],
+        "sourcePosition": [
+          64.0,
+          160.0,
+          2240.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -33.7919998168945,
+          0.210400193929672,
+          -0.128000006079674
+        ],
+        "sourcePosition": [
+          -2112.0,
+          160.0,
+          8.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          1.02400004863739,
+          0.21040067076683,
+          -38.4000015258789
+        ],
+        "sourcePosition": [
+          64.0,
+          160.0,
+          2400.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -33.7919998168945,
+          0.210400193929672,
+          -2.04800009727478
+        ],
+        "sourcePosition": [
+          -2112.0,
+          160.0,
+          128.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -1.02399611473084,
+          0.210400193929672,
+          -38.4000015258789
+        ],
+        "sourcePosition": [
+          -63.999755859375,
+          160.0,
+          2400.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -1.02400779724121,
+          0.210400193929672,
+          -35.8400001525879
+        ],
+        "sourcePosition": [
+          -64.00048828125,
+          160.0,
+          2240.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -35.8400001525879,
+          0.210400193929672,
+          -0.127993643283844
+        ],
+        "sourcePosition": [
+          -2240.0,
+          160.0,
+          7.99960279464722
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -35.8400001525879,
+          0.210400193929672,
+          -2.04799962043762
+        ],
+        "sourcePosition": [
+          -2240.0,
+          160.0,
+          127.999969482422
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 100.0,
+    "previewAsset": "res://assets/maps/geometry/100.glb",
+    "previewValidated": true,
+    "sha256": "b0f2d874636d0e3fef2e8896fb02470e25d1a0af4bd6a7aebeb1b6c13a522d46",
+    "sourceSha256": "2bbeca1c634a1ea355001f437c6b739a37f595d548a70496875f6e4a3a8e23e1",
+    "startPoints": [
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -19.4559993743896,
+          0.157699674367905,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          -1216.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint2",
+        "position": [
+          -20.4799995422363,
+          0.157699674367905,
+          -38.9119987487793
+        ],
+        "sourcePosition": [
+          -1280.0,
+          64.0,
+          2432.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint3",
+        "position": [
+          -20.4799995422363,
+          0.157699674367905,
+          -37.8880004882813
+        ],
+        "sourcePosition": [
+          -1280.0,
+          64.0,
+          2368.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint4",
+        "position": [
+          -19.4559993743896,
+          0.157699674367905,
+          -37.8880004882813
+        ],
+        "sourcePosition": [
+          -1216.0,
+          64.0,
+          2368.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint5",
+        "position": [
+          -20.4799995422363,
+          0.176599830389023,
+          -39.9360008239746
+        ],
+        "sourcePosition": [
+          -1280.0,
+          64.0,
+          2496.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint6",
+        "position": [
+          -19.4559993743896,
+          0.157699674367905,
+          -39.9360008239746
+        ],
+        "sourcePosition": [
+          -1216.0,
+          64.0,
+          2496.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint11",
+        "position": [
+          9.21599960327148,
+          0.100000478327274,
+          28.6720008850098
+        ],
+        "sourcePosition": [
+          576.0,
+          128.0,
+          -1792.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint10",
+        "position": [
+          8.19200038909912,
+          0.100000478327274,
+          28.6720008850098
+        ],
+        "sourcePosition": [
+          512.0,
+          128.0,
+          -1792.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint8",
+        "position": [
+          8.19200038909912,
+          0.100000478327274,
+          30.7199993133545
+        ],
+        "sourcePosition": [
+          512.0,
+          128.0,
+          -1920.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint9",
+        "position": [
+          8.19200038909912,
+          0.100000478327274,
+          29.6959991455078
+        ],
+        "sourcePosition": [
+          512.0,
+          128.0,
+          -1856.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint1",
+        "position": [
+          9.21599960327148,
+          0.0999995246529579,
+          29.6959991455078
+        ],
+        "sourcePosition": [
+          576.0,
+          134.0,
+          -1856.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint7",
+        "position": [
+          9.21599960327148,
+          0.100000478327274,
+          30.7199993133545
+        ],
+        "sourcePosition": [
+          576.0,
+          128.0,
+          -1920.0
+        ],
+        "team": "Team0",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  },
+  {
+    "collision": "render_triangle_approximation",
+    "fullPort": false,
+    "limitations": [
+      "original_game_mode_rules_pending",
+      "interactive_world_models_pending",
+      "original_lighting_and_material_effects_pending"
+    ],
+    "missingTextures": [],
+    "number": 110.0,
+    "previewAsset": "res://assets/maps/geometry/110.glb",
+    "previewValidated": true,
+    "sha256": "469db2395de9513ae5c1e4c85707eb29541127601ad5164f2a44427f42e2e12b",
+    "sourceSha256": "7d24afba2b55a79e2bd58f4c1da2d842071c1f3505b5fc51ec84e08868ea7eff",
+    "startPoints": [
+      {
+        "name": "GameStartPoint_R12",
+        "position": [
+          37.1200065612793,
+          91.2359924316406,
+          11.7760057449341
+        ],
+        "sourcePosition": [
+          2320.00048828125,
+          5792.0,
+          -736.000366210938
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R09",
+        "position": [
+          37.1199989318848,
+          91.2359924316406,
+          10.496000289917
+        ],
+        "sourcePosition": [
+          2320.0,
+          5792.0,
+          -656.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R11",
+        "position": [
+          37.1199989318848,
+          91.2359924316406,
+          7.93600368499756
+        ],
+        "sourcePosition": [
+          2320.0,
+          5792.0,
+          -496.000244140625
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R10",
+        "position": [
+          37.1199989318848,
+          91.2359924316406,
+          9.21599769592285
+        ],
+        "sourcePosition": [
+          2320.0,
+          5792.0,
+          -575.999877929688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R16",
+        "position": [
+          35.8400001525879,
+          91.2359924316406,
+          10.4960021972656
+        ],
+        "sourcePosition": [
+          2240.0,
+          5792.0,
+          -656.000122070313
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R13",
+        "position": [
+          35.8400001525879,
+          91.2359924316406,
+          11.7759981155396
+        ],
+        "sourcePosition": [
+          2240.0,
+          5792.0,
+          -735.999877929688
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R15",
+        "position": [
+          35.8400001525879,
+          91.2359924316406,
+          9.21599960327148
+        ],
+        "sourcePosition": [
+          2240.0,
+          5792.0,
+          -576.0
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint_R14",
+        "position": [
+          35.8399925231934,
+          91.2359924316406,
+          7.93599414825439
+        ],
+        "sourcePosition": [
+          2239.99951171875,
+          5792.0,
+          -495.999633789063
+        ],
+        "team": "Team1",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint0",
+        "position": [
+          -67.9680023193359,
+          91.2359924316406,
+          -1.40799999237061
+        ],
+        "sourcePosition": [
+          -4248.0,
+          6048.0,
+          88.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint00",
+        "position": [
+          -66.431999206543,
+          91.2359924316406,
+          -1.40799999237061
+        ],
+        "sourcePosition": [
+          -4152.0,
+          6048.0,
+          88.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint01",
+        "position": [
+          -67.9680023193359,
+          91.2359924316406,
+          -2.94400000572205
+        ],
+        "sourcePosition": [
+          -4248.0,
+          6048.0,
+          184.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint02",
+        "position": [
+          -66.431999206543,
+          91.2359924316406,
+          -2.94400000572205
+        ],
+        "sourcePosition": [
+          -4152.0,
+          6048.0,
+          184.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint03",
+        "position": [
+          -67.9680023193359,
+          91.2359924316406,
+          1.66400003433228
+        ],
+        "sourcePosition": [
+          -4248.0,
+          6048.0,
+          -104.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint04",
+        "position": [
+          -66.431999206543,
+          91.2359924316406,
+          1.66400003433228
+        ],
+        "sourcePosition": [
+          -4152.0,
+          6048.0,
+          -104.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint05",
+        "position": [
+          -67.9680023193359,
+          91.2359924316406,
+          0.128000006079674
+        ],
+        "sourcePosition": [
+          -4248.0,
+          6048.0,
+          -8.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      },
+      {
+        "name": "GameStartPoint06",
+        "position": [
+          -66.431999206543,
+          91.2359924316406,
+          0.128000006079674
+        ],
+        "sourcePosition": [
+          -4152.0,
+          6048.0,
+          -8.0
+        ],
+        "team": "NoTeam",
+        "yaw": 0.0
+      }
+    ],
+    "validationScope": "Godot headless import, generated triangle collision, source spawn downward rays and standing capsule clearance. Not original mode or Android device QA."
+  }
+]

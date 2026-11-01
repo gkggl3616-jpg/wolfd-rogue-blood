@@ -28,6 +28,15 @@ class AssetTests(unittest.TestCase):
     def test_ltb_truncation_and_unsupported_format(self):
         with self.assertRaises(ValueError):inspect_ltb(b'\x01\x00')
         with self.assertRaises(ValueError):inspect_ltb(struct.pack('<HH',2,9))
+    def test_xfs_stored_short_block_after_compressed_blocks(self):
+        first=b'A'*65536;last=b'\xff\xfe';compressed=zlib.compress(first)
+        packed=len(compressed).to_bytes(3,'little')+b'\0\0'+compressed+(len(last)|0xc00000).to_bytes(3,'little')+b'\0\0'+last
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'stored.xfs';path.write_bytes(packed)
+            entry=dict(offset=0,size=len(first)+len(last),packed=len(packed),flag=1)
+            self.assertEqual(recover_entry(path,entry),first+last)
+            path.write_bytes(packed[:-1])
+            with self.assertRaises(ValueError):recover_entry(path,entry)
     def test_comments_are_not_model_definitions(self):
         data=b'/* [Model9]\nName="Fake" */\n//[Model8]\n[Model1]\nName="Real"\nModelFile="char.ltb"\n'
         rows=parse_model_definitions(data)

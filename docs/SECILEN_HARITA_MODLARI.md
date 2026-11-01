@@ -1,6 +1,6 @@
 # Seçilen haritalar ve doğrulanan modlar
 
-19 kullanıcı seçimi. Mod eşleşmeleri yeni ikili tablolardan kategori + harita kimliği üzerinden alınır; isim benzerliği kullanılmaz. Eşleşme, harita dönüşümü veya mod oyun mantığının tamamlandığı anlamına gelmez.
+19 kullanıcı seçimi. Mod eşleşmeleri yeni ikili tablolardan kategori + harita kimliği üzerinden alınır; isim benzerliği kullanılmaz. 19 temel geometri dönüştürüldü ve doğma noktaları/üretilen çarpışmalar motor içinde kontrol edildi. Eşleşmesi doğrulanan 18 haritada gezinti önizlemesi açılır; özgün mod kuralları hâlâ bekliyor. Tam harita/mod portu değildir.
 
 | No | Harita | Doğrulanan modlar |
 |---:|---|---|

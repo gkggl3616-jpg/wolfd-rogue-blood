@@ -33,7 +33,7 @@
   },
   "wolf": {
     "file": "wolf.glb",
-    "sha256": "28d41df143e8ac18f90f1d7f75b161391e6885fb552f654b4622d7ce1e4a9291",
+    "sha256": "d813ee043e76ff2bc87649f2c9292393088df79eab03c36e9f947bce93d748f6",
     "modelSha256": "1e458a8b98e878d1d9cbe5ac16ba5d94d2a59bb11a7100e56d9c3653e4138e05",
     "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
     "animationClips": [
@@ -43,7 +43,11 @@
       "attack",
       "roar",
       "crouch",
-      "crouch_run"
+      "crouch_run",
+      "wolf_run",
+      "body_attack",
+      "special_attack",
+      "wall_hold"
     ],
     "sourceClips": {
       "idle": "LSt",
@@ -52,7 +56,11 @@
       "attack": "UMFi1",
       "roar": "T_CRY",
       "crouch": "LC",
-      "crouch_run": "LCWF"
+      "crouch_run": "LCWF",
+      "wolf_run": "T_WallDash",
+      "body_attack": "T_Bodyatk",
+      "special_attack": "T_Specialatk",
+      "wall_hold": "T_WallHold_L"
     },
     "vertices": 6175,
     "triangles": 5838,

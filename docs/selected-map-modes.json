@@ -2060,9 +2060,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 34082443
     },
     {
@@ -2142,9 +2143,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 33977227
     },
     {
@@ -2247,9 +2249,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 59381364
     },
     {
@@ -2444,9 +2447,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 9790010
     },
     {
@@ -2802,9 +2806,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 14192924
     },
     {
@@ -2816,6 +2821,7 @@
       "status": "mode_unverified",
       "enabled": false,
       "asset": null,
+      "previewAvailable": false,
       "sourceBytes": 11266304
     },
     {
@@ -3010,9 +3016,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 53745416
     },
     {
@@ -3207,9 +3214,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 22904984
     },
     {
@@ -3404,9 +3412,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 51756980
     },
     {
@@ -4452,9 +4461,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 4914159
     },
     {
@@ -4833,9 +4843,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 8678168
     },
     {
@@ -4915,9 +4926,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 16013135
     },
     {
@@ -4997,9 +5009,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 9386053
     },
     {
@@ -5079,9 +5092,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 26603976
     },
     {
@@ -5437,9 +5451,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 12767125
     },
     {
@@ -6140,9 +6155,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 11706445
     },
     {
@@ -6452,9 +6468,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 17113863
     },
     {
@@ -6856,9 +6873,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 32652982
     },
     {
@@ -7030,9 +7048,10 @@
           ]
         }
       ],
-      "status": "mode_verified_asset_pending",
+      "status": "mode_verified_gameplay_pending",
       "enabled": false,
       "asset": null,
+      "previewAvailable": true,
       "sourceBytes": 5654288
     }
   ],

@@ -3,6 +3,7 @@ extends RefCounted
 # Source membership and engine readiness are separate requirements.
 var data = {}
 var valid = false
+var previews = []
 
 func _init(source = {}):
 	data = source
@@ -18,6 +19,20 @@ func _init(source = {}):
 	for entry in data.maps:
 		entry.number = int(entry.number)
 		entry.allowedModeIds = entry.allowedModeIds.map(func(number): return int(number))
+	if FileAccess.file_exists("res://assets/maps/previews.json"):
+		var source_previews = JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/previews.json"))
+		if source_previews is Array:
+			previews = source_previews
+
+func preview_record(mode_id, map_number):
+	if not belongs_to_mode(mode_id, map_number):
+		return {}
+	for record in previews:
+		if int(record.number) == map_number and record.get("previewValidated") == true and record.get("startPoints",[]).size() > 0:
+			var asset = record.get("previewAsset","")
+			if asset.begins_with("res://assets/maps/geometry/") and ResourceLoader.exists(asset,"PackedScene"):
+				return record
+	return {}
 
 func mode_record(mode_id):
 	for mode in data.modes:

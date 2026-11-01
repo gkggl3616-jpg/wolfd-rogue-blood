@@ -1,0 +1,4471 @@
+[
+  {
+    "type": "DemoSkyWorldModel",
+    "properties": {
+      "Name": "DemoSkyWorldModel0",
+      "Pos": [
+        6752.0,
+        0.0,
+        0.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "SkyDims": [
+        256.0,
+        256.0,
+        256.0
+      ],
+      "Flags": 1.0,
+      "Index": 0.0,
+      "InnerPercentX": 0.10000000149011612,
+      "InnerPercentY": 0.10000000149011612,
+      "InnerPercentZ": 0.10000000149011612
+    },
+    "sourceOffset": 4536610,
+    "declaredBytes": 279
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_Lower",
+      "Pos": [
+        -248.0,
+        -832.0,
+        656.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        4407.99951171875,
+        500.0,
+        3744.0
+      ]
+    },
+    "sourceOffset": 4536891,
+    "declaredBytes": 149
+  },
+  {
+    "type": "WorldProperties",
+    "properties": {
+      "Name": "WorldProperties0",
+      "Pos": [
+        13778.984375,
+        625.084228515625,
+        47882.171875
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "FarZ": 200000.0,
+      "ClampFarZ": true,
+      "AllSkyPortals": false,
+      "Wind": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "EnvironmentMap": "Tex\\Chrome.dtx",
+      "LevelEndCmd": "",
+      "GlobalSoundFilter": "UnFiltered",
+      "FogInfo": 0.0,
+      "VFogInfo": 0.0,
+      "SkyPanning": 0.0,
+      "ProjShadows": 0.0,
+      "MusicControlFile": "Music\\NOLFOrch\\NOLFOrch.txt",
+      "MinMusicMood": "Routine",
+      "LMAnimStatic": false,
+      "AIMaxNumber": 30.0,
+      "VehicleMaxNumber": 12.0,
+      "FogEnable": true,
+      "FogColor": [
+        80.0,
+        84.0,
+        90.0
+      ],
+      "FogNearZ": 128.0,
+      "FogFarZ": 4500.0,
+      "SkyFogEnable": false,
+      "SkyFogNearZ": 1000.0,
+      "SkyFogFarZ": 8000.0,
+      "VFog": true,
+      "VFogMinY": 500.0,
+      "VFogMaxY": 1000.0,
+      "VFogMinYVal": 0.5,
+      "VFogMaxYVal": 0.10000000149011612,
+      "VFogDensity": 200.0,
+      "VFogMax": 1500.0,
+      "PanSkyTexture": "Tex\\SkyPan.dtx",
+      "PanSky": true,
+      "PanSkyOffsetX": 10.0,
+      "PanSkyOffsetZ": 10.0,
+      "PanSkyScaleX": 10.0,
+      "PanSkyScaleZ": 10.0,
+      "ShadowMinColorComponent": 40.0,
+      "ShadowMaxProjDist": 200.0,
+      "ShadowAlpha": 2.0
+    },
+    "sourceOffset": 4537042,
+    "declaredBytes": 1115
+  },
+  {
+    "type": "StaticSunLight",
+    "properties": {
+      "Name": "StaticSunLight0",
+      "Pos": [
+        -680.693115234375,
+        2255.01806640625,
+        604.0
+      ],
+      "Rotation": [
+        2.1170849800109863,
+        5.057963848114014,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "InnerColor": [
+        136.0,
+        150.0,
+        181.0
+      ],
+      "BrightScale": 0.25,
+      "ConvertToAmbient": 1.0,
+      "ObjectBrightScale": 0.25
+    },
+    "sourceOffset": 4538159,
+    "declaredBytes": 245
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint05",
+      "Pos": [
+        -1399.0419921875,
+        447.57989501953125,
+        -2829.99951171875
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4538406,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint06",
+      "Pos": [
+        -1271.0419921875,
+        447.57989501953125,
+        -2749.9990234375
+      ],
+      "Rotation": [
+        0.0,
+        1.5707969665527344,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4538867,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint02",
+      "Pos": [
+        -1271.0418701171875,
+        447.57989501953125,
+        -2653.999267578125
+      ],
+      "Rotation": [
+        0.0,
+        1.5707969665527344,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4539328,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint03",
+      "Pos": [
+        -1399.0426025390625,
+        447.57989501953125,
+        -2749.998779296875
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4539789,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint04",
+      "Pos": [
+        -1271.0421142578125,
+        447.57989501953125,
+        -2829.9990234375
+      ],
+      "Rotation": [
+        0.0,
+        1.5707969665527344,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4540250,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint07",
+      "Pos": [
+        -1399.0421142578125,
+        447.57989501953125,
+        -2573.9990234375
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4540711,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint08",
+      "Pos": [
+        -1271.0421142578125,
+        447.57989501953125,
+        -2573.9990234375
+      ],
+      "Rotation": [
+        0.0,
+        1.5707969665527344,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4541172,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint01",
+      "Pos": [
+        -1399.042236328125,
+        447.57989501953125,
+        -2653.9990234375
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4541633,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint08",
+      "Pos": [
+        944.0,
+        320.0,
+        2704.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4542094,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint07",
+      "Pos": [
+        1072.0,
+        320.0,
+        2704.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4542554,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint06",
+      "Pos": [
+        944.0,
+        320.0,
+        2640.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4543014,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint05",
+      "Pos": [
+        1072.0,
+        320.0,
+        2512.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4543474,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint03",
+      "Pos": [
+        1072.0,
+        320.0,
+        2576.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4543934,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint02",
+      "Pos": [
+        944.0,
+        320.0,
+        2576.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4544394,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint01",
+      "Pos": [
+        1072.0,
+        320.0,
+        2640.0
+      ],
+      "Rotation": [
+        0.0,
+        3.1415929794311523,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4544854,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "RedStartPoint04",
+      "Pos": [
+        953.8958740234375,
+        377.8489990234375,
+        2509.89208984375
+      ],
+      "Rotation": [
+        9.999999974752427e-07,
+        1.570796012878418,
+        -1.570796012878418,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 4545314,
+    "declaredBytes": 458
+  },
+  {
+    "type": "Ladder",
+    "properties": {
+      "Name": "Ladder0",
+      "Pos": [
+        1088.0,
+        346.0,
+        -128.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "Visible": false,
+      "Hidden": false,
+      "Friction": 1.0,
+      "TintColor": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "LightAdd": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "SoundFilter": "Dynamic",
+      "CanPlayMovementSounds": true,
+      "FogStuff": 0.0,
+      "SurfaceOverride": "Unknown",
+      "RayHit": false,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "FogEnable": false,
+      "FogFarZ": 300.0,
+      "FogNearZ": -100.0,
+      "FogColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "PhysicsModel": "Normal",
+      "Current": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Viscosity": 0.4000000059604645,
+      "Damage": 0.0,
+      "DamageType": "Unspecified"
+    },
+    "sourceOffset": 4545774,
+    "declaredBytes": 721
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light144",
+      "Pos": [
+        -912.0,
+        464.0,
+        -2688.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 600.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        203.0,
+        209.0,
+        186.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4546497,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light115",
+      "Pos": [
+        -900.0,
+        464.0,
+        -3188.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "BrightScale": 5.0,
+      "Size": 8.0,
+      "ConvertToAmbient": 1.0,
+      "ObjectBrightScale": 2.0,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4547042,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light145",
+      "Pos": [
+        -36.0,
+        424.0,
+        -2256.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 700.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        203.0,
+        209.0,
+        186.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4547587,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light146",
+      "Pos": [
+        556.0,
+        424.0,
+        -2240.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 750.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        203.0,
+        209.0,
+        186.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4548132,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light147",
+      "Pos": [
+        1120.0,
+        464.0,
+        -1584.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 750.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        203.0,
+        209.0,
+        186.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4548677,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light148",
+      "Pos": [
+        1296.0,
+        464.0,
+        -464.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4549222,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light149",
+      "Pos": [
+        1248.0,
+        367.8992919921875,
+        400.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4549767,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light150",
+      "Pos": [
+        1248.0,
+        367.8992919921875,
+        912.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4550312,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light151",
+      "Pos": [
+        1712.0,
+        367.8992919921875,
+        816.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4550857,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light152",
+      "Pos": [
+        1696.0,
+        367.8992919921875,
+        1648.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        74.0,
+        65.0,
+        55.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4551402,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light153",
+      "Pos": [
+        1664.0,
+        367.8992919921875,
+        2560.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4551947,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light154",
+      "Pos": [
+        1072.0,
+        367.8992919921875,
+        2560.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4552492,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light155",
+      "Pos": [
+        1088.0,
+        655.8992919921875,
+        2432.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4553037,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light156",
+      "Pos": [
+        1636.0,
+        655.8992919921875,
+        2432.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4553582,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light157",
+      "Pos": [
+        1648.0,
+        611.8992919921875,
+        2016.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4554127,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light158",
+      "Pos": [
+        1728.0,
+        611.8992919921875,
+        960.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4554672,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light159",
+      "Pos": [
+        1312.0,
+        391.8992919921875,
+        2112.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4555217,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light160",
+      "Pos": [
+        -604.0,
+        407.8992919921875,
+        128.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 1000.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        202.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4555762,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light161",
+      "Pos": [
+        240.0,
+        407.8992919921875,
+        -1168.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 1000.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        202.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4556307,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light162",
+      "Pos": [
+        -864.0,
+        407.8992919921875,
+        -1280.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        69.0,
+        153.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.30000001192092896,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4556852,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light163",
+      "Pos": [
+        -496.0,
+        407.8992919921875,
+        -1280.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        69.0,
+        153.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.30000001192092896,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4557397,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light164",
+      "Pos": [
+        -144.0,
+        407.8992919921875,
+        368.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        69.0,
+        153.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.30000001192092896,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4557942,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light165",
+      "Pos": [
+        240.0,
+        407.8992919921875,
+        368.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        69.0,
+        153.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.30000001192092896,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4558487,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light166",
+      "Pos": [
+        -144.0,
+        407.8992919921875,
+        -464.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 1000.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        202.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4559032,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light167",
+      "Pos": [
+        1200.0,
+        464.0,
+        -2224.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 800.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        203.0,
+        209.0,
+        186.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4559577,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light168",
+      "Pos": [
+        -1424.0,
+        536.0,
+        416.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4560122,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light169",
+      "Pos": [
+        -1424.0,
+        552.0,
+        -384.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 700.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4560667,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light170",
+      "Pos": [
+        -1632.0,
+        576.0,
+        -1408.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4561212,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light171",
+      "Pos": [
+        -1664.0,
+        576.0,
+        -1968.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4561757,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light172",
+      "Pos": [
+        1328.0,
+        388.0,
+        -1152.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 300.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        182.0,
+        203.0,
+        214.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4562302,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light173",
+      "Pos": [
+        717.0,
+        577.0,
+        1656.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 450.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        99.0,
+        143.0,
+        167.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4562847,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light174",
+      "Pos": [
+        192.0,
+        589.0,
+        1616.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 450.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        99.0,
+        143.0,
+        167.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4563392,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light175",
+      "Pos": [
+        160.0,
+        589.0,
+        1136.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 450.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        99.0,
+        143.0,
+        167.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4563937,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light176",
+      "Pos": [
+        -592.0,
+        589.0,
+        1136.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 450.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        99.0,
+        143.0,
+        167.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4564482,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light177",
+      "Pos": [
+        -1168.0,
+        589.0,
+        1136.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 450.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        99.0,
+        143.0,
+        167.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4565027,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light178",
+      "Pos": [
+        1002.0,
+        350.0,
+        1266.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4565572,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light179",
+      "Pos": [
+        1130.0,
+        334.0,
+        1728.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4566117,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light180",
+      "Pos": [
+        1783.0,
+        395.8992919921875,
+        2069.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 300.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4566662,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light181",
+      "Pos": [
+        1781.0,
+        395.8992919921875,
+        1597.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 300.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4567207,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light182",
+      "Pos": [
+        1781.0,
+        395.8992919921875,
+        1143.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 300.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4567752,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light183",
+      "Pos": [
+        1088.0,
+        655.8992919921875,
+        2672.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4568297,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light184",
+      "Pos": [
+        1636.0,
+        655.8992919921875,
+        2672.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4568842,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light185",
+      "Pos": [
+        1648.0,
+        611.8992919921875,
+        1568.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 650.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4569387,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light186",
+      "Pos": [
+        1728.0,
+        611.8992919921875,
+        544.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 500.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        206.0,
+        198.0,
+        189.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4569932,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light187",
+      "Pos": [
+        -1330.0,
+        350.0,
+        -1200.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4570477,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light188",
+      "Pos": [
+        -1440.0,
+        444.0,
+        -1812.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4571022,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light189",
+      "Pos": [
+        -1078.0,
+        448.0,
+        -2302.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4571567,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light190",
+      "Pos": [
+        -608.0,
+        448.0,
+        -2332.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        190.0,
+        197.0,
+        205.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4572112,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light191",
+      "Pos": [
+        1327.0,
+        573.0,
+        -1578.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 250.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4572657,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light192",
+      "Pos": [
+        -1678.0,
+        571.0,
+        -1119.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 250.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4573202,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light193",
+      "Pos": [
+        928.0,
+        395.0,
+        -1108.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 250.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4573747,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light194",
+      "Pos": [
+        813.0,
+        395.0,
+        -831.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4574292,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light195",
+      "Pos": [
+        812.0,
+        395.0,
+        -348.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4574837,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light196",
+      "Pos": [
+        917.0,
+        340.0,
+        201.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4575382,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light197",
+      "Pos": [
+        -935.0,
+        372.0,
+        136.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4575927,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light198",
+      "Pos": [
+        -960.0,
+        372.0,
+        -554.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4576472,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light199",
+      "Pos": [
+        -178.0,
+        372.0,
+        -1726.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4577017,
+    "declaredBytes": 543
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light200",
+      "Pos": [
+        -343.0,
+        491.0,
+        801.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 400.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        173.0,
+        180.0,
+        203.0
+      ],
+      "BrightScale": 0.699999988079071,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 0.699999988079071,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 4577562,
+    "declaredBytes": 543
+  },
+  {
+    "type": "WorldModel",
+    "properties": {
+      "Name": "WorldModel001",
+      "Pos": [
+        742.606201171875,
+        -448.6400146484375,
+        -734.0966796875
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "ExplosionProperties": 0.0,
+      "DebrisType": "None",
+      "SurfaceOverride": "Ceramic tile",
+      "Visible": true,
+      "Solid": true,
+      "Rayhit": true,
+      "Gravity": false,
+      "BlendMode": "Translucent",
+      "BlockLight": false,
+      "BoxPhysics": false,
+      "FogDisable": false,
+      "IsKeyframed": false,
+      "StartHidden": false,
+      "Alpha": 0.7749999761581421,
+      "Attachments": "",
+      "RemoveAttachments": true,
+      "AttachDir": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "Disturbances": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": false,
+      "CanRepair": false,
+      "CanDamage": false,
+      "Mass": 2000.0,
+      "CreateExplosion": false,
+      "WeaponId": 0.0,
+      "FireAlongForward": false,
+      "DamageFactor": 1.0,
+      "Spawn": "",
+      "NeverDestroy": true,
+      "DestroyAlarmLevel": 0.0,
+      "StimulusRadius": 0.0
+    },
+    "sourceOffset": 4578107,
+    "declaredBytes": 1393
+  },
+  {
+    "type": "WorldModel",
+    "properties": {
+      "Name": "WorldModel0",
+      "Pos": [
+        998.606201171875,
+        191.3599853515625,
+        -1758.0966796875
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "ExplosionProperties": 0.0,
+      "DebrisType": "None",
+      "SurfaceOverride": "Unknown",
+      "Visible": true,
+      "Solid": true,
+      "Rayhit": true,
+      "Gravity": false,
+      "BlendMode": "Additive",
+      "BlockLight": false,
+      "BoxPhysics": false,
+      "FogDisable": false,
+      "IsKeyframed": false,
+      "StartHidden": false,
+      "Alpha": 0.7749999761581421,
+      "Attachments": "",
+      "RemoveAttachments": true,
+      "AttachDir": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "Disturbances": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": false,
+      "CanRepair": false,
+      "CanDamage": false,
+      "Mass": 2000.0,
+      "CreateExplosion": false,
+      "WeaponId": 0.0,
+      "FireAlongForward": false,
+      "DamageFactor": 1.0,
+      "Spawn": "",
+      "NeverDestroy": true,
+      "DestroyAlarmLevel": 0.0,
+      "StimulusRadius": 0.0
+    },
+    "sourceOffset": 4579502,
+    "declaredBytes": 1383
+  },
+  {
+    "type": "Ladder",
+    "properties": {
+      "Name": "Ladder00",
+      "Pos": [
+        -1211.814697265625,
+        -132.0,
+        728.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "Visible": false,
+      "Hidden": false,
+      "Friction": 1.0,
+      "TintColor": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "LightAdd": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "SoundFilter": "Dynamic",
+      "CanPlayMovementSounds": true,
+      "FogStuff": 0.0,
+      "SurfaceOverride": "Unknown",
+      "RayHit": false,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "FogEnable": false,
+      "FogFarZ": 300.0,
+      "FogNearZ": -100.0,
+      "FogColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "PhysicsModel": "Normal",
+      "Current": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Viscosity": 0.4000000059604645,
+      "Damage": 0.0,
+      "DamageType": "Unspecified"
+    },
+    "sourceOffset": 4580887,
+    "declaredBytes": 722
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite03",
+      "Pos": [
+        1636.0,
+        646.0,
+        2540.10791015625
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        167.99998474121094,
+        12.0,
+        224.00006103515625
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4581611,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite04",
+      "Pos": [
+        1648.0,
+        674.0,
+        1777.053955078125
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        167.99998474121094,
+        12.0,
+        334.9461364746094
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4583246,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite05",
+      "Pos": [
+        1728.0,
+        634.0,
+        753.053955078125
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        79.99998474121094,
+        12.0,
+        334.9461364746094
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4584881,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite06",
+      "Pos": [
+        1097.8958740234375,
+        665.8489990234375,
+        2543.89208984375
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        167.99998474121094,
+        12.0,
+        224.00006103515625
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4586516,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite07",
+      "Pos": [
+        -1666.0,
+        634.0,
+        -1970.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        79.99998474121094,
+        12.0,
+        192.00003051757812
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4588151,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite09",
+      "Pos": [
+        -1668.0,
+        634.0,
+        -1412.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        79.99998474121094,
+        12.0,
+        192.00003051757812
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4589786,
+    "declaredBytes": 1633
+  },
+  {
+    "type": "ScaleSprite",
+    "properties": {
+      "Name": "ScaleSprite08",
+      "Pos": [
+        -1428.0,
+        634.0,
+        -408.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "StartOn": true,
+      "Filename": "WT_FX\\Test\\CoolSoft2.spr",
+      "DamagedFilename": "",
+      "DestroyedFilename": "",
+      "Dims": [
+        79.99998474121094,
+        12.0,
+        416.00006103515625
+      ],
+      "Color": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "Alpha": 1.0,
+      "ScaleX": 0.10000000149011612,
+      "ScaleY": 1.0,
+      "AdditionalFlags": 0.0,
+      "LensFlareProps": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "Mass": 30.0,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "NeverDestroy": true,
+      "FlushWithWorld": false,
+      "Rotatable": false,
+      "Glow": false,
+      "ZBias": true,
+      "Additive": true,
+      "Multiply": false,
+      "InSkyBox": false,
+      "SpriteOnly": true,
+      "CreateSprite": false,
+      "UseObjectAngle": false,
+      "MinAngle": 90.0,
+      "SpriteOffset": 0.0,
+      "MinSpriteAlpha": 0.0,
+      "MaxSpriteAlpha": 1.0,
+      "MinSpriteScale": 0.20000000298023224,
+      "MaxSpriteScale": 0.5,
+      "SpriteFile": "WT_FX\\Test\\CoolSoft2.spr",
+      "BlindingFlare": false,
+      "BlindObjectAngle": 90.0,
+      "BlindCameraAngle": 90.0,
+      "MinBlindScale": 0.5,
+      "MaxBlindScale": 2.0,
+      "SpriteAdditive": true
+    },
+    "sourceOffset": 4591421,
+    "declaredBytes": 1633
+  }
+]

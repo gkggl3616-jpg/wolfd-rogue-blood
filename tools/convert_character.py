@@ -118,9 +118,9 @@ def quaternion(matrix):
         q=np.zeros(4);q[i]=.25*s;q[j]=(m[j,i]+m[i,j])/s;q[k]=(m[k,i]+m[i,k])/s;q[3]=(m[k,j]-m[j,k])/s
     return (q/np.linalg.norm(q)).tolist()
 
-def glb(asset,donor,skins,clips,path):
+def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=True):
     if asset['info']['skeletonSha256']!=donor['info']['skeletonSha256']:raise ValueError('Animation skeleton differs from mesh skeleton')
-    data=bytearray();doc=dict(asset=dict(version='2.0',generator='Wolf Rogue audited LTB converter'),scene=0,scenes=[dict(nodes=[0])],nodes=[dict(name='WolfRogueCharacter',scale=[.01]*3,children=[1])],meshes=[],skins=[],bufferViews=[],accessors=[],materials=[],images=[],textures=[],samplers=[dict(magFilter=9729,minFilter=9987,wrapS=10497,wrapT=10497)],animations=[])
+    data=bytearray();doc=dict(asset=dict(version='2.0',generator='Wolf Rogue audited LTB converter'),scene=0,scenes=[dict(nodes=[0])],nodes=[dict(name='WolfRogueCharacter',scale=[root_scale]*3,children=[1])],meshes=[],skins=[],bufferViews=[],accessors=[],materials=[],images=[],textures=[],samplers=[dict(magFilter=9729,minFilter=9987,wrapS=10497,wrapT=10497)],animations=[])
     def buffer(raw,target=None):
         while len(data)%4:data.append(0)
         view=dict(buffer=0,byteOffset=len(data),byteLength=len(raw));data.extend(raw)
@@ -135,6 +135,7 @@ def glb(asset,donor,skins,clips,path):
     for slot,(name,png) in skins.items():
         view=buffer(png);doc['images'].append(dict(name=name,bufferView=view,mimeType='image/png'));index=len(doc['images'])-1
         doc['textures'].append(dict(source=index,sampler=0));doc['materials'].append(dict(name=name,pbrMetallicRoughness=dict(baseColorTexture=dict(index=index),metallicFactor=0,roughnessFactor=.85),doubleSided=True,alphaMode='MASK',alphaCutoff=.25))
+        if not alpha_mask:doc['materials'][-1].update(alphaMode='OPAQUE')
         material_map[slot]=len(doc['materials'])-1
     bones=asset['info']['bones'];matrices=asset['matrices']
     for bone,global_matrix in zip(bones,matrices):
@@ -164,7 +165,7 @@ def glb(asset,donor,skins,clips,path):
             for key,kind in [('translation','VEC3'),('rotation','VEC4')]:
                 values=track[key].copy()
                 if static_posture:values=np.repeat(values,2,axis=0)
-                if bone==0 and key=='translation':values[:,[0,2]]=values[0,[0,2]]
+                if freeze_root and bone==0 and key=='translation':values[:,[0,2]]=values[0,[0,2]]
                 output=accessor(values,kind);animation['samplers'].append(dict(input=input_index,output=output,interpolation='LINEAR'));animation['channels'].append(dict(sampler=len(animation['samplers'])-1,target=dict(node=bone+1,path=key)))
         doc['animations'].append(animation)
     doc['buffers']=[dict(byteLength=len(data))]
@@ -181,7 +182,7 @@ def main():
     archive=args.folder/'wolf.xfs';entries=unpack_index(archive);lookup={normalize(e['path']):e for e in entries}
     definitions=parse_model_definitions(recover_entry(archive,lookup['root/attributes/modelbutes.txt']))
     result={}
-    for form,ident,clips in [('human','Model0',dict(idle='LSt',run='LRF',jump='LJJ',attack='URi1Fi',reload='URi1Re',crouch='LC',crouch_run='LCWF')),('wolf','Model2',dict(idle='LSt',run='LRF',jump='LJJ',attack='UMFi1',roar='T_CRY',crouch='LC',crouch_run='LCWF'))]:
+    for form,ident,clips in [('human','Model0',dict(idle='LSt',run='LRF',jump='LJJ',attack='URi1Fi',reload='URi1Re',crouch='LC',crouch_run='LCWF')),('wolf','Model2',dict(idle='LSt',run='LRF',jump='LJJ',attack='UMFi1',roar='T_CRY',crouch='LC',crouch_run='LCWF',wolf_run='T_WallDash',body_attack='T_Bodyatk',special_attack='T_Specialatk',wall_hold='T_WallHold_L'))]:
         definition=next(d for d in definitions if d['id']==ident);entry=lookup[normalize('Root/'+definition['model'])];raw=recover_entry(archive,entry);asset=load(raw,set());asset['info']['sha256']=hashlib.sha256(raw).hexdigest()
         if len(asset['children'])!=1:raise ValueError('Expected one explicit animation donor')
         donorpath=normalize(posixpath.join(posixpath.dirname(entry['path']),asset['children'][0].replace('\\','/')))

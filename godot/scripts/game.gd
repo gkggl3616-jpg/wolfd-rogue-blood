@@ -4,11 +4,19 @@ const PlayerScript = preload("res://scripts/player.gd")
 const EnemyScript = preload("res://scripts/enemy.gd")
 const TouchScript = preload("res://scripts/touch.gd")
 const MapCatalogScript = preload("res://scripts/map_catalog.gd")
+const EquipmentScript = preload("res://scripts/equipment.gd")
+var equipment
 var map_catalog
 var mode_picker: OptionButton
 var map_picker: OptionButton
 var map_status: Label
 var map_start: Button
+var map_preview: Button
+var arena_root: Node3D
+var active_map: Node3D
+var exploring = false
+var preview_spawn = Vector3.ZERO
+var preview_name = ""
 var player
 var running = false
 var menu_open = true
@@ -40,6 +48,7 @@ var test_mode = false
 var character_info = {}
 
 func _ready():
+	equipment = EquipmentScript.new(not test_mode)
 	map_catalog = MapCatalogScript.new()
 	var roster = JSON.parse_string(FileAccess.get_file_as_string("res://assets/roster.json"))
 	if not roster is Dictionary or not roster.get("characters") is Array or roster.characters.is_empty():
@@ -72,7 +81,7 @@ func _ready():
 	update_hud()
 
 func setup_inputs():
-	var keys = {"forward":KEY_W,"backward":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"crouch":KEY_CTRL,"sprint":KEY_SHIFT,"reload":KEY_R,"transform":KEY_3,"pause":KEY_ESCAPE,"admin":KEY_F10}
+	var keys = {"forward":KEY_W,"backward":KEY_S,"left":KEY_A,"right":KEY_D,"jump":KEY_SPACE,"crouch":KEY_CTRL,"sprint":KEY_SHIFT,"reload":KEY_R,"transform":KEY_3,"pause":KEY_ESCAPE,"admin":KEY_F10,"inventory":KEY_I}
 	for action in keys:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
@@ -106,10 +115,12 @@ func block(at, size, color, solid = true):
 		shape.size = size
 		collision.shape = shape
 		body.add_child(collision)
-	add_child(body)
+	arena_root.add_child(body)
 	return body
 
 func build_world():
+	arena_root = Node3D.new()
+	add_child(arena_root)
 	var env_node = WorldEnvironment.new()
 	var env = Environment.new()
 	env.background_mode = Environment.BG_COLOR
@@ -145,7 +156,7 @@ func build_world():
 	sign.pixel_size = 0.009
 	sign.position = Vector3(0,5.5,-24.35)
 	sign.modulate = Color("f07b65")
-	add_child(sign)
+	arena_root.add_child(sign)
 
 func label(text, size = 20):
 	var node = Label.new()
@@ -181,6 +192,13 @@ func build_ui():
 	admin.size = Vector2(140,44)
 	admin.pressed.connect(show_admin)
 	root.add_child(admin)
+	var inventory_button = Button.new()
+	inventory_button.text = "ENVANTER"
+	inventory_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	inventory_button.position = Vector2(-165,70)
+	inventory_button.size = Vector2(140,44)
+	inventory_button.pressed.connect(show_inventory)
+	root.add_child(inventory_button)
 	var pause_button = Button.new()
 	pause_button.text = "II"
 	pause_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
@@ -225,6 +243,8 @@ func clear_overlay():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if touch:
 		touch.reset()
+	if player:
+		player.reset_locomotion()
 
 func menu_button(text, callback):
 	var button = Button.new()
@@ -246,13 +266,15 @@ func show_menu(title, text, button, callback):
 	help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	overlay_box.add_child(help)
 	menu_button("Mod ve harita listesi", show_maps)
+	menu_button("Envanter · Kurt yeteneği", show_inventory)
+	center_overlay(Vector2(560,560))
 
 func show_home():
 	show_menu("WOLF ROGUE BLOOD", "ÇEVRİMDIŞI DENEME ARENASI\nPedro RE · İnsan / Kurt\n90 saniyede 10 hedefi etkisiz hale getir.", "Deneme arenasına gir", start_round)
 
 func show_maps():
 	clear_overlay()
-	center_overlay(Vector2(560,600))
+	center_overlay(Vector2(560,660))
 	overlay_box.add_child(label("MOD VE HARİTALAR",26))
 	overlay_box.add_child(label("19 seçim · 18 doğrulanmış mod eşleşmesi",16))
 	mode_picker = OptionButton.new()
@@ -270,6 +292,7 @@ func show_maps():
 	map_status.custom_minimum_size = Vector2(480,96)
 	overlay_box.add_child(map_status)
 	map_start = menu_button("Haritayı başlat", start_selected_map)
+	map_preview = menu_button("Haritayı gez · Önizleme", start_map_preview)
 	mode_picker.item_selected.connect(func(_index): refresh_mode_maps())
 	map_picker.item_selected.connect(func(_index): refresh_map_status())
 	menu_button("Geri", func():
@@ -290,10 +313,57 @@ func refresh_map_status():
 	if map_picker.item_count == 0:
 		map_status.text = "Bu mod için doğrulanmış seçili harita yok."
 		map_start.disabled = true
+		map_preview.disabled = true
 		return
 	var reason = map_catalog.unavailable_reason(mode_picker.get_selected_id(), map_picker.get_selected_id())
 	map_status.text = (reason if reason != "" else "Harita hazır.") + "\n46 · Göbekli Tepe: mod eşleşmesi bekleniyor."
 	map_start.disabled = reason != ""
+	map_preview.disabled = map_catalog.preview_record(mode_picker.get_selected_id(),map_picker.get_selected_id()).is_empty()
+	if not map_preview.disabled:
+		map_status.text = "Geometri önizlemesi hazır. Gezinti açılabilir; bu modun maç kuralları henüz tamamlanmadı.\n46 · Göbekli Tepe: mod eşleşmesi bekleniyor."
+
+func set_arena_active(enabled):
+	arena_root.visible = enabled
+	for body in arena_root.find_children("*","StaticBody3D",true,false):
+		body.collision_layer = 1 if enabled else 0
+
+func start_map_preview():
+	var record = map_catalog.preview_record(mode_picker.get_selected_id(),map_picker.get_selected_id())
+	if record.is_empty():
+		return
+	var asset = record.previewAsset
+	if FileAccess.file_exists(asset) and FileAccess.get_sha256(asset) != record.sha256:
+		map_status.text = "Harita dosyası değişmiş; doğrulama gerekiyor."
+		return
+	running = false
+	for enemy in enemies.get_children():
+		enemy.queue_free()
+	if is_instance_valid(active_map):
+		remove_child(active_map)
+		active_map.queue_free()
+	active_map = load(asset).instantiate()
+	add_child(active_map)
+	for mesh in active_map.find_children("*","MeshInstance3D",true,false):
+		mesh.create_trimesh_collision()
+	set_arena_active(false)
+	var anchor = record.startPoints[0]
+	var pos = anchor.position
+	preview_spawn = Vector3(pos[0],pos[1],pos[2])
+	player.position = preview_spawn
+	player.velocity = Vector3.ZERO
+	player.yaw = float(anchor.yaw)
+	player.rotation.y = player.yaw
+	player.reset_locomotion()
+	health = 100
+	ammo = 30
+	reserve = 120
+	reloading = 0
+	exploring = true
+	preview_name = map_catalog.map_record(map_picker.get_selected_id()).displayName
+	running = true
+	resume()
+	announce("Harita gezintisi · Maç kuralları kapalı")
+	update_hud()
 
 func start_selected_map():
 	# Recheck on activation as well as when rendering the button.
@@ -316,6 +386,11 @@ func resume():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func start_round():
+	exploring = false
+	if is_instance_valid(active_map):
+		remove_child(active_map)
+		active_map.queue_free()
+	set_arena_active(true)
 	for enemy in enemies.get_children():
 		enemy.queue_free()
 	health = 100
@@ -326,6 +401,7 @@ func start_round():
 	reloading = 0
 	player.position = Vector3(0,0.1,8)
 	player.velocity = Vector3.ZERO
+	player.reset_locomotion()
 	player.yaw = 0
 	player.rotation = Vector3.ZERO
 	running = true
@@ -349,6 +425,8 @@ func _input(event):
 		pause_game()
 	if event.is_action_pressed("admin"):
 		show_admin()
+	if event.is_action_pressed("inventory"):
+		show_inventory()
 	if event is InputEventMouseButton and menu_open:
 		Input.action_release("fire")
 	if event is InputEventKey and event.pressed and event.physical_keycode == KEY_F6:
@@ -357,7 +435,8 @@ func _input(event):
 func _notification(what):
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(touch):
 		touch.reset()
-		for action in ["fire","jump","crouch","sprint","aim"]:
+		player.reset_locomotion()
+		for action in ["forward","backward","left","right","fire","jump","crouch","sprint","aim"]:
 			Input.action_release(action)
 
 func _process(delta):
@@ -378,6 +457,12 @@ func _process(delta):
 		message.text = ""
 	crosshair.visible = running and not menu_open
 	if not running or menu_open:
+		return
+	if exploring:
+		if player.position.y < preview_spawn.y - 150:
+			player.position = preview_spawn
+			player.velocity = Vector3.ZERO
+		update_hud()
 		return
 	time_left -= delta
 	spawn_clock -= delta
@@ -408,21 +493,27 @@ func attack():
 	if not player.is_wolf and ammo <= 0:
 		reload_weapon()
 		return
-	player.shot_cooldown = 0.55 if player.is_wolf else 0.12
+	player.shot_cooldown = 0.55 if player.is_wolf else float(player.weapon_info.fireIntervalMs)/1000.0
 	player.action_time = 0.45
 	player.current_clip = ""
 	player.play_clip("attack")
 	if player.is_wolf:
+		var body_attack = player.wolf_running and equipment.has_wolf_ability()
+		if body_attack:
+			player.play_clip("body_attack")
+			player.wolf_running = false
 		for enemy in enemies.get_children():
 			var offset = enemy.global_position - player.global_position
 			if offset.length() < 2.8 and offset.normalized().dot(-player.global_basis.z) > 0.1:
 				var query = PhysicsRayQueryParameters3D.create(player.global_position+Vector3.UP,enemy.global_position+Vector3.UP,3,[player.get_rid()])
 				var hit = get_world_3d().direct_space_state.intersect_ray(query)
 				if hit and hit.collider == enemy:
-					enemy.damage(45)
-					announce("Pençe isabeti")
+					enemy.damage(65 if body_attack else 45)
+					announce("Vücut saldırısı" if body_attack else "Pençe isabeti")
 		return
 	ammo -= 1
+	player.play_weapon_clip("fire",float(player.weapon_info.fireIntervalMs)/1000.0)
+	player.play_weapon_sound("fire")
 	var camera = player.camera
 	var origin = camera.global_position
 	var end = origin-camera.global_basis.z*65
@@ -450,9 +541,11 @@ func reload_weapon():
 			player.action_time = 1.5
 			announce("Kükreme")
 	elif ammo < 30 and reserve > 0 and reloading <= 0:
-		reloading = 1.6
+		reloading = float(player.weapon_info.reloadSeconds)
+		player.play_weapon_clip("reload",reloading)
+		player.play_weapon_sound("reload")
 		player.play_clip("reload")
-		player.action_time = 1.6
+		player.action_time = reloading
 		announce("Şarjör değiştiriliyor…")
 
 func enemy_defeated():
@@ -484,6 +577,8 @@ func update_hud():
 		return
 	var weapon = "PENÇE" if player.is_wolf else ("ŞARJÖR…" if reloading > 0 else "%d / %d" % [ammo,reserve])
 	hud_label.text = "WOLF ROGUE BLOOD    |    %s    |    CAN %d    |    %s\nHEDEF %d/10   ·   %02d:%02d   ·   %s\nNakit %d  ·  KP %d  ·  Altın %d  ·  GP %d" % ["KURT" if player.is_wolf else "İNSAN",health,weapon,kills,int(time_left)/60,int(time_left)%60,profile_name,int(wallet.cash),int(wallet.kp),int(wallet.gold),int(wallet.gp)]
+	if exploring:
+		hud_label.text = "WOLF ROGUE BLOOD · %s\nHARİTA GEZİNTİSİ · Maç kuralları kapalı\n%s · %s" % [preview_name,"KURT" if player.is_wolf else "İNSAN",weapon]
 
 func load_wallet():
 	if test_mode:
@@ -561,6 +656,45 @@ func show_admin():
 		grant_money(["cash","kp","gold","gp"][kind.selected],int(amount.value),"Godot yerel yönetici")
 		announce("Bakiye işlemi gönderildi")
 	)
+	menu_button("Kapat",func():
+		if running:
+			resume()
+		else:
+			show_home()
+	)
+
+func show_inventory():
+	clear_overlay()
+	center_overlay(Vector2(560,600))
+	overlay_box.add_child(label("ENVANTER · GÜÇ SLOTU",26))
+	var item = equipment.rules.items[0]
+	var icon = TextureRect.new()
+	icon.texture = load(item.icon)
+	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.custom_minimum_size = Vector2(80,80)
+	overlay_box.add_child(icon)
+	overlay_box.add_child(label(item.name,22))
+	var description = label("Yerel deneme envanterinde bulunur. Güç slotuna takılıyken kurt formunda ileriye iki kez bas: dört ayak koşusu. Koşarken ateş: vücut saldırısı.\nNormal koşuyu KOŞ düğmesiyle aç/kapat.\nDuvara tutunma ve havada güçlü saldırı henüz aktarılmadı.",16)
+	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	description.custom_minimum_size = Vector2(480,144)
+	overlay_box.add_child(description)
+	var equip = CheckButton.new()
+	equip.text = "Güç slotuna tak"
+	equip.button_pressed = equipment.has_wolf_ability()
+	equip.toggled.connect(func(enabled):
+		equipment.equip_power(EquipmentScript.WOLF_ABILITY if enabled else 0)
+		player.reset_locomotion()
+	)
+	overlay_box.add_child(equip)
+	var directions = CheckButton.new()
+	directions.text = "Hareket için yön düğmelerini kullan"
+	directions.button_pressed = touch.direction_buttons
+	directions.toggled.connect(func(enabled):
+		touch.direction_buttons = enabled
+		touch.reset()
+	)
+	overlay_box.add_child(directions)
 	menu_button("Kapat",func():
 		if running:
 			resume()
