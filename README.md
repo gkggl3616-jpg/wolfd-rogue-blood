@@ -1,95 +1,65 @@
 # Wolf Rogue Blood
 
-Godot 4.7.2 ile yeni yazılmış **oynanabilir çevrimdışı deneme arenası**, mobil kontroller, yerel yönetici paneli ve PC varlıklarının karakter/iskelet denetimi.
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. Paket adı **com.wolfrogue.blood**. Bu depo henüz eksiksiz PC oyunu değildir ve bu çalışmada yeni APK yayımlanmadı.
 
-Bu, özgün Windows oyununun tam portu değildir. Tek onaylı insan/kurt çifti, özgün haritaların temel geometri gezintisi ve ilk şahıs AK-47/el animasyonlarıyla geliştirme sürümüdür. Bütün karakterler, tam harita/mod davranışları ve çevrimiçi sistemler tamamlanmış değildir. [Aktarımın durumu ve kaynak sınırları](docs/AKTARIM_DURUMU.md).
+## Devralınan çalışma
 
-## Oyunu aç
+`main`, 0.4 sürümünde kalmıştı. `content-import-small` dalı yalnızca içerik aktarımının 29/136 bölümüne ulaşmıştı. Yayımlanan **v0.8.0-test** APK'sının SHA-256 özeti doğrulandı; 18 oyun betiği ve eksik kaynaklar buradan kurtarıldı. Betiklerin yorumları/özgün biçimlendirmesi geri getirilemez. 1.364 kaynak dönüşümü kurtarma aracı tarafından kayıplı olarak işaretlendi; kurtarılan dosyalar özgün düzenlenebilir kaynakla aynı kabul edilmez.
 
-Godot içinde [godot/project.godot](godot/project.godot) dosyasını içe aktar ve F5'e bas. Projeye ait ana sahne, fizik, karakterler, temel oyun mantığı ve Android dışa aktarma ayarları artık bu klasördedir. [Oyun kontrolleri ve kapsam](godot/README.md).
+Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ışık haritası bağları, son arayüz düzeltmeleri ve bunların test kayıtları APK'dan geri alınmış gibi gösterilmez. [Kurtarma kaydı](docs/recovery-0.8.json), [kaynak dosyaları](docs/recovered-assets.json), [tarihsel 0.4 README](docs/history/README-0.4.md).
 
-- Pedro RE insan/kurt dönüşümü, her formda 7 iskelet klibi.
-- 90 saniye / 10 hedeflik arena, can, mermi, şarjör, pençe saldırısı ve yeniden başlatma.
-- Dört yön düğmesi, sağ bakış alanı, büyük ateş düğmesi, nişan, fiziksel eğilme, zıplama ve ayrı KOŞ düğmesi. Envanterden isteğe bağlı hareket çubuğuna geçilebilir.
-- Yerel nakit, KP, altın, GP ve geliştirme yöneticisi.
-- İnsan birinci şahısta, kurt çarpışma kontrollü üçüncü şahıs kamerayla oynanır.
+## Bu devam çalışmasında uygulananlar
 
-## Seçilen haritalar ve mod sınırları
+- Parmak sahipliği olan çoklu dokunma: hareket, kamera ve düğmeler birbirine geçmez. Aynı düğmeye basan ikinci parmak, birinci bırakıldığında eylemi kaybetmez. Menü/HUD dokunuşları kamera veya ateşe dönüşmez.
+- Uygulama arka plandayken sahne, çatışma ve şarjör süresi durur. Dönüşte oyuncu **Devam et** seçmeden çatışma başlamaz.
+- Müzik, ortam/efekt, silah ve menü sesi ayrı kanallarda ayarlanır. Eski ana ses tercihi korunur.
+- Kayıt yazımı kontrol edilir; başarısız işlem bakiye, eşya, karakter, dövme, ayar veya ekipman setini kalıcı olmuş gibi değiştirmez. Bozuk/yeni şemalı eski kayıt sessizce silinmez.
+- Kaynak bölgesi belirsiz dövmeler rastgele UV'ye takılamaz. Eski kayıttaki belirsiz seçim dosyadan silinmez, modele uygulanmaz.
+- Seçili haritaların 46 ses nesnesinin 43'ü sahneye bağlanır. Üçünün istediği **am_fire_sm_loop.wav**, verilen RAR dizininde ve ses kataloğunda yoktur; yerine başka ses kullanılmaz. İç/dış yarıçap zayıflaması yeni mobil uyarlamadır.
+- 19601 güç eşyası ve kaynak `wall_hold` klibi varsa havada duvar teması sırasında kurt koşusu + ateş, süreli tutunmayı başlatır. İleriyi bırakma, eğilme, menü ve form değişimi tutunmayı bitirir; zıplama fiziksel dışa itiş verir. Sayısal değerler yeni mobil ayarlarıdır. **Bütün temas yönlerinde animasyon hizası henüz görsel olarak onaylanmadı.** Havada güçlü saldırı tamamlanmadı.
+- Karakter önizleme kamerası gerçek model sınırlarına ve ekran oranına göre çerçeve kurar. Menüler geniş ekranda arka plandaki dünyayı açıkta bırakmaz.
 
-Kullanıcının seçtiği 19 dosya korundu: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. Bunların 18'i kaynak ikili tablolarda `(dünya kategorisi, harita kimliği)` ile modlara bağlandı. 62 mod/alt mod kaydı var; insan/kurt ve silah kısıtlaması varyantları birleştirilmedi. Örneğin Cappadocia Destruction, Ruins Wolf Rush, Secret Lab ve Gate Dark Wolfhunt modlarına bağlıdır. Aynı numarayı başka kategoride kullanan bir kayıt eşleşme sayılmaz.
+## Çalıştırma ve doğrulama
 
-**46 · Göbekli Tepe:** Tam dosya adına ait mod bağlantısı doğrulanamadı. Seçim kaydı korunur ve kapalıdır; 47 numaralı gece/etkinlik sürümü yerine eklenmedi. Kaynakta tanımı bulunmayan 15000/15001 mod bağlantıları da beklemeye alındı.
+Godot'ta `godot/project.godot` dosyasını içe aktar ve F5'e bas. Kaynaklar sahneye göre yüklenir; haritaların tümü aynı anda açılmaz.
 
-Oyun menüsünde ve localhost panelindeki **Mod ve haritalar** bölümünde önce mod seçilir, sadece o moda bağlı seçili haritalar listelenir. 19 temel geometri dönüştürüldü; kaynak doğma noktaları ve üretilen çarpışmalar motor içinde kontrol edildi. Modu doğrulanan 18 harita **Haritayı gez · Önizleme** ile açılır. Özgün maç kuralları henüz aktarılmadı; normal mod başlatma kapalıdır. Rastgele seçim yalnızca aynı modun hazır maç haritalarından yapılabilir; başka moda veya deneme arenasına geçmez. Gezinti, arena düşmanları/timer/ödülleri çalıştırmaz.
-
-[Harita–mod listesi](docs/SECILEN_HARITA_MODLARI.md) · [Kaynak kanıtları](docs/selected-map-modes.json). Yeniden üretmek için: `python tools/build_map_catalog.py "yeni-paket-klasoru"`.
-
-## Koşu ve envanter
-
-KOŞ düğmesi normal koşuyu tek dokunuşla açıp kapatır. Klavyede Shift basılı tutularak da koşulur. **Özel Kurt Yeteneği (19601)** yerel deneme envanterinde vardır, ilk kullanımda takılı değildir. Envanterde güç slotuna takıldıktan sonra kurt formunda ileriye 0,30 saniye içinde iki ayrı basış dört ayak koşusunu başlatır; ikinci basış tutulur. İleriyi bırakmak, eğilmek, form değiştirmek, menü veya uygulama odağını kaybetmek koşuyu keser. Eşya takılı değilse veya insan formundaysan çift basış kurt koşusunu açmaz. Koşarken ateş vücut saldırısı yapar. Eşya kaydı yalnızca bu cihazda tutulur; gerçek hesap envanteri aktarılmış değildir.
-
-Aktivasyon ve güç slotu şartı kaynak `exitemtext.dat` içindeki 19601 numaralı açıklamadan doğrulandı. **0,30 saniye, hız çarpanları ve saldırı hasarı yeni mobil ayarlarıdır; özgün sayısal değerler diye sunulmaz.** Aynı açıklamadaki duvara tutunma ve havada güçlü saldırı henüz uygulanmadı. [Kaynak kural ve alıntı](docs/movement-source-rules.json).
-
-AK-47'nin özgün ilk şahıs/el modeli ve duruş, yürüyüş, ateş, şarjör, seçme klipleri aktarıldı. Şarjör 30, ateş aralığı 150 ms kaynak yapılandırmadan; şarjör animasyonu 2,5 saniye. İlgili özgün ateş/şarjör sesleri de var. Bütün silahlar veya özgün render efektleri tamamlanmış değildir.
-
-Android çıktısı `WolfRogueBlood-debug.apk` adıyla üretilir. Geliştirme imzası, arm64 + armv7, yatay ekran. Fiziksel telefonda test edilmedi ve mağaza yayını değildir.
-
-## Chrome yerel paneli
-
-Python 3.10+ yeterlidir; ek Python paketi gerekmez:
-
-```powershell
-python server.py
-```
-
-Chrome'da http://localhost:8765 adresini aç. Alternatif: `powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1` (yalnızca bu işlem için).
-
-Panel test oyuncusu oluşturur; nakit/KP/altın/GP ekler ve son 100 işlemi gösterir. Kayıtlar `data/players.sqlite3` içinde kalır ve Git'e gönderilmez. Aynı işlem kimliğiyle yinelenen istek ikinci kez ödeme yapmaz.
-
-**PC Godot sürümü:** Paneldeki ilk test oyuncusuna bağlanır; yönetici eklemeleri ve arena ödülleri bu oyuncuya işlenir. **Android:** Kendi cihazındaki yerel kayıt ve oyun içi yönetici menüsü kullanılır; telefondaki localhost PC anlamına gelmez. Panel yalnızca 127.0.0.1 üzerinden dinler, internet yönetim sistemi değildir.
-
-## Karakterler
-
-- 539 karakter klasörü modeli tam olarak ayrıştırıldı.
-- Yapılandırmada 620 varyant/NPC kaydı ve 398 benzersiz model başvurusu var. Bunlar benzersiz oynanabilir karakter sayısı değildir.
-- 445 ortak animasyon dosyası bağlantısının hepsi bulundu. 393 bağlantıda kemik adları/hiyerarşi aynı; 52'sinde fark var.
-- Aynı hiyerarşi aynı dinlenme pozu veya görsel animasyon kalitesi demek değildir. 23 ayrı hiyerarşi grubu tespit edildi.
-- İnsan/kurt eşi belirsiz, kaynakları eksik veya iskelet uyumu doğrulanmamış karakterler kadroya alınmaz. 205 kayıt yapısal adaydır; otomatik oyun kadrosu değildir.
-- Şu an yalnızca **Pedro RE, Model0 + Model2** çifti kabul edildi. Kaynak/dönüşüm özetleri [assets/roster.json](assets/roster.json) ve oyun kopyasında tutulur. Oyun da bu onay listesini okur.
-
-[Karakter raporu](docs/KARAKTERLER.md) · [Özet](docs/character-summary.json) · [Tam denetim (gzip)](docs/character-audit.json.gz)
-
-Kabul edilen çiftin duruş, koşu ve saldırı örnek kareleri çevrimdışı render edilip incelendi. Godot kaynak içe aktarımı ve otomatik oyun testleri geçti. Bütün animasyon kareleri veya fiziksel Android performansı test edildiği iddia edilmez. Kurt modelindeki üç isteğe bağlı, çalışma anında doku alan dövme katmanı taban dönüşümde dışarıda bırakıldı; taban gövde/baş/tüy/zırh kaplamaları mevcuttur.
-
-## Kontrollerin kaynağı
-
-İlk paketlerin ayar taraması: 139 tanımlı komut, 73 atanmış komut. [Bütün kontrol tanımları](docs/KONTROLLER.md) ve [ilk paket özeti](docs/archive-summary.json). Bu arşiv, yeni deneme arenasında 139 komutun hepsinin uygulanmış olduğu anlamına gelmez; arenanın uygulanmış tuşları Godot README'sinde listelenir.
-
-## WolfRogue.dat
-
-[legacy/WolfRogue.dat](legacy/WolfRogue.dat), sağlanan Windows istemcisinin istenen yeni dosya adıyla hazırlanmış birebir kopyasıdır. [SHA-256 kaydı](legacy/binary-manifest.json). Bu dosya kaynak kod veya APK değildir ve Android paketine eklenmez. Özgün klasöre dokunulmadı. Gömülü eski ürün adları, imzalar ve hizmet başvuruları binary içinde değiştirilmedi; bunların tümünü yeniden markalamak kaynak projeden yeniden derleme gerektirir.
-
-## Yeniden üretim
-
-```powershell
-python tools/scan_xfs.py "paket-klasoru"
-python tools/audit_characters.py "yeni-paket-klasoru"
+```sh
 python -m pip install -r tools/requirements.txt
-python tools/convert_character.py "yeni-paket-klasoru" --output godot/assets/characters/pedro-re
+python tools/validate_mobile.py --godot /path/to/godot-4.7.2 --report docs/mobile-validation.json
 ```
 
-Son komut varlıkları yeniden üretir. Özetler değişirse onay listesi de tekrar doğrulanmalıdır. Büyük özgün `.xfs` paketleri depoda yoktur. Tam ilk paket envanteri yerelde üretilir; karakter denetim verisi depoda sıkıştırılmıştır.
-
-## Kontrol ve Android derlemesi
+Windows'ta APK oluşturmadan doğrulama:
 
 ```powershell
-python -m unittest discover -s tests -v
-node --check web/app.js
-python tools/check_android_ready.py
-godot --headless --path godot --fixed-fps 60 --script res://tests/smoke.gd
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/build_android.ps1 -Godot "godot-program-yolu"
+./tools/build_android.ps1 -Godot C:\path\godot.exe -ValidateOnly
 ```
 
-Android için eşleşen Godot 4.7.2 şablonları, JDK 17 ve Android SDK gerekir. Bu bilgisayarda kuruldu. [Godot'un resmi Android dışa aktarma yönergeleri](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html). Son derlemenin özeti [docs/android-build.json](docs/android-build.json) içindedir.
+Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi ve duvara tutunma kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. [Görüntü kontrolü](docs/mobile-visual-validation.json) ayrı OpenGL örnekleridir. Fiziksel telefon ve Android emülatörü testi yapılmadı.
 
-Geliştirme anahtarı ve özel oyuncu kayıtları depoya eklenmez. Tam ses/efekt sistemi, bütün silahlar, çevrimiçi maç/hesap sunucusu, bütün karakterler ve özgün harita/mod davranışları bekleyen işlerdir.
+## Gerçek PC kaynaklarına erişim
+
+Verilen Drive RAR dosyası **4.743.112.316 bayt**; başlık envanterinde **74.967 kayıt** bulunur. Dizinler ve tekrarlanan ağaçlar bu sayıya dahildir. Açılmış toplam 19,66 GB bildirimi benzersiz/oynanabilir içerik sayısı veya APK boyutu değildir.
+
+[Dosya envanteri](docs/pc-archive-inventory.json.gz), [dosya bazlı aktarım kaydı](docs/transfer-coverage.json.gz), [kapsam özeti](docs/transfer-coverage-summary.json). Yol eşleşmesi, kaynağın byte kimliği veya oyundaki işlevinin kanıtı sayılmaz.
+
+Tüm arşivi diske çıkarmadan belirli bir kaynak dosyasını al:
+
+```sh
+python -m pip install -r tools/archive-requirements.txt
+python tools/pc_archive.py extract docs/pc-archive-inventory.json.gz "wolfteam kurtları/Root/wt_attributes/exitemtext.dat" /path/to/exitemtext.dat
+```
+
+Sistem `libarchive` kütüphanesinde RAR5 desteği gerekir. Araç dosya boyutu ve RAR bütünlüğünü denetler, çıkarılan dosyanın SHA-256 köken kaydını yazar; PC ikililerini çalıştırmaz.
+
+## Tam sürüm ve APK koşulları
+
+[Gerçek teslim engelleri](assets/delivery-status.json) `python tools/check_delivery.py` ile yeniden hesaplanır. Derleme betiği, `-ValidateOnly` dışında bu kontrol geçmeden APK üretmez. Başarılı test sayısı veya bir tamamlanma bayrağı bu kontrolün yerine geçmez.
+
+- Yalnızca seçilen 19 harita korunur: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. 18'i gezinti önizlemesidir; gerçek maç sahnesi değildir. 46'nın mod bağlantısı belirsizdir; 47 ile değiştirilmez.
+- 62 mod/alt modun özgün maç kuralları, tur akışı ve sonuçları tamamlanmadı.
+- 48 çiftin önceki katalogda kabul edilmiş olması, kurtarılan her modelin bütün durumlarının yeniden doğrulandığı anlamına gelmez. 216 silah modeli / 903 kaynak varyantı da 903 ayrı, tam doğrulanmış silah davranışı demek değildir.
+- Özgün arayüz akışlarının tümü, hesap/oda/maç sunucusu, bütün efekt grafikleri ve gömülü ışık haritalarının çalışma zamanı uygulaması eksik.
+- Önceki Android imzalama özel anahtarı bu ortama bağlı değil. Güncelleme kimliği ve cihaz kurulumu doğrulanmadı; yeni bir anahtarla uyumlu güncelleme sağlanmış gibi davranılmaz.
+- Kullanıcının **en az 3 GB gerçek içerik** koşulu sağlanmış değildir. Boyut için dolgu, kopya veya Windows ikilisi eklenmez. Yeni bir tam APK indirme bağlantısı yoktur.
+
+Yerel yönetici paneli korunur: `python server.py`, ardından `http://127.0.0.1:8765`. Bu yerel geliştirme sistemi, üretim hesabı veya çevrimiçi sunucu değildir; yinelenen işlem kimliği tekrar ödeme yapmaz.

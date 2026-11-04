@@ -1,32 +1,23 @@
-# Wolf Rogue Blood — aktarım durumu, 0.4.0
+# Devralma sonrası aktarım durumu
 
-Bu APK eksiksiz özgün oyun değildir. Sağlanan kurulumda Windows istemcisi, derlenmiş DLL'ler ve paketlenmiş varlıklar bulunuyor; özgün düzenlenebilir oyun/sunucu kaynak projesi bulunmadı. Windows ikilisini `.dat` adıyla yeniden adlandırmak onu Android oyununa dönüştürmez. Mevcut Godot oyunu yeniden yazılıyor; kaynakta okunabilen kurallar ile yeni mobil ayarlar ayrı tutuluyor.
+Yeni tam sürüm ve yeni APK yayımlanmadı. Son yayımlanan 0.8 test APK'sı, bütünlük doğrulamasından sonra kod ve içerik kurtarma kaynağı olarak kullanıldı; kullanıcıya yeni teslim olarak sunulmadı.
 
-| Bölüm | Bu sürümde olan | Bekleyen |
+| Alan | Gerçek gözlem | Açık kalan |
 |---|---|---|
-| Haritalar | Kullanıcının seçtiği 19 dosyanın ana render geometrisi, yaklaşık 1 milyon üçgen; 19'unda kaynak doğma noktası ve üretilen çarpışma kontrolü | Tam fizik BSP'si, görünmez engeller, hareketli nesneler, merdiven/kapı/etkileşimler, ışık haritaları, bazı malzeme efektleri |
-| Mod sınırları | 18 haritanın 62 kaynak mod/alt modla tam kategori+kimlik eşleşmesi | Özgün maç kuralları; #46 Göbekli Tepe'nin mod eşleşmesi |
-| Harita gezintisi | Modu doğrulanan 18 harita APK'da gezilebilir; maç timer/düşman/ödülü çalıştırmaz | Özgün mod oynanışı ve ağ maçları |
-| Karakterler | Yalnızca onaylı Pedro RE insan/kurt çifti; insan birinci şahıs, kurt üçüncü şahıs | Diğer eşlerin dönüştürülmesi, tüm hareketlerde görsel kontrol; 539 model dosyası / 620 tanım benzersiz karakter sayısı değildir |
-| Dövmeler | Kaynak dosyaları envanterde tespit edildi | Dinamik dövme kaplamaları ve gerçek eşya/yetenek etkileri; üç isteğe bağlı dövme mesh'i şimdilik hariç |
-| Kurt yeteneği | 19601 güç slotu kontrolü, ileriye çift basış, dört ayak koşu klibi, koşarken vücut saldırısı | Duvara tutunma, havada güçlü saldırı, özgün sayısal denge |
-| Kontroller | Dört yön, aç/kapat KOŞ, ayrı büyük ateş, zıplama/eğilme/nişan/şarjör/dönüşüm; isteğe bağlı hareket çubuğu | Özgün 139 komutun hepsi uygulanmış değildir |
-| Silah | Kaynaktan AK-47 ve el modeli, 5 klip, iki ses; kaynak şarjör/ateş aralığı | Tüm silahlar, eklenti seçimi, özgün geri tepme/hasar/efekt/mermi sistemi |
-| Hesap ve yönetici | Yerel nakit/KP/altın/GP; PC localhost paneli; cihazda yerel güç slotu | Üretim hesabı, gerçek mağaza/envanter, yetkili oyun sunucusu, eşleştirme, çevrimiçi ilerleme |
+| Kod | 0.8'den 18 betik kurtarıldı; giriş/kayıt/ses/odak/önizleme düzeltmeleri uygulandı | Windows'taki APK sonrası kaynak ve test değişiklikleri yok |
+| Harita | İzinli 19 geometri ve nesne tabloları korunuyor; 18 gezinti | 62 özgün mod/alt modun maç uygulaması, etkileşimli nesneler ve #46 mod kanıtı |
+| Ses | 46 nesneden 43'ü gerçek kaynak kataloğuyla bağlı; sahne çıkışında temizleniyor | #97'de üç am_fire_sm_loop.wav başvurusu kaynakta eksik; özgün zayıflama eğrisi doğrulanmadı |
+| Karakter | Önceki katalogda 48 kabul edilmiş çift; mevcut örnek çifte ait görüntü alındı | Kurtarılan modellerin bütün gerekli animasyon durumlarında yeni görsel kabulü yok |
+| Silah | 216 model / 903 varyantlık önceki katalog ve oyun kodu korundu; cephane/silme hatası kontrolleri geçti | Bütün silahların özgün kuralları, eklenti ve üçüncü şahıs eşleri tamamlanmadı |
+| Kurt | Kaynak 19601 koşulu, T_WallHold_L klibi, çarpışmalı süreli tutunma ve duvardan atlama mantığı | Bütün yönlerde temas pozu onayı, havada güçlü saldırı ve eksik klipli karakterler |
+| Dövme | Belirsiz bölgeye takma engellendi; kayıt hatası geri alınıyor | Bütün UV eşleri, özgün bonuslar ve bütün karakterlerde görsel kabul |
+| Arayüz | Kaynak arayüz varlıkları ve 0.8 ekran kodu kurtarıldı; kamera boyutu ve ekranı kaplama düzeltildi | Bütün özgün ekran/işlem akışları, Display/30001 gibi açık eşlemeler |
+| Işık/efekt | Önceki sprite varlıkları mevcut; örnek efekt ve sahne temizliği sınandı | Son yerel ışık haritası çözüm/binding kayıtları, gerçek aydınlatma ve tüm efekt grafikleri |
+| Sunucu | Localhost yönetici sistemi ve idempotent bakiyeler korundu | Yetkili üretim hesabı, oda, maç, eşleştirme ve ilerleme hizmetleri |
+| Android | Paket adı korundu; sonraki geliştirme sürüm kodu 9 olarak ayrıldı | İmzalama anahtarı, güncelleme/kurulum ve fiziksel cihaz performans doğrulaması |
 
-Kurt koşusunun kaynağı, `Root/wt_attributes/exitemtext.dat` içindeki 19601 **Özel Kurt Yeteneği** açıklamasıdır. Tam tablo 1070 kayıt olarak çözüldü; aynı kimliği tekrarlayan kayıtlar bulunduğu için istenen eşya için benzersizlik ayrıca kontrol edilir. Kaynak alıntısı ve dosya özeti `movement-source-rules.json` içindedir. Dokunma süresi/hız çarpanları yerel mobil ayarlardır; özgün ikili kuralların tamamı çözüldü denmez.
+Kurtarılan görüntüler ve modeller orijinal düzenlenebilir kaynakla aynı değildir. Araç 1.364 kayıplı dönüşüm bildirdi. Tarihsel `engineImported` veya `visualValidation` alanları yeni ve eksiksiz kabul sayılmaz. [Kurtarma raporu](recovery-0.8-report.txt).
 
-Jungle haritasının kaynakta bulunmayan beş sky19 gökyüzü kaplaması korunmuş eksik kaydı olarak raporlanır; gökyüzü geometri parçaları önizlemeden çıkarılır. Bazı kaynak UV/normal değerleri geçersizdi: UV sıfırlamaları ve yeniden hesaplanan normal sayıları `map-conversion.json` içinde yazılıdır. Böyle bir önizleme tam görsel eşdeğerlik iddiası değildir.
+Harita tutunma süresi 2 s, ek bekleme 0,8 s, duvardan itiş 4 m/s yeni mobil ayarlarıdır. Kaynakta doğrulanan şey güç slotu/aktivasyon açıklaması ve animasyonun varlığıdır; özgün sayısal denge çözüldü denmez. [Kaynak ve sınırlar](wall-hold-source.json).
 
-## Doğrulama kapsamı
-
-Kaynak iskelet hiyerarşisi, kaynak/dönüşüm dosya özetleri, Godot içe aktarımı, 19 haritanın ray/ayakta durma açıklığı kontrolü, mobil çoklu dokunma, güç slotu koşulları, çift basış zamanlaması ve örnek oyun davranışları otomatik kontrol edilir. Kurt koşusu/vücut saldırısı, AK-47 duruş/şarjör ve Container Ship/Cappadocia için örnek çevrimdışı görseller incelendi. Bütün animasyon kareleri, bütün haritaların görsel ayrıntıları ve fiziksel telefon performansı test edilmiş değildir.
-
-## Kaynak biçimi başvuruları
-
-- [LTB PC biçimi](https://github.com/Five-Damned-Dollarz/io_scene_lithtech/blob/master/src/reader_ltb_pc.py)
-- [DAT v85 biçimi ve bölümleri](https://github.com/lokea2/DAT2LTA85)
-- [LithTech dünya dışa aktarım biçimi](https://github.com/URAMetroid/Lith_Dat_Get)
-- [Dünya kaplamalarında AlphaRef davranışı](https://github.com/jsj2008/lithtech/blob/master/runtime/render_a/src/sys/d3d/d3d_texture.cpp)
-
-Bu projedeki ayrıştırıcılar bağımsız, sınır denetimli Python kodudur. Eski istemci, DLL veya kaynak paketlerdeki komutlar çalıştırılmadı. Başvurular biçimi anlamak için kullanıldı; üçüncü taraf araç ikilileri oyuna eklenmedi.
+[Dosya bazlı kayıt](transfer-coverage.json.gz) bütün RAR başlıklarını içerir. Tekrarlanan dizinleri benzersiz içerik veya oyun işlevi saymaz. Önceki çalışmadaki 40.225 dosya, 3.366 model veya 737.797 ışık yüzeyi sayıları bu ortamda doğrulanmış güncel toplamlar diye aktarılmadı.

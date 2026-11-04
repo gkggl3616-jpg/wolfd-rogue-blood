@@ -111,7 +111,7 @@ func run():
 	if not ensure(game.player.viewmodel.visible and game.player.weapon_anim.has_animation("reload") and game.player.weapon_anim.has_animation("fire"),"human first-person weapon and hand animations are imported"):return
 	game.touch.direction_buttons = true
 	await frames(2)
-	if not ensure(game.touch.buttons.size() == 11 and game.touch.buttons[7].visible,"four movement buttons and separate run button are available"):return
+	if not ensure(game.touch.buttons.size() == 12 and game.touch.buttons[7].visible,"four movement buttons, separate run and wolf roll buttons are available"):return
 	game.player.switch_form()
 	game.equipment.equip_power(0)
 	game.player.reset_locomotion()

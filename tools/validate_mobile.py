@@ -1,0 +1,58 @@
+"""Run mobile regressions without producing or publishing an APK."""
+import argparse
+import datetime
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def validate(godot, report=None):
+    version = subprocess.run([godot, '--version'], capture_output=True, text=True, check=True).stdout.strip()
+    if not version.startswith('4.7.2.'):
+        raise RuntimeError(f'This restored project requires Godot 4.7.2; found {version}')
+    steps = [
+        ('data_and_local_admin', [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v']),
+        ('asset_prerequisites', [sys.executable, 'tools/check_android_ready.py']),
+        ('godot_import', [godot, '--headless', '--path', 'godot', '--editor', '--import', '--quit']),
+    ]
+    for script in ['persistence', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold']:
+        steps.append((script, [godot, '--headless', '--path', 'godot', '--fixed-fps', '60', '--script', f'res://tests/{script}.gd']))
+    results = []
+    for name, command in steps:
+        print(f'Checking {name}...', flush=True)
+        result = subprocess.run(command, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        # Godot can return 0 for certain resource/parse errors; those still fail QA.
+        errors = re.findall(r'(?m)^(?:SCRIPT ERROR:|ERROR:|WARNING:.*(?:leaked|orphan)).*$', result.stdout)
+        item = {'name': name, 'passed': result.returncode == 0 and not errors, 'exitCode': result.returncode, 'errors': errors}
+        results.append(item)
+        if not item['passed']:
+            print(result.stdout, flush=True)
+            break
+        print('\n'.join(result.stdout.splitlines()[-4:]), flush=True)
+    data = {'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'godotVersion': version,
+            'passed': len(results) == len(steps) and all(x['passed'] for x in results),
+            'steps': results, 'apkProduced': False, 'fullOriginalGamePort': False,
+            'rendering': 'headless_dummy', 'physicalAndroidDeviceTested': False}
+    if report:
+        Path(report).write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
+    return data
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--godot', default='godot')
+    parser.add_argument('--report', type=Path)
+    args = parser.parse_args()
+    try:
+        data = validate(args.godot, args.report)
+    except (OSError, RuntimeError, subprocess.SubprocessError) as exc:
+        parser.exit(2, str(exc) + '\n')
+    raise SystemExit(0 if data['passed'] else 1)
+
+
+if __name__ == '__main__':
+    main()

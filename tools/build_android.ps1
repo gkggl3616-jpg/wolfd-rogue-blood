@@ -1,4 +1,4 @@
-param([string]$Godot = 'godot', [string]$OutputPath)
+param([string]$Godot = 'godot', [string]$OutputPath, [switch]$ValidateOnly)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 if (-not $OutputPath) { $OutputPath = Join-Path (Split-Path $projectRoot -Parent) 'WolfRogueBlood-debug.apk' }
@@ -9,12 +9,14 @@ if (-not $engineCommand) {
 }
 Push-Location $projectRoot
 try {
-    python tools/check_android_ready.py
-    if ($LASTEXITCODE -ne 0) { throw 'Karakter veya proje doğrulaması başarısız.' }
-    & $Godot --headless --path godot --editor --import --quit
-    if ($LASTEXITCODE -ne 0) { throw 'Godot içe aktarma başarısız.' }
-    & $Godot --headless --path godot --fixed-fps 60 --script res://tests/smoke.gd
-    if ($LASTEXITCODE -ne 0) { throw 'Oyun testi başarısız; APK üretilmedi.' }
+    python tools/validate_mobile.py --godot $Godot
+    if ($LASTEXITCODE -ne 0) { throw 'Mobil doğrulama başarısız; APK üretilmedi.' }
+    if ($ValidateOnly) {
+        Write-Output 'Mobil doğrulama geçti; ValidateOnly nedeniyle APK üretilmedi.'
+        return
+    }
+    python tools/check_delivery.py
+    if ($LASTEXITCODE -ne 0) { throw 'Kullanıcının tam sürüm teslim koşulları karşılanmadı; deneme APK yayımlanmaz.' }
     & $Godot --headless --path godot --export-debug Android $OutputPath
     if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $OutputPath)) { throw 'Android derlemesi tamamlanamadı.' }
     Write-Output "APK hazır: $OutputPath"

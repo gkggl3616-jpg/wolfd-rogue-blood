@@ -1,0 +1,9 @@
+Decompiled scripts:                     18
+Scripts not decompiled:                 0
+Imported resources for export session:  24184
+Successfully converted:                 24184
+Lossy:                                  1364
+Rewrote metadata:                       24165
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0

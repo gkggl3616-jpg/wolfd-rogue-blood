@@ -1,0 +1,104 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "allCharacterStatesValidated": false,
+  "captures": [
+    {
+      "height": 720,
+      "name": "launcher-1280",
+      "path": "docs/review/mobile-continuation/launcher-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "11c8b4f134c404a0b5503bb689efb4c6d92230e26bf5fc87e2bfa761d93f4187"
+    },
+    {
+      "height": 720,
+      "name": "lobby-1280",
+      "path": "docs/review/mobile-continuation/lobby-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8474e736caf79c92335621d513695257df293d33bd33eca70bf3f8d0ef8033e2"
+    },
+    {
+      "height": 720,
+      "name": "inventory-1280",
+      "path": "docs/review/mobile-continuation/inventory-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "aa8d8628b6be693785edc8da14006c6b4e587e3c163fc79fbf85af34627de0ff"
+    },
+    {
+      "height": 720,
+      "name": "settings-1280",
+      "path": "docs/review/mobile-continuation/settings-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7ad0800718450c6b08fdd9020b30b2aa024617bbb9a13f310628d0d8fd299e90"
+    },
+    {
+      "height": 720,
+      "name": "human-1280",
+      "path": "docs/review/mobile-continuation/human-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "75943dc9022331a311643fd2b16bfdaa61e9f76b45dbb3f16ac32982766b298d"
+    },
+    {
+      "height": 720,
+      "name": "wolf-1280",
+      "path": "docs/review/mobile-continuation/wolf-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a21be12ad28b9bcd648277cc60e38deeeec6d993a461949d43ec6aebad8ef795"
+    },
+    {
+      "height": 720,
+      "name": "wolf-wall-hold-1280",
+      "path": "docs/review/mobile-continuation/wolf-wall-hold-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b30abd385a9bd76589eacea33ed30439ba2a1bd00ba15ab269ccd75b541f671c"
+    },
+    {
+      "height": 720,
+      "name": "container-ship-1280",
+      "path": "docs/review/mobile-continuation/container-ship-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5722360ac7915a056c8d2e3f6e5a2bcede8a7219ffab4a6e6d38027cef197975"
+    },
+    {
+      "height": 1080,
+      "name": "lobby-1920",
+      "path": "docs/review/mobile-continuation/lobby-1920.png",
+      "saved": true,
+      "width": 1920,
+      "sha256": "6f550f18813f2fa3eafdc6cb8717220e8b582b17b2b9359251c47c7ce289e00b"
+    },
+    {
+      "height": 1080,
+      "name": "servers-1920",
+      "path": "docs/review/mobile-continuation/servers-1920.png",
+      "saved": true,
+      "width": 1920,
+      "sha256": "9f10131e207c1d1ab8e15464daafbef461996fb11737df496502998db109f29b"
+    }
+  ],
+  "display": "X11",
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Software OpenGL/llvmpipe sample captures, not Android emulator or physical GPU/device QA.",
+  "reviewedSamples": [
+    "lobby human framing at 1280 and 1920",
+    "inventory source-art panel",
+    "human weapon/viewmodel",
+    "wolf source clip",
+    "Container Ship geometry"
+  ],
+  "knownVisualLimitations": [
+    "lobby and settings still use development layouts, not complete original UI flow",
+    "all wall contact directions/poses not approved",
+    "source map lighting is not original lightmap rendering",
+    "all character states and all weapons not visually reviewed"
+  ]
+}

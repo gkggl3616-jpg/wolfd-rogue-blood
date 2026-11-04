@@ -1,0 +1,24 @@
+{
+  "item": 19601,
+  "sourceRulesPath": "wolfteam kurtları/Root/wt_attributes/exitemtext.dat",
+  "sourceRulesSha256": "04a124ed80f3045a5f1a0a593171909d1e703c50536b212be1f9724c12e36554",
+  "animationDonor": "wt_chars/models/r1_wolf.ltb",
+  "animationDonorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+  "sourceAnimation": "T_WallHold_L",
+  "exportedAnimation": "wall_hold",
+  "sourceClipDurationMs": 1333,
+  "activation": "Equipped power item + wolf form + wolf run + airborne vertical-wall contact + attack; clip required",
+  "mobileAdaptation": {
+    "holdSeconds": 2.0,
+    "cooldownSeconds": 0.8,
+    "outwardJumpImpulse": 4.0,
+    "originalNumericTuningVerified": false
+  },
+  "physicsQa": {
+    "checks": 15,
+    "failures": 0
+  },
+  "sourceClipRendered": true,
+  "allContactPoseAlignmentsVisuallyApproved": false,
+  "unsupportedCharactersUseFallbackAnimation": false
+}

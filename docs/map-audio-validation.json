@@ -1,0 +1,15 @@
+{
+  "sourceObjects": 46,
+  "boundObjects": 43,
+  "missingObjects": 3,
+  "missingSource": "WT_Snd/MapSound/am_fire_sm_loop.WAV",
+  "missingMapNumber": 97,
+  "rarHeaderInventorySearched": true,
+  "fallbackAudioUsed": false,
+  "qaChecks": 151,
+  "qaFailures": 0,
+  "attenuation": "new_mobile_linear_inner_outer_radius",
+  "originalAttenuationVerified": false,
+  "audibleOutputVerifiedOnPhysicalDevice": false,
+  "sceneCleanupVerified": true
+}
