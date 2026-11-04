@@ -4,14 +4,14 @@ Yeni tam sürüm ve yeni APK yayımlanmadı. Son yayımlanan 0.8 test APK'sı, b
 
 | Alan | Gerçek gözlem | Açık kalan |
 |---|---|---|
-| Kod | 0.8'den 18 betik kurtarıldı; giriş/kayıt/ses/odak/önizleme düzeltmeleri uygulandı | Windows'taki APK sonrası kaynak ve test değişiklikleri yok |
+| Kod | 0.8'den 18 betik kurtarıldı; kayıt/ses/odak/girdi düzeltmeleri ve tek kaynak arayüz denetleyicisi uygulandı | Windows'taki APK sonrası kaynak ve test değişiklikleri yok |
 | Harita | İzinli 19 geometri ve nesne tabloları korunuyor; 18 gezinti | 62 özgün mod/alt modun maç uygulaması, etkileşimli nesneler ve #46 mod kanıtı |
-| Ses | 46 nesneden 43'ü gerçek kaynak kataloğuyla bağlı; sahne çıkışında temizleniyor | #97'de üç am_fire_sm_loop.wav başvurusu kaynakta eksik; özgün zayıflama eğrisi doğrulanmadı |
+| Ses | 46 nesneden 43'ü gerçek kaynak kataloğuyla bağlı; bell/hawk için RAR sürümü seçildi, özgün PCM süreleri sınandı | #97'de üç am_fire_sm_loop.wav başvurusu kaynakta eksik; özgün zayıflama eğrisi doğrulanmadı |
 | Karakter | Önceki katalogda 48 kabul edilmiş çift; mevcut örnek çifte ait görüntü alındı | Kurtarılan modellerin bütün gerekli animasyon durumlarında yeni görsel kabulü yok |
 | Silah | 216 model / 903 varyantlık önceki katalog ve oyun kodu korundu; cephane/silme hatası kontrolleri geçti | Bütün silahların özgün kuralları, eklenti ve üçüncü şahıs eşleri tamamlanmadı |
 | Kurt | Kaynak 19601 koşulu, T_WallHold_L klibi, çarpışmalı süreli tutunma ve duvardan atlama mantığı | Bütün yönlerde temas pozu onayı, havada güçlü saldırı ve eksik klipli karakterler |
 | Dövme | Belirsiz bölgeye takma engellendi; kayıt hatası geri alınıyor | Bütün UV eşleri, özgün bonuslar ve bütün karakterlerde görsel kabul |
-| Arayüz | Kaynak arayüz varlıkları ve 0.8 ekran kodu kurtarıldı; kamera boyutu ve ekranı kaplama düzeltildi | Bütün özgün ekran/işlem akışları, Display/30001 gibi açık eşlemeler |
+| Arayüz | 365 kaynak düzeni / 4.934 bileşen için çizim/girdi katmanı, doğal koordinatlar, kaynak mesaj/ayar/oda/koleksiyon akışı ve gerçek GUI kontrolleri | Bütün özgün C++ ekran davranışları; Display/30001, 12 eksik doku, 147 atlas bölgesi, font 51 ve piksel karşılaştırması |
 | Işık/efekt | Önceki sprite varlıkları mevcut; örnek efekt ve sahne temizliği sınandı | Son yerel ışık haritası çözüm/binding kayıtları, gerçek aydınlatma ve tüm efekt grafikleri |
 | Sunucu | Localhost yönetici sistemi ve idempotent bakiyeler korundu | Yetkili üretim hesabı, oda, maç, eşleştirme ve ilerleme hizmetleri |
 | Android | Paket adı korundu; sonraki geliştirme sürüm kodu 9 olarak ayrıldı | İmzalama anahtarı, güncelleme/kurulum ve fiziksel cihaz performans doğrulaması |
@@ -20,4 +20,6 @@ Kurtarılan görüntüler ve modeller orijinal düzenlenebilir kaynakla aynı de
 
 Harita tutunma süresi 2 s, ek bekleme 0,8 s, duvardan itiş 4 m/s yeni mobil ayarlarıdır. Kaynakta doğrulanan şey güç slotu/aktivasyon açıklaması ve animasyonun varlığıdır; özgün sayısal denge çözüldü denmez. [Kaynak ve sınırlar](wall-hold-source.json).
 
-[Dosya bazlı kayıt](transfer-coverage.json.gz) bütün RAR başlıklarını içerir. Tekrarlanan dizinleri benzersiz içerik veya oyun işlevi saymaz. Önceki çalışmadaki 40.225 dosya, 3.366 model veya 737.797 ışık yüzeyi sayıları bu ortamda doğrulanmış güncel toplamlar diye aktarılmadı.
+[Dosya bazlı kayıt](transfer-coverage.json.gz), 74.967 RAR kaydının okunmuş içerik özetlerini içerir. Başlık listesiyle sınırlı değildir. Tekrarlanan dizinleri, QO metaverisini veya LTB uzantılı render tarzlarını benzersiz oynanabilir içerik saymaz. 3.073 benzersiz LTB yükünden 2.949'unun desteklenen model metaverisi çözüldü; 124 yük desteklenmeyen biçim/sürüm/mesh olarak ayrı tutulur. Önceki çalışmadaki 40.225 dosya, 3.366 model veya 737.797 ışık yüzeyi sayıları doğrulanmış güncel toplamlar diye aktarılmadı.
+
+[Arayüz kapsamı](ARAYUZ_YENIDEN_KURULUM.md), [kaynak byte eşlemesi](ui-source-byte-validation.json), [yerel proje taraması](project-file-audit-summary.json). Test ve kaynak özeti başarısı tam sürüm bayrağını açmaz.

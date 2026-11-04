@@ -6,10 +6,13 @@
   "missingMapNumber": 97,
   "rarHeaderInventorySearched": true,
   "fallbackAudioUsed": false,
-  "qaChecks": 151,
+  "qaChecks": 155,
   "qaFailures": 0,
   "attenuation": "new_mobile_linear_inner_outer_radius",
   "originalAttenuationVerified": false,
   "audibleOutputVerifiedOnPhysicalDevice": false,
-  "sceneCleanupVerified": true
+  "sceneCleanupVerified": true,
+  "originalPcmSourcesRestored": 2,
+  "originalPcmDurationVerified": true,
+  "originalAudioEvidence": "docs/original-audio-restoration.json"
 }

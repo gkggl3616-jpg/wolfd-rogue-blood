@@ -1,19 +1,17 @@
 extends Node3D
 
+const Frontend = preload("res://ui/front_end.gd")
+const GameHud = preload("res://ui/game_hud.gd")
+const SourceArt = preload("res://ui/source_theme.gd")
+
 const PlayerScript = preload("res://scripts/player.gd")
 const EnemyScript = preload("res://scripts/enemy.gd")
 const TouchScript = preload("res://scripts/touch.gd")
 const MapCatalogScript = preload("res://scripts/map_catalog.gd")
 const EquipmentScript = preload("res://scripts/equipment.gd")
 const ContentBook = preload("res://scripts/content_book.gd")
-const LibraryMenu = preload("res://scripts/library_menu.gd")
 const GrenadeScript = preload("res://scripts/grenade.gd")
-const PcLayout = preload("res://scripts/pc_layout.gd")
-const PcHud = preload("res://scripts/pc_hud.gd")
-const Lobby = preload("res://scripts/lobby.gd")
-const FrontScreens = preload("res://scripts/front_screens.gd")
 const GameAudio = preload("res://scripts/game_audio.gd")
-const LauncherScreen = preload("res://scripts/launcher_screen.gd")
 const AtomicStore = preload("res://scripts/atomic_store.gd")
 const MapAudio = preload("res://scripts/map_audio.gd")
 var book
@@ -28,8 +26,8 @@ var map_catalog
 var mode_picker: OptionButton
 var map_picker: OptionButton
 var map_status: Label
-var map_start: Button
-var map_preview: Button
+var map_start: BaseButton
+var map_preview: BaseButton
 var arena_root: Node3D
 var active_map: Node3D
 var exploring = false
@@ -51,7 +49,7 @@ var message: Label
 var message_clock = 0.0
 var overlay: PanelContainer
 var overlay_box: VBoxContainer
-var crosshair: Label
+var crosshair: Control
 var touch
 var wallet = {"cash": 0, "kp": 0, "gold": 0, "gp": 0}
 var remote_token = ""
@@ -69,11 +67,14 @@ var tree_was_paused = false
 var gui_touch_blockers = []
 var wallet_storage_path = "user://wallet.json"
 var wallet_save_blocked = false
+var local_room = {}
+var last_result = {}
 var menu_backdrop: ColorRect
 var transient_effects: Node3D
 
 func _ready():
 	book = ContentBook.new( not test_mode)
+	profile_name = book.local_name
 	game_audio = Node.new();game_audio.set_script(GameAudio);game_audio.game = self;add_child(game_audio)
 	equipment = EquipmentScript.new( not test_mode)
 	map_catalog = MapCatalogScript.new()
@@ -193,87 +194,18 @@ func build_world():
 	sign.modulate = Color("f07b65")
 	arena_root.add_child(sign)
 
-func label(text, size = 20):
-	var node = Label.new()
-	node.text = text
-	node.add_theme_font_size_override("font_size", size)
-	node.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	return node
-
 func build_ui():
-	var layer = CanvasLayer.new()
-	add_child(layer)
-	var root = Control.new()
-	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	layer.add_child(root)
-	hud_label = label("", 20)
-	hud_label.position = Vector2(28, 18)
-	hud_label.size = Vector2(500, 110);hud_label.clip_text = true
-	root.add_child(hud_label)
-	message = label("", 24)
-	message.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
-	message.position = Vector2(-320, 96)
-	message.size = Vector2(640, 40)
-	message.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	root.add_child(message)
-	crosshair = label("＋", 30)
-	crosshair.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	crosshair.position -= Vector2(15, 20)
-	root.add_child(crosshair)
-	source_hud = Control.new();source_hud.set_script(PcHud);source_hud.game = self;root.add_child(source_hud)
-	var admin = Button.new()
-	admin.text = "YÖNETİCİ"
-	admin.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	admin.position = Vector2(-165, 18)
-	admin.size = Vector2(140, 44)
-	admin.pressed.connect(show_admin)
-	root.add_child(admin)
-	gui_touch_blockers.append(admin)
-	var inventory_button = Button.new()
-	inventory_button.text = "ENVANTER"
-	inventory_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	inventory_button.position = Vector2(-165, 70)
-	inventory_button.size = Vector2(140, 44)
-	inventory_button.pressed.connect( func(): show_library("Envanter"))
-	root.add_child(inventory_button)
-	gui_touch_blockers.append(inventory_button)
-	var slots = HBoxContainer.new();slots.position = Vector2(610, 115);slots.add_theme_constant_override("separation", 6);root.add_child(slots)
-	gui_touch_blockers.append(slots)
-	for pair in [["ANA", "primary"], ["TAB.", "pistol"], ["BIÇAK", "knife"], ["BOMBA", "grenade"]]:
-		var button = Button.new();button.text = pair[0];button.custom_minimum_size = Vector2(75, 44);button.pressed.connect( func(): equip_slot(pair[1]));slots.add_child(button)
-	var pause_button = Button.new()
-	pause_button.text = "II"
-	pause_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	pause_button.position = Vector2(-222, 18)
-	pause_button.size = Vector2(45, 44)
-	pause_button.pressed.connect(pause_game)
-	root.add_child(pause_button)
-	gui_touch_blockers.append(pause_button)
-	touch = Node2D.new()
-	touch.set_script(TouchScript)
-	touch.game = self
-	layer.add_child(touch)
-	menu_backdrop = ColorRect.new()
-	menu_backdrop.color = Color("0a0d12")
-	menu_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	root.add_child(menu_backdrop)
-	overlay = PanelContainer.new()
-	overlay.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	overlay.position = Vector2(-280, -245)
-	overlay.size = Vector2(560, 490)
-	var style = StyleBoxFlat.new()
-	style.bg_color = Color(0.055, 0.075, 0.11, 0.96)
-	style.set_corner_radius_all(16)
-	style.content_margin_left = 34
-	style.content_margin_right = 34
-	style.content_margin_top = 26
-	style.content_margin_bottom = 26
-	overlay.add_theme_stylebox_override("panel", style)
-	root.add_child(overlay)
-	overlay_box = VBoxContainer.new()
-	overlay_box.add_theme_constant_override("separation", 14)
-	overlay.add_child(overlay_box)
+	var layer = CanvasLayer.new();add_child(layer)
+	var root = Control.new();root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root.mouse_filter = Control.MOUSE_FILTER_IGNORE;layer.add_child(root)
+	hud_label = SourceArt.label("");hud_label.hide();root.add_child(hud_label)
+	message = SourceArt.label("",Vector2(900,60),20);message.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	message.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP);message.position=Vector2(-450,270);message.size=Vector2(900,60);root.add_child(message)
+	source_hud=GameHud.new();source_hud.game=self;root.add_child(source_hud)
+	touch=Node2D.new();touch.set_script(TouchScript);touch.game=self;layer.add_child(touch)
+	menu_backdrop=ColorRect.new();menu_backdrop.color=Color("050709");menu_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root.add_child(menu_backdrop)
+	# Kept only for backwards-compatible QA/accessors; no old panel is displayed.
+	overlay=PanelContainer.new();overlay.set_anchors_and_offsets_preset(Control.PRESET_CENTER);overlay.position=Vector2(-280,-245);overlay.size=Vector2(560,490);overlay.mouse_filter=Control.MOUSE_FILTER_IGNORE;root.add_child(overlay)
+	overlay_box=VBoxContainer.new();overlay.add_child(overlay_box);overlay.hide()
 
 func center_overlay(dimensions):
 	overlay.offset_left = - dimensions.x / 2.0
@@ -284,7 +216,7 @@ func center_overlay(dimensions):
 func clear_overlay():
 	if is_instance_valid(player) and is_instance_valid(player.roar_effect): player.roar_effect.stop()
 	clear_pc_panel()
-	if is_instance_valid(library_panel): library_panel.queue_free();library_panel = null
+	if is_instance_valid(library_panel): library_panel.get_parent().remove_child(library_panel);library_panel.queue_free();library_panel = null
 	for child in overlay_box.get_children():
 		overlay_box.remove_child(child)
 		child.queue_free()
@@ -297,34 +229,12 @@ func clear_overlay():
 	if player:
 		player.reset_locomotion()
 
-func menu_button(text, callback):
-	var button = Button.new()
-	button.text = text
-	button.custom_minimum_size.y = 50
-	button.pressed.connect(callback)
-	overlay_box.add_child(button)
-	return button
-
-func show_menu(title, text, button, callback):
-	clear_overlay()
-	overlay_box.add_child(label(title, 30))
-	var body = label(text, 18)
-	body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	body.custom_minimum_size = Vector2(480, 100)
-	overlay_box.add_child(body)
-	menu_button(button, callback)
-	var help = label("PC: WASD · Space zıpla · Ctrl eğil · Shift koş\n3 dönüşüm · Fare ateş / nişan · R şarjör / kükreme\nİnsan: birinci şahıs · Kurt: üçüncü şahıs\nF10 yönetici · Esc duraklat", 15)
-	help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	overlay_box.add_child(help)
-	menu_button("Mod ve harita listesi", show_maps)
-	menu_button("Envanter · Kurt yeteneği", show_inventory)
-	menu_button("Mağaza · Envanter · Karakterler · Ayarlar", show_library)
-	center_overlay(Vector2(560, 640))
-
 func show_library(initial_page = "Mağaza"):
-	if is_instance_valid(library_panel): library_panel.close_menu();return
-	clear_overlay();overlay.hide()
-	var panel = PanelContainer.new();panel.set_script(LibraryMenu);panel.game = self;panel.page = initial_page;library_panel = panel;overlay.get_parent().add_child(panel)
+	if is_instance_valid(library_panel):
+		if library_panel.page == initial_page: library_panel.close_menu()
+		else: library_panel.navigate(initial_page)
+		return
+	open_interface(initial_page,true)
 
 func apply_settings():
 	if not is_instance_valid(touch): return
@@ -376,48 +286,25 @@ func explode(where, amount, kind):
 		if get_world_3d().direct_space_state.intersect_ray(query).is_empty(): enemy.damage(int(amount * (1 - distance / 6)))
 
 func show_home():
-	running = false;clear_overlay();overlay.hide()
-	pc_panel = PanelContainer.new();pc_panel.set_script(Lobby);pc_panel.game = self;overlay.get_parent().add_child(pc_panel)
+	running=false
+	open_interface("lobby")
 
 func show_front_screen(page):
-	if page not in ["entry", "servers", "events"]: return
-	running = false;clear_overlay();overlay.hide()
-	pc_panel = Control.new();pc_panel.set_script(FrontScreens);pc_panel.game = self;pc_panel.page = page;overlay.get_parent().add_child(pc_panel)
+	if page not in ["entry","servers","events"]:return
+	running=false;open_interface(page)
 
 func show_launcher():
-	running = false;clear_overlay();overlay.hide()
-	pc_panel = Control.new();pc_panel.set_script(LauncherScreen);pc_panel.game = self;overlay.get_parent().add_child(pc_panel)
+	running=false;open_interface("entry")
+
+func open_interface(page, library=false):
+	clear_overlay();overlay.hide()
+	var panel=Frontend.new();panel.game=self;panel.page=page
+	if library: library_panel=panel
+	else: pc_panel=panel
+	overlay.get_parent().add_child(panel)
 
 func show_maps():
-	clear_overlay()
-	center_overlay(Vector2(560, 660))
-	overlay_box.add_child(label("MOD VE HARİTALAR", 26))
-	overlay_box.add_child(label("19 seçim · 18 doğrulanmış mod eşleşmesi", 16))
-	mode_picker = OptionButton.new()
-	mode_picker.custom_minimum_size.y = 44
-	mode_picker.fit_to_longest_item = false
-	for mode in map_catalog.data.modes:
-		mode_picker.add_item(mode.sourceName, int(mode.id))
-	overlay_box.add_child(mode_picker)
-	map_picker = OptionButton.new()
-	map_picker.custom_minimum_size.y = 44
-	map_picker.fit_to_longest_item = false
-	overlay_box.add_child(map_picker)
-	map_status = label("", 16)
-	map_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	map_status.custom_minimum_size = Vector2(480, 96)
-	overlay_box.add_child(map_status)
-	map_start = menu_button("Haritayı başlat", start_selected_map)
-	map_preview = menu_button("Haritayı gez · Önizleme", start_map_preview)
-	mode_picker.item_selected.connect( func(_index): refresh_mode_maps())
-	map_picker.item_selected.connect( func(_index): refresh_map_status())
-	menu_button("Geri", func():
-		if running:
-			pause_game_menu()
-		else:
-			show_home()
-	)
-	refresh_mode_maps()
+	open_interface("maps")
 
 func refresh_mode_maps():
 	map_picker.clear()
@@ -500,33 +387,19 @@ func start_selected_map():
 	get_tree().change_scene_to_file(map_catalog.map_record(map_number).asset)
 
 func pause_game_menu():
-	clear_overlay();overlay.hide()
-	pc_panel = Control.new();pc_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);overlay.get_parent().add_child(pc_panel)
-	var shade = ColorRect.new();shade.color = Color(0, 0, 0, 0.75);shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);pc_panel.add_child(shade)
-	var layout = Control.new();layout.set_script(PcLayout);pc_panel.add_child(layout);layout.configure("interface/gamemenu", Vector2(400, 377))
-	var fit = func():
-		var viewport_size = get_viewport().get_visible_rect().size
-		var factor = minf((viewport_size.x - 40) / 400.0, (viewport_size.y - 40) / 377.0)
-		layout.scale = Vector2.ONE * factor;layout.position = (viewport_size - Vector2(400, 377) * factor) * 0.5
-	fit.call();pc_panel.resized.connect(fit)
-	layout.bind_action("ExitButton", resume);layout.bind_action("GameComeBack", resume)
-	layout.bind_action("Option", func(): show_library("Ayarlar"))
-	layout.bind_action("GameExit", func(): running = false;show_home())
-	if OS.has_feature("android"):
-
-		var close = Button.new();close.text = "×";close.position = Vector2(350, 0);close.size = Vector2(50, 44);close.pressed.connect(resume);layout.add_child(close)
+	open_interface("pause")
 
 func clear_pc_panel():
 	if is_instance_valid(pc_panel):
 		pc_panel.get_parent().remove_child(pc_panel);pc_panel.queue_free();pc_panel = null
 
 func resume():
-	if application_suspended: return
+	if application_suspended:return
 	clear_pc_panel()
-	menu_open = false
-	overlay.hide()
-	if not OS.has_feature("android") and DisplayServer.get_name() != "headless":
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if is_instance_valid(library_panel):
+		library_panel.get_parent().remove_child(library_panel);library_panel.queue_free();library_panel=null
+	menu_open=false;overlay.hide()
+	if not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 
 func clear_projectiles():
 	if is_instance_valid(transient_effects):
@@ -567,13 +440,10 @@ func start_round():
 	update_hud()
 
 func pause_game():
-	if is_instance_valid(library_panel): library_panel.close_menu();return
-	if not running:
-		return
-	if menu_open:
-		resume()
-	else:
-		pause_game_menu()
+	if is_instance_valid(library_panel):library_panel.go_back();return
+	if is_instance_valid(pc_panel):pc_panel.go_back();return
+	if not running:return
+	pause_game_menu()
 
 func _input(event):
 	if event is InputEventMouseMotion and event.device != InputEvent.DEVICE_ID_EMULATION and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -765,8 +635,8 @@ func take_damage(amount):
 		end_round("Yenildin")
 
 func end_round(title):
-	running = false
-	show_menu(title, "Etkisiz hale getirilen hedef: %d / 10\nKazandığın yerel bakiyeler korunur." % kills, "Yeniden dene", start_round)
+	running=false;last_result={"title":title,"kills":kills,"health":health}
+	open_interface("result")
 
 func announce(text):
 	message.text = text
@@ -842,70 +712,18 @@ func on_grant(_result, code, _headers, body):
 	update_hud()
 
 func show_admin():
-	clear_overlay()
-	overlay_box.add_child(label("YEREL YÖNETİCİ", 28))
-	overlay_box.add_child(label("Profil: " + profile_name, 17))
-	var description = label("PC’de localhost panelindeki ilk oyuncuya bağlıdır.\nAndroid’de yalnızca bu cihazdaki yerel kayıt değişir.", 15)
-	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	overlay_box.add_child(description)
-	var kind = OptionButton.new()
-	for text in ["Nakit", "KP", "Altın", "GP · Gelişim puanı"]:
-		kind.add_item(text)
-	overlay_box.add_child(kind)
-	var amount = SpinBox.new()
-	amount.min_value = 1
-	amount.max_value = 1000000
-	amount.value = 1000
-	amount.step = 1
-	overlay_box.add_child(amount)
-	menu_button("Bakiyeyi ekle", func():
-		if grant_money(["cash", "kp", "gold", "gp"][kind.selected], int(amount.value), "Godot yerel yönetici"):
-			announce("Bakiye işlemi gönderildi" if remote_player != "" else "Yerel bakiye kaydedildi")
-	)
-	menu_button("Kapat", func():
-		if running:
-			resume()
-		else:
-			show_home()
-	)
+	open_interface("admin")
 
 func show_inventory():
-	clear_overlay()
-	center_overlay(Vector2(560, 600))
-	overlay_box.add_child(label("ENVANTER · GÜÇ SLOTU", 26))
-	var item = equipment.rules.items[0]
-	var icon = TextureRect.new()
-	icon.texture = load(item.icon)
-	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	icon.custom_minimum_size = Vector2(80, 80)
-	overlay_box.add_child(icon)
-	overlay_box.add_child(label(item.name, 22))
-	var description = label("Güç slotundayken kurt formunda ileriye iki kez bas ve tut: dört ayak koşusu. Koşarken ateş: vücut saldırısı. Havada duvara temas ederek koşarken ateş: tutunma (kaynak klibi olan karakterler). İleriyi bırak: ayrıl; ZIPLA: duvardan atla.\nKOŞ normal koşuyu açar/kapatır. Havada güçlü saldırı henüz aktarılmadı. Sayısal değerler yeni mobil ayarlarıdır.", 16)
-	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	description.custom_minimum_size = Vector2(480, 144)
-	overlay_box.add_child(description)
-	var equip = CheckButton.new()
-	equip.text = "Güç slotuna tak"
-	equip.button_pressed = equipment.has_wolf_ability()
-	equip.toggled.connect( func(enabled):
-		if not equipment.equip_power(EquipmentScript.WOLF_ABILITY if enabled else 0):
-			equip.set_pressed_no_signal(equipment.has_wolf_ability());announce("Güç slotu kaydedilemedi.")
-		player.reset_locomotion()
-	)
-	overlay_box.add_child(equip)
-	var directions = CheckButton.new()
-	directions.text = "Hareket için yön düğmelerini kullan"
-	directions.button_pressed = touch.direction_buttons
-	directions.toggled.connect( func(enabled):
-		if book.set_setting("directions", enabled): apply_settings()
-		else: directions.set_pressed_no_signal(book.settings.directions);announce("Kontrol ayarı kaydedilemedi.")
-		touch.reset()
-	)
-	overlay_box.add_child(directions)
-	menu_button("Kapat", func():
-		if running:
-			resume()
-		else:
-			show_home()
-	)
+	open_interface("power")
+
+func equip_item_from_ui(item):
+	if not book.owned.get(item.get("id",""),false) or not ResourceLoader.exists(item.get("asset","")):return false
+	var packed=load(item.asset) as PackedScene
+	if packed==null:return false
+	var probe=packed.instantiate()
+	var valid=not probe.find_children("*","AnimationPlayer",true,false).is_empty()
+	probe.free()
+	if not valid:return false
+	if not book.equip(item.id):return false
+	return equip_library_weapon(item)

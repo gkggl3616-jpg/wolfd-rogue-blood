@@ -1,6 +1,7 @@
 """Run mobile regressions without producing or publishing an APK."""
 import argparse
 import datetime
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -8,6 +9,14 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def code_fingerprint():
+    digest=hashlib.sha256()
+    files=sorted((ROOT/'godot').glob('scripts/*.gd'))+sorted((ROOT/'godot').glob('ui/*.gd'))+[(ROOT/'godot/project.godot')]
+    for path in files:
+        digest.update(str(path.relative_to(ROOT)).encode());digest.update(b'\0');digest.update(path.read_bytes());digest.update(b'\0')
+    return digest.hexdigest()
 
 
 def validate(godot, report=None):
@@ -19,12 +28,12 @@ def validate(godot, report=None):
         ('asset_prerequisites', [sys.executable, 'tools/check_android_ready.py']),
         ('godot_import', [godot, '--headless', '--path', 'godot', '--editor', '--import', '--quit']),
     ]
-    for script in ['persistence', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold']:
+    for script in ['persistence', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'ui_templates', 'ui_flows']:
         steps.append((script, [godot, '--headless', '--path', 'godot', '--fixed-fps', '60', '--script', f'res://tests/{script}.gd']))
     results = []
     for name, command in steps:
         print(f'Checking {name}...', flush=True)
-        result = subprocess.run(command, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        result = subprocess.run(command, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=600)
         # Godot can return 0 for certain resource/parse errors; those still fail QA.
         errors = re.findall(r'(?m)^(?:SCRIPT ERROR:|ERROR:|WARNING:.*(?:leaked|orphan)).*$', result.stdout)
         item = {'name': name, 'passed': result.returncode == 0 and not errors, 'exitCode': result.returncode, 'errors': errors}
@@ -34,6 +43,7 @@ def validate(godot, report=None):
             break
         print('\n'.join(result.stdout.splitlines()[-4:]), flush=True)
     data = {'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'godotVersion': version,
+            'runtimeCodeSha256':code_fingerprint(),
             'passed': len(results) == len(steps) and all(x['passed'] for x in results),
             'steps': results, 'apkProduced': False, 'fullOriginalGamePort': False,
             'rendering': 'headless_dummy', 'physicalAndroidDeviceTested': False}

@@ -10,12 +10,14 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 
 ## Bu devam çalışmasında uygulananlar
 
+- Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları oranı korunarak kullanılır. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
 - Parmak sahipliği olan çoklu dokunma: hareket, kamera ve düğmeler birbirine geçmez. Aynı düğmeye basan ikinci parmak, birinci bırakıldığında eylemi kaybetmez. Menü/HUD dokunuşları kamera veya ateşe dönüşmez.
 - Uygulama arka plandayken sahne, çatışma ve şarjör süresi durur. Dönüşte oyuncu **Devam et** seçmeden çatışma başlamaz.
 - Müzik, ortam/efekt, silah ve menü sesi ayrı kanallarda ayarlanır. Eski ana ses tercihi korunur.
 - Kayıt yazımı kontrol edilir; başarısız işlem bakiye, eşya, karakter, dövme, ayar veya ekipman setini kalıcı olmuş gibi değiştirmez. Bozuk/yeni şemalı eski kayıt sessizce silinmez.
 - Kaynak bölgesi belirsiz dövmeler rastgele UV'ye takılamaz. Eski kayıttaki belirsiz seçim dosyadan silinmez, modele uygulanmaz.
 - Seçili haritaların 46 ses nesnesinin 43'ü sahneye bağlanır. Üçünün istediği **am_fire_sm_loop.wav**, verilen RAR dizininde ve ses kataloğunda yoktur; yerine başka ses kullanılmaz. İç/dış yarıçap zayıflaması yeni mobil uyarlamadır.
+- Arşiv içeriği karşılaştırmasında farklı çıkan `am_bell.wav` ve `am_hawk.wav`, verilen PC RAR'ındaki özgün PCM dosyalarıyla değiştirildi. Dosyalar yeniden kodlanmadı. [Kaynak kanıtı](docs/original-audio-restoration.json).
 - 19601 güç eşyası ve kaynak `wall_hold` klibi varsa havada duvar teması sırasında kurt koşusu + ateş, süreli tutunmayı başlatır. İleriyi bırakma, eğilme, menü ve form değişimi tutunmayı bitirir; zıplama fiziksel dışa itiş verir. Sayısal değerler yeni mobil ayarlarıdır. **Bütün temas yönlerinde animasyon hizası henüz görsel olarak onaylanmadı.** Havada güçlü saldırı tamamlanmadı.
 - Karakter önizleme kamerası gerçek model sınırlarına ve ekran oranına göre çerçeve kurar. Menüler geniş ekranda arka plandaki dünyayı açıkta bırakmaz.
 
@@ -34,13 +36,17 @@ Windows'ta APK oluşturmadan doğrulama:
 ./tools/build_android.ps1 -Godot C:\path\godot.exe -ValidateOnly
 ```
 
-Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi ve duvara tutunma kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. [Görüntü kontrolü](docs/mobile-visual-validation.json) ayrı OpenGL örnekleridir. Fiziksel telefon ve Android emülatörü testi yapılmadı.
+Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi, duvara tutunma ve kaynak arayüz/GUI akışı kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. [Görüntü kontrolü](docs/mobile-visual-validation.json) ayrı OpenGL örnekleridir. Fiziksel telefon ve Android emülatörü testi yapılmadı.
 
 ## Gerçek PC kaynaklarına erişim
 
 Verilen Drive RAR dosyası **4.743.112.316 bayt**; başlık envanterinde **74.967 kayıt** bulunur. Dizinler ve tekrarlanan ağaçlar bu sayıya dahildir. Açılmış toplam 19,66 GB bildirimi benzersiz/oynanabilir içerik sayısı veya APK boyutu değildir.
 
 [Dosya envanteri](docs/pc-archive-inventory.json.gz), [dosya bazlı aktarım kaydı](docs/transfer-coverage.json.gz), [kapsam özeti](docs/transfer-coverage-summary.json). Yol eşleşmesi, kaynağın byte kimliği veya oyundaki işlevinin kanıtı sayılmaz.
+
+Bu devamda yalnızca başlıklar listelenmedi: **74.967 kaydın bütün üye içeriği okunup SHA-256 ile özetlendi**; tekrarlanan ağaçlar ve RAR'ın QO metaverisi ayrı tutulur. [Tam içerik taraması](docs/pc-content-scan-summary.json). 3.073 benzersiz LTB yükünün 2.949'unda desteklenen model metaverisi çözüldü; kalan 124 dosya desteklenmeyen sürüm/mesh veya render tarzı gibi başka LTB türleri içerir. Bunlar oynanabilir karakter sayılmaz. 365 arayüz tanımı, 18.862 doku ve dört fontun katalog kaynak özetleri verilen RAR ile eşleşir; bu kontrol piksel veya oyun davranışı eşitliği değildir. [Arayüz kaynak byte kontrolü](docs/ui-source-byte-validation.json).
+
+Yerel proje dosyalarının tamamı okunup özetlenir; JSON, GLB/PNG başlıkları ve sabit `res://` bağımlılıkları [proje taramasında](docs/project-file-audit-summary.json) denetlenir.
 
 Tüm arşivi diske çıkarmadan belirli bir kaynak dosyasını al:
 
@@ -50,6 +56,17 @@ python tools/pc_archive.py extract docs/pc-archive-inventory.json.gz "wolfteam k
 ```
 
 Sistem `libarchive` kütüphanesinde RAR5 desteği gerekir. Araç dosya boyutu ve RAR bütünlüğünü denetler, çıkarılan dosyanın SHA-256 köken kaydını yazar; PC ikililerini çalıştırmaz.
+
+Tam içerik taramasını yeniden üretmek için bazı sıkıştırma bloklarında bağımsız Unix `unrar` çözücüsü de gerekir:
+
+```sh
+python tools/scan_pc_archive.py 1UqJsReUFibnxW8_WMu1i_ys9cjSonhGA --unrar /path/to/unrar
+python tools/build_ui_catalog.py --content-scan docs/pc-content-scan.jsonl.gz
+python tools/build_transfer_ledger.py
+python tools/audit_project.py
+```
+
+Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İndirme bütün arşivi yerel diske çıkarmadan aralıklı okunur. Dosyası bulunmuş, özetlenmiş veya modele çevrilmiş olması; bağımlılık, davranış ve görsel kabul aşamalarını tamamlamaz.
 
 ## Tam sürüm ve APK koşulları
 

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "utc": "2026-11-04T14:35:08.698111+00:00",
+  "filesHashed": 49686,
+  "bytesRead": 2926683221,
+  "fileTypes": {
+    "": 1,
+    ".md": 11,
+    ".json": 62,
+    ".gz": 4,
+    ".txt": 3,
+    ".png": 23038,
+    ".wav": 1363,
+    ".import": 24729,
+    ".glb": 348,
+    ".ogg": 7,
+    ".ttf": 12,
+    ".ttc": 1,
+    ".cfg": 1,
+    ".svg": 1,
+    ".tscn": 1,
+    ".godot": 1,
+    ".gd": 37,
+    ".uid": 37,
+    ".dat": 1,
+    ".py": 23,
+    ".ps1": 2,
+    ".js": 1,
+    ".html": 1,
+    ".css": 1
+  },
+  "literalResourceReferencesChecked": 43115,
+  "glbHeadersChecked": 348,
+  "issues": [],
+  "windowsExecutablesInProject": [
+    "legacy/WolfRogue.dat"
+  ],
+  "runtimeBehaviorValidated": false,
+  "originalPcPixelEquivalenceValidated": false,
+  "scope": "Every nonignored repository file read and SHA-256 hashed; Godot literal resource paths, JSON syntax, GLB containers and PNG headers checked. Git objects, generated caches and this audit output are excluded."
+}

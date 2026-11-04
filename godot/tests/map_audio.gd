@@ -22,10 +22,18 @@ func ensure(value, description):
 	if not value: failures += 1;push_error("FAIL " + description)
 	else: print("PASS " + description)
 
+func check_original_sounds(audio):
+	for original in [["am_bell",39936],["am_hawk",38528]]:
+		var source=audio.sounds["root/wt_snd/mapsound/"+original[0]+".wav"]
+		ensure(source.container=="user_supplied_pc_rar" and FileAccess.get_sha256(source.asset)==source.sourceSha256,"original RAR sound bytes replace the differing container version: "+original[0])
+		var stream=load(source.asset) as AudioStreamWAV
+		ensure(stream!=null and stream.mix_rate==22050 and is_equal_approx(stream.get_length(),float(original[1])/22050.0),"imported original PCM duration is retained: "+original[0])
+
 func run():
 	var game = GameDouble.new()
 	game.book = Book.new(false)
 	game.game_audio = Audio.new();game.game_audio.game = game;root.add_child(game.game_audio)
+	check_original_sounds(game.game_audio)
 	var world = Node3D.new();root.add_child(world)
 	game.player.camera = Camera3D.new();world.add_child(game.player.camera)
 	var total = 0
@@ -55,9 +63,10 @@ func run():
 	ensure(missing.all(func(row): return row.source.ends_with("am_fire_sm_loop.wav")), "missing fire-loop is never replaced by another sound")
 	ensure(world.get_child_count() == 1, "changing maps releases all old sound nodes")
 	world.queue_free();game.game_audio.queue_free()
+	game=null
 	# The audio mixer has a real-time buffer even under fixed-fps simulation.
 	await process_frame
-	OS.delay_msec(60)
+	OS.delay_msec(250)
 	await process_frame
 	print("MAP_AUDIO_QA checks=%d failures=%d" % [checks, failures])
 	quit(0 if failures == 0 else 1)

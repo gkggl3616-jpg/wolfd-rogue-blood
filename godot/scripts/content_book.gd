@@ -13,7 +13,9 @@ var loadouts = []
 var active_loadout = 0
 var selected_character = ""
 var selected_tattoos = {}
-var settings = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": true, "shadows": false, "fps": 60}
+const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": true, "invert_y": false, "shadows": false, "fps": 60}
+var settings = DEFAULT_SETTINGS.duplicate(true)
+var local_name = "Yerel oyuncu"
 var persistent = true
 var storage_path = "user://collection.json"
 var save_blocked = false
@@ -35,6 +37,8 @@ func _init(save_enabled = true, save_path = "user://collection.json"):
 		save_blocked = not result.ok or not (version is int or version is float) or (version != 1 and version != 2)
 		if save_blocked:
 			stored = {}
+		var saved_name = stored.get("localName", "Yerel oyuncu")
+		if valid_local_name(saved_name): local_name = saved_name.strip_edges()
 		var saved_owned = stored.get("owned", {})
 		if saved_owned is Dictionary:
 			for item in weapons:
@@ -53,7 +57,7 @@ func _init(save_enabled = true, save_path = "user://collection.json"):
 		if saved_tattoos is Dictionary:
 			for role in ["body", "left", "right"]:
 				var texture = saved_tattoos.get(role, "")
-				if texture is String and tattoos.any( func(row): return row.texture == texture): selected_tattoos[role] = texture
+				if texture is String and tattoo_matches_role(role,texture): selected_tattoos[role] = texture
 		var saved_settings = stored.get("settings", {})
 		if saved_settings is Dictionary:
 			for key in settings:
@@ -116,7 +120,7 @@ func select_loadout(index):
 	active_loadout = previous;slots = loadouts[previous];return false
 
 func validated_setting(key, value):
-	if key in ["directions", "shadows"]: return value if value is bool else null
+	if key in ["directions", "shadows", "invert_y"]: return value if value is bool else null
 	if not (value is int or value is float) or not is_finite(float(value)): return null
 	if key == "fps": return int(value) if value == 30 or value == 60 else null
 	if key == "sensitivity": return clampf(float(value), 0.2, 3.0)
@@ -129,6 +133,37 @@ func set_setting(key, value):
 	var previous = settings[key];settings[key] = clean
 	if save(): return true
 	settings[key] = previous;return false
+
+func default_settings():
+	return DEFAULT_SETTINGS.duplicate(true)
+
+func update_settings(candidate):
+	if not candidate is Dictionary or candidate.size() != settings.size(): return false
+	var clean = {}
+	for key in settings:
+		var value = validated_setting(key,candidate.get(key))
+		if value == null: return false
+		clean[key] = value
+	var previous = settings
+	settings = clean
+	if save(): return true
+	settings = previous
+	return false
+
+func valid_local_name(value):
+	if not value is String: return false
+	var name = value.strip_edges()
+	if name.length() < 2 or name.length() > 24: return false
+	for i in range(name.length()):
+		if name.unicode_at(i) < 32 or name.unicode_at(i) == 127: return false
+	return true
+
+func set_local_name(value):
+	if not valid_local_name(value): return false
+	var previous = local_name;local_name = value.strip_edges()
+	if save(): return true
+	local_name = previous
+	return false
 
 func choose_character(id):
 	if not characters.any( func(row): return row.id == id and row.get("available") == true): return false
@@ -151,4 +186,4 @@ func tattoo_matches_role(role, texture):
 func save():
 	if not persistent: return true
 	if save_blocked: return false
-	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattoos": selected_tattoos, "settings": settings})
+	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattoos": selected_tattoos, "settings": settings, "localName": local_name})

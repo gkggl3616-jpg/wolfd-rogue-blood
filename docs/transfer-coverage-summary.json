@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "archiveEntries": 74967,
   "declaredUnpackedBytesIncludingRepeatedTrees": 19660017682,
   "topLevelTrees": {
@@ -25,6 +25,9 @@
   "catalogueLinkedSourceEntries": 38877,
   "fullGameReady": false,
   "fileStageMeaning": "Stages require proof for the whole file; item-specific work is in mobile validation reports.",
-  "sourceSha256InventoryComplete": false,
+  "sourceSha256Entries": 74967,
+  "sourceSha256InventoryComplete": true,
+  "catalogueClaimMatchingEntries": 38877,
+  "catalogueClaimDifferingEntries": 0,
   "originalUnpublishedWindowsChangesAvailable": false
 }

@@ -1,6 +1,7 @@
 {
-  "utc": "2026-11-04T08:51:51.530928+00:00",
+  "utc": "2026-11-04T14:34:35.643888+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "runtimeCodeSha256": "45b7824ef6823d50dc7aa2c50adf4f3c731c6eec3f485dafa7ca407466f270e2",
   "passed": true,
   "steps": [
     {
@@ -53,6 +54,18 @@
     },
     {
       "name": "wall_hold",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "ui_templates",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "ui_flows",
       "passed": true,
       "exitCode": 0,
       "errors": []

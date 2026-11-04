@@ -208,7 +208,7 @@ func look(delta: Vector2):
 		return
 	var sensitivity = float(game.book.settings.sensitivity)
 	yaw -= delta.x * 0.0032 * sensitivity
-	pitch = clampf(pitch - delta.y * 0.0032 * sensitivity, -0.85, 0.65)
+	pitch = clampf(pitch - delta.y * 0.0032 * sensitivity * (-1.0 if game.book.settings.get("invert_y",false) else 1.0), -0.85, 0.65)
 	rotation.y = yaw
 	pivot.rotation.x = pitch
 
