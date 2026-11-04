@@ -198,8 +198,8 @@ func build_ui():
 	var layer = CanvasLayer.new();add_child(layer)
 	var root = Control.new();root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root.mouse_filter = Control.MOUSE_FILTER_IGNORE;layer.add_child(root)
 	hud_label = SourceArt.label("");hud_label.hide();root.add_child(hud_label)
-	message = SourceArt.label("",Vector2(900,60),20);message.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
-	message.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP);message.position=Vector2(-450,270);message.size=Vector2(900,60);root.add_child(message)
+	message = SourceArt.label("",Vector2(900,60),16);message.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	message.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP);message.position=Vector2(-450,140);message.size=Vector2(900,60);root.add_child(message)
 	source_hud=GameHud.new();source_hud.game=self;root.add_child(source_hud)
 	touch=Node2D.new();touch.set_script(TouchScript);touch.game=self;layer.add_child(touch)
 	menu_backdrop=ColorRect.new();menu_backdrop.color=Color("050709");menu_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root.add_child(menu_backdrop)
@@ -504,7 +504,8 @@ func restore_application():
 	# Returning to Android never resumes combat until the player chooses Continue.
 
 func _process(delta):
-	if is_instance_valid(menu_backdrop): menu_backdrop.visible = menu_open
+	if is_instance_valid(menu_backdrop): menu_backdrop.visible = menu_open and not running
+	if is_instance_valid(message):message.visible=running and not menu_open
 	poll_clock -= delta
 	if poll_clock <= 0 and not test_mode and not OS.has_feature("android"):
 		poll_clock = 3.0

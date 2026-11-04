@@ -53,7 +53,7 @@ func build_native():
 			var row=entry;var button=native_page.find_widget(row[0]);button.disabled=false;button.set_pressed_no_signal(ui.settings_draft.shadows==row[1]);button.pressed.connect(func():changed("shadows",row[1]))
 		var resolution=native_page.find_widget("ScreenSizeComboBox")
 		resolution.disabled=false;resolution.add_item("Otomatik",0)
-		resolution.tooltip_text="Ekran oranı korunur; kaynak 1024×768 yerleşimi esnetilmez."
+		resolution.tooltip_text="Kaynak PC arayüzü ekrana yayılır; 3B karakter oranı korunur."
 		native_page.find_widget("Gamma").tooltip_text="Özgün gamma eğrisi doğrulanmadı; sahte ayar uygulanmaz."
 	else:
 		for control in native_page.controls:

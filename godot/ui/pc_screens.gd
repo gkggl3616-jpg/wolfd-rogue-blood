@@ -16,9 +16,9 @@ func build():
 		"maps":maps()
 		"pause":pause_page()
 		"result":result_page()
-		"power":power()
+		"profile":profile()
 		"Ayarlar":ui.detail_helper=Options.new();ui.detail_helper.ui=ui;ui.detail_helper.build_native()
-		"Mağaza","Envanter","Karakterler","Dövmeler","Efektler":ui.detail_helper=Collection.new();ui.detail_helper.ui=ui;ui.detail_helper.build_native()
+		"Mağaza","Envanter","Karakterler","Dövmeler","Efektler","power":ui.detail_helper=Collection.new();ui.detail_helper.ui=ui;ui.detail_helper.build_native()
 		"admin":ui.build_admin()
 		_:service()
 
@@ -32,7 +32,7 @@ func enable(name,callback,identity=null):
 	return node
 
 func only(names):
-	for i in range(view.records.size()):view.controls[i].visible=view.records[i].name in names
+	view.show_only(names)
 
 func entry():
 	view=layout("section/title")
@@ -108,19 +108,26 @@ func room():
 func create_room():
 	view=layout("section/prideladder/prideladdercreateroomdialog",Vector2(303,145),Vector2(417,512))
 	only(["PLBackGround","PLFieldNameEditBox","PLExit","PLOK","PLCancel","ModeText","MapText"])
-	var name=view.find_widget("PLFieldNameEditBox");name.editable=true;name.text="Yerel Oda";ui.room_title=name
+	var name=view.find_widget("PLFieldNameEditBox");name.editable=true;name.text=ui.room_draft.title;ui.room_title=name
+	name.set_meta("navigation_input","room_title");name.text_changed.connect(func(value):ui.room_draft.title=value)
 	ui.room_mode=ui.mode_picker(ui.content,Vector2(380,238),Vector2(316,28))
+	for i in range(ui.room_mode.item_count):
+		if ui.room_mode.get_item_id(i)==int(ui.room_draft.mode):ui.room_mode.select(i)
 	ui.room_map=ui.map_picker(ui.content,Vector2(380,300),Vector2(316,28))
 	var fill=func():
 		ui.room_map.clear()
 		if ui.room_mode.get_selected_id()==0:ui.room_map.add_item("Yerel Eğitim",0)
 		else:
 			for map in ui.game.map_catalog.maps_for_mode(ui.room_mode.get_selected_id()):ui.room_map.add_item(map.displayName,int(map.number))
-	ui.room_mode.item_selected.connect(func(_index):fill.call());fill.call()
+		for i in range(ui.room_map.item_count):
+			if ui.room_map.get_item_id(i)==int(ui.room_draft.map):ui.room_map.select(i)
+		if ui.room_map.item_count:ui.room_draft.map=ui.room_map.get_selected_id()
+	ui.room_mode.item_selected.connect(func(_index):ui.room_draft.mode=ui.room_mode.get_selected_id();fill.call());fill.call()
+	ui.room_map.item_selected.connect(func(_index):ui.room_draft.map=ui.room_map.get_selected_id())
 	enable("PLExit",ui.go_back);enable("PLCancel",ui.go_back)
 	enable("PLOK",func():
 		if name.text.strip_edges().length()<2 or ui.room_map.item_count==0:ui.show_error("Oda adı ve moda bağlı harita gerekli.");return
-		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":"blue"};ui.navigate("room")
+		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team};ui.navigate("room")
 	)
 	ui.paragraph(ui.content,"Yerel oturum · çevrimiçi oda değildir.",Vector2(330,445),Vector2(360,70),15)
 
@@ -159,24 +166,46 @@ func result_page():
 	enable("Confirm",func():ui.navigate("lobby"))
 	ui.button(ui.content,"Yeniden oyna",Vector2(590,701),Vector2(200,30),ui.game.start_round)
 
-func power():
-	ui.trace("interface/abilityequipmentpage")
-	ui.trace("interface/charequipmentpage")
-	var item=ui.game.equipment.rules.items[0]
-	Art.sprite(ui.content,"wt_interface/inven_shop/iv_ch_top.dtx",Vector2(3,62),Vector2(256,24),Rect2(0,0,256,24))
-	Art.sprite(ui.content,item.icon,Vector2(42,150),Vector2(250,230)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	ui.text(ui.content,item.name,Vector2(370,145),Vector2(620,40),24,Art.GOLD)
-	ui.paragraph(ui.content,item.description,Vector2(370,210),Vector2(600,310),18)
-	var equipped=ui.game.equipment.has_wolf_ability()
-	ui.button(ui.content,"Güç slotuna tak" if not equipped else "Takılı · Çıkar",Vector2(620,625),Vector2(355,48),func():
-		if not ui.game.equipment.equip_power(0 if equipped else 19601):ui.show_error("Güç slotu kaydedilemedi.");return
-		ui.game.player.reset_locomotion();ui.refresh()
-	)
-	ui.paragraph(ui.content,"Havada güçlü saldırı tamamlanmadı; sayısal değerler yeni mobil uyarlamadır.",Vector2(370,535),Vector2(600,60),16)
+func profile():
+	view=layout("interface/userrecord",Vector2(299,112),Vector2(425,522))
+	only(["RecordBack","Exit","Confirm"])
+	var background=view.find_widget("RecordBack");background.texture=Art.atlas("wt_interface/record/mm_bg.dtx",Rect2(0,0,425,522));background.size=Vector2(425,522)
+	view.find_widget("Confirm").position.y=484
+	enable("Exit",ui.go_back);enable("Confirm",ui.go_back)
+	ui.trace("interface/userinfopropertypage")
+	# The supplied mm_bg has twelve 24px rows, unlike the older attribute
+	# page. Bind the values to the actual baked Turkish row labels.
+	var values=["—",ui.game.profile_name,"—","—","—","—","—","—","—",str(ui.game.wallet.gold),str(ui.game.wallet.cash),"—"]
+	for i in range(values.size()):ui.text(ui.content,values[i],Vector2(478,183+i*24),Vector2(228,22),12)
+	ui.text(ui.content,"Yerel profil · çevrimiçi kayıt alınmadı",Vector2(312,478),Vector2(390,22),11)
+
+func friends():
+	var at=Vector2(297,197)
+	Art.sprite(ui.content,"wt_interface/messenger/ms_bg.dtx",at,Vector2(430,374),Rect2(0,0,430,374))
+	view=layout("interface/gamebuddy",at,Vector2(430,374))
+	for i in range(3):
+		var node=Art.atlas_button(ui.content,"wt_interface/messenger/ms_tab.dtx",[Rect2(i*84,0,84,27),Rect2(i*84,27,84,27),Rect2(i*84,54,84,27)],at+Vector2(9+i*84,33),Vector2(84,27),func():ui.show_error("Çevrimiçi liste alınamadı."))
+		node.toggle_mode=true;node.set_pressed_no_signal(i==0)
+	var close=layout("interface/userrecord",at,Vector2(430,374));close.show_only(["Exit"])
+	close.find_widget("Exit").position=Vector2(405,8);close.bind_action("Exit",ui.go_back)
+	ui.paragraph(ui.content,"Çevrimiçi hizmet bağlı değil.\nListe alınamadı.",at+Vector2(35,150),Vector2(360,60),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 
 func service():
+	if ui.page=="friends":friends();return
+	if ui.page=="clan":
+		ui.trace("section/pride")
+		ui.confirm("KLAN","Çevrimiçi klan bilgisi alınamadı.",ui.go_back);return
 	var id=ui.SERVICE_LAYOUTS.get(ui.page,"section/messagebox")
-	view=layout(id)
+	if ui.page=="missions":
+		view=layout("interface/mission/missionpopup")
+		only(["backGround","buttonGroupBox","missionButton","bingoButton","okButton"])
+		enable("okButton",ui.go_back)
+		view.find_widget("missionButton").set_pressed_no_signal(true)
+	view=layout(id,Vector2(190,83) if ui.page=="gifts" else Vector2.ZERO,Vector2(643,625) if ui.page=="gifts" else Vector2(1024,768))
+	if ui.page=="events":view.find_widget("TimeStandard").hide()
 	for control in view.controls:
 		if control is BaseButton:control.disabled=true
-	ui.confirm(ui.NAMES.get(ui.page,ui.page),"Gerçek hesap / hizmet bağlantısı yok. Bu ekranda veri veya ödül sonucu üretilmez.",ui.go_back)
+		if control is ItemList:control.clear()
+		if control.get_meta("source_record").adapter=="digits":control.hide()
+	for name in ["ExitButton","XClose","CloseButton","Exit","Confirm"]:enable(name,ui.go_back)
+	ui.paragraph(ui.content,"Çevrimiçi hizmet bağlı değil.\nKayıtlar alınamadı.",Vector2(370,294),Vector2(340,65),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER

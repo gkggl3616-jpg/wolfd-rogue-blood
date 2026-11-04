@@ -1,0 +1,98 @@
+{
+  "references": [
+    {
+      "url": "https://vt.tiktok.com/ZSpNxE6at/",
+      "resolved": "https://www.tiktok.com/@fuatbaba_tt/video/7074630631350750466",
+      "videoId": "7074630631350750466",
+      "durationSeconds": 48,
+      "sha256": "591c3c80a0b50124d837665b9b9399cb3ecf9d8312118e51878d5726fa21321c",
+      "observed": "Classic inventory/loadout and power/tattoo views"
+    },
+    {
+      "url": "https://vt.tiktok.com/ZSpNxj93C/",
+      "resolved": "https://www.tiktok.com/@wolfteamlabaglanhayata/video/7700949820982250772",
+      "videoId": "7700949820982250772",
+      "durationSeconds": 48,
+      "sha256": "e5b406c503557751a221017a45b1cc6f91c36a57d794c52a8926af2f3120ce85",
+      "observed": "Gameplay score/timer HUD"
+    },
+    {
+      "url": "https://vt.tiktok.com/ZSpNxfhbw/",
+      "resolved": "https://www.tiktok.com/@batudiolar/video/7486844637215198472",
+      "videoId": "7486844637215198472",
+      "durationSeconds": 27,
+      "sha256": "05a93fcb1905640df12ac630acb4cb10cda28bdbcc5ca7b66122654894c21b29",
+      "observed": "Reward presentation and inventory context"
+    },
+    {
+      "url": "https://vt.tiktok.com/ZSpNxa5rP/",
+      "resolved": "https://www.tiktok.com/@furkansinirdere23/video/7676791696616688916",
+      "videoId": "7676791696616688916",
+      "durationSeconds": 86,
+      "sha256": "9bf664f04716024945bf6cf903e88ac4cc9bbf8641fdac442e691cbe77747b08",
+      "observed": "Modern inventory, horizontal loadouts and lower item information"
+    },
+    {
+      "url": "https://vt.tiktok.com/ZSpNxEPEo/",
+      "resolved": "https://www.tiktok.com/@yesbbswt/video/7662699349788396820",
+      "videoId": "7662699349788396820",
+      "durationSeconds": 72,
+      "sha256": "768fd10db95c5900ff0b56c833bd54665cca0971baa7cee86ea6070cf55dd156",
+      "observed": "Modern profile and character-card context"
+    }
+  ],
+  "implementationBasis": "Shared layout across the supplied clips, using the provided PC client art. Clips cover different UI generations.",
+  "coordinates": {
+    "baseCanvas": [
+      1024,
+      768
+    ],
+    "viewportMapping": "independent_x_y_axes",
+    "headerHeight": 58,
+    "loadoutTabs": [
+      8,
+      123,
+      340,
+      27
+    ],
+    "activeWeapons": [
+      117,
+      154,
+      210,
+      585
+    ],
+    "inventoryGrid": [
+      366,
+      154,
+      630,
+      351
+    ],
+    "mainCategoriesY": 90,
+    "subcategoriesY": 122,
+    "selectedItem": [
+      366,
+      540,
+      290,
+      164
+    ],
+    "description": [
+      664,
+      540,
+      348,
+      198
+    ]
+  },
+  "acceptance": {
+    "pixelPerfect": false,
+    "allScreensCompared": false,
+    "physicalAndroidDeviceTested": false,
+    "userApproved": false
+  },
+  "unresolved": [
+    "The videos include classic and modern interface eras; the supplied client mixes attribute and atlas revisions.",
+    "Font face 51 is missing; regular system fallback is explicit.",
+    "Ten character portraits are actual-model previews; original 2D mapping remains unproved.",
+    "Full PC match modes, authoritative account/inventory services and device QA remain incomplete.",
+    "The reward/lucky-box flow in reference 3 and the complete modern character-card flow in reference 5 are not implemented."
+  ]
+}

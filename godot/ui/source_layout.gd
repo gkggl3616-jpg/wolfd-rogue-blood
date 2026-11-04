@@ -105,6 +105,15 @@ func configure(source_id, dimensions = Vector2(1024,768)):
 			node.button_group=group.get_meta("radio_group")
 	return not records.is_empty()
 
+func show_only(names):
+	for i in range(records.size()):controls[i].visible=records[i].name in names
+	# A visible child does not render through a hidden radio group / image parent.
+	for node in controls:
+		if not node.visible:continue
+		var ancestor=node.get_parent()
+		while ancestor!=self and ancestor is Control:
+			ancestor.show();ancestor=ancestor.get_parent()
+
 func create_widget(record):
 	var kind = str(record.type).to_lower();var adapter = record.get("adapter","")
 	var node: Control
@@ -117,6 +126,7 @@ func create_widget(record):
 			node.texture = atlas(source,rect(field(record,"spriterect",[0,0,dimensions.x,dimensions.y])))
 		"text":
 			node = SourceLabel.new();node.text = caption(record);node.clip_text = true
+			if textures_enabled:node.add_theme_font_override("font",Art.font(int(field(record,"fontfaceindex",51))))
 			var area = rect(field(record,"fontrect",[]));at = area.position;dimensions = area.size
 			node.add_theme_font_size_override("font_size",int(field(record,"fontsize",14)))
 			var color = field(record,"captioncolor",[255,255,255]);node.add_theme_color_override("font_color",Color(float(color[0])/255,float(color[1])/255,float(color[2])/255))
@@ -137,7 +147,7 @@ func create_widget(record):
 				var selected = atlas(source,rect(field(record,"buttonselectrect",[])))
 				if selected != null: node.texture_pressed = selected
 			if not caption(record).is_empty():
-				var text = Art.label(caption(record),Vector2(180,maxf(24,dimensions.y)),14) if textures_enabled else Label.new()
+				var text = Art.label(caption(record),Vector2(180,maxf(24,dimensions.y)),int(field(record,"fontsize",12))) if textures_enabled else Label.new()
 				text.position.x = dimensions.x + 5;text.mouse_filter = Control.MOUSE_FILTER_IGNORE;node.add_child(text)
 		"input":
 			node = SourceInput.new();node.max_length = int(field(record,"editboxmaxlength",64));node.editable = false

@@ -30,6 +30,7 @@ var offset = 0
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
+var room_draft = {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
 var mode_choice = 0
 var map_choice = 0
 var preview_view: SubViewport
@@ -59,20 +60,30 @@ func refresh():
 	pending_refresh = false
 	if not is_inside_tree() or is_queued_for_deletion():return
 	building = true
+	var focused=get_viewport().gui_get_focus_owner()
+	var input_id="";var caret=0
+	if focused is LineEdit and is_ancestor_of(focused):
+		input_id=focused.get_meta("navigation_input","");caret=focused.caret_column
+	if page=="create_room" and is_instance_valid(room_title) and room_title.is_inside_tree():room_draft.title=room_title.text
 	for child in get_children(): remove_child(child);child.queue_free()
-	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null
+	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null
 	var dimensions = get_viewport_rect().size
-	var factor = minf(dimensions.y / 768.0, dimensions.x / 1024.0)
 	virtual_width = 1024.0
-	var shade = ColorRect.new();shade.color = Color("050709");shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(shade)
-	canvas = Control.new();canvas.size = Vector2(virtual_width,768);canvas.scale = Vector2.ONE * factor;canvas.position = (dimensions-Vector2(1024,768)*factor)*0.5;add_child(canvas)
-	background("wt_interface/lobby/lb_bg.dtx" if page in ["lobby","room","create_room","maps"] else "wt_interface/inven_shop/is_bg.dtx", 607 if page in ["lobby","room","create_room","maps"] else 352)
+	var overlay=game.running and page in ["pause","Ayarlar","maps"]
+	var shade = ColorRect.new();shade.color = Color(0,0,0,0.45) if overlay else Color("050709");shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(shade)
+	# The supplied PC recordings fill both 4:3 and 16:9 displays. Legacy 2D
+	# coordinates stretch on each axis; a centered 4:3 canvas adds false gutters.
+	canvas = Control.new();canvas.size = Vector2(virtual_width,768);canvas.scale = dimensions/Vector2(1024,768);add_child(canvas)
+	if not overlay:background("wt_interface/lobby/lb_bg.dtx" if page in ["lobby","room","create_room","maps"] else "wt_interface/inven_shop/is_bg.dtx", 607 if page in ["lobby","room","create_room","maps"] else 352)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
-	if page not in ["entry","pause","Ayarlar","create_room"]: build_header()
-	wallet_label = text(canvas,"",Vector2(16,746),Vector2(virtual_width-290,22),16)
-	text(canvas,"ÇEVRİMDIŞI · YEREL OTURUM",Vector2(virtual_width-280,746),Vector2(264,22),14,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	if page not in ["entry","pause"] and not (page=="Ayarlar" and overlay):build_header()
+	text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
+	text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	building = false
+	if input_id!="":
+		for node in content.find_children("*","LineEdit",true,false):
+			if node.get_meta("navigation_input","")==input_id:node.grab_focus();node.caret_column=mini(caret,node.text.length());break
 	if not last_error.is_empty(): show_error(last_error)
 
 func trace(source):
@@ -84,10 +95,10 @@ func background(source, split):
 	Art.sprite(canvas,source,Vector2.ZERO,Vector2(split+extra,768),Rect2(0,0,split,768))
 	Art.sprite(canvas,source,Vector2(split+extra,0),Vector2(1024-split,768),Rect2(split,0,1024-split,768))
 
-func text(parent,value,at,dimensions,font_size=20,color=Color.WHITE):
+func text(parent,value,at,dimensions,font_size=12,color=Color.WHITE):
 	var node = Art.label(value,dimensions,font_size,color);node.position = at;parent.add_child(node);return node
 
-func paragraph(parent,value,at,dimensions,font_size=20):
+func paragraph(parent,value,at,dimensions,font_size=12):
 	var label = text(parent,value,at,dimensions,font_size);label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	return label
 
@@ -100,18 +111,21 @@ func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 	return node
 
 func build_header():
-	# The source background contains the old product mark only in this rectangle.
-	var mark = ColorRect.new();mark.position = Vector2.ZERO;mark.size = Vector2(246,58);mark.color = Color("242628");canvas.add_child(mark)
-	text(canvas,"WOLF ROGUE BLOOD",Vector2(14,14),Vector2(228,32),20,Art.GOLD)
-	var entries = [["Lobi","lobby"],["Envanter","Envanter"],["Karakter","Karakterler"],["Mağaza","Mağaza"],["Ayarlar","Ayarlar"],["Diğer",""]]
-	var width = minf(132,(virtual_width-368)/float(entries.size()))
+	# Compact account strip and 32px source icon states, as in references 1/4/5.
+	var mark=ColorRect.new();mark.color=Color("222628");mark.size=Vector2(1024,58);mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(mark)
+	text(canvas,game.profile_name,Vector2(12,10),Vector2(242,19),13)
+	text(canvas,"YEREL PROFİL",Vector2(12,31),Vector2(242,17),10,Color("9ca9ab"))
+	wallet_label=text(canvas,"",Vector2(265,5),Vector2(280,50),11,Color("c1c6c8"))
+	var entries = [["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Güç","power","wc"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Karakter","Karakterler","charactercard"],["Diğer","","event"],["Lobi","lobby","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
 	for i in range(entries.size()):
 		var entry = entries[i]
-		button(canvas,entry[0],Vector2(250+i*width,4),Vector2(width-4,50),func():
+		var node=Art.icon_button(canvas,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(638+i*34,8),entry[0],func():
 			if entry[1]=="":choose_section()
+			elif entry[1]=="back":go_back()
 			else:navigate(entry[1])
 		)
-	button(canvas,"Geri",Vector2(virtual_width-110,4),Vector2(102,50),go_back)
+		links[entry[0]]=node
+		if entry[1]==page:node.modulate=Color("ffe36a")
 
 func choose_section():
 	confirm("Menüler","",func():pass)
@@ -121,7 +135,7 @@ func choose_section():
 		button(modal,entry[0],Vector2(296+(i%2)*230,292+int(i/2)*38),Vector2(200,30),func():close_modal();navigate(entry[1]))
 
 func _process(_delta):
-	if is_instance_valid(wallet_label): wallet_label.text = "%s     Nakit %d     KP %d     Altın %d     GP %d" % [game.profile_name,game.wallet.cash,game.wallet.kp,game.wallet.gold,game.wallet.gp]
+	if is_instance_valid(wallet_label): wallet_label.text = "ALTIN:  %d     KP:  %d\nNAKİT:  %d     GP:  %d\nÇevrimiçi hesap bağlı değil" % [game.wallet.gold,game.wallet.kp,game.wallet.cash,game.wallet.gp]
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 
 func navigate(next,remember=true,back_step=false):
@@ -134,6 +148,7 @@ func navigate(next,remember=true,back_step=false):
 	if back_step and not history.is_empty(): history.pop_back()
 	if remember and page != next: history.append(page)
 	if next == "Ayarlar" and page != "Ayarlar": settings_draft = game.book.settings.duplicate(true);settings_dirty = false
+	if next=="create_room" and page!="create_room":room_draft=game.local_room.duplicate(true) if not game.local_room.is_empty() else {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
 	page = next;offset = 0;selected = {};search_query = "";filter_id = "all";last_error = ""
 	refresh()
 
@@ -158,7 +173,9 @@ func close_menu():
 func show_error(value):
 	last_error = str(value)
 	if is_instance_valid(notice): notice.queue_free()
-	notice = paragraph(canvas,last_error,Vector2(virtual_width*0.2,678),Vector2(virtual_width*0.6,60),19)
+	notice = text(canvas,last_error,Vector2(10,746),Vector2(1004,20),11)
+	notice.tooltip_text=last_error
+	var plate=StyleBoxFlat.new();plate.bg_color=Color("111719");notice.add_theme_stylebox_override("normal",plate)
 	notice.add_theme_color_override("font_color",Color("ffc278"));notice.z_index = 50
 
 func close_modal():
@@ -194,9 +211,9 @@ func clear_preview():
 
 func build_preview(at,dimensions,entry):
 	clear_preview()
-	var container=SubViewportContainer.new();container.position=at;container.size=dimensions;container.stretch=true;content.add_child(container)
+	var container=SubViewportContainer.new();container.position=at;container.size=dimensions*canvas.scale;container.scale=Vector2.ONE/canvas.scale;container.stretch=true;content.add_child(container)
 	preview_container = container
-	preview_view=SubViewport.new();preview_view.size=Vector2i(dimensions);preview_view.own_world_3d=true;container.add_child(preview_view)
+	preview_view=SubViewport.new();preview_view.size=Vector2i(dimensions*canvas.scale);preview_view.own_world_3d=true;container.add_child(preview_view)
 	preview_root=Node3D.new();preview_view.add_child(preview_root)
 	var environment=WorldEnvironment.new();var settings=Environment.new();settings.background_mode=Environment.BG_COLOR;settings.background_color=Color("0c1418");settings.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;settings.ambient_light_energy=0.7;environment.environment=settings;preview_root.add_child(environment)
 	var light=DirectionalLight3D.new();light.rotation_degrees=Vector3(-30,-25,0);light.light_energy=1.6;preview_root.add_child(light)

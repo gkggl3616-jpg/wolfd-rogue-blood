@@ -10,7 +10,7 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 
 ## Bu devam çalışmasında uygulananlar
 
-- Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları oranı korunarak kullanılır. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
+- Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
 - Parmak sahipliği olan çoklu dokunma: hareket, kamera ve düğmeler birbirine geçmez. Aynı düğmeye basan ikinci parmak, birinci bırakıldığında eylemi kaybetmez. Menü/HUD dokunuşları kamera veya ateşe dönüşmez.
 - Uygulama arka plandayken sahne, çatışma ve şarjör süresi durur. Dönüşte oyuncu **Devam et** seçmeden çatışma başlamaz.
 - Müzik, ortam/efekt, silah ve menü sesi ayrı kanallarda ayarlanır. Eski ana ses tercihi korunur.

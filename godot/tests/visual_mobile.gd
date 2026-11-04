@@ -19,7 +19,7 @@ func capture(name):
 	var details={"name": name, "path": path, "width": pixels.get_width(), "height": pixels.get_height(), "saved": error == OK}
 	var ui=game.library_panel if is_instance_valid(game.library_panel) else game.pc_panel
 	if is_instance_valid(ui):
-		details["sourceLayouts"]=ui.source_layouts.duplicate();details["nativeCanvasPosition"]=[ui.canvas.position.x,ui.canvas.position.y];details["nativeCanvasScale"]=ui.canvas.scale.x
+		details["sourceLayouts"]=ui.source_layouts.duplicate();details["nativeCanvasPosition"]=[ui.canvas.position.x,ui.canvas.position.y];details["nativeCanvasScale"]=[ui.canvas.scale.x,ui.canvas.scale.y]
 	captures.append(details)
 	print("VISUAL_CAPTURE ",path)
 func run():
@@ -29,6 +29,9 @@ func run():
 	game.show_home();await capture("lobby-1280")
 	game.pc_panel.choose_section();await capture("extra-sections-1280");game.pc_panel.close_modal()
 	game.show_library("Envanter");await capture("inventory-1280")
+	root.size=Vector2i(1024,768);await capture("inventory-native-1024")
+	root.size=Vector2i(1920,1080);await capture("inventory-1920")
+	root.size=Vector2i(1280,720)
 	for page in ["Mağaza","Karakterler","Dövmeler","Efektler","power"]:
 		game.library_panel.navigate(page);await capture({"Mağaza":"shop","Karakterler":"characters","Dövmeler":"tattoos","Efektler":"effects","power":"power"}[page]+"-1280")
 	game.library_panel.page = "Ayarlar";game.library_panel.refresh();await capture("settings-1280")
@@ -37,6 +40,10 @@ func run():
 	game.library_panel.detail_helper.changed("invert_y",true);game.library_panel.go_back();await capture("settings-unsaved-1280")
 	game.library_panel.close_modal();game.library_panel.settings_dirty=false
 	game.library_panel.close_menu();await frames(2)
+	game.show_home()
+	for page in ["profile","gifts","events","missions","friends","clan","ranking"]:
+		game.pc_panel.navigate(page);await capture(page+"-1280")
+		if game.pc_panel.modal!=null:game.pc_panel.close_modal()
 	game.show_home();game.pc_panel.navigate("create_room");await capture("create-room-1280")
 	game.local_room={"title":"Yerel Eğitim","mode":0,"map":0,"team":"blue"};game.pc_panel.navigate("room");await capture("room-1280")
 	game.start_round();game.spawn_clock = 1000;await frames(25)

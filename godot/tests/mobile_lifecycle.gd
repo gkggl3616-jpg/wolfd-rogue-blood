@@ -15,8 +15,13 @@ func run():
 	var game = load("res://main.tscn").instantiate()
 	game.test_mode = true;root.add_child(game)
 	await frames(3)
+	ensure(not quit_on_go_back,"Android Back is handled by game navigation instead of quitting the application")
 	game.start_round();game.spawn_clock = 1000
 	await frames(25)
+	game.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST);await frames(2)
+	ensure(game.running and game.menu_open and game.pc_panel.page=="pause","Android Back opens the source pause menu during a round")
+	game.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST);await frames(2)
+	ensure(game.running and not game.menu_open,"Android Back from the pause menu resumes without quitting")
 	game.ammo = 11;game.reserve = 49
 	var first = game.current_weapon_id
 	game.equip_slot("pistol");game.ammo = 4;game.reserve = 7
@@ -56,10 +61,12 @@ func run():
 	await frames(2)
 	ensure(not game.get_children().any(func(node): return node.get_script() == game.GrenadeScript) and game.transient_effects.get_child_count() == 0, "round transition removes previous projectiles and effects")
 	game.show_library("Ayarlar");await frames(3)
-	ensure(game.menu_open and game.menu_backdrop.visible, "menu backdrop covers the entire viewport")
+	var veil=game.library_panel.get_child(0)
+	ensure(game.menu_open and veil.visible and veil.color.a<1 and not game.menu_backdrop.visible, "in-game menu uses a translucent full-screen veil over the rendered scene")
 	for size in [Vector2i(1280, 720), Vector2i(1920, 1080), Vector2i(1024, 768)]:
 		root.size = size;await frames(3)
-		ensure(game.menu_backdrop.get_global_rect().encloses(Rect2(Vector2.ZERO, game.get_viewport().get_visible_rect().size)), "menu covers viewport %s" % str(size))
+		veil=game.library_panel.get_child(0)
+		ensure(veil.mouse_filter==Control.MOUSE_FILTER_STOP and veil.get_global_rect().encloses(Rect2(Vector2.ZERO, game.get_viewport().get_visible_rect().size)), "menu veil blocks gameplay input across viewport %s" % str(size))
 	game.queue_free();await frames(3)
 	print("MOBILE_LIFECYCLE_QA checks=%d failures=%d" % [checks, failures])
 	quit(0 if failures == 0 else 1)

@@ -1,4 +1,5 @@
 extends Node2D
+const Art=preload("res://ui/source_theme.gd")
 
 # A touch belongs to exactly one target until release. Visual targets deliberately
 # do not use TouchScreenButton's independent global input handling.
@@ -27,6 +28,7 @@ func _ready():
 		text.size = Vector2(76, 24)
 		text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		text.add_theme_font_size_override("font_size", 12)
+		text.add_theme_font_override("font",Art.font())
 		text.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		button.add_child(text)
 		buttons.append(button)
@@ -42,7 +44,7 @@ func can_control():
 func resize():
 	reset()
 	last_size = get_viewport_rect().size
-	center = Vector2(115, last_size.y - 132)
+	center = Vector2(115, last_size.y - 205)
 	var locations = [Vector2(-108,-132), Vector2(-195,-205), Vector2(-195,-64), Vector2(-280,-132), Vector2(-105,-265), Vector2(225,-95), Vector2(-280,-235)]
 	for i in range(7):
 		buttons[i].position = Vector2(last_size.x, last_size.y) + locations[i] if i != 5 else Vector2(265, last_size.y - 205)
@@ -132,14 +134,14 @@ func update_stick(point):
 
 func _draw():
 	if not direction_buttons:
-		draw_circle(center, 76, Color(0.1,0.14,0.2,0.6))
+		draw_circle(center, 76, Color(0.04,0.05,0.06,0.3))
 		draw_arc(center, 76, 0, TAU, 64, Color(0.7,0.8,0.9,0.4), 2)
 		draw_circle(center + thumb, 28, Color(0.7,0.8,0.9,0.4))
 	for button in buttons:
 		if not button.visible:
 			continue
 		var radius = 45 if button.action == "fire" else 34
-		var color = Color(0.68,0.2,0.18,0.65) if button.action == "fire" else Color(0.14,0.2,0.28,0.75)
+		var color = Color(0.08,0.09,0.10,0.42) if button.action == "fire" else Color(0.04,0.05,0.06,0.30)
 		if Input.is_action_pressed(button.action) or (button.action == "sprint" and game.player.normal_run_toggled):
 			color = color.lightened(0.35)
 		draw_circle(button.position, radius, color)
