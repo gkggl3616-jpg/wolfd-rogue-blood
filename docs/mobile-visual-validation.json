@@ -81,7 +81,53 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "941d128892d465783eb2d9f0eefa5cb7c0f09bf069596b8772d66b80258edfe6"
+      "sha256": "e9f613d2747f8ba84a0c9df4d4fb82fe247797073c8c7ebcb435f7846ce00201"
+    },
+    {
+      "height": 720,
+      "name": "weapon-properties-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/weapon-properties-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "f7a5cc86b9addd722e4e7e079e8636fcc4e7f87c59d8f4f77090bcf394c7570b"
+    },
+    {
+      "height": 720,
+      "name": "secondary-slot-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/secondary-slot-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "9ce94525209351e6646cad3b1122448a5418db9fbf57dfef9c431220a97cbfd6"
     },
     {
       "height": 768,
@@ -104,7 +150,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1024,
-      "sha256": "c2657a92e569bc857bc8b52c911729a87298792f1f1e2b7618cefa3f54b5d3cd"
+      "sha256": "7432c194310104a45a67104ace144e5aa911b2a4b353dfa2956d5abfaa25abb2"
     },
     {
       "height": 1080,
@@ -127,7 +173,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1920,
-      "sha256": "f0e4960c5c20cd17c7959a3fb0f5ef2c25e19c37eb5c564c5c3e1b183ca337bf"
+      "sha256": "5298e4b25676cc4de17e2636bd263a04d4bb02d1d28dab8efc2a5d8ed0b8eef8"
     },
     {
       "height": 720,
@@ -150,7 +196,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "1e2d3c91d36139acb6ec233529426f10d4f5f492dce8587dba9503541dc8f0e9"
+      "sha256": "f74694a23cc1b59a7b4099e9e96c07b9fb7584665dad4caff36c1b22e8152930"
     },
     {
       "height": 720,
@@ -174,7 +220,7 @@
         "interface/charequipmentpage"
       ],
       "width": 1280,
-      "sha256": "dd603ce83cb7f754c13e253bd85760c8b17617838334c259679f24481794eb29"
+      "sha256": "e23f49347ef6621357cf4b8657b2e7edebb92c6a8ca29da8236050874f7380a7"
     },
     {
       "height": 720,
@@ -197,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "77c897056a79c851f0beb51651d2f9da2f31f63b5a7b51e3f03818b1384a4ce8"
+      "sha256": "ba7c7c604e2405387ea947576b3cdd5b91a6fffa2afb16b81206462d93b9f6cb"
     },
     {
       "height": 720,
@@ -244,7 +290,28 @@
         "interface/abilityequipmentpage"
       ],
       "width": 1280,
-      "sha256": "ad6da1dd5ee6f997af061a16ff93b6a928ef348816442de1b380b61164ff5661"
+      "sha256": "201864683eb39e13ece0f3ff4aba40f5aad52d4455937d9e3d4bc47cb4cac850"
+    },
+    {
+      "height": 720,
+      "name": "cards-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/cards-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/card/cardsection",
+        "interface/card/carditem",
+        "interface/card/cardpropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "a6ff9014a6a0283ee621c94ceac9e713c77b0131a130ce0a2178e7f0c69f7916"
     },
     {
       "height": 720,
@@ -533,7 +600,7 @@
       "path": "docs/review/pc-native/human-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e09ba83c28fec0ccbf97b1a2e092b24014fa76c75110978ce502353c824bdcb3"
+      "sha256": "39ce5c25c89a6200a2184c649d5b42f7d6ace33390750c52cf8472419239202e"
     },
     {
       "height": 720,
@@ -552,7 +619,7 @@
         "interface/gamemenu"
       ],
       "width": 1280,
-      "sha256": "d23923f42abb7e171f4ce68ffaa728f81d14ac73f1802fb429feae9a1b7ffa52"
+      "sha256": "82717fa08d182c566f5e6224bd4102bb92e40cbd40b65691d3f405010673f6df"
     },
     {
       "height": 720,
@@ -560,7 +627,7 @@
       "path": "docs/review/pc-native/wolf-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3660e845ec3510fdf87de54c1889ead65d9997c1ff606d855b9eac366dd1716b"
+      "sha256": "420f37f12c615e9bacd3e844a5afb0db1f7c8a7890e241932050a9311790f81f"
     },
     {
       "height": 720,
@@ -568,7 +635,15 @@
       "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a189e2a117d19b385f43c16f0f00bdce1ccd5cabc6c415d9525246665b64c377"
+      "sha256": "10037fdb1903ab6a5aff27b90658b792b2e899c3148323f1dd7a9d7225cc2d0a"
+    },
+    {
+      "height": 720,
+      "name": "airborne-attack-1280",
+      "path": "docs/review/pc-native/airborne-attack-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "08e9ef95335f075b27f549e3c1d7353480db98001faa53fdcfdc2d946f09ff59"
     },
     {
       "height": 720,
@@ -576,7 +651,7 @@
       "path": "docs/review/pc-native/container-ship-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b70c83765818db61158062d4fd4141327f9f490b7c3714ad2bd710c0b37a5c36"
+      "sha256": "8a28e6496cb7bf2fb0f4efa32eb531f50752224b39bd8d8d9a38ba905a97edda"
     },
     {
       "height": 1080,
@@ -640,12 +715,12 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "utc": "2026-11-04T19:19:58.751155+00:00",
-  "runtimeCodeSha256": "2ea01e57db1919a7c2a2ce63ab9e2f001231c951ff2f84f94989968561392921",
+  "utc": "2026-11-05T04:40:20.977028+00:00",
+  "runtimeCodeSha256": "bd9739a658abe951e4d2eb8d83578c0e6e7b5100f6e0788d01bb0e9c84ed1f4e",
   "referenceManifest": "docs/pc-video-references.json",
   "userApproved": false,
   "allReferenceScreensMatched": false,
   "fullOriginalGamePort": false,
   "pixelPerfect": false,
-  "scope": "Software OpenGL render captures of the reference-guided UI revision. Source bindings, selected geometry, navigation and overflow reviewed; not a full PC comparison or Android device acceptance."
+  "scope": "37 software OpenGL captures; includes actual second-main equipment, read-only source card art, source text/local tuning and airborne attack. Not complete PC pixel equality or Android device acceptance."
 }

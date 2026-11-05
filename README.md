@@ -10,7 +10,7 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 
 ## Bu devam çalışmasında uygulananlar
 
-- Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
+- Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. İkinci ana silah, bağımsız cephane geçişi ve 331 kaynak kart yüzü önizlemesi eklendi. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
 - Parmak sahipliği olan çoklu dokunma: hareket, kamera ve düğmeler birbirine geçmez. Aynı düğmeye basan ikinci parmak, birinci bırakıldığında eylemi kaybetmez. Menü/HUD dokunuşları kamera veya ateşe dönüşmez.
 - Uygulama arka plandayken sahne, çatışma ve şarjör süresi durur. Dönüşte oyuncu **Devam et** seçmeden çatışma başlamaz.
 - Müzik, ortam/efekt, silah ve menü sesi ayrı kanallarda ayarlanır. Eski ana ses tercihi korunur.
@@ -80,3 +80,5 @@ Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İnd
 - Kullanıcının **en az 3 GB gerçek içerik** koşulu sağlanmış değildir. Boyut için dolgu, kopya veya Windows ikilisi eklenmez. Yeni bir tam APK indirme bağlantısı yoktur.
 
 Yerel yönetici paneli korunur: `python server.py`, ardından `http://127.0.0.1:8765`. Bu yerel geliştirme sistemi, üretim hesabı veya çevrimiçi sunucu değildir; yinelenen işlem kimliği tekrar ödeme yapmaz.
+
+Son devam: [havada güçlü saldırı, kayıt geçişleri ve arayüz doğrulaması](docs/DEVAM_KONTROLU.md).

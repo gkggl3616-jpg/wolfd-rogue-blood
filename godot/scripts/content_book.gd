@@ -26,6 +26,9 @@ func _init(save_enabled = true, save_path = "user://collection.json"):
 	var data = read_json("res://assets/library/weapons.json")
 	weapons = data.get("items", [])
 	models = data.get("models", {})
+	var source_text=read_json("res://assets/ui/weapon-text.json").get("items",{})
+	for item in weapons:
+		if source_text.has(item.id):item["description"]=source_text[item.id].description;item["sourceDetails"]=source_text[item.id]
 	characters = read_json("res://assets/library/characters.json").get("characters", [])
 	var visuals = read_json("res://assets/library/visuals.json")
 	tattoos = visuals.get("tattoos", [])
@@ -74,6 +77,9 @@ func _init(save_enabled = true, save_path = "user://collection.json"):
 		for slot in defaults:
 			var entry = weapon(preset.get(slot, ""))
 			if entry.is_empty() or entry.get("engineImported") != true or not owned.get(entry.id, false) or slot_for(entry.category) != slot: preset[slot] = defaults[slot]
+	for preset in loadouts:
+		var extra=weapon(preset.get("secondary_primary",""))
+		if extra.is_empty() or extra.get("available")!=true or not owned.get(extra.id,false) or slot_for(extra.category)!="primary":preset.erase("secondary_primary")
 	slots = loadouts[active_loadout]
 
 func read_json(path):
@@ -106,12 +112,17 @@ func acquire_all():
 	if save(): return true
 	owned.clear();owned.merge(previous);return false
 
-func equip(id):
+func equip(id,target_slot=""):
 	var item = weapon(id)
 	if item.is_empty() or not owned.get(id, false) or item.get("engineImported") != true: return false
-	var slot = slot_for(item.category); var previous = slots.get(slot, "");slots[slot] = id
+	var natural_slot=slot_for(item.category)
+	var slot=target_slot if target_slot!="" else natural_slot
+	if slot!=natural_slot and not (natural_slot=="primary" and slot=="secondary_primary"):return false
+	var previous=slots.get(slot,null);slots[slot]=id
 	if save(): return true
-	slots[slot] = previous;return false
+	if previous==null:slots.erase(slot)
+	else:slots[slot]=previous
+	return false
 
 func select_loadout(index):
 	if index < 0 or index >= loadouts.size(): return false

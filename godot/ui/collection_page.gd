@@ -16,6 +16,7 @@ var effect_fps = 15.0
 var native_mode = true
 var loadout_tabs = []
 var equipped_cards = []
+var loadout_cards = {}
 var category_tabs = []
 var filter_tabs = []
 var info_tab = "description"
@@ -54,7 +55,7 @@ func build_native():
 	grid=Control.new();grid.position=Vector2(366,154);grid.size=Vector2(630,351);ui.content.add_child(grid)
 	page_label=ui.text(ui.content,"",Vector2(788,509),Vector2(208,20),11);page_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 	ui.button(ui.content,"▲",Vector2(999,154),Vector2(20,24),func():ui.offset=maxi(0,ui.offset-9);refresh_grid())
-	ui.button(ui.content,"▼",Vector2(999,480),Vector2(20,24),func():ui.offset=mini(maxi(0,entries.size()-1),ui.offset+9);refresh_grid())
+	ui.button(ui.content,"▼",Vector2(999,480),Vector2(20,24),func():ui.offset=mini(int((maxi(1,entries.size())-1)/9)*9,ui.offset+9);refresh_grid())
 	details=Control.new();details.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(details)
 	if ui.page=="Envanter":build_loadouts()
 	refresh_grid()
@@ -121,11 +122,25 @@ func build_loadouts():
 		ui.text(ui.content,slot[1],Vector2(8,at.y+13),Vector2(102,18),11,Color("94a2a6"))
 		var entry=ui.game.book.weapon(ui.game.book.slots.get(slot[0],""))
 		if entry.is_empty():
-			Art.sprite(ui.content,ROOT+"is_inven_weponbar_none.dtx",at,Vector2(209,115),Rect2(0,0,210,115))
+			if slot[0]=="secondary_primary":
+				var empty=card(ui.content,{"name":"Boş yedek ana silah","icon":""},at,ui.target_primary_slot==slot[0]);loadout_cards[slot[0]]=empty
+				empty.pressed.connect(func():choose_primary_slot("secondary_primary"))
 			continue
 		var cell=card(ui.content,entry,at);equipped_cards.append(cell)
+		loadout_cards[slot[0]]=cell
+		if slot[0] in ["primary","secondary_primary"]:cell.set_pressed_no_signal(ui.target_primary_slot==slot[0])
 		ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
-		cell.pressed.connect(func():ui.selected=entry;show_details())
+		cell.pressed.connect(func():
+			ui.selected=entry
+			if slot[0] in ["primary","secondary_primary"]:choose_primary_slot(slot[0])
+			else:show_details()
+		)
+
+func choose_primary_slot(slot):
+	ui.target_primary_slot=slot
+	for key in ["primary","secondary_primary"]:
+		if loadout_cards.has(key):loadout_cards[key].set_pressed_no_signal(key==slot)
+	show_details()
 
 func native_rows():
 	var rows=[]
@@ -144,7 +159,7 @@ func native_rows():
 func refresh_native_grid():
 	for child in grid.get_children():grid.remove_child(child);child.queue_free()
 	entries=native_rows()
-	if ui.offset>=entries.size():ui.offset=int((maxi(1,entries.size())-1)/9)*9
+	ui.offset=clampi(int(ui.offset/9)*9,0,int((maxi(1,entries.size())-1)/9)*9)
 	if ui.selected.is_empty() or not entries.has(ui.selected):ui.selected=entries[ui.offset] if not entries.is_empty() else {}
 	var group=ButtonGroup.new()
 	for i in range(mini(9,entries.size()-ui.offset)):
@@ -159,10 +174,11 @@ func action_use(entry,at=Vector2(366,710),dimensions=Vector2(290,28)):
 	var enabled=true
 	if ui.page=="Mağaza":enabled=ui.game.book.owned.get(entry.id,false)
 	var button=Art.atlas_button(details,ROOT+"is_inven_button_use.dtx",[Rect2(0,0,241,28),Rect2(0,28,241,28),Rect2(0,56,241,28),Rect2(0,112,241,28)],at,dimensions,func():
-		if ui.game.equip_item_from_ui(entry):ui.refresh()
+		var slot=ui.target_primary_slot if ui.game.book.slot_for(entry.category)=="primary" else ""
+		if ui.game.equip_item_from_ui(entry,slot):ui.refresh()
 		else:ui.show_error("Ekipman yüklenemedi veya kaydedilemedi.")
 	)
-	button.disabled=not enabled;button.tooltip_text="Kullan" if enabled else "Satın alma hizmeti bağlı değil";ui.links["Tak"]=button
+	button.disabled=not enabled;button.tooltip_text=("Yedek ana silah yuvasına tak" if ui.target_primary_slot=="secondary_primary" and ui.game.book.slot_for(entry.category)=="primary" else "Kullan") if enabled else "Satın alma hizmeti bağlı değil";ui.links["Tak"]=button
 
 func show_native_details():
 	for child in details.get_children():details.remove_child(child);child.queue_free()
@@ -183,7 +199,12 @@ func show_native_details():
 		node.toggle_mode=true;node.set_pressed_no_signal(info_tab==value)
 	if ui.page in ["Envanter","Mağaza"]:
 		var copy=entry.get("description","")
-		if info_tab=="properties":copy="Özellik bilgisi kullanılamıyor."
+		if info_tab=="properties":
+			var tuning=entry.gameplayTuning
+			copy="YEREL OYUN\nHasar: %d\nŞarjör: %d\nAtış aralığı: %.3f sn\nŞarjör değiştirme: %.2f sn" % [int(tuning.damage),int(tuning.capacity),float(tuning.fireInterval),float(tuning.reloadSeconds)]
+			if entry.has("sourceDetails"):
+				var original=entry.sourceDetails
+				copy+="\n\nPC EŞYA BİLGİSİ\nMod: %s\nAğırlık: %s\nMühimmat: %s" % [original.modeText,original.weightText,original.magazineText]
 		if copy=="":copy="Açıklama bulunmuyor."
 		body(copy)
 		action_use(entry)
@@ -244,7 +265,7 @@ func build_power(entry):
 		if not ui.game.equipment.equip_power(0 if equipped else 19601):ui.show_error("Güç slotu kaydedilemedi.");return
 		ui.game.player.reset_locomotion();ui.refresh()
 	)
-	ui.paragraph(details,"Havada güçlü saldırı hazır değil.",Vector2(20,654),Vector2(310,38),12)
+	ui.paragraph(details,"Koşarken zıpla, GÜÇLÜ düğmesine bas.",Vector2(20,654),Vector2(310,38),12)
 
 func select_relative(direction):
 	if entries.is_empty():return

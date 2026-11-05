@@ -32,6 +32,9 @@ func run():
 	var migrated = Book.new(true, path)
 	ensure(is_equal_approx(migrated.settings.volume, 0.35) and not migrated.settings.directions and migrated.settings.music_volume == 1, "old master volume and controls retained with neutral channel defaults")
 	ensure(migrated.loadouts.size() == 5, "five equipment sets survive initialization")
+	var main_weapon=migrated.weapon(migrated.slots.primary)
+	ensure(migrated.equip(main_weapon.id,"secondary_primary") and Book.new(true,path).slots.secondary_primary==main_weapon.id,"optional second main weapon survives reopening a legacy-compatible profile")
+	ensure(not migrated.equip(migrated.slots.pistol,"secondary_primary"),"secondary main slot refuses a pistol")
 	ensure(migrated.set_local_name("Wolf Oyuncusu") and Book.new(true,path).local_name == "Wolf Oyuncusu", "local profile name survives reopening")
 	ensure(not migrated.set_local_name("a") and not migrated.set_local_name("Wolf\nOyuncu"), "profile names reject invalid length and control characters")
 	var batch=migrated.settings.duplicate(true);batch.music_volume=0.4;batch.invert_y=true
@@ -46,6 +49,11 @@ func run():
 	ensure(not migrated.update_settings(failed_batch) and migrated.settings==old_settings,"failed batch save rolls back every preference")
 	ensure(not migrated.set_local_name("Different") and migrated.local_name=="Wolf Oyuncusu","failed profile save rolls back the displayed name")
 	ensure(not migrated.select_loadout(3) and migrated.active_loadout == 0, "failed loadout save rolls back active set")
+	var old_extra=migrated.slots.secondary_primary
+	var alternative=migrated.weapons.filter(func(row):return row.category=="rifle" and row.id!=main_weapon.id and row.get("available")==true)[0]
+	migrated.owned[alternative.id]=true
+	ensure(not migrated.equip(alternative.id,"secondary_primary") and migrated.slots.secondary_primary==old_extra,"failed second-main save rolls back the slot")
+	migrated.owned.erase(alternative.id)
 	var old_owned = migrated.owned.duplicate(true)
 	ensure(not migrated.acquire_all() and migrated.owned == old_owned, "failed acquire-all rolls back ownership")
 	var candidate = migrated.characters.filter(func(row): return row.get("available") == true)[0]

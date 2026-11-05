@@ -42,16 +42,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "239f0b42c5d7a9a8ed5c4275ee655d7f67cf4e648d8c8e90c129691febd77eb8",
+        "sha256": "1ddf00468752c3d624d4bf9f995c43c0a4571bc3eb6a0d869caf1640db92938c",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Pedro_RE wolf\\Pedro_RE Wolf.ltb",
         "sourceDefinition": "Model2",
         "sourceSha256": "1e458a8b98e878d1d9cbe5ac16ba5d94d2a59bb11a7100e56d9c3653e4138e05",
-        "triangles": 6124.0
+        "triangles": 6124.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -97,16 +105,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "8c0af9f1e7ee8465cbfa8d3d8685adcf762e853bf2068eb44c07b3ff7fdd7a4a",
+        "sha256": "d2d76a1f1a548b808fea05c7eaf3c5f8cd082002fe5052ad0c98e215817dd0e4",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Christopher_RE_wolf\\Christopher_RE_Wolf.ltb",
         "sourceDefinition": "Model3",
         "sourceSha256": "91bff6e43ed84e28baa38ecf54b0f33cc6bc3f667b9960ad7d7f7fae3e980a14",
-        "triangles": 6976.0
+        "triangles": 6976.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -151,16 +167,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
         "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
-        "sha256": "39f130be7b623ea4fac6da50e1f29d16eab3448305fa361c075ee9c7b7de849e",
+        "sha256": "bdef1ccef4837c15c9a64ec4bb9482f46150f10b2c10be3812a4a1a03250659b",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Adriana_SE_wolf\\Adriana_SE_wolf.ltb",
         "sourceDefinition": "Model49",
         "sourceSha256": "9c1990174fa6266187429b05de4488e7df11e9800e9e0aa2d6353d6de6095ecf",
-        "triangles": 4150.0
+        "triangles": 4150.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+            "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -205,16 +229,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "9dd94ae75a3f8324e52b5bc5b2277a13215b33c38404d5e45d2e72fe175daa44",
+        "sha256": "c9b8e1a0ace182f2abd2f71ddd3345d45de4a94f05a3c7e28a30d1d026076502",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Geremi_wolf\\Geremi_wolf.ltb",
         "sourceDefinition": "Model59",
         "sourceSha256": "08f7494315ae1bcb64339ce537a6a4e60a27f1090978da0aead7867659cde4a0",
-        "triangles": 4472.0
+        "triangles": 4472.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -259,16 +291,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
         "donorSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677",
-        "sha256": "66692fee96ddeab4123158ed6c2efeb95e142aaa5972c1c4a8c4c5dd3c73ca60",
+        "sha256": "3cac600cc626aea2dc36e4484ea66f56d07364aaf2e198de0745f989e1518189",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Marien_SE_wolf\\Marien_SE_wolf.ltb",
         "sourceDefinition": "Model67",
         "sourceSha256": "e0316ad7ac4f2a3b3aa4f6f30e8e83f25029b06038504b4ac30a06ba465e7d7b",
-        "triangles": 4632.0
+        "triangles": 4632.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
+            "donorSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -313,16 +353,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
         "donorSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677",
-        "sha256": "b33db25f25621373d5f06024333b61de7f2afb377a1dd688adea0c87178e0531",
+        "sha256": "82c7f0bf719a1ef9709f0212c6c73e3bc6ea5fd440fef7f6356ff3cbb90e54f7",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Reinhard_SE_wolf\\Reinhard_SE_wolf.ltb",
         "sourceDefinition": "Model69",
         "sourceSha256": "c1776d253ee95363e0377ec2847d655d2905975dd78fe6f0917b6667fa1e36e8",
-        "triangles": 4108.0
+        "triangles": 4108.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
+            "donorSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -367,16 +415,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
         "donorSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33",
-        "sha256": "42ba8bf1bbabf613388c1bc248f63550b14bcdf39f096a21b145777a941b4fe9",
+        "sha256": "2eb0ff30dc3ecbe209d2998df384568dc357ecefbe6b242930a62805935943b4",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Linmeiling_SE_Wolf\\Linmeiling_SE_Wolf.ltb",
         "sourceDefinition": "Model71",
         "sourceSha256": "623d7fac4173e9e770f7eefad0ec10f42b2fecb9c16de9d05c1ae1394bc541ce",
-        "triangles": 4240.0
+        "triangles": 4240.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
+            "donorSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -421,16 +477,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
         "donorSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33",
-        "sha256": "b1a8b2b14b94ada65c28ea35f2a55be874611f866162e0b14d01287630233f0f",
+        "sha256": "52338bbaed9916ca866795dae9753ac2bd7428fa06eefb6530fe00462fdbbfba",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Moshin_SE_wolf\\Moshin_SE_wolf.ltb",
         "sourceDefinition": "Model73",
         "sourceSha256": "5791009c4389e1a06c287ec04aacff4dd95cd585f04f15328be23330fc0d8cde",
-        "triangles": 4654.0
+        "triangles": 4654.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
+            "donorSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -475,16 +539,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "e7bcce7f045d46e3e41e4ecd58789c9b447d058822fbec8e3ac9dc882c6a17b2",
+        "sha256": "ebc33e690e51b5327dd7f2f783c3d0f0dd117bc33c1ed5f66431c9bd624305c6",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Linda_wolf\\Linda_wolf.ltb",
         "sourceDefinition": "Model75",
         "sourceSha256": "3e42b1484cc410d74a0ce45a3efcab5a571966ebf0d9b4d9e048f7c56a9391fe",
-        "triangles": 4340.0
+        "triangles": 4340.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -529,16 +601,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "d088e718ed4121e91b9dcb0fb9392429d82697926394f558dc99c6196896350a",
+        "sha256": "9a4f9d21e2e7f76f0656d7ac48522125ea9ea2681762c51a6b7fcc041a4516f5",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Blume_wolf\\Blume_wolf.ltb",
         "sourceDefinition": "Model79",
         "sourceSha256": "1c0c64419063e75d27b271605b8816b90b6a9244d58d19dc09f10a9acb7331fb",
-        "triangles": 4672.0
+        "triangles": 4672.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -638,16 +718,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "fd7c8e48420bba9817f3cc66d37dadf1d1e75af3914766136b79c6bf8913ae84",
+        "sha256": "add3b2b51263748b5afebb27b9de597d4dcbc3b45632855ea6f7d12417ed65a1",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Geremi_wolf_Soccer\\Geremi_wolf_Soccer.ltb",
         "sourceDefinition": "Model101",
         "sourceSha256": "29af6ada2f0b56ab253cd2cee5c3ed7eac9185501f77b679263e79244f586b24",
-        "triangles": 4416.0
+        "triangles": 4416.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -747,16 +835,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_icewolf_ch.ltb",
         "donorSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692",
-        "sha256": "811bfc369e1752d03dd280ba8dc1f6b1b23216af47bb210361667657e85be9e2",
+        "sha256": "822645adf30c3eceeb54e4fc6aa6827f10bec65f4e73fa0540e912618c55bd1b",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Tomita_SE_wolf\\Tomita_SE_wolf.ltb",
         "sourceDefinition": "Model105",
         "sourceSha256": "d835ba5c1ce99506653711e47e0632203fc25814ab3c34dfd88a6588cc94abb8",
-        "triangles": 4574.0
+        "triangles": 4574.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_icewolf_ch.ltb",
+            "donorSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -801,16 +897,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_icewolf_ch.ltb",
         "donorSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692",
-        "sha256": "1035af1c16157dac8c49190d97c9fb5a3653086a247a4b058e649534974fd57a",
+        "sha256": "4ec445e771c0815a98c378683cdec143095c28402597480f01bddd85c5b5c55f",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Yigit_SE_wolf\\Yigit_SE_wolf.ltb",
         "sourceDefinition": "Model107",
         "sourceSha256": "539f12bd8d1098def4e70532ab3b5689104dc129192ba773810c66c29697bb46",
-        "triangles": 5150.0
+        "triangles": 5150.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_icewolf_ch.ltb",
+            "donorSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -855,16 +959,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
         "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
-        "sha256": "bf644a4f9306571dab7f55cfc6d10833336f204a68790549dcc5cf7311d1d49b",
+        "sha256": "3ab23bd02e3d229330be50b503dca90481eb4d6b2bc7fb1ea3f28f8817fa4f63",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Ivanov_SE_wolf\\Ivanov_SE_wolf.ltb",
         "sourceDefinition": "Model109",
         "sourceSha256": "2eac7a2d7c0bec85ea08c71611ae0c0332c7ee7b524601ab50da07a699d78b1a",
-        "triangles": 4844.0
+        "triangles": 4844.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+            "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -909,16 +1021,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
         "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
-        "sha256": "82488bf808c4506cfa1a538a8a210bae6c37bd4e7d045b28ba418f84cadd9be1",
+        "sha256": "16bee053d9f0da3133254df08a78aa94c8f5bfc126d48c4a28b11e60e704517f",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Geremi_SE_wolf\\Geremi_SE_wolf.ltb",
         "sourceDefinition": "Model111",
         "sourceSha256": "35ad5f0bec9fabfd0dd83848125a0cff1b899a61a87ef8a880bcd15f2014dcbe",
-        "triangles": 4452.0
+        "triangles": 4452.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+            "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -963,16 +1083,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
         "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
-        "sha256": "78ba7b80406435f61c3bf67531ec8e01a007223604a335423c263a9be328ea95",
+        "sha256": "0ef58873d2d7408c93a05b64bb7b9abcbe050c117b82a142cc568eccf73ec653",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Yavuz_selim_Wolf\\Yavuz_selim_Wolf.ltb",
         "sourceDefinition": "Model113",
         "sourceSha256": "9ee6e1ff73621aca0af3d3e3f2a6a539b3dab79564437d0b484f684fc0017570",
-        "triangles": 5818.0
+        "triangles": 5818.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+            "donorSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1017,16 +1145,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "9dd94ae75a3f8324e52b5bc5b2277a13215b33c38404d5e45d2e72fe175daa44",
+        "sha256": "c9b8e1a0ace182f2abd2f71ddd3345d45de4a94f05a3c7e28a30d1d026076502",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Geremi_wolf\\Geremi_wolf.ltb",
         "sourceDefinition": "Model115",
         "sourceSha256": "08f7494315ae1bcb64339ce537a6a4e60a27f1090978da0aead7867659cde4a0",
-        "triangles": 4472.0
+        "triangles": 4472.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1071,16 +1207,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "e7bcce7f045d46e3e41e4ecd58789c9b447d058822fbec8e3ac9dc882c6a17b2",
+        "sha256": "ebc33e690e51b5327dd7f2f783c3d0f0dd117bc33c1ed5f66431c9bd624305c6",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Linda_wolf\\Linda_wolf.ltb",
         "sourceDefinition": "Model207",
         "sourceSha256": "3e42b1484cc410d74a0ce45a3efcab5a571966ebf0d9b4d9e048f7c56a9391fe",
-        "triangles": 4340.0
+        "triangles": 4340.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1125,16 +1269,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "ce2cf77a601a7cc35bf87d3a95ca8929201549dee0dc4e2a71d3859d9ba502a0",
+        "sha256": "706fa937b7cf3b108583f8fff2265815583b688e67b29db760b593bfaba4c36f",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Baker_wolf\\Baker_wolf.ltb",
         "sourceDefinition": "Model209",
         "sourceSha256": "f94389c2b2fab5edd623e809dec3f897b15a8cade8119e07869aa4bd1ff0d6c3",
-        "triangles": 4659.0
+        "triangles": 4659.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1179,16 +1331,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "d088e718ed4121e91b9dcb0fb9392429d82697926394f558dc99c6196896350a",
+        "sha256": "9a4f9d21e2e7f76f0656d7ac48522125ea9ea2681762c51a6b7fcc041a4516f5",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Blume_wolf\\Blume_wolf.ltb",
         "sourceDefinition": "Model211",
         "sourceSha256": "1c0c64419063e75d27b271605b8816b90b6a9244d58d19dc09f10a9acb7331fb",
-        "triangles": 4672.0
+        "triangles": 4672.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1233,16 +1393,24 @@
           "crouch_run",
           "wolf_run",
           "body_attack",
-          "special_attack"
+          "special_attack",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
         "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
-        "sha256": "50bd7e4221e3f2b4e7eac6a4e0221630fa912e03385d2b5b623a449fcd0da0ff",
+        "sha256": "4f8976eb29f0b2f68a32420a3963974a1f5628feb01d86c5a611af347d107194",
         "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
         "source": "WT_Chars\\NewChars\\Jacy BrewSter wolf\\Jacy BrewSter wolf.ltb",
         "sourceDefinition": "Model453",
         "sourceSha256": "65eb4dd3381a7fd323f81ada28914bbaa88da61e05daa1ca0e4ef200f285a93e",
-        "triangles": 6447.0
+        "triangles": 6447.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_new_wolf_ch.ltb",
+            "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1344,16 +1512,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "611dba552683fc7e867e2871e04be3cbfc11934ff80da9be98d8da7b979d6ab3",
+        "sha256": "025997368f9f8df216e55be4e5a143cddd38004b34544208abc9e94852ebb248",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Angela_RE wolf\\Angela_RE Wolf.ltb",
         "sourceDefinition": "Model473",
         "sourceSha256": "40dc7e42aea46b64be8ca2bbe544d11c266254bddd72280176da80a90a0b6da8",
-        "triangles": 7770.0
+        "triangles": 7770.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1455,16 +1631,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "efd8edc775f997e074136695c6ad02455e94d220867aae0ddeba99f04078348c",
+        "sha256": "d9fa31d522611b892a86aea8f1de909cea04fdbdbc28bc53732bc0a860af1df6",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\LinMeiling_RE wolf\\LinMeiling_RE Wolf.ltb",
         "sourceDefinition": "Model477",
         "sourceSha256": "7bc1e5401d9c75955660781b0ecc86d02710e0240f4ab019b37d2c4cd23a6692",
-        "triangles": 6331.0
+        "triangles": 6331.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1510,16 +1694,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r2_man_wolf.ltb",
         "donorSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1",
-        "sha256": "59245bccb32a7e2043d47130b70b6cbc7c882d84d4650cf7c3398eee509cd465",
+        "sha256": "116711fa320b4c010db1ef2dcf9bddfbeaddffa814b5e9804db5258c35c1cfaf",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Reinhard_RE_Wolf\\Reinhard_RE Wolf.ltb",
         "sourceDefinition": "Model487",
         "sourceSha256": "1894d5a52c31aa91db738db576f541a11650df5d51fbe9c892bb36c2fa10c420",
-        "triangles": 7193.0
+        "triangles": 7193.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r2_man_wolf.ltb",
+            "donorSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1565,16 +1757,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r2_man_wolf.ltb",
         "donorSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1",
-        "sha256": "4c66ecc8b7da2fcb498694effa6df79949b01f5f36f4a5fd7311ccfa9cffc8ee",
+        "sha256": "04067b0bf62684ff517e47d91b85c5560c0f2353b8b08118a7b54fafd2732814",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Hamadah_RE wolf\\Hamadah_RE Wolf.ltb",
         "sourceDefinition": "Model489",
         "sourceSha256": "8a43ea3a1c56dfddbbdd22d1ae9540fccf6648027227f6bc2008ad38148fdf1a",
-        "triangles": 5964.0
+        "triangles": 5964.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r2_man_wolf.ltb",
+            "donorSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1620,16 +1820,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r2_woman_wolf.ltb",
         "donorSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23",
-        "sha256": "4d583ec3def2cbe66b9f2ad909c0de18a4d16dfe98d10576a586081f971ddac2",
+        "sha256": "e044642330ec5525527890012a2f2a0c03121872dfa76832de00d948aba18edb",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Marien_RE_Wolf\\Marien_RE_Wolf.ltb",
         "sourceDefinition": "Model491",
         "sourceSha256": "1f788e6e7f40bd76a0718ed0cb153a4dc68ddcd83f7a29fc4e3d6c8e363df19f",
-        "triangles": 7032.0
+        "triangles": 7032.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r2_woman_wolf.ltb",
+            "donorSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1675,16 +1883,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r2_woman_wolf.ltb",
         "donorSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23",
-        "sha256": "8cde8321609d3697c0f3b8b9b3b320228be7274fb4efec5c95c98412c1ee27ad",
+        "sha256": "82e73a7d18cc6c9d7e4066622fa497ad901da9d0758bba9e7a82dac13b94bca7",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Adriana_RE_wolf\\Adriana_RE_Wolf.ltb",
         "sourceDefinition": "Model493",
         "sourceSha256": "426bc80b2a54f36fad91fa6cd38600f4fdbe39651d16ba661e1293efa70e5f6b",
-        "triangles": 6470.0
+        "triangles": 6470.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r2_woman_wolf.ltb",
+            "donorSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1730,16 +1946,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "a753efc5a1472c7c13e7a9e4f0067b28c65fc232787708fc9e0b40c8e2420435",
+        "sha256": "ec051e2b69771b9d04e0a00bfe246c468eecc6411bcc07472bfe103ba25cdb6a",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Yigit Demir_RE Wolf\\Yigit Demir_RE Wolf.ltb",
         "sourceDefinition": "Model499",
         "sourceSha256": "e892393dddaf0048d84812a62703f4f7f223470b31b062bd57613da6eb401114",
-        "triangles": 8228.0
+        "triangles": 8228.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1785,16 +2009,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_woman_wolf.ltb",
         "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
-        "sha256": "106ccacb84d4761ec948ef5251156ed2b30ad0641e85eac7724bdcfeaaaa38e3",
+        "sha256": "6a3fa7de3da2c1375683350a82a1ba0c6a7d7daf9238c3eb12399fc502b6eee0",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Tomita_RE Wolf\\Tomita_RE_Wolf.ltb",
         "sourceDefinition": "Model501",
         "sourceSha256": "9c5025e565e2ef1db1f2cf966983596bf4d92ddcd90cbd4414df34b3d66adc52",
-        "triangles": 7940.0
+        "triangles": 7940.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_woman_wolf.ltb",
+            "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1840,16 +2072,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "6d4635b31d36cffa2d866d890de060af141a07f3301740f20a646d8ca5fb5ee5",
+        "sha256": "1455687bd5bafdbf28dd2aedfa9f7af93eb3546e26d5ddf5450f00d0960a2f22",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Geremi Song_RE_wolf\\Geremi Song_RE_Wolf.ltb",
         "sourceDefinition": "Model503",
         "sourceSha256": "f08b97af7185cc3a28b9ff3f774162d5a148690d7ce132ff5d020707abcb950b",
-        "triangles": 6480.0
+        "triangles": 6480.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1895,16 +2135,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_woman_wolf.ltb",
         "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
-        "sha256": "7a1a636d2bb6aa08775a308c911466d8af7dc7cb116575f0c84febcc3921547c",
+        "sha256": "7f747e062c23b515a4b0c043c0b6aeca1aaccbccf90b87cf82620c62ea5ad373",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Illude_RE Wolf\\Illude_RE_Wolf.ltb",
         "sourceDefinition": "Model505",
         "sourceSha256": "18c8076977f9c628220f5f297098032aca1679a70a2213a1ac65bf7879ffaa3c",
-        "triangles": 7238.0
+        "triangles": 7238.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_woman_wolf.ltb",
+            "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -1950,16 +2198,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/bluelegend_re_wolf.ltb",
         "donorSha256": "090cbb60613c8077cf9f9ea6590a97750e7588b664cfab6d65773256ccb1bd0f",
-        "sha256": "dcbb3bf4ede0d8640ffe4db84e1d943b1732ae1d183bee452348ccf0a2bb764d",
+        "sha256": "db56b3592f5eba4b0a9ab00fd28d4b7ee352ddc32120eae1d9034d0a1c15530e",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Barut Reboot_Wolf\\Barut Reboot_Wolf.ltb",
         "sourceDefinition": "Model507",
         "sourceSha256": "442b2b0605853d1dcd98fb4dd4482e59d4ce19a1164015a3b8aa27a880dc1d5e",
-        "triangles": 7684.0
+        "triangles": 7684.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/bluelegend_re_wolf.ltb",
+            "donorSha256": "090cbb60613c8077cf9f9ea6590a97750e7588b664cfab6d65773256ccb1bd0f"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2005,16 +2261,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/redlegend_re_wolf.ltb",
         "donorSha256": "5c4b6446a78b70ffd426e867d68b4067300c4f05ccfc0158eea419698d1faf19",
-        "sha256": "40e511e7ead2a427b4b79fc5f9c9ab294c094e0d670eccc984cf6a54ea65effa",
+        "sha256": "97b0948558993f356b14881301f71603ad42915575693295455da92a4f06738c",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Ates Reboot_Wolf\\Ates Reboot_Wolf.ltb",
         "sourceDefinition": "Model509",
         "sourceSha256": "5103d41574f2db3b691b1481b8dd4c02b0deb23de873f2d31a0dfeaa11ceebe0",
-        "triangles": 7096.0
+        "triangles": 7096.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/redlegend_re_wolf.ltb",
+            "donorSha256": "5c4b6446a78b70ffd426e867d68b4067300c4f05ccfc0158eea419698d1faf19"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2060,16 +2324,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/turkey_wolf.ltb",
         "donorSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6",
-        "sha256": "1213b43ccd3346b101c7c3b482ee0555c30cb4b6eaeaf6cd3392e444ab77da74",
+        "sha256": "0b6cd24a630a2a35e7c734ebc578d680ee4a52d9a8667b96718b9d2a4ed7aaf4",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Mert_Wolf\\Mert_Wolf.ltb",
         "sourceDefinition": "Model511",
         "sourceSha256": "d0c2aca3ed103c5da67c53ff83628fb82e66c5bbcd29ec6ae34bef5444e364d3",
-        "triangles": 7347.0
+        "triangles": 7347.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/turkey_wolf.ltb",
+            "donorSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2115,16 +2387,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/turkey_wolf.ltb",
         "donorSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6",
-        "sha256": "a9e968ad4c0521d504e6cfe354cbbc99fdd0a631980df69d095ded5f4191fcea",
+        "sha256": "d8050857b97f2d4556829e3c2a4b823108dd48581c137d40271e9333c75b670a",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Sarp_Wolf\\Sarp_Wolf.ltb",
         "sourceDefinition": "Model513",
         "sourceSha256": "b5763d2a8d0d57ae5e0dfa4c74993601e77d0cecf59256520490ff4030f30229",
-        "triangles": 6260.0
+        "triangles": 6260.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/turkey_wolf.ltb",
+            "donorSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2170,16 +2450,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_combat edition_wolf.ltb",
         "donorSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb",
-        "sha256": "4e190c8ed69db283ffe5f227a776e1122457b2aa176adc8805942bb83a4514b8",
+        "sha256": "dda01125d9609f6cd8dc42ec708487ad6f76f4e57f7d94059ab26d2c21cd600f",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Christopher_CE_wolf\\Christopher_CE_Wolf.ltb",
         "sourceDefinition": "Model527",
         "sourceSha256": "5eb942f872e2da8dc392e3688d2228fb1752f1dde15c235d8ca122773eb53745",
-        "triangles": 6935.0
+        "triangles": 6935.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_combat edition_wolf.ltb",
+            "donorSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2225,16 +2513,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_combat edition_wolf.ltb",
         "donorSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb",
-        "sha256": "09f35cd211dfe9a8bc23d65166c6ed96179745b6dc4d23c17c3a12df53f05128",
+        "sha256": "b900f9aa678ba342c45cf7185cb3c9cfce5980f4cfb6b66651e9332a7cc9b315",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Pedro_CE wolf\\Pedro_CE Wolf.ltb",
         "sourceDefinition": "Model529",
         "sourceSha256": "d30d6a54d82f305f3d3d02960019ce1d30d395fc25f5f6e799d0ac0bd8de0eb6",
-        "triangles": 6602.0
+        "triangles": 6602.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_combat edition_wolf.ltb",
+            "donorSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2280,16 +2576,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_wolf_wraith.ltb",
         "donorSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f",
-        "sha256": "a0cc7f36df0d8d42a8a0230c4f27f717d8e14f865aa6d6c1af3a5118bdae3a6c",
+        "sha256": "aa2d03841a7b24e5f4966de0ab33a94edf569c6e2af27a37ebad27528edd43d7",
         "skeletonSha256": "2b7321ee2f131f1361432303959ce39290e0e7cc1e3887fbcefbb76705eec7a7",
         "source": "WT_Chars\\NewChars\\Simon_Glazkov_Wolf\\Simon_Glazkov_Wolf.ltb",
         "sourceDefinition": "Model541",
         "sourceSha256": "1cb498a571252cce1c88c1f5acc794266c75239cffae0b61131acfba4b7355fd",
-        "triangles": 5305.0
+        "triangles": 5305.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_wolf_wraith.ltb",
+            "donorSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2335,16 +2639,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_wolf_wraith.ltb",
         "donorSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f",
-        "sha256": "f311c300ce97de7f2d70b99183744efd006d0e3e8f75a7a2a16bca647faf0c09",
+        "sha256": "cd85af6ec364e15f8d2dd6178d109f6b1614aa97fc75d21c8230e31e504ab213",
         "skeletonSha256": "2b7321ee2f131f1361432303959ce39290e0e7cc1e3887fbcefbb76705eec7a7",
         "source": "WT_Chars\\NewChars\\Amelli_Binoche_Wolf\\Amelli_Wolf.ltb",
         "sourceDefinition": "Model543",
         "sourceSha256": "dacdb204f3faf611168b624ee465327f83ca4c7e9a2b13d3ef1124965bf2d024",
-        "triangles": 5363.0
+        "triangles": 5363.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_wolf_wraith.ltb",
+            "donorSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2390,16 +2702,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "da6f5ace141a07b1c30c8e5e1a5c34bbfa8010e083c5274cdc547b6a9b6af3d5",
+        "sha256": "c0d56c966311387d87bfb2ec2b7bb753521579c66d3438d26b2e321bbf65c40e",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Wilson_Strotsky_Wolf\\Wilson_Strotsky_Wolf.ltb",
         "sourceDefinition": "Model561",
         "sourceSha256": "3f3a819002fe964fd31b92ba1d586878d44a258a3d486d27a4945f90721a35c4",
-        "triangles": 7402.0
+        "triangles": 7402.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2445,16 +2765,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r1_wolf.ltb",
         "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
-        "sha256": "8ffce2a107523e5c27e57b5ae53f775b6df10583fa6be8684ba9004ea3280663",
+        "sha256": "ec8398fab9a58d609ca13631ef6868569e59469da395ad1dc64c2c264b4f28e3",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\EL-17_Wolf\\EL-17_Wolf.ltb",
         "sourceDefinition": "Model563",
         "sourceSha256": "3a030c4891431b31004ae4c51fc87f11190ae1681fd4884357817e899d562139",
-        "triangles": 7179.0
+        "triangles": 7179.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r1_wolf.ltb",
+            "donorSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2500,16 +2828,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_wolf_hacker.ltb",
         "donorSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279",
-        "sha256": "810f1288ada13e034cc410c0e369d3c85df379e0e0ca3324809e5b8d269f64da",
+        "sha256": "4c02ccb0749c8119b01a2572174f02a2ea7d32088dca0c6bbc13ea910dd6e48f",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Sean_wolf\\Sean_wolf.ltb",
         "sourceDefinition": "Model569",
         "sourceSha256": "c69a56cd1532dd7659dd8be2efb3ab2ea0510fdf2180dcccbc23e8b06a68049a",
-        "triangles": 6948.0
+        "triangles": 6948.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_wolf_hacker.ltb",
+            "donorSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2555,16 +2891,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/wt_wolf_hacker.ltb",
         "donorSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279",
-        "sha256": "6df51567115e4f7d0ec54ab3803872ae075f44d8c50e7467db72c9fe9a58c7b1",
+        "sha256": "302db3f47231e86c7a567be31420641e5723091159b5b1bb9198f6e93a501a4d",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Leona_wolf\\Leona_wolf.ltb",
         "sourceDefinition": "Model571",
         "sourceSha256": "35e71e196020321a49ade8448dcd0b81601547a8d84a7b6a7af3fcd6330a701c",
-        "triangles": 6417.0
+        "triangles": 6417.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/wt_wolf_hacker.ltb",
+            "donorSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2610,16 +2954,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "8cb3fd54a7b262d77325998564a70bda6ac2f263de94fd5034e6d543146defda",
+        "sha256": "02ff5591bef5ce1f3e223b1f002bf04a5c99f260444259e38ba012c77ff5b15b",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Brian_Wolf\\Brian_Wolf.ltb",
         "sourceDefinition": "Model577",
         "sourceSha256": "fa46f6ec135de31b7e2b4dd417f486743099ecfb6bca5268dd0e3fb8b0f34683",
-        "triangles": 6972.0
+        "triangles": 6972.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2665,16 +3017,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_woman_wolf.ltb",
         "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
-        "sha256": "038515e1818d31d0da93975a89f0e694a7e90996f8ee5d8106788db31a11fbdd",
+        "sha256": "d53d13f268e496d8b8cdd7b2b5c254d2480fb63e3e3794c88932b5da3a2daf11",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Youjin_Wolf\\Youjin_Wolf.ltb",
         "sourceDefinition": "Model579",
         "sourceSha256": "44937bb7781c66d4a6a403d013419597af5c5d3277debb9414f2f5441c2e0193",
-        "triangles": 6510.0
+        "triangles": 6510.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_woman_wolf.ltb",
+            "donorSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2720,16 +3080,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "1e02e71b7d212f5988b4d6bc0e6500b6a42c69f5b66dbe4776d2c0f2e3c83eeb",
+        "sha256": "350654930d3cb72f62b950fb86042835f516c32d8256382d869ccacc3e2983dc",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Christopher_Nano_Wolf\\Christopher_Nano_Wolf.ltb",
         "sourceDefinition": "Model605",
         "sourceSha256": "676f828ab8b4c2f4beb222d571e2ea00a79c15e4e9c133b596f9bf9219e9013a",
-        "triangles": 6978.0
+        "triangles": 6978.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2775,16 +3143,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "02a0d10337085b36922a4a155a371301ab080129ca52fd41175773055ed59a85",
+        "sha256": "63765a42d080d0e5f1259c7c6d7f5cd6240577b2a281b4f9dc57cf7329c40ada",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Pedro_Nano_Wolf\\Pedro_Nano_Wolf.ltb",
         "sourceDefinition": "Model607",
         "sourceSha256": "fe72ca706a83b711df236c692c391b52aadc7c3477f4fd6f163ea418d26fef4e",
-        "triangles": 6622.0
+        "triangles": 6622.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     },
@@ -2830,16 +3206,24 @@
           "wolf_run",
           "body_attack",
           "special_attack",
-          "wall_hold"
+          "wall_hold",
+          "airborne_attack"
         ],
         "donor": "wt_chars/models/r3_man_wolf.ltb",
         "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
-        "sha256": "63abc7115d27f98abc01f3db896c1b7b98b7a3fd3d396b7fecb968c48db6bb05",
+        "sha256": "c4aa6b269dd748e37571a3d2f327aee68d4a02341eacca593a1efc27403bb6d0",
         "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
         "source": "WT_Chars\\NewChars\\Lin meiling_Nano_wolf\\Lin_meiling_Nano_wolf.ltb",
         "sourceDefinition": "Model615",
         "sourceSha256": "e105cad1df9dbb5a4f56a84fa048c39666cc2d3eede73c037ef607535aeb66f0",
-        "triangles": 9908.0
+        "triangles": 9908.0,
+        "sourceActions": {
+          "airborne_attack": {
+            "clip": "T_WallDashAtk",
+            "donor": "wt_chars/models/r3_man_wolf.ltb",
+            "donorSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b"
+          }
+        }
       },
       "visualValidationScope": "Both forms, idle frame 8 gallery, plus required animation import/bone finite checks. Not every frame or physical phone QA."
     }

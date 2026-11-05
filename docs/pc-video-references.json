@@ -93,6 +93,6 @@
     "Font face 51 is missing; regular system fallback is explicit.",
     "Ten character portraits are actual-model previews; original 2D mapping remains unproved.",
     "Full PC match modes, authoritative account/inventory services and device QA remain incomplete.",
-    "The reward/lucky-box flow in reference 3 and the complete modern character-card flow in reference 5 are not implemented."
+    "The reward/lucky-box flow in reference 3 and authoritative card ownership/upgrades in reference 5 remain incomplete. A 331-face source card preview browser is implemented."
   ]
 }

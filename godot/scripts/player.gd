@@ -42,6 +42,11 @@ var wall_holding = false
 var wall_hold_remaining = 0.0
 var wall_hold_cooldown = 0.0
 var wall_hold_normal = Vector3.ZERO
+var air_attacking = false
+var air_attack_elapsed = 0.0
+var air_attack_duration = 0.0
+var air_attack_direction = Vector3.ZERO
+var air_attack_hit = false
 
 func _ready():
 	collision_layer = 1
@@ -133,52 +138,90 @@ func play_weapon_sound(action):
 	elif action == "reload" and reload_sound.stream:
 		reload_sound.play()
 
-func equip_library_weapon(item):
-	var model_info = game.book.models.get(item.get("model", ""), {})
-	if model_info.get("engineImported") != true: return false
-	if not ResourceLoader.exists(item.get("asset", "")): return false
-	var packed = load(item.asset) as PackedScene
-	if packed == null: return false
-	var next_viewmodel = packed.instantiate()
-	var players = next_viewmodel.find_children("*", "AnimationPlayer", true, false)
-	if players.is_empty():
-		next_viewmodel.free()
-		return false
-	if is_instance_valid(viewmodel): camera.remove_child(viewmodel);viewmodel.queue_free()
-	viewmodel = next_viewmodel;viewmodel.position = Vector3(0.19, - 0.37, - 0.72);viewmodel.scale.z *= -1;camera.add_child(viewmodel)
-	weapon_anim = players[0]
-	for clip in ["idle", "walk"]:
-		if weapon_anim.has_animation(clip): weapon_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
-	for mesh in viewmodel.find_children("*", "MeshInstance3D", true, false):
-		mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		for surface in range(mesh.mesh.get_surface_count()):
-			var material = mesh.mesh.surface_get_material(surface)
-			if material and material.resource_name.begins_with("slot_"):
-				var slot = material.resource_name.trim_prefix("slot_")
-				if item.skins.has(slot):
-					var custom = material.duplicate();custom.albedo_texture = load(item.skins[slot]);mesh.set_surface_override_material(surface, custom)
-
-	var meshes = viewmodel.find_children("*", "MeshInstance3D", true, false); var names = {}
-	for mesh in meshes: names[str(mesh.name)] = true
+func prepare_library_weapon(item):
+	var model_info=game.book.models.get(item.get("model",""),{})
+	if model_info.get("engineImported")!=true or item.get("available")!=true:return {}
+	if not ResourceLoader.exists(item.get("asset","")):return {}
+	var packed=load(item.asset) as PackedScene
+	if packed==null:return {}
+	var next_viewmodel=packed.instantiate()
+	var players=next_viewmodel.find_children("*","AnimationPlayer",true,false)
+	if players.is_empty():next_viewmodel.free();return {}
+	var tuning=item.get("gameplayTuning",{})
+	for key in ["capacity","fireInterval","reloadSeconds","damage"]:
+		var number=tuning.get(key)
+		if not (number is int or number is float) or not is_finite(float(number)) or number<0:
+			next_viewmodel.free();return {}
+	if tuning.fireInterval<=0:next_viewmodel.free();return {}
+	var sounds={}
+	for action in ["fire","reload"]:
+		var path=item.get("sounds",{}).get(action,"")
+		if path!="" and not ResourceLoader.exists(path):next_viewmodel.free();return {}
+		sounds[action]=load(path) if path!="" else null
+	var meshes=next_viewmodel.find_children("*","MeshInstance3D",true,false);var names={};var material_changes=[]
+	for mesh in meshes:names[str(mesh.name)]=true
 	for mesh in meshes:
-		var name = str(mesh.name); var dash = name.rfind("-")
-		if dash > 0 and name.substr(dash + 1).is_valid_int() and names.has(name.substr(0, dash)): mesh.hide()
-	var tuning = item.gameplayTuning
-	weapon_info = {"name": item.name, "category": item.category, "shotsPerClip": int(tuning.capacity), "fireIntervalMs": float(tuning.fireInterval) * 1000, "reloadSeconds": float(tuning.reloadSeconds), "damage": int(tuning.damage), "sourceStatsVerified": false}
-	fire_sound.stop();reload_sound.stop()
-	fire_sound.stream = load(item.sounds.fire) if item.get("sounds", {}).has("fire") else null
-	reload_sound.stream = load(item.sounds.reload) if item.get("sounds", {}).has("reload") else null
-	weapon_clip = "";weapon_action_time = 0;viewmodel.visible = not is_wolf
-	play_weapon_clip("idle")
-	return true
+		mesh.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		for surface in range(mesh.mesh.get_surface_count()):
+			var material=mesh.mesh.surface_get_material(surface)
+			if material and material.resource_name.begins_with("slot_"):
+				var slot=material.resource_name.trim_prefix("slot_")
+				if item.get("skins",{}).has(slot):
+					if not ResourceLoader.exists(item.skins[slot]):next_viewmodel.free();return {}
+					var custom=material.duplicate();custom.albedo_texture=load(item.skins[slot]);material_changes.append({"mesh":mesh,"surface":surface,"material":custom})
+		var name=str(mesh.name);var dash=name.rfind("-")
+		if dash>0 and name.substr(dash+1).is_valid_int() and names.has(name.substr(0,dash)):mesh.hide()
+	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"name":item.name,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
+
+func apply_prepared_weapon(prepared):
+	if is_instance_valid(viewmodel):camera.remove_child(viewmodel);viewmodel.queue_free()
+	viewmodel=prepared.model;viewmodel.position=Vector3(0.19,-0.37,-0.72);viewmodel.scale.z*=-1;camera.add_child(viewmodel)
+	for change in prepared.materials:change.mesh.set_surface_override_material(change.surface,change.material)
+	weapon_anim=prepared.animation
+	for clip in ["idle","walk"]:
+		if weapon_anim.has_animation(clip):weapon_anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
+	weapon_info=prepared.info
+	fire_sound.stop();reload_sound.stop();fire_sound.stream=prepared.sounds.fire;reload_sound.stream=prepared.sounds.reload
+	weapon_clip="";weapon_action_time=0;viewmodel.visible=not is_wolf;play_weapon_clip("idle")
+
+func equip_library_weapon(item):
+	var prepared=prepare_library_weapon(item)
+	if prepared.is_empty():return false
+	apply_prepared_weapon(prepared);return true
+
+func prepare_character(info):
+	var models=[]
+	for form in ["human","wolf"]:
+		var path=info.get(form,{}).get("asset","")
+		if not ResourceLoader.exists(path):
+			for model in models:model.free()
+			return []
+		var packed=load(path) as PackedScene
+		var next_model=packed.instantiate() if packed else null
+		if not next_model is Node3D:
+			if is_instance_valid(next_model):next_model.free()
+			for model in models:model.free()
+			return []
+		var players=next_model.find_children("*","AnimationPlayer",true,false)
+		if players.is_empty() or not players[0].has_animation("idle"):
+			next_model.free()
+			for model in models:model.free()
+			return []
+		models.append(next_model)
+	return models
+
+func apply_prepared_character(models):
+	reset_locomotion()
+	if is_instance_valid(roar_effect):roar_effect.stop()
+	for model in [human,wolf]:remove_child(model);model.queue_free()
+	human=models[0];wolf=models[1]
+	for model in [human,wolf]:model.scale*=1.6;model.rotation.y=PI;add_child(model)
+	human.hide();wolf.visible=is_wolf;choose_animation_player();action_time=0;play_clip("idle");apply_tattoos()
 
 func load_character(info):
-	end_roll()
-	if is_instance_valid(roar_effect): roar_effect.stop()
-	for model in [human, wolf]: remove_child(model);model.queue_free()
-	human = load(info.human.asset).instantiate();wolf = load(info.wolf.asset).instantiate()
-	for model in [human, wolf]: model.scale *= 1.6;model.rotation.y = PI;add_child(model)
-	human.hide();wolf.visible = is_wolf;choose_animation_player();play_clip("idle");apply_tattoos()
+	var models=prepare_character(info)
+	if models.is_empty():return false
+	apply_prepared_character(models);return true
 
 func apply_tattoos():
 	for mesh in wolf.find_children("*", "MeshInstance3D", true, false):
@@ -191,7 +234,7 @@ func apply_tattoos():
 	if is_instance_valid(roar_effect): roar_effect.bind_tattoos()
 
 func begin_roar():
-	if rolling: return false
+	if rolling or air_attacking or wall_holding: return false
 	if action_time > 0 or not anim or not anim.has_animation("roar"): return false
 	var seconds = anim.get_animation("roar").length
 	if not roar_effect.begin(seconds): return false
@@ -245,6 +288,7 @@ func toggle_camera():
 func reset_locomotion():
 	end_roll()
 	end_wall_hold()
+	end_air_attack()
 	wolf_running = false
 	last_forward_press = -10.0
 	forward_held = false
@@ -260,7 +304,7 @@ func register_forward_press():
 		game.announce("Kurt koşusu")
 
 func can_wolf_run():
-	return is_wolf and game.equipment.has_wolf_ability() and not crouching and game.running and not game.menu_open
+	return is_wolf and game.equipment.has_wolf_ability() and not crouching and game.running and not game.menu_open and anim!=null and anim.has_animation("wolf_run")
 
 func _physics_process(delta):
 	if not game.running or game.menu_open:
@@ -294,6 +338,8 @@ func _physics_process(delta):
 		speed *= float(game.equipment.rules.mobileAdaptation.normalSprintMultiplier)
 	if Input.is_action_just_pressed("roll"): begin_roll()
 	if rolling: direction = roll_direction;speed = 8.5
+	if air_attacking:
+		direction=air_attack_direction;speed=float(game.equipment.rules.mobileAdaptation.airAttackSpeed)
 	crouching = Input.is_action_pressed("crouch") or rolling
 	if not crouching and capsule.height < 1.8:
 		var clearance = PhysicsShapeQueryParameters3D.new()
@@ -310,7 +356,7 @@ func _physics_process(delta):
 	pivot.position.y = lerpf(pivot.position.y, 1.05 if crouching else 1.55, delta * 14)
 	if crouching and not rolling:
 		speed *= 0.5
-	movement_speed = speed if rolling or axis.length() > 0.1 else 0.0
+	movement_speed = speed if rolling or air_attacking or axis.length() > 0.1 else 0.0
 	if Input.is_action_just_pressed("jump") and is_on_floor() and ( not crouching or rolling):
 		velocity.y = 6.3
 		if not rolling: play_clip("jump");action_time = 0.55
@@ -318,10 +364,12 @@ func _physics_process(delta):
 	velocity.z = move_toward(velocity.z, direction.z * speed, delta * 28)
 	move_and_slide()
 	advance_roll(delta)
+	advance_air_attack(delta)
 	if Input.is_action_just_pressed("transform"):
 		switch_form()
 	if Input.is_action_just_pressed("reload"):
 		game.reload_weapon()
+	if is_wolf and Input.is_action_just_pressed("aim"):game.strong_attack()
 	if Input.is_action_pressed("fire") and shot_cooldown <= 0:
 		game.attack()
 	if action_time <= 0:
@@ -333,7 +381,7 @@ func _physics_process(delta):
 	camera.fov = lerpf(camera.fov, 53.0 if Input.is_action_pressed("aim") and not is_wolf else 74.0, delta * 10)
 
 func begin_roll():
-	if wall_holding or rolling or roll_cooldown > 0 or not is_wolf or not is_on_floor() or game.menu_open or not game.running or action_time > 0: return false
+	if wall_holding or rolling or air_attacking or roll_cooldown > 0 or not is_wolf or not is_on_floor() or game.menu_open or not game.running or action_time > 0: return false
 	if not anim or not anim.has_animation("special_attack"): return false
 	var axis = (Input.get_vector("left", "right", "forward", "backward") + move_axis).limit_length(1)
 	var keep_sprint = normal_run_toggled
@@ -402,3 +450,33 @@ func end_wall_hold():
 	wall_hold_remaining = 0
 	wall_hold_normal = Vector3.ZERO
 	action_time = 0
+
+func begin_air_attack():
+	if game.application_suspended or not can_wolf_run() or not wolf_running or is_on_floor():return false
+	if air_attacking or rolling or wall_holding or shot_cooldown>0 or roar_effect.active:return false
+	if not anim.has_animation("airborne_attack"):return false
+	air_attack_duration=anim.get_animation("airborne_attack").length
+	if air_attack_duration<=0:return false
+	air_attacking=true;air_attack_hit=false;air_attack_elapsed=0
+	air_attack_direction=-global_basis.z;wolf_running=false;normal_run_toggled=false
+	shot_cooldown=air_attack_duration+float(game.equipment.rules.mobileAdaptation.airAttackRecovery)
+	action_time=air_attack_duration;current_clip="";play_clip("airborne_attack")
+	return true
+
+func advance_air_attack(delta):
+	if not air_attacking:return
+	if not is_wolf or game.menu_open or not game.running or not game.equipment.has_wolf_ability():end_air_attack();return
+	air_attack_elapsed+=delta
+	if not air_attack_hit and air_attack_elapsed>=air_attack_duration*float(game.equipment.rules.mobileAdaptation.airAttackHitFraction):
+		air_attack_hit=true
+		game.wolf_melee_hit(int(game.equipment.rules.mobileAdaptation.airAttackDamage),float(game.equipment.rules.mobileAdaptation.airAttackRange),"Havada güçlü saldırı")
+	if air_attack_elapsed>=air_attack_duration or is_on_floor():end_air_attack()
+
+func end_air_attack():
+	if not air_attacking:return
+	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
+
+func reset_combat():
+	reset_locomotion();shot_cooldown=0;action_time=0;weapon_action_time=0;roll_cooldown=0;wall_hold_cooldown=0
+	if is_instance_valid(roar_effect):roar_effect.stop();roar_effect.cooldown=0
+	current_clip="";play_clip("idle")

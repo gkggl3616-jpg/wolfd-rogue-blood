@@ -29,11 +29,13 @@ func run():
 	game.show_home();await capture("lobby-1280")
 	game.pc_panel.choose_section();await capture("extra-sections-1280");game.pc_panel.close_modal()
 	game.show_library("Envanter");await capture("inventory-1280")
+	game.library_panel.selected=game.book.weapon(game.book.slots.pistol);game.library_panel.detail_helper.info_tab="properties";game.library_panel.detail_helper.refresh_grid();await capture("weapon-properties-1280")
+	game.library_panel.target_primary_slot="secondary_primary";game.equip_item_from_ui(game.book.weapon(game.book.slots.primary),"secondary_primary");game.library_panel.selected=game.book.weapon(game.book.slots.primary);game.library_panel.refresh();await capture("secondary-slot-1280")
 	root.size=Vector2i(1024,768);await capture("inventory-native-1024")
 	root.size=Vector2i(1920,1080);await capture("inventory-1920")
 	root.size=Vector2i(1280,720)
-	for page in ["Mağaza","Karakterler","Dövmeler","Efektler","power"]:
-		game.library_panel.navigate(page);await capture({"Mağaza":"shop","Karakterler":"characters","Dövmeler":"tattoos","Efektler":"effects","power":"power"}[page]+"-1280")
+	for page in ["Mağaza","Karakterler","Dövmeler","Efektler","power","Kartlar"]:
+		game.library_panel.navigate(page);await capture({"Mağaza":"shop","Karakterler":"characters","Dövmeler":"tattoos","Efektler":"effects","power":"power","Kartlar":"cards"}[page]+"-1280")
 	game.library_panel.page = "Ayarlar";game.library_panel.refresh();await capture("settings-1280")
 	for tab in ["Kontrol","Görüntü","Diğer"]:
 		game.library_panel.settings_tab=tab;game.library_panel.refresh();await capture({"Kontrol":"settings-controls","Görüntü":"settings-graphics","Diğer":"settings-other"}[tab]+"-1280")
@@ -59,6 +61,8 @@ func run():
 	game.player.action_time = 0;game.attack()
 	await capture("wolf-wall-hold-1280")
 	Input.action_release("forward")
+	game.player.reset_combat();game.player.position=Vector3(0,3,0);game.player.velocity=Vector3.ZERO
+	Input.action_press("forward");await frames(2);game.player.wolf_running=true;game.strong_attack();await capture("airborne-attack-1280");Input.action_release("forward")
 	game.show_maps()
 	for index in range(game.mode_picker.item_count):
 		if game.mode_picker.get_item_id(index) == 1000: game.mode_picker.select(index)

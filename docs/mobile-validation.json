@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-04T19:17:52.654428+00:00",
+  "utc": "2026-11-05T04:33:47.602690+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "2ea01e57db1919a7c2a2ce63ab9e2f001231c951ff2f84f94989968561392921",
+  "runtimeCodeSha256": "bd9739a658abe951e4d2eb8d83578c0e6e7b5100f6e0788d01bb0e9c84ed1f4e",
   "passed": true,
   "steps": [
     {
@@ -24,6 +24,12 @@
     },
     {
       "name": "persistence",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "local_panel_protocol",
       "passed": true,
       "exitCode": 0,
       "errors": []
@@ -54,6 +60,12 @@
     },
     {
       "name": "wall_hold",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "combat_continuation",
       "passed": true,
       "exitCode": 0,
       "errors": []

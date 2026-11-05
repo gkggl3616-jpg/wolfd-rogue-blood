@@ -53,9 +53,11 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.z = 0
 		if attack_clock <= 0:
-			game.take_damage(8)
-			attack_clock = 1.1
-			play("attack")
+			var query=PhysicsRayQueryParameters3D.create(global_position+Vector3.UP,game.player.global_position+Vector3.UP,1,[get_rid()])
+			var hit=get_world_3d().direct_space_state.intersect_ray(query)
+			if hit and hit.collider==game.player:
+				game.take_damage(8);attack_clock=1.1;play("attack")
+			else:play("idle")
 		elif attack_clock < 0.3:
 			play("idle")
 	if not is_on_floor():

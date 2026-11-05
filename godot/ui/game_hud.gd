@@ -48,8 +48,11 @@ func _ready():
 	menu=Art.icon_button(pc_layer,"wt_interface/all/a_lb_icon_option.dtx",Vector2.ZERO,"Menü",game.pause_game)
 	inventory=Art.icon_button(pc_layer,"wt_interface/all/a_lb_icon_inven.dtx",Vector2.ZERO,"Envanter",func():game.show_library("Envanter"))
 	game.gui_touch_blockers.append(menu);game.gui_touch_blockers.append(inventory)
-	for row in [["1  ANA","primary"],["2  İKİNCİ","pistol"],["3  BIÇAK","knife"],["4  BOMBA","grenade"]]:
-		var button=Art.button(pc_layer,row[0],Vector2.ZERO,Vector2(82,28),func():game.equip_slot(row[1]));slots.append(button);game.gui_touch_blockers.append(button)
+	for row in [["1  ANA","primary"],["2  İKİNCİ","pistol"],["5  BIÇAK","knife"],["4  BOMBA","grenade"]]:
+		var button=Art.button(pc_layer,row[0],Vector2.ZERO,Vector2(82,28),func():
+			if row[1]=="primary":game.cycle_primary()
+			else:game.equip_slot(row[1])
+		);slots.append(button);game.gui_touch_blockers.append(button)
 	resized.connect(arrange);arrange();refresh_from_game()
 
 func arrange():

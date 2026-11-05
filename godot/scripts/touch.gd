@@ -60,6 +60,7 @@ func _process(_delta):
 	buttons[11].visible = game.player.is_wolf
 	buttons[5].get_child(0).text = "KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞ"
 	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
+	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"
 	if get_viewport_rect().size != last_size:
 		resize()
 	if not visible:

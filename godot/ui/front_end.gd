@@ -20,12 +20,14 @@ var pending_refresh = false
 var building = false
 var source_layouts = []
 var wallet_label: Label
+var profile_label: Label
 var notice: Label
 var detail_helper
 var modal: Control
 var selected = {}
 var search_query = ""
 var filter_id = "all"
+var target_primary_slot = "primary"
 var offset = 0
 var room_title: LineEdit
 var room_mode: OptionButton
@@ -66,7 +68,7 @@ func refresh():
 		input_id=focused.get_meta("navigation_input","");caret=focused.caret_column
 	if page=="create_room" and is_instance_valid(room_title) and room_title.is_inside_tree():room_draft.title=room_title.text
 	for child in get_children(): remove_child(child);child.queue_free()
-	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null
+	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null;profile_label=null
 	var dimensions = get_viewport_rect().size
 	virtual_width = 1024.0
 	var overlay=game.running and page in ["pause","Ayarlar","maps"]
@@ -99,7 +101,7 @@ func text(parent,value,at,dimensions,font_size=12,color=Color.WHITE):
 	var node = Art.label(value,dimensions,font_size,color);node.position = at;parent.add_child(node);return node
 
 func paragraph(parent,value,at,dimensions,font_size=12):
-	var label = text(parent,value,at,dimensions,font_size);label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	var label = text(parent,"",at,dimensions,font_size);label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART;label.text=str(value);label.size=dimensions
 	return label
 
 func button(parent,title,at,dimensions,callback,enabled=true):
@@ -113,10 +115,10 @@ func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 func build_header():
 	# Compact account strip and 32px source icon states, as in references 1/4/5.
 	var mark=ColorRect.new();mark.color=Color("222628");mark.size=Vector2(1024,58);mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(mark)
-	text(canvas,game.profile_name,Vector2(12,10),Vector2(242,19),13)
+	profile_label=text(canvas,game.profile_name,Vector2(12,10),Vector2(242,19),13)
 	text(canvas,"YEREL PROFİL",Vector2(12,31),Vector2(242,17),10,Color("9ca9ab"))
 	wallet_label=text(canvas,"",Vector2(265,5),Vector2(280,50),11,Color("c1c6c8"))
-	var entries = [["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Güç","power","wc"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Karakter","Karakterler","charactercard"],["Diğer","","event"],["Lobi","lobby","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
+	var entries = [["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Güç","power","wc"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Kartlar","Kartlar","charactercard"],["Diğer","","event"],["Lobi","lobby","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
 	for i in range(entries.size()):
 		var entry = entries[i]
 		var node=Art.icon_button(canvas,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(638+i*34,8),entry[0],func():
@@ -135,6 +137,7 @@ func choose_section():
 		button(modal,entry[0],Vector2(296+(i%2)*230,292+int(i/2)*38),Vector2(200,30),func():close_modal();navigate(entry[1]))
 
 func _process(_delta):
+	if is_instance_valid(profile_label):profile_label.text=game.profile_name
 	if is_instance_valid(wallet_label): wallet_label.text = "ALTIN:  %d     KP:  %d\nNAKİT:  %d     GP:  %d\nÇevrimiçi hesap bağlı değil" % [game.wallet.gold,game.wallet.kp,game.wallet.cash,game.wallet.gp]
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 

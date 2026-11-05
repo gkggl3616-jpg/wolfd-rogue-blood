@@ -3,6 +3,7 @@ const Art=preload("res://ui/source_theme.gd")
 const Layout=preload("res://ui/source_layout.gd")
 const Collection=preload("res://ui/collection_page.gd")
 const Options=preload("res://ui/settings_page.gd")
+const Cards=preload("res://ui/card_page.gd")
 var ui
 var view
 
@@ -17,6 +18,7 @@ func build():
 		"pause":pause_page()
 		"result":result_page()
 		"profile":profile()
+		"Kartlar":ui.detail_helper=Cards.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"Ayarlar":ui.detail_helper=Options.new();ui.detail_helper.ui=ui;ui.detail_helper.build_native()
 		"Mağaza","Envanter","Karakterler","Dövmeler","Efektler","power":ui.detail_helper=Collection.new();ui.detail_helper.ui=ui;ui.detail_helper.build_native()
 		"admin":ui.build_admin()

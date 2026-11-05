@@ -67,6 +67,7 @@ var tree_was_paused = false
 var gui_touch_blockers = []
 var wallet_storage_path = "user://wallet.json"
 var wallet_save_blocked = false
+var current_loadout_slot = "primary"
 var local_room = {}
 var last_result = {}
 var menu_backdrop: ColorRect
@@ -243,25 +244,39 @@ func apply_settings():
 	for light in find_children("*", "DirectionalLight3D", true, false): light.shadow_enabled = bool(book.settings.shadows)
 	if not test_mode: Engine.max_fps = int(book.settings.fps)
 
+func activate_prepared_weapon(item,prepared):
+	weapon_ammo[current_weapon_id]={"ammo":ammo,"reserve":reserve}
+	player.apply_prepared_weapon(prepared)
+	current_weapon_id=item.id
+	var stored=weapon_ammo.get(item.id,{"ammo":weapon_capacity(),"reserve":weapon_capacity()*4})
+	ammo=int(stored.ammo);reserve=int(stored.reserve);reloading=0;update_hud()
+
 func equip_library_weapon(item):
-	if not book.owned.get(item.id, false): return false
-	weapon_ammo[current_weapon_id] = {"ammo": ammo, "reserve": reserve}
-	if not player.equip_library_weapon(item): return false
-	current_weapon_id = item.id
-	var stored = weapon_ammo.get(item.id, {"ammo": weapon_capacity(), "reserve": weapon_capacity() * 4})
-	ammo = int(stored.ammo);reserve = int(stored.reserve);reloading = 0;update_hud();return true
+	if not book.owned.get(item.id,false):return false
+	var prepared=player.prepare_library_weapon(item)
+	if prepared.is_empty():return false
+	activate_prepared_weapon(item,prepared);return true
 
 func select_library_character(entry):
-	if entry.get("available") != true: return false
-	if not book.choose_character(entry.id): announce("Karakter seçimi kaydedilemedi.");return false
-	character_info = entry;player.load_character(entry);return true
+	if entry.get("available")!=true:return false
+	var models=player.prepare_character(entry)
+	if models.is_empty():return false
+	if not book.choose_character(entry.id):
+		for model in models:model.free()
+		announce("Karakter seçimi kaydedilemedi.");return false
+	character_info=entry;player.apply_prepared_character(models);return true
 
 func weapon_capacity():
 	return int(player.weapon_info.get("shotsPerClip", 30))
 
 func equip_slot(slot):
-	var item = book.weapon(book.slots.get(slot, ""))
-	if not item.is_empty(): equip_library_weapon(item)
+	var item=book.weapon(book.slots.get(slot,""))
+	if item.is_empty() or not equip_library_weapon(item):return false
+	current_loadout_slot=slot;return true
+
+func cycle_primary():
+	if current_loadout_slot=="primary" and book.slots.get("secondary_primary","")!="":return equip_slot("secondary_primary")
+	return equip_slot("primary")
 
 func play_source_effect(entry, where):
 	var sprite = AnimatedSprite3D.new(); var frames = SpriteFrames.new();frames.set_animation_loop("default", false);frames.set_animation_speed("default", float(entry.fps))
@@ -430,7 +445,7 @@ func start_round():
 	reloading = 0
 	player.position = Vector3(0, 0.1, 8)
 	player.velocity = Vector3.ZERO
-	player.reset_locomotion()
+	player.reset_combat()
 	player.yaw = 0
 	player.rotation = Vector3.ZERO
 	running = true
@@ -459,7 +474,8 @@ func _input(event):
 		show_library("Envanter")
 	if event is InputEventKey and event.pressed and not event.echo and not menu_open:
 		var keys = {KEY_1: "primary", KEY_2: "pistol", KEY_4: "grenade", KEY_5: "knife"}
-		if keys.has(event.physical_keycode): equip_slot(keys[event.physical_keycode])
+		if event.physical_keycode==KEY_1:cycle_primary()
+		elif keys.has(event.physical_keycode):equip_slot(keys[event.physical_keycode])
 	if event is InputEventMouseButton and menu_open:
 		Input.action_release("fire")
 	if event is InputEventKey and event.pressed and event.physical_keycode == KEY_F6:
@@ -553,7 +569,7 @@ func spawn_enemy():
 
 func attack():
 	if application_suspended: return
-	if player.rolling or player.wall_holding: return
+	if player.rolling or player.wall_holding or player.air_attacking or player.roar_effect.active: return
 	if not running or menu_open or reloading > 0 or player.shot_cooldown > 0:
 		return
 	if player.is_wolf and player.begin_wall_hold():
@@ -569,18 +585,11 @@ func attack():
 	player.current_clip = ""
 	player.play_clip("attack")
 	if player.is_wolf:
-		var body_attack = player.wolf_running and equipment.has_wolf_ability()
+		var body_attack = player.wolf_running and equipment.has_wolf_ability() and player.anim.has_animation("body_attack")
 		if body_attack:
 			player.play_clip("body_attack")
 			player.wolf_running = false
-		for enemy in enemies.get_children():
-			var offset = enemy.global_position - player.global_position
-			if offset.length() < 2.8 and offset.normalized().dot( - player.global_basis.z) > 0.1:
-				var query = PhysicsRayQueryParameters3D.create(player.global_position + Vector3.UP, enemy.global_position + Vector3.UP, 3, [player.get_rid()])
-				var hit = get_world_3d().direct_space_state.intersect_ray(query)
-				if hit and hit.collider == enemy:
-					enemy.damage(65 if body_attack else 45)
-					announce("Vücut saldırısı" if body_attack else "Pençe isabeti")
+		wolf_melee_hit(65 if body_attack else 45,2.8,"Vücut saldırısı" if body_attack else "Pençe isabeti")
 		return
 	if kind != "knife": ammo -= 1
 	player.play_weapon_clip("fire", float(player.weapon_info.fireIntervalMs) / 1000.0)
@@ -604,6 +613,21 @@ func attack():
 	flash.omni_range = 3
 	transient_effects.add_child(flash)
 	get_tree().create_timer(0.06).timeout.connect(flash.queue_free)
+
+func wolf_melee_hit(amount,reach,caption):
+	if not running or menu_open or application_suspended:return
+	for enemy in enemies.get_children():
+		if not running:break
+		var offset=enemy.global_position-player.global_position
+		if offset.length()>=reach or offset.normalized().dot(-player.global_basis.z)<=0.1:continue
+		var query=PhysicsRayQueryParameters3D.create(player.global_position+Vector3.UP,enemy.global_position+Vector3.UP,3,[player.get_rid()])
+		var hit=get_world_3d().direct_space_state.intersect_ray(query)
+		if hit and hit.collider==enemy:enemy.damage(amount);announce(caption)
+
+func strong_attack():
+	if not running or menu_open or application_suspended:return false
+	if player.begin_air_attack():announce("Havada güçlü saldırı");return true
+	return false
 
 func reload_weapon():
 	if not running or menu_open:
@@ -671,8 +695,9 @@ func save_wallet(candidate = null):
 	return AtomicStore.write_json(wallet_storage_path, candidate)
 
 func grant_money(currency, amount, reason):
-	if not wallet.has(currency) or amount <= 0 or amount > 1000000:
+	if not wallet.has(currency) or not valid_balance(amount) or amount < 1 or amount > 1000000:
 		return false
+	amount=int(amount)
 	if remote_player != "" and not OS.has_feature("android"):
 		grant_queue.append({"playerId": remote_player, "currency": currency, "amount": amount, "reason": reason, "requestId": "godot-%s-%s" % [Time.get_ticks_usec(), randi()]})
 	else:
@@ -686,28 +711,33 @@ func grant_money(currency, amount, reason):
 	return true
 
 func on_poll(_result, code, _headers, body):
-	if code != 200:
+	if _result != HTTPRequest.RESULT_SUCCESS or code != 200:
 		return
 	var state = JSON.parse_string(body.get_string_from_utf8())
 	if not state is Dictionary or not state.get("players") is Array or state.players.is_empty():
 		return
 	var entry = state.players[0]
-	remote_player = entry.id
-	remote_token = state.token
-	profile_name = entry.name + " · PC paneli"
+	if not entry is Dictionary or not entry.get("id") is String or entry.id.is_empty() or not entry.get("name") is String:return
+	if not state.get("token") is String or state.token.is_empty():return
+	var candidate={}
 	for key in wallet:
-		wallet[key] = int(entry.get(key, 0))
+		var amount=entry.get(key)
+		if not valid_balance(amount):return
+		candidate[key]=int(amount)
+	remote_player=entry.id;remote_token=state.token;profile_name=entry.name+" · PC paneli";wallet.merge(candidate,true)
 	update_hud()
+
+func valid_balance(value):
+	return (value is int or value is float) and is_finite(float(value)) and value>=0 and value<=1000000000 and value==floor(float(value))
 
 func on_grant(_result, code, _headers, body):
 	grant_busy = false
 	if grant_queue.is_empty():
 		return
 	var grant = grant_queue.pop_front()
-	if code == 200:
-		var result = JSON.parse_string(body.get_string_from_utf8())
-		if result is Dictionary:
-			wallet[grant.currency] = int(result.get("balance_after", wallet[grant.currency]))
+	var result=JSON.parse_string(body.get_string_from_utf8()) if _result==HTTPRequest.RESULT_SUCCESS and code==200 else null
+	var valid=result is Dictionary and result.get("request_id")==grant.requestId and result.get("player_id")==grant.playerId and result.get("currency")==grant.currency and result.get("amount")==grant.amount and valid_balance(result.get("balance_after"))
+	if valid:wallet[grant.currency]=int(result.balance_after)
 	else:
 		announce("PC paneli işlemi doğrulanamadı. Otomatik tekrar verilmedi.")
 	update_hud()
@@ -718,13 +748,11 @@ func show_admin():
 func show_inventory():
 	open_interface("power")
 
-func equip_item_from_ui(item):
-	if not book.owned.get(item.get("id",""),false) or not ResourceLoader.exists(item.get("asset","")):return false
-	var packed=load(item.asset) as PackedScene
-	if packed==null:return false
-	var probe=packed.instantiate()
-	var valid=not probe.find_children("*","AnimationPlayer",true,false).is_empty()
-	probe.free()
-	if not valid:return false
-	if not book.equip(item.id):return false
-	return equip_library_weapon(item)
+func equip_item_from_ui(item,target_slot=""):
+	if not book.owned.get(item.get("id",""),false):return false
+	var prepared=player.prepare_library_weapon(item)
+	if prepared.is_empty():return false
+	if not book.equip(item.id,target_slot):prepared.model.free();return false
+	activate_prepared_weapon(item,prepared)
+	current_loadout_slot=target_slot if target_slot!="" else book.slot_for(item.category)
+	return true
