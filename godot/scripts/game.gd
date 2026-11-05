@@ -76,6 +76,7 @@ var health = 100
 var ammo = 30
 var reserve = 120
 var reloading = 0.0
+var deaths=0
 var kills = 0
 var time_left = 90.0
 var spawn_clock = 0.0
@@ -532,7 +533,7 @@ func start_round(with_selection=false):
 	ammo = weapon_capacity()
 	reserve = ammo * 4
 	weapon_ammo.clear()
-	kills = 0
+	kills = 0;deaths=0
 	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear()
 	match_id=Crypto.new().generate_random_bytes(16).hex_encode()
 	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
@@ -914,7 +915,7 @@ func reload_weapon():
 func enemy_defeated(context={}):
 	if not is_combat_active():return
 	kills += 1
-	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0})
+	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0,"weaponId":current_weapon_id if not player.is_wolf else "","attackerTeam":local_room.get("team","blue"),"targetTeam":"red" if local_room.get("team","blue")=="blue" else "blue"})
 	if kill_feed.size()>5:kill_feed.resize(5)
 	grant_money("cash", 25, "Arena hedef ödülü")
 	grant_money("gp", roundi(10*(1.0+float(power_bonus("bag","localGpBonus",0)))), "Arena gelişim ödülü")
@@ -926,13 +927,16 @@ func enemy_defeated(context={}):
 		end_round("Arena tamamlandı")
 	update_hud()
 
-func take_damage(amount, source_position=null):
+func take_damage(amount, source_position=null, attacker={}):
 	if not is_combat_active() or amount<=0:
 		return
 	if player.guard_remaining>0:amount=maxi(1,int(ceil(amount*0.5)))
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		deaths+=1
+		kill_feed.push_front({"attacker":attacker.get("name","Bot"),"target":profile_name,"headshot":false,"weaponId":"","weapon":attacker.get("weapon","Pençe"),"attackerTeam":"red" if local_room.get("team","blue")=="blue" else "blue","targetTeam":local_room.get("team","blue"),"remaining":6.0})
+		if kill_feed.size()>5:kill_feed.resize(5)
 		if hunt.active:finish_hunt_round(false)
 		else:end_round("Yenildin")
 

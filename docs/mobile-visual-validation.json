@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "bd9c24599b12f998965f58638bb737feeb48fafb58f42e9d74eddce16b8e4f51"
+      "sha256": "0d654d96bffe603729b677d093c3363666c950b52c5301e2d7f41ab445c62fc9"
     },
     {
       "height": 720,
@@ -220,7 +220,7 @@
         "interface/charequipmentpage"
       ],
       "width": 1280,
-      "sha256": "9abebb948f32d7de627b58f6230edd526786f50f9488890f8d4044e5b4f64cc2"
+      "sha256": "767660622a83eeea3afeacaea8162ebe8d4583b63550e635d6cd13872bf7b99b"
     },
     {
       "height": 720,
@@ -243,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "978ad5fbd5a1a833b8d584160c185358041a1e61d36768563061072b387b4d3d"
+      "sha256": "53c2ca89589b03f46abed74e502d9eef6aca4e3e3e5d9c2d3ff85cbe723371f2"
     },
     {
       "height": 720,
@@ -600,7 +600,7 @@
       "path": "docs/review/pc-native/human-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "427cf59e025f927fde8fa0369bd7d037575979034b2d2bbebd0fdc5da709720e"
+      "sha256": "453b63be97da22b3fe69acb00226584f7a975e5197bb960c5a842c6c437df836"
     },
     {
       "height": 720,
@@ -627,7 +627,7 @@
       "path": "docs/review/pc-native/wolf-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a5e6c53ddc3aec052e6f35d2ed8b1ac58438cc3d4a7e55585c597246aa410290"
+      "sha256": "81e233d3ce7b985ceb562efc7dbff71898e131f6dbf71ecf1a7a1688613623be"
     },
     {
       "height": 720,
@@ -635,7 +635,7 @@
       "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "5a24a4c2774a67fbc39512e36b94cc84bb308cc52f31aebdaaf8ae6328d0cd5b"
+      "sha256": "dd1999850246cd9609dd1941c6472114703d474bacf2d1fd672b791ff575f631"
     },
     {
       "height": 720,
@@ -643,7 +643,7 @@
       "path": "docs/review/pc-native/airborne-attack-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b72320a5628ec55f8228ad597d027a5ed3352a0b16b3524fe310d426e5272d08"
+      "sha256": "0a061ae9e30e72dc6b9bf74fcc774cb69370097bb5f70c40167b628400a6cda8"
     },
     {
       "height": 720,
@@ -678,7 +678,7 @@
       "path": "docs/review/pc-native/offline-container-bots-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b23821626080924813fa7975e24865df817720ff62c257864d093e49e324bf95"
+      "sha256": "55860852ab401b528f642f3dc5b0f3870c70197319c6336d0f255edaeacfb0b5"
     },
     {
       "height": 720,
@@ -705,7 +705,7 @@
       "path": "docs/review/pc-native/human-bot-hard-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f6e855e05caa811b8e9631a347a35e2e4ea838c47eb3db1767b16091d43afc10"
+      "sha256": "3f479bee0029a43bf25bbc080b5385c912a3fd304bda280bf0578eba2c4a3db6"
     },
     {
       "height": 720,
@@ -713,7 +713,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "afa3820b5109b9c6bf0cec4497c21bffa5b0b6bcb8c4b1729c5615b90a8fdc0a"
+      "sha256": "f2302293e688a901ffa4141374ee5ae69aac22841de1395394c1ae372df449a5"
     },
     {
       "height": 992,
@@ -721,7 +721,7 @@
       "path": "docs/review/pc-native/wolf-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "74bf2b755fcc6c966000195b45cdd3fe28478592421eaa03b2f7b1637f3f6741"
+      "sha256": "c8b3b15fd7417f3cca9f6e62f172f5c15ce0a6645ffa3d8e692efae9e841e22c"
     },
     {
       "height": 992,
@@ -729,7 +729,7 @@
       "path": "docs/review/pc-native/human-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "fd75002102d389cd4028e30fb71959e092196aa63268debd510538c805607486"
+      "sha256": "001ec45c658bbf4cc7a513047a9bfe680bae8a9573e9d455c5b84bbff81c00f2"
     },
     {
       "height": 1080,
@@ -793,5 +793,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "a9c30c1f96c5d61fc211c3e03b1806685a1d892fb72fdcd3642aef3859c66c3e"
+  "runtimeCodeSha256": "a22ff3429acd4750d02b389cd6b5833d5d5d79407baec840f2bf1e763d047197"
 }

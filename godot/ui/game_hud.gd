@@ -39,6 +39,9 @@ var feedback
 var class_icon:TextureRect
 var scoreboard_button
 var feed:Label
+var feed_layer
+var feed_signature=""
+var opposition_icon
 var guide:Label
 var scope:ColorRect
 
@@ -67,15 +70,16 @@ func _ready():
 	weapon_name=Art.label("",Vector2(260,20),12);weapon_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;pc_layer.add_child(weapon_name)
 	score_view=part("interface/hudscore",Vector2(312,64),["Mode","RedTeamScore","BlueTeamScore"])
 	var background=Art.sprite(score_view,"wt_interface/play/common/pl_score.dtx",Vector2.ZERO,Vector2(312,60),Rect2(0,0,312,60))
-	background.modulate=Color(0.4,0.42,0.44,0.9);score_view.move_child(background,0)
+	background.modulate=Color("748294");score_view.move_child(background,0)
 	for row in [[5,Color("602832")],[255,Color("214554")]]:
 		var plate=ColorRect.new();plate.color=row[1];plate.position=Vector2(row[0],5);plate.size=Vector2(55,55);plate.mouse_filter=Control.MOUSE_FILTER_IGNORE;score_view.add_child(plate)
 	class_icon=Art.sprite(score_view,"res://assets/ui/form-icons/human.png",Vector2(5,5),Vector2(55,55))
-	Art.sprite(score_view,"res://assets/ui/form-icons/wolf.png",Vector2(255,5),Vector2(55,55))
+	opposition_icon=Art.sprite(score_view,"res://assets/ui/form-icons/human.png",Vector2(255,5),Vector2(55,55))
+	var mode_label=score_view.find_widget("Mode");mode_label.position=Vector2(60,5);mode_label.size=Vector2(190,19)
 	var kills=score_view.find_widget("RedTeamScore");kills.position=Vector2(98,28);kills.size=Vector2(45,23);kills.alignment=3;kills.modulate=Color("f32639")
 	var goal=score_view.find_widget("BlueTeamScore");goal.position=Vector2(177,28);goal.size=Vector2(45,23);goal.alignment=3;goal.modulate=Color("59c1e4")
-	var slash=Art.label("/",Vector2(18,23),18);slash.position=Vector2(148,27);slash.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;score_view.add_child(slash)
-	score=Art.label("HEDEF",Vector2(78,16),10,Color("bdc6c9"));score.position=Vector2(175,8);score_view.add_child(score)
+	var slash=Art.label(">",Vector2(18,23),18);slash.position=Vector2(148,27);slash.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;score_view.add_child(slash)
+	score=Art.label("",Vector2(78,16),10,Color("bdc6c9"));score.position=Vector2(175,8);score_view.add_child(score)
 	timer_view=part("interface/hudtimer",Vector2(86,41),["Colon","Minute","Second"])
 	var minute=timer_view.find_widget("Minute");minute.position=Vector2(0,4);minute.size=Vector2(32,23);minute.alignment=2
 	var second=timer_view.find_widget("Second");second.position=Vector2(48,4);second.size=Vector2(32,23);second.alignment=1
@@ -91,7 +95,8 @@ func _ready():
 	game.gui_touch_blockers.append(menu);game.gui_touch_blockers.append(inventory)
 	scoreboard_button=round_button(Vector2(42,42));scoreboard_button.tooltip_text="Maç durumu";scoreboard_button.pressed.connect(func():game.open_interface("scoreboard"));pc_layer.add_child(scoreboard_button)
 	Art.sprite(scoreboard_button,"wt_interface/all/a_lb_icon_record.dtx",Vector2(9,9),Vector2(24,24),Rect2(4,0,24,22));game.gui_touch_blockers.append(scoreboard_button)
-	feed=Art.label("",Vector2(365,122),12);feed.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;pc_layer.add_child(feed)
+	feed=Art.label("",Vector2(365,122),12);feed.hide();pc_layer.add_child(feed)
+	feed_layer=Control.new();feed_layer.mouse_filter=Control.MOUSE_FILTER_IGNORE;pc_layer.add_child(feed_layer)
 	guide=Art.label("",Vector2(700,44),16,Art.GOLD);guide.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(guide)
 	var number=0
 	for slot in ["primary","pistol","knife","grenade"]:
@@ -124,7 +129,7 @@ func arrange():
 	preview_name.position=Vector2(native.x*0.5-250,8)
 	map_name.position=Vector2(native.x*0.82,7);radar.position=Vector2(native.x*0.82,28)
 	menu.position=Vector2(native.x*0.05,7);inventory.position=Vector2(native.x*0.05+48,7)
-	scoreboard_button.position=Vector2(native.x*0.05+96,7);feed.position=Vector2(native.x-389,170)
+	scoreboard_button.position=Vector2(native.x*0.05+96,7);feed.position=Vector2(native.x-389,170);feed_layer.position=Vector2(native.x-389,170)
 	guide.position=Vector2(native.x*0.5-350,native.y-150)
 	for i in range(slots.size()):slots[i].position=Vector2(native.x*0.5-104+i*52,native.y-48)
 	for i in range(power_buttons.size()):power_buttons[i].position=Vector2(native.x*0.37+i*55,native.y-107)
@@ -139,12 +144,10 @@ func refresh_from_game():
 		button.tooltip_text=game.power_item(id).get("name","")
 	cross.visible=visible and not game.player.is_wolf
 	scope.visible=visible and game.player.is_scoped();cross.visible=cross.visible and not scope.visible
-	var messages=[]
-	for entry in game.kill_feed:messages.append("%s  %s  %s" % [entry.attacker,"[KAFADAN]" if entry.headshot else "›",entry.target])
-	feed.text="\n".join(messages)
+	refresh_feed()
 	guide.visible=game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
 	guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active]
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths]
 	if state==last_state:return
 	last_state=state
 	health_view.set_value("HealthPoint",game.health)
@@ -152,12 +155,14 @@ func refresh_from_game():
 	weapon_view.set_value("CurrentBullet",game.ammo);weapon_view.set_value("MaxBullet",game.reserve)
 	weapon_name.text="KURT" if game.player.is_wolf else ("ŞARJÖR…" if game.reloading>0 else game.player.weapon_info.get("name",""))
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
-	score_view.set_value("RedTeamScore",game.kills);score_view.set_value("BlueTeamScore",10);score_view.set_value("Mode","Yerel Eğitim")
+	var blue=game.local_room.get("team","blue")=="blue"
+	score_view.set_value("RedTeamScore",game.deaths if blue else game.kills);score_view.set_value("BlueTeamScore",game.kills if blue else game.deaths);score_view.set_value("Mode","Yerel Eğitim   10 Puan")
 	if game.hunt.active:
 		score_view.set_value("RedTeamScore",game.hunt.round_kills);score_view.set_value("BlueTeamScore",game.LocalHunt.TARGET);score_view.set_value("Mode","Kurt Avı · %d/3" % game.hunt.round_number)
 	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE:score_view.set_value("Mode","Kurt Savaşı")
 	if game.tutorial.active:score_view.set_value("Mode","Öğretici Mod")
 	class_icon.texture=Art.texture("res://assets/ui/form-icons/wolf.png" if game.player.is_wolf else "res://assets/ui/form-icons/human.png")
+	opposition_icon.texture=class_icon.texture
 	timer_view.visible=not game.exploring and not game.tutorial.active;score_view.visible=not game.exploring
 	preview_name.visible=game.exploring;preview_name.text=game.preview_name+" · GEZİNTİ"
 	map_name.text=game.preview_name
@@ -169,3 +174,18 @@ func refresh_from_game():
 		slots[i].modulate=Color.WHITE if id==game.current_weapon_id else Color(0.8,0.85,0.85,0.5)
 
 func _process(_delta):refresh_from_game()
+
+func refresh_feed():
+	var signature=JSON.stringify(game.kill_feed.map(func(row):return [row.attacker,row.target,row.get("weaponId",""),row.get("headshot",false)]))
+	if signature==feed_signature:return
+	feed_signature=signature
+	for child in feed_layer.get_children():feed_layer.remove_child(child);child.queue_free()
+	for i in range(mini(5,game.kill_feed.size())):
+		var entry=game.kill_feed[i];var y=i*28
+		var left=Art.label(entry.attacker,Vector2(130,25),12,Color("e43148") if entry.get("attackerTeam","blue")=="red" else Color("66c8ef"));left.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;left.position=Vector2(0,y);feed_layer.add_child(left)
+		var item=game.book.weapon(entry.get("weaponId",""));var source=item.get("icon","wt_interface/killsystemmessage/pl_k_wolf.dtx")
+		var icon=Art.sprite(feed_layer,source,Vector2(136,y+2),Vector2(91,21),Rect2(0,0,210,75) if not item.is_empty() else Rect2());icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;icon.modulate=left.get_theme_color("font_color")
+		var shader=Shader.new();shader.code="shader_type canvas_item; void fragment(){COLOR=vec4(COLOR.rgb,texture(TEXTURE,UV).a*COLOR.a);}";var material=ShaderMaterial.new();material.shader=shader;icon.material=material
+		var right=Art.label(entry.target,Vector2(130,25),12,Color("e43148") if entry.get("targetTeam","red")=="red" else Color("66c8ef"));right.position=Vector2(233,y);feed_layer.add_child(right)
+		if entry.get("headshot",false):
+			var head=Art.label("☠",Vector2(20,22),14,Color("e8c889"));head.position=Vector2(214,y);feed_layer.add_child(head)

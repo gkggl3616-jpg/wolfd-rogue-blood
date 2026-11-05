@@ -49,7 +49,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.13 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.13 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · 0.14 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.14 geliştirme")
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)

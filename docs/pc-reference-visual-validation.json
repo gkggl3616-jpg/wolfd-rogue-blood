@@ -7,7 +7,7 @@
       "path": "docs/review/pc-reference/entry-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bd9c24599b12f998965f58638bb737feeb48fafb58f42e9d74eddce16b8e4f51"
+      "sha256": "0d654d96bffe603729b677d093c3363666c950b52c5301e2d7f41ab445c62fc9"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/pc-reference/second-password-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7489b6c8521b09f981531c569c16ca670ae3e72e5a18de3b21f22f6461980cfc"
+      "sha256": "5213a76d9e6c929c492baf41ac35650181e4f96cedfdacc9bce62786da374c28"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/pc-reference/box-reward-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ff1d4d92885c0776a09fdb769d02ed002dbacb1e308ea79183e5f74132cf3714"
+      "sha256": "86c68d1cace59aab139cae6fe6359cad4c0875538a238f526ed53c578c6c8e14"
     },
     {
       "height": 720,
@@ -95,7 +95,7 @@
       "path": "docs/review/pc-reference/hunt-wolf-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8d1af5656aba34598affe26409c67033b6e2dda8d8d09b8c3ab1a0ab68e9eb9f"
+      "sha256": "4ad1fda2fd80441c969d4c93f319ba63ea15d7274ccff5c1c31528f61e8c7e86"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/pc-reference/tutorial-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b8df38eb6eda08bce6abba60eb25d18f0ddb89c8b2c238e437697568807e114c"
+      "sha256": "e6978776e870d0dd67624cb482e8392f927ee82c049e7ff935e2c40543184bf6"
     },
     {
       "height": 720,
@@ -119,7 +119,7 @@
       "path": "docs/review/pc-reference/sniper-scope-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "94ecc0340a9538c96f9d4a8a91e65fa93a63b7d492be929b4443d0db7d1e3ad7"
+      "sha256": "878a0f2daa807ddcd45bed091e54325f026cf6418bd6288a70993df3c57103d2"
     },
     {
       "height": 768,
@@ -134,5 +134,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureLocalCash": 1000,
-  "runtimeCodeSha256": "a9c30c1f96c5d61fc211c3e03b1806685a1d892fb72fdcd3642aef3859c66c3e"
+  "runtimeCodeSha256": "a22ff3429acd4750d02b389cd6b5833d5d5d79407baec840f2bf1e763d047197"
 }

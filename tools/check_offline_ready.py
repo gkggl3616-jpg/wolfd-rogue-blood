@@ -13,16 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    for filename in ['mobile-validation.json', 'mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json']:
+    for filename in ['mobile-validation.json', 'mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json']:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
         if report.get('runtimeCodeSha256') != fingerprint:
             blockers.append('Validation does not match current runtime: '+filename)
         if filename == 'mobile-validation.json' and report.get('passed') is not True:
             blockers.append('Mobile regressions did not pass')
-        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json'] and (report.get('failures') != 0 or len(report.get('captures', [])) < ({'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17}[filename])):
+        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json'] and (report.get('failures') != 0 or len(report.get('captures', [])) < ({'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3}[filename])):
             blockers.append('Current offline UI/gameplay captures are missing')
-        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json']:
+        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json']:
             for capture in report.get('captures', []):
                 image = root/capture.get('path', '__missing_capture__')
                 if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != capture.get('sha256'):
@@ -87,6 +87,8 @@ def check(root=ROOT):
     for photo in photos['maps']:verify_asset(photo,'map photo '+str(photo['number']))
     expansion=json.loads((root/'docs/pc-reference-expansion-validation.json').read_text())
     if expansion.get('passed') is not True or expansion.get('checks',0)<101:blockers.append('PC reference, reward, PIN, tutorial and hunt regression is incomplete')
+    human=json.loads((root/'docs/human-reference-validation.json').read_text())
+    if human.get('passed') is not True or human.get('checks',0)<12:blockers.append('Human inventory and kill-feed checks incomplete')
     equipment_path=root/'docs/round-equipment-gift-validation.json'
     equipment=json.loads(equipment_path.read_text()) if equipment_path.is_file() else {}
     if equipment.get('passed') is not True or equipment.get('checks',0)<191:blockers.append('Round selection, six source mutation models and gift transactions have not passed')

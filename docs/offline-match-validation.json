@@ -2,72 +2,72 @@
   "checks": 236,
   "maps": [
     {
-      "botTravelMetres": 4.24831867218018,
+      "botTravelMetres": 1.57593441009521,
       "number": 1,
       "safeBotSpawns": 37
     },
     {
-      "botTravelMetres": 2.01569032669067,
+      "botTravelMetres": 4.24835062026978,
       "number": 2,
       "safeBotSpawns": 37
     },
     {
-      "botTravelMetres": 3.63587093353271,
+      "botTravelMetres": 4.25589323043823,
       "number": 26,
       "safeBotSpawns": 15
     },
     {
-      "botTravelMetres": 3.73313331604004,
+      "botTravelMetres": 4.17386722564697,
       "number": 31,
       "safeBotSpawns": 36
     },
     {
-      "botTravelMetres": 4.24829053878784,
+      "botTravelMetres": 3.7352089881897,
       "number": 44,
       "safeBotSpawns": 22
     },
     {
-      "botTravelMetres": 4.24833583831787,
+      "botTravelMetres": 2.21025562286377,
       "number": 46,
       "safeBotSpawns": 16
     },
     {
-      "botTravelMetres": 2.45278882980347,
+      "botTravelMetres": 2.1072518825531,
       "number": 50,
       "safeBotSpawns": 20
     },
     {
-      "botTravelMetres": 4.19295835494995,
+      "botTravelMetres": 1.75389695167542,
       "number": 57,
       "safeBotSpawns": 24
     },
     {
-      "botTravelMetres": 1.90014791488647,
+      "botTravelMetres": 1.49710237979889,
       "number": 58,
       "safeBotSpawns": 15
     },
     {
-      "botTravelMetres": 2.09064483642578,
+      "botTravelMetres": 1.93250572681427,
       "number": 59,
       "safeBotSpawns": 11
     },
     {
-      "botTravelMetres": 3.8413987159729,
+      "botTravelMetres": 4.21301364898682,
       "number": 65,
       "safeBotSpawns": 32
     },
     {
-      "botTravelMetres": 3.68724679946899,
+      "botTravelMetres": 4.24433088302612,
       "number": 72,
       "safeBotSpawns": 21
     },
     {
-      "botTravelMetres": 2.49172186851501,
+      "botTravelMetres": 4.09517908096313,
       "number": 82,
       "safeBotSpawns": 11
     },
     {
-      "botTravelMetres": 3.72453594207764,
+      "botTravelMetres": 2.50113224983215,
       "number": 83,
       "safeBotSpawns": 16
     },
@@ -77,22 +77,22 @@
       "safeBotSpawns": 15
     },
     {
-      "botTravelMetres": 1.79066324234009,
+      "botTravelMetres": 4.252112865448,
       "number": 92,
       "safeBotSpawns": 24
     },
     {
-      "botTravelMetres": 1.9252542257309,
+      "botTravelMetres": 1.76829659938812,
       "number": 97,
       "safeBotSpawns": 25
     },
     {
-      "botTravelMetres": 4.24508094787598,
+      "botTravelMetres": 2.3747079372406,
       "number": 100,
       "safeBotSpawns": 14
     },
     {
-      "botTravelMetres": 1.39305031299591,
+      "botTravelMetres": 2.45292830467224,
       "number": 110,
       "safeBotSpawns": 20
     }

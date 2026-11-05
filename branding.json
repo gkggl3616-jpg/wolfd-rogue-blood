@@ -11,5 +11,5 @@
   "androidBuildType": "signed-offline-release",
   "physicalAndroidDeviceTested": false,
   "offlineAndroidPackage": "com.wolfrogue.blood.offline",
-  "offlineVersion": "0.13.0-offline"
+  "offlineVersion": "0.14.0-offline"
 }

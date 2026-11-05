@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "utc": "2026-11-05T14:31:42.842226+00:00",
-  "filesHashed": 50060,
-  "bytesRead": 2997642752,
+  "utc": "2026-11-05T15:11:08.508443+00:00",
+  "filesHashed": 50070,
+  "bytesRead": 3000965749,
   "fileTypes": {
     "": 1,
-    ".md": 17,
-    ".json": 90,
+    ".md": 18,
+    ".json": 92,
     ".gz": 4,
     ".txt": 3,
-    ".png": 23176,
+    ".png": 23179,
     ".jpg": 3,
     ".wav": 1363,
     ".import": 24812,
@@ -23,8 +23,8 @@
     ".cfg": 1,
     ".tscn": 1,
     ".godot": 1,
-    ".gd": 74,
-    ".uid": 73,
+    ".gd": 76,
+    ".uid": 75,
     ".gdshader": 1,
     ".dat": 1,
     ".py": 37,
@@ -33,13 +33,18 @@
     ".html": 1,
     ".css": 1
   },
-  "literalResourceReferencesChecked": 43453,
+  "literalResourceReferencesChecked": 43456,
   "glbHeadersChecked": 354,
   "issues": [
     {
       "path": "godot/tests/combat_continuation.gd",
       "issue": "missing_literal_resource",
       "resource": "res://missing-character.glb"
+    },
+    {
+      "path": "godot/tests/human_reference.gd",
+      "issue": "missing_literal_resource",
+      "resource": "res://../docs/human-reference-validation.json"
     },
     {
       "path": "godot/tests/pc_reference_expansion.gd",

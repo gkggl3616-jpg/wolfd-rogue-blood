@@ -1,14 +1,18 @@
-# 0.13.0 çevrimdışı sürüm
+# 0.14.0 çevrimdışı sürüm
 
 Kullanıcının son kapsamı: mümkün olan yerel özellikleri tamamla ve doğrula; gerçek sunucu kapsam dışında. Bu sürümün Android kimliği `com.wolfrogue.blood.offline` olur. Eski tam sürüm uygulamasıyla ayrı kurulur. Önceki **0.10–0.12 çevrimdışı** sürümlerle paket adı ve sertifika aynıdır; 0.13, uygulama verisini silmeden üzerine güncellenebilir.
 
-Üretilen tek APK: **WolfRogueBlood-0.13.0-offline.apk**, **2.028.204.301 bayt** (2,03 GB). Android 7.0 / API 24 ve üzeri; ARM64, ARMv7 ve x86_64. [Paket doğrulaması](android-offline-build.json): 49.916 ZIP girdisi, 24 katalog, 22.627 çözümlenmiş kaynak bağımlılığı, v2/v3 imza, 16 KiB ZIP hizalaması. ARM64 ve x86_64 ELF yükleme hizalaması 16 KiB; ARMv7 kitaplığı 4 KiB'dir. İzin listesi boştur. Fiziksel cihaz ve emülatör testi yapılmadı.
+Üretilen tek APK: **WolfRogueBlood-0.14.0-offline.apk**, **2.028.204.301 bayt** (2,03 GB). Android 7.0 / API 24 ve üzeri; ARM64, ARMv7 ve x86_64. [Paket doğrulaması](android-offline-build.json): 49.916 ZIP girdisi, 24 katalog, 22.627 çözümlenmiş kaynak bağımlılığı, v2/v3 imza, 16 KiB ZIP hizalaması. ARM64 ve x86_64 ELF yükleme hizalaması 16 KiB; ARMv7 kitaplığı 4 KiB'dir. İzin listesi boştur. Fiziksel cihaz ve emülatör testi yapılmadı.
 
-[GitHub’dan tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.13.0-offline/WolfRogueBlood-0.13.0-offline.apk).
+[GitHub’dan tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.14.0-offline/WolfRogueBlood-0.14.0-offline.apk).
 
-SHA-256: `4195b818388fe9fb78066636af4e24db686ac81a5a1d452c8e8bdb352bf83f49`.
+SHA-256: `1b91ecc8c287682aebeeaa0675b5883f17cc3dc6fedb762744a11a85cc70a3c1`.
 
-## 0.13 yenilikleri
+## 0.14 yenilikleri
+
+[İnsan HUD ve karakter envanteri](PC_REFERANS_014.md): gerçek takım skorları, silah simgeli ölüm duyuruları, büyük karakter kartı, N/M düğmeleri ve yerel STATS paneli. 12 yeni kontrol ve toplam 80 OpenGL görüntüsü.
+
+## Önceki yenilikler
 
 [Son beş PC ekranı ve yeni fotoğraflar](PC_REFERANS_013.md): maç başı silah/kurt seçimi, altı gerçek mutasyon modeli, kabul edilen hediye kutusu, güç eşyaları, Standart/SLH 1–4 ve üst menü. 18 regresyon aşaması, 191 yeni özellik/model kontrolü ve 77 gerçek ekran görüntüsü geçti. İlk ilkyardım/enerji hediyelerini Hediye Kutusu’nda kabul et; Envanter → GÜÇ+ üzerinden yuvalara tak. Maçta yuvarlak eşya düğmeleriyle kullan.
 
@@ -48,7 +52,7 @@ DISPLAY=:0 python tools/capture_mobile.py --godot /path/to/godot
 python tools/check_offline_ready.py --report docs/offline-readiness.json
 python tools/build_offline_android.py --godot /path/to/godot --sdk /path/to/sdk \
   --keystore /private/offline.keystore --password-file /private/password \
-  --temp /large/temporary/volume --output /output/WolfRogueBlood-0.13.0-offline.apk
+  --temp /large/temporary/volume --output /output/WolfRogueBlood-0.14.0-offline.apk
 ```
 
 Çıktı ile aynı konumda `.validation.json` oluşur. Araç, export işlemi sıfır kod döndürse bile kesilmiş ZIP'i kabul etmez; doğrulanmış imzalı kopyanın hedefe aktarımını ayrıca SHA-256 ile kontrol eder. Windows'taki mevcut `build_android.ps1 -Offline` yolu da ayrı çevrimdışı denetimi kullanır.

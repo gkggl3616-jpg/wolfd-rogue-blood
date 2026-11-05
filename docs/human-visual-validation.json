@@ -1,0 +1,34 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "captures": [
+    {
+      "height": 720,
+      "name": "human-character-inventory-014",
+      "path": "docs/review/human-014/human-character-inventory-014.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7840dfafae21b2f9250650ba01baa4da3cf26a70416369181805b946e6b26d84"
+    },
+    {
+      "height": 768,
+      "name": "human-character-inventory-native-014",
+      "path": "docs/review/human-014/human-character-inventory-native-014.png",
+      "saved": true,
+      "width": 1024,
+      "sha256": "d95ffcbafa837aa6bfc7edf9862bf9f7bcb8634b7ff0f30037823d7ba84f00d9"
+    },
+    {
+      "height": 720,
+      "name": "human-hud-kill-feed-014",
+      "path": "docs/review/human-014/human-hud-kill-feed-014.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a509b685a406b33b9593e12962763d2d29533ec07d100afd4b443fbb17991a14"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureCombatEvents": true,
+  "runtimeCodeSha256": "a22ff3429acd4750d02b389cd6b5833d5d5d79407baec840f2bf1e763d047197"
+}

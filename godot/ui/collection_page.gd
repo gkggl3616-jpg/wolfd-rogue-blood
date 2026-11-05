@@ -114,7 +114,11 @@ func card(parent,entry,at,selected=false):
 	if icon!="":
 		var region=Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza"] or (ui.page=="Karakterler" and portraits.get(entry.id,{}).get("kind")=="source_icon") else Rect2()
 		if entry.has("iconRegion"):var r=entry.iconRegion;region=Rect2(r[0],r[1],r[2],r[3])
-		Art.sprite(cell,icon,Vector2(2,2),Vector2(205,72),region).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		var fallback=ui.page=="Karakterler" and portraits.get(entry.id,{}).get("kind")=="rendered_model_preview"
+		if fallback:
+			region=Rect2(Art.texture(icon).get_image().get_used_rect())
+			Art.sprite(cell,icon,Vector2(82,2),Vector2(123,72),Rect2(region.position,Vector2(region.size.x,region.size.x))).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		Art.sprite(cell,icon,Vector2(2,2),Vector2(75,72) if fallback else Vector2(205,72),region).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	ui.text(cell,title(entry),Vector2(4,76),Vector2(201,16),12)
 	return cell
 
@@ -205,8 +209,8 @@ func show_native_details():
 	var entry=ui.selected
 	plate(details,Vector2(366,540),Vector2(290,164));plate(details,Vector2(664,564),Vector2(348,174))
 	ui.text(details,title(entry),Vector2(372,544),Vector2(278,22),12)
-	var icon=entry.get("icon",entry.get("texture",""))
-	if icon!="":Art.sprite(details,icon,Vector2(376,571),Vector2(270,121),Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza"] else Rect2()).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	var icon=portraits.get(entry.get("id",""),{}).get("asset","") if ui.page=="Karakterler" else entry.get("icon",entry.get("texture",""))
+	if icon!="":Art.sprite(details,icon,Vector2(376,571),Vector2(270,121),Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza","Karakterler"] else Rect2()).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	ui.trace("interface/iteminfopropertysheet")
 	# This supplied Turkish atlas has 27px normal/hover/selected rows. The old
 	# attribute file still describes 25px rows and cuts the selected caption.
@@ -239,18 +243,35 @@ func show_native_details():
 		ui.paragraph(details,"Efekt önizlemesi.",Vector2(674,577),Vector2(328,100),12)
 
 func build_character(entry):
-	var raw=ui.native("interface/charequipmentpage",details)
-	raw.show_only(["BackGround","TeamButtonGroupBox","Red","Blue","charEQLeftArrow","charEQRightArrow","charEQNameBg","CharEQName"])
-	raw.set_value("CharEQName",entry.name)
-	for team in ["Red","Blue"]:raw.find_widget(team).tooltip_text="Bu görünümde takım seçimi kullanılamıyor."
-	raw.bind_action("charEQLeftArrow",func():select_relative(-1));raw.bind_action("charEQRightArrow",func():select_relative(1))
-	ui.build_preview(Vector2(14,200),Vector2(326,430),entry)
-	ui.button(details,"İnsan / Kurt",Vector2(40,645),Vector2(280,28),func():ui.preview_wolf=not ui.preview_wolf;ui.replace_preview(entry))
-	ui.button(details,"Karakteri kullan",Vector2(40,690),Vector2(280,28),func():
-		if ui.game.select_library_character(entry):ui.show_error("Karakter seçimi kaydedildi.")
+	ui.trace("interface/charequipmentpage")
+	ui.preview_angle=-0.12
+	ui.build_preview(Vector2(22,180),Vector2(310,537),entry)
+	var environment=ui.preview_root.find_children("*","WorldEnvironment",true,false)
+	if not environment.is_empty():environment[0].environment.background_color=Color("071014")
+	var icon=portraits.get(entry.id,{}).get("asset","")
+	Art.sprite(details,icon,Vector2(272,78),Vector2(66,86),Rect2(0,0,73,75)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	ui.button(details,"N",Vector2(273,165),Vector2(31,23),func():ui.preview_wolf=false;ui.replace_preview(entry))
+	ui.button(details,"M",Vector2(306,165),Vector2(31,23),func():ui.preview_wolf=true;ui.replace_preview(entry))
+	ui.button(details,"İnsan / Kurt",Vector2(174,710),Vector2(160,28),func():ui.preview_wolf=not ui.preview_wolf;ui.replace_preview(entry))
+	ui.button(details,"Karakteri kullan",Vector2(366,710),Vector2(146,28),func():
+		if ui.game.select_library_character(entry):ui.refresh();ui.show_error("Karakter seçimi kaydedildi.")
 		else:ui.show_error("Karakter kaydedilemedi.")
 	)
-	ui.paragraph(details,"Karakter önizlemesi\n\nÖzellik bilgisi kullanılamıyor.",Vector2(674,577),Vector2(328,130),12)
+	ui.button(details,"AT",Vector2(516,710),Vector2(140,28),func():ui.confirm("KARAKTER","Çevrimdışı kaynak koleksiyonu kalıcıdır; karakter silinmez.",func():pass))
+	var count=ui.game.book.characters.filter(func(row):return row.get("available",false)).size()
+	ui.text(details,"Karakter Slotu %d / %d" % [count,count],Vector2(789,125),Vector2(207,22),11,Color("8bb7b1"))
+	plate(details,Vector2(1,494),Vector2(112,213))
+	ui.text(details,"STATS",Vector2(8,497),Vector2(95,24),16)
+	var profile=ui.game.mutations.profile(ui.game.book.wolf_mutation)
+	var rows=[["YP",profile.health if ui.preview_wolf else 100,200.0],["HIZ",profile.speed if ui.preview_wolf else 4.1,8.0],["GÜÇ",profile.damage if ui.preview_wolf else ui.game.book.weapon(ui.game.book.slots.primary).gameplayTuning.damage,100.0],["GP +%",roundi(float(ui.game.power_bonus("bag","localGpBonus",0))*100),100.0]]
+	for i in range(rows.size()):
+		var row=rows[i];var y=529+i*31;ui.text(details,row[0],Vector2(6,y),Vector2(45,21),10)
+		var bar=ProgressBar.new();bar.position=Vector2(48,y+5);bar.size=Vector2(39,8);bar.max_value=row[2];bar.value=row[1];bar.show_percentage=false
+		var bg=StyleBoxFlat.new();bg.bg_color=Color("3d4547");var fill=StyleBoxFlat.new();fill.bg_color=Color("dfbd31");bar.add_theme_stylebox_override("background",bg);bar.add_theme_stylebox_override("fill",fill);details.add_child(bar)
+		ui.text(details,str(row[1]),Vector2(89,y),Vector2(24,21),10)
+	ui.text(details,"Yerel değerler",Vector2(5,681),Vector2(105,20),10,Color("9bb4b5"))
+	ui.content.move_child(details,ui.content.get_child_count()-1)
+	body(entry.name+"\n\nYerel koleksiyonda kullanılabilir.\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.\nSüre sınırı yok.")
 
 func build_tattoo(entry):
 	var known=entry.role in ["body","left","right"]

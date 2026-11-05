@@ -204,12 +204,12 @@ func fire():
  var spread=float(profile.spread)
  direction=(direction+global_basis.x*randf_range(-spread,spread)+Vector3.UP*randf_range(-spread,spread)).normalized()
  var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(eye,eye+direction*45,1,[get_rid()]))
- if hit and hit.collider==game.player:game.take_damage(Rules.DAMAGE,global_position)
+ if hit and hit.collider==game.player:game.take_damage(Rules.DAMAGE,global_position,{"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe"})
  if not game.test_mode:fire_sound.play()
  return true
 
 func melee_hit():
- if global_position.distance_to(game.player.global_position)<2.1 and line_to_player():game.take_damage(Rules.DAMAGE,global_position)
+ if global_position.distance_to(game.player.global_position)<2.1 and line_to_player():game.take_damage(Rules.DAMAGE,global_position,{"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe"})
 
 func _physics_process(delta):
  if not game.is_combat_active() or health<=0 or is_queued_for_deletion():return
