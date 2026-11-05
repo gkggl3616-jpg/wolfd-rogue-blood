@@ -7,6 +7,7 @@ const Cards=preload("res://ui/card_page.gd")
 const Boxes=preload("res://ui/box_page.gd")
 const ProfileLockPage=preload("res://ui/profile_lock_page.gd")
 const SourceCard=preload("res://ui/source_item_card.gd")
+const Gifts=preload("res://ui/gift_page.gd")
 const CareerPage=preload("res://ui/career_page.gd")
 var ui
 var view
@@ -23,6 +24,7 @@ func build():
 		"result":result_page()
 		"profile":profile()
 		"pin":ui.detail_helper=ProfileLockPage.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
+		"gifts":ui.detail_helper=Gifts.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"Kutular":ui.detail_helper=Boxes.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"scoreboard":scoreboard()
 		"rankbook":rankbook()
@@ -47,7 +49,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.12 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.12 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · 0.13 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.13 geliştirme")
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
@@ -112,7 +114,7 @@ func room():
 	enable("ChangeRule",func():ui.navigate("create_room"))
 	var training=ui.game.is_local_mode(int(data.mode))
 	var hunting=int(data.mode)==ui.game.LocalHunt.MODE
-	view.set_value("GameMode",("Öğretici Mod" if int(data.mode)==ui.game.LocalTutorial.MODE else ("Kurt Avı · Yerel" if hunting else "Botlu Eğitim")) if training else ui.game.map_catalog.mode_record(int(data.mode)).sourceName)
+	view.set_value("GameMode",("Öğretici Mod" if int(data.mode)==ui.game.LocalTutorial.MODE else ("Kurt Avı · Yerel" if hunting else ("Kurt Savaşı · Yerel" if int(data.mode)==ui.game.WOLF_BATTLE else "Botlu Eğitim"))) if training else ui.game.map_catalog.mode_record(int(data.mode)).sourceName)
 	view.set_value("MapName","Eğitim Arenası" if int(data.map)==0 else ui.game.map_catalog.map_record(int(data.map)).displayName)
 	view.set_value("MaxChars","1 oyuncu")
 	if training:
@@ -120,7 +122,7 @@ func room():
 		view.set_value("RoundTime","90 saniye")
 		ui.paragraph(ui.content,"Botlar: %s\nİnsan ve kurt · Hasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
 		var opponent=view.find_widget("BlueTeam" if data.team=="red" else "RedTeam")
-		for i in range(4):opponent.add_item("BOT · %s %02d" % [("İnsan" if data.get("playerForm","human")=="wolf" else "Kurt") if hunting else ("Kurt" if i%2==0 else "İnsan"),i+1])
+		for i in range(4):opponent.add_item("BOT · %s %02d" % [("İnsan" if data.get("playerForm","human")=="wolf" else "Kurt") if hunting else ("Kurt" if int(data.mode)==ui.game.WOLF_BATTLE or i%2==0 else "İnsan"),i+1])
 		for team in ["Red","Blue"]:
 			var count=1 if (team=="Red")== (data.team=="red") else 4
 			view.set_value(team+"CurChars","%d / %d" % [count,count]);view.find_widget(team+"CurChars").size.x=66;view.find_widget(team+"MaxChars").hide()
@@ -128,7 +130,7 @@ func room():
 	var map_image=view.find_widget("CurrentMap")
 	if int(data.map)!=0:
 		map_image.texture=Art.atlas(ui.game.map_catalog.photo(int(data.map)).get("asset",""),Rect2(0,0,407,120))
-	var start=enable("StartGame",ui.game.start_round)
+	var start=enable("StartGame",func():ui.game.start_round(true))
 	if start:start.disabled=not training
 	if not training:
 		ui.paragraph(ui.content,"Özgün maç kuralları tamamlanmadı. Yalnızca geometri gezintisi açılabilir.",Vector2(617,440),Vector2(385,90),16)
@@ -218,7 +220,7 @@ func result_page():
 	result+="\n\nBu sonuç bu cihazdaki yerel maça aittir."
 	ui.paragraph(ui.content,result,Vector2(35,250),Vector2(740,300),20)
 	enable("Confirm",func():ui.navigate("lobby"))
-	ui.button(ui.content,"Yeniden oyna",Vector2(590,701),Vector2(200,30),ui.game.start_round)
+	ui.button(ui.content,"Yeniden oyna",Vector2(590,701),Vector2(200,30),func():ui.game.start_round(true))
 
 func profile():
 	view=layout("interface/userrecord",Vector2(299,112),Vector2(425,522))

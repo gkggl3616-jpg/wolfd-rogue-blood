@@ -22,6 +22,19 @@ const LocalHunt=preload("res://scripts/local_hunt.gd")
 const LocalTutorial=preload("res://scripts/local_tutorial.gd")
 const RankBook=preload("res://scripts/rank_book.gd")
 const LocalCareer=preload("res://scripts/local_career.gd")
+const GiftInbox=preload("res://scripts/gift_inbox.gd")
+const WolfMutations=preload("res://scripts/wolf_mutations.gd")
+const WOLF_BATTLE=900003
+var inbox=GiftInbox.new()
+var mutations=WolfMutations.new()
+var power_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/power.json"))
+var round_selection_enabled=false
+var selection_transform=false
+var selection_active=false
+var selection_panel
+var booster_remaining=0.0
+var booster_tuning={}
+var healing_uses={}
 var career=LocalCareer.new()
 var match_id=""
 var profile_lock
@@ -123,6 +136,9 @@ func _ready():
 	player.game = self
 	player.position = Vector3(0, 0.05, 8)
 	add_child(player)
+	if book.wolf_mutation!="normal":
+		var model=player.prepare_mutation(book.wolf_mutation)
+		if model:player.apply_mutation(model,book.wolf_mutation)
 	enemies = Node3D.new()
 	add_child(enemies)
 	transient_effects = Node3D.new()
@@ -139,6 +155,7 @@ func _ready():
 	add_child(grant_http)
 	grant_http.request_completed.connect(on_grant)
 	show_launcher()
+	if not test_mode:seed_gifts()
 	update_hud()
 
 func setup_inputs():
@@ -327,7 +344,7 @@ func explode(where, amount, kind):
 		if get_world_3d().direct_space_state.intersect_ray(query).is_empty(): enemy.damage(int(amount * (1 - distance / 6)))
 
 func show_home():
-	running=false
+	running=false;close_round_selection()
 	open_interface("lobby")
 
 func show_front_screen(page):
@@ -374,6 +391,7 @@ func set_arena_active(enabled):
 		body.collision_layer = 1 if enabled else 0
 
 func start_map_preview():
+	close_round_selection()
 	hunt.active=false;tutorial.active=false
 	var record = map_catalog.preview_record(mode_picker.get_selected_id(), map_picker.get_selected_id())
 	if record.is_empty():
@@ -447,7 +465,8 @@ func resume():
 	if is_instance_valid(library_panel):
 		library_panel.get_parent().remove_child(library_panel);library_panel.queue_free();library_panel=null
 	menu_open=false;overlay.hide()
-	if not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+	if is_instance_valid(menu_backdrop):menu_backdrop.hide()
+	if not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_VISIBLE if selection_active else Input.MOUSE_MODE_CAPTURED
 
 func clear_projectiles():
 	if is_instance_valid(transient_effects):
@@ -459,11 +478,12 @@ func clear_projectiles():
 			remove_child(node)
 			node.queue_free()
 
-func start_round():
+func start_round(with_selection=false):
 	if profile_lock!=null and not profile_lock.unlocked:return false
 	if not is_local_mode(int(local_room.get("mode",0))):
 		announce("Özgün mod kuralları henüz tamamlanmadı.")
 		return false
+	close_round_selection();round_selection_enabled=with_selection
 	var map_number = int(local_room.get("map", 0))
 	var record = map_catalog.offline_record(map_number) if map_number != 0 else {}
 	if map_number != 0 and record.is_empty():
@@ -523,6 +543,9 @@ func start_round():
 	player.position = preview_spawn
 	player.velocity = Vector3.ZERO
 	player.reset_combat()
+	var mutation_model=player.prepare_mutation(book.wolf_mutation)
+	if mutation_model:player.apply_mutation(mutation_model,book.wolf_mutation)
+	booster_remaining=0;booster_tuning={};healing_uses.clear()
 	player.yaw = spawn_yaw
 	player.rotation = Vector3(0, spawn_yaw, 0)
 	running = true
@@ -532,12 +555,51 @@ func start_round():
 		if player.is_wolf:player.switch_form(true)
 		tutorial.begin(player.position,match_stats.attacks)
 	spawn_clock = 0
+	if int(local_room.get("mode",0))==WOLF_BATTLE:
+		if not player.is_wolf:player.switch_form(true)
+	elif not hunt.active and not tutorial.active and with_selection and player.is_wolf:player.switch_form(true)
+	health=max_health()
+	if with_selection and not tutorial.active:open_round_selection()
 	announce("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye")
 	update_hud()
 	return true
 
-func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE]
-func is_combat_active():return running and not menu_open and not application_suspended and (not hunt.active or hunt.phase=="combat")
+func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE,WOLF_BATTLE]
+func open_round_selection(kind="",transform_after=false):
+	if not running or tutorial.active or exploring:return false
+	close_round_selection();touch.reset();player.velocity=Vector3.ZERO
+	selection_active=true;selection_transform=transform_after
+	selection_panel=load("res://ui/round_selection.gd").new();selection_panel.game=self
+	selection_panel.kind=("wolf" if player.is_wolf else "human") if kind=="" else kind
+	overlay.get_parent().add_child(selection_panel)
+	if DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+	return true
+func close_round_selection():
+	selection_active=false;selection_transform=false
+	if is_instance_valid(selection_panel):
+		selection_panel.get_parent().remove_child(selection_panel);selection_panel.queue_free()
+	selection_panel=null
+	if is_instance_valid(touch):touch.reset()
+	if running and not menu_open and not application_suspended and not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+func finish_round_selection():
+	var transform_after=selection_transform
+	close_round_selection()
+	if transform_after and running and not player.is_wolf:player.switch_form(true)
+func choose_round_loadout(index):
+	if not selection_active or selection_panel.kind!="human":return false
+	if not book.select_loadout(index):announce("Ekipman seçimi kaydedilemedi.");return false
+	equip_slot("primary");close_round_selection();return true
+func choose_round_mutation(id):
+	if not selection_active or selection_panel.kind!="wolf" or not mutations.TYPES.has(id):return false
+	var model=player.prepare_mutation(id)
+	if model==null:announce("Kurt modeli yüklenemedi.");return false
+	if not book.select_mutation(id):model.free();announce("Kurt seçimi kaydedilemedi.");return false
+	var transform_after=selection_transform
+	player.apply_mutation(model,id)
+	close_round_selection()
+	if transform_after and not player.is_wolf:player.switch_form(true)
+	update_hud();return true
+func is_combat_active():return running and not menu_open and not application_suspended and not selection_active and (not hunt.active or hunt.phase=="combat")
 func finish_hunt_round(won):
 	if not hunt.finish_round(won):return
 	for enemy in enemies.get_children():enemy.collision_layer=0;enemy.queue_free()
@@ -548,9 +610,10 @@ func advance_hunt(delta):
 	if hunt.phase!="intermission":return false
 	hunt.intermission=maxf(0,hunt.intermission-delta)
 	if hunt.intermission<=0 and hunt.next_round():
-		health=100;ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();time_left=LocalHunt.SECONDS
+		health=max_health();booster_remaining=0;booster_tuning={};healing_uses.clear();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();time_left=LocalHunt.SECONDS
 		player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();spawn_clock=0
 		announce("Kurt Avı · Raunt %d/3" % hunt.round_number)
+		if round_selection_enabled:open_round_selection()
 	update_hud();return true
 
 func install_navigation(asset,parent):
@@ -673,6 +736,8 @@ func _process(delta):
 	crosshair.visible = running and not menu_open
 	if not running or menu_open:
 		return
+	if selection_active:return
+	booster_remaining=maxf(0,booster_remaining-delta)
 	if hunt.active and advance_hunt(delta):return
 	for entry in kill_feed:entry.remaining=maxf(0,entry.remaining-delta)
 	kill_feed=kill_feed.filter(func(entry):return entry.remaining>0)
@@ -712,7 +777,7 @@ func spawn_enemy(kind="",difficulty=""):
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
-	enemy.kind=kind if kind in ["human","wolf"] else (hunt.enemy_kind() if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))
+	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else (hunt.enemy_kind() if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human")))
 	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
@@ -778,7 +843,8 @@ func attack():
 		if body_attack:
 			player.play_clip("body_attack")
 			player.wolf_running = false
-		wolf_melee_hit(65 if body_attack else 45,2.8,"Vücut saldırısı" if body_attack else "Pençe isabeti")
+		var base=int(mutations.profile(player.mutation_id).damage)
+		wolf_melee_hit((65 if player.mutation_id=="normal" else roundi(base*1.4)) if body_attack else base,2.8,"Vücut saldırısı" if body_attack else "Pençe isabeti")
 		return
 	if kind != "knife": ammo -= 1
 	notify_bot_noise(player.global_position,6 if kind=="knife" else 26)
@@ -810,7 +876,10 @@ func attack():
 	get_tree().create_timer(0.06).timeout.connect(flash.queue_free)
 
 func wolf_melee_hit(amount,reach,caption):
-	if not running or menu_open or application_suspended:return
+	if not is_combat_active():return
+	player.cancel_cloak()
+	reach+=float(power_bonus("claw","rangeBonus",0))
+	amount=int(amount*wolf_damage_multiplier())+power_bonus("claw","damageBonus",0)
 	for enemy in enemies.get_children():
 		if not running:break
 		var offset=enemy.global_position-player.global_position
@@ -822,7 +891,9 @@ func wolf_melee_hit(amount,reach,caption):
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 
 func strong_attack():
-	if not running or menu_open or application_suspended:return false
+	if not is_combat_active() or not player.is_wolf:return false
+	if player.mutation_id=="guardian":return player.begin_guard()
+	if player.mutation_id=="ghost":return player.begin_cloak()
 	if player.begin_air_attack():announce("Havada güçlü saldırı");return true
 	return false
 
@@ -846,7 +917,7 @@ func enemy_defeated(context={}):
 	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0})
 	if kill_feed.size()>5:kill_feed.resize(5)
 	grant_money("cash", 25, "Arena hedef ödülü")
-	grant_money("gp", 10, "Arena gelişim ödülü")
+	grant_money("gp", roundi(10*(1.0+float(power_bonus("bag","localGpBonus",0)))), "Arena gelişim ödülü")
 	if hunt.active:
 		hunt.round_kills+=1
 		if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
@@ -858,6 +929,7 @@ func enemy_defeated(context={}):
 func take_damage(amount, source_position=null):
 	if not is_combat_active() or amount<=0:
 		return
+	if player.guard_remaining>0:amount=maxi(1,int(ceil(amount*0.5)))
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
@@ -865,9 +937,14 @@ func take_damage(amount, source_position=null):
 		else:end_round("Yenildin")
 
 func end_round(title):
+	close_round_selection()
 	if not match_id.is_empty() and not match_id in career.state.matches:
 		var next=career.result(match_id,kills,match_stats.headshots,hunt.wins if hunt.active else 0,tutorial.active and tutorial.step>=tutorial.STEPS.size())
-		if save_wallet(null,null,next):career.state=next
+		var pending=inbox.state.duplicate(true)
+		for mission in career.MISSIONS:
+			if not next.claimed.get(mission.id,false) and int(next.totals[mission.stat])>=int(mission.goal):
+				if not inbox.enqueue(pending,"cash","cash",mission.name,int(mission.cash),"mission-"+mission.id,"Sistem · Görevler").is_empty():next.claimed[mission.id]=true
+		if save_wallet(null,null,next,pending):career.state=next;inbox.state=pending
 	running=false;last_result={"title":title,"kills":kills,"health":health,"stats":match_stats.duplicate(),"hunt":hunt.active,"wins":hunt.wins,"losses":hunt.losses}
 	open_interface("result")
 
@@ -897,33 +974,126 @@ func load_wallet(path = ""):
 		if stored.has("localCareer"):
 			if career.valid(stored.localCareer):career.state=stored.localCareer
 			else:wallet_save_blocked=true
+		if stored.has("giftInbox"):
+			if inbox.valid(stored.giftInbox):inbox.state=stored.giftInbox
+			else:wallet_save_blocked=true
 		if stored is Dictionary:
 			for key in wallet:
 				var amount = stored.get(key, 0)
 				if (amount is int or amount is float) and is_finite(float(amount)): wallet[key] = clampi(int(amount), 0, 1000000000)
 
-func save_wallet(candidate = null,box_candidate=null,career_candidate=null):
+func save_wallet(candidate = null,box_candidate=null,career_candidate=null,inbox_candidate=null):
 	if test_mode: return true
 	if wallet_save_blocked: return false
 	if candidate == null: candidate = wallet
 	var payload=candidate.duplicate(true)
 	payload.localBoxes=boxes.state if box_candidate==null else box_candidate
 	payload.localCareer=career.state if career_candidate==null else career_candidate
+	payload.giftInbox=inbox.state if inbox_candidate==null else inbox_candidate
 	return AtomicStore.write_json(wallet_storage_path,payload)
 
 func box_action(action,id,request):
 	if remote_player!="":return {"ok":false,"error":"Kutular yalnızca bu cihazdaki yerel bakiye ile kullanılır."}
 	var result=boxes.prepare(action,id,request,wallet)
 	if not result.ok or result.get("duplicate",false):return result
-	if not save_wallet(result.wallet,result.state):return {"ok":false,"error":"Kayıt başarısız; bakiye ve kutu değiştirilmedi."}
-	wallet=result.wallet;boxes.state=result.state;update_hud();return result
+	var pending=inbox.state.duplicate(true)
+	if action=="buy":
+		result.state.counts[id]=int(result.state.counts.get(id,0))-1
+		if inbox.enqueue(pending,"box",id,boxes.box(id).name,1,"purchase-"+request,"Mağaza").is_empty():return {"ok":false,"error":"Hediye kutusu dolu."}
+	if not save_wallet(result.wallet,result.state,null,pending):return {"ok":false,"error":"Kayıt başarısız; bakiye ve kutu değiştirilmedi."}
+	wallet=result.wallet;boxes.state=result.state;inbox.state=pending;update_hud();return result
 
 func claim_career(id):
 	if remote_player!="":return {"ok":false,"error":"Yerel ödüller yalnızca bu cihazda kullanılır."}
 	var result=career.claim(id,wallet)
 	if not result.ok:return result
-	if not save_wallet(result.wallet,null,result.state):return {"ok":false,"error":"Ödül kaydedilemedi; bakiye değiştirilmedi."}
-	wallet=result.wallet;career.state=result.state;update_hud();return result
+	var pending=inbox.state.duplicate(true);var amount=int(result.rewardCash)
+	if inbox.enqueue(pending,"cash","cash","Yerel ödül · "+id,amount,"career-"+id,"Sistem").is_empty():return {"ok":false,"error":"Hediye kutusu dolu."}
+	if not save_wallet(null,null,result.state,pending):return {"ok":false,"error":"Ödül kaydedilemedi; bakiye değiştirilmedi."}
+	career.state=result.state;inbox.state=pending;update_hud();return {"ok":true,"delivery":"giftInbox"}
+
+func power_item(id):
+	for item in power_catalog.items:
+		if item.id==str(id):return item
+	return {}
+func power_bonus(slot,key,fallback):
+	var item=power_item(inbox.state.powerSlots.get(slot,""))
+	return item.get("mobileTuning",{}).get(key,fallback)
+func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else 100
+func wolf_damage_multiplier():return float(booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
+func wolf_speed_multiplier():return float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0
+func seed_gifts():
+	if inbox.state.get("welcome",false):return
+	var pending=inbox.state.duplicate(true)
+	inbox.enqueue(pending,"power","19002",power_item("19002").name,3,"welcome-medical","Sistem · Başlangıç")
+	inbox.enqueue(pending,"power","19502",power_item("19502").name,3,"welcome-energy","Sistem · Başlangıç")
+	pending.welcome=true
+	if save_wallet(null,null,null,pending):inbox.state=pending
+func accept_gift(id):
+	if remote_player!="":return {"ok":false,"error":"Yalnızca yerel hediyeler kullanılabilir."}
+	var pending=inbox.state.duplicate(true);var matches=pending.messages.filter(func(row):return row.id==id)
+	if matches.size()!=1:return {"ok":false,"error":"Hediye bulunamadı."}
+	var gift=matches[0]
+	if gift.status!="pending" or gift.expires<Time.get_unix_time_from_system():return {"ok":false,"error":"Hediye alınmış veya süresi dolmuş."}
+	var balance=wallet.duplicate();var box_state=boxes.state.duplicate(true)
+	match gift.kind:
+		"cash":
+			if int(balance.cash)+int(gift.amount)>1000000000:return {"ok":false,"error":"Bakiye sınırı dolu; hediye korunuyor."}
+			balance.cash=int(balance.cash)+int(gift.amount)
+		"box":
+			if boxes.box(gift.item).is_empty() or int(box_state.counts.get(gift.item,0))+int(gift.amount)>999:return {"ok":false,"error":"Kutu aktarımı kullanılamıyor."}
+			box_state.counts[gift.item]=int(box_state.counts.get(gift.item,0))+int(gift.amount)
+		"power":
+			if power_item(gift.item).is_empty():return {"ok":false,"error":"Güç eşyası bulunamadı."}
+			if int(pending.powerCounts.get(gift.item,0))+int(gift.amount)>999999:return {"ok":false,"error":"Envanter sınırı dolu; hediye korunuyor."}
+			pending.powerCounts[gift.item]=int(pending.powerCounts.get(gift.item,0))+int(gift.amount)
+		"weapon":
+			if book.weapon(gift.item).get("available",false)!=true:return {"ok":false,"error":"Silah bulunamadı."}
+			pending.entitlements[gift.item]=true
+		"character":
+			if not book.characters.any(func(row):return row.id==gift.item and row.get("available",false)):return {"ok":false,"error":"Karakter bulunamadı."}
+			pending.entitlements[gift.item]=true
+		"tattoo":
+			if not book.tattoos.any(func(row):return row.id==gift.item and row.role!="unknown"):return {"ok":false,"error":"Dövme bölgesi doğrulanmadı."}
+			pending.entitlements[gift.item]=true
+		_:return {"ok":false,"error":"Hediye türü desteklenmiyor."}
+	gift.status="accepted";gift.acceptedAt=Time.get_unix_time_from_system()
+	if not save_wallet(balance,box_state,null,pending):return {"ok":false,"error":"Aktarım kaydedilemedi; hediye korunuyor."}
+	wallet=balance;boxes.state=box_state;inbox.state=pending;update_hud();return {"ok":true}
+func buy_power(id,request):
+	if remote_player!="" or not request is String or request.is_empty() or request.length()>160:return {"ok":false,"error":"Yerel işlem gerekli."}
+	var item=power_item(id)
+	if inbox.state.messages.any(func(row):return row.sourceKey=="power-buy-"+request):return {"ok":true,"duplicate":true}
+	if item.is_empty() or wallet.cash<int(item.localPrice):return {"ok":false,"error":"Yerel nakit yetersiz."}
+	var pending=inbox.state.duplicate(true);var balance=wallet.duplicate();balance.cash-=int(item.localPrice)
+	if inbox.enqueue(pending,"power",str(id),item.name,1,"power-buy-"+request,"Mağaza").is_empty():return {"ok":false,"error":"Hediye kutusu dolu."}
+	if not save_wallet(balance,null,null,pending):return {"ok":false,"error":"Alışveriş kaydedilemedi."}
+	wallet=balance;inbox.state=pending;return {"ok":true}
+func equip_power_item(id):
+	if remote_player!="":return false
+	var item=power_item(id)
+	if item.is_empty() or int(inbox.state.powerCounts.get(str(id),0))<=0:return false
+	var pending=inbox.state.duplicate(true);pending.powerSlots[item.slot]=str(id)
+	if not save_wallet(null,null,null,pending):return false
+	inbox.state=pending;return true
+func use_power(slot):
+	if not is_combat_active() or not player.is_wolf:return false
+	var item=power_item(inbox.state.powerSlots.get(slot,""))
+	if item.is_empty() or not item.consumable or int(inbox.state.powerCounts.get(item.id,0))<1:return false
+	var cost=0
+	if slot=="support":
+		if health>=max_health() or int(healing_uses.get(item.id,0))>=int(item.mobileTuning.usesPerRound):return false
+	elif slot=="energy":
+		if booster_remaining>0:return false
+		cost=maxi(1,ceili(health*float(item.mobileTuning.healthCostFraction)))
+		if health<=cost:return false
+	else:return false
+	var pending=inbox.state.duplicate(true);pending.powerCounts[item.id]=int(pending.powerCounts[item.id])-1
+	if not save_wallet(null,null,null,pending):return false
+	inbox.state=pending
+	if slot=="support":health=mini(max_health(),health+int(item.mobileTuning.heal));healing_uses[item.id]=int(healing_uses.get(item.id,0))+1
+	else:health-=cost;booster_tuning=item.mobileTuning;booster_remaining=float(item.mobileTuning.seconds)
+	update_hud();return true
 
 func grant_money(currency, amount, reason):
 	if not wallet.has(currency) or not valid_balance(amount) or amount < 1 or amount > 1000000:

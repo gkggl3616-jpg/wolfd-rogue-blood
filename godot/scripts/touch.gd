@@ -71,14 +71,14 @@ func _process(_delta):
 	for i in range(7, 11):
 		buttons[i].visible = direction_buttons
 	buttons[11].visible = game.player.is_wolf
-	buttons[4].visible = not game.hunt.active
+	buttons[4].visible = not game.hunt.active and int(game.local_room.get("mode",0))!=game.WOLF_BATTLE
 	buttons[5].get_child(0).text = "KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU"
 	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
 	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"
 	buttons[0].get_child(0).visible = false
 	buttons[4].get_child(0).visible = false
 	buttons[2].get_child(0).text = "ÇÖMEL"
-	var icon_state=[game.player.is_wolf,game.player.weapon_info.get("category","rifle")]
+	var icon_state=[game.player.is_wolf,game.player.weapon_info.get("category","rifle"),game.player.mutation_id]
 	if last_icon_state!=icon_state:
 		last_icon_state=icon_state
 		for button in buttons:
@@ -90,6 +90,7 @@ func _process(_delta):
 			if key=="aim" and game.player.is_wolf:key="strong"
 			var image=button.get_child(1) as Sprite2D
 			image.texture=icon_textures.get(key)
+			if key=="strong" and game.player.mutation_id in ["guardian","ghost"]:image.texture=Art.texture("wt_interface/play/common/skillup_%swolf.dtx" % game.player.mutation_id)
 			if button.action=="transform" and game.player.is_wolf:image.texture=Art.texture("res://assets/ui/form-icons/human.png")
 			if image.texture:
 				image.scale=Vector2.ONE*(44.0/maxf(image.texture.get_width(),image.texture.get_height()))

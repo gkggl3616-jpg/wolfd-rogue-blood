@@ -127,29 +127,37 @@ func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 func build_header():
 	# Compact account strip and 32px source icon states, as in references 1/4/5.
 	var mark=ColorRect.new();mark.color=Color("222628");mark.size=Vector2(1024,58);mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(mark)
-	profile_label=text(canvas,game.profile_name,Vector2(48,10),Vector2(206,19),13)
-	text(canvas,"YEREL PROFİL",Vector2(48,31),Vector2(206,17),10,Color("9ca9ab"))
+	profile_label=text(canvas,game.profile_name,Vector2(48,31),Vector2(170,19),12)
+	text(canvas,"Etkinlik Bonusu",Vector2(48,5),Vector2(160,14),10,Color("9ca9ab"))
+	for y in [8,21]:
+		var bar=ColorRect.new();bar.color=Color("666b6b");bar.position=Vector2(137,y);bar.size=Vector2(72,9);bar.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(bar)
 	var rank=game.ranks.current(int(game.wallet.gp))
 	rank_background=Art.sprite(canvas,rank.background,Vector2(10,12),Vector2(32,32));rank_image=Art.sprite(canvas,rank.asset,Vector2(10,12),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Yerel rütbe"
 	last_rank_gp=-1
-	wallet_label=text(canvas,"",Vector2(265,5),Vector2(280,50),11,Color("c1c6c8"))
-	var entries = [["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Güç","power","wc"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Kartlar","Kartlar","charactercard"],["Diğer","","event"],["Lobi","lobby","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
+	wallet_label=text(canvas,"",Vector2(218,3),Vector2(202,51),10,Color("c1c6c8"))
+	var chain=button(canvas,"‹ KLAN ZİNCİRİ ›",Vector2(423,9),Vector2(128,37),func():navigate("clan"));chain.modulate=Color("79c9ac")
+	var pass_button=button(canvas,"WOLF\nPASS",Vector2(554,9),Vector2(54,37),func():navigate("wolfpass"));pass_button.modulate=Color("b698ee")
+	var entries = [["Etkinlikler","events","event"],["Sıralama","ranking","ranking"],["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Klan","clan","pride"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Web","web","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
 	for i in range(entries.size()):
 		var entry = entries[i]
-		var node=Art.icon_button(canvas,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(638+i*34,8),entry[0],func():
+		var node=Art.icon_button(canvas,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(614+i*37,7),entry[0],func():
 			if entry[1]=="":choose_section()
 			elif entry[1]=="back":go_back()
 			else:navigate(entry[1])
 		)
 		links[entry[0]]=node
 		if entry[1]==page:node.modulate=Color("ffe36a")
+		if entry[1]=="gifts" and game.inbox.pending_count()>0:text(node,str(game.inbox.pending_count()),Vector2(18,0),Vector2(18,15),10,Art.GOLD)
+	links["Diğer"]=button(canvas,"☰",Vector2(398,31),Vector2(22,21),choose_section)
+	var power_link=Button.new();power_link.hide();canvas.add_child(power_link);power_link.pressed.connect(func():navigate("power"));links["Güç"]=power_link
+
 
 func choose_section():
 	confirm("Menüler","",func():pass)
-	var entries=[["Görevler","missions"],["Wolf Pass","wolfpass"],["Kutular","Kutular"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Profil şifresi","pin"],["Yerel yönetim","admin"],["Etkinlikler","events"]]
+	var entries=[["Güç","power"],["Kartlar","Kartlar"],["Lobi","lobby"],["Görevler","missions"],["Wolf Pass","wolfpass"],["Kutular","Kutular"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Profil şifresi","pin"],["Yerel yönetim","admin"],["Etkinlikler","events"]]
 	for i in range(entries.size()):
 		var entry=entries[i]
-		button(modal,entry[0],Vector2(296+(i%2)*230,292+int(i/2)*38),Vector2(200,30),func():close_modal();navigate(entry[1]))
+		button(modal,entry[0],Vector2(296+(i%2)*230,275+int(i/2)*31),Vector2(200,28),func():close_modal();navigate(entry[1]))
 
 func _process(_delta):
 	if is_instance_valid(rank_image) and last_rank_gp!=int(game.wallet.gp):
@@ -223,6 +231,7 @@ func mode_picker(parent,at,dimensions,allow_training=true):
 	if allow_training: picker.add_item("Botlu Eğitim",0)
 	if allow_training: picker.add_item("Kurt Avı · Yerel",game.LocalHunt.MODE)
 	if allow_training: picker.add_item("Öğretici Mod · Yerel",game.LocalTutorial.MODE)
+	if allow_training: picker.add_item("Kurt Savaşı · Yerel",game.WOLF_BATTLE)
 	for mode in game.map_catalog.data.modes: picker.add_item(mode.sourceName,int(mode.id))
 	parent.add_child(picker);return picker
 

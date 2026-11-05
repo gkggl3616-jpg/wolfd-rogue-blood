@@ -36,4 +36,4 @@ func claim(id,wallet):
 		if level>=1 and level<=10 and int(wallet.gp)>=level*100:cash=50+level*5
 	if cash<=0:return {"ok":false,"error":"Ödül koşulu henüz tamamlanmadı."}
 	var next=state.duplicate(true);var balance=wallet.duplicate();next.claimed[id]=true;balance.cash=mini(1000000000,int(balance.cash)+cash)
-	return {"ok":true,"state":next,"wallet":balance}
+	return {"ok":true,"state":next,"wallet":balance,"rewardCash":cash}

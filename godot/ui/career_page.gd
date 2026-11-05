@@ -7,7 +7,7 @@ func build():
 	else:pass_page()
 func claim(id):
 	var result=ui.game.claim_career(id)
-	if result.ok:ui.refresh()
+	if result.ok:ui.navigate("gifts")
 	else:ui.show_error(result.error)
 func missions():
 	var view=ui.native("interface/wolfpass/wolfpassmissiondlg",ui.content,Vector2(110,100),Vector2(805,568));view.show_only(["MissionDlgbackGround","OKButton"]);view.bind_action("OKButton",ui.go_back)
@@ -18,7 +18,7 @@ func missions():
 		var row=Card.create(ui.content,at,Vector2(765,62),func():pass);row.disabled=true
 		ui.text(row,mission.name,Vector2(12,6),Vector2(540,25),17)
 		ui.text(row,"%d / %d · %d yerel nakit" % [mini(count,int(mission.goal)),int(mission.goal),int(mission.cash)],Vector2(12,33),Vector2(540,23),13)
-		ui.button(ui.content,"Alındı" if done else "Ödülü al",at+Vector2(588,17),Vector2(162,30),func():claim(mission.id),not done and count>=int(mission.goal));index+=1
+		ui.button(ui.content,"Gönderildi" if done else "Ödülü al",at+Vector2(588,17),Vector2(162,30),func():claim(mission.id),not done and count>=int(mission.goal));index+=1
 	ui.text(ui.content,"Bu cihazdaki ilerleme · Görevler bir kez ödül verir",Vector2(140,570),Vector2(740,25),13)
 func pass_page():
 	var view=ui.native("interface/wolfpass/wolfpassdlg",ui.content,Vector2(37,66),Vector2(950,750));view.scale.y=0.9
@@ -38,7 +38,7 @@ func pass_page():
 		view.set_value("PassRewardLevel%d"%i,level)
 		var button=view.find_widget("FreeWolfPassItemButton%d"%i);var done=ui.game.career.state.claimed.get(id,false)
 		view.bind_action("FreeWolfPassItemButton%d"%i,func():claim(id));button.disabled=done or int(ui.game.wallet.gp)<level*100
-		ui.text(button,"%d yerel nakit\n%s" % [50+level*5,"Alındı" if done else "Ödülü al"],Vector2(7,23),Vector2(154,60),16).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(button,"%d yerel nakit\n%s" % [50+level*5,"Gönderildi" if done else "Ödülü al"],Vector2(7,23),Vector2(154,60),16).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		var premium=view.find_widget("PremiumWolfPassItemButton%d"%i);premium.disabled=true
 		ui.text(premium,"Çevrimiçi Premium",Vector2(7,33),Vector2(154,45),13).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	view.bind_action("PrevButton",func():ui.pass_page=maxi(0,ui.pass_page-1);ui.refresh());view.bind_action("NextButton",func():ui.pass_page=mini(1,ui.pass_page+1);ui.refresh())

@@ -30,6 +30,10 @@ var weapon_info = {}
 var weapon_clip = ""
 var weapon_action_time = 0.0
 var auxiliary_magazines = []
+var mutation_id="normal"
+var guard_remaining=0.0
+var cloak_remaining=0.0
+var mutation_energy=100.0
 var fire_sound: AudioStreamPlayer
 var reload_sound: AudioStreamPlayer
 var roar_effect
@@ -227,6 +231,43 @@ func apply_prepared_character(models):
 	human=models[0];wolf=models[1]
 	for model in [human,wolf]:model.scale*=1.6;model.rotation.y=PI;add_child(model)
 	human.hide();wolf.visible=is_wolf;choose_animation_player();action_time=0;play_clip("idle");apply_tattoos()
+	if mutation_id!="normal":
+		var next=prepare_mutation(mutation_id)
+		if next:apply_mutation(next,mutation_id)
+
+func prepare_mutation(id):
+	var record=game.mutations.model(id,game.local_room.get("team","blue"))
+	var path=game.character_info.wolf.asset if id=="normal" else record.get("asset","")
+	if path=="" or not ResourceLoader.exists(path):return null
+	var scene=load(path) as PackedScene
+	if scene==null:return null
+	var model=scene.instantiate();var animations=model.find_children("*","AnimationPlayer",true,false)
+	if animations.is_empty() or not animations[0].has_animation("idle"):model.free();return null
+	return model
+func apply_mutation(model,id):
+	var fraction=float(game.health)/maxi(1,game.max_health())
+	reset_locomotion();cancel_cloak();guard_remaining=0
+	if is_instance_valid(roar_effect):roar_effect.stop()
+	remove_child(wolf);wolf.queue_free();wolf=model;mutation_id=id;wolf.scale*=1.6;wolf.rotation.y=PI;add_child(wolf);wolf.visible=is_wolf
+	# Apply the source idle pose before the first rendered frame. These meshes
+	# have a different bind posture from their explicit animation donors.
+	var initial_animator=wolf.find_children("*","AnimationPlayer",true,false)[0]
+	initial_animator.play("idle",0);initial_animator.advance(0)
+	game.health=maxi(1,mini(game.max_health(),roundi(fraction*game.max_health())))
+	choose_animation_player();current_clip="";play_clip("idle");apply_tattoos()
+func begin_guard():
+	if not game.is_combat_active() or not is_wolf or mutation_id!="guardian" or mutation_energy<40 or guard_remaining>0:return false
+	mutation_energy-=40;guard_remaining=3;game.announce("Gardiyan savunması");return true
+func begin_cloak():
+	if not game.is_combat_active() or not is_wolf or mutation_id!="ghost" or mutation_energy<40 or cloak_remaining>0:return false
+	mutation_energy-=40;cloak_remaining=5
+	for mesh in wolf.find_children("*","MeshInstance3D",true,false):mesh.transparency=0.65
+	game.announce("Hayalet · Hareketsizken gizlen");return true
+func is_cloaked():return cloak_remaining>0 and Vector2(velocity.x,velocity.z).length()<0.3
+func cancel_cloak():
+	cloak_remaining=0
+	if is_instance_valid(wolf):
+		for mesh in wolf.find_children("*","MeshInstance3D",true,false):mesh.transparency=0
 
 func load_character(info):
 	var models=prepare_character(info)
@@ -257,7 +298,7 @@ func _exit_tree():
 		reload_sound.stop()
 
 func look(delta: Vector2):
-	if not game.running or game.menu_open:
+	if not game.is_combat_active():
 		return
 	var sensitivity = float(game.book.settings.sensitivity)
 	yaw -= delta.x * 0.0032 * sensitivity
@@ -269,7 +310,12 @@ func switch_form(force=false):
 	if not game.running or game.menu_open:
 		return
 	if game.hunt.active and not force:return
+	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE and not force:return
+	if not is_wolf and not force and not game.tutorial.active and game.round_selection_enabled:
+		game.open_round_selection("wolf",true);return
+	var fraction=float(game.health)/maxi(1,game.max_health())
 	is_wolf = not is_wolf
+	cancel_cloak();guard_remaining=0;game.health=maxi(1,mini(game.max_health(),roundi(fraction*game.max_health())))
 	end_roll()
 	if is_instance_valid(roar_effect): roar_effect.stop()
 	reset_locomotion()
@@ -347,7 +393,9 @@ func _physics_process(delta):
 	if not can_wolf_run() or not forward_now or Input.is_action_pressed("crouch"):
 		wolf_running = false
 	var direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized()
-	var speed = 6.0 if is_wolf else 4.1
+	guard_remaining=maxf(0,guard_remaining-delta);cloak_remaining=maxf(0,cloak_remaining-delta);mutation_energy=minf(100,mutation_energy+delta*8)
+	if cloak_remaining<=0 or axis.length()>0.1:cancel_cloak()
+	var speed = float(game.mutations.profile(mutation_id).speed)*game.wolf_speed_multiplier() if is_wolf else 4.1
 	if wolf_running:
 		speed *= float(game.equipment.rules.mobileAdaptation.wolfRunMultiplier)
 	elif (Input.is_action_pressed("sprint") or normal_run_toggled) and axis.length() > 0.1:
@@ -494,6 +542,7 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
+	cancel_cloak();guard_remaining=0;mutation_energy=100
 	reset_locomotion();shot_cooldown=0;action_time=0;weapon_action_time=0;roll_cooldown=0;wall_hold_cooldown=0
 	if is_instance_valid(roar_effect):roar_effect.stop();roar_effect.cooldown=0
 	current_clip="";play_clip("idle")

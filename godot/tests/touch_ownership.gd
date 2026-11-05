@@ -5,6 +5,7 @@ class PlayerDouble extends RefCounted:
 	var move_axis = Vector2.ZERO
 	var normal_run_toggled = false
 	var is_wolf = false
+	var mutation_id="normal"
 	var weapon_info = {"category":"rifle"}
 	var look_total = Vector2.ZERO
 	func look(delta): look_total += delta
@@ -14,6 +15,8 @@ class GameDouble extends RefCounted:
 	var menu_open = false
 	var application_suspended = false
 	var player = PlayerDouble.new()
+	const WOLF_BATTLE=900003
+	var local_room={}
 	var hunt={"active":false}
 	func is_combat_active():return running and not menu_open and not application_suspended
 	var blocked = Rect2(850, 20, 150, 50)

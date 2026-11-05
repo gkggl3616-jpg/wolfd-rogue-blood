@@ -16,7 +16,7 @@ CATALOGUES = [
     'assets/pc_ui/catalog.json', 'assets/full_ui/catalog.json', 'assets/ui/catalog.json',
     'assets/ui/engine-fonts.json', 'assets/ui/character-portraits.json', 'assets/ui/weapon-text.json', 'assets/ui/form-icons.json', 'assets/ui/control-icons.json', 'assets/items/rules.json',
     'assets/bots/catalog.json', 'assets/maps/arena-navigation.json',
-    'assets/items/boxes.json', 'assets/maps/photos.json', 'assets/ui/ranks.json',
+    'assets/items/power.json', 'assets/mutations/catalog.json', 'assets/items/boxes.json', 'assets/maps/photos.json', 'assets/ui/ranks.json',
 ]
 
 

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "sourceTextSha256": "04a124ed80f3045a5f1a0a593171909d1e703c50536b212be1f9724c12e36554",
+  "originalPcPricesVerified": false,
+  "items": [
+    {
+      "id": "19001",
+      "sourceId": 19001,
+      "name": "İlkyardım Seti (Altın)",
+      "description": "Kurtlar için Yaşam Puanı yenilemek \niçin kullanılır.\nGüç Slotuna eklendiğinde geçerlidir.\n YP %100 iken\nkullanılamaz ve ulumaya etki etmez.\n\nEtki\nHızlı Yenilenme                            \n     +50\nDakikadaki Yenilenme Oranı           \n    +2\nEn fazla kullanım adeti                  \n      1\nSüre                                           \n     15 ikinci\nTekrar Kullanabilmek İçini Gereken \nSüre  0 ikinci",
+      "icon": "res://assets/full_ui/textures/ce00ec7680bc4c545c8a88d2.png",
+      "category": "other",
+      "slot": "support",
+      "localPrice": 20,
+      "consumable": true,
+      "mobileTuning": {
+        "heal": 50,
+        "usesPerRound": 1
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/exitem/medical_kit.dtx",
+      "iconRegion": [
+        44,
+        0,
+        120,
+        75
+      ]
+    },
+    {
+      "id": "19002",
+      "sourceId": 19002,
+      "name": "İlkyardım Seti (Nakit)",
+      "description": "Kurtlar için Yaşam Puanı yenilemek \niçin kullanılır.\nGüç Slotuna eklendiğinde geçerlidir.\n YP %100 iken\nkullanılamaz ve ulumaya etki etmez.\n\nEtki\nHızlı Yenilenme                            \n       +100\nDakikadaki Yenilenme Oranı           \n      +5\nEn fazla kullanım adeti                  \n        2\nSüre                                           \n      15 ikinci\nTekrar Kullanabilmek İçini Gereken \nSüre 0 ikinci",
+      "icon": "res://assets/full_ui/textures/ce00ec7680bc4c545c8a88d2.png",
+      "category": "other",
+      "slot": "support",
+      "localPrice": 40,
+      "consumable": true,
+      "mobileTuning": {
+        "heal": 100,
+        "usesPerRound": 2
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/exitem/medical_kit.dtx",
+      "iconRegion": [
+        44,
+        0,
+        120,
+        75
+      ]
+    },
+    {
+      "id": "19501",
+      "sourceId": 19501,
+      "name": "Enerji Paketi (Altın)",
+      "description": "Kurtların tüm yeteneklerini yü\nkselten ve İlkyardım Çantası ile \nkullanılması tavsiye edilen\npaket. Güç Slotuna eklendiğinde ge\nçerlidir.\n\nEtki\nKurt Kafa ZP                                \n       +2%\nKurt Gövde ZP                             \n       +2%\nKurt Kol ZP                                  \n       +2%\nKurt Bacak ZP                              \n      +2%\nHız Artışı                                     \n       +50\nAni YP Düşmesi                            \n      -50%\nDakika Başı YP Düşmesi                \n      -5\nEn Fazla Kullanım Adeti                 \n  -Sınırsız\nSüre                                           \n       +10\nTekrar Kullanabilmek İçin Gereken \nSüre  +0\nTemel Saldırı \n(1 Vuruş/2 Vuruş/3 Vuruş) +10%\nGüçlü Saldırı \n(2li Vuruş)                        +25%\nKurt Donmasını Azaltma                 \n      +100%",
+      "icon": "res://assets/items/energy.svg",
+      "category": "other",
+      "slot": "energy",
+      "localPrice": 30,
+      "consumable": true,
+      "mobileTuning": {
+        "seconds": 10,
+        "damageMultiplier": 1.1,
+        "speedMultiplier": 1.1,
+        "healthCostFraction": 0.5
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "native_syringe_symbol",
+      "sourceIcon": ""
+    },
+    {
+      "id": "19502",
+      "sourceId": 19502,
+      "name": "Enerji Paketi (Nakit)",
+      "description": "Kurtların tüm yeteneklerini yü\nkselten ve İlkyardım Çantası ile \nkullanılması tavsiye edilen\npaket. Güç Slotuna eklendiğinde ge\nçerlidir.\n\nEtki\nKurt Kafa ZP                                \n       +5%\nKurt Gövde ZP                             \n       +5%\nKurt Kol ZP                                  \n       +5%\nKurt Bacak ZP                              \n      +5%\nHız Artışı                                     \n       +100\nAni YP Düşmesi                            \n      -25%\nDakika Başı YP Düşmesi                \n       -2\nEn Fazla Kullanım Adeti                 \n       -Sınırsız\nSüre                                           \n       +10\nTekrar Kullanabilmek İçin Gereken \nSüre  +0\nTemel Saldırı \n(1 Vuruş/2 Vuruş/3 Vuruş) +20%\nGüçlü Saldırı (2li Vuruş)                 \n       +50%\nKurt Donmasını Azaltma                 \n      +100%",
+      "icon": "res://assets/items/energy.svg",
+      "category": "other",
+      "slot": "energy",
+      "localPrice": 50,
+      "consumable": true,
+      "mobileTuning": {
+        "seconds": 10,
+        "damageMultiplier": 1.2,
+        "speedMultiplier": 1.15,
+        "healthCostFraction": 0.25
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "native_syringe_symbol",
+      "sourceIcon": ""
+    },
+    {
+      "id": "13006",
+      "sourceId": 13006,
+      "name": "20C Uzman Çantası",
+      "description": "Uzman Çantası\n(Her iki takımdaki İnsan ve Kurtlar iç\nindir)\n\nGP                 +%15\nMaks. SP           +500\nÇanta Arama Hızı +%20\n^bc2e2e^Personel Çavuşu veya daha üst \n^bc2e2e^rütbede olmalısınız.\n\nÇift Alım ySGıldığında \nkullanım süresi arttırılır.",
+      "icon": "res://assets/full_ui/textures/2c76a295d4896827aa213b5f.png",
+      "category": "bag",
+      "slot": "bag",
+      "localPrice": 75,
+      "consumable": false,
+      "mobileTuning": {
+        "localGpBonus": 0.15
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/power/large/backpack_propack_20c.dtx"
+    },
+    {
+      "id": "19602",
+      "sourceId": 19602,
+      "name": "Kurt Pençesi",
+      "description": "Kurtların uzak mesafelere olan\nzayıflıkları için üretilmiştir.\nHer iki kola da giyilebilen pençeler\nsayesinde saldırı gücünüz ve\nmenziliniz artar.",
+      "icon": "res://assets/full_ui/textures/ddca46247a1d49e51cc3228b.png",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 75,
+      "consumable": false,
+      "mobileTuning": {
+        "damageBonus": 5,
+        "rangeBonus": 0.4
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/bullets/wolf.dtx",
+      "iconRegion": [
+        0,
+        0,
+        32,
+        52
+      ]
+    }
+  ]
+}

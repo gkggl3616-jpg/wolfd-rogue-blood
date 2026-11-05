@@ -31,7 +31,7 @@ func run():
 	ui.preview_angle=PI;ui.selected=game.book.tattoos.filter(func(row):return row.role=="body")[0];ui.refresh();await capture("wolf-tattoo-slots-012")
 	ui.close_menu();game.show_home();game.pc_panel.navigate("Kutular");ui=game.pc_panel
 	game.grant_money("cash",1000,"Görüntü kontrolü yerel örnek bakiyesi")
-	game.box_action("buy","mystery","visual-purchase");ui.refresh();await capture("box-inventory-012")
+	game.box_action("buy","mystery","visual-purchase");game.accept_gift(game.inbox.state.messages[-1].id);ui.refresh();await capture("box-inventory-012")
 	ui.detail_helper.open_box(game.boxes.box("mystery"));await capture("box-opening-012");await frames(110);await capture("box-reward-012")
 	ui.close_modal();game.local_room={"title":"Kurt Avı","mode":game.LocalHunt.MODE,"map":84,"playerForm":"wolf","botDifficulty":"normal","team":"blue"};game.start_round();game.spawn_clock=1000;await frames(30);game.spawn_enemy();await capture("hunt-wolf-012")
 	game.open_interface("scoreboard");await capture("match-scoreboard-012")

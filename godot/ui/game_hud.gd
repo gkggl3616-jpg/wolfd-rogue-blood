@@ -24,6 +24,8 @@ var score:Label
 var weapon_name:Label
 var preview_name:Label
 var map_name:Label
+var power_buttons=[]
+var power_counts=[]
 var slots=[]
 var slot_icons=[]
 var slot_ids=[]
@@ -102,6 +104,10 @@ func _ready():
 		var icon=Art.sprite(button,"",Vector2(4,9),Vector2(36,24));icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		var key=Art.label(str([1,2,5,4][number]),Vector2(10,14),8,Color("c1b77e"));key.position=Vector2(18,29);button.add_child(key)
 		pc_layer.add_child(button);slots.append(button);slot_icons.append(icon);slot_ids.append(slot);game.gui_touch_blockers.append(button);number+=1
+	for slot in ["support","energy"]:
+		var button=round_button(Vector2(46,46));button.pressed.connect(func():game.use_power(slot));button.set_meta("power_slot",slot);pc_layer.add_child(button);game.gui_touch_blockers.append(button);power_buttons.append(button)
+		Art.sprite(button,game.power_item("19002" if slot=="support" else "19502").icon,Vector2(7,5),Vector2(32,27)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		var count=Art.label("",Vector2(42,14),9);count.position=Vector2(2,30);count.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;button.add_child(count);power_counts.append(count)
 	resized.connect(arrange);arrange();refresh_from_game()
 
 func arrange():
@@ -121,11 +127,16 @@ func arrange():
 	scoreboard_button.position=Vector2(native.x*0.05+96,7);feed.position=Vector2(native.x-389,170)
 	guide.position=Vector2(native.x*0.5-350,native.y-150)
 	for i in range(slots.size()):slots[i].position=Vector2(native.x*0.5-104+i*52,native.y-48)
+	for i in range(power_buttons.size()):power_buttons[i].position=Vector2(native.x*0.37+i*55,native.y-107)
 	cross.position=dimensions*0.5-Vector2(16,16)
 
 func refresh_from_game():
 	visible=game.running and not game.menu_open
 	if not is_instance_valid(game.player):return
+	for i in range(power_buttons.size()):
+		var button=power_buttons[i];var id=game.inbox.state.powerSlots.get(button.get_meta("power_slot"),"");var count=int(game.inbox.state.powerCounts.get(id,0))
+		button.visible=game.player.is_wolf and id!="";button.disabled=count<=0 or not game.is_combat_active();power_counts[i].text=str(count)
+		button.tooltip_text=game.power_item(id).get("name","")
 	cross.visible=visible and not game.player.is_wolf
 	scope.visible=visible and game.player.is_scoped();cross.visible=cross.visible and not scope.visible
 	var messages=[]
@@ -144,6 +155,7 @@ func refresh_from_game():
 	score_view.set_value("RedTeamScore",game.kills);score_view.set_value("BlueTeamScore",10);score_view.set_value("Mode","Yerel Eğitim")
 	if game.hunt.active:
 		score_view.set_value("RedTeamScore",game.hunt.round_kills);score_view.set_value("BlueTeamScore",game.LocalHunt.TARGET);score_view.set_value("Mode","Kurt Avı · %d/3" % game.hunt.round_number)
+	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE:score_view.set_value("Mode","Kurt Savaşı")
 	if game.tutorial.active:score_view.set_value("Mode","Öğretici Mod")
 	class_icon.texture=Art.texture("res://assets/ui/form-icons/wolf.png" if game.player.is_wolf else "res://assets/ui/form-icons/human.png")
 	timer_view.visible=not game.exploring and not game.tutorial.active;score_view.visible=not game.exploring

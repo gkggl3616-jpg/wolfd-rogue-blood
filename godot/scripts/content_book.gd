@@ -11,6 +11,8 @@ var owned = {}
 var slots = {}
 var loadouts = []
 var active_loadout = 0
+var loadout_names=["Standart","SLH 1","SLH 2","SLH 3","SLH 4"]
+var wolf_mutation="normal"
 var selected_character = ""
 var selected_tattoos = {}
 const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": false, "invert_y": false, "shadows": false, "fps": 60}
@@ -56,6 +58,7 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 				loadouts.append(preset if preset is Dictionary else {})
 		var active = stored.get("activeLoadout", 0)
 		if active is int or active is float: active_loadout = clampi(int(active), 0, 4)
+		if stored.get("wolfMutation","") in ["normal","power","guardian","ghost"]:wolf_mutation=stored.wolfMutation
 		var character = stored.get("character", "")
 		if character is String and characters.any( func(row): return row.id == character and row.get("available") == true): selected_character = character
 		var saved_tattoos = stored.get("tattoos", {})
@@ -137,6 +140,12 @@ func select_loadout(index):
 	if save(): return true
 	active_loadout = previous;slots = loadouts[previous];return false
 
+func select_mutation(value):
+	if value not in ["normal","power","guardian","ghost"]:return false
+	var previous=wolf_mutation;wolf_mutation=value
+	if save():return true
+	wolf_mutation=previous;return false
+
 func validated_setting(key, value):
 	if key in ["directions", "shadows", "invert_y"]: return value if value is bool else null
 	if not (value is int or value is float) or not is_finite(float(value)): return null
@@ -204,4 +213,4 @@ func tattoo_matches_role(role, texture):
 func save():
 	if not persistent: return true
 	if save_blocked: return false
-	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattoos": selected_tattoos, "settings": settings, "localName": local_name})
+	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})

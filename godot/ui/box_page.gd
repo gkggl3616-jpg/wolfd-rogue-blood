@@ -18,6 +18,7 @@ func build():
 	ui.paragraph(ui.content,"Yerel kutu koleksiyonu\nYerel nakit ile açılır.",Vector2(18,90),Vector2(320,70),15)
 	ui.button(ui.content,"Envanter",Vector2(366,124),Vector2(130,26),func():ui.navigate("Envanter"))
 	ui.button(ui.content,"Açılanlar",Vector2(506,124),Vector2(130,26),history)
+	ui.button(ui.content,"Hediye Kutusu",Vector2(646,124),Vector2(160,26),func():ui.navigate("gifts"))
 	var rows=ui.game.boxes.catalog.boxes
 	if ui.selected.is_empty():ui.selected=rows[0]
 	var selected=ui.selected
@@ -42,7 +43,7 @@ func buy(entry):
 	var request="buy-%s-%s" % [Time.get_ticks_usec(),randi()]
 	ui.confirm("KUTU SATIN AL",entry.name+"\n%d yerel nakit harcansın mı?" % int(entry.localPrice),func():
 		var result=ui.game.box_action("buy",entry.id,request)
-		if result.ok:ui.refresh()
+		if result.ok:ui.navigate("gifts")
 		else:ui.show_error(result.error)
 	,func():pass)
 func open_box(entry):

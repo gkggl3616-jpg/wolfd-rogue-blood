@@ -66,6 +66,7 @@ func build_native():
 	ui.button(ui.content,"▼",Vector2(999,480),Vector2(20,24),func():ui.offset=mini(int((maxi(1,entries.size())-1)/9)*9,ui.offset+9);refresh_grid())
 	details=Control.new();details.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(details)
 	if ui.page=="Envanter":build_loadouts()
+	if ui.page=="power":build_power_slots()
 	refresh_grid()
 
 func build_categories():
@@ -97,6 +98,7 @@ func build_categories():
 		var node=Art.atlas_button(ui.content,source,[r,Rect2(r.position+Vector2(0,27),r.size),Rect2(r.position+Vector2(0,54),r.size)],Vector2(366+i*84,122),Vector2(84,27),func():
 			if ui.page in ["Envanter","Mağaza"]:ui.filter_id=entry[0];ui.offset=0;ui.refresh()
 			elif entry[0] in ["power","Dövmeler"]:ui.navigate(entry[0])
+			elif ui.page=="power":ui.filter_id="all" if entry[0]=="power" else entry[0];ui.offset=0;refresh_grid()
 			elif entry[0]=="all":ui.filter_id="all";refresh_grid()
 			else:ui.show_error("Bu alt kategori için doğrulanmış kullanılabilir kayıt yok.")
 		)
@@ -111,6 +113,7 @@ func card(parent,entry,at,selected=false):
 	if ui.page=="Karakterler":icon=portraits.get(entry.id,{}).get("asset","")
 	if icon!="":
 		var region=Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza"] or (ui.page=="Karakterler" and portraits.get(entry.id,{}).get("kind")=="source_icon") else Rect2()
+		if entry.has("iconRegion"):var r=entry.iconRegion;region=Rect2(r[0],r[1],r[2],r[3])
 		Art.sprite(cell,icon,Vector2(2,2),Vector2(205,72),region).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	ui.text(cell,title(entry),Vector2(4,76),Vector2(201,16),12)
 	return cell
@@ -122,7 +125,7 @@ func build_loadouts():
 			if ui.game.book.select_loadout(i):ui.game.equip_slot("primary");ui.refresh()
 			else:ui.show_error("Ekipman seti kaydedilemedi.")
 		)
-		var caption=ui.text(node,"SET %d" % (i+1),Vector2(2,3),Vector2(63,20),11);caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		var caption=ui.text(node,ui.game.book.loadout_names[i],Vector2(2,3),Vector2(63,20),11);caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		node.tooltip_text="Ekipman seti %d" % (i+1);loadout_tabs.append(node)
 	var slots=[["primary","BİRİNCİ"],["secondary_primary","YEDEK"],["pistol","İKİNCİ"],["knife","BIÇAK"],["grenade","BOMBA"]]
 	for i in range(slots.size()):
@@ -152,8 +155,9 @@ func choose_primary_slot(slot):
 
 func native_rows():
 	var rows=[]
-	var source=ui.game.book.weapons if ui.page in ["Mağaza","Envanter"] else (ui.game.book.characters if ui.page=="Karakterler" else (ui.game.book.tattoos if ui.page=="Dövmeler" else (ui.game.equipment.rules.items if ui.page=="power" else ui.game.book.effects)))
+	var source=ui.game.book.weapons if ui.page in ["Mağaza","Envanter"] else (ui.game.book.characters if ui.page=="Karakterler" else (ui.game.book.tattoos if ui.page=="Dövmeler" else ((ui.game.equipment.rules.items+ui.game.power_catalog.items) if ui.page=="power" else ui.game.book.effects)))
 	for row in source:
+		if ui.page=="power" and ui.filter_id not in ["all","power"] and row.get("category","claw")!=ui.filter_id:continue
 		if ui.page=="Dövmeler" and ui.filter_id!="all" and row.role!=ui.filter_id:continue
 		if ui.page in ["Mağaza","Envanter"]:
 			if row.get("engineImported")!=true or row.get("available")!=true:continue
@@ -174,6 +178,10 @@ func refresh_native_grid():
 	for i in range(mini(9,entries.size()-ui.offset)):
 		var entry=entries[ui.offset+i];var cell=card(grid,entry,Vector2(i%3,int(i/3))*Vector2(210,117),entry==ui.selected)
 		cell.button_group=group
+		if ui.page=="power":
+			var count=int(ui.game.inbox.state.powerCounts.get(str(entry.id),0))
+			var equipped=str(entry.id) in ui.game.inbox.state.powerSlots.values() or (str(entry.id) in ["19601","19601.0"] and ui.game.equipment.has_wolf_ability())
+			ui.text(cell,"Kullanılıyor" if equipped else ("Kalan adet: %d" % count if str(entry.id) not in ["19601","19601.0"] else "Kullanılabilir"),Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
 		if ui.page in ["Envanter","Mağaza"] and entry.id in ui.game.book.slots.values():ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
 		cell.pressed.connect(func():ui.selected=entry;show_details())
 	page_label.text="%d / %d  ·  %d eşya" % [int(ui.offset/9)+1,maxi(1,int(ceil(float(entries.size())/9))),entries.size()]
@@ -215,7 +223,8 @@ func show_native_details():
 				var original=entry.sourceDetails
 				copy+="\n\nPC EŞYA BİLGİSİ\nMod: %s\nAğırlık: %s\nMühimmat: %s" % [original.modeText,original.weightText,original.magazineText]
 		if copy=="":copy="Açıklama bulunmuyor."
-		body(copy)
+		if info_tab=="properties":weapon_properties(entry)
+		else:body(copy)
 		action_use(entry)
 		if ui.page=="Mağaza":
 			ui.paragraph(details,title(entry),Vector2(16,119),Vector2(320,35),14)
@@ -275,16 +284,58 @@ func build_tattoo(entry):
 		else:ui.show_error("Dövme çıkarılamadı.")
 	,known)
 
+func build_power_slots():
+	var slots=[["support","İlkyardım"],["energy","Enerji"],["bag","Çanta"],["claw","Pençe"],["ability","Yetenek"]]
+	for i in range(slots.size()):
+		var key=slots[i][0];var entry=ui.game.power_item(ui.game.inbox.state.powerSlots.get(key,""))
+		if key=="ability" and ui.game.equipment.has_wolf_ability():entry=ui.game.equipment.rules.items[0]
+		var cell=card(ui.content,entry if not entry.is_empty() else {"name":slots[i][1]+" · Boş","icon":""},Vector2(117,154+i*117))
+		ui.text(ui.content,slots[i][1],Vector2(8,167+i*117),Vector2(102,22),12,Color("94a2a6"))
+		if not entry.is_empty():
+			ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11)
+			cell.pressed.connect(func():ui.selected=entry;show_details())
+	ui.text(ui.content,"KURT GÜCÜ",Vector2(8,500),Vector2(103,25),13,Art.GOLD)
+	var profile=ui.game.mutations.profile(ui.game.book.wolf_mutation)
+	ui.paragraph(ui.content,"YP: %d\nHasar: %d\nHız: %.1f\nGP: +%%%d" % [profile.health,profile.damage,profile.speed,roundi(float(ui.game.power_bonus("bag","localGpBonus",0))*100)],Vector2(8,529),Vector2(103,120),12)
+
 func build_power(entry):
-	body(entry.description)
 	ui.trace("interface/abilityequipmentpage")
-	ui.preview_wolf=true;ui.build_preview(Vector2(14,154),Vector2(326,490),ui.game.character_info)
-	var equipped=ui.game.equipment.has_wolf_ability()
-	ui.button(details,"Güç slotuna tak" if not equipped else "Takılı · Çıkar",Vector2(366,710),Vector2(290,28),func():
-		if not ui.game.equipment.equip_power(0 if equipped else 19601):ui.show_error("Güç slotu kaydedilemedi.");return
-		ui.game.player.reset_locomotion();ui.refresh()
+	if str(entry.id) in ["19601","19601.0"]:
+		body(entry.description)
+		var equipped=ui.game.equipment.has_wolf_ability()
+		ui.button(details,"Güç slotuna tak" if not equipped else "Takılı · Çıkar",Vector2(366,710),Vector2(290,28),func():
+			if not ui.game.equipment.equip_power(0 if equipped else 19601):ui.show_error("Güç slotu kaydedilemedi.");return
+			ui.game.player.reset_locomotion();ui.refresh()
+		)
+		return
+	var count=int(ui.game.inbox.state.powerCounts.get(entry.id,0));var equipped=ui.game.inbox.state.powerSlots.get(entry.slot,"")==entry.id
+	var copy=entry.description
+	if info_tab=="properties":
+		var tuning=entry.mobileTuning
+		copy="YEREL MAÇ\n"
+		match entry.slot:
+			"support":copy+="YP yenileme: +%d\nRaunt başına: %d\nAnında iyileştirme" % [tuning.heal,tuning.usesPerRound]
+			"energy":copy+="Süre: %d sn\nHasar: +%%%d\nHız: +%%%d\nMevcut YP maliyeti: %%%d" % [tuning.seconds,roundi((tuning.damageMultiplier-1)*100),roundi((tuning.speedMultiplier-1)*100),roundi(tuning.healthCostFraction*100)]
+			"bag":copy+="Hedef başına GP: +%%%d" % roundi(tuning.localGpBonus*100)
+			"claw":copy+="Pençe hasarı: +%d" % tuning.damageBonus
+		copy+="\nKalan adet: %d" % count
+	body(copy)
+	ui.button(details,"Takılı · Çıkar" if equipped else "Kullan",Vector2(366,710),Vector2(140,28),func():
+		if equipped:
+			var pending=ui.game.inbox.state.duplicate(true);pending.powerSlots.erase(entry.slot)
+			if ui.game.save_wallet(null,null,null,pending):ui.game.inbox.state=pending;ui.refresh()
+			else:ui.show_error("Ekipman kaydedilemedi.")
+		elif ui.game.equip_power_item(entry.id):ui.refresh()
+		else:ui.show_error("Önce hediye kutusundan eşyayı al.")
+	,count>0 or equipped)
+	ui.button(details,"Al · %d nakit" % entry.localPrice,Vector2(514,710),Vector2(142,28),func():
+		var request="power-%d-%d" % [Time.get_ticks_usec(),randi()]
+		ui.confirm("SATIN AL",entry.name+"\n%d yerel nakit harcansın mı?" % entry.localPrice,func():
+			var result=ui.game.buy_power(entry.id,request)
+			if result.ok:ui.navigate("gifts")
+			else:ui.show_error(result.error)
+		,func():pass)
 	)
-	ui.paragraph(details,"Koşarken zıpla, GÜÇLÜ düğmesine bas.",Vector2(20,654),Vector2(310,38),12)
 
 func select_relative(direction):
 	if entries.is_empty():return
@@ -294,3 +345,13 @@ func select_relative(direction):
 func body(copy):
 	var node=RichTextLabel.new();node.text=copy;node.position=Vector2(674,577);node.size=Vector2(328,149);node.fit_content=false;node.scroll_active=true
 	node.add_theme_font_override("normal_font",Art.font());node.add_theme_font_size_override("normal_font_size",12);details.add_child(node)
+
+func weapon_properties(entry):
+	var tuning=entry.gameplayTuning
+	ui.text(details,"YEREL ÖZELLİKLER",Vector2(674,571),Vector2(328,20),11,Art.GOLD)
+	var rows=[["HASAR",float(tuning.damage),150.0],["ŞARJÖR",float(tuning.capacity),100.0],["ATIŞ / SN",1.0/float(tuning.fireInterval),20.0],["DOLUM / SN",float(tuning.reloadSeconds),6.0]]
+	for i in range(rows.size()):
+		var row=rows[i];var y=601+i*29
+		ui.text(details,row[0],Vector2(674,y),Vector2(115,21),11)
+		var bar=ProgressBar.new();bar.position=Vector2(790,y+5);bar.size=Vector2(151,9);bar.max_value=row[2];bar.value=row[1];bar.show_percentage=false;details.add_child(bar)
+		ui.text(details,"%.1f" % row[1],Vector2(947,y),Vector2(59,21),12,Color("9ae2d6"))

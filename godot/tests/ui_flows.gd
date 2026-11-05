@@ -125,7 +125,7 @@ func run():
 	await click(ui.links["Tak"])
 	ensure(game.book.slots.secondary_primary==game.book.slots.primary,"Kullan equips the selected primary weapon into the chosen second slot")
 	ensure(game.ammo==7 and game.reserve==19,"assigning the same weapon to another slot cannot refill ammunition")
-	await click(ui.links["Kartlar"])
+	await click(ui.links["Diğer"]);await click(ui.links["Kartlar"])
 	ensure(ui.page=="Kartlar" and ui.detail_helper.grid.get_child_count()==8,"source card icon opens the four-column two-row card browser")
 	ensure(ui.links["Kartı kullan"].disabled,"previewing source card art never grants ownership or stats")
 	ui.detail_helper.search.text="re";ui.detail_helper.search.text_changed.emit("re");ui.detail_helper.search.grab_focus();ui.detail_helper.search.caret_column=1
@@ -159,7 +159,7 @@ func run():
 	ensure(icon.size.x<=205 and icon.size.y<=72,"large source ability image stays inside its card")
 	var body=ui.detail_helper.details.get_children().filter(func(node):return node is RichTextLabel)[0]
 	ensure(not body.fit_content and body.scroll_active and body.get_rect().end.y<=738,"long item text scrolls inside the lower details panel")
-	ensure(ui.preview_wolf and ui.preview_model!=null,"power page uses the actual equipped wolf preview in the left pane")
+	ensure(ui.detail_helper.entries.size()==7 and ui.content.find_children("*","BaseButton",true,false).size()>=5,"power page shows five real equipment slots and seven usable item records")
 	ui.close_menu();await frames()
 	ensure(not game.menu_open and game.library_panel==null,"closing collection resumes without orphaned menu")
 	game.show_home();root.size=Vector2i(1024,768);game.show_front_screen("servers");await frames()

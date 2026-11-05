@@ -108,6 +108,7 @@ func reachable(point):
 func can_see_player():
  var offset=game.player.global_position-global_position
  if offset.length()>38:return false
+ if game.player.is_cloaked() and offset.length()>3:return false
  var flat=Vector3(offset.x,0,offset.z)
  if flat.length()>3 and flat.normalized().dot(-global_basis.z)<-0.25:return false
  return line_to_player()
