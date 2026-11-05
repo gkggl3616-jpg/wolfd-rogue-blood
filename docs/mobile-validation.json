@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-05T05:12:20.111404+00:00",
+  "utc": "2026-11-05T09:18:01.806473+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "6db4d658348da986590fa0bc10dd08c00f8ec2c0ced455846127f214fcd1f2db",
+  "runtimeCodeSha256": "bb35047fad833301e7e9f6e06ff6d4161aa47a4be4d27df58c307aa3096e8b89",
   "passed": true,
   "steps": [
     {
@@ -72,6 +72,18 @@
     },
     {
       "name": "offline_matches",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "gameplay_reference",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "bot_behaviour",
       "passed": true,
       "exitCode": 0,
       "errors": []

@@ -77,6 +77,17 @@ func run():
 	game.start_round();game.spawn_clock=1000;await frames(20);game.spawn_enemy();await frames(15)
 	await capture("offline-container-bots-1280")
 	game.end_round("Yerel maç tamamlandı");await capture("offline-result-1280")
+	game.local_room={"title":"Zor Botlar","mode":0,"map":0,"team":"blue","botDifficulty":"hard"}
+	game.start_round();game.spawn_clock=1000
+	game.player.position=Vector3(0,0.1,5);game.player.velocity=Vector3.ZERO
+	game.spawn_enemy("human","hard");var bot=game.enemies.get_children().filter(func(node):return not node.is_queued_for_deletion())[-1]
+	bot.brain_enabled=false;bot.position=Vector3(0,0.1,0);bot.rotation.y=PI;bot.set_physics_process(false)
+	await capture("human-bot-hard-1280")
+	bot.ammo=0;bot.begin_reload();await capture("bot-reload-1280")
+	root.size=Vector2i(2160,992);game.start_round();game.spawn_clock=1000
+	if not game.player.is_wolf:game.player.switch_form()
+	await frames(20);await capture("wolf-reference-aspect-2160")
+	game.player.switch_form();await frames(20);await capture("human-reference-aspect-2160")
 	game.show_home();root.size = Vector2i(1920,1080);await capture("lobby-1920")
 	game.show_front_screen("servers");await capture("servers-1920")
 	root.size=Vector2i(1024,768);game.show_home();await capture("lobby-native-1024")

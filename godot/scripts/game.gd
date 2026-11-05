@@ -14,6 +14,8 @@ const GrenadeScript = preload("res://scripts/grenade.gd")
 const GameAudio = preload("res://scripts/game_audio.gd")
 const AtomicStore = preload("res://scripts/atomic_store.gd")
 const MapAudio = preload("res://scripts/map_audio.gd")
+const BotRules = preload("res://scripts/bot_rules.gd")
+const NavigationGraph = preload("res://scripts/navigation_graph.gd")
 var book
 var current_weapon_id = "legacy-ak47"
 var weapon_ammo = {}
@@ -33,6 +35,7 @@ var active_map: Node3D
 var offline_map_number = 0
 var navigation_region: NavigationRegion3D
 var offline_navigation_map = RID()
+var navigation_graph
 var exploring = false
 var preview_spawn = Vector3.ZERO
 var preview_name = ""
@@ -46,6 +49,8 @@ var reloading = 0.0
 var kills = 0
 var time_left = 90.0
 var spawn_clock = 0.0
+var bot_difficulty = "normal"
+var bot_spawn_count = 0
 var enemies: Node3D
 var hud_label: Label
 var message: Label
@@ -366,6 +371,7 @@ func start_map_preview():
 		remove_child(active_map)
 		active_map.queue_free()
 	active_map = load(asset).instantiate()
+	active_map.set_meta("map_number",int(record.number))
 	add_child(active_map)
 	for mesh in active_map.find_children("*", "MeshInstance3D", true, false):
 		mesh.create_trimesh_collision()
@@ -447,8 +453,12 @@ func start_round():
 				return false
 	if is_instance_valid(player.roar_effect): player.roar_effect.stop()
 	clear_projectiles()
+	if is_instance_valid(source_hud):source_hud.feedback.reset()
 	exploring = false
 	offline_map_number = map_number
+	bot_difficulty = local_room.get("botDifficulty","normal")
+	if not BotRules.LEVELS.has(bot_difficulty):bot_difficulty="normal"
+	bot_spawn_count=0
 	clear_offline_navigation()
 	if is_instance_valid(active_map):
 		remove_child(active_map)
@@ -459,32 +469,20 @@ func start_round():
 	var spawn_yaw = 0.0
 	if not record.is_empty():
 		active_map = load(record.previewAsset).instantiate()
+		active_map.set_meta("map_number",map_number)
 		add_child(active_map)
 		for mesh in active_map.find_children("*", "MeshInstance3D", true, false):
 			mesh.create_trimesh_collision()
-		navigation_region = NavigationRegion3D.new()
-		navigation_region.navigation_mesh = load(record.navigation)
-		# A match owns its map. Deferred removal of the previous scene must never
-		# contaminate the next round's closest-point or path queries.
-		offline_navigation_map = NavigationServer3D.map_create()
-		var nav_map = offline_navigation_map
-		NavigationServer3D.map_set_active(nav_map, true)
-		NavigationServer3D.map_set_use_async_iterations(nav_map, false)
-		NavigationServer3D.map_set_cell_size(nav_map, navigation_region.navigation_mesh.cell_size)
-		NavigationServer3D.map_set_cell_height(nav_map, navigation_region.navigation_mesh.cell_height)
-		NavigationServer3D.map_set_merge_rasterizer_cell_scale(nav_map, 0.1)
-		navigation_region.set_navigation_map(nav_map)
-		active_map.add_child(navigation_region)
-		# Explicit registration also makes the very first spawn query deterministic.
-		NavigationServer3D.region_set_map(navigation_region.get_rid(), nav_map)
-		NavigationServer3D.region_set_navigation_mesh(navigation_region.get_rid(), navigation_region.navigation_mesh)
-		NavigationServer3D.map_force_update(nav_map)
+		install_navigation(record.navigation,active_map)
 		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
 		ambient.map_number = map_number;active_map.add_child(ambient)
 		var anchor = record.startPoints[0]
 		preview_spawn = Vector3(anchor.position[0], anchor.position[1], anchor.position[2])
 		spawn_yaw = float(anchor.yaw)
 		preview_name = map_catalog.map_record(map_number).displayName
+	else:
+		var arena=JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/arena-navigation.json"))
+		install_navigation(arena.asset,arena_root)
 	for enemy in enemies.get_children():
 		enemy.queue_free()
 	health = 100
@@ -506,10 +504,29 @@ func start_round():
 	update_hud()
 	return true
 
+func install_navigation(asset,parent):
+	navigation_region=NavigationRegion3D.new()
+	NavigationServer3D.region_set_use_async_iterations(navigation_region.get_rid(),false)
+	navigation_region.navigation_mesh=load(asset)
+	offline_navigation_map=NavigationServer3D.map_create()
+	var map=offline_navigation_map
+	NavigationServer3D.map_set_active(map,true)
+	NavigationServer3D.map_set_use_async_iterations(map,false)
+	NavigationServer3D.map_set_cell_size(map,navigation_region.navigation_mesh.cell_size)
+	NavigationServer3D.map_set_cell_height(map,navigation_region.navigation_mesh.cell_height)
+	NavigationServer3D.map_set_merge_rasterizer_cell_scale(map,0.1)
+	navigation_region.set_navigation_map(map);parent.add_child(navigation_region)
+	navigation_graph=NavigationGraph.new(navigation_region.navigation_mesh,navigation_region.global_transform)
+	NavigationServer3D.region_set_map(navigation_region.get_rid(),map)
+	NavigationServer3D.region_set_navigation_mesh(navigation_region.get_rid(),navigation_region.navigation_mesh)
+	NavigationServer3D.map_force_update(map)
+
 func clear_offline_navigation():
+	navigation_graph=null
 	if is_instance_valid(navigation_region):
 		navigation_region.enabled = false
 		NavigationServer3D.region_set_map(navigation_region.get_rid(), RID())
+		navigation_region.queue_free()
 	navigation_region = null
 	if offline_navigation_map.is_valid():
 		NavigationServer3D.free_rid(offline_navigation_map)
@@ -628,7 +645,7 @@ func _process(delta):
 		end_round("Süre doldu")
 	update_hud()
 
-func spawn_enemy():
+func spawn_enemy(kind="",difficulty=""):
 	var points = [Vector3(-10, 0.1, -10), Vector3(10, 0.1, -10), Vector3(0, 0.1, -18), Vector3(-15, 0.1, 10), Vector3(15, 0.1, 10)]
 	if offline_map_number != 0:
 		points = offline_spawn_points()
@@ -636,9 +653,16 @@ func spawn_enemy():
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
+	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if bot_spawn_count%2==0 else "human")
+	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
 	enemies.add_child(enemy)
+	bot_spawn_count+=1
 	return true
+
+func notify_bot_noise(point,radius):
+	for enemy in enemies.get_children():
+		if not enemy.is_queued_for_deletion():enemy.hear_noise(point,radius)
 
 func offline_spawn_points():
 	var points = []
@@ -655,6 +679,7 @@ func offline_spawn_points():
 		var sample = origin + Vector3(cos(angle), 0, sin(angle)) * radius
 		var pos = NavigationServer3D.map_get_closest_point(nav_map, sample)
 		if pos.distance_to(sample) > 3.0 or pos.distance_to(origin) < 7.0: continue
+		if navigation_graph==null or not navigation_graph.connected(origin,pos):continue
 		var path = NavigationServer3D.map_get_path(nav_map, origin, pos, true)
 		if path.size() < 2 or path[-1].distance_to(pos) > 1.0: continue
 		var ray = PhysicsRayQueryParameters3D.create(pos + Vector3.UP * 1.5, pos - Vector3.UP * 2.0, 1)
@@ -687,6 +712,7 @@ func attack():
 	player.current_clip = ""
 	player.play_clip("attack")
 	if player.is_wolf:
+		notify_bot_noise(player.global_position,8)
 		var body_attack = player.wolf_running and equipment.has_wolf_ability() and player.anim.has_animation("body_attack")
 		if body_attack:
 			player.play_clip("body_attack")
@@ -694,6 +720,7 @@ func attack():
 		wolf_melee_hit(65 if body_attack else 45,2.8,"Vücut saldırısı" if body_attack else "Pençe isabeti")
 		return
 	if kind != "knife": ammo -= 1
+	notify_bot_noise(player.global_position,6 if kind=="knife" else 26)
 	player.play_weapon_clip("fire", float(player.weapon_info.fireIntervalMs) / 1000.0)
 	if player.fire_sound.stream: player.play_weapon_sound("fire")
 	if kind in ["grenade", "rocket", "launcher"]:
@@ -707,6 +734,7 @@ func attack():
 		end = hit.position
 		if hit.collider.has_meta("enemy"):
 			var damage = int(player.weapon_info.get("damage", 25));hit.collider.damage(damage)
+			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 			announce("İsabet +%d" % damage)
 	var flash = OmniLight3D.new()
 	flash.position = player.global_position + Vector3(0, 1.4, 0)
@@ -724,7 +752,9 @@ func wolf_melee_hit(amount,reach,caption):
 		if offset.length()>=reach or offset.normalized().dot(-player.global_basis.z)<=0.1:continue
 		var query=PhysicsRayQueryParameters3D.create(player.global_position+Vector3.UP,enemy.global_position+Vector3.UP,3,[player.get_rid()])
 		var hit=get_world_3d().direct_space_state.intersect_ray(query)
-		if hit and hit.collider==enemy:enemy.damage(amount);announce(caption)
+		if hit and hit.collider==enemy:
+			enemy.damage(amount);announce(caption)
+			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 
 func strong_attack():
 	if not running or menu_open or application_suspended:return false
@@ -754,10 +784,11 @@ func enemy_defeated():
 		end_round("Arena tamamlandı")
 	update_hud()
 
-func take_damage(amount):
-	if not running:
+func take_damage(amount, source_position=null):
+	if not running or menu_open or amount<=0:
 		return
 	health = maxi(0, health - amount)
+	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
 		end_round("Yenildin")
 

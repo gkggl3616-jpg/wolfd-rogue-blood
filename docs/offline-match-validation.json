@@ -1,98 +1,98 @@
 {
-  "checks": 217,
+  "checks": 236,
   "maps": [
     {
-      "botTravelMetres": 2.70344471931458,
+      "botTravelMetres": 4.24836826324463,
       "number": 1,
-      "safeBotSpawns": 37
+      "safeBotSpawns": 33
     },
     {
-      "botTravelMetres": 2.69765090942383,
+      "botTravelMetres": 4.24836826324463,
       "number": 2,
-      "safeBotSpawns": 37
+      "safeBotSpawns": 33
     },
     {
-      "botTravelMetres": 2.67414164543152,
+      "botTravelMetres": 4.23664474487305,
       "number": 26,
-      "safeBotSpawns": 15
+      "safeBotSpawns": 14
     },
     {
-      "botTravelMetres": 2.69767880439758,
+      "botTravelMetres": 4.24834251403809,
       "number": 31,
-      "safeBotSpawns": 36
+      "safeBotSpawns": 35
     },
     {
-      "botTravelMetres": 2.69750833511353,
+      "botTravelMetres": 3.7352089881897,
       "number": 44,
-      "safeBotSpawns": 22
+      "safeBotSpawns": 19
     },
     {
-      "botTravelMetres": 2.69762754440308,
+      "botTravelMetres": 1.5086327791214,
       "number": 46,
-      "safeBotSpawns": 16
+      "safeBotSpawns": 13
     },
     {
-      "botTravelMetres": 2.69939780235291,
+      "botTravelMetres": 2.37352299690247,
       "number": 50,
       "safeBotSpawns": 20
     },
     {
-      "botTravelMetres": 2.69762253761292,
+      "botTravelMetres": 1.2077602148056,
       "number": 57,
-      "safeBotSpawns": 24
+      "safeBotSpawns": 21
     },
     {
-      "botTravelMetres": 2.69766020774841,
+      "botTravelMetres": 1.38377749919891,
       "number": 58,
-      "safeBotSpawns": 15
+      "safeBotSpawns": 13
     },
     {
-      "botTravelMetres": 2.69761395454407,
+      "botTravelMetres": 1.8344988822937,
       "number": 59,
       "safeBotSpawns": 11
     },
     {
-      "botTravelMetres": 2.70023250579834,
+      "botTravelMetres": 1.14577054977417,
       "number": 65,
-      "safeBotSpawns": 32
+      "safeBotSpawns": 30
     },
     {
-      "botTravelMetres": 2.42550325393677,
+      "botTravelMetres": 4.44847917556763,
       "number": 72,
-      "safeBotSpawns": 21
+      "safeBotSpawns": 19
     },
     {
-      "botTravelMetres": 2.69771003723145,
+      "botTravelMetres": 1.87539649009705,
       "number": 82,
-      "safeBotSpawns": 11
+      "safeBotSpawns": 10
     },
     {
-      "botTravelMetres": 2.66609144210815,
+      "botTravelMetres": 2.50113224983215,
       "number": 83,
-      "safeBotSpawns": 16
-    },
-    {
-      "botTravelMetres": 2.49739074707031,
-      "number": 84,
       "safeBotSpawns": 15
     },
     {
-      "botTravelMetres": 2.67517685890198,
+      "botTravelMetres": 3.73439431190491,
+      "number": 84,
+      "safeBotSpawns": 13
+    },
+    {
+      "botTravelMetres": 1.73039245605469,
       "number": 92,
-      "safeBotSpawns": 24
+      "safeBotSpawns": 21
     },
     {
-      "botTravelMetres": 2.62630248069763,
+      "botTravelMetres": 3.54341959953308,
       "number": 97,
-      "safeBotSpawns": 25
+      "safeBotSpawns": 21
     },
     {
-      "botTravelMetres": 2.69757390022278,
+      "botTravelMetres": 1.20902168750763,
       "number": 100,
       "safeBotSpawns": 14
     },
     {
-      "botTravelMetres": 2.69766068458557,
+      "botTravelMetres": 1.77728486061096,
       "number": 110,
       "safeBotSpawns": 20
     }

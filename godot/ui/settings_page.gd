@@ -46,6 +46,12 @@ func build_native():
 		slider.value_changed.connect(func(value):changed("sensitivity",0.2+(value-1)/99.0*2.8))
 		for entry in [["InvertYAxis Enable",true],["InvertYAxis Disable",false]]:
 			var row=entry;var button=native_page.find_widget(row[0]);button.disabled=false;button.set_pressed_no_signal(ui.settings_draft.invert_y==row[1]);button.pressed.connect(func():changed("invert_y",row[1]))
+		ui.text(ui.content,"Dokunmatik hareket",Vector2(274,292),Vector2(154,24),11)
+		var group=ButtonGroup.new()
+		for entry in [["Joystick",false,432,120],["Yön tuşları",true,559,143]]:
+			var row=entry
+			var button=ui.button(ui.content,row[0],Vector2(row[2],292),Vector2(row[3],24),func():changed("directions",row[1]))
+			button.toggle_mode=true;button.button_group=group;button.set_pressed_no_signal(ui.settings_draft.directions==row[1])
 		for control in native_page.controls:
 			if control.get_meta("source_record").name=="Control":control.tooltip_text="Kaynak komut / alan kimliği eşlemesi henüz doğrulanmadı."
 	elif ui.settings_tab=="Görüntü":

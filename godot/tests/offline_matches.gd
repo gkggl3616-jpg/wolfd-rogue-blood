@@ -28,6 +28,7 @@ func run():
 		await physics_frame;await physics_frame;await process_frame
 		check(game.running and not game.exploring and not game.arena_root.visible, "Real map replaces synthetic arena")
 		check(game.navigation_region.navigation_mesh.get_polygon_count() > 0, "Navigation installed")
+		check(not NavigationServer3D.region_get_use_async_iterations(game.navigation_region.get_rid()), "Region preparation completes before spawn queries")
 		var points = game.offline_spawn_points()
 		if points.is_empty():
 			print("OFFLINE_SPAWN_DIAGNOSTIC ", entry.number, " player=",game.player.position," closest=",NavigationServer3D.map_get_closest_point(game.offline_navigation_map,game.player.position)," regions=",NavigationServer3D.map_get_regions(game.offline_navigation_map).size())
@@ -58,7 +59,7 @@ func run():
 	game.local_room = {"mode": 1, "map": 1}
 	check(not game.start_round() and not game.running, "Original modes cannot silently substitute offline rules")
 	game.local_room = {};game.start_round()
-	check(game.offline_map_number == 0 and game.arena_root.visible and not is_instance_valid(game.navigation_region), "Return to arena clears navigation")
+	check(game.offline_map_number == 0 and game.arena_root.visible and is_instance_valid(game.navigation_region), "Return to arena installs its own independent navigation")
 	game.spawn_clock = 1000;game.time_left = 1;game._process(2)
 	check(not game.running and game.last_result.title == "Süre doldu", "Timer ends the round")
 	game.running = false

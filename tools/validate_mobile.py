@@ -28,7 +28,7 @@ def validate(godot, report=None):
         ('asset_prerequisites', [sys.executable, 'tools/check_android_ready.py']),
         ('godot_import', [godot, '--headless', '--path', 'godot', '--editor', '--import', '--quit']),
     ]
-    for script in ['persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'ui_templates', 'ui_flows']:
+    for script in ['persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'gameplay_reference', 'bot_behaviour', 'ui_templates', 'ui_flows']:
         steps.append((script, [godot, '--headless', '--path', 'godot', '--fixed-fps', '60', '--script', f'res://tests/{script}.gd']))
     results = []
     for name, command in steps:

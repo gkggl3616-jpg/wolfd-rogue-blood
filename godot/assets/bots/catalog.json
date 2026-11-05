@@ -1,0 +1,17 @@
+{
+  "asset": "res://assets/bots/rifle.scn",
+  "capacity": 30,
+  "excludedFirstPersonHands": true,
+  "fireInterval": 0.15,
+  "fireSound": "res://assets/weapons/ak47/fire.wav",
+  "magazineIcon": "res://assets/ui/control-icons/reload.png",
+  "magazineIconSha256": "6b0fd06a38e4ab1333d6f46351b3a5bedf8ef6a3f0edc3cca8ad2403e2497403",
+  "originalPcWorldModel": false,
+  "reloadSeconds": 2.5,
+  "reloadSound": "res://assets/weapons/ak47/reload.wav",
+  "sha256": "f6945ce84126ad44eba3243a5c1cf1197a881fbbb673a1ca2cceee575f2c7fd2",
+  "source": "res://assets/weapons/ak47/viewmodel.glb",
+  "sourceSha256": "1199d2c3bd28b5053ae43cb99bd5490e4e8fbb7715d91387bd0ecbbd73653210",
+  "triangles": 2123,
+  "worldLengthMetres": 0.85
+}

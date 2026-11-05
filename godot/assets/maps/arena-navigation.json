@@ -1,0 +1,6 @@
+{
+  "asset": "res://assets/maps/offline/arena.res",
+  "basis": "local_training_arena_geometry",
+  "polygons": 89,
+  "sha256": "42b365ec63a56c5de18c1c2a8a05066553f311f1782c5a977bbb0ce7b73d3ca9"
+}

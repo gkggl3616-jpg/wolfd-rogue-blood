@@ -46,7 +46,10 @@ func run():
 	var wall=game.block(Vector3(0,1,-0.6),Vector3(4,2,0.2),"576371");await frames(3)
 	var health=game.health;enemy.attack_clock=0;enemy._physics_process(0)
 	ensure(game.health==health,"enemy melee cannot pass through a wall")
-	wall.get_parent().remove_child(wall);wall.queue_free();await frames(2);enemy._physics_process(0)
+	wall.get_parent().remove_child(wall);wall.queue_free();await frames(2)
+	enemy.brain_enabled=false;enemy.profile.dodgeChance=0;enemy.state="attack";enemy.sees_player=true;enemy.reaction=0;enemy.attack_clock=0;enemy._physics_process(0)
+	ensure(game.health==health,"enemy melee waits for its actual windup before damage")
+	enemy._physics_process(0.3)
 	ensure(game.health==health-8,"enemy melee still hits an unobstructed nearby player")
 	game.player.switch_form();game.player.action_time=0
 	game.player.begin_roar();game.player.shot_cooldown=0;game.attack()

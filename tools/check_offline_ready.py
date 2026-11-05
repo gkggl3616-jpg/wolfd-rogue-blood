@@ -20,7 +20,7 @@ def check(root=ROOT):
             blockers.append('Validation does not match current runtime: '+filename)
         if filename == 'mobile-validation.json' and report.get('passed') is not True:
             blockers.append('Mobile regressions did not pass')
-        if filename == 'mobile-visual-validation.json' and (report.get('failures') != 0 or len(report.get('captures', [])) < 40):
+        if filename == 'mobile-visual-validation.json' and (report.get('failures') != 0 or len(report.get('captures', [])) < 44):
             blockers.append('Current offline UI/gameplay captures are missing')
         if filename == 'mobile-visual-validation.json':
             for capture in report.get('captures', []):
@@ -38,12 +38,49 @@ def check(root=ROOT):
             blockers.append('Offline navigation hash mismatch: '+str(row['number']))
         if row['geometrySha256'] != previews[int(row['number'])]['sha256']:
             blockers.append('Navigation was baked for different geometry: '+str(row['number']))
+    radar_path=root/'godot/assets/maps/radar.json'
+    radar=json.loads(radar_path.read_text()) if radar_path.is_file() else []
+    if {int(row['number']) for row in radar} != set(previews):
+        blockers.append('Radar must cover exactly the 19 selected geometries')
+    navigation={int(row['number']):row for row in entries}
+    for row in radar:
+        image=root/'godot'/row['asset'].removeprefix('res://')
+        if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest()!=row['sha256']:
+            blockers.append('Radar image changed: '+str(row['number']))
+        if row['navigationSha256']!=navigation.get(int(row['number']),{}).get('sha256'):
+            blockers.append('Radar uses different navigation: '+str(row['number']))
     path = root/'docs/offline-match-validation.json'
     matches = json.loads(path.read_text()) if path.is_file() else {}
     if matches.get('passed') is not True or len(matches.get('maps', [])) != 19:
         blockers.append('Offline physics/navigation/match regression did not pass all 19 maps')
     if catalogue.is_file() and matches.get('navigationCatalogSha256') != hashlib.sha256(catalogue.read_bytes()).hexdigest():
         blockers.append('Offline match evidence does not match current navigation')
+    def verify_asset(row, label, asset_key='asset', hash_key='sha256'):
+        asset = root/'godot'/row.get(asset_key, '__missing_asset__').removeprefix('res://')
+        if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest() != row.get(hash_key):
+            blockers.append('Derived/source asset missing or changed: '+label)
+
+    for name, required in [('control-icons', {'fire', 'wolf_fire', 'reload', 'strong', 'jump', 'crouch', 'sprint', 'roll', 'aim', 'roar', 'transform', 'knife_fire', 'grenade_fire'}),
+                           ('form-icons', {'human', 'wolf'})]:
+        path = root/f'godot/assets/ui/{name}.json'
+        icons = json.loads(path.read_text()) if path.is_file() else {}
+        if isinstance(icons, list):
+            icons = {row['form']: row for row in icons}
+        if not required.issubset(icons):
+            blockers.append('Required action/form images missing: '+name)
+        for key in required.intersection(icons):
+            verify_asset(icons[key], name+'/'+key)
+    for name in ['bots/catalog', 'maps/arena-navigation']:
+        path = root/f'godot/assets/{name}.json'
+        derived = json.loads(path.read_text()) if path.is_file() else {}
+        verify_asset(derived, name)
+        if name == 'bots/catalog':
+            verify_asset(derived, 'bot source weapon', 'source', 'sourceSha256')
+            verify_asset(derived, 'bot magazine image', 'magazineIcon', 'magazineIconSha256')
+    path = root/'docs/bot-validation.json'
+    bots = json.loads(path.read_text()) if path.is_file() else {}
+    if bots.get('passed') is not True or bots.get('checks', 0) < 62 or bots.get('actualShotDamageByDifficulty') != [8, 8, 8]:
+        blockers.append('Equal-damage difficulty, navigation and finite-ammo bot checks did not pass')
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

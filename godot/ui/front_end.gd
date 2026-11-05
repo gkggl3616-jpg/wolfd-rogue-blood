@@ -32,6 +32,7 @@ var offset = 0
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
+var room_difficulty: OptionButton
 var room_draft = {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
 var mode_choice = 0
 var map_choice = 0

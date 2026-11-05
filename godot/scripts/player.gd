@@ -29,6 +29,7 @@ var weapon_anim: AnimationPlayer
 var weapon_info = {}
 var weapon_clip = ""
 var weapon_action_time = 0.0
+var auxiliary_magazines = []
 var fire_sound: AudioStreamPlayer
 var reload_sound: AudioStreamPlayer
 var roar_effect
@@ -69,6 +70,7 @@ func _ready():
 	human.visible = false
 	pivot = Node3D.new()
 	pivot.position.y = 1.55
+	pivot.rotation.x = pitch
 	add_child(pivot)
 	camera_arm = SpringArm3D.new()
 	camera_arm.collision_mask = 1
@@ -125,10 +127,17 @@ func play_clip(clip):
 		current_clip = clip
 
 func play_weapon_clip(clip, duration = 0.0):
+	for magazine in auxiliary_magazines:
+		if is_instance_valid(magazine):magazine.visible=clip=="reload"
 	if weapon_anim and weapon_anim.has_animation(clip):
 		weapon_anim.play(clip, 0.06)
 		weapon_clip = clip
 		weapon_action_time = duration
+
+func collect_auxiliary_magazines(model):
+	var meshes=model.find_children("*","MeshInstance3D",true,false)
+	if not meshes.any(func(mesh):return str(mesh.name).to_upper().contains("_MAG")):return []
+	return meshes.filter(func(mesh):return str(mesh.name).to_upper()=="MAG")
 
 func play_weapon_sound(action):
 	if game.test_mode:
@@ -176,6 +185,7 @@ func prepare_library_weapon(item):
 func apply_prepared_weapon(prepared):
 	if is_instance_valid(viewmodel):camera.remove_child(viewmodel);viewmodel.queue_free()
 	viewmodel=prepared.model;viewmodel.position=Vector3(0.19,-0.37,-0.72);viewmodel.scale.z*=-1;camera.add_child(viewmodel)
+	auxiliary_magazines=collect_auxiliary_magazines(viewmodel)
 	for change in prepared.materials:change.mesh.set_surface_override_material(change.surface,change.material)
 	weapon_anim=prepared.animation
 	for clip in ["idle","walk"]:
@@ -278,7 +288,10 @@ func switch_form():
 func apply_camera_form():
 	third_person = is_wolf
 	camera_arm.spring_length = 3.4 if is_wolf else 0.0
-	camera.position = Vector3(0.4, 0.35, 0) if is_wolf else Vector3(0, 0.03, -0.06)
+	# Match the reference's centered, lower-screen wolf. Raise the entire arm
+	# so its collision sweep follows the actual camera, including low ceilings.
+	camera_arm.position.y = 0.55 if is_wolf else 0.0
+	camera.position = Vector3.ZERO if is_wolf else Vector3(0, 0.03, -0.06)
 	human.visible = false
 	wolf.visible = is_wolf
 
@@ -378,7 +391,7 @@ func _physics_process(delta):
 		var next_weapon_clip = "walk" if axis.length() > 0.15 and weapon_anim.has_animation("walk") else "idle"
 		if weapon_clip != next_weapon_clip:
 			play_weapon_clip(next_weapon_clip)
-	camera.fov = lerpf(camera.fov, 53.0 if Input.is_action_pressed("aim") and not is_wolf else 74.0, delta * 10)
+	camera.fov = lerpf(camera.fov, 70.0 if is_wolf else (53.0 if Input.is_action_pressed("aim") else 74.0), delta * 10)
 
 func begin_roll():
 	if wall_holding or rolling or air_attacking or roll_cooldown > 0 or not is_wolf or not is_on_floor() or game.menu_open or not game.running or action_time > 0: return false

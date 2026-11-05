@@ -1,6 +1,8 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.10.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 19 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.11.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 19 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+
+[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.11.0-offline/WolfRogueBlood-0.11.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
 ## Devralınan çalışma
 
@@ -9,6 +11,8 @@ Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.10.0 çe
 Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ışık haritası bağları, son arayüz düzeltmeleri ve bunların test kayıtları APK'dan geri alınmış gibi gösterilmez. [Kurtarma kaydı](docs/recovery-0.8.json), [kaynak dosyaları](docs/recovered-assets.json), [tarihsel 0.4 README](docs/history/README-0.4.md).
 
 ## Bu devam çalışmasında uygulananlar
+
+- Son oynanış videosuna göre kurt kamerası, kompakt HUD ve joystick düzeni yenilendi. Bütün oyun içi eylem düğmeleri yuvarlak ve görselli: mermi, pençe ve gerçek modelden şarjör. Mevcut 19 haritanın her birine konum/yön gösteren türetilmiş radar eklendi. Kolay/Normal/Zor insan-kurt botları aynı can ve isabet hasarıyla; görüş, hafıza, koşu, siper, takla ve sınırlı şarjör/yedek davranışını kullanır. [Kaynaklar, sınırlar ve fotoğraflar](docs/OYNANIS_REFERANSI.md).
 
 - 19 kaynak haritaya ayrı çevrimdışı bot maçı eklendi. Önceden hazırlanmış yürüyüş ağları, erişilebilir ve kapsül boşluğu olan bot doğma noktaları, gerçek haritada başlat/ölüm/süre/sonuç/tekrar akışı bulunur. #46'nın özgün mod eşleşmesi uydurulmadan bağımsız yerel eğitimde açılması sağlandı. Özgün PC modlarının hazır olma denetimleri korunur.
 - Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. İkinci ana silah, bağımsız cephane geçişi ve 331 kaynak kart yüzü önizlemesi eklendi. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
@@ -78,7 +82,7 @@ Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İnd
 - 48 çiftin önceki katalogda kabul edilmiş olması, kurtarılan her modelin bütün durumlarının yeniden doğrulandığı anlamına gelmez. 216 silah modeli / 903 kaynak varyantı da 903 ayrı, tam doğrulanmış silah davranışı demek değildir.
 - Özgün arayüz akışlarının tümü, hesap/oda/maç sunucusu, bütün efekt grafikleri ve gömülü ışık haritalarının çalışma zamanı uygulaması eksik.
 - Önceki Android imzalama özel anahtarı bu ortama bağlı değil. Bu nedenle çevrimdışı sürüm ayrı paket adı kullanır; eski uygulamayı güncellemeye veya kayıtlarını silmeye çalışmaz. Fiziksel cihaz kabulü yapılmadı.
-- Kullanıcının **en az 3 GB gerçek içerik** koşulu sağlanmış değildir. Boyut için dolgu, kopya veya Windows ikilisi eklenmez. Yeni bir tam APK indirme bağlantısı yoktur.
+- Kullanıcının **en az 3 GB gerçek içerik** koşulu sağlanmış değildir. Boyut için dolgu, kopya veya Windows ikilisi eklenmez. Yukarıdaki APK bağlantısı ayrı çevrimdışı sürümdür; tam PC aktarımı değildir.
 
 Yerel yönetici paneli korunur: `python server.py`, ardından `http://127.0.0.1:8765`. Bu yerel geliştirme sistemi, üretim hesabı veya çevrimiçi sunucu değildir; yinelenen işlem kimliği tekrar ödeme yapmaz.
 

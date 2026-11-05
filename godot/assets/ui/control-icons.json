@@ -1,0 +1,122 @@
+{
+  "aim": {
+    "asset": "res://assets/ui/control-icons/aim.png",
+    "basis": "native_target_symbol",
+    "sha256": "44051a99c940a53b81e1ba9fd35d5ebfd7aba29b215ece1b945f9d22a095d050"
+  },
+  "crouch": {
+    "asset": "res://assets/ui/control-icons/crouch.png",
+    "basis": "rendered_source_animation_pose",
+    "clip": "crouch",
+    "model": "res://assets/library/characters/pair-model0-human.glb",
+    "phase": 0.5,
+    "sha256": "29b45209033f7ea918d9a9e26750badef5ef90278e8759381cafc22d1da9ec5a"
+  },
+  "fire": {
+    "asset": "res://assets/full_ui/textures/794dcfd016a08861120497e9.png",
+    "basis": "original_source_texture",
+    "region": [
+      1,
+      8,
+      29,
+      37
+    ],
+    "sha256": "bddbee7f6dd4bc0eb3ab54d08b4f5e6159794d9b877df758c9334ee570f68a07",
+    "source": "wt_interface/item/bullets/7.62.dtx",
+    "sourceSha256": "794dcfd016a08861120497e917dd75090058adc422557ad43da1c1986cd60350"
+  },
+  "grenade_fire": {
+    "asset": "res://assets/full_ui/textures/9612cc45205e91925af9b52f.png",
+    "basis": "original_source_texture",
+    "region": [
+      10,
+      10,
+      13,
+      31
+    ],
+    "sha256": "06cd826d79a60b666a99fcabb2e78d85f19ed06e4ef5eb2f5203f02e38073de1",
+    "source": "wt_interface/item/bullets/red grenade.dtx",
+    "sourceSha256": "9612cc45205e91925af9b52f3dcdf524b57594157eca6d9e9e961feb40de7b65"
+  },
+  "jump": {
+    "asset": "res://assets/ui/control-icons/jump.png",
+    "basis": "rendered_source_animation_pose",
+    "clip": "jump",
+    "model": "res://assets/library/characters/pair-model0-human.glb",
+    "phase": 0.45,
+    "sha256": "af94de10ebf58df39082c74a61319d4a40845d9a04b100e0e6d81f7aa1919f33"
+  },
+  "knife_fire": {
+    "asset": "res://assets/full_ui/textures/42cfceb1f3b3e38fc86ebe05.png",
+    "basis": "original_source_texture",
+    "region": [
+      12,
+      5,
+      8,
+      42
+    ],
+    "sha256": "28421d6ead993b13f3c175eb63e2ac6fb053e86e2e7230db9ddea984f3b76570",
+    "source": "wt_interface/item/bullets/c.q.c knife.dtx",
+    "sourceSha256": "42cfceb1f3b3e38fc86ebe0550c1cff8815445ded193564e7bd3610be48d189c"
+  },
+  "reload": {
+    "asset": "res://assets/ui/control-icons/reload.png",
+    "basis": "rendered_source_magazine",
+    "sha256": "6b0fd06a38e4ab1333d6f46351b3a5bedf8ef6a3f0edc3cca8ad2403e2497403"
+  },
+  "roar": {
+    "asset": "res://assets/ui/control-icons/roar.png",
+    "basis": "rendered_source_animation_pose",
+    "clip": "roar",
+    "model": "res://assets/library/characters/pair-model0-wolf.glb",
+    "phase": 0.35,
+    "sha256": "417e4d4ac43daa18b93b5353f644fb5410356eba4d7dc9873d20786cb8301b23"
+  },
+  "roll": {
+    "asset": "res://assets/ui/control-icons/roll.png",
+    "basis": "rendered_source_animation_pose",
+    "clip": "special_attack",
+    "model": "res://assets/library/characters/pair-model0-wolf.glb",
+    "phase": 0.4,
+    "sha256": "68922f20ed49f5f0f0916b65a3ed809a306be876ba0bfaed16d052c1cb905994"
+  },
+  "sprint": {
+    "asset": "res://assets/ui/control-icons/sprint.png",
+    "basis": "rendered_source_animation_pose",
+    "clip": "run",
+    "model": "res://assets/library/characters/pair-model0-human.glb",
+    "phase": 0.2,
+    "sha256": "e76437f6082ded749668200143af73f5c9a361c7d95b722e77387962d7764357"
+  },
+  "strong": {
+    "asset": "res://assets/full_ui/textures/ddca46247a1d49e51cc3228b.png",
+    "basis": "original_source_texture",
+    "region": [
+      4,
+      8,
+      25,
+      37
+    ],
+    "sha256": "4d65a63076bb42d969b404f671ba9351e6282e63f1248d45ee06c2d97cd0f2ec",
+    "source": "wt_interface/item/bullets/power wolf.dtx",
+    "sourceSha256": "ddca46247a1d49e51cc3228b182724235b1d6122e153bbe109d2cc4bd687a1fe"
+  },
+  "transform": {
+    "asset": "res://assets/ui/form-icons/wolf.png",
+    "basis": "rendered_source_model_silhouette",
+    "sha256": "c439cab70e5ca48b81604af96a3d16eaa09da0b2ec05b7e29b6cf50efe46d7b3"
+  },
+  "wolf_fire": {
+    "asset": "res://assets/full_ui/textures/ddca46247a1d49e51cc3228b.png",
+    "basis": "original_source_texture",
+    "region": [
+      4,
+      8,
+      25,
+      37
+    ],
+    "sha256": "4d65a63076bb42d969b404f671ba9351e6282e63f1248d45ee06c2d97cd0f2ec",
+    "source": "wt_interface/item/bullets/wolf.dtx",
+    "sourceSha256": "ddca46247a1d49e51cc3228b182724235b1d6122e153bbe109d2cc4bd687a1fe"
+  }
+}

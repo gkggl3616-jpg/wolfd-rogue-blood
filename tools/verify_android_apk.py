@@ -12,9 +12,10 @@ import zipfile
 
 CATALOGUES = [
     'assets/library/weapons.json', 'assets/library/characters.json', 'assets/library/visuals.json',
-    'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/maps/offline.json', 'assets/shared_media/catalog.json',
+    'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/maps/offline.json', 'assets/maps/radar.json', 'assets/shared_media/catalog.json',
     'assets/pc_ui/catalog.json', 'assets/full_ui/catalog.json', 'assets/ui/catalog.json',
-    'assets/ui/engine-fonts.json', 'assets/ui/character-portraits.json', 'assets/ui/weapon-text.json', 'assets/items/rules.json',
+    'assets/ui/engine-fonts.json', 'assets/ui/character-portraits.json', 'assets/ui/weapon-text.json', 'assets/ui/form-icons.json', 'assets/ui/control-icons.json', 'assets/items/rules.json',
+    'assets/bots/catalog.json', 'assets/maps/arena-navigation.json',
 ]
 
 

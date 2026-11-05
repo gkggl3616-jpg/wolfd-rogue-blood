@@ -38,7 +38,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.10 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.10 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · 0.11 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.11 geliştirme")
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
@@ -103,6 +103,7 @@ func room():
 	if training:
 		view.set_value("MissionObject","10 hedef")
 		view.set_value("RoundTime","90 saniye")
+		ui.paragraph(ui.content,"Botlar: %s\nİnsan ve kurt · Hasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
 	var start=enable("StartGame",ui.game.start_round)
 	if start:start.disabled=not training
 	if not training:
@@ -132,10 +133,17 @@ func create_room():
 		if ui.room_map.item_count:ui.room_draft.map=ui.room_map.get_selected_id()
 	ui.room_mode.item_selected.connect(func(_index):ui.room_draft.mode=ui.room_mode.get_selected_id();fill.call());fill.call()
 	ui.room_map.item_selected.connect(func(_index):ui.room_draft.map=ui.room_map.get_selected_id())
+	ui.text(ui.content,"Bot zorluğu",Vector2(330,350),Vector2(340,24),14)
+	ui.room_difficulty=ui.map_picker(ui.content,Vector2(380,380),Vector2(316,28))
+	for value in ["easy","normal","hard"]:
+		ui.room_difficulty.add_item(ui.game.BotRules.LEVELS[value].name)
+		ui.room_difficulty.set_item_metadata(ui.room_difficulty.item_count-1,value)
+		if value==ui.room_draft.get("botDifficulty","normal"):ui.room_difficulty.select(ui.room_difficulty.item_count-1)
+	ui.room_difficulty.item_selected.connect(func(index):ui.room_draft.botDifficulty=ui.room_difficulty.get_item_metadata(index))
 	enable("PLExit",ui.go_back);enable("PLCancel",ui.go_back)
 	enable("PLOK",func():
 		if name.text.strip_edges().length()<2 or ui.room_map.item_count==0:ui.show_error("Oda adı ve moda bağlı harita gerekli.");return
-		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team};ui.navigate("room")
+		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team,"botDifficulty":ui.room_difficulty.get_selected_metadata()};ui.navigate("room")
 	)
 	ui.paragraph(ui.content,"Yerel oturum · çevrimiçi oda değildir.",Vector2(330,445),Vector2(360,70),15)
 

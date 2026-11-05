@@ -5,6 +5,7 @@ class PlayerDouble extends RefCounted:
 	var move_axis = Vector2.ZERO
 	var normal_run_toggled = false
 	var is_wolf = false
+	var weapon_info = {"category":"rifle"}
 	var look_total = Vector2.ZERO
 	func look(delta): look_total += delta
 
@@ -30,7 +31,7 @@ func ensure(value, description):
 
 func down(index, point):
 	var event = InputEventScreenTouch.new()
-	event.index = index;event.position = point;event.pressed = true
+	event.index = index;event.position = root.get_final_transform()*point;event.pressed = true
 	Input.parse_input_event(event)
 	Input.flush_buffered_events()
 
@@ -42,7 +43,8 @@ func up(index):
 
 func drag(index, point, delta):
 	var event = InputEventScreenDrag.new()
-	event.index = index;event.position = point;event.relative = delta
+	event.index = index;event.position = root.get_final_transform()*point
+	event.relative = root.get_final_transform()*delta-root.get_final_transform().origin
 	Input.parse_input_event(event)
 	Input.flush_buffered_events()
 
@@ -97,6 +99,23 @@ func run():
 	ensure(Input.is_action_pressed("forward"), "overlapping forward fingers do not create a false release and second tap")
 	up(12)
 	ensure(not Input.is_action_pressed("forward"), "last forward release stops movement")
+	touch.direction_buttons=false;await process_frame
+	down(13,touch.center);drag(13,touch.center+Vector2(2,0),Vector2(2,0))
+	ensure(game.player.move_axis.is_zero_approx(),"joystick deadzone cannot drift the character")
+	drag(13,touch.center+Vector2(200,-200),Vector2(198,-200))
+	ensure(is_equal_approx(game.player.move_axis.length(),1.0),"diagonal joystick motion stays clamped to unit speed")
+	up(13)
+	for dimensions in [Vector2i(1280,720),Vector2i(1920,1080),Vector2i(1024,768),Vector2i(2160,992)]:
+		root.size=dimensions
+		for i in range(3):await process_frame
+		var start=touch.last_size*Vector2(0.48,0.35)
+		var delta=Vector2(touch.last_size.y*0.1,0)
+		game.player.look_total=Vector2.ZERO
+		down(14,start);drag(14,start+delta,delta);up(14)
+		ensure(is_equal_approx(game.player.look_total.x,72),"same relative touch gesture turns equally at "+str(dimensions))
+		down(15,touch.buttons[0].position)
+		ensure(Input.is_action_pressed("fire"),"scaled reference fire target remains tappable at "+str(dimensions))
+		up(15)
 	touch.reset();touch.queue_free()
 	await process_frame
 	print("TOUCH_QA checks=%d failures=%d" % [checks, failures])
