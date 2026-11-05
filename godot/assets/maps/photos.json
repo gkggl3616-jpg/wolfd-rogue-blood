@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "sourceAttributeSha256": "b3974fef37dbe4e6a7fed9187d1112aa8063a4d8ae97bd1d3b87ca3c0188690c",
+  "maps": [
+    {
+      "number": 1,
+      "name": "03. Gate",
+      "asset": "res://assets/maps/thumbnails/1.png",
+      "sha256": "10d7ea0fcf313bc4462d0447083a3bd79f413a690d1b448d937535af9b092fb6",
+      "source": "wolfteam kurtları/Root/wt_interface/map/03gate.dtx",
+      "sourceSha256": "7e7390bcb29fa5115279d2bc404fe68463cf2ec43be21427d4a1a689356a6d68",
+      "attributeOffsets": [
+        16635
+      ]
+    },
+    {
+      "number": 2,
+      "name": "03. Gate Dark",
+      "asset": "res://assets/maps/thumbnails/2.png",
+      "sha256": "e7587ac67b1409b2ec03cce62273eb4e27461ae0fcf7f6d46960b2d5f303a03e",
+      "source": "wolfteam kurtları/Root/wt_interface/map/03gate_dark.dtx",
+      "sourceSha256": "959c15c604611f1fba44438482cac8f1374c6d8025809654fc6f5b982b627ae1",
+      "attributeOffsets": [
+        20681
+      ]
+    },
+    {
+      "number": 26,
+      "name": "Cappadocia",
+      "asset": "res://assets/maps/thumbnails/26.png",
+      "sha256": "7681d8c15c5baedf8db3a442c939f062e08654017557c6d1d708c25dc2e33847",
+      "source": "wolfteam kurtları/Root/wt_interface/map/cappadocia.dtx",
+      "sourceSha256": "fecc82e087773c90b0e794dd19c12bc3f5a0cb3361036fbcbf294c0f463105f4",
+      "attributeOffsets": [
+        68044
+      ]
+    },
+    {
+      "number": 31,
+      "name": "City Arena",
+      "asset": "res://assets/maps/thumbnails/31.png",
+      "sha256": "02003abb30d833c470800614e56bfe097a20da00ca246fcea5c4dfa27cabe844",
+      "source": "wolfteam kurtları/Root/wt_interface/map/cityarena.dtx",
+      "sourceSha256": "6f6d4c44682ef42ccb15c652711fef191d9a5ab9798e16af5adcd7a765bcace1",
+      "attributeOffsets": [
+        61649,
+        131523
+      ]
+    },
+    {
+      "number": 44,
+      "name": "Frozen",
+      "asset": "res://assets/maps/thumbnails/44.png",
+      "sha256": "a317d548f1f0346c3730a37e95e677c710001482350566d35de60a094b960e73",
+      "source": "wolfteam kurtları/Root/wt_interface/map/frozen.dtx",
+      "sourceSha256": "168ce7ce44ac17681884468d6d70855bdcf2a11939969e71dd28b3c4c8b99e4e",
+      "attributeOffsets": [
+        41756,
+        51985,
+        61018,
+        120816
+      ]
+    },
+    {
+      "number": 46,
+      "name": "Gobekli Tepe",
+      "asset": "res://assets/maps/thumbnails/46.png",
+      "sha256": "96d65868564081e5ffab0537bff5b54c9b842648a28a992b3a3b72d8369fa12b",
+      "source": "wolfteam kurtları/Root/wt_interface/map/gobekli_tepe.dtx",
+      "sourceSha256": "43f21f645f78810cadecc9f020c72b52de304ce9667551f9c9cfa57552b65555",
+      "attributeOffsets": [
+        30267
+      ]
+    },
+    {
+      "number": 50,
+      "name": "Jungle",
+      "asset": "res://assets/maps/thumbnails/50.png",
+      "sha256": "d1c7fa833a18bcb22fcb862474d6e7aa34917aa75a348ea9adf4ef90043670c3",
+      "source": "wolfteam kurtları/Root/wt_interface/map/jungle.dtx",
+      "sourceSha256": "6576d756a4ceeebda31ed22db071e1eb648bfa043b656e876592c919e2d9d5c7",
+      "attributeOffsets": [
+        35589
+      ]
+    },
+    {
+      "number": 57,
+      "name": "Museum",
+      "asset": "res://assets/maps/thumbnails/57.png",
+      "sha256": "d0e2154fc231928648938eef348706b6e11d6844f0e2d0f5eed6f11eee742227",
+      "source": "wolfteam kurtları/Root/wt_interface/map/museum.dtx",
+      "sourceSha256": "fcd3cbdd33b1c9b0faec07b5d2241c3d471302c3b07ac71eab6d620d31e63879",
+      "attributeOffsets": [
+        24637
+      ]
+    },
+    {
+      "number": 58,
+      "name": "PaienAttack",
+      "asset": "res://assets/maps/thumbnails/58.png",
+      "sha256": "e8a32a2eb8917531a25886ae155901e1e9c76ff388e818aae4b06e1e55ba860c",
+      "source": "wolfteam kurtları/Root/wt_interface/map/paienattack.dtx",
+      "sourceSha256": "fa02ef6fd23e1b5ef00a21c2f0bacf4ba4914166b26742441f905d10203cf4da",
+      "attributeOffsets": [
+        23299
+      ]
+    },
+    {
+      "number": 59,
+      "name": "Paien Lab",
+      "asset": "res://assets/maps/thumbnails/59.png",
+      "sha256": "21d330a75eb837386ea040ceb543acfae2c5207747cc3b13b0a1347a1990f78a",
+      "source": "wolfteam kurtları/Root/wt_interface/map/paienlab.dtx",
+      "sourceSha256": "c824375ede5984ffb6659dbe4dbdbae85078a9e38ba3a1697d27f737dd588c65",
+      "attributeOffsets": [
+        1979,
+        37550,
+        47857,
+        111761,
+        118653,
+        122955,
+        135763,
+        147411,
+        150880
+      ]
+    },
+    {
+      "number": 65,
+      "name": "Petra",
+      "asset": "res://assets/maps/thumbnails/65.png",
+      "sha256": "ae09d039eeece0aba6068eb5c98dcd4ad717f197512aa0c3839041a22cdd5320",
+      "source": "wolfteam kurtları/Root/wt_interface/map/petra.dtx",
+      "sourceSha256": "c19ada4054c838731f1a2a2d897eab33525086e64656413f1a11bb27a3ed1769",
+      "attributeOffsets": [
+        10179,
+        140250
+      ]
+    },
+    {
+      "number": 72,
+      "name": "WR_Ruins_5",
+      "asset": "res://assets/maps/thumbnails/72.png",
+      "sha256": "e70d746c62d2d6daeafdb8f6a32a74989cab930df2184a2662305736ccd95d60",
+      "source": "wolfteam kurtları/Root/wt_interface/map/ruins.dtx",
+      "sourceSha256": "4212d166f7bc1524e2821d0a99c09b36f79a12696195c3ab3b4a91d4e7232e0d",
+      "attributeOffsets": [
+        78038,
+        80857,
+        83670,
+        86493
+      ]
+    },
+    {
+      "number": 82,
+      "name": "Secret Lab",
+      "asset": "res://assets/maps/thumbnails/82.png",
+      "sha256": "54fd0d98e4963dd2dffb21a6fd222cf62f60d9ba0c7fae5d1689eab4aecfd27e",
+      "source": "wolfteam kurtları/Root/wt_interface/map/secretlab.dtx",
+      "sourceSha256": "82d6afda8f4c15d183242e0430cdae6e14e21ea838d5610f0d3d2b57e0e14221",
+      "attributeOffsets": [
+        13358
+      ]
+    },
+    {
+      "number": 83,
+      "name": "Secret Lab EX",
+      "asset": "res://assets/maps/thumbnails/83.png",
+      "sha256": "f8b04ca5a6264b8693e84eb9d737a500798743061d77a1ec9258c7a61d0e621f",
+      "source": "wolfteam kurtları/Root/wt_interface/map/secretlab_ex.dtx",
+      "sourceSha256": "d5959fe3239a8673108dad76e76496e552e7750303347277345897dafd45ab67",
+      "attributeOffsets": [
+        21332
+      ]
+    },
+    {
+      "number": 84,
+      "name": "Container Ship",
+      "asset": "res://assets/maps/thumbnails/84.png",
+      "sha256": "d9381d07fe2000f7f622706daea103b31247f5261ddbd6194e53072443464204",
+      "source": "wolfteam kurtları/Root/wt_interface/map/ship.dtx",
+      "sourceSha256": "ca65d5414c145239dd139db61ba11815425095bc721e7a3ea24d80696f8bcfac",
+      "attributeOffsets": [
+        8280,
+        139000
+      ]
+    },
+    {
+      "number": 92,
+      "name": "Street",
+      "asset": "res://assets/maps/thumbnails/92.png",
+      "sha256": "92f3ab58bff493503688f03c4a1e591bf62c16218443c5c514ae29507f704e4e",
+      "source": "wolfteam kurtları/Root/wt_interface/map/street.dtx",
+      "sourceSha256": "9554e8fcde7c3b3ab33538f8934bea36ba5c21ce03b91f5e48ab142b82c3b921",
+      "attributeOffsets": [
+        8901,
+        126656,
+        139619,
+        152278
+      ]
+    },
+    {
+      "number": 97,
+      "name": "Taksim",
+      "asset": "res://assets/maps/thumbnails/97.png",
+      "sha256": "fffc8428f102308acbeeed125f9eed22185f6a2cc1a1adf2de49987692598028",
+      "source": "wolfteam kurtları/Root/wt_interface/map/taksim.dtx",
+      "sourceSha256": "62f536f7cd9ad947a9e53400637f2cd0ae81a8dff733fd676691fef6974d68f9",
+      "attributeOffsets": [
+        12106,
+        113147,
+        141530
+      ]
+    },
+    {
+      "number": 100,
+      "name": "Topkapi Sarayi",
+      "asset": "res://assets/maps/thumbnails/100.png",
+      "sha256": "792591facf0cc191e30b19f1fc7ea6529ab5b149b26d148384f5a2e72734d711",
+      "source": "wolfteam kurtları/Root/wt_interface/map/topkapi.dtx",
+      "sourceSha256": "447de07b53c11b4e578cf98fed7ef4978ee538f74df62124515f3efe9deab4ff",
+      "attributeOffsets": [
+        15984
+      ]
+    },
+    {
+      "number": 110,
+      "name": "Wolf City",
+      "asset": "res://assets/maps/thumbnails/110.png",
+      "sha256": "57c53c9a3b31b45602c13b8d5f19e6f25639f9453ebf212178954e2ef3bf9850",
+      "source": "wolfteam kurtları/Root/wt_interface/map/wolf_city.dtx",
+      "sourceSha256": "91248849539537acdeb4c9554cf661285eb8671fd329d3773344aadee91fb63d",
+      "attributeOffsets": [
+        38970
+      ]
+    }
+  ],
+  "association": "Exact world-file reference and thumbnail path from typed PC mapattribute.dat record; not a name guess."
+}

@@ -13,16 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    for filename in ['mobile-validation.json', 'mobile-visual-validation.json']:
+    for filename in ['mobile-validation.json', 'mobile-visual-validation.json','pc-reference-visual-validation.json']:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
         if report.get('runtimeCodeSha256') != fingerprint:
             blockers.append('Validation does not match current runtime: '+filename)
         if filename == 'mobile-validation.json' and report.get('passed') is not True:
             blockers.append('Mobile regressions did not pass')
-        if filename == 'mobile-visual-validation.json' and (report.get('failures') != 0 or len(report.get('captures', [])) < 44):
+        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json'] and (report.get('failures') != 0 or len(report.get('captures', [])) < (44 if filename=='mobile-visual-validation.json' else 16)):
             blockers.append('Current offline UI/gameplay captures are missing')
-        if filename == 'mobile-visual-validation.json':
+        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json']:
             for capture in report.get('captures', []):
                 image = root/capture.get('path', '__missing_capture__')
                 if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != capture.get('sha256'):
@@ -81,6 +81,12 @@ def check(root=ROOT):
     bots = json.loads(path.read_text()) if path.is_file() else {}
     if bots.get('passed') is not True or bots.get('checks', 0) < 62 or bots.get('actualShotDamageByDifficulty') != [8, 8, 8]:
         blockers.append('Equal-damage difficulty, navigation and finite-ammo bot checks did not pass')
+    photos=json.loads((root/'godot/assets/maps/photos.json').read_text())
+    if {int(row['number']) for row in photos['maps']} != set(previews):blockers.append('All 19 original PC map photographs are required')
+    if photos['sourceAttributeSha256']!=json.loads((root/'godot/assets/maps/catalog.json').read_text())['sourceTables']['attributes']['sha256']:blockers.append('Map photo association uses a different PC attribute table')
+    for photo in photos['maps']:verify_asset(photo,'map photo '+str(photo['number']))
+    expansion=json.loads((root/'docs/pc-reference-expansion-validation.json').read_text())
+    if expansion.get('passed') is not True or expansion.get('checks',0)<101:blockers.append('PC reference, reward, PIN, tutorial and hunt regression is incomplete')
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

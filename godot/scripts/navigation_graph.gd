@@ -59,6 +59,11 @@ func component(point):
    var normal=(polygon[j]-polygon[0]).cross(polygon[j+1]-polygon[0]).normalized()
    if normal.is_zero_approx():continue
    var hit=Geometry3D.segment_intersects_triangle(point+normal*0.15,point-normal*0.15,polygon[0],polygon[j],polygon[j+1])
+   if not hit is Vector3:
+    var plane_distance=normal.dot(point-polygon[0])
+    var projected=point-normal*plane_distance
+    var barycentric=Geometry3D.get_triangle_barycentric_coords(projected,polygon[0],polygon[j],polygon[j+1])
+    if absf(plane_distance)<0.003 and minf(barycentric.x,minf(barycentric.y,barycentric.z))>=-0.0001:hit=projected
    if hit is Vector3 and point.distance_squared_to(hit)<distance:
     best=i;distance=point.distance_squared_to(hit)
  var result=components[best] if best>=0 else -1

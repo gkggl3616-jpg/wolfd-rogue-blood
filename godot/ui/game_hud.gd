@@ -35,6 +35,10 @@ var pc_layer:Control
 var radar
 var feedback
 var class_icon:TextureRect
+var scoreboard_button
+var feed:Label
+var guide:Label
+var scope:ColorRect
 
 func part(key,dimensions,keep):
 	var view=Layout.new();pc_layer.add_child(view);view.configure(key,dimensions)
@@ -49,6 +53,8 @@ func round_button(dimensions):
 
 func _ready():
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=Control.MOUSE_FILTER_IGNORE
+	scope=ColorRect.new();scope.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);scope.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	var scope_material=ShaderMaterial.new();scope_material.shader=preload("res://ui/sniper_scope.gdshader");scope.material=scope_material;scope.hide();add_child(scope)
 	feedback=Feedback.new();feedback.game=game;add_child(feedback)
 	pc_layer=Control.new();pc_layer.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(pc_layer)
 	health_view=part("interface/hudplayer",Vector2(100,71),["HPBack","HealthPoint"])
@@ -81,6 +87,10 @@ func _ready():
 	Art.sprite(menu,"wt_interface/all/a_lb_icon_option.dtx",Vector2(9,9),Vector2(24,24),Rect2(4,0,24,22))
 	Art.sprite(inventory,"wt_interface/all/a_lb_icon_inven.dtx",Vector2(9,9),Vector2(24,24),Rect2(4,0,24,22))
 	game.gui_touch_blockers.append(menu);game.gui_touch_blockers.append(inventory)
+	scoreboard_button=round_button(Vector2(42,42));scoreboard_button.tooltip_text="Maç durumu";scoreboard_button.pressed.connect(func():game.open_interface("scoreboard"));pc_layer.add_child(scoreboard_button)
+	Art.sprite(scoreboard_button,"wt_interface/all/a_lb_icon_record.dtx",Vector2(9,9),Vector2(24,24),Rect2(4,0,24,22));game.gui_touch_blockers.append(scoreboard_button)
+	feed=Art.label("",Vector2(365,122),12);feed.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;pc_layer.add_child(feed)
+	guide=Art.label("",Vector2(700,44),16,Art.GOLD);guide.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(guide)
 	var number=0
 	for slot in ["primary","pistol","knife","grenade"]:
 		var button=round_button(Vector2(44,44))
@@ -97,6 +107,7 @@ func _ready():
 func arrange():
 	if not is_instance_valid(menu):return
 	var dimensions=get_viewport_rect().size
+	scope.material.set_shader_parameter("aspect",dimensions.x/maxf(1,dimensions.y))
 	var factor=dimensions.y/645.0
 	pc_layer.scale=Vector2.ONE*factor;pc_layer.size=dimensions/factor
 	var native=pc_layer.size
@@ -107,6 +118,8 @@ func arrange():
 	preview_name.position=Vector2(native.x*0.5-250,8)
 	map_name.position=Vector2(native.x*0.82,7);radar.position=Vector2(native.x*0.82,28)
 	menu.position=Vector2(native.x*0.05,7);inventory.position=Vector2(native.x*0.05+48,7)
+	scoreboard_button.position=Vector2(native.x*0.05+96,7);feed.position=Vector2(native.x-389,170)
+	guide.position=Vector2(native.x*0.5-350,native.y-150)
 	for i in range(slots.size()):slots[i].position=Vector2(native.x*0.5-104+i*52,native.y-48)
 	cross.position=dimensions*0.5-Vector2(16,16)
 
@@ -114,7 +127,13 @@ func refresh_from_game():
 	visible=game.running and not game.menu_open
 	if not is_instance_valid(game.player):return
 	cross.visible=visible and not game.player.is_wolf
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate()]
+	scope.visible=visible and game.player.is_scoped();cross.visible=cross.visible and not scope.visible
+	var messages=[]
+	for entry in game.kill_feed:messages.append("%s  %s  %s" % [entry.attacker,"[KAFADAN]" if entry.headshot else "›",entry.target])
+	feed.text="\n".join(messages)
+	guide.visible=game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
+	guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active]
 	if state==last_state:return
 	last_state=state
 	health_view.set_value("HealthPoint",game.health)
@@ -123,8 +142,11 @@ func refresh_from_game():
 	weapon_name.text="KURT" if game.player.is_wolf else ("ŞARJÖR…" if game.reloading>0 else game.player.weapon_info.get("name",""))
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
 	score_view.set_value("RedTeamScore",game.kills);score_view.set_value("BlueTeamScore",10);score_view.set_value("Mode","Yerel Eğitim")
+	if game.hunt.active:
+		score_view.set_value("RedTeamScore",game.hunt.round_kills);score_view.set_value("BlueTeamScore",game.LocalHunt.TARGET);score_view.set_value("Mode","Kurt Avı · %d/3" % game.hunt.round_number)
+	if game.tutorial.active:score_view.set_value("Mode","Öğretici Mod")
 	class_icon.texture=Art.texture("res://assets/ui/form-icons/wolf.png" if game.player.is_wolf else "res://assets/ui/form-icons/human.png")
-	timer_view.visible=not game.exploring;score_view.visible=not game.exploring
+	timer_view.visible=not game.exploring and not game.tutorial.active;score_view.visible=not game.exploring
 	preview_name.visible=game.exploring;preview_name.text=game.preview_name+" · GEZİNTİ"
 	map_name.text=game.preview_name
 	for i in range(slots.size()):

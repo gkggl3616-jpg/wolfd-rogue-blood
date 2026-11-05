@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-05T09:18:01.806473+00:00",
+  "utc": "2026-11-05T13:19:52.790563+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "bb35047fad833301e7e9f6e06ff6d4161aa47a4be4d27df58c307aa3096e8b89",
+  "runtimeCodeSha256": "fdc3f94ee1e61cc4c07c5d966b70e9d9d1ee10c2e4df6e2cc24a8eb337357022",
   "passed": true,
   "steps": [
     {
@@ -84,6 +84,12 @@
     },
     {
       "name": "bot_behaviour",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "pc_reference_expansion",
       "passed": true,
       "exitCode": 0,
       "errors": []

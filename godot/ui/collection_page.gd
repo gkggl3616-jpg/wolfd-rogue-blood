@@ -1,6 +1,7 @@
 extends RefCounted
 const Art = preload("res://ui/source_theme.gd")
 const Layout = preload("res://ui/source_layout.gd")
+const SourceCard=preload("res://ui/source_item_card.gd")
 const ROOT = "wt_interface/inven_shop/"
 var ui
 var grid: Control
@@ -21,6 +22,7 @@ var category_tabs = []
 var filter_tabs = []
 var info_tab = "description"
 var portraits = {}
+var role_picker
 
 func normalized(value):return str(value).to_lower().replace("ı","i").replace("İ","i")
 func title(entry):return entry.get("name",str(entry.get("source","")).get_file().get_basename())
@@ -49,6 +51,12 @@ func build_native():
 	var section=ui.native("section/shop" if ui.page=="Mağaza" else "section/inventory",ui.content)
 	for node in section.controls:node.visible=node.get_meta("source_record").name in ["WeaponState","Inventory"]
 	build_categories()
+	if ui.page=="Dövmeler":
+		role_picker=ui.map_picker(ui.content,Vector2(788,122),Vector2(208,27))
+		for row in [["Tüm bölgeler","all"],["Sırt / Gövde","body"],["Sol kol","left"],["Sağ kol","right"]]:
+			role_picker.add_item(row[0]);role_picker.set_item_metadata(role_picker.item_count-1,row[1])
+			if ui.filter_id==row[1]:role_picker.select(role_picker.item_count-1)
+		role_picker.item_selected.connect(func(index):ui.filter_id=role_picker.get_item_metadata(index);ui.offset=0;refresh_grid())
 	search=LineEdit.new();search.text=ui.search_query;search.position=Vector2(779,63);search.size=Vector2(217,22);search.placeholder_text="Ara…";ui.content.add_child(search)
 	search.set_meta("navigation_input","collection_search")
 	search.text_changed.connect(func(value):ui.search_query=value;ui.offset=0;refresh_grid())
@@ -68,7 +76,7 @@ func build_categories():
 	for i in range(categories.size()):
 		var entry=categories[i];var selected=ui.page==entry[0] or (entry[0]=="power" and ui.page=="Dövmeler") or (entry[0]=="Envanter" and ui.page=="Mağaza")
 		var node=tab(ROOT+"shop_iv_tab_02_01.dtx",entry[1],Vector2(366+i*82,90),Vector2(80,25),selected,func():
-			if entry[0]=="equipment":ui.show_error("Bu hesapta kullanılabilir ekipman kaydı yok.")
+			if entry[0]=="equipment":ui.navigate("Kutular")
 			elif entry[0]==ui.page:ui.refresh()
 			else:ui.navigate(entry[0])
 		)
@@ -146,6 +154,7 @@ func native_rows():
 	var rows=[]
 	var source=ui.game.book.weapons if ui.page in ["Mağaza","Envanter"] else (ui.game.book.characters if ui.page=="Karakterler" else (ui.game.book.tattoos if ui.page=="Dövmeler" else (ui.game.equipment.rules.items if ui.page=="power" else ui.game.book.effects)))
 	for row in source:
+		if ui.page=="Dövmeler" and ui.filter_id!="all" and row.role!=ui.filter_id:continue
 		if ui.page in ["Mağaza","Envanter"]:
 			if row.get("engineImported")!=true or row.get("available")!=true:continue
 			if ui.page=="Envanter" and not ui.game.book.owned.get(row.id,false):continue
@@ -236,7 +245,7 @@ func build_character(entry):
 
 func build_tattoo(entry):
 	var known=entry.role in ["body","left","right"]
-	ui.preview_wolf=true;ui.build_preview(Vector2(14,154),Vector2(326,490),ui.game.character_info)
+	ui.preview_wolf=true;ui.build_preview(Vector2(14,154),Vector2(326,405),ui.game.character_info)
 	var shown=ui.game.book.selected_tattoos.duplicate()
 	if known:shown[entry.role]=entry.texture
 	for mesh in ui.preview_model.find_children("*","MeshInstance3D",true,false):
@@ -246,7 +255,17 @@ func build_tattoo(entry):
 		if not shown.has(role) or not ui.game.book.tattoo_matches_role(role,shown[role]):mesh.hide();continue
 		var material=StandardMaterial3D.new();material.albedo_texture=load(shown[role]);material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA;material.cull_mode=BaseMaterial3D.CULL_DISABLED;material.roughness=0.7
 		mesh.material_override=material;mesh.show()
-	body("Bölge: "+{"body":"Gövde","left":"Sol kol","right":"Sağ kol"}.get(entry.role,"Belirsiz")+"\n"+entry.description)
+	body("Bölge: "+{"body":"Gövde","left":"Sol kol","right":"Sağ kol"}.get(entry.role,"Belirsiz")+"\n"+entry.description+"\n\nBu yerel sürümde dövme görünümü uygulanır; PC istatistik bonusu doğrulanmadı.")
+	ui.text(details,"Önizlemeyi sürükleyerek çevir",Vector2(25,561),Vector2(310,24),12)
+	for i in range(3):
+		var role=["body","left","right"][i];var at=Vector2(18+i*106,593);var texture=ui.game.book.selected_tattoos.get(role,"")
+		var button=SourceCard.create(details,at,Vector2(100,72),func():
+			if texture=="":return
+			for row in ui.game.book.tattoos:
+				if row.texture==texture:ui.selected=row;show_details();break
+		)
+		if texture!="":Art.sprite(button,texture,Vector2(3,3),Vector2(94,48)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		ui.text(button,["Sırt","Sol kol","Sağ kol"][i],Vector2(3,50),Vector2(94,20),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	ui.button(details,"Tak" if known else "Bölge belirsiz",Vector2(366,710),Vector2(290,28),func():
 		if ui.game.book.set_tattoo(entry.role,entry.texture):ui.game.player.apply_tattoos();ui.show_error("Dövme kaydedildi.")
 		else:ui.show_error("Dövme kaydedilemedi.")

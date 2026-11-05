@@ -1,7 +1,7 @@
 param([string]$Godot = 'godot', [string]$OutputPath, [string]$AndroidSdk, [switch]$ValidateOnly, [switch]$Offline)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
-if (-not $OutputPath) { $OutputPath = Join-Path (Split-Path $projectRoot -Parent) $(if ($Offline) { 'WolfRogueBlood-0.11.0-offline.apk' } else { 'WolfRogueBlood-debug.apk' }) }
+if (-not $OutputPath) { $OutputPath = Join-Path (Split-Path $projectRoot -Parent) $(if ($Offline) { 'WolfRogueBlood-0.12.0-offline.apk' } else { 'WolfRogueBlood-debug.apk' }) }
 $engineCommand = Get-Command $Godot -ErrorAction SilentlyContinue
 if (-not $engineCommand) {
     $candidate = Join-Path $env:USERPROFILE 'Desktop\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64_console.exe'

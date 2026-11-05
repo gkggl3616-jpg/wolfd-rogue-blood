@@ -33,15 +33,25 @@ var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
 var room_difficulty: OptionButton
+var room_form: OptionButton
 var room_draft = {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
 var mode_choice = 0
 var map_choice = 0
+var map_gallery_page=0
+var rank_page=0
+var pass_page=0
+var rank_image
+var rank_background
+var last_rank_gp=-1
 var preview_view: SubViewport
 var preview_root: Node3D
 var preview_model: Node3D
 var preview_camera: Camera3D
 var preview_container: SubViewportContainer
 var preview_wolf = false
+var preview_angle=0.0
+var preview_drag=false
+var preview_finger=-1
 var settings_draft = {}
 var settings_dirty = false
 var settings_tab = "Ses"
@@ -72,12 +82,13 @@ func refresh():
 	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null;profile_label=null
 	var dimensions = get_viewport_rect().size
 	virtual_width = 1024.0
-	var overlay=game.running and page in ["pause","Ayarlar","maps"]
+	var overlay=game.running and page in ["pause","Ayarlar","maps","scoreboard"]
 	var shade = ColorRect.new();shade.color = Color(0,0,0,0.45) if overlay else Color("050709");shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(shade)
 	# The supplied PC recordings fill both 4:3 and 16:9 displays. Legacy 2D
 	# coordinates stretch on each axis; a centered 4:3 canvas adds false gutters.
 	canvas = Control.new();canvas.size = Vector2(virtual_width,768);canvas.scale = dimensions/Vector2(1024,768);add_child(canvas)
-	if not overlay:background("wt_interface/lobby/lb_bg.dtx" if page in ["lobby","room","create_room","maps"] else "wt_interface/inven_shop/is_bg.dtx", 607 if page in ["lobby","room","create_room","maps"] else 352)
+	var lobby_background=page in ["lobby","room","create_room","maps","pin","profile","rankbook"]
+	if not overlay:background("wt_interface/lobby/lb_bg.dtx" if lobby_background else "wt_interface/inven_shop/is_bg.dtx",607 if lobby_background else 352)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
 	if page not in ["entry","pause"] and not (page=="Ayarlar" and overlay):build_header()
@@ -116,8 +127,11 @@ func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 func build_header():
 	# Compact account strip and 32px source icon states, as in references 1/4/5.
 	var mark=ColorRect.new();mark.color=Color("222628");mark.size=Vector2(1024,58);mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(mark)
-	profile_label=text(canvas,game.profile_name,Vector2(12,10),Vector2(242,19),13)
-	text(canvas,"YEREL PROFİL",Vector2(12,31),Vector2(242,17),10,Color("9ca9ab"))
+	profile_label=text(canvas,game.profile_name,Vector2(48,10),Vector2(206,19),13)
+	text(canvas,"YEREL PROFİL",Vector2(48,31),Vector2(206,17),10,Color("9ca9ab"))
+	var rank=game.ranks.current(int(game.wallet.gp))
+	rank_background=Art.sprite(canvas,rank.background,Vector2(10,12),Vector2(32,32));rank_image=Art.sprite(canvas,rank.asset,Vector2(10,12),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Yerel rütbe"
+	last_rank_gp=-1
 	wallet_label=text(canvas,"",Vector2(265,5),Vector2(280,50),11,Color("c1c6c8"))
 	var entries = [["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Güç","power","wc"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Kartlar","Kartlar","charactercard"],["Diğer","","event"],["Lobi","lobby","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
 	for i in range(entries.size()):
@@ -132,18 +146,21 @@ func build_header():
 
 func choose_section():
 	confirm("Menüler","",func():pass)
-	var entries=[["Görevler","missions"],["Etkinlikler","events"],["Hediyeler","gifts"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Efektler","Efektler"],["Yerel yönetim","admin"]]
+	var entries=[["Görevler","missions"],["Wolf Pass","wolfpass"],["Kutular","Kutular"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Profil şifresi","pin"],["Yerel yönetim","admin"],["Etkinlikler","events"]]
 	for i in range(entries.size()):
 		var entry=entries[i]
 		button(modal,entry[0],Vector2(296+(i%2)*230,292+int(i/2)*38),Vector2(200,30),func():close_modal();navigate(entry[1]))
 
 func _process(_delta):
+	if is_instance_valid(rank_image) and last_rank_gp!=int(game.wallet.gp):
+		var rank=game.ranks.current(int(game.wallet.gp));rank_image.texture=Art.texture(rank.asset);rank_background.texture=Art.texture(rank.background);rank_image.tooltip_text=rank.name+" · Yerel rütbe";last_rank_gp=int(game.wallet.gp)
 	if is_instance_valid(profile_label):profile_label.text=game.profile_name
 	if is_instance_valid(wallet_label): wallet_label.text = "ALTIN:  %d     KP:  %d\nNAKİT:  %d     GP:  %d\nÇevrimiçi hesap bağlı değil" % [game.wallet.gold,game.wallet.kp,game.wallet.cash,game.wallet.gp]
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 
 func navigate(next,remember=true,back_step=false):
 	if modal != null: return
+	if not game.profile_lock.unlocked and next not in ["entry","pin"]:next="pin"
 	if page == "Ayarlar" and settings_dirty:
 		confirm("Kaydedilmemiş ayarlar", "Değişiklikleri uygulayıp devam et?", func():
 			if detail_helper.apply(): navigate(next,remember,back_step)
@@ -152,7 +169,9 @@ func navigate(next,remember=true,back_step=false):
 	if back_step and not history.is_empty(): history.pop_back()
 	if remember and page != next: history.append(page)
 	if next == "Ayarlar" and page != "Ayarlar": settings_draft = game.book.settings.duplicate(true);settings_dirty = false
-	if next=="create_room" and page!="create_room":room_draft=game.local_room.duplicate(true) if not game.local_room.is_empty() else {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
+	if next=="create_room" and page!="create_room":
+		room_draft={"title":"Yerel Oda","mode":0,"map":0,"team":"blue","playerForm":"human","botDifficulty":"normal"}
+		room_draft.merge(game.local_room,true)
 	page = next;offset = 0;selected = {};search_query = "";filter_id = "all";last_error = ""
 	refresh()
 
@@ -201,7 +220,9 @@ func confirm(title,body,accept,discard=Callable()):
 
 func mode_picker(parent,at,dimensions,allow_training=true):
 	var picker = OptionButton.new();picker.theme = Art.theme();picker.position = at;picker.size = dimensions;picker.fit_to_longest_item = false
-	if allow_training: picker.add_item("Çevrimdışı · Botlu Eğitim",0)
+	if allow_training: picker.add_item("Botlu Eğitim",0)
+	if allow_training: picker.add_item("Kurt Avı · Yerel",game.LocalHunt.MODE)
+	if allow_training: picker.add_item("Öğretici Mod · Yerel",game.LocalTutorial.MODE)
 	for mode in game.map_catalog.data.modes: picker.add_item(mode.sourceName,int(mode.id))
 	parent.add_child(picker);return picker
 
@@ -217,6 +238,7 @@ func build_preview(at,dimensions,entry):
 	clear_preview()
 	var container=SubViewportContainer.new();container.position=at;container.size=dimensions*canvas.scale;container.scale=Vector2.ONE/canvas.scale;container.stretch=true;content.add_child(container)
 	preview_container = container
+	container.gui_input.connect(preview_input)
 	preview_view=SubViewport.new();preview_view.size=Vector2i(dimensions*canvas.scale);preview_view.own_world_3d=true;container.add_child(preview_view)
 	preview_root=Node3D.new();preview_view.add_child(preview_root)
 	var environment=WorldEnvironment.new();var settings=Environment.new();settings.background_mode=Environment.BG_COLOR;settings.background_color=Color("0c1418");settings.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;settings.ambient_light_energy=0.7;environment.environment=settings;preview_root.add_child(environment)
@@ -230,9 +252,21 @@ func replace_preview(entry):
 	var resource=load(entry.wolf.asset if preview_wolf else entry.human.asset) as PackedScene
 	if resource==null:return
 	preview_model=resource.instantiate();preview_model.scale*=1.6;preview_root.add_child(preview_model)
+	preview_model.rotation.y=preview_angle
 	for animation in preview_model.find_children("*","AnimationPlayer",true,false):
 		if animation.has_animation("idle"):animation.play("idle");animation.advance(0)
 	CameraFit.frame(preview_camera,preview_root,Vector2(preview_view.size))
+
+func preview_input(event):
+	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:preview_drag=event.pressed;preview_container.accept_event()
+	elif event is InputEventScreenTouch:
+		if event.pressed and preview_finger<0:preview_finger=event.index
+		elif not event.pressed and event.index==preview_finger:preview_finger=-1
+		preview_container.accept_event()
+	elif (event is InputEventMouseMotion and preview_drag) or (event is InputEventScreenDrag and event.index==preview_finger):
+		preview_angle+=event.relative.x*0.01
+		if is_instance_valid(preview_model):preview_model.rotation.y=preview_angle
+		preview_container.accept_event()
 
 func build_admin():
 	Art.section(content,"YEREL YÖNETİM",Vector2(20,20),Vector2(virtual_width-40,44))

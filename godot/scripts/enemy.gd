@@ -2,6 +2,7 @@ extends CharacterBody3D
 const Rules=preload("res://scripts/bot_rules.gd")
 var game
 var kind="wolf"
+var display_name="Bot"
 var difficulty="normal"
 var profile={}
 var health=Rules.HEALTH
@@ -210,7 +211,7 @@ func melee_hit():
  if global_position.distance_to(game.player.global_position)<2.1 and line_to_player():game.take_damage(Rules.DAMAGE,global_position)
 
 func _physics_process(delta):
- if not game.running or game.menu_open or health<=0 or is_queued_for_deletion():return
+ if not game.is_combat_active() or health<=0 or is_queued_for_deletion():return
  attack_clock=maxf(0,attack_clock-delta);reaction=maxf(0,reaction-delta);memory=maxf(0,memory-delta);roll_cooldown=maxf(0,roll_cooldown-delta);cover_clock=maxf(0,cover_clock-delta)
  if position.y<game.preview_spawn.y-150:queue_free();return
  if not is_on_floor():velocity.y-=20*delta
@@ -281,10 +282,25 @@ func try_step(motion):
 func play(clip):
  if anim and anim.has_animation(clip) and active_clip!=clip:anim.play(clip,0.12);active_clip=clip
 
-func damage(amount):
+func is_head_hit(point,ray_origin=null,ray_direction=null):
+ var skeletons=body.find_children("*","Skeleton3D",true,false)
+ if skeletons.is_empty():return false
+ var skeleton=skeletons[0];var index=skeleton.find_bone("Bip01 Head")
+ if index<0:return false
+ var center=skeleton.global_transform*skeleton.get_bone_global_pose(index).origin
+ # The shared movement capsule can be hit before the animated head surface.
+ # Classify its actual incoming ray against the source head bone, after the
+ # first physics hit has already established visibility and target identity.
+ var sample=point
+ if ray_origin is Vector3 and ray_direction is Vector3:
+  sample=Geometry3D.get_closest_point_to_segment(center,ray_origin,point+ray_direction.normalized()*1.2)
+ return sample.distance_to(center)<0.28
+
+func damage(amount,context={}):
  if health<=0 or amount<=0:return false
+ game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
  health-=amount
  if health<=0:
-  collision_layer=0;game.enemy_defeated();queue_free()
+  collision_layer=0;context=context.duplicate();context.target=display_name;game.enemy_defeated(context);queue_free()
  elif sees_player and randf()<float(profile.dodgeChance):begin_dodge()
  return true

@@ -16,6 +16,23 @@ const AtomicStore = preload("res://scripts/atomic_store.gd")
 const MapAudio = preload("res://scripts/map_audio.gd")
 const BotRules = preload("res://scripts/bot_rules.gd")
 const NavigationGraph = preload("res://scripts/navigation_graph.gd")
+const ProfileLock=preload("res://scripts/profile_lock.gd")
+const BoxCollection=preload("res://scripts/box_collection.gd")
+const LocalHunt=preload("res://scripts/local_hunt.gd")
+const LocalTutorial=preload("res://scripts/local_tutorial.gd")
+const RankBook=preload("res://scripts/rank_book.gd")
+const LocalCareer=preload("res://scripts/local_career.gd")
+var career=LocalCareer.new()
+var match_id=""
+var profile_lock
+var boxes=BoxCollection.new()
+var hunt=LocalHunt.new()
+var tutorial=LocalTutorial.new()
+var ranks=RankBook.new()
+var map_photo:TextureRect
+var match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0}
+var kill_feed=[]
+var match_serial=0
 var book
 var current_weapon_id = "legacy-ak47"
 var weapon_ammo = {}
@@ -82,6 +99,7 @@ var menu_backdrop: ColorRect
 var transient_effects: Node3D
 
 func _ready():
+	profile_lock=ProfileLock.new(not test_mode)
 	book = ContentBook.new(not test_mode, "user://collection.json", OS.has_feature("offline_release"))
 	profile_name = book.local_name
 	game_audio = Node.new();game_audio.set_script(GameAudio);game_audio.game = self;add_child(game_audio)
@@ -320,6 +338,7 @@ func show_launcher():
 	running=false;open_interface("entry")
 
 func open_interface(page, library=false):
+	if profile_lock!=null and not profile_lock.unlocked:page="entry";library=false
 	clear_overlay();overlay.hide()
 	var panel=Frontend.new();panel.game=self;panel.page=page
 	if library: library_panel=panel
@@ -336,6 +355,7 @@ func refresh_mode_maps():
 	refresh_map_status()
 
 func refresh_map_status():
+	if is_instance_valid(map_photo):map_photo.texture=SourceArt.atlas(map_catalog.photo(map_picker.get_selected_id()).get("asset",""),Rect2(0,0,407,120))
 	if map_picker.item_count == 0:
 		map_status.text = "Bu mod için doğrulanmış seçili harita yok."
 		map_start.disabled = true
@@ -354,6 +374,7 @@ func set_arena_active(enabled):
 		body.collision_layer = 1 if enabled else 0
 
 func start_map_preview():
+	hunt.active=false;tutorial.active=false
 	var record = map_catalog.preview_record(mode_picker.get_selected_id(), map_picker.get_selected_id())
 	if record.is_empty():
 		return
@@ -420,6 +441,7 @@ func clear_pc_panel():
 		pc_panel.get_parent().remove_child(pc_panel);pc_panel.queue_free();pc_panel = null
 
 func resume():
+	if profile_lock!=null and not profile_lock.unlocked:return
 	if application_suspended:return
 	clear_pc_panel()
 	if is_instance_valid(library_panel):
@@ -438,7 +460,8 @@ func clear_projectiles():
 			node.queue_free()
 
 func start_round():
-	if int(local_room.get("mode", 0)) != 0:
+	if profile_lock!=null and not profile_lock.unlocked:return false
+	if not is_local_mode(int(local_room.get("mode",0))):
 		announce("Özgün mod kuralları henüz tamamlanmadı.")
 		return false
 	var map_number = int(local_room.get("map", 0))
@@ -490,6 +513,11 @@ func start_round():
 	reserve = ammo * 4
 	weapon_ammo.clear()
 	kills = 0
+	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear()
+	match_id=Crypto.new().generate_random_bytes(16).hex_encode()
+	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
+	if hunt.active:hunt.begin(local_room.get("playerForm","human"))
+	tutorial.active=int(local_room.get("mode",0))==LocalTutorial.MODE
 	time_left = 90
 	reloading = 0
 	player.position = preview_spawn
@@ -499,10 +527,31 @@ func start_round():
 	player.rotation = Vector3(0, spawn_yaw, 0)
 	running = true
 	resume()
+	if hunt.active and player.is_wolf!=(hunt.player_form=="wolf"):player.switch_form(true)
+	if tutorial.active:
+		if player.is_wolf:player.switch_form(true)
+		tutorial.begin(player.position,match_stats.attacks)
 	spawn_clock = 0
-	announce("10 hedef · 90 saniye")
+	announce("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye")
 	update_hud()
 	return true
+
+func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE]
+func is_combat_active():return running and not menu_open and not application_suspended and (not hunt.active or hunt.phase=="combat")
+func finish_hunt_round(won):
+	if not hunt.finish_round(won):return
+	for enemy in enemies.get_children():enemy.collision_layer=0;enemy.queue_free()
+	clear_projectiles();player.reset_combat();touch.reset();reloading=0
+	if hunt.phase=="finished":end_round("Kurt Avı · %d kazanılan / %d kaybedilen raunt" % [hunt.wins,hunt.losses])
+	else:announce("Raunt %d · %s" % [hunt.round_number,"Kazanıldı" if won else "Kaybedildi"]);message_clock=3.0
+func advance_hunt(delta):
+	if hunt.phase!="intermission":return false
+	hunt.intermission=maxf(0,hunt.intermission-delta)
+	if hunt.intermission<=0 and hunt.next_round():
+		health=100;ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();time_left=LocalHunt.SECONDS
+		player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();spawn_clock=0
+		announce("Kurt Avı · Raunt %d/3" % hunt.round_number)
+	update_hud();return true
 
 func install_navigation(asset,parent):
 	navigation_region=NavigationRegion3D.new()
@@ -553,6 +602,9 @@ func _input(event):
 		show_admin()
 	if event.is_action_pressed("inventory"):
 		show_library("Envanter")
+	if event is InputEventKey and event.physical_keycode==KEY_TAB and not event.echo and running:
+		if event.pressed and not menu_open:open_interface("scoreboard")
+		elif not event.pressed and is_instance_valid(pc_panel) and pc_panel.page=="scoreboard":resume()
 	if event is InputEventKey and event.pressed and not event.echo and not menu_open:
 		var keys = {KEY_1: "primary", KEY_2: "pistol", KEY_4: "grenade", KEY_5: "knife"}
 		if event.physical_keycode==KEY_1:cycle_primary()
@@ -621,6 +673,9 @@ func _process(delta):
 	crosshair.visible = running and not menu_open
 	if not running or menu_open:
 		return
+	if hunt.active and advance_hunt(delta):return
+	for entry in kill_feed:entry.remaining=maxf(0,entry.remaining-delta)
+	kill_feed=kill_feed.filter(func(entry):return entry.remaining>0)
 	if reloading > 0:
 		reloading -= delta
 		if reloading <= 0:
@@ -635,14 +690,18 @@ func _process(delta):
 		player.position = preview_spawn;player.velocity = Vector3.ZERO;player.reset_locomotion()
 		take_damage(20)
 		announce("Güvenli noktaya dönüş · −20 can")
-		if not running: return
+		if not is_combat_active():return
+	if tutorial.active:
+		if tutorial.advance(self):end_round("Öğretici tamamlandı")
+		update_hud();return
 	time_left -= delta
 	spawn_clock -= delta
-	if spawn_clock <= 0 and enemies.get_child_count() < 4:
-		spawn_enemy()
+	if spawn_clock <= 0 and enemies.get_child_count() < 4 and (not hunt.active or hunt.spawned<LocalHunt.TARGET):
+		if spawn_enemy() and hunt.active:hunt.spawned+=1
 		spawn_clock = 3.5
 	if time_left <= 0:
-		end_round("Süre doldu")
+		if hunt.active:finish_hunt_round(false)
+		else:end_round("Süre doldu")
 	update_hud()
 
 func spawn_enemy(kind="",difficulty=""):
@@ -653,7 +712,8 @@ func spawn_enemy(kind="",difficulty=""):
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
-	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if bot_spawn_count%2==0 else "human")
+	enemy.kind=kind if kind in ["human","wolf"] else (hunt.enemy_kind() if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))
+	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
 	enemies.add_child(enemy)
@@ -695,7 +755,7 @@ func offline_spawn_points():
 	return points
 
 func attack():
-	if application_suspended: return
+	if not is_combat_active():return
 	if player.rolling or player.wall_holding or player.air_attacking or player.roar_effect.active: return
 	if not running or menu_open or reloading > 0 or player.shot_cooldown > 0:
 		return
@@ -710,6 +770,7 @@ func attack():
 	player.shot_cooldown = 0.55 if player.is_wolf else float(player.weapon_info.fireIntervalMs) / 1000.0
 	player.action_time = 0.45
 	player.current_clip = ""
+	match_stats.attacks+=1
 	player.play_clip("attack")
 	if player.is_wolf:
 		notify_bot_noise(player.global_position,8)
@@ -733,9 +794,13 @@ func attack():
 	if hit:
 		end = hit.position
 		if hit.collider.has_meta("enemy"):
-			var damage = int(player.weapon_info.get("damage", 25));hit.collider.damage(damage)
+			var head=kind!="knife" and hit.collider.is_head_hit(hit.position,origin,(end-origin).normalized())
+			var damage = int(player.weapon_info.get("damage", 25))*(2 if head else 1)
+			var actual=mini(hit.collider.health,damage)
+			if head:match_stats.headshots+=1
+			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head})
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
-			announce("İsabet +%d" % damage)
+			announce(("Kafadan isabet +%d" if head else "İsabet +%d") % actual)
 	var flash = OmniLight3D.new()
 	flash.position = player.global_position + Vector3(0, 1.4, 0)
 	flash.light_color = Color("ffc77f")
@@ -762,7 +827,7 @@ func strong_attack():
 	return false
 
 func reload_weapon():
-	if not running or menu_open:
+	if not is_combat_active():
 		return
 	if player.is_wolf:
 		if player.begin_roar():
@@ -775,25 +840,35 @@ func reload_weapon():
 		player.action_time = reloading
 		announce("Şarjör değiştiriliyor…")
 
-func enemy_defeated():
+func enemy_defeated(context={}):
+	if not is_combat_active():return
 	kills += 1
+	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0})
+	if kill_feed.size()>5:kill_feed.resize(5)
 	grant_money("cash", 25, "Arena hedef ödülü")
 	grant_money("gp", 10, "Arena gelişim ödülü")
-	if kills >= 10:
+	if hunt.active:
+		hunt.round_kills+=1
+		if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
+	elif kills >= 10:
 		grant_money("gold", 10, "Arena tamamlandı")
 		end_round("Arena tamamlandı")
 	update_hud()
 
 func take_damage(amount, source_position=null):
-	if not running or menu_open or amount<=0:
+	if not is_combat_active() or amount<=0:
 		return
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
-		end_round("Yenildin")
+		if hunt.active:finish_hunt_round(false)
+		else:end_round("Yenildin")
 
 func end_round(title):
-	running=false;last_result={"title":title,"kills":kills,"health":health}
+	if not match_id.is_empty() and not match_id in career.state.matches:
+		var next=career.result(match_id,kills,match_stats.headshots,hunt.wins if hunt.active else 0,tutorial.active and tutorial.step>=tutorial.STEPS.size())
+		if save_wallet(null,null,next):career.state=next
+	running=false;last_result={"title":title,"kills":kills,"health":health,"stats":match_stats.duplicate(),"hunt":hunt.active,"wins":hunt.wins,"losses":hunt.losses}
 	open_interface("result")
 
 func announce(text):
@@ -816,16 +891,39 @@ func load_wallet(path = ""):
 		var result = AtomicStore.read_json(path)
 		wallet_save_blocked = not result.ok
 		var stored = result.data
+		if stored.has("localBoxes"):
+			if boxes.valid_state(stored.localBoxes):boxes.state=stored.localBoxes
+			else:wallet_save_blocked=true
+		if stored.has("localCareer"):
+			if career.valid(stored.localCareer):career.state=stored.localCareer
+			else:wallet_save_blocked=true
 		if stored is Dictionary:
 			for key in wallet:
 				var amount = stored.get(key, 0)
 				if (amount is int or amount is float) and is_finite(float(amount)): wallet[key] = clampi(int(amount), 0, 1000000000)
 
-func save_wallet(candidate = null):
+func save_wallet(candidate = null,box_candidate=null,career_candidate=null):
 	if test_mode: return true
 	if wallet_save_blocked: return false
 	if candidate == null: candidate = wallet
-	return AtomicStore.write_json(wallet_storage_path, candidate)
+	var payload=candidate.duplicate(true)
+	payload.localBoxes=boxes.state if box_candidate==null else box_candidate
+	payload.localCareer=career.state if career_candidate==null else career_candidate
+	return AtomicStore.write_json(wallet_storage_path,payload)
+
+func box_action(action,id,request):
+	if remote_player!="":return {"ok":false,"error":"Kutular yalnızca bu cihazdaki yerel bakiye ile kullanılır."}
+	var result=boxes.prepare(action,id,request,wallet)
+	if not result.ok or result.get("duplicate",false):return result
+	if not save_wallet(result.wallet,result.state):return {"ok":false,"error":"Kayıt başarısız; bakiye ve kutu değiştirilmedi."}
+	wallet=result.wallet;boxes.state=result.state;update_hud();return result
+
+func claim_career(id):
+	if remote_player!="":return {"ok":false,"error":"Yerel ödüller yalnızca bu cihazda kullanılır."}
+	var result=career.claim(id,wallet)
+	if not result.ok:return result
+	if not save_wallet(result.wallet,null,result.state):return {"ok":false,"error":"Ödül kaydedilemedi; bakiye değiştirilmedi."}
+	wallet=result.wallet;career.state=result.state;update_hud();return result
 
 func grant_money(currency, amount, reason):
 	if not wallet.has(currency) or not valid_balance(amount) or amount < 1 or amount > 1000000:

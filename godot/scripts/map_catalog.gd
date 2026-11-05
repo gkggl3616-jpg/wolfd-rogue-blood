@@ -5,8 +5,11 @@ var data = {}
 var valid = false
 var previews = []
 var offline = []
+var photos={}
 
 func _init(source = {}):
+	if FileAccess.file_exists("res://assets/maps/photos.json"):
+		for row in JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/photos.json")).maps:photos[int(row.number)]=row
 	data = source
 	if data.is_empty():
 		data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/catalog.json"))
@@ -29,6 +32,8 @@ func _init(source = {}):
 		if source_offline is Array: offline = source_offline
 
 # A separate, local ruleset. This does not assert any original mode pairing.
+func photo(number):return photos.get(int(number),{})
+
 func offline_record(map_number):
 	for record in previews:
 		if int(record.number) != map_number or record.get("previewValidated") != true: continue

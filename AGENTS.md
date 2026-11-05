@@ -8,3 +8,5 @@
 - Kaynak model/doku/ses kökenini koru. Bilinmeyen PC istatistiği, çevrimiçi sahiplik, ödül veya ağ sonucu uydurma. Videodaki özel bot kodu ve “Turu kazandınız” bandı özgün PC kaynağı diye eklenmez.
 - Godot 4.7.2 ve `tools/validate_mobile.py` ile değişikliklere uygun doğrulamayı çalıştır. APK'yı ZIP/kaynak bağımlılıkları, imza, kimlik ve izinleriyle doğrula; tam-PC teslim denetimini çevrimdışı denetim yerine geçirme.
 - Özel anahtarlar ve yetkilendirme bilgileri depoya veya araç çıktısına eklenmez.
+
+- Son PC referanslarının kaydı `docs/pc-reference-expansion.json` içindedir. Harita fotoğrafları gerçek PC tablosuna, rütbe ad/simgeleri kaynak class.txt dosyasına bağlıdır; yerel GP eşikleri özgün PC eşiği diye sunulmaz.

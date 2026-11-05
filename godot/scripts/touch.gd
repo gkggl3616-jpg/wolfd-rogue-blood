@@ -49,7 +49,7 @@ func _ready():
 	resize()
 
 func can_control():
-	return game.running and not game.menu_open and not game.application_suspended
+	return game.is_combat_active()
 
 func resize():
 	reset()
@@ -71,6 +71,7 @@ func _process(_delta):
 	for i in range(7, 11):
 		buttons[i].visible = direction_buttons
 	buttons[11].visible = game.player.is_wolf
+	buttons[4].visible = not game.hunt.active
 	buttons[5].get_child(0).text = "KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU"
 	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
 	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"

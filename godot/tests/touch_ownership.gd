@@ -14,6 +14,8 @@ class GameDouble extends RefCounted:
 	var menu_open = false
 	var application_suspended = false
 	var player = PlayerDouble.new()
+	var hunt={"active":false}
+	func is_combat_active():return running and not menu_open and not application_suspended
 	var blocked = Rect2(850, 20, 150, 50)
 	func gameplay_touch_blocked(point): return blocked.has_point(point)
 

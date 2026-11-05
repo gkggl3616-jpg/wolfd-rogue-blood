@@ -265,9 +265,10 @@ func look(delta: Vector2):
 	rotation.y = yaw
 	pivot.rotation.x = pitch
 
-func switch_form():
+func switch_form(force=false):
 	if not game.running or game.menu_open:
 		return
+	if game.hunt.active and not force:return
 	is_wolf = not is_wolf
 	end_roll()
 	if is_instance_valid(roar_effect): roar_effect.stop()
@@ -295,6 +296,8 @@ func apply_camera_form():
 	human.visible = false
 	wolf.visible = is_wolf
 
+func is_scoped():return not is_wolf and weapon_info.get("category","")=="sniper" and Input.is_action_pressed("aim")
+
 func toggle_camera():
 	apply_camera_form()
 
@@ -320,7 +323,7 @@ func can_wolf_run():
 	return is_wolf and game.equipment.has_wolf_ability() and not crouching and game.running and not game.menu_open and anim!=null and anim.has_animation("wolf_run")
 
 func _physics_process(delta):
-	if not game.running or game.menu_open:
+	if not game.is_combat_active():
 		reset_locomotion()
 		velocity.x = 0
 		velocity.z = 0
@@ -391,7 +394,8 @@ func _physics_process(delta):
 		var next_weapon_clip = "walk" if axis.length() > 0.15 and weapon_anim.has_animation("walk") else "idle"
 		if weapon_clip != next_weapon_clip:
 			play_weapon_clip(next_weapon_clip)
-	camera.fov = lerpf(camera.fov, 70.0 if is_wolf else (53.0 if Input.is_action_pressed("aim") else 74.0), delta * 10)
+	if is_instance_valid(viewmodel):viewmodel.visible=not is_wolf and not is_scoped()
+	camera.fov = lerpf(camera.fov, 70.0 if is_wolf else (18.0 if is_scoped() else (53.0 if Input.is_action_pressed("aim") else 74.0)), minf(1,delta * 10))
 
 func begin_roll():
 	if wall_holding or rolling or air_attacking or roll_cooldown > 0 or not is_wolf or not is_on_floor() or game.menu_open or not game.running or action_time > 0: return false

@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "source": "wolfteam kurtları/Root/wt_interface/attributes/class/class.txt",
+  "sourceSha256": "fe5516793e7b9f4582871c525138d1020234dcab934038cf68f0e29f7dfd66ee",
+  "originalPcGpThresholds": false,
+  "progression": "Local GP: 100 * level_index^2. Names, icon and background pairs are sourced. GM is excluded.",
+  "ranks": [
+    {
+      "sourceSerial": 61,
+      "name": "Gönüllü Er",
+      "asset": "res://assets/full_ui/textures/bd99b00ff8ada9ca1b740df0.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/01.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 0
+    },
+    {
+      "sourceSerial": 60,
+      "name": "Acemi Er",
+      "asset": "res://assets/pc_ui/textures/b6749ca5d2866933f312a795.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/02.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 100
+    },
+    {
+      "sourceSerial": 59,
+      "name": "Er",
+      "asset": "res://assets/pc_ui/textures/b6749ca5d2866933f312a795.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/02.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 400
+    },
+    {
+      "sourceSerial": 58,
+      "name": "Kıdemli Er",
+      "asset": "res://assets/pc_ui/textures/b6749ca5d2866933f312a795.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/02.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 900
+    },
+    {
+      "sourceSerial": 57,
+      "name": "Erbaş",
+      "asset": "res://assets/pc_ui/textures/b6749ca5d2866933f312a795.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/02.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 1600
+    },
+    {
+      "sourceSerial": 56,
+      "name": "1. Asistn Er",
+      "asset": "res://assets/full_ui/textures/650f6bdc6d3fc2252e21a33f.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/03.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 2500
+    },
+    {
+      "sourceSerial": 55,
+      "name": "1. Snf Er",
+      "asset": "res://assets/full_ui/textures/650f6bdc6d3fc2252e21a33f.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/03.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 3600
+    },
+    {
+      "sourceSerial": 54,
+      "name": "Kdmli 1. Er",
+      "asset": "res://assets/full_ui/textures/650f6bdc6d3fc2252e21a33f.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/03.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 4900
+    },
+    {
+      "sourceSerial": 53,
+      "name": "1.Snf Erbaş",
+      "asset": "res://assets/full_ui/textures/650f6bdc6d3fc2252e21a33f.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/03.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 6400
+    },
+    {
+      "sourceSerial": 52,
+      "name": "Acemi Onbaşı",
+      "asset": "res://assets/full_ui/textures/1899f35e2ef042158db4cc95.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/04.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 8100
+    },
+    {
+      "sourceSerial": 51,
+      "name": "Onbaşı",
+      "asset": "res://assets/full_ui/textures/1899f35e2ef042158db4cc95.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/04.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 10000
+    },
+    {
+      "sourceSerial": 50,
+      "name": "Kdmli Onbaşı",
+      "asset": "res://assets/full_ui/textures/1899f35e2ef042158db4cc95.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/04.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 12100
+    },
+    {
+      "sourceSerial": 49,
+      "name": "Grvli Onbaşı",
+      "asset": "res://assets/full_ui/textures/1899f35e2ef042158db4cc95.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/04.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 14400
+    },
+    {
+      "sourceSerial": 48,
+      "name": "Acemi Çavuş",
+      "asset": "res://assets/full_ui/textures/3bdba8d597029429916f0552.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/05.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 16900
+    },
+    {
+      "sourceSerial": 47,
+      "name": "Çavuş",
+      "asset": "res://assets/full_ui/textures/3bdba8d597029429916f0552.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/05.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 19600
+    },
+    {
+      "sourceSerial": 46,
+      "name": "Kdmli Çavuş",
+      "asset": "res://assets/full_ui/textures/3bdba8d597029429916f0552.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/05.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 22500
+    },
+    {
+      "sourceSerial": 45,
+      "name": "Grvli Çavuş",
+      "asset": "res://assets/full_ui/textures/3bdba8d597029429916f0552.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/05.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 25600
+    },
+    {
+      "sourceSerial": 44,
+      "name": "As.Astsb Çvş",
+      "asset": "res://assets/full_ui/textures/d5fa11009d1c3e671d985665.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/06.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 28900
+    },
+    {
+      "sourceSerial": 43,
+      "name": "Astsb. Çavuş",
+      "asset": "res://assets/full_ui/textures/d5fa11009d1c3e671d985665.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/06.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 32400
+    },
+    {
+      "sourceSerial": 42,
+      "name": "KdmAstsb Çvş",
+      "asset": "res://assets/full_ui/textures/d5fa11009d1c3e671d985665.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/06.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 36100
+    },
+    {
+      "sourceSerial": 41,
+      "name": "GrvAstsb Çvş",
+      "asset": "res://assets/full_ui/textures/d5fa11009d1c3e671d985665.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/06.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 40000
+    },
+    {
+      "sourceSerial": 40,
+      "name": "A.Astsb Ü.çvş",
+      "asset": "res://assets/full_ui/textures/78675736c3c5db6110400310.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/07.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 44100
+    },
+    {
+      "sourceSerial": 39,
+      "name": "1snfAsb Ü.çvş",
+      "asset": "res://assets/full_ui/textures/78675736c3c5db6110400310.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/07.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 48400
+    },
+    {
+      "sourceSerial": 38,
+      "name": "KdmAsb Ü.çvş",
+      "asset": "res://assets/full_ui/textures/78675736c3c5db6110400310.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/07.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 52900
+    },
+    {
+      "sourceSerial": 37,
+      "name": "GrvAsb Ü.çvş",
+      "asset": "res://assets/full_ui/textures/78675736c3c5db6110400310.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/07.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 57600
+    },
+    {
+      "sourceSerial": 36,
+      "name": "As.Astsb B.çvş",
+      "asset": "res://assets/full_ui/textures/56c06f28a3e9372d4c3ef1c4.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/08.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 62500
+    },
+    {
+      "sourceSerial": 35,
+      "name": "Astsb. B.çvş",
+      "asset": "res://assets/full_ui/textures/56c06f28a3e9372d4c3ef1c4.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/08.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 67600
+    },
+    {
+      "sourceSerial": 34,
+      "name": "Kdm.Asts.Bçvş",
+      "asset": "res://assets/full_ui/textures/56c06f28a3e9372d4c3ef1c4.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/08.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 72900
+    },
+    {
+      "sourceSerial": 33,
+      "name": "Gr.Asb B.çvş",
+      "asset": "res://assets/full_ui/textures/56c06f28a3e9372d4c3ef1c4.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/08.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 78400
+    },
+    {
+      "sourceSerial": 32,
+      "name": "A.AsbKdmBçvş",
+      "asset": "res://assets/full_ui/textures/586c3393c5560046fdd1d482.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/09.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 84100
+    },
+    {
+      "sourceSerial": 31,
+      "name": "AsbKdm.Bçvş",
+      "asset": "res://assets/full_ui/textures/586c3393c5560046fdd1d482.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/09.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 90000
+    },
+    {
+      "sourceSerial": 30,
+      "name": "KdmAsb.B.çvş",
+      "asset": "res://assets/full_ui/textures/586c3393c5560046fdd1d482.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/09.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 96100
+    },
+    {
+      "sourceSerial": 29,
+      "name": "GrAsbKdmBçvş",
+      "asset": "res://assets/full_ui/textures/586c3393c5560046fdd1d482.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/09.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 102400
+    },
+    {
+      "sourceSerial": 28,
+      "name": "Acemi Teğmen",
+      "asset": "res://assets/full_ui/textures/2a42423cae210206de589579.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/11.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 108900
+    },
+    {
+      "sourceSerial": 27,
+      "name": "Teğmen",
+      "asset": "res://assets/full_ui/textures/2a42423cae210206de589579.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/11.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 115600
+    },
+    {
+      "sourceSerial": 26,
+      "name": "Kdm. Teğmen",
+      "asset": "res://assets/full_ui/textures/2a42423cae210206de589579.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/11.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 122500
+    },
+    {
+      "sourceSerial": 25,
+      "name": "Grv. Teğmen",
+      "asset": "res://assets/full_ui/textures/2a42423cae210206de589579.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/11.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 129600
+    },
+    {
+      "sourceSerial": 24,
+      "name": "Acm Üsteğmen",
+      "asset": "res://assets/full_ui/textures/df312440aa533ac2f066614f.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/12.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 136900
+    },
+    {
+      "sourceSerial": 23,
+      "name": "Üsteğmen",
+      "asset": "res://assets/full_ui/textures/df312440aa533ac2f066614f.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/12.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 144400
+    },
+    {
+      "sourceSerial": 22,
+      "name": "Kdm Üsteğmen",
+      "asset": "res://assets/full_ui/textures/df312440aa533ac2f066614f.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/12.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 152100
+    },
+    {
+      "sourceSerial": 21,
+      "name": "Grv Üsteğmen",
+      "asset": "res://assets/full_ui/textures/df312440aa533ac2f066614f.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/12.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 160000
+    },
+    {
+      "sourceSerial": 20,
+      "name": "Acm Yüzbaşı",
+      "asset": "res://assets/full_ui/textures/eb2c7e3e894a3eb29693f04e.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/13.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 168100
+    },
+    {
+      "sourceSerial": 19,
+      "name": "Yüzbaşı",
+      "asset": "res://assets/full_ui/textures/eb2c7e3e894a3eb29693f04e.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/13.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 176400
+    },
+    {
+      "sourceSerial": 18,
+      "name": "Kdm Yüzbaşı",
+      "asset": "res://assets/full_ui/textures/eb2c7e3e894a3eb29693f04e.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/13.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 184900
+    },
+    {
+      "sourceSerial": 17,
+      "name": "Grv Yüzbaşı",
+      "asset": "res://assets/full_ui/textures/eb2c7e3e894a3eb29693f04e.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/13.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 193600
+    },
+    {
+      "sourceSerial": 16,
+      "name": "Acm Binbaşı",
+      "asset": "res://assets/full_ui/textures/135e4488e52ca544af4f9db3.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/14.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 202500
+    },
+    {
+      "sourceSerial": 15,
+      "name": "Binbaşı",
+      "asset": "res://assets/full_ui/textures/135e4488e52ca544af4f9db3.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/14.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 211600
+    },
+    {
+      "sourceSerial": 14,
+      "name": "Kdm Binbaşı",
+      "asset": "res://assets/full_ui/textures/135e4488e52ca544af4f9db3.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/14.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 220900
+    },
+    {
+      "sourceSerial": 13,
+      "name": "Grv Binbaşı",
+      "asset": "res://assets/full_ui/textures/135e4488e52ca544af4f9db3.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/14.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 230400
+    },
+    {
+      "sourceSerial": 12,
+      "name": "Acm Yarbay",
+      "asset": "res://assets/full_ui/textures/b34f9db122ea460da567adeb.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/15.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 240100
+    },
+    {
+      "sourceSerial": 11,
+      "name": "Yarbay",
+      "asset": "res://assets/full_ui/textures/b34f9db122ea460da567adeb.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/15.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 250000
+    },
+    {
+      "sourceSerial": 10,
+      "name": "Kdm Yarbay",
+      "asset": "res://assets/full_ui/textures/b34f9db122ea460da567adeb.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/15.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 260100
+    },
+    {
+      "sourceSerial": 9,
+      "name": "Grv Yarbay",
+      "asset": "res://assets/full_ui/textures/b34f9db122ea460da567adeb.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/15.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 270400
+    },
+    {
+      "sourceSerial": 8,
+      "name": "Acm Albay",
+      "asset": "res://assets/full_ui/textures/0f3b7690c1f3849b041ccce0.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/16.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 280900
+    },
+    {
+      "sourceSerial": 7,
+      "name": "Albay",
+      "asset": "res://assets/full_ui/textures/0f3b7690c1f3849b041ccce0.png",
+      "background": "res://assets/full_ui/textures/2ad1c7aba15b07394ff95c35.png",
+      "sourceIcon": "wt_interface/emblem/class/16.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_2.dtx",
+      "localMinimumGp": 291600
+    },
+    {
+      "sourceSerial": 6,
+      "name": "Kdm Albay",
+      "asset": "res://assets/full_ui/textures/0f3b7690c1f3849b041ccce0.png",
+      "background": "res://assets/full_ui/textures/109dcffa8b747c02ee948e47.png",
+      "sourceIcon": "wt_interface/emblem/class/16.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_3.dtx",
+      "localMinimumGp": 302500
+    },
+    {
+      "sourceSerial": 5,
+      "name": "Grv Albay",
+      "asset": "res://assets/full_ui/textures/0f3b7690c1f3849b041ccce0.png",
+      "background": "res://assets/full_ui/textures/a0ea846b959a2c1daa6df59f.png",
+      "sourceIcon": "wt_interface/emblem/class/16.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_4.dtx",
+      "localMinimumGp": 313600
+    },
+    {
+      "sourceSerial": 4,
+      "name": "Tuğgeneral",
+      "asset": "res://assets/full_ui/textures/5492a5bf931514b9a52704c9.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/17.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 324900
+    },
+    {
+      "sourceSerial": 3,
+      "name": "Tümgeneral",
+      "asset": "res://assets/full_ui/textures/21eb2b5c3e688a3ec4d67058.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/18.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 336400
+    },
+    {
+      "sourceSerial": 2,
+      "name": "Korgeneral",
+      "asset": "res://assets/full_ui/textures/570579d74814f84cae67f90a.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/19.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 348100
+    },
+    {
+      "sourceSerial": 1,
+      "name": "Orgeneral",
+      "asset": "res://assets/full_ui/textures/4660c3931155423e812bed9d.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/20.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 360000
+    },
+    {
+      "sourceSerial": 0,
+      "name": "Mareşal",
+      "asset": "res://assets/full_ui/textures/d9c49d82f6312921072a7dab.png",
+      "background": "res://assets/full_ui/textures/ed2ddc4bbadbb56d9e72f333.png",
+      "sourceIcon": "wt_interface/emblem/class/21.dtx",
+      "sourceBackground": "wt_interface/emblem/classback_1.dtx",
+      "localMinimumGp": 372100
+    }
+  ]
+}

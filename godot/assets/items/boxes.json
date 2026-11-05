@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "originalPcDropTable": false,
+  "realMoneyPurchases": false,
+  "currency": "local_cash",
+  "scope": "Offline cosmetic draw with uniform local odds. No original PC drop rate, Aurora box artwork, timed server coupon or online entitlement is asserted.",
+  "boxes": [
+    {
+      "id": "mystery",
+      "name": "Gizemli Kutu",
+      "icon": "res://assets/full_ui/textures/8cba59358f374dd6cb75edf8.png",
+      "iconSha256": "bb6cbd7f2151866cfd860128c44eeb3275ab7eaf057258290e50978723f02189",
+      "sourceIcon": "wt_interface/item/exitem/large/secretbox.dtx",
+      "sourceIconSha256": "8cba59358f374dd6cb75edf8cb2ae477a21e43a34108aeb78724568fef1fb335",
+      "localPrice": 100,
+      "rewards": [
+        {
+          "id": "tattoo-12002",
+          "name": "Bilinç Dövmesi",
+          "texture": "res://assets/library/textures/000e9debfcf3fa821a269e6b.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12003",
+          "name": "Rakipsizlik Dövmesi",
+          "texture": "res://assets/library/textures/326c88a6be8d903ea81550ab.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12004",
+          "name": "Çiftkanat Dövmesi",
+          "texture": "res://assets/library/textures/0265aa95ebedac1bf1d41f01.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12005",
+          "name": "Midas Dövmesi",
+          "texture": "res://assets/library/textures/0a9cb8bb4e8aa156808e8ff3.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12006",
+          "name": "Yılan Dövmesi",
+          "texture": "res://assets/library/textures/c5b588210c04d24a115998e6.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12007",
+          "name": "Akrep Dövmesi",
+          "texture": "res://assets/library/textures/d50c9db09c773c3c2b97f3e2.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12008",
+          "name": "Tılsımlı Dövme",
+          "texture": "res://assets/library/textures/dbdfc189352e34c80d2eac0c.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12009",
+          "name": "Gezgin Dövmesi",
+          "texture": "res://assets/library/textures/fbf8123454ac13a0746de553.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12010",
+          "name": "Kaplan Dövmesi",
+          "texture": "res://assets/library/textures/edb253f3b69f9cc633f41c66.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12011",
+          "name": "Kelebek Dövmesi",
+          "texture": "res://assets/library/textures/966b041b04d4714ecbfa00bd.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12012",
+          "name": "Kartal Dövmesi",
+          "texture": "res://assets/library/textures/c9bb6d94a3ce47d8717a80ba.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12013",
+          "name": "Asalet Dövmesi",
+          "texture": "res://assets/library/textures/12c748fbf03ac26bee730de9.png",
+          "role": "body"
+        }
+      ]
+    },
+    {
+      "id": "wolf",
+      "name": "Kurt Dövme Kutusu",
+      "icon": "res://assets/full_ui/textures/8cba59358f374dd6cb75edf8.png",
+      "iconSha256": "bb6cbd7f2151866cfd860128c44eeb3275ab7eaf057258290e50978723f02189",
+      "sourceIcon": "wt_interface/item/exitem/large/secretbox.dtx",
+      "sourceIconSha256": "8cba59358f374dd6cb75edf8cb2ae477a21e43a34108aeb78724568fef1fb335",
+      "localPrice": 150,
+      "rewards": [
+        {
+          "id": "tattoo-12002",
+          "name": "Bilinç Dövmesi",
+          "texture": "res://assets/library/textures/000e9debfcf3fa821a269e6b.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12003",
+          "name": "Rakipsizlik Dövmesi",
+          "texture": "res://assets/library/textures/326c88a6be8d903ea81550ab.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12004",
+          "name": "Çiftkanat Dövmesi",
+          "texture": "res://assets/library/textures/0265aa95ebedac1bf1d41f01.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12005",
+          "name": "Midas Dövmesi",
+          "texture": "res://assets/library/textures/0a9cb8bb4e8aa156808e8ff3.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12006",
+          "name": "Yılan Dövmesi",
+          "texture": "res://assets/library/textures/c5b588210c04d24a115998e6.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12007",
+          "name": "Akrep Dövmesi",
+          "texture": "res://assets/library/textures/d50c9db09c773c3c2b97f3e2.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12008",
+          "name": "Tılsımlı Dövme",
+          "texture": "res://assets/library/textures/dbdfc189352e34c80d2eac0c.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12009",
+          "name": "Gezgin Dövmesi",
+          "texture": "res://assets/library/textures/fbf8123454ac13a0746de553.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12010",
+          "name": "Kaplan Dövmesi",
+          "texture": "res://assets/library/textures/edb253f3b69f9cc633f41c66.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12011",
+          "name": "Kelebek Dövmesi",
+          "texture": "res://assets/library/textures/966b041b04d4714ecbfa00bd.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12012",
+          "name": "Kartal Dövmesi",
+          "texture": "res://assets/library/textures/c9bb6d94a3ce47d8717a80ba.png",
+          "role": "body"
+        },
+        {
+          "id": "tattoo-12013",
+          "name": "Asalet Dövmesi",
+          "texture": "res://assets/library/textures/12c748fbf03ac26bee730de9.png",
+          "role": "body"
+        }
+      ]
+    },
+    {
+      "id": "arms",
+      "name": "Pençe Dövme Kutusu",
+      "icon": "res://assets/full_ui/textures/8cba59358f374dd6cb75edf8.png",
+      "iconSha256": "bb6cbd7f2151866cfd860128c44eeb3275ab7eaf057258290e50978723f02189",
+      "sourceIcon": "wt_interface/item/exitem/large/secretbox.dtx",
+      "sourceIconSha256": "8cba59358f374dd6cb75edf8cb2ae477a21e43a34108aeb78724568fef1fb335",
+      "localPrice": 125,
+      "rewards": [
+        {
+          "id": "tattoo-20001",
+          "name": "Anka Kuşu Dövme (Sol)",
+          "texture": "res://assets/library/textures/7276b84a93edf67b5dce9094.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-21001",
+          "name": "Anka Kuşu Dövmesi (Sağ) ",
+          "texture": "res://assets/library/textures/7276b84a93edf67b5dce9094.png",
+          "role": "right"
+        },
+        {
+          "id": "tattoo-20019",
+          "name": "Ejder Dövmesi (Sol) ",
+          "texture": "res://assets/library/textures/97012b74fc7feeb2c5c8c9c7.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-20005",
+          "name": "Aslan Dövmesi (Sol)",
+          "texture": "res://assets/library/textures/d2efc46af8b912867b23f7b4.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-20006",
+          "name": "Pegasus Dövmesi (Sol)",
+          "texture": "res://assets/library/textures/23ac5dc344c0de1e0e8b5b4e.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-20007",
+          "name": "Tarantula Dövmesi (Sol) ",
+          "texture": "res://assets/library/textures/18bb04a97ea612f4ccc098df.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-20008",
+          "name": "Boğa Dövmesi (Sol)",
+          "texture": "res://assets/library/textures/b3a776738f33f277ed9d4cc7.png",
+          "role": "left"
+        },
+        {
+          "id": "tattoo-21002",
+          "name": "Ejder Dövmesi (Sağ)",
+          "texture": "res://assets/library/textures/97012b74fc7feeb2c5c8c9c7.png",
+          "role": "right"
+        },
+        {
+          "id": "tattoo-21016",
+          "name": "Aslan Dövmesi (Sağ)",
+          "texture": "res://assets/library/textures/d2efc46af8b912867b23f7b4.png",
+          "role": "right"
+        },
+        {
+          "id": "tattoo-21017",
+          "name": "Pegasus Dövmesi (Sağ)",
+          "texture": "res://assets/library/textures/23ac5dc344c0de1e0e8b5b4e.png",
+          "role": "right"
+        },
+        {
+          "id": "tattoo-21018",
+          "name": "Tarantula Dövmesi (Sağ) ",
+          "texture": "res://assets/library/textures/18bb04a97ea612f4ccc098df.png",
+          "role": "right"
+        },
+        {
+          "id": "tattoo-21019",
+          "name": "Boğa Dövmesi (Sağ)",
+          "texture": "res://assets/library/textures/b3a776738f33f277ed9d4cc7.png",
+          "role": "right"
+        }
+      ]
+    }
+  ]
+}

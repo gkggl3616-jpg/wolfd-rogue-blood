@@ -1,6 +1,8 @@
 # Kalan eksiklerin devamı
 
-Bu devam çalışan yerel oyunu ve kaynak arayüzünü ilerletir. Son istek doğrultusunda gerçek sunucu hariç ayrı **0.11.0 çevrimdışı sürüm** hazırlanır. Tam PC oyunu olarak işaretlenmez. [Çevrimdışı kapsam ve kullanım](CEVRIMDISI_SURUM.md).
+Son eklenenler ve kaynak sınırları: [0.12 PC referansları ve fotoğraflar](PC_REFERANS_012.md). Yeni özelliklerde 102 kontrol; 44 eski ekranın yeni görüntüsü ve 16 ek görüntü, toplam 60 OpenGL çekimi.
+
+Bu devam çalışan yerel oyunu ve kaynak arayüzünü ilerletir. Son istek doğrultusunda gerçek sunucu hariç ayrı **0.12.0 çevrimdışı sürüm** hazırlanır. Tam PC oyunu olarak işaretlenmez. [Çevrimdışı kapsam ve kullanım](CEVRIMDISI_SURUM.md).
 
 - Son oynanış referansına göre ortalı kurt kamerası, yuvarlak görsel kontroller, kaynak mermi/pençe/şarjör simgeleri, 19 harita radarı ve isabet/hasar geri bildirimi eklendi. Kolay/Normal/Zor botlar aynı 8 isabet hasarı ve 100 can kullanır; tepki/nişan/hafıza/siper/takla kararları değişir. Koşu, gerçek görüş engelleri, sonlu mühimmat ve basamaklar denetlenir. [Ayrıntı ve kaynak sınırları](OYNANIS_REFERANSI.md).
 
@@ -19,7 +21,7 @@ Bu devam çalışan yerel oyunu ve kaynak arayüzünü ilerletir. Son istek doğ
 
 ## Doğrulama
 
-Godot 4.7.2 ile **16 doğrulama adımı** geçer: 40 Python testi, 69 gerçek GUI akış kontrolü, 236 çevrimdışı harita/maç kontrolü, 120 dövüş/klip/poz kontrolü, 85 oynanış referansı, 62 bot davranışı, 23 dokunma, 35 kayıt, 7 yerel protokol, 155 harita sesi, 20 yaşam döngüsü ve 8.454 kaynak bileşen kontrolü dahil. Yeni saldırı bütün 48 karakterde yüklenip örnek vuruş pozunda sonlu kemik dönüşümleriyle sınanır. Bu, bütün animasyon kareleri/ışık/efektlerin PC görsel kabulü değildir.
+Godot 4.7.2 ile **17 doğrulama adımı** geçer: 40 Python testi, 69 gerçek GUI akış kontrolü, 236 çevrimdışı harita/maç kontrolü, 120 dövüş/klip/poz kontrolü, 85 oynanış referansı, 62 bot davranışı, 23 dokunma, 35 kayıt, 7 yerel protokol, 155 harita sesi, 20 yaşam döngüsü ve 8.454 kaynak bileşen kontrolü dahil. Yeni saldırı bütün 48 karakterde yüklenip örnek vuruş pozunda sonlu kemik dönüşümleriyle sınanır. Bu, bütün animasyon kareleri/ışık/efektlerin PC görsel kabulü değildir.
 
 [44 yazılım OpenGL görüntüsü](mobile-visual-validation.json), dört ekran boyutunda kart/ikinci silah/özellik/saldırı ve gerçek haritadaki botlu maç/oda/sonuç görünümlerini kapsar. [Mantık raporu](mobile-validation.json) kaynak kod özetiyle eşleşir. Fiziksel Android cihaz testi yapılmadı.
 
