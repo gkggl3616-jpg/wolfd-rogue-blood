@@ -1,0 +1,8 @@
+{
+  "offlineBuildReady": true,
+  "runtimeCodeSha256": "6db4d658348da986590fa0bc10dd08c00f8ec2c0ced455846127f214fcd1f2db",
+  "blockers": [],
+  "scope": "Local bot matches, imported collection and PC-source UI; real servers excluded.",
+  "fullOriginalGamePort": false,
+  "physicalAndroidDeviceTested": false
+}

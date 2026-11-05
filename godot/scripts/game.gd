@@ -30,6 +30,9 @@ var map_start: BaseButton
 var map_preview: BaseButton
 var arena_root: Node3D
 var active_map: Node3D
+var offline_map_number = 0
+var navigation_region: NavigationRegion3D
+var offline_navigation_map = RID()
 var exploring = false
 var preview_spawn = Vector3.ZERO
 var preview_name = ""
@@ -74,7 +77,7 @@ var menu_backdrop: ColorRect
 var transient_effects: Node3D
 
 func _ready():
-	book = ContentBook.new( not test_mode)
+	book = ContentBook.new(not test_mode, "user://collection.json", OS.has_feature("offline_release"))
 	profile_name = book.local_name
 	game_audio = Node.new();game_audio.set_script(GameAudio);game_audio.game = self;add_child(game_audio)
 	equipment = EquipmentScript.new( not test_mode)
@@ -354,6 +357,8 @@ func start_map_preview():
 		map_status.text = "Harita dosyası değişmiş; doğrulama gerekiyor."
 		return
 	running = false
+	offline_map_number = 0
+	clear_offline_navigation()
 	clear_projectiles()
 	for enemy in enemies.get_children():
 		enemy.queue_free()
@@ -427,13 +432,59 @@ func clear_projectiles():
 			node.queue_free()
 
 func start_round():
+	if int(local_room.get("mode", 0)) != 0:
+		announce("Özgün mod kuralları henüz tamamlanmadı.")
+		return false
+	var map_number = int(local_room.get("map", 0))
+	var record = map_catalog.offline_record(map_number) if map_number != 0 else {}
+	if map_number != 0 and record.is_empty():
+		announce("Bu haritanın çevrimdışı doğrulaması eksik.")
+		return false
+	if not record.is_empty():
+		for binding in [[record.previewAsset, record.geometrySha256], [record.navigation, record.sha256]]:
+			if FileAccess.file_exists(binding[0]) and FileAccess.get_sha256(binding[0]) != binding[1]:
+				announce("Harita dosyası değişmiş; doğrulama gerekiyor.")
+				return false
 	if is_instance_valid(player.roar_effect): player.roar_effect.stop()
 	clear_projectiles()
 	exploring = false
+	offline_map_number = map_number
+	clear_offline_navigation()
 	if is_instance_valid(active_map):
 		remove_child(active_map)
 		active_map.queue_free()
-	set_arena_active(true)
+	set_arena_active(record.is_empty())
+	preview_spawn = Vector3(0, 0.1, 8)
+	preview_name = "Eğitim Arenası"
+	var spawn_yaw = 0.0
+	if not record.is_empty():
+		active_map = load(record.previewAsset).instantiate()
+		add_child(active_map)
+		for mesh in active_map.find_children("*", "MeshInstance3D", true, false):
+			mesh.create_trimesh_collision()
+		navigation_region = NavigationRegion3D.new()
+		navigation_region.navigation_mesh = load(record.navigation)
+		# A match owns its map. Deferred removal of the previous scene must never
+		# contaminate the next round's closest-point or path queries.
+		offline_navigation_map = NavigationServer3D.map_create()
+		var nav_map = offline_navigation_map
+		NavigationServer3D.map_set_active(nav_map, true)
+		NavigationServer3D.map_set_use_async_iterations(nav_map, false)
+		NavigationServer3D.map_set_cell_size(nav_map, navigation_region.navigation_mesh.cell_size)
+		NavigationServer3D.map_set_cell_height(nav_map, navigation_region.navigation_mesh.cell_height)
+		NavigationServer3D.map_set_merge_rasterizer_cell_scale(nav_map, 0.1)
+		navigation_region.set_navigation_map(nav_map)
+		active_map.add_child(navigation_region)
+		# Explicit registration also makes the very first spawn query deterministic.
+		NavigationServer3D.region_set_map(navigation_region.get_rid(), nav_map)
+		NavigationServer3D.region_set_navigation_mesh(navigation_region.get_rid(), navigation_region.navigation_mesh)
+		NavigationServer3D.map_force_update(nav_map)
+		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
+		ambient.map_number = map_number;active_map.add_child(ambient)
+		var anchor = record.startPoints[0]
+		preview_spawn = Vector3(anchor.position[0], anchor.position[1], anchor.position[2])
+		spawn_yaw = float(anchor.yaw)
+		preview_name = map_catalog.map_record(map_number).displayName
 	for enemy in enemies.get_children():
 		enemy.queue_free()
 	health = 100
@@ -443,16 +494,29 @@ func start_round():
 	kills = 0
 	time_left = 90
 	reloading = 0
-	player.position = Vector3(0, 0.1, 8)
+	player.position = preview_spawn
 	player.velocity = Vector3.ZERO
 	player.reset_combat()
-	player.yaw = 0
-	player.rotation = Vector3.ZERO
+	player.yaw = spawn_yaw
+	player.rotation = Vector3(0, spawn_yaw, 0)
 	running = true
 	resume()
 	spawn_clock = 0
 	announce("10 hedef · 90 saniye")
 	update_hud()
+	return true
+
+func clear_offline_navigation():
+	if is_instance_valid(navigation_region):
+		navigation_region.enabled = false
+		NavigationServer3D.region_set_map(navigation_region.get_rid(), RID())
+	navigation_region = null
+	if offline_navigation_map.is_valid():
+		NavigationServer3D.free_rid(offline_navigation_map)
+		offline_navigation_map = RID()
+
+func _exit_tree():
+	clear_offline_navigation()
 
 func pause_game():
 	if is_instance_valid(library_panel):library_panel.go_back();return
@@ -550,6 +614,11 @@ func _process(delta):
 			player.velocity = Vector3.ZERO
 		update_hud()
 		return
+	if offline_map_number != 0 and player.position.y < preview_spawn.y - 150:
+		player.position = preview_spawn;player.velocity = Vector3.ZERO;player.reset_locomotion()
+		take_damage(20)
+		announce("Güvenli noktaya dönüş · −20 can")
+		if not running: return
 	time_left -= delta
 	spawn_clock -= delta
 	if spawn_clock <= 0 and enemies.get_child_count() < 4:
@@ -561,11 +630,44 @@ func _process(delta):
 
 func spawn_enemy():
 	var points = [Vector3(-10, 0.1, -10), Vector3(10, 0.1, -10), Vector3(0, 0.1, -18), Vector3(-15, 0.1, 10), Vector3(15, 0.1, 10)]
+	if offline_map_number != 0:
+		points = offline_spawn_points()
+		if points.is_empty(): return false
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
 	enemy.position = points.pick_random()
 	enemies.add_child(enemy)
+	return true
+
+func offline_spawn_points():
+	var points = []
+	var nav_map = offline_navigation_map
+	if not nav_map.is_valid(): return points
+	NavigationServer3D.map_force_update(nav_map)
+	var origin = NavigationServer3D.map_get_closest_point(nav_map, player.position)
+	if origin.distance_to(player.position) > 4.0: return points
+	var capsule = CapsuleShape3D.new();capsule.radius = 0.44;capsule.height = 1.9
+	var clearance = PhysicsShapeQueryParameters3D.new();clearance.shape = capsule;clearance.collision_mask = 3
+	for i in range(48):
+		var angle = TAU * float(i % 16) / 16.0
+		var radius = 8.0 + 6.0 * int(i / 16)
+		var sample = origin + Vector3(cos(angle), 0, sin(angle)) * radius
+		var pos = NavigationServer3D.map_get_closest_point(nav_map, sample)
+		if pos.distance_to(sample) > 3.0 or pos.distance_to(origin) < 7.0: continue
+		var path = NavigationServer3D.map_get_path(nav_map, origin, pos, true)
+		if path.size() < 2 or path[-1].distance_to(pos) > 1.0: continue
+		var ray = PhysicsRayQueryParameters3D.create(pos + Vector3.UP * 1.5, pos - Vector3.UP * 2.0, 1)
+		var floor_hit = get_world_3d().direct_space_state.intersect_ray(ray)
+		if floor_hit.is_empty() or floor_hit.normal.y < 0.65: continue
+		pos = floor_hit.position + Vector3.UP * 0.12
+		clearance.transform = Transform3D(Basis.IDENTITY, pos + Vector3.UP * 0.95)
+		if not get_world_3d().direct_space_state.intersect_shape(clearance, 1).is_empty(): continue
+		var occupied = false
+		for enemy in enemies.get_children():
+			if enemy.position.distance_to(pos) < 2.5: occupied = true;break
+		if not occupied: points.append(pos)
+	return points
 
 func attack():
 	if application_suspended: return

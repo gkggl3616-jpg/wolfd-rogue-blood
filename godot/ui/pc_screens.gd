@@ -38,7 +38,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.9 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · 0.10 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.10 geliştirme")
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
@@ -88,7 +88,8 @@ func room():
 	only(["BackGround","FieldNumber","FieldName","UserListTop","StartGame","Invite","RedTeam","BlueTeam","RedCurChars","RedMaxChars","BlueCurChars","BlueMaxChars","ChangeTeam","ChangeRule","CurrentMap","GameMode","MapName","MaxChars","MissionObject","RoundTime","ChatTypeGroup","ToAllChatButton","ToPrideChatButton","ChatListBox","ChatEditBox","ChannelName"])
 	var data=ui.game.local_room
 	view.set_value("FieldName",data.title)
-	view.set_value("FieldNumber","YEREL")
+	# Both legacy fields occupy the same rectangle; only the room title is drawn.
+	view.find_widget("FieldNumber").hide()
 	view.set_value("ChannelName","YEREL OTURUM",1)
 	for name in ["RedTeam","BlueTeam"]:
 		var users=view.find_widget(name)
@@ -96,9 +97,12 @@ func room():
 	enable("ChangeTeam",func():data.team="red" if data.team=="blue" else "blue";ui.refresh())
 	enable("ChangeRule",func():ui.navigate("create_room"))
 	var training=int(data.mode)==0
-	view.set_value("GameMode","Yerel Eğitim" if training else ui.game.map_catalog.mode_record(int(data.mode)).sourceName)
-	view.set_value("MapName","Eğitim Arenası" if training else ui.game.map_catalog.map_record(int(data.map)).displayName)
-	view.set_value("MaxChars","1 yerel oyuncu")
+	view.set_value("GameMode","Botlu Eğitim" if training else ui.game.map_catalog.mode_record(int(data.mode)).sourceName)
+	view.set_value("MapName","Eğitim Arenası" if int(data.map)==0 else ui.game.map_catalog.map_record(int(data.map)).displayName)
+	view.set_value("MaxChars","1 oyuncu")
+	if training:
+		view.set_value("MissionObject","10 hedef")
+		view.set_value("RoundTime","90 saniye")
 	var start=enable("StartGame",ui.game.start_round)
 	if start:start.disabled=not training
 	if not training:
@@ -118,7 +122,9 @@ func create_room():
 	ui.room_map=ui.map_picker(ui.content,Vector2(380,300),Vector2(316,28))
 	var fill=func():
 		ui.room_map.clear()
-		if ui.room_mode.get_selected_id()==0:ui.room_map.add_item("Yerel Eğitim",0)
+		if ui.room_mode.get_selected_id()==0:
+			ui.room_map.add_item("Eğitim Arenası",0)
+			for map in ui.game.map_catalog.offline_maps():ui.room_map.add_item(map.displayName,int(map.number))
 		else:
 			for map in ui.game.map_catalog.maps_for_mode(ui.room_mode.get_selected_id()):ui.room_map.add_item(map.displayName,int(map.number))
 		for i in range(ui.room_map.item_count):
@@ -162,9 +168,10 @@ func pause_page():
 func result_page():
 	view=layout("section/result")
 	only(["BackGround","Confirm","RedResult","ChannelName"])
-	view.set_value("ChannelName","YEREL EĞİTİM SONUCU",1)
-	ui.text(ui.content,ui.game.last_result.get("title","Tur bitti"),Vector2(24,115),Vector2(550,40),22,Art.GOLD)
-	ui.paragraph(ui.content,"%s\nHedef: %d / 10\nCan: %d\nKalan süre: %d saniye\n\nBu sonuç yalnızca yerel eğitime aittir." % [ui.game.profile_name,ui.game.kills,ui.game.health,maxi(0,int(ui.game.time_left))],Vector2(35,210),Vector2(740,300),20)
+	view.find_widget("RedResult").visible=ui.game.kills>=10 and ui.game.health>0
+	view.set_value("ChannelName","ÇEVRİMDIŞI MAÇ SONUCU",1)
+	ui.text(ui.content,ui.game.last_result.get("title","Tur bitti"),Vector2(24,182),Vector2(740,40),22,Art.GOLD)
+	ui.paragraph(ui.content,"%s · %s\nHedef: %d / 10\nCan: %d\nKalan süre: %d saniye\n\nBu sonuç yalnızca bu cihazdaki botlu eğitime aittir." % [ui.game.profile_name,ui.game.preview_name,ui.game.kills,ui.game.health,maxi(0,int(ui.game.time_left))],Vector2(35,250),Vector2(740,300),20)
 	enable("Confirm",func():ui.navigate("lobby"))
 	ui.button(ui.content,"Yeniden oyna",Vector2(590,701),Vector2(200,30),ui.game.start_round)
 

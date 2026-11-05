@@ -13,7 +13,10 @@ func frames(count=3):
 	for _i in range(count):await process_frame
 func click(node):
 	if not is_instance_valid(node):ensure(false,"expected clickable control exists");return
-	var event=InputEventMouseButton.new();event.button_index=MOUSE_BUTTON_LEFT;event.position=node.get_global_rect().get_center();event.pressed=true
+	var event=InputEventMouseButton.new();event.button_index=MOUSE_BUTTON_LEFT
+	# parse_input_event receives window pixels, including after canvas_items
+	# expands the logical viewport for a resized 4:3 window.
+	event.position=node.get_viewport().get_final_transform()*node.get_global_rect().get_center();event.pressed=true
 	Input.parse_input_event(event);await frames(1);event.pressed=false;Input.parse_input_event(event);await frames()
 func native_button(ui,name):
 	for view in ui.content.get_children():
@@ -153,5 +156,20 @@ func run():
 	ensure(not game.menu_open and game.library_panel==null,"closing collection resumes without orphaned menu")
 	game.show_home();root.size=Vector2i(1024,768);game.show_front_screen("servers");await frames()
 	ensure(game.pc_panel.page=="servers" and game.pc_panel.is_inside_tree(),"resize followed by immediate screen replacement cannot rebuild the detached previous menu")
+	game.show_home();ui=game.pc_panel;ui.navigate("create_room");await frames()
+	ensure(ui.room_map.item_count==20,"offline room offers all 19 real maps plus the training arena")
+	for index in range(ui.room_map.item_count):
+		if ui.room_map.get_item_id(index)==84:
+			ui.room_map.select(index);ui.room_map.item_selected.emit(index)
+	await click(ui.links["PLOK"])
+	ensure(game.local_room.map==84 and ui.links.has("StartGame") and not ui.links["StartGame"].disabled,"native room retains and enables the selected offline map")
+	if not ui.links.has("StartGame"):game.queue_free();await frames();quit(1);return
+	await click(ui.links["StartGame"])
+	ensure(game.running and game.offline_map_number==84 and is_instance_valid(game.active_map),"native StartGame opens the actual source map with local rules")
+	game.spawn_clock=1000;game.end_round("QA tamamlandı");await frames();ui=game.pc_panel
+	var results=ui.content.get_children().filter(func(node):return node is Layout)[0]
+	ensure(not results.find_widget("RedResult").visible,"unfinished or lost rounds cannot display the source victory badge")
+	await click(ui.links["Yeniden oyna"])
+	ensure(game.running and game.offline_map_number==84 and game.kills==0,"result retry keeps the selected real map")
 	game.queue_free();await frames()
 	print("UI_FLOWS_QA checks=%d failures=%d" % [checks,failures]);quit(0 if failures==0 else 1)

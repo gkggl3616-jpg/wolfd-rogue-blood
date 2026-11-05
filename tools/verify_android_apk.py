@@ -12,7 +12,7 @@ import zipfile
 
 CATALOGUES = [
     'assets/library/weapons.json', 'assets/library/characters.json', 'assets/library/visuals.json',
-    'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/shared_media/catalog.json',
+    'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/maps/offline.json', 'assets/shared_media/catalog.json',
     'assets/pc_ui/catalog.json', 'assets/full_ui/catalog.json', 'assets/ui/catalog.json',
     'assets/ui/engine-fonts.json', 'assets/ui/character-portraits.json', 'assets/ui/weapon-text.json', 'assets/items/rules.json',
 ]
@@ -113,10 +113,14 @@ def inspect(path, sdk, expected_package):
     with path.open('rb') as stream: digest = hashlib.file_digest(stream, 'sha256').hexdigest()
     minimum = re.search(r"sdkVersion:'(\d+)'", badging)
     target = re.search(r"targetSdkVersion:'(\d+)'", badging)
+    permissions = re.findall(r"uses-permission(?:-sdk-23)?: name='([^']+)'", badging)
+    if expected_package.endswith('.offline') and 'android.permission.INTERNET' in permissions:
+        raise InvalidApk('Offline build must not request INTERNET permission')
     result.update({'package':package[1], 'versionCode':int(package[2]), 'versionName':package[3],
                    'bytes':path.stat().st_size, 'sha256':digest, 'signerCertificateSha256':certificate[1],
                    'minimumAndroidSdk':int(minimum[1]) if minimum else None,
                    'targetAndroidSdk':int(target[1]) if target else None,
+                   'permissions':permissions, 'internetPermissionRequested':'android.permission.INTERNET' in permissions,
                    'signatureVerified':True, 'signatureV2':True,
                    'signatureV3':'Verified using v3 scheme (APK Signature Scheme v3): true' in signature,
                    'zip16KiBAlignmentVerified':True, 'fullOriginalGamePort':False,

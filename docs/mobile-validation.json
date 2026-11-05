@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-05T04:33:47.602690+00:00",
+  "utc": "2026-11-05T05:12:20.111404+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "bd9739a658abe951e4d2eb8d83578c0e6e7b5100f6e0788d01bb0e9c84ed1f4e",
+  "runtimeCodeSha256": "6db4d658348da986590fa0bc10dd08c00f8ec2c0ced455846127f214fcd1f2db",
   "passed": true,
   "steps": [
     {
@@ -66,6 +66,12 @@
     },
     {
       "name": "combat_continuation",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "offline_matches",
       "passed": true,
       "exitCode": 0,
       "errors": []

@@ -29,3 +29,6 @@ pointing/emulate_mouse_from_touch=true
 
 [audio]
 driver/enable_input=false
+
+[navigation]
+3d/merge_rasterizer_cell_scale=0.1

@@ -211,7 +211,7 @@ func show_native_details():
 		if ui.page=="Mağaza":
 			ui.paragraph(details,title(entry),Vector2(16,119),Vector2(320,35),14)
 			Art.sprite(details,entry.icon,Vector2(16,175),Vector2(320,230)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			ui.paragraph(details,"Satın alma hizmeti bağlı değil.",Vector2(18,433),Vector2(310,45),12)
+			ui.paragraph(details,"Çevrimdışı koleksiyon · Bu cihazda kullanılabilir." if ui.game.book.offline_edition else "Satın alma hizmeti bağlı değil.",Vector2(18,433),Vector2(310,45),12)
 	elif ui.page=="Karakterler":build_character(entry)
 	elif ui.page=="Dövmeler":build_tattoo(entry)
 	elif ui.page=="power":build_power(entry)

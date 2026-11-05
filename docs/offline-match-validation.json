@@ -1,0 +1,104 @@
+{
+  "checks": 217,
+  "maps": [
+    {
+      "botTravelMetres": 2.70344471931458,
+      "number": 1,
+      "safeBotSpawns": 37
+    },
+    {
+      "botTravelMetres": 2.69765090942383,
+      "number": 2,
+      "safeBotSpawns": 37
+    },
+    {
+      "botTravelMetres": 2.67414164543152,
+      "number": 26,
+      "safeBotSpawns": 15
+    },
+    {
+      "botTravelMetres": 2.69767880439758,
+      "number": 31,
+      "safeBotSpawns": 36
+    },
+    {
+      "botTravelMetres": 2.69750833511353,
+      "number": 44,
+      "safeBotSpawns": 22
+    },
+    {
+      "botTravelMetres": 2.69762754440308,
+      "number": 46,
+      "safeBotSpawns": 16
+    },
+    {
+      "botTravelMetres": 2.69939780235291,
+      "number": 50,
+      "safeBotSpawns": 20
+    },
+    {
+      "botTravelMetres": 2.69762253761292,
+      "number": 57,
+      "safeBotSpawns": 24
+    },
+    {
+      "botTravelMetres": 2.69766020774841,
+      "number": 58,
+      "safeBotSpawns": 15
+    },
+    {
+      "botTravelMetres": 2.69761395454407,
+      "number": 59,
+      "safeBotSpawns": 11
+    },
+    {
+      "botTravelMetres": 2.70023250579834,
+      "number": 65,
+      "safeBotSpawns": 32
+    },
+    {
+      "botTravelMetres": 2.42550325393677,
+      "number": 72,
+      "safeBotSpawns": 21
+    },
+    {
+      "botTravelMetres": 2.69771003723145,
+      "number": 82,
+      "safeBotSpawns": 11
+    },
+    {
+      "botTravelMetres": 2.66609144210815,
+      "number": 83,
+      "safeBotSpawns": 16
+    },
+    {
+      "botTravelMetres": 2.49739074707031,
+      "number": 84,
+      "safeBotSpawns": 15
+    },
+    {
+      "botTravelMetres": 2.67517685890198,
+      "number": 92,
+      "safeBotSpawns": 24
+    },
+    {
+      "botTravelMetres": 2.62630248069763,
+      "number": 97,
+      "safeBotSpawns": 25
+    },
+    {
+      "botTravelMetres": 2.69757390022278,
+      "number": 100,
+      "safeBotSpawns": 14
+    },
+    {
+      "botTravelMetres": 2.69766068458557,
+      "number": 110,
+      "safeBotSpawns": 20
+    }
+  ],
+  "navigationCatalogSha256": "a202ecaddd389046d8aae749b027d6b2f4125f4f4d890fb801920226f46c2854",
+  "passed": true,
+  "physicalAndroidDeviceTested": false,
+  "scope": "Headless physics/navigation/local match regression. Original mode rules and Android device QA not certified."
+}

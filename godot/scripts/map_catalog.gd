@@ -4,6 +4,7 @@ extends RefCounted
 var data = {}
 var valid = false
 var previews = []
+var offline = []
 
 func _init(source = {}):
 	data = source
@@ -23,6 +24,27 @@ func _init(source = {}):
 		var source_previews = JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/previews.json"))
 		if source_previews is Array:
 			previews = source_previews
+	if FileAccess.file_exists("res://assets/maps/offline.json"):
+		var source_offline = JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/offline.json"))
+		if source_offline is Array: offline = source_offline
+
+# A separate, local ruleset. This does not assert any original mode pairing.
+func offline_record(map_number):
+	for record in previews:
+		if int(record.number) != map_number or record.get("previewValidated") != true: continue
+		if record.get("startPoints", []).is_empty(): return {}
+		for nav in offline:
+			if int(nav.number) == map_number and nav.geometrySha256 == record.sha256 and ResourceLoader.exists(nav.navigation, "NavigationMesh"):
+				var result = record.duplicate(true)
+				result.merge(nav, true)
+				return result
+	return {}
+
+func offline_maps():
+	var result = []
+	for entry in data.maps:
+		if not offline_record(int(entry.number)).is_empty(): result.append(entry)
+	return result
 
 func preview_record(mode_id, map_number):
 	if not belongs_to_mode(mode_id, map_number):

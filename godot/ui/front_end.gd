@@ -200,7 +200,7 @@ func confirm(title,body,accept,discard=Callable()):
 
 func mode_picker(parent,at,dimensions,allow_training=true):
 	var picker = OptionButton.new();picker.theme = Art.theme();picker.position = at;picker.size = dimensions;picker.fit_to_longest_item = false
-	if allow_training: picker.add_item("Yerel Eğitim Arenası",0)
+	if allow_training: picker.add_item("Çevrimdışı · Botlu Eğitim",0)
 	for mode in game.map_catalog.data.modes: picker.add_item(mode.sourceName,int(mode.id))
 	parent.add_child(picker);return picker
 

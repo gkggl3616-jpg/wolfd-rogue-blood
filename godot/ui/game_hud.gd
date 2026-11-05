@@ -83,6 +83,7 @@ func refresh_from_game():
 	weapon_name.text="ŞARJÖR…" if game.reloading>0 else game.player.weapon_info.get("name","")
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
 	score_view.set_value("RedTeamScore",game.kills)
+	score_view.set_value("Mode","Botlu Eğitim")
 	timer_view.visible=not game.exploring;score_view.visible=not game.exploring
 	preview_name.visible=game.exploring;preview_name.text=game.preview_name+" · GEZİNTİ / MAÇ KAPALI"
 

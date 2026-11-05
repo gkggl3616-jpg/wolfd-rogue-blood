@@ -6,6 +6,8 @@ var attack_clock = 0.0
 var anim: AnimationPlayer
 var moving = false
 var active_clip = ""
+var navigator: NavigationAgent3D
+var path_clock = 0.0
 
 func _ready():
 	collision_layer = 2
@@ -18,6 +20,14 @@ func _ready():
 	collider.shape = capsule
 	collider.position.y = 0.95
 	add_child(collider)
+	if game.offline_map_number != 0:
+		navigator = NavigationAgent3D.new()
+		navigator.path_desired_distance = 0.6
+		navigator.target_desired_distance = 1.3
+		navigator.radius = 0.42
+		navigator.height = 1.9
+		add_child(navigator)
+		navigator.set_navigation_map(game.offline_navigation_map)
 	var body = load(game.character_info.wolf.asset).instantiate()
 	body.scale *= 1.6
 	body.rotation.y = PI
@@ -39,13 +49,23 @@ func _physics_process(delta):
 	if not game.running or game.menu_open:
 		return
 	attack_clock -= delta
+	if game.offline_map_number != 0 and position.y < game.preview_spawn.y - 150:
+		queue_free();return
 	var offset = game.player.global_position - global_position
 	offset.y = 0
 	var distance = offset.length()
 	if distance > 1.65:
 		var dir = offset.normalized()
-		velocity.x = dir.x * 1.6
-		velocity.z = dir.z * 1.6
+		if is_instance_valid(navigator):
+			path_clock -= delta
+			if path_clock <= 0:
+				navigator.target_position = game.player.global_position
+				path_clock = 0.5
+			var next = navigator.get_next_path_position() - global_position
+			next.y = 0
+			dir = next.normalized() if not navigator.is_navigation_finished() else Vector3.ZERO
+		velocity.x = dir.x * (3.3 if is_instance_valid(navigator) else 1.6)
+		velocity.z = dir.z * (3.3 if is_instance_valid(navigator) else 1.6)
 		if offset.length() > 0.1:
 			look_at(global_position + offset)
 		play("run")

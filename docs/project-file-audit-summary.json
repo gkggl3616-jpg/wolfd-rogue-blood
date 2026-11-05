@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
-  "utc": "2026-11-04T14:35:08.698111+00:00",
-  "filesHashed": 49686,
-  "bytesRead": 2926683221,
+  "utc": "2026-11-05T05:17:14.232612+00:00",
+  "filesHashed": 49774,
+  "bytesRead": 2942656032,
   "fileTypes": {
     "": 1,
-    ".md": 11,
-    ".json": 62,
+    ".md": 13,
+    ".json": 70,
     ".gz": 4,
     ".txt": 3,
-    ".png": 23038,
+    ".png": 23065,
     ".wav": 1363,
-    ".import": 24729,
+    ".import": 24739,
     ".glb": 348,
+    ".res": 19,
     ".ogg": 7,
     ".ttf": 12,
     ".ttc": 1,
@@ -20,18 +21,24 @@
     ".svg": 1,
     ".tscn": 1,
     ".godot": 1,
-    ".gd": 37,
-    ".uid": 37,
+    ".gd": 44,
+    ".uid": 42,
     ".dat": 1,
-    ".py": 23,
+    ".py": 33,
     ".ps1": 2,
     ".js": 1,
     ".html": 1,
     ".css": 1
   },
-  "literalResourceReferencesChecked": 43115,
+  "literalResourceReferencesChecked": 43244,
   "glbHeadersChecked": 348,
-  "issues": [],
+  "issues": [
+    {
+      "path": "godot/tests/combat_continuation.gd",
+      "issue": "missing_literal_resource",
+      "resource": "res://missing-character.glb"
+    }
+  ],
   "windowsExecutablesInProject": [
     "legacy/WolfRogue.dat"
   ],

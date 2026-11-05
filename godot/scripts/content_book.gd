@@ -19,9 +19,11 @@ var local_name = "Yerel oyuncu"
 var persistent = true
 var storage_path = "user://collection.json"
 var save_blocked = false
+var offline_edition = false
 
-func _init(save_enabled = true, save_path = "user://collection.json"):
+func _init(save_enabled = true, save_path = "user://collection.json", offline_mode = false):
 	persistent = save_enabled
+	offline_edition = offline_mode
 	storage_path = save_path
 	var data = read_json("res://assets/library/weapons.json")
 	weapons = data.get("items", [])
@@ -67,6 +69,11 @@ func _init(save_enabled = true, save_path = "user://collection.json"):
 				var setting = validated_setting(key, saved_settings.get(key, settings[key]))
 				if setting != null: settings[key] = setting
 	var defaults = {}
+	# An explicitly local collection in the separately identified offline app.
+	# No purchase, account ownership or server grant is implied.
+	if offline_edition:
+		for item in weapons:
+			if item.get("engineImported") == true and item.get("available") == true: owned[item.id] = true
 	for kind in ["rifle", "pistol", "knife", "grenade"]:
 		for item in weapons:
 			if item.category == kind and item.get("engineImported") == true:

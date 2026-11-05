@@ -1,6 +1,6 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. Paket adı **com.wolfrogue.blood**. Bu depo henüz eksiksiz PC oyunu değildir ve bu çalışmada yeni APK yayımlanmadı.
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.10.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 19 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
 
 ## Devralınan çalışma
 
@@ -10,6 +10,7 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 
 ## Bu devam çalışmasında uygulananlar
 
+- 19 kaynak haritaya ayrı çevrimdışı bot maçı eklendi. Önceden hazırlanmış yürüyüş ağları, erişilebilir ve kapsül boşluğu olan bot doğma noktaları, gerçek haritada başlat/ölüm/süre/sonuç/tekrar akışı bulunur. #46'nın özgün mod eşleşmesi uydurulmadan bağımsız yerel eğitimde açılması sağlandı. Özgün PC modlarının hazır olma denetimleri korunur.
 - Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. İkinci ana silah, bağımsız cephane geçişi ve 331 kaynak kart yüzü önizlemesi eklendi. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
 - Parmak sahipliği olan çoklu dokunma: hareket, kamera ve düğmeler birbirine geçmez. Aynı düğmeye basan ikinci parmak, birinci bırakıldığında eylemi kaybetmez. Menü/HUD dokunuşları kamera veya ateşe dönüşmez.
 - Uygulama arka plandayken sahne, çatışma ve şarjör süresi durur. Dönüşte oyuncu **Devam et** seçmeden çatışma başlamaz.
@@ -18,7 +19,7 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 - Kaynak bölgesi belirsiz dövmeler rastgele UV'ye takılamaz. Eski kayıttaki belirsiz seçim dosyadan silinmez, modele uygulanmaz.
 - Seçili haritaların 46 ses nesnesinin 43'ü sahneye bağlanır. Üçünün istediği **am_fire_sm_loop.wav**, verilen RAR dizininde ve ses kataloğunda yoktur; yerine başka ses kullanılmaz. İç/dış yarıçap zayıflaması yeni mobil uyarlamadır.
 - Arşiv içeriği karşılaştırmasında farklı çıkan `am_bell.wav` ve `am_hawk.wav`, verilen PC RAR'ındaki özgün PCM dosyalarıyla değiştirildi. Dosyalar yeniden kodlanmadı. [Kaynak kanıtı](docs/original-audio-restoration.json).
-- 19601 güç eşyası ve kaynak `wall_hold` klibi varsa havada duvar teması sırasında kurt koşusu + ateş, süreli tutunmayı başlatır. İleriyi bırakma, eğilme, menü ve form değişimi tutunmayı bitirir; zıplama fiziksel dışa itiş verir. Sayısal değerler yeni mobil ayarlarıdır. **Bütün temas yönlerinde animasyon hizası henüz görsel olarak onaylanmadı.** Havada güçlü saldırı tamamlanmadı.
+- 19601 güç eşyası ve kaynak `wall_hold` klibi varsa havada duvar teması sırasında kurt koşusu + ateş, süreli tutunmayı başlatır. İleriyi bırakma, eğilme, menü ve form değişimi tutunmayı bitirir; zıplama fiziksel dışa itiş verir. 48 karaktere kendi doğrulanmış kaynak `T_WallDashAtk` klibiyle havada güçlü saldırı bağlandı. Sayısal değerler yeni mobil ayarlarıdır. **Bütün temas yönlerinde animasyon hizası henüz görsel olarak onaylanmadı.**
 - Karakter önizleme kamerası gerçek model sınırlarına ve ekran oranına göre çerçeve kurar. Menüler geniş ekranda arka plandaki dünyayı açıkta bırakmaz.
 
 ## Çalıştırma ve doğrulama
@@ -70,13 +71,13 @@ Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İnd
 
 ## Tam sürüm ve APK koşulları
 
-[Gerçek teslim engelleri](assets/delivery-status.json) `python tools/check_delivery.py` ile yeniden hesaplanır. Derleme betiği, `-ValidateOnly` dışında bu kontrol geçmeden APK üretmez. Başarılı test sayısı veya bir tamamlanma bayrağı bu kontrolün yerine geçmez.
+[Tam PC sürümünün teslim engelleri](assets/delivery-status.json) `python tools/check_delivery.py` ile yeniden hesaplanır. Varsayılan derleme yolu bu denetimi korur. Kullanıcının son istediği **gerçek sunucu hariç, mümkün olan yerel sürüm** için ayrı `-Offline` / `build_offline_android.py` yolu, ayrı uygulama kimliği ve `check_offline_ready.py` denetimi vardır. Çevrimdışı APK, tamamlanmış PC aktarımı olarak işaretlenmez.
 
-- Yalnızca seçilen 19 harita korunur: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. 18'i gezinti önizlemesidir; gerçek maç sahnesi değildir. 46'nın mod bağlantısı belirsizdir; 47 ile değiştirilmez.
+- Yalnızca seçilen 19 harita korunur: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. 19'u bağımsız çevrimdışı botlu eğitimde açılır; özgün PC maç kuralları değildir. Özgün modlara bağlı gezinti 18 haritada bulunur; 46'nın PC mod bağlantısı belirsizdir ve 47 ile değiştirilmez.
 - 62 mod/alt modun özgün maç kuralları, tur akışı ve sonuçları tamamlanmadı.
 - 48 çiftin önceki katalogda kabul edilmiş olması, kurtarılan her modelin bütün durumlarının yeniden doğrulandığı anlamına gelmez. 216 silah modeli / 903 kaynak varyantı da 903 ayrı, tam doğrulanmış silah davranışı demek değildir.
 - Özgün arayüz akışlarının tümü, hesap/oda/maç sunucusu, bütün efekt grafikleri ve gömülü ışık haritalarının çalışma zamanı uygulaması eksik.
-- Önceki Android imzalama özel anahtarı bu ortama bağlı değil. Güncelleme kimliği ve cihaz kurulumu doğrulanmadı; yeni bir anahtarla uyumlu güncelleme sağlanmış gibi davranılmaz.
+- Önceki Android imzalama özel anahtarı bu ortama bağlı değil. Bu nedenle çevrimdışı sürüm ayrı paket adı kullanır; eski uygulamayı güncellemeye veya kayıtlarını silmeye çalışmaz. Fiziksel cihaz kabulü yapılmadı.
 - Kullanıcının **en az 3 GB gerçek içerik** koşulu sağlanmış değildir. Boyut için dolgu, kopya veya Windows ikilisi eklenmez. Yeni bir tam APK indirme bağlantısı yoktur.
 
 Yerel yönetici paneli korunur: `python server.py`, ardından `http://127.0.0.1:8765`. Bu yerel geliştirme sistemi, üretim hesabı veya çevrimiçi sunucu değildir; yinelenen işlem kimliği tekrar ödeme yapmaz.

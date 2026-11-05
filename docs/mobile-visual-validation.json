@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "9106ac4dc89ce94bd9fcb73ddee1e7b1f5e55622dfee8e64b4930b8959f9618c"
+      "sha256": "082803c2cc3824e55ebd1146efbd937a1b1b1b073a821e198d8c5c3dd308c7a4"
     },
     {
       "height": 720,
@@ -220,7 +220,7 @@
         "interface/charequipmentpage"
       ],
       "width": 1280,
-      "sha256": "e23f49347ef6621357cf4b8657b2e7edebb92c6a8ca29da8236050874f7380a7"
+      "sha256": "aca89c0efd22b2e5570d959a952a71e907f4f2c73b52f4b6d248bc48f8f519fd"
     },
     {
       "height": 720,
@@ -243,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "ba7c7c604e2405387ea947576b3cdd5b91a6fffa2afb16b81206462d93b9f6cb"
+      "sha256": "d8ad6b162f25f22d8d04f59c5edb9a4fad4a040f92e795285752c368f7fbf441"
     },
     {
       "height": 720,
@@ -266,7 +266,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "097590f39a3479c94e80edc12f5df9530a11c29147729b2b05e451ec5d9da6c9"
+      "sha256": "6a065d9ba6ee698bff36fe0070113d4642c0312718148d57a5cc895f2525b00e"
     },
     {
       "height": 720,
@@ -290,7 +290,7 @@
         "interface/abilityequipmentpage"
       ],
       "width": 1280,
-      "sha256": "201864683eb39e13ece0f3ff4aba40f5aad52d4455937d9e3d4bc47cb4cac850"
+      "sha256": "7d406ad76f98be46166ba8c21a783d3e93684602a403e0aee5f4509875eda309"
     },
     {
       "height": 720,
@@ -573,7 +573,7 @@
         "section/prideladder/prideladdercreateroomdialog"
       ],
       "width": 1280,
-      "sha256": "c0dd5a4ee3ff47e99c4a5e592f9f85a348575997011dadedc0df57b2f4d1f3f0"
+      "sha256": "19a8cd9f7174d32ed89de1bd4245b2f5c5612ae0868e178253cb99d04487faf7"
     },
     {
       "height": 720,
@@ -592,7 +592,7 @@
         "section/field"
       ],
       "width": 1280,
-      "sha256": "0525d1d4c8b87f051a2847b9adcd87a37784748e862b0b2b57de8b495ab2c803"
+      "sha256": "a629c94befee2e89101abd7584215098b1fad9a0157dbb2c73ba32fa3f83f610"
     },
     {
       "height": 720,
@@ -600,7 +600,7 @@
       "path": "docs/review/pc-native/human-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "39ce5c25c89a6200a2184c649d5b42f7d6ace33390750c52cf8472419239202e"
+      "sha256": "c3c8b73471f2ca6cb13b175c1e156e818262d9a57cf3ce16a5cd6610b475d769"
     },
     {
       "height": 720,
@@ -619,7 +619,7 @@
         "interface/gamemenu"
       ],
       "width": 1280,
-      "sha256": "82717fa08d182c566f5e6224bd4102bb92e40cbd40b65691d3f405010673f6df"
+      "sha256": "6efef4917966ad784474aca3d9cedf4adb02f305bdef325ab4385b570f0ab0a9"
     },
     {
       "height": 720,
@@ -627,7 +627,7 @@
       "path": "docs/review/pc-native/wolf-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "420f37f12c615e9bacd3e844a5afb0db1f7c8a7890e241932050a9311790f81f"
+      "sha256": "6d1651b1d29ace95a14640e8c7f45fb7005420183b0bbf00fc05665952414784"
     },
     {
       "height": 720,
@@ -635,7 +635,7 @@
       "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "10037fdb1903ab6a5aff27b90658b792b2e899c3148323f1dd7a9d7225cc2d0a"
+      "sha256": "7228592ac99d5cfae2fe1e32695ad975a66ea652029578c1dafbb8e0a12cd7f2"
     },
     {
       "height": 720,
@@ -643,7 +643,7 @@
       "path": "docs/review/pc-native/airborne-attack-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "08e9ef95335f075b27f549e3c1d7353480db98001faa53fdcfdc2d946f09ff59"
+      "sha256": "9ae32925cd01facb267a378ef170fe6a1f417f01a6e5cb604874942bcc93cc4c"
     },
     {
       "height": 720,
@@ -651,7 +651,53 @@
       "path": "docs/review/pc-native/container-ship-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8a28e6496cb7bf2fb0f4efa32eb531f50752224b39bd8d8d9a38ba905a97edda"
+      "sha256": "1b393be7f1a8887830d689cdc151c6c27a4a017cd782ce4a020e65709e10f784"
+    },
+    {
+      "height": 720,
+      "name": "offline-room-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/offline-room-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/field"
+      ],
+      "width": 1280,
+      "sha256": "b082f53d37b3d9c1eca30e9b152c6f2327911c09bb810d4e28cda2cda06a4ee1"
+    },
+    {
+      "height": 720,
+      "name": "offline-container-bots-1280",
+      "path": "docs/review/pc-native/offline-container-bots-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ef228811650796c953379627f8d7c3d83c6c889a63c9ec7cacb6785e0549ee09"
+    },
+    {
+      "height": 720,
+      "name": "offline-result-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/offline-result-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/result"
+      ],
+      "width": 1280,
+      "sha256": "171644c075da5fe1308ee7354655d62c6c8342544fc7ca4eefd612505c5a7154"
     },
     {
       "height": 1080,
@@ -670,7 +716,7 @@
         "section/battle"
       ],
       "width": 1920,
-      "sha256": "668378af4732f73c35853e1ac8a03b266b53439cedc53f3ad2e447fac71a0901"
+      "sha256": "d4c9de5b99a833db86df5695928a5e275109c568c548d5c0c6245a5eaf9b62b4"
     },
     {
       "height": 1080,
@@ -708,19 +754,13 @@
         "section/battle"
       ],
       "width": 1024,
-      "sha256": "f2a127ac5c3a7b9108ee48b3253ba784880adae588e90315e703f2e4aa1493d5"
+      "sha256": "c81b223dec8947d794ea90d2553765ad6cb7b381587ef05fc19eef0d74b67048"
     }
   ],
   "display": "X11",
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "utc": "2026-11-05T04:40:20.977028+00:00",
-  "runtimeCodeSha256": "bd9739a658abe951e4d2eb8d83578c0e6e7b5100f6e0788d01bb0e9c84ed1f4e",
-  "referenceManifest": "docs/pc-video-references.json",
-  "userApproved": false,
-  "allReferenceScreensMatched": false,
-  "fullOriginalGamePort": false,
-  "pixelPerfect": false,
-  "scope": "37 software OpenGL captures; includes actual second-main equipment, read-only source card art, source text/local tuning and airborne attack. Not complete PC pixel equality or Android device acceptance."
+  "runtimeCodeSha256": "6db4d658348da986590fa0bc10dd08c00f8ec2c0ced455846127f214fcd1f2db",
+  "utc": "2026-11-05T05:12:41.861753+00:00"
 }

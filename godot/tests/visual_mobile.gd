@@ -72,6 +72,11 @@ func run():
 	game.refresh_map_status();game.start_map_preview()
 	if game.player.is_wolf: game.player.switch_form()
 	await capture("container-ship-1280")
+	game.local_room={"title":"Çevrimdışı Bot Maçı","mode":0,"map":84,"team":"blue"}
+	game.show_home();game.pc_panel.navigate("room");await capture("offline-room-1280")
+	game.start_round();game.spawn_clock=1000;await frames(20);game.spawn_enemy();await frames(15)
+	await capture("offline-container-bots-1280")
+	game.end_round("Yerel maç tamamlandı");await capture("offline-result-1280")
 	game.show_home();root.size = Vector2i(1920,1080);await capture("lobby-1920")
 	game.show_front_screen("servers");await capture("servers-1920")
 	root.size=Vector2i(1024,768);game.show_home();await capture("lobby-native-1024")
