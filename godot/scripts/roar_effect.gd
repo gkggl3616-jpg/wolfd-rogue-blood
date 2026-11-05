@@ -27,11 +27,11 @@ func bind_tattoos():
 	materials.clear()
 	for mesh in player.wolf.find_children("*", "MeshInstance3D", true, false):
 		if str(mesh.name).to_lower().begins_with("tattoo") and mesh.visible and mesh.material_override is StandardMaterial3D:
-			var material = mesh.material_override;material.emission_enabled = true;material.emission_texture = material.albedo_texture;material.emission = Color(0.6, 0.2, 1);material.emission_energy_multiplier = 0;materials.append(material)
+			var material = mesh.material_override;material.emission_enabled = true;material.emission_texture = material.albedo_texture;material.emission = Color.WHITE;material.emission_energy_multiplier = 0;materials.append(material)
 
 func begin(seconds):
 	if active or cooldown > 0 or not player.is_wolf or player.game.menu_open or not player.game.running: return false
-	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = duration + 0.8;bind_tattoos();aura.show();aura.play()
+	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = duration + 0.8;bind_tattoos();aura.hide()
 	if not player.game.test_mode: audio.play()
 	return true
 
@@ -48,6 +48,6 @@ func advance(delta):
 	var phase = elapsed / duration
 	intensity = sin(PI * phase) * (0.85 + 0.15 * sin(elapsed * 22))
 	for material in materials: material.emission_energy_multiplier = intensity * 4
-	aura.modulate.a = intensity * 0.65;aura.scale = Vector3.ONE * (0.65 + phase * 0.5);light.light_energy = intensity * 1.8
+	aura.modulate.a = intensity * 0.65;aura.scale = Vector3.ONE * (0.65 + phase * 0.5);light.light_energy = 0
 
 func _process(delta): advance(delta)

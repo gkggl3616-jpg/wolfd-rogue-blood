@@ -1,10 +1,11 @@
 {
-  "checks": 104,
+  "checks": 119,
   "explicitSourceArmTattoos": 59,
   "failures": [],
   "originalPcRulesEquivalenceValidated": false,
   "passed": true,
   "physicalAndroidDeviceTested": false,
+  "renderedMapPreviews": 15,
   "sourceMapPhotos": 19,
   "sourceRanks": 62
 }

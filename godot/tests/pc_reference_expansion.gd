@@ -64,7 +64,7 @@ func run():
 	reopened.load_wallet();ensure(reopened.career.state.claimed.get("first",false) and reopened.career.state.claimed.get("pass-1",false),"reward claims survive reopening alongside the box journal")
 	ledger.message.free();ledger.free();reopened.free()
 	root.size=Vector2i(1280,720);game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
-	ensure(game.map_catalog.photos.size()==19,"all 19 selected maps have exact-source photos")
+	ensure(game.map_catalog.photos.size()==34,"all 34 maps have original photographs or labelled geometry renders")
 	for number in game.map_catalog.photos:
 		var photo=game.map_catalog.photo(number)
 		ensure(not game.map_catalog.map_record(number).is_empty() and FileAccess.get_sha256(photo.asset)==photo.sha256,"map photo has the selected map identity and verified PNG: "+str(number))
@@ -92,7 +92,7 @@ func run():
 	ensure(mode_index>=0,"room picker separates the new local hunt from original catalog-only modes")
 	ensure("interface/createfield" in ui.source_layouts and not "section/prideladder/prideladdercreateroomdialog" in ui.source_layouts,"detailed PC reference uses the ordinary room creator rather than the clan-ladder dialog")
 	ui.room_mode.select(mode_index);ui.room_mode.item_selected.emit(mode_index)
-	ensure(ui.room_map.item_count==20 and ui.room_form.visible,"local hunt retains all 19 selected maps and an actual form selector")
+	ensure(ui.room_map.item_count==35 and ui.room_form.visible,"local hunt retains all 34 selected maps and an actual form selector")
 	ui.links["▣"].pressed.emit()
 	ensure(ui.modal!=null and ui.modal.find_children("*","TextureRect",true,false).any(func(node):return node.texture!=null),"map gallery renders source photos as selectable map buttons")
 	ui.close_modal();game.local_room={"title":"QA Av","mode":game.LocalHunt.MODE,"map":84,"playerForm":"wolf","botDifficulty":"hard","team":"blue"}
@@ -106,8 +106,8 @@ func run():
 	ensure(game.hunt.wins==wins and game.hunt.phase=="intermission","duplicate final-hit callbacks cannot win a round twice")
 	var health=game.health;game.take_damage(8);ensure(game.health==health,"intermission blocks late incoming damage")
 	game.pause_game_menu();var countdown=game.hunt.intermission;game._process(1);ensure(game.hunt.intermission==countdown,"menu freezes the next-round countdown")
-	game.resume();game.advance_hunt(3.1);ensure(game.hunt.round_number==2 and game.health==100 and game.hunt.phase=="combat","next hunt round restores a playable state")
-	game.take_damage(100);ensure(game.hunt.losses==1 and game.running,"death loses one hunt round without skipping directly to final results")
+	game.resume();game.advance_hunt(3.1);ensure(game.hunt.round_number==2 and game.health==game.max_health() and game.hunt.phase=="combat","next hunt round restores a playable state")
+	game.take_damage(game.max_health());ensure(game.hunt.losses==1 and game.running,"death loses one hunt round without skipping directly to final results")
 	game.advance_hunt(3.1);game.finish_hunt_round(true)
 	ensure(not game.running and game.last_result.wins==2 and game.last_result.losses==1,"three-round hunt produces the actual final score")
 	game.local_room={"title":"QA Öğretici","mode":game.LocalTutorial.MODE,"map":0}
@@ -137,7 +137,7 @@ func run():
 	ensure(game.source_hud.scope.visible and game.player.camera.fov<30 and not game.player.viewmodel.visible,"scoped aim hides the viewmodel and displays actual circular zoom")
 	Input.action_release("aim");game.player._physics_process(0.2);game.source_hud.refresh_from_game()
 	ensure(not game.source_hud.scope.visible and game.player.viewmodel.visible,"releasing aim restores the ordinary weapon view")
-	var unknown=game.book.tattoos.filter(func(row):return row.role=="unknown")[0];ensure(not game.book.set_tattoo("body",unknown.texture),"new tattoo equipment still rejects unverified UV roles")
+	var unknown={"id":"unbound-test","name":"Unbound fixture","role":"unknown","texture":"res://assets/items/wolf-dash.png","description":"Test-only unsupported role"};ensure(not game.book.set_tattoo("body",unknown.texture),"new tattoo equipment still rejects unverified UV roles")
 	game.show_library("Dövmeler");ui=game.library_panel;ensure(ui.detail_helper.role_picker.item_count==4,"wolf inventory exposes real body/left/right region filtering")
 	ui.detail_helper.role_picker.select(1);ui.detail_helper.role_picker.item_selected.emit(1)
 	ensure(ui.detail_helper.entries.all(func(row):return row.role=="body"),"body filter never mixes arm or unresolved tattoo entries")
@@ -146,7 +146,7 @@ func run():
 	ui.navigate("missions");ensure("interface/wolfpass/wolfpassmissiondlg" in ui.source_layouts,"local mission progress uses the PC mission dialog")
 	game.show_home();game.pc_panel.navigate("create_room");ensure(game.pc_panel.room_draft.team=="blue" and game.pc_panel.room_title.text=="Yerel Oda","minimal older room data receives safe title/team defaults in the source creator")
 	game.queue_free();await frames()
-	var report={"passed":failures.is_empty(),"checks":checks,"failures":failures,"sourceMapPhotos":19,"sourceRanks":62,"explicitSourceArmTattoos":59,"physicalAndroidDeviceTested":false,"originalPcRulesEquivalenceValidated":false}
+	var report={"passed":failures.is_empty(),"checks":checks,"failures":failures,"sourceMapPhotos":19,"renderedMapPreviews":15,"sourceRanks":62,"explicitSourceArmTattoos":59,"physicalAndroidDeviceTested":false,"originalPcRulesEquivalenceValidated":false}
 	var file=FileAccess.open(ProjectSettings.globalize_path("res://../docs/pc-reference-expansion-validation.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
 	print("PC_REFERENCE_EXPANSION_QA ",checks," checks; failures=",failures);quit(0 if failures.is_empty() else 1)
 func __drag_event():

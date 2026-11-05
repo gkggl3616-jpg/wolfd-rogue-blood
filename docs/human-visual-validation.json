@@ -7,7 +7,7 @@
       "path": "docs/review/human-014/human-character-inventory-014.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7840dfafae21b2f9250650ba01baa4da3cf26a70416369181805b946e6b26d84"
+      "sha256": "a2154df1a73217ba92fd35a6fb5db4b92eaa2de16f925117be3d1b94fe2e8396"
     },
     {
       "height": 768,
@@ -15,7 +15,7 @@
       "path": "docs/review/human-014/human-character-inventory-native-014.png",
       "saved": true,
       "width": 1024,
-      "sha256": "d95ffcbafa837aa6bfc7edf9862bf9f7bcb8634b7ff0f30037823d7ba84f00d9"
+      "sha256": "e1431c3ab754f3948c95930439a99181acb3f6e3e79e9096943a296ee0f1e321"
     },
     {
       "height": 720,
@@ -23,12 +23,12 @@
       "path": "docs/review/human-014/human-hud-kill-feed-014.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a509b685a406b33b9593e12962763d2d29533ec07d100afd4b443fbb17991a14"
+      "sha256": "85be2aae6ad40cfbeda83f6c9d69dce58a0260781e231c34c472270e7704ff8b"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureCombatEvents": true,
-  "runtimeCodeSha256": "a22ff3429acd4750d02b389cd6b5833d5d5d79407baec840f2bf1e763d047197"
+  "runtimeCodeSha256": "bebb6273a5f7de73e8390a162f312c72ac3907eca4806f5352ca00203a468e84"
 }

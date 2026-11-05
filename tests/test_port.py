@@ -26,7 +26,7 @@ class PortTests(unittest.TestCase):
 
     def test_preview_assets_match_their_verified_source_manifest(self):
         rows=json.loads((ROOT/'godot/assets/maps/previews.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(rows),19)
+        self.assertEqual(len(rows),34)
         self.assertTrue(all(r['previewValidated'] and r['startPoints'] and not r['fullPort'] for r in rows))
         for row in rows:
             asset=ROOT/'godot'/row['previewAsset'].removeprefix('res://')

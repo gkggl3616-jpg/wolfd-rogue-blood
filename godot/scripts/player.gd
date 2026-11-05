@@ -31,6 +31,7 @@ var weapon_clip = ""
 var weapon_action_time = 0.0
 var auxiliary_magazines = []
 var mutation_id="normal"
+var claw_trail
 var guard_remaining=0.0
 var cloak_remaining=0.0
 var mutation_energy=100.0
@@ -114,6 +115,7 @@ func _ready():
 	play_clip("idle")
 	apply_tattoos()
 	roar_effect = Node3D.new();roar_effect.set_script(preload("res://scripts/roar_effect.gd"));roar_effect.player = self;add_child(roar_effect)
+	claw_trail=Node3D.new();claw_trail.set_script(preload("res://scripts/claw_trail.gd"));claw_trail.player=self;add_child(claw_trail)
 
 func choose_animation_player():
 	var model = wolf if is_wolf else human
@@ -282,6 +284,7 @@ func apply_tattoos():
 		if not game.book.selected_tattoos.has(role) or not game.book.tattoo_matches_role(role, game.book.selected_tattoos[role]): mesh.hide();continue
 		var material = StandardMaterial3D.new();material.albedo_texture = load(game.book.selected_tattoos[role]);material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA;material.cull_mode = BaseMaterial3D.CULL_DISABLED;material.roughness = 0.7
 		mesh.material_override = material;mesh.show()
+	game.health=mini(game.health,game.max_health())
 	if is_instance_valid(roar_effect): roar_effect.bind_tattoos()
 
 func begin_roar():
@@ -386,6 +389,7 @@ func _physics_process(delta):
 		velocity.y -= 20.0 * delta
 	var axis = Input.get_vector("left", "right", "forward", "backward") + move_axis
 	axis = axis.limit_length(1.0)
+	if is_instance_valid(roar_effect) and roar_effect.active:axis=Vector2.ZERO
 	var forward_now = axis.y < -0.65
 	if forward_now and not forward_held:
 		register_forward_press()
@@ -452,7 +456,8 @@ func begin_roll():
 	var keep_sprint = normal_run_toggled
 	reset_locomotion();roar_effect.stop()
 	normal_run_toggled = keep_sprint
-	roll_direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized() if axis.length() > 0.15 else - global_basis.z
+	roll_direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized() if axis.length() > 0.15 else Vector3.ZERO
+	if axis.length()<=0.15:velocity.x=0;velocity.z=0
 	roll_duration = anim.get_animation("special_attack").length
 	roll_base = wolf.transform;rolling = true;roll_elapsed = 0;roll_cooldown = roll_duration + 0.45;action_time = roll_duration;play_clip("special_attack");return true
 

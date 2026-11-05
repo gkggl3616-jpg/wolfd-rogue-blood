@@ -13,24 +13,25 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    for filename in ['mobile-validation.json', 'mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json']:
+    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10}
+    for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
         if report.get('runtimeCodeSha256') != fingerprint:
             blockers.append('Validation does not match current runtime: '+filename)
         if filename == 'mobile-validation.json' and report.get('passed') is not True:
             blockers.append('Mobile regressions did not pass')
-        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json'] and (report.get('failures') != 0 or len(report.get('captures', [])) < ({'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3}[filename])):
+        if filename in visual_minimum and (report.get('failures') != 0 or len(report.get('captures', [])) < visual_minimum[filename]):
             blockers.append('Current offline UI/gameplay captures are missing')
-        if filename in ['mobile-visual-validation.json','pc-reference-visual-validation.json','equipment-visual-validation.json','human-visual-validation.json']:
+        if filename in visual_minimum:
             for capture in report.get('captures', []):
                 image = root/capture.get('path', '__missing_capture__')
                 if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != capture.get('sha256'):
                     blockers.append('Visual evidence missing or changed: '+capture.get('name', '?'))
     catalogue = root/'godot/assets/maps/offline.json'
     entries = json.loads(catalogue.read_text()) if catalogue.is_file() else []
-    if len(entries) != 19 or len({int(row['number']) for row in entries}) != 19:
-        blockers.append('All 19 independently validated offline maps are required')
+    if len(entries) != 34 or len({int(row['number']) for row in entries}) != 34:
+        blockers.append('All 34 independently validated offline maps are required')
     previews = {int(row['number']): row for row in json.loads((root/'godot/assets/maps/previews.json').read_text())}
     for row in entries:
         path = root/'godot'/row['navigation'].removeprefix('res://')
@@ -41,7 +42,7 @@ def check(root=ROOT):
     radar_path=root/'godot/assets/maps/radar.json'
     radar=json.loads(radar_path.read_text()) if radar_path.is_file() else []
     if {int(row['number']) for row in radar} != set(previews):
-        blockers.append('Radar must cover exactly the 19 selected geometries')
+        blockers.append('Radar must cover exactly the 34 selected geometries')
     navigation={int(row['number']):row for row in entries}
     for row in radar:
         image=root/'godot'/row['asset'].removeprefix('res://')
@@ -51,8 +52,8 @@ def check(root=ROOT):
             blockers.append('Radar uses different navigation: '+str(row['number']))
     path = root/'docs/offline-match-validation.json'
     matches = json.loads(path.read_text()) if path.is_file() else {}
-    if matches.get('passed') is not True or len(matches.get('maps', [])) != 19:
-        blockers.append('Offline physics/navigation/match regression did not pass all 19 maps')
+    if matches.get('passed') is not True or len(matches.get('maps', [])) != 34:
+        blockers.append('Offline physics/navigation/match regression did not pass all 34 maps')
     if catalogue.is_file() and matches.get('navigationCatalogSha256') != hashlib.sha256(catalogue.read_bytes()).hexdigest():
         blockers.append('Offline match evidence does not match current navigation')
     def verify_asset(row, label, asset_key='asset', hash_key='sha256'):
@@ -82,7 +83,7 @@ def check(root=ROOT):
     if bots.get('passed') is not True or bots.get('checks', 0) < 62 or bots.get('actualShotDamageByDifficulty') != [8, 8, 8]:
         blockers.append('Equal-damage difficulty, navigation and finite-ammo bot checks did not pass')
     photos=json.loads((root/'godot/assets/maps/photos.json').read_text())
-    if {int(row['number']) for row in photos['maps']} != set(previews):blockers.append('All 19 original PC map photographs are required')
+    if {int(row['number']) for row in photos['maps']} != set(previews):blockers.append('All 34 original PC map photographs are required')
     if photos['sourceAttributeSha256']!=json.loads((root/'godot/assets/maps/catalog.json').read_text())['sourceTables']['attributes']['sha256']:blockers.append('Map photo association uses a different PC attribute table')
     for photo in photos['maps']:verify_asset(photo,'map photo '+str(photo['number']))
     expansion=json.loads((root/'docs/pc-reference-expansion-validation.json').read_text())
@@ -100,9 +101,28 @@ def check(root=ROOT):
         verify_asset(row,'mutation portrait '+row['id']+row['team'],'portrait','portraitSha256')
     power_path=root/'godot/assets/items/power.json'
     powers=json.loads(power_path.read_text()) if power_path.is_file() else {}
-    if {str(row.get('id')) for row in powers.get('items',[])} != {'19001','19002','19501','19502','13006','19602'}:blockers.append('Verified source power item identities missing')
+    if not {'19001','19002','19501','19502','13006','19602',*[str(x) for x in range(16011,16021)],'16800'}.issubset({str(row.get('id')) for row in powers.get('items',[])}):blockers.append('Verified source power item identities missing')
     for item in powers.get('items',[]):
         if not (root/'godot'/item.get('icon','__missing_icon__').removeprefix('res://')).is_file():blockers.append('Power item icon missing: '+str(item.get('id')))
+        if item.get('trail'):verify_asset(item['trail'],'source claw trail '+item['id'])
+    for filename,minimum in [('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
+        path=root/'docs'/filename
+        proof=json.loads(path.read_text()) if path.is_file() else {}
+        if proof.get('passed') is not True or proof.get('checks',0)<minimum:blockers.append('Incomplete update verification: '+filename)
+        if filename.startswith('bot-traversal') and proof.get('traversalsSha256')!=hashlib.sha256((root/'godot/assets/maps/traversals.json').read_bytes()).hexdigest():blockers.append('Traversal physics evidence differs from packaged routes')
+    admission=json.loads((root/'docs/character-admission-015.json').read_text())
+    accepted={r['id']:r for r in admission.get('models',[]) if r.get('passed')}
+    if not admission.get('passed') or len(accepted)!=134:blockers.append('All 134 additional source pairs need engine and render acceptance')
+    characters=json.loads((root/'godot/assets/library/characters.json').read_text())['characters']
+    for character in characters:
+        if not character.get('available'):continue
+        for form in ['human','wolf']:verify_asset(character[form],character['id']+'/'+form)
+        if character.get('pairEvidence'):
+            proof=accepted.get(character['id'],{})
+            for form in proof.get('forms',[]):
+                if character[form['form']]['sha256']!=form['assetSha256']:blockers.append('Character capture uses a different source import: '+character['id'])
+                capture=root/form['path']
+                if not capture.is_file() or hashlib.sha256(capture.read_bytes()).hexdigest()!=form['captureSha256']:blockers.append('Character capture missing or changed: '+character['id'])
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

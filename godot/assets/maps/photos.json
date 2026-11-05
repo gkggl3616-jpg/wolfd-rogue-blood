@@ -1,238 +1,373 @@
 {
-  "schemaVersion": 1,
-  "sourceAttributeSha256": "b3974fef37dbe4e6a7fed9187d1112aa8063a4d8ae97bd1d3b87ca3c0188690c",
+  "association": "Original 19 PC thumbnails retain exact attribute associations. Fifteen added worlds use labelled Godot renders of their actual geometry.",
   "maps": [
     {
-      "number": 1,
-      "name": "03. Gate",
       "asset": "res://assets/maps/thumbnails/1.png",
+      "attributeOffsets": [
+        16635.0
+      ],
+      "name": "03. Gate",
+      "number": 1.0,
       "sha256": "10d7ea0fcf313bc4462d0447083a3bd79f413a690d1b448d937535af9b092fb6",
       "source": "wolfteam kurtları/Root/wt_interface/map/03gate.dtx",
-      "sourceSha256": "7e7390bcb29fa5115279d2bc404fe68463cf2ec43be21427d4a1a689356a6d68",
-      "attributeOffsets": [
-        16635
-      ]
+      "sourceSha256": "7e7390bcb29fa5115279d2bc404fe68463cf2ec43be21427d4a1a689356a6d68"
     },
     {
-      "number": 2,
-      "name": "03. Gate Dark",
       "asset": "res://assets/maps/thumbnails/2.png",
+      "attributeOffsets": [
+        20681.0
+      ],
+      "name": "03. Gate Dark",
+      "number": 2.0,
       "sha256": "e7587ac67b1409b2ec03cce62273eb4e27461ae0fcf7f6d46960b2d5f303a03e",
       "source": "wolfteam kurtları/Root/wt_interface/map/03gate_dark.dtx",
-      "sourceSha256": "959c15c604611f1fba44438482cac8f1374c6d8025809654fc6f5b982b627ae1",
-      "attributeOffsets": [
-        20681
-      ]
+      "sourceSha256": "959c15c604611f1fba44438482cac8f1374c6d8025809654fc6f5b982b627ae1"
     },
     {
-      "number": 26,
-      "name": "Cappadocia",
       "asset": "res://assets/maps/thumbnails/26.png",
+      "attributeOffsets": [
+        68044.0
+      ],
+      "name": "Cappadocia",
+      "number": 26.0,
       "sha256": "7681d8c15c5baedf8db3a442c939f062e08654017557c6d1d708c25dc2e33847",
       "source": "wolfteam kurtları/Root/wt_interface/map/cappadocia.dtx",
-      "sourceSha256": "fecc82e087773c90b0e794dd19c12bc3f5a0cb3361036fbcbf294c0f463105f4",
-      "attributeOffsets": [
-        68044
-      ]
+      "sourceSha256": "fecc82e087773c90b0e794dd19c12bc3f5a0cb3361036fbcbf294c0f463105f4"
     },
     {
-      "number": 31,
-      "name": "City Arena",
       "asset": "res://assets/maps/thumbnails/31.png",
+      "attributeOffsets": [
+        61649.0,
+        131523.0
+      ],
+      "name": "City Arena",
+      "number": 31.0,
       "sha256": "02003abb30d833c470800614e56bfe097a20da00ca246fcea5c4dfa27cabe844",
       "source": "wolfteam kurtları/Root/wt_interface/map/cityarena.dtx",
-      "sourceSha256": "6f6d4c44682ef42ccb15c652711fef191d9a5ab9798e16af5adcd7a765bcace1",
-      "attributeOffsets": [
-        61649,
-        131523
-      ]
+      "sourceSha256": "6f6d4c44682ef42ccb15c652711fef191d9a5ab9798e16af5adcd7a765bcace1"
     },
     {
-      "number": 44,
-      "name": "Frozen",
       "asset": "res://assets/maps/thumbnails/44.png",
+      "attributeOffsets": [
+        41756.0,
+        51985.0,
+        61018.0,
+        120816.0
+      ],
+      "name": "Frozen",
+      "number": 44.0,
       "sha256": "a317d548f1f0346c3730a37e95e677c710001482350566d35de60a094b960e73",
       "source": "wolfteam kurtları/Root/wt_interface/map/frozen.dtx",
-      "sourceSha256": "168ce7ce44ac17681884468d6d70855bdcf2a11939969e71dd28b3c4c8b99e4e",
-      "attributeOffsets": [
-        41756,
-        51985,
-        61018,
-        120816
-      ]
+      "sourceSha256": "168ce7ce44ac17681884468d6d70855bdcf2a11939969e71dd28b3c4c8b99e4e"
     },
     {
-      "number": 46,
-      "name": "Gobekli Tepe",
       "asset": "res://assets/maps/thumbnails/46.png",
+      "attributeOffsets": [
+        30267.0
+      ],
+      "name": "Gobekli Tepe",
+      "number": 46.0,
       "sha256": "96d65868564081e5ffab0537bff5b54c9b842648a28a992b3a3b72d8369fa12b",
       "source": "wolfteam kurtları/Root/wt_interface/map/gobekli_tepe.dtx",
-      "sourceSha256": "43f21f645f78810cadecc9f020c72b52de304ce9667551f9c9cfa57552b65555",
-      "attributeOffsets": [
-        30267
-      ]
+      "sourceSha256": "43f21f645f78810cadecc9f020c72b52de304ce9667551f9c9cfa57552b65555"
     },
     {
-      "number": 50,
-      "name": "Jungle",
       "asset": "res://assets/maps/thumbnails/50.png",
+      "attributeOffsets": [
+        35589.0
+      ],
+      "name": "Jungle",
+      "number": 50.0,
       "sha256": "d1c7fa833a18bcb22fcb862474d6e7aa34917aa75a348ea9adf4ef90043670c3",
       "source": "wolfteam kurtları/Root/wt_interface/map/jungle.dtx",
-      "sourceSha256": "6576d756a4ceeebda31ed22db071e1eb648bfa043b656e876592c919e2d9d5c7",
-      "attributeOffsets": [
-        35589
-      ]
+      "sourceSha256": "6576d756a4ceeebda31ed22db071e1eb648bfa043b656e876592c919e2d9d5c7"
     },
     {
-      "number": 57,
-      "name": "Museum",
       "asset": "res://assets/maps/thumbnails/57.png",
+      "attributeOffsets": [
+        24637.0
+      ],
+      "name": "Museum",
+      "number": 57.0,
       "sha256": "d0e2154fc231928648938eef348706b6e11d6844f0e2d0f5eed6f11eee742227",
       "source": "wolfteam kurtları/Root/wt_interface/map/museum.dtx",
-      "sourceSha256": "fcd3cbdd33b1c9b0faec07b5d2241c3d471302c3b07ac71eab6d620d31e63879",
-      "attributeOffsets": [
-        24637
-      ]
+      "sourceSha256": "fcd3cbdd33b1c9b0faec07b5d2241c3d471302c3b07ac71eab6d620d31e63879"
     },
     {
-      "number": 58,
-      "name": "PaienAttack",
       "asset": "res://assets/maps/thumbnails/58.png",
+      "attributeOffsets": [
+        23299.0
+      ],
+      "name": "PaienAttack",
+      "number": 58.0,
       "sha256": "e8a32a2eb8917531a25886ae155901e1e9c76ff388e818aae4b06e1e55ba860c",
       "source": "wolfteam kurtları/Root/wt_interface/map/paienattack.dtx",
-      "sourceSha256": "fa02ef6fd23e1b5ef00a21c2f0bacf4ba4914166b26742441f905d10203cf4da",
-      "attributeOffsets": [
-        23299
-      ]
+      "sourceSha256": "fa02ef6fd23e1b5ef00a21c2f0bacf4ba4914166b26742441f905d10203cf4da"
     },
     {
-      "number": 59,
-      "name": "Paien Lab",
       "asset": "res://assets/maps/thumbnails/59.png",
+      "attributeOffsets": [
+        1979.0,
+        37550.0,
+        47857.0,
+        111761.0,
+        118653.0,
+        122955.0,
+        135763.0,
+        147411.0,
+        150880.0
+      ],
+      "name": "Paien Lab",
+      "number": 59.0,
       "sha256": "21d330a75eb837386ea040ceb543acfae2c5207747cc3b13b0a1347a1990f78a",
       "source": "wolfteam kurtları/Root/wt_interface/map/paienlab.dtx",
-      "sourceSha256": "c824375ede5984ffb6659dbe4dbdbae85078a9e38ba3a1697d27f737dd588c65",
-      "attributeOffsets": [
-        1979,
-        37550,
-        47857,
-        111761,
-        118653,
-        122955,
-        135763,
-        147411,
-        150880
-      ]
+      "sourceSha256": "c824375ede5984ffb6659dbe4dbdbae85078a9e38ba3a1697d27f737dd588c65"
     },
     {
-      "number": 65,
-      "name": "Petra",
       "asset": "res://assets/maps/thumbnails/65.png",
+      "attributeOffsets": [
+        10179.0,
+        140250.0
+      ],
+      "name": "Petra",
+      "number": 65.0,
       "sha256": "ae09d039eeece0aba6068eb5c98dcd4ad717f197512aa0c3839041a22cdd5320",
       "source": "wolfteam kurtları/Root/wt_interface/map/petra.dtx",
-      "sourceSha256": "c19ada4054c838731f1a2a2d897eab33525086e64656413f1a11bb27a3ed1769",
-      "attributeOffsets": [
-        10179,
-        140250
-      ]
+      "sourceSha256": "c19ada4054c838731f1a2a2d897eab33525086e64656413f1a11bb27a3ed1769"
     },
     {
-      "number": 72,
-      "name": "WR_Ruins_5",
       "asset": "res://assets/maps/thumbnails/72.png",
+      "attributeOffsets": [
+        78038.0,
+        80857.0,
+        83670.0,
+        86493.0
+      ],
+      "name": "WR_Ruins_5",
+      "number": 72.0,
       "sha256": "e70d746c62d2d6daeafdb8f6a32a74989cab930df2184a2662305736ccd95d60",
       "source": "wolfteam kurtları/Root/wt_interface/map/ruins.dtx",
-      "sourceSha256": "4212d166f7bc1524e2821d0a99c09b36f79a12696195c3ab3b4a91d4e7232e0d",
-      "attributeOffsets": [
-        78038,
-        80857,
-        83670,
-        86493
-      ]
+      "sourceSha256": "4212d166f7bc1524e2821d0a99c09b36f79a12696195c3ab3b4a91d4e7232e0d"
     },
     {
-      "number": 82,
-      "name": "Secret Lab",
       "asset": "res://assets/maps/thumbnails/82.png",
+      "attributeOffsets": [
+        13358.0
+      ],
+      "name": "Secret Lab",
+      "number": 82.0,
       "sha256": "54fd0d98e4963dd2dffb21a6fd222cf62f60d9ba0c7fae5d1689eab4aecfd27e",
       "source": "wolfteam kurtları/Root/wt_interface/map/secretlab.dtx",
-      "sourceSha256": "82d6afda8f4c15d183242e0430cdae6e14e21ea838d5610f0d3d2b57e0e14221",
-      "attributeOffsets": [
-        13358
-      ]
+      "sourceSha256": "82d6afda8f4c15d183242e0430cdae6e14e21ea838d5610f0d3d2b57e0e14221"
     },
     {
-      "number": 83,
-      "name": "Secret Lab EX",
       "asset": "res://assets/maps/thumbnails/83.png",
+      "attributeOffsets": [
+        21332.0
+      ],
+      "name": "Secret Lab EX",
+      "number": 83.0,
       "sha256": "f8b04ca5a6264b8693e84eb9d737a500798743061d77a1ec9258c7a61d0e621f",
       "source": "wolfteam kurtları/Root/wt_interface/map/secretlab_ex.dtx",
-      "sourceSha256": "d5959fe3239a8673108dad76e76496e552e7750303347277345897dafd45ab67",
-      "attributeOffsets": [
-        21332
-      ]
+      "sourceSha256": "d5959fe3239a8673108dad76e76496e552e7750303347277345897dafd45ab67"
     },
     {
-      "number": 84,
-      "name": "Container Ship",
       "asset": "res://assets/maps/thumbnails/84.png",
+      "attributeOffsets": [
+        8280.0,
+        139000.0
+      ],
+      "name": "Container Ship",
+      "number": 84.0,
       "sha256": "d9381d07fe2000f7f622706daea103b31247f5261ddbd6194e53072443464204",
       "source": "wolfteam kurtları/Root/wt_interface/map/ship.dtx",
-      "sourceSha256": "ca65d5414c145239dd139db61ba11815425095bc721e7a3ea24d80696f8bcfac",
-      "attributeOffsets": [
-        8280,
-        139000
-      ]
+      "sourceSha256": "ca65d5414c145239dd139db61ba11815425095bc721e7a3ea24d80696f8bcfac"
     },
     {
-      "number": 92,
-      "name": "Street",
       "asset": "res://assets/maps/thumbnails/92.png",
+      "attributeOffsets": [
+        8901.0,
+        126656.0,
+        139619.0,
+        152278.0
+      ],
+      "name": "Street",
+      "number": 92.0,
       "sha256": "92f3ab58bff493503688f03c4a1e591bf62c16218443c5c514ae29507f704e4e",
       "source": "wolfteam kurtları/Root/wt_interface/map/street.dtx",
-      "sourceSha256": "9554e8fcde7c3b3ab33538f8934bea36ba5c21ce03b91f5e48ab142b82c3b921",
-      "attributeOffsets": [
-        8901,
-        126656,
-        139619,
-        152278
-      ]
+      "sourceSha256": "9554e8fcde7c3b3ab33538f8934bea36ba5c21ce03b91f5e48ab142b82c3b921"
     },
     {
-      "number": 97,
-      "name": "Taksim",
       "asset": "res://assets/maps/thumbnails/97.png",
+      "attributeOffsets": [
+        12106.0,
+        113147.0,
+        141530.0
+      ],
+      "name": "Taksim",
+      "number": 97.0,
       "sha256": "fffc8428f102308acbeeed125f9eed22185f6a2cc1a1adf2de49987692598028",
       "source": "wolfteam kurtları/Root/wt_interface/map/taksim.dtx",
-      "sourceSha256": "62f536f7cd9ad947a9e53400637f2cd0ae81a8dff733fd676691fef6974d68f9",
-      "attributeOffsets": [
-        12106,
-        113147,
-        141530
-      ]
+      "sourceSha256": "62f536f7cd9ad947a9e53400637f2cd0ae81a8dff733fd676691fef6974d68f9"
     },
     {
-      "number": 100,
-      "name": "Topkapi Sarayi",
       "asset": "res://assets/maps/thumbnails/100.png",
+      "attributeOffsets": [
+        15984.0
+      ],
+      "name": "Topkapi Sarayi",
+      "number": 100.0,
       "sha256": "792591facf0cc191e30b19f1fc7ea6529ab5b149b26d148384f5a2e72734d711",
       "source": "wolfteam kurtları/Root/wt_interface/map/topkapi.dtx",
-      "sourceSha256": "447de07b53c11b4e578cf98fed7ef4978ee538f74df62124515f3efe9deab4ff",
-      "attributeOffsets": [
-        15984
-      ]
+      "sourceSha256": "447de07b53c11b4e578cf98fed7ef4978ee538f74df62124515f3efe9deab4ff"
     },
     {
-      "number": 110,
-      "name": "Wolf City",
       "asset": "res://assets/maps/thumbnails/110.png",
+      "attributeOffsets": [
+        38970.0
+      ],
+      "name": "Wolf City",
+      "number": 110.0,
       "sha256": "57c53c9a3b31b45602c13b8d5f19e6f25639f9453ebf212178954e2ef3bf9850",
       "source": "wolfteam kurtları/Root/wt_interface/map/wolf_city.dtx",
-      "sourceSha256": "91248849539537acdeb4c9554cf661285eb8671fd329d3773344aadee91fb63d",
-      "attributeOffsets": [
-        38970
-      ]
+      "sourceSha256": "91248849539537acdeb4c9554cf661285eb8671fd329d3773344aadee91fb63d"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/36.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 36.0,
+      "sha256": "b42fba9e5ec3a7cf073b4aba6cab19efee67291bc203ee02259e89da91cd1862",
+      "source": "res://assets/maps/geometry/36.glb",
+      "sourceSha256": "acc35a122af1beec8c40dfa1c02bda6aedd7a3494560f8af26b8292ef5135578"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/69.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 69.0,
+      "sha256": "aa1bc847d1f55d9ed69f728cbd452f195b001a711948757eae9c9074fcadf7de",
+      "source": "res://assets/maps/geometry/69.glb",
+      "sourceSha256": "e1ad1028e93710926295bc6d449e0c97d79cd4982222c5c08675657fa622b75c"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/87.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 87.0,
+      "sha256": "9fbb9dcc347cff863710fb2afe68e9e8728b5f6ea38bb173d57c3fee8f4a26b4",
+      "source": "res://assets/maps/geometry/87.glb",
+      "sourceSha256": "0edf5e547d2ba367b3e976c686cd96bfbe37c7005b38874f693e0beb264e51eb"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/17.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 17.0,
+      "sha256": "730f1669db43b6dda926f53356caa2dd8e530f47d65636741f754f270377023f",
+      "source": "res://assets/maps/geometry/17.glb",
+      "sourceSha256": "3eb6ff9d304ad2c6aae8c7de2d061c8371675d6192c4c5d531cde3df33f54411"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/51.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 51.0,
+      "sha256": "3f2c06278ad3965e4d1f6f8e5566f96926b3e2faba7b5d1ed8a8c8e35dd7f9b4",
+      "source": "res://assets/maps/geometry/51.glb",
+      "sourceSha256": "4ac7831ee50fe8d70333cd03f4c9a6b1f3349b21ffbc1ab8984d5bb5e9808235"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/89.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 89.0,
+      "sha256": "58dca6b673362bfaf4f38721fc73b4f420c02dcd254e72e66bf6b3dcfb117183",
+      "source": "res://assets/maps/geometry/89.glb",
+      "sourceSha256": "54aaac746e6545ffb37f32f89331a60787de21804b94884fe3858aa53de3d0ea"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/37.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 37.0,
+      "sha256": "fcd1cecc5d791cde8e9071755c7e4ecd6ab3dc3ac1be6b9c0178574a0955fde3",
+      "source": "res://assets/maps/geometry/37.glb",
+      "sourceSha256": "696f6f4683fda191da1923a57c35f5ca4d6e405a30c8245a99ebc3c9c740ec31"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/42.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 42.0,
+      "sha256": "35891bea003462bec99afcb11692b44567596a6d9c401b457a243cc214c98969",
+      "source": "res://assets/maps/geometry/42.glb",
+      "sourceSha256": "6bed8b0fbd91a5b5b41ebad78831bf05c502d40c0807daa8b207bb702a5ceae8"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/20.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 20.0,
+      "sha256": "efb17eafc21248fbad5688846ebc66f971677d2716057b46c8945b5099916da5",
+      "source": "res://assets/maps/geometry/20.glb",
+      "sourceSha256": "7497b716facc8b83b50c351ade04df2e806c3e3ab6d612dc26b9b3c81013f2a6"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/24.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 24.0,
+      "sha256": "58710d01d39bbdc3e5f8b6828841886ddfac2b0843ad36dabbfefc10548b6c45",
+      "source": "res://assets/maps/geometry/24.glb",
+      "sourceSha256": "39b6b7d4665c97a6b430c1252f54c860d5240d6ebbea03e4ecf5c63815edd71b"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/68.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 68.0,
+      "sha256": "e3f0fc18fe0d6475236fc4194d27744a1e04e56625e9b71460e004f9e3cc8fd9",
+      "source": "res://assets/maps/geometry/68.glb",
+      "sourceSha256": "3867052deea2f5021cec89865707ff061989db38ff46515148210da520487a88"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/41.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 41.0,
+      "sha256": "fbedc3af8b32e328fdfb24ec9ccb8de19d4892d82b2eca946f8ab80597c33785",
+      "source": "res://assets/maps/geometry/41.glb",
+      "sourceSha256": "c3f9a7b598acd36a15e3aa3d497ec400caba754cebbb4cf5f14b54fc7376de2f"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/56.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 56.0,
+      "sha256": "a21797058f8f316442e627ac255c87a8a41b58fae85d5092404bf48850c87fb9",
+      "source": "res://assets/maps/geometry/56.glb",
+      "sourceSha256": "d5e978aa79f3e2e98495d40a6574183c6d7ff3895b21a7f6d76d77083497e099"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/61.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 61.0,
+      "sha256": "447bc8061835116f89e747fb2edf5aa2f4c0cf69a3ca83b86c0aeea3a48cc015",
+      "source": "res://assets/maps/geometry/61.glb",
+      "sourceSha256": "0a5c26144042f673199cb7f2b7ecbf9ad1606ad6f4f5415726a4ea9bd5ca8999"
+    },
+    {
+      "asset": "res://assets/maps/thumbnails/106.png",
+      "kind": "rendered_world_preview",
+      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
+      "number": 106.0,
+      "sha256": "24e71cca3ce50198ef59406d0f401b53ffc59463bcaaf9da4610f8e5bc68c0bc",
+      "source": "res://assets/maps/geometry/106.glb",
+      "sourceSha256": "a62c1fd57abea3cb3d06dcf25d3614704f51275923e6086b1627d0a3ffa90a16"
     }
   ],
-  "association": "Exact world-file reference and thumbnail path from typed PC mapattribute.dat record; not a name guess."
+  "schemaVersion": 1.0,
+  "sourceAttributeSha256": "b3974fef37dbe4e6a7fed9187d1112aa8063a4d8ae97bd1d3b87ca3c0188690c"
 }

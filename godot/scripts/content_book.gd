@@ -15,6 +15,8 @@ var loadout_names=["Standart","SLH 1","SLH 2","SLH 3","SLH 4"]
 var wolf_mutation="normal"
 var selected_character = ""
 var selected_tattoos = {}
+var selected_tattoo_ids={}
+var selected_characters={}
 const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": false, "invert_y": false, "shadows": false, "fps": 60}
 var settings = DEFAULT_SETTINGS.duplicate(true)
 var local_name = "Yerel oyuncu"
@@ -66,6 +68,15 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 			for role in ["body", "left", "right"]:
 				var texture = saved_tattoos.get(role, "")
 				if texture is String and tattoo_matches_role(role,texture): selected_tattoos[role] = texture
+		var saved_ids=stored.get("tattooIds",{})
+		if saved_ids is Dictionary:
+			for role in ["left","body","right"]:
+				var id=saved_ids.get(role,"")
+				if tattoos.any(func(row):return row.id==id and row.role==role and row.texture==selected_tattoos.get(role,"")):selected_tattoo_ids[role]=id
+		var team_choices=stored.get("teamCharacters",{})
+		if team_choices is Dictionary:
+			for team in ["red","blue"]:
+				if characters.any(func(row):return row.id==team_choices.get(team,"") and row.get("sourceTeam",team)==team and row.get("available",false)):selected_characters[team]=team_choices[team]
 		var saved_settings = stored.get("settings", {})
 		if saved_settings is Dictionary:
 			for key in settings:
@@ -194,18 +205,25 @@ func set_local_name(value):
 
 func choose_character(id):
 	if not characters.any( func(row): return row.id == id and row.get("available") == true): return false
+	var entry=characters.filter(func(row):return row.id==id)[0]
+	var previous_choices=selected_characters.duplicate();selected_characters[entry.get("sourceTeam","blue")]=id
 	var previous = selected_character;selected_character = id
 	if save(): return true
-	selected_character = previous;return false
+	selected_character = previous;selected_characters=previous_choices;return false
 
-func set_tattoo(role, texture):
+func set_tattoo(role, texture, item_id=""):
 	if role not in ["body", "left", "right"]: return false
 	if texture != "" and not tattoo_matches_role(role, texture): return false
-	var previous = selected_tattoos.duplicate()
-	if texture == "": selected_tattoos.erase(role)
-	else: selected_tattoos[role] = texture
+	var previous = selected_tattoos.duplicate();var previous_ids=selected_tattoo_ids.duplicate()
+	if texture == "": selected_tattoos.erase(role);selected_tattoo_ids.erase(role)
+	else:
+		var choices=tattoos.filter(func(row):return row.texture==texture and row.role==role and (item_id=="" or row.id==item_id))
+		if item_id!="" and choices.size()!=1:return false
+		selected_tattoos[role] = texture
+		if choices.size()==1:selected_tattoo_ids[role]=choices[0].id
+		else:selected_tattoo_ids.erase(role)
 	if save(): return true
-	selected_tattoos.clear();selected_tattoos.merge(previous);return false
+	selected_tattoos.clear();selected_tattoos.merge(previous);selected_tattoo_ids=previous_ids;return false
 
 func tattoo_matches_role(role, texture):
 	return tattoos.any(func(row): return row.texture == texture and row.get("role", "unknown") == role)
@@ -213,4 +231,19 @@ func tattoo_matches_role(role, texture):
 func save():
 	if not persistent: return true
 	if save_blocked: return false
-	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})
+	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattooIds":selected_tattoo_ids,"teamCharacters":selected_characters,"tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})
+
+func character_for_team(team):
+	var chosen=selected_characters.get(team,selected_character)
+	for row in characters:
+		if row.id==chosen and row.get("available",false) and row.get("sourceTeam",team)==team:return row
+	for row in characters:
+		if row.get("available",false) and row.get("sourceTeam",team)==team:return row
+	return {}
+func tattoo_bonuses():
+	var totals={"rangePercent":0,"damagePercent":0,"healthPercent":0,"speedPercent":0,"gpPercent":0,"goldPercent":0}
+	for role in selected_tattoo_ids:
+		for row in tattoos:
+			if row.id==selected_tattoo_ids[role] and row.role==role and row.texture==selected_tattoos.get(role,""):
+				for key in totals:totals[key]+=float(row.get("appliedBonuses",{}).get(key,0))
+	return totals

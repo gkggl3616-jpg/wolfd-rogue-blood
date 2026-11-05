@@ -2,6 +2,7 @@ extends RefCounted
 const Art = preload("res://ui/source_theme.gd")
 const Layout = preload("res://ui/source_layout.gd")
 const SourceCard=preload("res://ui/source_item_card.gd")
+const Quality=preload("res://scripts/item_quality.gd")
 const ROOT = "wt_interface/inven_shop/"
 var ui
 var grid: Control
@@ -22,11 +23,12 @@ var category_tabs = []
 var filter_tabs = []
 var info_tab = "description"
 var portraits = {}
+var swipe
 var role_picker
 
 func normalized(value):return str(value).to_lower().replace("ı","i").replace("İ","i")
 func title(entry):return entry.get("name",str(entry.get("source","")).get_file().get_basename())
-func refresh_grid():refresh_native_grid()
+func refresh_grid(scrolling=false):refresh_native_grid(scrolling)
 func show_details():show_native_details()
 func update(delta):
 	if not is_instance_valid(preview_sprite) or effect_frames.is_empty():return
@@ -57,13 +59,19 @@ func build_native():
 			role_picker.add_item(row[0]);role_picker.set_item_metadata(role_picker.item_count-1,row[1])
 			if ui.filter_id==row[1]:role_picker.select(role_picker.item_count-1)
 		role_picker.item_selected.connect(func(index):ui.filter_id=role_picker.get_item_metadata(index);ui.offset=0;refresh_grid())
+	var quality=ui.map_picker(ui.content,Vector2(779,90),Vector2(217,25));quality.add_item("Kalite · Tümü");quality.set_item_metadata(0,"all")
+	for value in Quality.COLORS:
+		quality.add_item(value);quality.set_item_metadata(quality.item_count-1,value)
+		if ui.quality_id==value:quality.select(quality.item_count-1)
+	quality.item_selected.connect(func(index):ui.quality_id=quality.get_item_metadata(index);ui.offset=0;refresh_grid())
 	search=LineEdit.new();search.text=ui.search_query;search.position=Vector2(779,63);search.size=Vector2(217,22);search.placeholder_text="Ara…";ui.content.add_child(search)
 	search.set_meta("navigation_input","collection_search")
 	search.text_changed.connect(func(value):ui.search_query=value;ui.offset=0;refresh_grid())
-	grid=Control.new();grid.position=Vector2(366,154);grid.size=Vector2(630,351);ui.content.add_child(grid)
+	grid=Control.new();grid.position=Vector2(366,154);grid.size=Vector2(630,351);grid.clip_contents=true;ui.content.add_child(grid)
 	page_label=ui.text(ui.content,"",Vector2(788,509),Vector2(208,20),11);page_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 	ui.button(ui.content,"▲",Vector2(999,154),Vector2(20,24),func():ui.offset=maxi(0,ui.offset-9);refresh_grid())
 	ui.button(ui.content,"▼",Vector2(999,480),Vector2(20,24),func():ui.offset=mini(int((maxi(1,entries.size())-1)/9)*9,ui.offset+9);refresh_grid())
+	swipe=load("res://ui/swipe_grid.gd").new();swipe.page=self;swipe.position=grid.position;swipe.size=grid.size;ui.content.add_child(swipe)
 	details=Control.new();details.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(details)
 	if ui.page=="Envanter":build_loadouts()
 	if ui.page=="power":build_power_slots()
@@ -99,6 +107,7 @@ func build_categories():
 			if ui.page in ["Envanter","Mağaza"]:ui.filter_id=entry[0];ui.offset=0;ui.refresh()
 			elif entry[0] in ["power","Dövmeler"]:ui.navigate(entry[0])
 			elif ui.page=="power":ui.filter_id="all" if entry[0]=="power" else entry[0];ui.offset=0;refresh_grid()
+			elif ui.page=="Karakterler":ui.filter_id=entry[0];ui.offset=0;refresh_grid()
 			elif entry[0]=="all":ui.filter_id="all";refresh_grid()
 			else:ui.show_error("Bu alt kategori için doğrulanmış kullanılabilir kayıt yok.")
 		)
@@ -109,6 +118,7 @@ func card(parent,entry,at,selected=false):
 	var template=Art.catalog().layouts["interface/equiplistbox"].widgets[1]
 	var factory=Layout.new();var cell=factory.create_widget(template);factory.free()
 	cell.position=at;cell.size=Vector2(209,115);cell.disabled=false;cell.toggle_mode=true;parent.add_child(cell);cell.set_pressed_no_signal(selected);cell.set_meta("entry",entry)
+	var shade=ColorRect.new();shade.position=Vector2(2,2);shade.size=Vector2(205,111);shade.color=Quality.COLORS[Quality.label(entry)]*Color(1,1,1,0.35);shade.mouse_filter=Control.MOUSE_FILTER_IGNORE;cell.add_child(shade)
 	var icon=entry.get("icon",entry.get("texture",""))
 	if ui.page=="Karakterler":icon=portraits.get(entry.id,{}).get("asset","")
 	if icon!="":
@@ -161,6 +171,8 @@ func native_rows():
 	var rows=[]
 	var source=ui.game.book.weapons if ui.page in ["Mağaza","Envanter"] else (ui.game.book.characters if ui.page=="Karakterler" else (ui.game.book.tattoos if ui.page=="Dövmeler" else ((ui.game.equipment.rules.items+ui.game.power_catalog.items) if ui.page=="power" else ui.game.book.effects)))
 	for row in source:
+		if ui.quality_id!="all" and Quality.label(row)!=ui.quality_id:continue
+		if ui.page=="Karakterler" and ui.filter_id in ["red","blue","common"] and row.get("sourceTeam","common")!=ui.filter_id:continue
 		if ui.page=="power" and ui.filter_id not in ["all","power"] and row.get("category","claw")!=ui.filter_id:continue
 		if ui.page=="Dövmeler" and ui.filter_id!="all" and row.role!=ui.filter_id:continue
 		if ui.page in ["Mağaza","Envanter"]:
@@ -171,25 +183,61 @@ func native_rows():
 		if ui.page=="Karakterler" and row.get("available")!=true:continue
 		if not ui.search_query.is_empty() and not normalized(title(row)+" "+str(row.get("sourceId",""))).contains(normalized(ui.search_query)):continue
 		rows.append(row)
+	if ui.page=="Dövmeler" and ui.filter_id=="all":
+		var families={}
+		for row in rows:
+			var key=row.get("setKey",row.id)
+			if not families.has(key):families[key]={}
+			if not families[key].has(row.role):families[key][row.role]=[]
+			families[key][row.role].append(row)
+		var grouped=[]
+		var keys=families.keys()
+		keys.sort_custom(func(a,b):
+			var ac=families[a].has("left") and families[a].has("body") and families[a].has("right")
+			var bc=families[b].has("left") and families[b].has("body") and families[b].has("right")
+			return ac if ac!=bc else a<b
+		)
+		for key in keys:
+			var count=0
+			for role in families[key]:count=maxi(count,families[key][role].size())
+			for index in range(count):
+				for role in ["left","body","right"]:
+					var items=families[key].get(role,[])
+					grouped.append(items[index] if index<items.size() else {"id":"empty-"+key+role+str(index),"name":{"left":"Sol kol","body":"Sırt","right":"Sağ kol"}[role]+" · Bu sette yok","role":role,"placeholder":true})
+		return grouped
 	return rows
 
-func refresh_native_grid():
+func scroll_to(value):
+	var maximum=maxf(0,ceili(entries.size()/3.0)*117.0-351.0)
+	swipe.scroll=clampf(value,0,maximum)
+	var index=int(swipe.scroll/117)*3
+	if index!=ui.offset:ui.offset=index;refresh_grid(true)
+	else:
+		for cell in grid.get_children():cell.position.y=float(cell.get_meta("row_y",0))-fmod(swipe.scroll,117.0)
+
+func refresh_native_grid(scrolling=false):
 	for child in grid.get_children():grid.remove_child(child);child.queue_free()
 	entries=native_rows()
-	ui.offset=clampi(int(ui.offset/9)*9,0,int((maxi(1,entries.size())-1)/9)*9)
-	if ui.selected.is_empty() or not entries.has(ui.selected):ui.selected=entries[ui.offset] if not entries.is_empty() else {}
+	ui.offset=clampi(int(ui.offset/3)*3,0,maxi(0,ceili(entries.size()/3.0)-3)*3)
+	if not scrolling:swipe.scroll=ui.offset/3.0*117
+	if ui.selected.is_empty() or not entries.has(ui.selected):ui.selected={}
+	if ui.selected.is_empty():
+		for row in entries:
+			if not row.get("placeholder",false):ui.selected=row;break
 	var group=ButtonGroup.new()
-	for i in range(mini(9,entries.size()-ui.offset)):
+	for i in range(mini(12,entries.size()-ui.offset)):
 		var entry=entries[ui.offset+i];var cell=card(grid,entry,Vector2(i%3,int(i/3))*Vector2(210,117),entry==ui.selected)
+		cell.set_meta("row_y",int(i/3)*117);cell.position.y-=fmod(swipe.scroll,117.0)
+		cell.disabled=entry.get("placeholder",false)
 		cell.button_group=group
 		if ui.page=="power":
-			var count=int(ui.game.inbox.state.powerCounts.get(str(entry.id),0))
+			var count=(1 if entry.get("offlineAvailable",false) and ui.game.book.offline_edition else int(ui.game.inbox.state.powerCounts.get(str(entry.id),0)))
 			var equipped=str(entry.id) in ui.game.inbox.state.powerSlots.values() or (str(entry.id) in ["19601","19601.0"] and ui.game.equipment.has_wolf_ability())
 			ui.text(cell,"Kullanılıyor" if equipped else ("Kalan adet: %d" % count if str(entry.id) not in ["19601","19601.0"] else "Kullanılabilir"),Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
 		if ui.page in ["Envanter","Mağaza"] and entry.id in ui.game.book.slots.values():ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
 		cell.pressed.connect(func():ui.selected=entry;show_details())
-	page_label.text="%d / %d  ·  %d eşya" % [int(ui.offset/9)+1,maxi(1,int(ceil(float(entries.size())/9))),entries.size()]
-	show_details()
+	page_label.text="%d / %d  ·  %d eşya" % [int(ui.offset/9)+1,maxi(1,int(ceil(float(entries.size())/9))),entries.filter(func(row):return not row.get("placeholder",false)).size()]
+	if not scrolling:show_details()
 
 func action_use(entry,at=Vector2(366,710),dimensions=Vector2(290,28)):
 	var enabled=true
@@ -244,6 +292,7 @@ func show_native_details():
 
 func build_character(entry):
 	ui.trace("interface/charequipmentpage")
+	build_team_buttons(true)
 	ui.preview_angle=-0.12
 	ui.build_preview(Vector2(22,180),Vector2(310,537),entry)
 	var environment=ui.preview_root.find_children("*","WorldEnvironment",true,false)
@@ -274,8 +323,9 @@ func build_character(entry):
 	body(entry.name+"\n\nYerel koleksiyonda kullanılabilir.\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.\nSüre sınırı yok.")
 
 func build_tattoo(entry):
+	build_team_buttons(false)
 	var known=entry.role in ["body","left","right"]
-	ui.preview_wolf=true;ui.build_preview(Vector2(14,154),Vector2(326,405),ui.game.character_info)
+	ui.preview_wolf=true;ui.build_preview(Vector2(14,180),Vector2(326,478),ui.game.book.character_for_team(ui.preview_team))
 	var shown=ui.game.book.selected_tattoos.duplicate()
 	if known:shown[entry.role]=entry.texture
 	for mesh in ui.preview_model.find_children("*","MeshInstance3D",true,false):
@@ -285,25 +335,37 @@ func build_tattoo(entry):
 		if not shown.has(role) or not ui.game.book.tattoo_matches_role(role,shown[role]):mesh.hide();continue
 		var material=StandardMaterial3D.new();material.albedo_texture=load(shown[role]);material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA;material.cull_mode=BaseMaterial3D.CULL_DISABLED;material.roughness=0.7
 		mesh.material_override=material;mesh.show()
-	body("Bölge: "+{"body":"Gövde","left":"Sol kol","right":"Sağ kol"}.get(entry.role,"Belirsiz")+"\n"+entry.description+"\n\nBu yerel sürümde dövme görünümü uygulanır; PC istatistik bonusu doğrulanmadı.")
-	ui.text(details,"Önizlemeyi sürükleyerek çevir",Vector2(25,561),Vector2(310,24),12)
+	var copy="Bölge: "+{"body":"Gövde","left":"Sol kol","right":"Sağ kol"}.get(entry.role,"Belirsiz")+"\n"+entry.description
+	var bonuses=entry.get("appliedBonuses",{})
+	for key in bonuses:
+		if float(bonuses[key])!=0:copy+="\n"+{"damagePercent":"Hasar","rangePercent":"Menzil","healthPercent":"YP","speedPercent":"Hız","gpPercent":"GP","goldPercent":"Altın"}.get(key,key)+": +%"+str(bonuses[key])
+	body(copy)
+	plate(details,Vector2(2,494),Vector2(112,90))
+	var applied=ui.game.book.tattoo_bonuses()
+	ui.text(details,"STATS",Vector2(8,498),Vector2(100,20),14)
+	ui.paragraph(details,"Hasar +%%%d\nMenzil +%%%d\nYP +%%%d" % [applied.damagePercent,applied.rangePercent,applied.healthPercent],Vector2(8,522),Vector2(100,64),11)
+	ui.text(details,"Sürükle · Çevir",Vector2(145,160),Vector2(190,20),11)
 	for i in range(3):
-		var role=["body","left","right"][i];var at=Vector2(18+i*106,593);var texture=ui.game.book.selected_tattoos.get(role,"")
+		var role=["left","body","right"][i];var at=Vector2(18+i*106,666);var texture=ui.game.book.selected_tattoos.get(role,"")
 		var button=SourceCard.create(details,at,Vector2(100,72),func():
 			if texture=="":return
 			for row in ui.game.book.tattoos:
 				if row.texture==texture:ui.selected=row;show_details();break
 		)
 		if texture!="":Art.sprite(button,texture,Vector2(3,3),Vector2(94,48)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		ui.text(button,["Sırt","Sol kol","Sağ kol"][i],Vector2(3,50),Vector2(94,20),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(button,["Sol kol","Sırt","Sağ kol"][i],Vector2(3,50),Vector2(94,20),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	ui.button(details,"Tak" if known else "Bölge belirsiz",Vector2(366,710),Vector2(290,28),func():
-		if ui.game.book.set_tattoo(entry.role,entry.texture):ui.game.player.apply_tattoos();ui.show_error("Dövme kaydedildi.")
+		if ui.game.book.set_tattoo(entry.role,entry.texture,entry.id):ui.game.player.apply_tattoos();ui.refresh();ui.show_error("Dövme kaydedildi.")
 		else:ui.show_error("Dövme kaydedilemedi.")
 	,known)
-	ui.button(details,"Dövmeyi çıkar",Vector2(40,694),Vector2(280,28),func():
+	ui.button(details,"Dövmeyi çıkar",Vector2(664,710),Vector2(348,28),func():
 		if ui.game.book.set_tattoo(entry.role,""):ui.game.player.apply_tattoos();ui.show_error("Dövme çıkarıldı.");ui.refresh()
 		else:ui.show_error("Dövme çıkarılamadı.")
 	,known)
+
+	for node in details.get_children():
+		if node is RichTextLabel:node.size.y=126
+	ui.content.move_child(details,ui.content.get_child_count()-1)
 
 func build_power_slots():
 	var slots=[["support","İlkyardım"],["energy","Enerji"],["bag","Çanta"],["claw","Pençe"],["ability","Yetenek"]]
@@ -329,7 +391,7 @@ func build_power(entry):
 			ui.game.player.reset_locomotion();ui.refresh()
 		)
 		return
-	var count=int(ui.game.inbox.state.powerCounts.get(entry.id,0));var equipped=ui.game.inbox.state.powerSlots.get(entry.slot,"")==entry.id
+	var count=(1 if entry.get("offlineAvailable",false) and ui.game.book.offline_edition else int(ui.game.inbox.state.powerCounts.get(entry.id,0)));var equipped=ui.game.inbox.state.powerSlots.get(entry.slot,"")==entry.id
 	var copy=entry.description
 	if info_tab=="properties":
 		var tuning=entry.mobileTuning
@@ -338,7 +400,7 @@ func build_power(entry):
 			"support":copy+="YP yenileme: +%d\nRaunt başına: %d\nAnında iyileştirme" % [tuning.heal,tuning.usesPerRound]
 			"energy":copy+="Süre: %d sn\nHasar: +%%%d\nHız: +%%%d\nMevcut YP maliyeti: %%%d" % [tuning.seconds,roundi((tuning.damageMultiplier-1)*100),roundi((tuning.speedMultiplier-1)*100),roundi(tuning.healthCostFraction*100)]
 			"bag":copy+="Hedef başına GP: +%%%d" % roundi(tuning.localGpBonus*100)
-			"claw":copy+="Pençe hasarı: +%d" % tuning.damageBonus
+			"claw":copy+="Hasar: +%d / +%%%d\nMenzil: +%.2f / +%%%d" % [tuning.get("damageBonus",0),tuning.get("damagePercent",0),tuning.get("rangeBonus",0),tuning.get("rangePercent",0)]
 		copy+="\nKalan adet: %d" % count
 	body(copy)
 	ui.button(details,"Takılı · Çıkar" if equipped else "Kullan",Vector2(366,710),Vector2(140,28),func():
@@ -376,3 +438,13 @@ func weapon_properties(entry):
 		ui.text(details,row[0],Vector2(674,y),Vector2(115,21),11)
 		var bar=ProgressBar.new();bar.position=Vector2(790,y+5);bar.size=Vector2(151,9);bar.max_value=row[2];bar.value=row[1];bar.show_percentage=false;details.add_child(bar)
 		ui.text(details,"%.1f" % row[1],Vector2(947,y),Vector2(59,21),12,Color("9ae2d6"))
+
+func build_team_buttons(filter_characters):
+	for i in range(2):
+		var team="red" if i==0 else "blue"
+		var button=ui.button(details,"Kırmızı" if i==0 else "Mavi",Vector2(18+i*113,119),Vector2(106,27),func():
+			ui.preview_team=team
+			if filter_characters:ui.filter_id=team;ui.offset=0;refresh_grid()
+			else:show_details()
+		)
+		button.modulate=Color("eaaaaf") if i==0 else Color("a0cde5")

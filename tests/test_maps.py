@@ -44,7 +44,7 @@ class MapTests(unittest.TestCase):
         catalog=json.loads(raw);maps={m['number']:m for m in catalog['maps']};modes={m['id']:m for m in catalog['modes']}
         self.assertEqual(set(maps),set(SELECTED))
         self.assertEqual(catalog['selection'],list(SELECTED))
-        self.assertEqual(sum(bool(m['allowedModeIds']) for m in maps.values()),18)
+        self.assertEqual(sum(bool(m['allowedModeIds']) for m in maps.values()),len(SELECTED)-2)
         self.assertEqual(maps[46]['allowedModeIds'],[])
         self.assertNotIn(47,maps)
         self.assertEqual(set(maps[26]['allowedModeIds']),{3000,3001,3020,3021})

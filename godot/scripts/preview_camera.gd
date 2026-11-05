@@ -11,6 +11,17 @@ static func frame(camera: Camera3D, content: Node3D, viewport_size: Vector2) -> 
 		var box = transform * mesh.get_aabb()
 		bounds = bounds.merge(box) if found else box
 		found = true
+	# Static mesh AABBs describe the bind pose. Frame the displayed skeleton,
+	# including its animated root offset, so feet/head stay within the phone panel.
+	var posed=AABB();var posed_found=false
+	for skeleton in content.find_children("*","Skeleton3D",true,false):
+		for i in range(skeleton.get_bone_count()):
+			var name=str(skeleton.get_bone_name(i))
+			if not name.begins_with("Bip") or not ["Head","Neck","Spine","Pelvis","Clavicle","UpperArm","Forearm","Hand","Thigh","Calf","Foot","Toe0"].any(func(part):return part in name):continue
+			var point=content.to_local(skeleton.global_transform*skeleton.get_bone_global_pose(i).origin)
+			if not point.is_finite():continue
+			posed=posed.expand(point) if posed_found else AABB(point,Vector3.ZERO);posed_found=true
+	if posed_found and posed.size.y>0.2:bounds=posed.grow(0.18);found=true
 	if not found: return bounds
 	var center = content.to_global(bounds.get_center())
 	var aspect = maxf(0.1, viewport_size.x / maxf(1, viewport_size.y))

@@ -8,7 +8,8 @@ from pathlib import Path
 from scan_xfs import unpack_index,recover_entry
 
 ROOT=Path(__file__).resolve().parents[1]
-SELECTED=(58,59,65,72,1,2,26,31,44,46,50,110,57,100,97,92,82,83,84)
+ORIGINAL_SELECTED=(58,59,65,72,1,2,26,31,44,46,50,110,57,100,97,92,82,83,84)
+SELECTED=ORIGINAL_SELECTED+(36,69,87,17,51,89,37,42,20,24,68,41,56,61,106)
 
 def normalized(path):return re.sub('/+','/',path.replace('\\','/')).casefold()
 

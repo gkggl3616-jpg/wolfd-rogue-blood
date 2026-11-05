@@ -65,7 +65,7 @@ func run():
 	game.player.switch_form();await frames(22)
 	await contact();game.player.begin_wall_hold();await frames(135)
 	ensure(not game.player.wall_holding, "mobile hold duration is bounded")
-	var unsupported = game.book.characters.filter(func(row): return row.get("available") == true and not "wall_hold" in row.wolf.clips)
+	var unsupported = game.book.characters.filter(func(row): return row.get("available") == true and row.get("sourceTeam")==game.local_room.get("team","blue") and not "wall_hold" in row.wolf.clips)
 	ensure(not unsupported.is_empty(), "catalog retains characters without a wall-hold clip as unsupported for this move")
 	if not unsupported.is_empty():
 		game.select_library_character(unsupported[0]);await contact()

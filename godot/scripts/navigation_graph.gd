@@ -75,6 +75,15 @@ func connected(from,to):
  var a=component(from)
  return a>=0 and a==component(to)
 
+func join_points(from,to):
+ var a=component(from);var b=component(to)
+ if a<0 or b<0:return false
+ a=find(a);b=find(b)
+ if a!=b:parents[b]=a
+ for i in range(parents.size()):components[i]=find(i)
+ component_cache.clear()
+ return true
+
 func nearest_in_component(origin,target):
  var group=component(origin)
  if group<0:return null

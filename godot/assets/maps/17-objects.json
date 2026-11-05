@@ -1,0 +1,1448 @@
+[
+  {
+    "type": "WorldProperties",
+    "properties": {
+      "Name": "WorldProperties0",
+      "Pos": [
+        4608.0,
+        -192.0,
+        3392.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "FarZ": 100000.0,
+      "ClampFarZ": true,
+      "AllSkyPortals": false,
+      "Wind": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "EnvironmentMap": "Tex\\Chrome.dtx",
+      "LevelEndCmd": "",
+      "GlobalSoundFilter": "UnFiltered",
+      "FogInfo": 0.0,
+      "VFogInfo": 0.0,
+      "SkyPanning": 0.0,
+      "ProjShadows": 0.0,
+      "MusicControlFile": "Music\\NOLFOrch\\NOLFOrch.txt",
+      "MinMusicMood": "Routine",
+      "LMAnimStatic": false,
+      "AIMaxNumber": 30.0,
+      "VehicleMaxNumber": 12.0,
+      "FogEnable": true,
+      "FogColor": [
+        147.0,
+        138.0,
+        121.0
+      ],
+      "FogNearZ": 350.0,
+      "FogFarZ": 8000.0,
+      "SkyFogEnable": false,
+      "SkyFogNearZ": 100.0,
+      "SkyFogFarZ": 1000.0,
+      "VFog": false,
+      "VFogMinY": 0.0,
+      "VFogMaxY": 1300.0,
+      "VFogMinYVal": 0.5,
+      "VFogMaxYVal": 0.0,
+      "VFogDensity": 1800.0,
+      "VFogMax": 120.0,
+      "PanSkyTexture": "Tex\\SkyPan.dtx",
+      "PanSky": false,
+      "PanSkyOffsetX": 10.0,
+      "PanSkyOffsetZ": 10.0,
+      "PanSkyScaleX": 10.0,
+      "PanSkyScaleZ": 10.0,
+      "ShadowMinColorComponent": 40.0,
+      "ShadowMaxProjDist": 200.0,
+      "ShadowAlpha": 1.0
+    },
+    "sourceOffset": 239171,
+    "declaredBytes": 1115
+  },
+  {
+    "type": "StaticSunLight",
+    "properties": {
+      "Name": "StaticSunLight0",
+      "Pos": [
+        -3584.0,
+        1536.0,
+        2304.0
+      ],
+      "Rotation": [
+        0.7155849933624268,
+        2.989748954772949,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "InnerColor": [
+        242.0,
+        232.0,
+        179.0
+      ],
+      "BrightScale": 2.0,
+      "ConvertToAmbient": 0.8999999761581421,
+      "ObjectBrightScale": 1.0
+    },
+    "sourceOffset": 240288,
+    "declaredBytes": 245
+  },
+  {
+    "type": "DemoSkyWorldModel",
+    "properties": {
+      "Name": "DemoSkyWorldModel0",
+      "Pos": [
+        5888.0,
+        -256.0,
+        4352.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "SkyDims": [
+        256.0,
+        256.0,
+        256.0
+      ],
+      "Flags": 1.0,
+      "Index": 0.0,
+      "InnerPercentX": 0.0010000000474974513,
+      "InnerPercentY": 0.0010000000474974513,
+      "InnerPercentZ": 0.0010000000474974513
+    },
+    "sourceOffset": 240535,
+    "declaredBytes": 279
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint1",
+      "Pos": [
+        3072.0,
+        224.0,
+        688.0
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 240816,
+    "declaredBytes": 458
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint07",
+      "Pos": [
+        3016.0,
+        224.0,
+        791.3846435546875
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 241276,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint08",
+      "Pos": [
+        3072.0,
+        224.0,
+        894.7692260742188
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 241737,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint11",
+      "Pos": [
+        2904.0,
+        224.0,
+        894.7692260742188
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 242198,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint12",
+      "Pos": [
+        2904.0,
+        224.0,
+        791.3846435546875
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 242659,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint13",
+      "Pos": [
+        2960.0,
+        224.0,
+        688.0
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 243120,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint10",
+      "Pos": [
+        2904.0,
+        224.0,
+        1024.0
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 243581,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint09",
+      "Pos": [
+        3016.0,
+        224.0,
+        998.15380859375
+      ],
+      "Rotation": [
+        0.0,
+        4.71238899230957,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team1",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 244042,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint00",
+      "Pos": [
+        -3018.66650390625,
+        224.0,
+        -731.4716796875
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 244503,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint01",
+      "Pos": [
+        -3064.0,
+        224.0,
+        -837.73583984375
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 244964,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint02",
+      "Pos": [
+        -3018.66650390625,
+        224.0,
+        -944.0
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 245425,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint03",
+      "Pos": [
+        -2979.0,
+        224.0,
+        -592.0
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 245886,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint04",
+      "Pos": [
+        -2928.0,
+        224.0,
+        -678.339599609375
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 246347,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint05",
+      "Pos": [
+        -2928.0,
+        224.0,
+        -784.603759765625
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 246808,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint06",
+      "Pos": [
+        -2928.0,
+        224.0,
+        -890.867919921875
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 247269,
+    "declaredBytes": 459
+  },
+  {
+    "type": "GameStartPoint",
+    "properties": {
+      "Name": "GameStartPoint0",
+      "Pos": [
+        -3064.0,
+        224.0,
+        -625.20751953125
+      ],
+      "Rotation": [
+        0.0,
+        1.570796012878418,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "ModelTemplate": "Player",
+      "PhysicsModel": "Normal",
+      "Command": "",
+      "Locked": false,
+      "SendCommandOnRespawn": false,
+      "Team": "Team0",
+      "StartPoint": true,
+      "SpawnPoint": true,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true
+    },
+    "sourceOffset": 247730,
+    "declaredBytes": 458
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_Beneath",
+      "Pos": [
+        28.0,
+        -517.7579345703125,
+        130.37158203125
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        4500.0,
+        500.0,
+        3500.0
+      ]
+    },
+    "sourceOffset": 248190,
+    "declaredBytes": 151
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_upper",
+      "Pos": [
+        0.0,
+        1222.2421875,
+        120.74331665039062
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        4500.0,
+        500.0,
+        3500.0
+      ]
+    },
+    "sourceOffset": 248343,
+    "declaredBytes": 149
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex01",
+      "Pos": [
+        -3664.0,
+        320.0,
+        -64.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        288.0,
+        600.0,
+        1184.0
+      ]
+    },
+    "sourceOffset": 248494,
+    "declaredBytes": 148
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex02",
+      "Pos": [
+        3664.0,
+        320.0,
+        0.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        288.0,
+        600.0,
+        1312.0
+      ]
+    },
+    "sourceOffset": 248644,
+    "declaredBytes": 148
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex03",
+      "Pos": [
+        -2160.0,
+        320.0,
+        1056.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        1248.0,
+        600.0,
+        160.0
+      ]
+    },
+    "sourceOffset": 248794,
+    "declaredBytes": 148
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex04",
+      "Pos": [
+        1248.0,
+        320.0,
+        1312.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        2256.0,
+        600.0,
+        160.0
+      ]
+    },
+    "sourceOffset": 248944,
+    "declaredBytes": 148
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex05",
+      "Pos": [
+        2192.0,
+        320.0,
+        -1024.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        1248.0,
+        600.0,
+        160.0
+      ]
+    },
+    "sourceOffset": 249094,
+    "declaredBytes": 148
+  },
+  {
+    "type": "WDieArea",
+    "properties": {
+      "Name": "WDieArea_ex06",
+      "Pos": [
+        -1200.0,
+        320.0,
+        -1248.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Dims": [
+        2207.999755859375,
+        600.0,
+        160.0
+      ]
+    },
+    "sourceOffset": 249244,
+    "declaredBytes": 148
+  },
+  {
+    "type": "Ladder",
+    "properties": {
+      "Name": "Ladder0",
+      "Pos": [
+        1536.0,
+        128.0,
+        -64.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "Visible": false,
+      "Hidden": false,
+      "Friction": 1.0,
+      "TintColor": [
+        255.0,
+        255.0,
+        255.0
+      ],
+      "LightAdd": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "SoundFilter": "Dynamic",
+      "CanPlayMovementSounds": true,
+      "FogStuff": 0.0,
+      "SurfaceOverride": "Unknown",
+      "RayHit": false,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "FogEnable": false,
+      "FogFarZ": 300.0,
+      "FogNearZ": -100.0,
+      "FogColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "PhysicsModel": "Normal",
+      "Current": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Viscosity": 0.4000000059604645,
+      "Damage": 0.0,
+      "DamageType": "Unspecified"
+    },
+    "sourceOffset": 249394,
+    "declaredBytes": 721
+  },
+  {
+    "type": "WExplosionObjLadder",
+    "properties": {
+      "Name": "WExplosionObjLadder_Bluegem",
+      "Pos": [
+        -1792.0,
+        121.93812561035156,
+        32.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ExplosionObjID": 2.0,
+      "RenderStyle": "WT_RS\\RS_Gem.ltb",
+      "Event0": 0.0,
+      "Event1": 0.0,
+      "Event2": 0.0,
+      "Model0": "Worlds\\WExplosionObj\\BattleZone_L\\TargetStone.ltb",
+      "Skin0": "WT_Tex\\BattleZone_L\\BlueGem01.dtx",
+      "HP": 10000.0,
+      "SurfaceType": 40.0,
+      "Model1": "",
+      "Skin1": "",
+      "InstDmgWeaponId1": 0.0,
+      "ProgressiveDmgWeaponId1": 0.0,
+      "ProgressiveDmgTime1": -1.0,
+      "ProgressiveDmgInterval1": -1.0,
+      "Effect1_0": "",
+      "Effect1_1": "",
+      "Effect1_2": "",
+      "Effect1_DebrisId0": 43.0,
+      "Effect1_DebrisId1": -1.0,
+      "Effect1_DebrisId2": -1.0,
+      "Sound1": "WT_Snd\\FXsnd\\explosion_GlassShatter.wav",
+      "SoundRadius1": 3500.0,
+      "StateChangeTime": -1.0,
+      "Model2": "",
+      "Skin2": "",
+      "InstDmgWeaponId2": 0.0,
+      "ProgressiveDmgWeaponId2": 0.0,
+      "ProgressiveDmgTime2": -1.0,
+      "ProgressiveDmgInterval2": -1.0,
+      "Effect2_0": "",
+      "Effect2_1": "",
+      "Effect2_2": "",
+      "Effect2_DebrisId0": -1.0,
+      "Effect2_DebrisId1": -1.0,
+      "Effect2_DebrisId2": -1.0,
+      "Sound2": "",
+      "SoundRadius2": -1.0
+    },
+    "sourceOffset": 250117,
+    "declaredBytes": 1207
+  },
+  {
+    "type": "WExplosionObjLadder",
+    "properties": {
+      "Name": "WExplosionObjLadder_Redgem",
+      "Pos": [
+        1792.0,
+        121.93812561035156,
+        32.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ExplosionObjID": 1.0,
+      "RenderStyle": "WT_RS\\RS_Gem.ltb",
+      "Event0": 0.0,
+      "Event1": 0.0,
+      "Event2": 0.0,
+      "Model0": "Worlds\\WExplosionObj\\BattleZone_L\\TargetStone.ltb",
+      "Skin0": "WT_Tex\\BattleZone_L\\RedGem01.dtx",
+      "HP": 10000.0,
+      "SurfaceType": 40.0,
+      "Model1": "",
+      "Skin1": "",
+      "InstDmgWeaponId1": 0.0,
+      "ProgressiveDmgWeaponId1": 0.0,
+      "ProgressiveDmgTime1": -1.0,
+      "ProgressiveDmgInterval1": -1.0,
+      "Effect1_0": "",
+      "Effect1_1": "",
+      "Effect1_2": "",
+      "Effect1_DebrisId0": 44.0,
+      "Effect1_DebrisId1": -1.0,
+      "Effect1_DebrisId2": -1.0,
+      "Sound1": "WT_Snd\\FXsnd\\explosion_GlassShatter.wav",
+      "SoundRadius1": 3500.0,
+      "StateChangeTime": -1.0,
+      "Model2": "",
+      "Skin2": "",
+      "InstDmgWeaponId2": 0.0,
+      "ProgressiveDmgWeaponId2": 0.0,
+      "ProgressiveDmgTime2": -1.0,
+      "ProgressiveDmgInterval2": -1.0,
+      "Effect2_0": "",
+      "Effect2_1": "",
+      "Effect2_2": "",
+      "Effect2_DebrisId0": -1.0,
+      "Effect2_DebrisId1": -1.0,
+      "Effect2_DebrisId2": -1.0,
+      "Sound2": "",
+      "SoundRadius2": -1.0
+    },
+    "sourceOffset": 251326,
+    "declaredBytes": 1205
+  },
+  {
+    "type": "WorldModel",
+    "properties": {
+      "Name": "WorldModel0_statue",
+      "Pos": [
+        -768.0,
+        86.37557983398438,
+        1408.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "ExplosionProperties": 0.0,
+      "DebrisType": "None",
+      "SurfaceOverride": "Unknown",
+      "Visible": true,
+      "Solid": true,
+      "Rayhit": false,
+      "Gravity": false,
+      "BlendMode": "Translucent",
+      "BlockLight": false,
+      "BoxPhysics": false,
+      "FogDisable": false,
+      "IsKeyframed": false,
+      "StartHidden": false,
+      "Alpha": 1.0,
+      "Attachments": "",
+      "RemoveAttachments": true,
+      "AttachDir": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "Disturbances": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": true,
+      "CanRepair": true,
+      "CanDamage": false,
+      "Mass": 2000.0,
+      "CreateExplosion": false,
+      "WeaponId": 0.0,
+      "FireAlongForward": false,
+      "DamageFactor": 1.0,
+      "Spawn": "",
+      "NeverDestroy": true,
+      "DestroyAlarmLevel": 0.0,
+      "StimulusRadius": 0.0
+    },
+    "sourceOffset": 252533,
+    "declaredBytes": 1393
+  },
+  {
+    "type": "WorldModel",
+    "properties": {
+      "Name": "WorldModel4",
+      "Pos": [
+        2880.0,
+        256.0,
+        320.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "Template": false,
+      "GameType": 0.0,
+      "DamageProperties": 0.0,
+      "ExplosionProperties": 0.0,
+      "DebrisType": "None",
+      "SurfaceOverride": "Unknown",
+      "Visible": true,
+      "Solid": false,
+      "Rayhit": false,
+      "Gravity": false,
+      "BlendMode": "Translucent",
+      "BlockLight": true,
+      "BoxPhysics": false,
+      "FogDisable": false,
+      "IsKeyframed": false,
+      "StartHidden": false,
+      "Alpha": 1.0,
+      "Attachments": "",
+      "RemoveAttachments": true,
+      "AttachDir": [
+        0.0,
+        200.0,
+        0.0
+      ],
+      "Disturbances": 0.0,
+      "SinglePlayer": true,
+      "Cooperative": true,
+      "Deathmatch": true,
+      "TeamDeathmatch": true,
+      "DoomsDay": true,
+      "HitPoints": 100.0,
+      "MaxHitPoints": 100.0,
+      "Energy": 100.0,
+      "MaxEnergy": 100.0,
+      "Armor": 100.0,
+      "MaxArmor": 100.0,
+      "DamagePercentForCommand": 50.0,
+      "DamageTriggerCounter": 0.0,
+      "DamageCommand": "",
+      "DamageTriggerNumSends": 1.0,
+      "DamagerMessage": "",
+      "DeathCommand": "",
+      "DamagePercentCommand": "",
+      "PlayerDeathCommand": "",
+      "PlayerDamageCommand": "",
+      "KillerMessage": "",
+      "CanHeal": false,
+      "CanRepair": false,
+      "CanDamage": false,
+      "Mass": 2000.0,
+      "CreateExplosion": false,
+      "WeaponId": 0.0,
+      "FireAlongForward": false,
+      "DamageFactor": 1.0,
+      "Spawn": "",
+      "NeverDestroy": true,
+      "DestroyAlarmLevel": 0.0,
+      "StimulusRadius": 0.0
+    },
+    "sourceOffset": 253928,
+    "declaredBytes": 1386
+  },
+  {
+    "type": "SoundFX",
+    "properties": {
+      "Name": "SoundFX-birld",
+      "Pos": [
+        0.0,
+        1036.0,
+        40.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "StartOn": true,
+      "Sound": "WT_Snd\\MapSound\\am_birds_1.WAV",
+      "Priority": 0.0,
+      "OuterRadius": 1100.0,
+      "InnerRadius": 600.0,
+      "Volume": 100.0,
+      "PitchShift": 1.0,
+      "Ambient": true,
+      "Loop": true,
+      "PlayAttached": false,
+      "Filter": "UnFiltered"
+    },
+    "sourceOffset": 255316,
+    "declaredBytes": 376
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light_redgem",
+      "Pos": [
+        1794.26123046875,
+        160.0,
+        32.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 350.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        255.0,
+        128.0,
+        128.0
+      ],
+      "BrightScale": 1.0,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.0,
+      "ObjectBrightScale": 1.0,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 255694,
+    "declaredBytes": 547
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light_bluegem",
+      "Pos": [
+        -1792.0,
+        160.0,
+        32.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 350.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        128.0,
+        128.0,
+        255.0
+      ],
+      "BrightScale": 1.0,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.0,
+      "ObjectBrightScale": 1.0,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 256243,
+    "declaredBytes": 548
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light00",
+      "Pos": [
+        -3008.0,
+        359.0,
+        -768.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 440.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        239.0,
+        218.0,
+        163.0
+      ],
+      "BrightScale": 0.8999999761581421,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.699999988079071,
+      "ObjectBrightScale": 1.0,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 256793,
+    "declaredBytes": 542
+  },
+  {
+    "type": "Light",
+    "properties": {
+      "Name": "Light0",
+      "Pos": [
+        3072.0,
+        423.0,
+        640.0
+      ],
+      "Rotation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "RenderGroup": 0.0,
+      "ClipLight": true,
+      "LightObjects": true,
+      "FastLightObjects": false,
+      "CastShadows": true,
+      "CastShadowMesh": false,
+      "LightRadius": 440.0,
+      "LightAttenuation": 0.0,
+      "Attenuation": "Quartic",
+      "LightColor": [
+        239.0,
+        218.0,
+        163.0
+      ],
+      "BrightScale": 1.0,
+      "Size": 5.0,
+      "ConvertToAmbient": 0.20000000298023224,
+      "ObjectBrightScale": 1.0,
+      "AttType": "Default",
+      "AttCoefs": [
+        1.0,
+        0.0,
+        19.0
+      ],
+      "AttExps": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "LightGroup": ""
+    },
+    "sourceOffset": 257337,
+    "declaredBytes": 541
+  }
+]

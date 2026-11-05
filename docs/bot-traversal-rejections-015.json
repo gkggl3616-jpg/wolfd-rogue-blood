@@ -1,0 +1,38 @@
+{
+  "rejected": [
+    {
+      "map": 37,
+      "candidateIndex": 2,
+      "candidate": {
+        "backwardSeconds": 0.231280877039983,
+        "entry": [
+          -8.27052211761475,
+          2.15690803527832,
+          68.1186981201172
+        ],
+        "exit": [
+          -8.35052108764648,
+          1.55690574645996,
+          66.918701171875
+        ],
+        "feetEntry": [
+          -8.27052211761475,
+          1.922318816185,
+          68.1186981201172
+        ],
+        "feetExit": [
+          -8.35052108764648,
+          1.39578378200531,
+          66.918701171875
+        ],
+        "forwardSeconds": 0.231280877039983
+      },
+      "reason": "Both directions must launch and land within 0.85m in actual bot collision physics"
+    }
+  ],
+  "candidateFailures": [
+    "Physical link reaches its landing without teleport: 37/2/false",
+    "Physical link reaches its landing without teleport: 37/2/true"
+  ],
+  "finalLinkCount": 37
+}

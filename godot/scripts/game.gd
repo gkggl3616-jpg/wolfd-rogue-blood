@@ -308,6 +308,9 @@ func select_library_character(entry):
 	if not book.choose_character(entry.id):
 		for model in models:model.free()
 		announce("Karakter seçimi kaydedilemedi.");return false
+	if running and entry.get("sourceTeam",local_room.get("team","blue"))!=local_room.get("team","blue"):
+		for model in models:model.free()
+		return true
 	character_info=entry;player.apply_prepared_character(models);return true
 
 func weapon_capacity():
@@ -485,6 +488,11 @@ func start_round(with_selection=false):
 		announce("Özgün mod kuralları henüz tamamlanmadı.")
 		return false
 	close_round_selection();round_selection_enabled=with_selection
+	var team_character=book.character_for_team(local_room.get("team","blue"))
+	if not team_character.is_empty() and team_character.id!=character_info.id:
+		var models=player.prepare_character(team_character)
+		if models.is_empty():announce("Takım karakteri yüklenemedi.");return false
+		character_info=team_character;player.apply_prepared_character(models)
 	var map_number = int(local_room.get("map", 0))
 	var record = map_catalog.offline_record(map_number) if map_number != 0 else {}
 	if map_number != 0 and record.is_empty():
@@ -508,9 +516,9 @@ func start_round(with_selection=false):
 		remove_child(active_map)
 		active_map.queue_free()
 	set_arena_active(record.is_empty())
-	preview_spawn = Vector3(0, 0.1, 8)
+	preview_spawn = Vector3(0, 0.1, 12 if local_room.get("team","blue")=="blue" else -12)
 	preview_name = "Eğitim Arenası"
-	var spawn_yaw = 0.0
+	var spawn_yaw = 0.0 if local_room.get("team","blue")=="blue" else PI
 	if not record.is_empty():
 		active_map = load(record.previewAsset).instantiate()
 		active_map.set_meta("map_number",map_number)
@@ -520,7 +528,15 @@ func start_round(with_selection=false):
 		install_navigation(record.navigation,active_map)
 		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
 		ambient.map_number = map_number;active_map.add_child(ambient)
-		var anchor = record.startPoints[0]
+		var anchors=team_start_points(record,local_room.get("team","blue"))
+		if anchors.is_empty():announce("Takım doğma alanı doğrulanamadı.");return false
+		var anchor = anchors[0]
+		var opposing=team_start_points(record,"red" if local_room.get("team","blue")=="blue" else "blue")
+		for candidate in anchors:
+			var p=Vector3(candidate.position[0],candidate.position[1],candidate.position[2])
+			var nav=NavigationServer3D.map_get_closest_point(offline_navigation_map,p)
+			if opposing.any(func(other):return navigation_graph.connected(nav,NavigationServer3D.map_get_closest_point(offline_navigation_map,Vector3(other.position[0],other.position[1],other.position[2])))):
+				anchor=candidate;break
 		preview_spawn = Vector3(anchor.position[0], anchor.position[1], anchor.position[2])
 		spawn_yaw = float(anchor.yaw)
 		preview_name = map_catalog.map_record(map_number).displayName
@@ -630,6 +646,14 @@ func install_navigation(asset,parent):
 	NavigationServer3D.map_set_merge_rasterizer_cell_scale(map,0.1)
 	navigation_region.set_navigation_map(map);parent.add_child(navigation_region)
 	navigation_graph=NavigationGraph.new(navigation_region.navigation_mesh,navigation_region.global_transform)
+	if offline_map_number!=0 and FileAccess.file_exists("res://assets/maps/traversals.json"):
+		for row in JSON.parse_string(FileAccess.get_file_as_string("res://assets/maps/traversals.json")):
+			if int(row.number)!=offline_map_number or row.navigationSha256!=FileAccess.get_sha256(asset):continue
+			for spec in row.links:
+				var a=spec.entry;var b=spec.exit;var link=NavigationLink3D.new()
+				link.start_position=Vector3(a[0],a[1],a[2]);link.end_position=Vector3(b[0],b[1],b[2]);link.bidirectional=true;link.enter_cost=1.0;link.set_meta("traversal",spec)
+				link.set_navigation_map(map);parent.add_child(link)
+				navigation_graph.join_points(link.start_position,link.end_position)
 	NavigationServer3D.region_set_map(navigation_region.get_rid(),map)
 	NavigationServer3D.region_set_navigation_mesh(navigation_region.get_rid(),navigation_region.navigation_mesh)
 	NavigationServer3D.map_force_update(map)
@@ -771,13 +795,17 @@ func _process(delta):
 	update_hud()
 
 func spawn_enemy(kind="",difficulty=""):
-	var points = [Vector3(-10, 0.1, -10), Vector3(10, 0.1, -10), Vector3(0, 0.1, -18), Vector3(-15, 0.1, 10), Vector3(15, 0.1, 10)]
+	var team="red" if local_room.get("team","blue")=="blue" else "blue"
+	var zone_z=-12.0 if team=="red" else 12.0
+	var points = [Vector3(-6,0.1,zone_z),Vector3(0,0.1,zone_z),Vector3(6,0.1,zone_z)]
 	if offline_map_number != 0:
-		points = offline_spawn_points()
+		points = offline_spawn_points(team)
 		if points.is_empty(): return false
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
+	enemy.team=team
+	enemy.rotation.y=PI if team=="red" else 0.0
 	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else (hunt.enemy_kind() if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human")))
 	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
@@ -790,35 +818,53 @@ func notify_bot_noise(point,radius):
 	for enemy in enemies.get_children():
 		if not enemy.is_queued_for_deletion():enemy.hear_noise(point,radius)
 
-func offline_spawn_points():
-	var points = []
-	var nav_map = offline_navigation_map
-	if not nav_map.is_valid(): return points
-	NavigationServer3D.map_force_update(nav_map)
-	var origin = NavigationServer3D.map_get_closest_point(nav_map, player.position)
-	if origin.distance_to(player.position) > 4.0: return points
-	var capsule = CapsuleShape3D.new();capsule.radius = 0.44;capsule.height = 1.9
-	var clearance = PhysicsShapeQueryParameters3D.new();clearance.shape = capsule;clearance.collision_mask = 3
-	for i in range(48):
-		var angle = TAU * float(i % 16) / 16.0
-		var radius = 8.0 + 6.0 * int(i / 16)
-		var sample = origin + Vector3(cos(angle), 0, sin(angle)) * radius
-		var pos = NavigationServer3D.map_get_closest_point(nav_map, sample)
-		if pos.distance_to(sample) > 3.0 or pos.distance_to(origin) < 7.0: continue
-		if navigation_graph==null or not navigation_graph.connected(origin,pos):continue
-		var path = NavigationServer3D.map_get_path(nav_map, origin, pos, true)
-		if path.size() < 2 or path[-1].distance_to(pos) > 1.0: continue
-		var ray = PhysicsRayQueryParameters3D.create(pos + Vector3.UP * 1.5, pos - Vector3.UP * 2.0, 1)
-		var floor_hit = get_world_3d().direct_space_state.intersect_ray(ray)
-		if floor_hit.is_empty() or floor_hit.normal.y < 0.65: continue
-		pos = floor_hit.position + Vector3.UP * 0.12
-		clearance.transform = Transform3D(Basis.IDENTITY, pos + Vector3.UP * 0.95)
-		if not get_world_3d().direct_space_state.intersect_shape(clearance, 1).is_empty(): continue
-		var occupied = false
-		for enemy in enemies.get_children():
-			if enemy.position.distance_to(pos) < 2.5: occupied = true;break
-		if not occupied: points.append(pos)
+func team_start_points(record,team):
+	var tag="Team1" if team=="red" else "Team0"
+	var points=record.get("startPoints",[]).filter(func(row):return row.get("team")==tag)
+	# Two source worlds label one side NoTeam. Keep that original tag and
+	# explicitly adapt only the missing side for the local two-team rules.
+	if points.is_empty():points=record.get("startPoints",[]).filter(func(row):return row.get("team")=="NoTeam")
 	return points
+
+func offline_spawn_points(team=""):
+	if team=="":team="red" if local_room.get("team","blue")=="blue" else "blue"
+	var points=[];var reachable_points=[];var nav_map=offline_navigation_map
+	if not nav_map.is_valid():return points
+	var record=map_catalog.offline_record(offline_map_number)
+	var anchors=team_start_points(record,team)
+	if anchors.is_empty():return points
+	NavigationServer3D.map_force_update(nav_map)
+	var origin=NavigationServer3D.map_get_closest_point(nav_map,player.position)
+	var capsule=CapsuleShape3D.new();capsule.radius=0.44;capsule.height=1.9
+	var clearance=PhysicsShapeQueryParameters3D.new();clearance.shape=capsule;clearance.collision_mask=3
+	for anchor in anchors:
+		var base=Vector3(anchor.position[0],anchor.position[1],anchor.position[2])
+		for offset in [Vector3.ZERO,Vector3(1.2,0,0),Vector3(-1.2,0,0),Vector3(0,0,1.2),Vector3(0,0,-1.2)]:
+			var sample=base+offset
+			var pos=NavigationServer3D.map_get_closest_point(nav_map,sample)
+			if pos.distance_to(sample)>3 or pos.distance_to(base)>3.5:continue
+			if navigation_graph==null:continue
+			# Spawn membership is independent of whether this approximate render
+			# collision has a complete route between both source spawn zones.
+			# Bots patrol the actual team zone and pursue only reachable surfaces.
+			if navigation_graph.connected(pos,origin):
+				var path=NavigationServer3D.map_get_path(nav_map,pos,origin,true)
+				if path.size()<2 or path[-1].distance_to(origin)>1:continue
+			var ray=PhysicsRayQueryParameters3D.create(pos+Vector3.UP*1.5,pos-Vector3.UP*2,1)
+			var floor_hit=get_world_3d().direct_space_state.intersect_ray(ray)
+			if floor_hit.is_empty() or floor_hit.normal.y<0.65:continue
+			pos=floor_hit.position+Vector3.UP*0.12
+			var supported=NavigationServer3D.map_get_closest_point(nav_map,pos)
+			if absf(supported.y-floor_hit.position.y)>0.5 or Vector2(supported.x-pos.x,supported.z-pos.z).length()>0.35:continue
+			clearance.transform=Transform3D(Basis.IDENTITY,pos+Vector3.UP*0.95)
+			if not get_world_3d().direct_space_state.intersect_shape(clearance,1).is_empty():continue
+			var occupied=pos.distance_to(player.position)<3.5
+			for enemy in enemies.get_children():
+				if not enemy.is_queued_for_deletion() and enemy.position.distance_to(pos)<1.2:occupied=true;break
+			if not occupied and points.all(func(p):return p.distance_to(pos)>0.7):
+				points.append(pos)
+				if navigation_graph.connected(supported,origin):reachable_points.append(pos)
+	return reachable_points if not reachable_points.is_empty() else points
 
 func attack():
 	if not is_combat_active():return
@@ -879,8 +925,9 @@ func attack():
 func wolf_melee_hit(amount,reach,caption):
 	if not is_combat_active():return
 	player.cancel_cloak()
-	reach+=float(power_bonus("claw","rangeBonus",0))
-	amount=int(amount*wolf_damage_multiplier())+power_bonus("claw","damageBonus",0)
+	reach=reach*(1.0+float(gear_stats().rangePercent)/100.0)+float(power_bonus("claw","rangeBonus",0))
+	if is_instance_valid(player.claw_trail):player.claw_trail.begin()
+	amount=roundi(amount*wolf_damage_multiplier()*(1.0+float(gear_stats().damagePercent)/100.0))+int(power_bonus("claw","damageBonus",0))
 	for enemy in enemies.get_children():
 		if not running:break
 		var offset=enemy.global_position-player.global_position
@@ -918,12 +965,12 @@ func enemy_defeated(context={}):
 	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0,"weaponId":current_weapon_id if not player.is_wolf else "","attackerTeam":local_room.get("team","blue"),"targetTeam":"red" if local_room.get("team","blue")=="blue" else "blue"})
 	if kill_feed.size()>5:kill_feed.resize(5)
 	grant_money("cash", 25, "Arena hedef ödülü")
-	grant_money("gp", roundi(10*(1.0+float(power_bonus("bag","localGpBonus",0)))), "Arena gelişim ödülü")
+	grant_money("gp", roundi(10*(1.0+float(power_bonus("bag","localGpBonus",0))+float(gear_stats().gpPercent)/100.0)), "Arena gelişim ödülü")
 	if hunt.active:
 		hunt.round_kills+=1
 		if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
 	elif kills >= 10:
-		grant_money("gold", 10, "Arena tamamlandı")
+		grant_money("gold", roundi(10*(1+float(gear_stats().goldPercent)/100.0)), "Arena tamamlandı")
 		end_round("Arena tamamlandı")
 	update_hud()
 
@@ -1023,9 +1070,13 @@ func power_item(id):
 func power_bonus(slot,key,fallback):
 	var item=power_item(inbox.state.powerSlots.get(slot,""))
 	return item.get("mobileTuning",{}).get(key,fallback)
-func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else 100
+func max_health():return roundi(float(mutations.profile(player.mutation_id).health)*(1.0+float(gear_stats().healthPercent)/100.0)) if player.is_wolf else 100
 func wolf_damage_multiplier():return float(booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
-func wolf_speed_multiplier():return float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0
+func wolf_speed_multiplier():return (float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0)*(1.0+float(gear_stats().speedPercent)/100.0)
+func gear_stats():
+	var stats=book.tattoo_bonuses() if book!=null else {"rangePercent":0,"damagePercent":0,"healthPercent":0,"speedPercent":0,"gpPercent":0,"goldPercent":0}
+	for key in ["rangePercent","damagePercent"]:stats[key]+=float(power_bonus("claw",key,0))
+	return stats
 func seed_gifts():
 	if inbox.state.get("welcome",false):return
 	var pending=inbox.state.duplicate(true)
@@ -1076,7 +1127,8 @@ func buy_power(id,request):
 func equip_power_item(id):
 	if remote_player!="":return false
 	var item=power_item(id)
-	if item.is_empty() or int(inbox.state.powerCounts.get(str(id),0))<=0:return false
+	if item.is_empty():return false
+	if not (item.get("offlineAvailable",false) and book!=null and book.offline_edition) and int(inbox.state.powerCounts.get(str(id),0))<=0:return false
 	var pending=inbox.state.duplicate(true);pending.powerSlots[item.slot]=str(id)
 	if not save_wallet(null,null,null,pending):return false
 	inbox.state=pending;return true

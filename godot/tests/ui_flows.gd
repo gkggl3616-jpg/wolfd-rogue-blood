@@ -152,20 +152,20 @@ func run():
 	ensure(ui.modal!=null,"extra sections use a source dialog without covering native lobby labels")
 	await click(ui.links["Dövmeler"])
 	ensure(ui.page=="Dövmeler" and ui.modal==null,"tattoo collection is reachable from the visible navigation")
-	var unknown=game.book.tattoos.filter(func(row):return row.role=="unknown")[0];ui.selected=unknown;ui.detail_helper.show_details()
+	var unknown={"id":"unbound-test","name":"Unbound fixture","role":"unknown","texture":"res://assets/items/wolf-dash.png","description":"Test-only unsupported role"};ui.selected=unknown;ui.detail_helper.show_details()
 	ensure(ui.links["Bölge belirsiz"].disabled,"unproved tattoo UV roles remain unequippable")
 	ui.navigate("power");await frames()
-	var icon=ui.detail_helper.grid.get_child(0).get_child(0)
+	var icon=ui.detail_helper.grid.get_child(0).get_children().filter(func(node):return node is TextureRect)[0]
 	ensure(icon.size.x<=205 and icon.size.y<=72,"large source ability image stays inside its card")
 	var body=ui.detail_helper.details.get_children().filter(func(node):return node is RichTextLabel)[0]
 	ensure(not body.fit_content and body.scroll_active and body.get_rect().end.y<=738,"long item text scrolls inside the lower details panel")
-	ensure(ui.detail_helper.entries.size()==7 and ui.content.find_children("*","BaseButton",true,false).size()>=5,"power page shows five real equipment slots and seven usable item records")
+	ensure(ui.detail_helper.entries.size()==game.power_catalog.items.size()+game.equipment.rules.items.size() and ui.content.find_children("*","BaseButton",true,false).size()>=5,"power page shows five real equipment slots and seven usable item records")
 	ui.close_menu();await frames()
 	ensure(not game.menu_open and game.library_panel==null,"closing collection resumes without orphaned menu")
 	game.show_home();root.size=Vector2i(1024,768);game.show_front_screen("servers");await frames()
 	ensure(game.pc_panel.page=="servers" and game.pc_panel.is_inside_tree(),"resize followed by immediate screen replacement cannot rebuild the detached previous menu")
 	game.show_home();ui=game.pc_panel;ui.navigate("create_room");await frames()
-	ensure(ui.room_map.item_count==20,"offline room offers all 19 real maps plus the training arena")
+	ensure(ui.room_map.item_count==35,"offline room offers all 34 real maps plus the training arena")
 	for index in range(ui.room_map.item_count):
 		if ui.room_map.get_item_id(index)==84:
 			ui.room_map.select(index);ui.room_map.item_selected.emit(index)

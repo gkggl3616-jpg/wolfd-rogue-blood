@@ -61,7 +61,7 @@ func run():
 	var tattoo = migrated.tattoos.filter(func(row): return row.get("role") == "body")[0]
 	ensure(not migrated.set_tattoo("body", tattoo.texture) and migrated.selected_tattoos.is_empty(), "failed tattoo save rolls back")
 	ensure(not migrated.set_tattoo("left", tattoo.texture), "body tattoo cannot be assigned to arm UV")
-	var unknown = migrated.tattoos.filter(func(row): return row.get("role") == "unknown")[0]
+	var unknown = {"texture":"res://__missing_unbound_tattoo__.png","role":"unknown"}
 	ensure(not migrated.set_tattoo("body", unknown.texture), "unresolved tattoo role cannot be guessed")
 	ensure(FileAccess.get_file_as_bytes(path) == original_bytes, "write failure leaves previous collection byte-for-byte intact")
 	DirAccess.remove_absolute(path + ".pending")

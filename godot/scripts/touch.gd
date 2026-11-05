@@ -130,7 +130,7 @@ func _input(event):
 	elif event is InputEventScreenDrag and can_control():
 		if event.index == move_finger:
 			update_stick(event.position)
-		elif event.index == look_finger:
+		elif event.index == look_finger or (action_fingers.get(event.index,"")=="fire" and not game.player.is_wolf):
 			game.player.look(event.relative * (720.0 / maxf(1.0, last_size.y)))
 
 func _unhandled_input(event):

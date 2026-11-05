@@ -21,7 +21,7 @@ func run():
 	game.test_mode = true
 	root.add_child(game)
 	await frames(3)
-	if not ensure(game.map_catalog.valid and game.map_catalog.data.maps.size() == 19,"exactly nineteen selected maps load"):return
+	if not ensure(game.map_catalog.valid and game.map_catalog.data.maps.size() == 34,"exactly thirty-four selected maps load"):return
 	if not ensure(game.map_catalog.belongs_to_mode(3001,26) and not game.map_catalog.belongs_to_mode(1001,26),"Cappadocia belongs to destruction and cannot leak into deathmatch"):return
 	if not ensure(game.map_catalog.belongs_to_mode(6010,72) and not game.map_catalog.belongs_to_mode(3001,72),"Ruins is restricted to its wolf rush modes"):return
 	if not ensure(game.map_catalog.belongs_to_mode(5000,82) and not game.map_catalog.belongs_to_mode(1001,82),"Secret Lab is restricted to wolfhunt"):return

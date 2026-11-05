@@ -363,6 +363,1022 @@
       "modelSha256": "81ac6d0f16cefd07e07494f7215c43f22c309cacf119a2f681364572dbbaaabe",
       "sourceTexture": "wt_interface/item/character/lin meiling nano_n.dtx",
       "sourceSha256": "126178728fbafdf85ce85ba7200d1beee246e922b5c52d1849b4b10ebb7f6bd1"
+    },
+    "pair-model21": {
+      "asset": "res://assets/full_ui/textures/a440953ec8d463b6391352d8.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model21-human.glb",
+      "modelSha256": "48b7a5aa27ffd8210815818405c3e7ebc99faeae65caf2c43159419f4e56c4f8",
+      "sourceTexture": "wt_interface/item/character/angela.dtx",
+      "sourceSha256": "fd628572937593e6efe97026958f94f5292cff4317d39b848711430ef78df371"
+    },
+    "pair-model23": {
+      "asset": "res://assets/full_ui/textures/d6507cc7896d87a49fbc3e00.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model23-human.glb",
+      "modelSha256": "c2db5cb476de3b8802a4838f620f3fef48433f4c3732ac11be043f3ed6b5f919",
+      "sourceTexture": "wt_interface/item/character/christopher.dtx",
+      "sourceSha256": "3b8e2cde912e63deabbb233617014e75899a9bd0eaea2d5394de4830a584d8ef"
+    },
+    "pair-model20": {
+      "asset": "res://assets/full_ui/textures/1c63743daf395150e5f75507.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model20-human.glb",
+      "modelSha256": "9ea83379715f8f2986733cc975da35ffa50760781e647e07e3ce579ca573ae23",
+      "sourceTexture": "wt_interface/item/character/adriana.dtx",
+      "sourceSha256": "a13ebcc824ddeab904e0e374abd5fee48149678a88fe0efa378ece8b21d2d632"
+    },
+    "pair-model22": {
+      "asset": "res://assets/full_ui/textures/eb9b5f39ae6e594dda09bfe8.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model22-human.glb",
+      "modelSha256": "b8bf11acd4b3545b64d33326651d8dc995afe752cc5a7c49ce0a9c1187ea9601",
+      "sourceTexture": "wt_interface/item/character/pedro.dtx",
+      "sourceSha256": "52938c13f0973a1a5ebdd1ab8e7601729a80da8a5dd0280cfc43d40e9354fffe"
+    },
+    "pair-model42": {
+      "asset": "res://assets/full_ui/textures/6b28a5df4cf88512da0b1ede.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model42-human.glb",
+      "modelSha256": "2e802379aabc39ed980a29672e37e2bf9370940d687f508a7e2e3b2e82fd9640",
+      "sourceTexture": "wt_interface/item/character/marien.dtx",
+      "sourceSha256": "63b9b993d4edca3b6474c8e0c38bb976796c480fa1738dd3d9a804c36277a668"
+    },
+    "pair-model40": {
+      "asset": "res://assets/full_ui/textures/0fdb3544f94d9aa56e88cb9c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model40-human.glb",
+      "modelSha256": "1570482534a2c59b4950244e17872c704be6bdf5d75408458c098ce1b2e85b33",
+      "sourceTexture": "wt_interface/item/character/reinhard.dtx",
+      "sourceSha256": "0a024c33c48b1444b95e18ff817db53a2f7005cdc7c9a5a983d929714881d63a"
+    },
+    "pair-model38": {
+      "asset": "res://assets/full_ui/textures/49e79443e12804314dbcd798.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model38-human.glb",
+      "modelSha256": "57840cae5e60711ad27cf9dd1962c042fd4ce761d3e9aa2b9a06781d9734ba73",
+      "sourceTexture": "wt_interface/item/character/lin.dtx",
+      "sourceSha256": "d05584d503683ec940e018c2972d345b749e692345251be6ff2e1e7c5fb13f40"
+    },
+    "pair-model36": {
+      "asset": "res://assets/ui/character_portraits/pair-model36.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model36-human.glb",
+      "modelSha256": "c310b1626489d043fef8095599f67eca8981a89daaff7f67d4799b4a406cad3c"
+    },
+    "pair-model44": {
+      "asset": "res://assets/ui/character_portraits/pair-model44.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model44-human.glb",
+      "modelSha256": "0edb37e26ed12733ed662a30437e98492ae962efada0086c7a68506c48f31dd9"
+    },
+    "pair-model46": {
+      "asset": "res://assets/ui/character_portraits/pair-model46.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model46-human.glb",
+      "modelSha256": "0084a0db25f4ccad335d0133cd1c672d256ae123cd2a698143e3236502adb579"
+    },
+    "pair-model50": {
+      "asset": "res://assets/ui/character_portraits/pair-model50.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model50-human.glb",
+      "modelSha256": "d258b5ea2d2b4d9fd49e9398eebb4046782ca169df47f5eb2200031b17e985ad"
+    },
+    "pair-model52": {
+      "asset": "res://assets/full_ui/textures/fa313dc8ba5536b4ebfda5c4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model52-human.glb",
+      "modelSha256": "9003e06b92ce15d8d6a3b225c0fb8864564795c9bf45c0b04f0d43da632824cd",
+      "sourceTexture": "wt_interface/item/character/tomita.dtx",
+      "sourceSha256": "c55e3d68c2602abde3a37fe4afb2b171bc20120aa44157cef7fab504601aec72"
+    },
+    "pair-model54": {
+      "asset": "res://assets/full_ui/textures/9e78025742c061424ce87ce9.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model54-human.glb",
+      "modelSha256": "7dcd0a194cb9bd682e1a1ba9a1e741216a54e9329bd313dc84ae67b82578c47d",
+      "sourceTexture": "wt_interface/item/character/yigit.dtx",
+      "sourceSha256": "a60662cc398219318d8fb4c3cdc930685d37c291d7e4a1857a3da31fe326c86c"
+    },
+    "pair-model56": {
+      "asset": "res://assets/ui/character_portraits/pair-model56.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model56-human.glb",
+      "modelSha256": "00b1db1e10bbf60681ce5939beccda2a09c6ecd44d367d9041863efb00c218cb"
+    },
+    "pair-model76": {
+      "asset": "res://assets/ui/character_portraits/pair-model76.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model76-human.glb",
+      "modelSha256": "88d1d90f3fe8f4abbf7509e410e5952ed2582622d956b8f79c42f7da17b7eac1"
+    },
+    "pair-model80": {
+      "asset": "res://assets/ui/character_portraits/pair-model80.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model80-human.glb",
+      "modelSha256": "614771acde0fd3d527fa8cc14429c851b6ff846e6abbc956208b4616799a69ca"
+    },
+    "pair-model62": {
+      "asset": "res://assets/full_ui/textures/a82aac3ae4ba69733fadf760.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model62-human.glb",
+      "modelSha256": "6e6f3e00ff290c4101728618cd971a1d07481782df3a76fd85291ce17619e062",
+      "sourceTexture": "wt_interface/item/character/adriana_adult.dtx",
+      "sourceSha256": "b8ecaf655131eb316696bfad8c859f5fda127b22d26a3f0bb1028d5c09b64864"
+    },
+    "pair-model63": {
+      "asset": "res://assets/full_ui/textures/a440953ec8d463b6391352d8.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model63-human.glb",
+      "modelSha256": "a27024c3223bfed13615f7eba6c291ad68dd19d9365f3d77ac7bc1207a97a783",
+      "sourceTexture": "wt_interface/item/character/angela.dtx",
+      "sourceSha256": "fd628572937593e6efe97026958f94f5292cff4317d39b848711430ef78df371"
+    },
+    "pair-model64": {
+      "asset": "res://assets/full_ui/textures/49e79443e12804314dbcd798.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model64-human.glb",
+      "modelSha256": "a84ad323ec17afe94c4bd9bcc2096ebad19840c56b95d08c173d83eb30d5aa9d",
+      "sourceTexture": "wt_interface/item/character/lin.dtx",
+      "sourceSha256": "d05584d503683ec940e018c2972d345b749e692345251be6ff2e1e7c5fb13f40"
+    },
+    "pair-model65": {
+      "asset": "res://assets/full_ui/textures/6b28a5df4cf88512da0b1ede.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model65-human.glb",
+      "modelSha256": "275e7eef8de75d8ea77564f6088f2b5b3e1241b2591c01f5454736e61e83b7a1",
+      "sourceTexture": "wt_interface/item/character/marien.dtx",
+      "sourceSha256": "63b9b993d4edca3b6474c8e0c38bb976796c480fa1738dd3d9a804c36277a668"
+    },
+    "pair-model82": {
+      "asset": "res://assets/full_ui/textures/6fb050b0275c6957d320413e.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model82-human.glb",
+      "modelSha256": "eb6fe0436b508abefe8d8682668118e6f24024af780e15196104dc9c657c2a87",
+      "sourceTexture": "wt_interface/item/character/angela_soccer.dtx",
+      "sourceSha256": "8feb037b38955bab28896a750a6afcb781f6463f9b1128c99a8bd7a90c085b6b"
+    },
+    "pair-model83": {
+      "asset": "res://assets/full_ui/textures/9eb05296b3a94470775903b2.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model83-human.glb",
+      "modelSha256": "93e1b7b4348d3f094e9fc5102dd01d46c3082e48f3398e3f28dd10f5863bd097",
+      "sourceTexture": "wt_interface/item/character/christopher_soccer.dtx",
+      "sourceSha256": "4884d0c434230b808b8bb2430eb11e501a4beefc4a5c0bf6059a71f59321aeb1"
+    },
+    "pair-model84": {
+      "asset": "res://assets/full_ui/textures/e818f8529ee6ff3f7bb58b7b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model84-human.glb",
+      "modelSha256": "90903e92e0190503b6d9d39d6f1f07135ee0b5b1eba35caf2aefdce615b9cc69",
+      "sourceTexture": "wt_interface/item/character/adriana_soccer.dtx",
+      "sourceSha256": "fc53ffb1a37f2d98a3c80999acbfd65e36c64b77abfd8090dab80117cab521bb"
+    },
+    "pair-model85": {
+      "asset": "res://assets/full_ui/textures/06bd30ffe7a41c41909c0a90.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model85-human.glb",
+      "modelSha256": "cc35d220e537573e8199ec2e21f0507caa60f32828616495f9fcf84d88e65115",
+      "sourceTexture": "wt_interface/item/character/pedro_soccer.dtx",
+      "sourceSha256": "6ced06590d2c03db8c09006b4a3f46dd9c0b9183f0365d9bf6c59edf414cc443"
+    },
+    "pair-model86": {
+      "asset": "res://assets/full_ui/textures/7e444e56b6787ebab317b0d0.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model86-human.glb",
+      "modelSha256": "e603e7e80e0e112831931171b8da0f1dd9ec3a7febf6e54b9ca19d70fbe2ab98",
+      "sourceTexture": "wt_interface/item/character/marien_soccer.dtx",
+      "sourceSha256": "3cbfbdd68e80a15322306c7daf4d23e506141721a34b399bd9bea784c9cfe1ab"
+    },
+    "pair-model87": {
+      "asset": "res://assets/full_ui/textures/ddc5f1e5b4431690cc0d8414.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model87-human.glb",
+      "modelSha256": "02487c6946d3646f8494586f8a08018b2d13ca984477e59bfaf1dfaa134cd0b1",
+      "sourceTexture": "wt_interface/item/character/reinhard_soccer.dtx",
+      "sourceSha256": "0ac85565b26af65336fb0f58dbcf61ae0f39dddaab6b4dcfa3153332b31b6c3f"
+    },
+    "pair-model88": {
+      "asset": "res://assets/ui/character_portraits/pair-model88.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model88-human.glb",
+      "modelSha256": "67b826a535c4c10e4560491bc198f8c199caf0c7baf1eda2c3bd7238e0b24efc"
+    },
+    "pair-model89": {
+      "asset": "res://assets/ui/character_portraits/pair-model89.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model89-human.glb",
+      "modelSha256": "5b9a9e6d3a10bc6abd74ded9055b17445fd704037d6a38f64c0649613374a68e"
+    },
+    "pair-model92": {
+      "asset": "res://assets/ui/character_portraits/pair-model92.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model92-human.glb",
+      "modelSha256": "f3058ebe404c48e7a1d8c789a6e0d3f7effe24bbd1e32144afe58bf92941bfda"
+    },
+    "pair-model93": {
+      "asset": "res://assets/ui/character_portraits/pair-model93.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model93-human.glb",
+      "modelSha256": "224b37cadc2c065efc50ee68097fa84a535d9f6d68655c23444849500f0be58c"
+    },
+    "pair-model90": {
+      "asset": "res://assets/ui/character_portraits/pair-model90.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model90-human.glb",
+      "modelSha256": "9db8eb66e9025eb30f0bf7060a7678c0c67eb7d30c98a41c712d6d5a202fc4b3"
+    },
+    "pair-model91": {
+      "asset": "res://assets/ui/character_portraits/pair-model91.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model91-human.glb",
+      "modelSha256": "78480a0f50adf986877857144ba55e08e278c7d93491ee77eac2c1e64fe7f2ad"
+    },
+    "pair-model96": {
+      "asset": "res://assets/full_ui/textures/af84029009bbe3ab7e7c82dc.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model96-human.glb",
+      "modelSha256": "444bd7c084dd32c78372ac523cdc91fd31b3ecc31f758ce306b93c6cc693b00f",
+      "sourceTexture": "wt_interface/item/character/pedro_tsc.dtx",
+      "sourceSha256": "d90b954d99271d8a08ce4afd1f6bd77289e1deb3fda27989fdc012e5ca2ad490"
+    },
+    "pair-model98": {
+      "asset": "res://assets/full_ui/textures/b072aca7c6a120da2916fe09.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model98-human.glb",
+      "modelSha256": "217b2a4cc00ec80aa876e6995e3d42ac36d5195a31fb52ef89dde04ff665fdd2",
+      "sourceTexture": "wt_interface/item/character/hamadah_tsc.dtx",
+      "sourceSha256": "3902f2bb5c2cfbcfca835f2d0782c96d62568f477c4de8108300be368c0cb48a"
+    },
+    "pair-model116": {
+      "asset": "res://assets/full_ui/textures/0e836ccda6299894124ac37f.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model116-human.glb",
+      "modelSha256": "c287d97aa51b4e56383400149a9d9713a2ce4a9876aa6d216849ad8df5e47eea",
+      "sourceTexture": "wt_interface/item/character/ivanov_military.dtx",
+      "sourceSha256": "03a844954762aae4cb5dc6b729f1e4d3aff2fd107148045693da270810df9d52"
+    },
+    "pair-model118": {
+      "asset": "res://assets/full_ui/textures/f884e3c6e5bc22575f72cd2f.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model118-human.glb",
+      "modelSha256": "9be8f7344a411f1bce069aae9b2e67c79e6a950301a4877b8952fecc3ad76300",
+      "sourceTexture": "wt_interface/item/character/yigit_military.dtx",
+      "sourceSha256": "336e7d65f5995ffc1764c904fdbe654cd389358241a04c38625177b47dabdbda"
+    },
+    "pair-model120": {
+      "asset": "res://assets/full_ui/textures/a520ee179ebcf98d6c0a2af6.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model120-human.glb",
+      "modelSha256": "919e3227e55f39788055a336110cbd962472b7dabe394526c56e5b69df4b1dd5",
+      "sourceTexture": "wt_interface/item/character/tomita_military.dtx",
+      "sourceSha256": "7a6bd2cf7a2bd0218aa398ea626685390728572ab1153db2b4a37cecef1c9715"
+    },
+    "pair-model122": {
+      "asset": "res://assets/full_ui/textures/85da895535b0bd278fadf03b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model122-human.glb",
+      "modelSha256": "9061499eef94ca7b700fe51423df07d58cd3ad300a2c7332ce2cd8cd649f0b35",
+      "sourceTexture": "wt_interface/item/character/matt_christmas.dtx",
+      "sourceSha256": "ece87da8a18a399d98d0449225227b483a2e021af443f3c9b2608e11a3ce1b2d"
+    },
+    "pair-model124": {
+      "asset": "res://assets/full_ui/textures/07484a3df32ac9f2cf37f6d5.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model124-human.glb",
+      "modelSha256": "c9f6df23a8e2895849d1e60a6fe6b35ac76fa0e25ce189e4acf99fe833a6adf2",
+      "sourceTexture": "wt_interface/item/character/kate_christmas.dtx",
+      "sourceSha256": "b5ffe811324cfede73e34121f12aee3d37ebdaaca8ff8317b41b3b5f26546648"
+    },
+    "pair-model126": {
+      "asset": "res://assets/full_ui/textures/7e355a73bf6139d10bbe74a4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model126-human.glb",
+      "modelSha256": "d809947b5fd034293716a8045f1adb1762b37c85e55fe2a64e2d4ae24108a7b7",
+      "sourceTexture": "wt_interface/item/character/riccardo_christmas.dtx",
+      "sourceSha256": "83636411cc8bbc5e60975206de22e095c88e268cfd2aae1abaa2a17c9b9e7984"
+    },
+    "pair-model128": {
+      "asset": "res://assets/full_ui/textures/419e41a3979c189f5086ebfa.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model128-human.glb",
+      "modelSha256": "0d5d2eee2a9bc8428c0baf3bd1707649eb1506a3144aa1ba44cf24d2a0f7089f",
+      "sourceTexture": "wt_interface/item/character/sarah_christmas.dtx",
+      "sourceSha256": "678ac17a1a2c4b9e362d49e6215709ed805aa0046dfe0168c5a3b9451141b408"
+    },
+    "pair-model130": {
+      "asset": "res://assets/ui/character_portraits/pair-model130.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model130-human.glb",
+      "modelSha256": "10ea8454c1316aaae87654517466f0068baadb34aa63e675def71161824c59c2"
+    },
+    "pair-model132": {
+      "asset": "res://assets/full_ui/textures/4631dc3026cd77549eeea5d6.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model132-human.glb",
+      "modelSha256": "46933fb977d0110f99856e11d9e0a784bc194681f1107aa9760f4bef4aec1474",
+      "sourceTexture": "wt_interface/item/character/ivanov_suit.dtx",
+      "sourceSha256": "2fcaee296083a7915f46615427cf51bfd679088b209da8c9460aa2c6c82a456b"
+    },
+    "pair-model134": {
+      "asset": "res://assets/full_ui/textures/3d8024e350622cfd8c2c3c35.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model134-human.glb",
+      "modelSha256": "af41207157c897ce0830febcec39c2c3fd6e6ce4256116f8c7e5e22a6ff0a45e",
+      "sourceTexture": "wt_interface/item/character/yigit_suit.dtx",
+      "sourceSha256": "d887799d067a4a4230acedf97b1733975d4715efac7de9dc969c0fef372eb8ec"
+    },
+    "pair-model136": {
+      "asset": "res://assets/full_ui/textures/4059e8d0558aa3ba370f6a89.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model136-human.glb",
+      "modelSha256": "1419efb88bd2c2bc92a01f5f22fd5f437583cfce42b5ce633a7ef1ba1e30846c",
+      "sourceTexture": "wt_interface/item/character/tomita_suit.dtx",
+      "sourceSha256": "572f25913938c5f9658d82ed43aef57ea7a215241c59ea94b821de785666a235"
+    },
+    "pair-model138": {
+      "asset": "res://assets/full_ui/textures/77c448357685a87a5d687feb.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model138-human.glb",
+      "modelSha256": "21a85225b8dab39d2f33f110afae354bdef7df15156398d5ea38faf8c427f679",
+      "sourceTexture": "wt_interface/item/character/geremi_valentine.dtx",
+      "sourceSha256": "d8f48c1455bee51ceef578349fe0ba0077658f9785fc42aa7ea152ee0f0a5aef"
+    },
+    "pair-model140": {
+      "asset": "res://assets/full_ui/textures/20a6938cd22ebc7f1345fde3.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model140-human.glb",
+      "modelSha256": "9275fda25f28e5739c6c231f44bb026ca10ab1fb3c241cb879d5f9d3c3b31554",
+      "sourceTexture": "wt_interface/item/character/ivanov_valentine.dtx",
+      "sourceSha256": "ed860efef275ca9d84ee85c985e2904dc89d77691ceb5fd2278faf22b15ed1da"
+    },
+    "pair-model142": {
+      "asset": "res://assets/full_ui/textures/95c3b6bcf95dc203b2a4a627.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model142-human.glb",
+      "modelSha256": "7909d680f6ce123462e9870c748ed47fd8ef3af465cf8a8cec6c8fce29a87b04",
+      "sourceTexture": "wt_interface/item/character/yigit_valentine.dtx",
+      "sourceSha256": "2cc3acf71d20bec4460fb54ba4a911b519703d1ddd9f231316d272d70d59d7b9"
+    },
+    "pair-model144": {
+      "asset": "res://assets/full_ui/textures/1fb611be68abdf14abfff50f.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model144-human.glb",
+      "modelSha256": "7f712240e4c0c2b6d6634ef6fbd851b098aff3fa484db366d765192829f27e46",
+      "sourceTexture": "wt_interface/item/character/tomita_valentine.dtx",
+      "sourceSha256": "89f6c2bc8190c0f70b028ed456ade9146f0482d8b469495ada5a9b635aa25721"
+    },
+    "pair-model146": {
+      "asset": "res://assets/ui/character_portraits/pair-model146.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model146-human.glb",
+      "modelSha256": "284a8615576bc675878f22501ad381f27f308c7f00755a9f8a86365d6242d7b0"
+    },
+    "pair-model148": {
+      "asset": "res://assets/ui/character_portraits/pair-model148.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model148-human.glb",
+      "modelSha256": "f940666e224407db623fc988a4ae04f9d740aac1895c5aff259ad87b30df5cdc"
+    },
+    "pair-model150": {
+      "asset": "res://assets/ui/character_portraits/pair-model150.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model150-human.glb",
+      "modelSha256": "552949b584fc15d4ea1ddead07466078394a9d0e8d8fab1edd0eeaaf81ec8ab3"
+    },
+    "pair-model152": {
+      "asset": "res://assets/ui/character_portraits/pair-model152.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model152-human.glb",
+      "modelSha256": "8f212ad37f84cd421a345b99f4ae02870db1b81cd602a126c50b25d1fb3b56b1"
+    },
+    "pair-model154": {
+      "asset": "res://assets/full_ui/textures/56b936b0b3ea5b39d9ad9fad.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model154-human.glb",
+      "modelSha256": "4a7c7fdcbd6f8048f9007ce82dcfa8d6948572adac70e7afc8fdae03231278a5",
+      "sourceTexture": "wt_interface/item/character/marien_gi.dtx",
+      "sourceSha256": "8d7ffe480660380ea286fdd3e3266f6d9346e3823a8abab82ed4cda7081c2fdc"
+    },
+    "pair-model156": {
+      "asset": "res://assets/full_ui/textures/804c3c860838f3ca6857710d.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model156-human.glb",
+      "modelSha256": "7fd064e10b1395ab7f919c10477c49f4eb0813d60ac2b1ab9fd0f517d374d591",
+      "sourceTexture": "wt_interface/item/character/reinhard_gi.dtx",
+      "sourceSha256": "2e8c03880594161d655ec88f4b16cbee4039fdf951128bb8fcfa7528c5096f44"
+    },
+    "pair-model158": {
+      "asset": "res://assets/full_ui/textures/2c438df486823edd8b1ce45c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model158-human.glb",
+      "modelSha256": "cc4e52646b93a4559b864e41cb001bf5cd39e7b342189c2a6d72d84122cada4c",
+      "sourceTexture": "wt_interface/item/character/lin_gi.dtx",
+      "sourceSha256": "6626d5535f3e15325630094183340c5c49cc5736477c6a4a8d5765e2474fa42d"
+    },
+    "pair-model160": {
+      "asset": "res://assets/full_ui/textures/9f4292e0fb27b790278fa498.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model160-human.glb",
+      "modelSha256": "97d79b4f055e3acd8bc7c75bee7c618d99864f81a24ec0b994d0667316ebfe64",
+      "sourceTexture": "wt_interface/item/character/hamadah_gi.dtx",
+      "sourceSha256": "cf93d6d388fe02b239dd51cd67501f7ab93223a399011836c5770cc67ef329dd"
+    },
+    "pair-model162": {
+      "asset": "res://assets/ui/character_portraits/pair-model162.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model162-human.glb",
+      "modelSha256": "7542f9ee5a5de194b3976b24bd3b485ac73818fe79989b1d635d295836a627b9"
+    },
+    "pair-model164": {
+      "asset": "res://assets/ui/character_portraits/pair-model164.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model164-human.glb",
+      "modelSha256": "641abbbb93e79339667a26ce2385bed7e88e40996d309562bb8ef36874b6a0c9"
+    },
+    "pair-model166": {
+      "asset": "res://assets/ui/character_portraits/pair-model166.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model166-human.glb",
+      "modelSha256": "896ca9fd39093a78814c639cb79dcd8d46342b44bf11abf057eca54a0d8b7d23"
+    },
+    "pair-model168": {
+      "asset": "res://assets/ui/character_portraits/pair-model168.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model168-human.glb",
+      "modelSha256": "e69066ae7c718058e11a26a4e6ce260ec303cb9aed018140adc2799f151f46bb"
+    },
+    "pair-model170": {
+      "asset": "res://assets/full_ui/textures/2f20c5dc4723c40febe5601c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model170-human.glb",
+      "modelSha256": "7f622264e4e58a7e1c2acfefb4851cbd903fffb0a67fbfd499bc4081241f7f53",
+      "sourceTexture": "wt_interface/item/character/gm_red_man.dtx",
+      "sourceSha256": "cd829c2ad7612eecfa1bd0306c47a4e2fb4d7db2683cafd65d08f4f89424c758"
+    },
+    "pair-model172": {
+      "asset": "res://assets/full_ui/textures/d3866cf5aa8a160aed19b624.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model172-human.glb",
+      "modelSha256": "e4f6bcf0276e992657930f12a641aed232bf3a43bfa816486d9ba6cfc5d40019",
+      "sourceTexture": "wt_interface/item/character/gm_red_woman.dtx",
+      "sourceSha256": "3fd6567e1f16f5f794034eec09b36a9d96ae18394fd682275c367c3cc996b375"
+    },
+    "pair-model174": {
+      "asset": "res://assets/full_ui/textures/7d2c67088d2874b65c084205.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model174-human.glb",
+      "modelSha256": "7f622264e4e58a7e1c2acfefb4851cbd903fffb0a67fbfd499bc4081241f7f53",
+      "sourceTexture": "wt_interface/item/character/gm_blue_man.dtx",
+      "sourceSha256": "6a6ad9ca1fe6fc3d1143c1cc6e990a173bbb4083a98c27cd6dbeec1ffafdb1db"
+    },
+    "pair-model176": {
+      "asset": "res://assets/full_ui/textures/e4b445c01c3c20a2f535d6b9.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model176-human.glb",
+      "modelSha256": "e4f6bcf0276e992657930f12a641aed232bf3a43bfa816486d9ba6cfc5d40019",
+      "sourceTexture": "wt_interface/item/character/gm_blue_woman.dtx",
+      "sourceSha256": "fb701be9c7c4f7629e5974fcffd38f7da5aa1c2f33e586d29f5b8c7f044c3f48"
+    },
+    "pair-model178": {
+      "asset": "res://assets/full_ui/textures/e18c0b7e3ae18ced89e443d4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model178-human.glb",
+      "modelSha256": "fba4a31c2ec07908e70c378ba0de783c1293a62dd0ff896887121eede6dcba49",
+      "sourceTexture": "wt_interface/item/character/christopher_udf.dtx",
+      "sourceSha256": "d74f257cab1dd4e767f14d1fa46cc027b84b595cb39ef087d6a8e32d01832fd3"
+    },
+    "pair-model180": {
+      "asset": "res://assets/full_ui/textures/4cf02e8e6ce10739c41ce390.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model180-human.glb",
+      "modelSha256": "0e8f5073ca89ceb8c32d4afd25c055ca9280587f4ce5c666892f1430ed88805b",
+      "sourceTexture": "wt_interface/item/character/angela_udf.dtx",
+      "sourceSha256": "8546a16f475bb1111533eb14e7a64e906614db4c25c6c02dc11636b34e579986"
+    },
+    "pair-model182": {
+      "asset": "res://assets/ui/character_portraits/pair-model182.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model182-human.glb",
+      "modelSha256": "4823b7bf09302ea58521cb30851203ae7ecc2e113c430cb979968928f2f846d0"
+    },
+    "pair-model184": {
+      "asset": "res://assets/full_ui/textures/17f544fea861eb2793006143.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model184-human.glb",
+      "modelSha256": "74c5a7947f066487808dc0503a00e7cc26dc9c8f4bccfec7bf063311a24d26d9",
+      "sourceTexture": "wt_interface/item/character/adriana_udf.dtx",
+      "sourceSha256": "a4fe0b4f2af77297d1a1ebbed02a38c5dfba3c4822cc02166e4bf4d15905906b"
+    },
+    "pair-model186": {
+      "asset": "res://assets/full_ui/textures/65fb8e925c619ff71e17d3ed.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model186-human.glb",
+      "modelSha256": "e7e92701245016ec52276575175bbdb3e0acbc0918b63cc8a023f60d57104cf0",
+      "sourceTexture": "wt_interface/item/character/yigit_sfmovie.dtx",
+      "sourceSha256": "946ab93c9e6f054f65be9517adcce633a493a0f412064c5f446c0c6d19591346"
+    },
+    "pair-model188": {
+      "asset": "res://assets/full_ui/textures/fe02df398553d6fb0e3753b4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model188-human.glb",
+      "modelSha256": "90b07b57a915a7890fb50574bd4875d5862008d83cbdab25839e04912167daec",
+      "sourceTexture": "wt_interface/item/character/tomita_sfmovie.dtx",
+      "sourceSha256": "bc93ab9980f38b63a2853bc2a5ee16b79d09900f8b88ce982b0082488ff9ddb1"
+    },
+    "pair-model190": {
+      "asset": "res://assets/full_ui/textures/b531780c211a221baf1e61a4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model190-human.glb",
+      "modelSha256": "f9933dc244cbc71996705a08d3f671d738d9dcdcf0b4a288aba8d6bc851c1106",
+      "sourceTexture": "wt_interface/item/character/geremi_sfmovie.dtx",
+      "sourceSha256": "66db071fc606b67762124d11207d74f0c0f84c5de1d91edd1d5195901effeaca"
+    },
+    "pair-model192": {
+      "asset": "res://assets/full_ui/textures/c0769f90695b1b7a04fe1117.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model192-human.glb",
+      "modelSha256": "16eddd3b4acee73c5f98894ecb43268bb066bdee98f29362f7bad56db9c16195",
+      "sourceTexture": "wt_interface/item/character/ivanov_sfmovie.dtx",
+      "sourceSha256": "1784bfc8cd5bdf30199ef5d8393ed2ce6281a9be767f270b41dae6d103acf679"
+    },
+    "pair-model194": {
+      "asset": "res://assets/full_ui/textures/97376fa63e987cb40b87a937.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model194-human.glb",
+      "modelSha256": "9aebea17a74eef173b2ccf194bf1915f7a9eb714bbfe060a33cdc6fbb74baf23",
+      "sourceTexture": "wt_interface/item/character/simon_bolivar.dtx",
+      "sourceSha256": "673b0d901ad68e68a0a2b896465657e9b34d08b9766d3f1e745caddd3242658a"
+    },
+    "pair-model196": {
+      "asset": "res://assets/full_ui/textures/8c72226fa3718e7a31962360.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model196-human.glb",
+      "modelSha256": "2fd53f798d2da129407aa0a5ffd4efc0bb03fa3fdd635903180f2a2441ebd7f0",
+      "sourceTexture": "wt_interface/item/character/christopher_actionmovie.dtx",
+      "sourceSha256": "cd2f76e07380cd3c5569fbaa09517e52f74cf74e285a3b57c8d1e8ae0037de6d"
+    },
+    "pair-model198": {
+      "asset": "res://assets/full_ui/textures/18998501b1d390a79ed066d4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model198-human.glb",
+      "modelSha256": "7d61a68d80841d371d054a304e729ec33c3b804b4cf6988c7201f4d4ec1244bb",
+      "sourceTexture": "wt_interface/item/character/angela_actionmovie.dtx",
+      "sourceSha256": "ccf7581a3a1ab09f02bca47c82d7bb41f73ddece9c250412ccca720289ddd0c9"
+    },
+    "pair-model200": {
+      "asset": "res://assets/full_ui/textures/1511d95b304cdc7325d2c349.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model200-human.glb",
+      "modelSha256": "e4ce9977704242cc4b51c4fa9ebabac5aa716327420ae6efe5ce394b2c44609c",
+      "sourceTexture": "wt_interface/item/character/pedro_actionmovie.dtx",
+      "sourceSha256": "797299b56b2b0291d20612c2b4101b87baba971fd822c6166aedcc96762dde0a"
+    },
+    "pair-model202": {
+      "asset": "res://assets/full_ui/textures/183f21d4357f381f3081cc71.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model202-human.glb",
+      "modelSha256": "06b7496982172f796bd23c3294ceef7a115cfbeeb3d541dbcb5dcb3d7d1dbc54",
+      "sourceTexture": "wt_interface/item/character/adriana_actionmovie.dtx",
+      "sourceSha256": "57004c363ff7131a7cae9cf155938d8eedb22a76bb98c74de3ad9caad8cc9460"
+    },
+    "pair-model204": {
+      "asset": "res://assets/full_ui/textures/040430d433a78be802aa7f24.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model204-human.glb",
+      "modelSha256": "f0522571096df418b4666e60cc94645916d67e95794a0de2b495614a88599ba4",
+      "sourceTexture": "wt_interface/item/character/riccardo_jungle.dtx",
+      "sourceSha256": "a79f81dd85b1d9d245098034af5f76c4cb02c1b2f98dd3adcdcaa90af3251906"
+    },
+    "pair-model212": {
+      "asset": "res://assets/full_ui/textures/45600e6242afb786d42b6d76.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model212-human.glb",
+      "modelSha256": "2e26318e1da20e67dbd58c02151687c8f5e7d986fabf91ad4a40412502d09541",
+      "sourceTexture": "wt_interface/item/character/mvp_red_man.dtx",
+      "sourceSha256": "e25511108901c2030af203801abfe7b50487b1e8cde057fb1c90e88a84576043"
+    },
+    "pair-model214": {
+      "asset": "res://assets/full_ui/textures/0d6196b050bd9f5f2d07519a.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model214-human.glb",
+      "modelSha256": "2162fe66595c6ae776a670e448d0708d3348e66d6996b9c646810ec54903f7c4",
+      "sourceTexture": "wt_interface/item/character/mvp_red_woman.dtx",
+      "sourceSha256": "52f37df0e7e6b50d4ca940816316cc8039ef13274a911536ed7c0f2e472fabbe"
+    },
+    "pair-model216": {
+      "asset": "res://assets/full_ui/textures/47c2506b496baa1322f9ba94.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model216-human.glb",
+      "modelSha256": "2e26318e1da20e67dbd58c02151687c8f5e7d986fabf91ad4a40412502d09541",
+      "sourceTexture": "wt_interface/item/character/mvp_blue_man.dtx",
+      "sourceSha256": "7e916ec24fe17dae9a28f95f3ca5a936862ecd184217208140b1c0faaad88575"
+    },
+    "pair-model218": {
+      "asset": "res://assets/full_ui/textures/c447dfe0e339136a96bfdaf5.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model218-human.glb",
+      "modelSha256": "2162fe66595c6ae776a670e448d0708d3348e66d6996b9c646810ec54903f7c4",
+      "sourceTexture": "wt_interface/item/character/mvp_blue_woman.dtx",
+      "sourceSha256": "ef55cfb8011657b44ec131f6b733af99106f5a6e32263134ec772c3588fc2a5c"
+    },
+    "pair-model220": {
+      "asset": "res://assets/full_ui/textures/77c5cdd4d38d9b7b5e4a448b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model220-human.glb",
+      "modelSha256": "24f1695ec1dc11fc25f7a9dda160ee40ca1c12874d482e8fc815094f34dcef94",
+      "sourceTexture": "wt_interface/item/character/reinhard_desert.dtx",
+      "sourceSha256": "9eff6105152a8f76e8f4efb4c3e325c1f040d43490b546ac91c8dba75c780199"
+    },
+    "pair-model222": {
+      "asset": "res://assets/full_ui/textures/145c9b8772097c130e23adeb.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model222-human.glb",
+      "modelSha256": "0daba658f5725c31bd61fcee322181c516702b8697d2e81ec47b25df580edcce",
+      "sourceTexture": "wt_interface/item/character/marien_desert.dtx",
+      "sourceSha256": "e1451a62e60351d7a646a344d4781a24c2855740f3095aabc714b69396901d70"
+    },
+    "pair-model224": {
+      "asset": "res://assets/full_ui/textures/843d490487fe81dfde34cc82.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model224-human.glb",
+      "modelSha256": "dc4b8d8c25743fa27b7e810d2402303ad3e3fa06f4fca780b1f78e164d818aec",
+      "sourceTexture": "wt_interface/item/character/moshin_desert.dtx",
+      "sourceSha256": "29a60f4bb1a05000a7ec7c8f1c6c9e981d5ddf1a2cc2ed374884808c0c7e8605"
+    },
+    "pair-model226": {
+      "asset": "res://assets/full_ui/textures/3ec31c226e902de3019a6b85.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model226-human.glb",
+      "modelSha256": "8774c66baed3c47a2481b5e30f37845170991772a1527162806c53833b538987",
+      "sourceTexture": "wt_interface/item/character/linmeiling_desert.dtx",
+      "sourceSha256": "09e990facd8ca1e617fd0d9cb24a196b75f3e339426d61ea5d1baeb7f2ae8692"
+    },
+    "pair-model228": {
+      "asset": "res://assets/full_ui/textures/7dda1ed3b656e21af2f1a963.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model228-human.glb",
+      "modelSha256": "32b5d92bab26ab17907944c13227f0eed1e1eaf5fd2259a37474a1bf1cfaa037",
+      "sourceTexture": "wt_interface/item/character/reinhard_halloween.dtx",
+      "sourceSha256": "92a0e58e3da11a5715057582a4d36b95f063c1ce550240b0033bcc1f88ae6671"
+    },
+    "pair-model230": {
+      "asset": "res://assets/full_ui/textures/2451a2ca5e9891e8b31c7140.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model230-human.glb",
+      "modelSha256": "a7cfc84eb8f52f2a8e8cda77513099ddcd5032bd9e4dd57cf27e71ef7284064a",
+      "sourceTexture": "wt_interface/item/character/marien_halloween.dtx",
+      "sourceSha256": "c61ddf891fadf1579e583af77c38e3b8d46b5f1d4ffdf72533a28b935a6df4c6"
+    },
+    "pair-model232": {
+      "asset": "res://assets/full_ui/textures/0ce85f6e1ad991d264688356.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model232-human.glb",
+      "modelSha256": "c6bf02046a6103656c2733842d82189c2483d9fe7ca89034c3be837799d13ef8",
+      "sourceTexture": "wt_interface/item/character/moshin_halloween.dtx",
+      "sourceSha256": "36cd8c8238f55d830bf5f46b7e15acc5e5b5e335534124093baa8de023ebe6a4"
+    },
+    "pair-model234": {
+      "asset": "res://assets/full_ui/textures/c51515ad672f661cfff4204d.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model234-human.glb",
+      "modelSha256": "d18186c4e10c90c951e8c5a04ca0d2fb3616a1a2d53fe8b72aed606a4624104d",
+      "sourceTexture": "wt_interface/item/character/linmeiling_halloween.dtx",
+      "sourceSha256": "2c8a671f429f851e5f6274db0556a4f29f2c1b5a85b33837bb76773b27191445"
+    },
+    "pair-model236": {
+      "asset": "res://assets/full_ui/textures/41917028a5251df484d4fdd2.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model236-human.glb",
+      "modelSha256": "c1497ec26efa420c8c4e7d03afabdb15ec140f91348c1379c80b9336bdbff3a8",
+      "sourceTexture": "wt_interface/item/character/reinhard_thanksgiving.dtx",
+      "sourceSha256": "93d30424f83fa7506c72febf1ce3b5ed5f5437bd2ad35b8e746f26fb1b4e3829"
+    },
+    "pair-model238": {
+      "asset": "res://assets/full_ui/textures/9124c95e7e55c853173a132b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model238-human.glb",
+      "modelSha256": "6f2ed405de3fecc6dfb3cdf4d19b3bdaae2005978016117693f82b4bd3d3c298",
+      "sourceTexture": "wt_interface/item/character/marien_thanksgiving.dtx",
+      "sourceSha256": "16fb55ee001d801b1aa70d06fa2766e76b455d0fcb5a2e9ebcd69c09b2191df6"
+    },
+    "pair-model240": {
+      "asset": "res://assets/full_ui/textures/99baee527bc835882559243a.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model240-human.glb",
+      "modelSha256": "95850f3094bf1b77d20e1221e4f7ae09e2c706e79b0f2258089dd00c3da6bdf6",
+      "sourceTexture": "wt_interface/item/character/moshin_thanksgiving.dtx",
+      "sourceSha256": "6a3e959f679d6266fd9c039708fc3accea7f90486577c4dd5bcee5f75e1b68ad"
+    },
+    "pair-model242": {
+      "asset": "res://assets/full_ui/textures/49de3f106cb5962a6e877840.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model242-human.glb",
+      "modelSha256": "037fc32fb5887eb33b6d3d422102e7573c8b8a4fab6391acf2f723f39c7b459c",
+      "sourceTexture": "wt_interface/item/character/linmeiling_thanksgiving.dtx",
+      "sourceSha256": "8a91d7efe1c0b296923218e5d370dca466098742b114bc25b78ba0449521ee0a"
+    },
+    "pair-model244": {
+      "asset": "res://assets/full_ui/textures/b4e0acc41b596fceecbfd13e.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model244-human.glb",
+      "modelSha256": "e3362b7413f77f02aa0a0cc7d6a09afc2672d907e2fee2311e3abf2179d938d9",
+      "sourceTexture": "wt_interface/item/character/geremi_worldwar.dtx",
+      "sourceSha256": "13feeffdf3bf0f9be4246ca253144501f577644cd5f0747284214b1d4fd41a44"
+    },
+    "pair-model246": {
+      "asset": "res://assets/full_ui/textures/0433bbe505c1a2d992295ad5.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model246-human.glb",
+      "modelSha256": "634bea4c7ceb0893dc88048d9116869d5e104a10c77ef84d00f92cf378f692a9",
+      "sourceTexture": "wt_interface/item/character/ivanov_worldwar.dtx",
+      "sourceSha256": "aa33c3a8a81654b834c70c74597501064de354c9be40e8815b4d7ba9b8702856"
+    },
+    "pair-model248": {
+      "asset": "res://assets/full_ui/textures/08bbbf48f98871e66d672e1a.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model248-human.glb",
+      "modelSha256": "0765531566c596bf006c1af730a703522a7e048a3e9401b4ca11eb1d01c2d0b2",
+      "sourceTexture": "wt_interface/item/character/yigit_worldwar.dtx",
+      "sourceSha256": "bd80b47d380d5772cd22ce04d02ccb4f9e98170345bb5416af25381da9fb4993"
+    },
+    "pair-model250": {
+      "asset": "res://assets/full_ui/textures/dc50f49fcf4d4c698169301a.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model250-human.glb",
+      "modelSha256": "be3e0f15833b4c8b6fce770d2e25cb430c17288ee50e98e76708c2a894979381",
+      "sourceTexture": "wt_interface/item/character/tomita_worldwar.dtx",
+      "sourceSha256": "609c1a797fc334100b6933cc570352c1a290e7b5427a18c04aaaac8310cedbd2"
+    },
+    "pair-model252": {
+      "asset": "res://assets/full_ui/textures/5c11807092d7530f1de3ebf6.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model252-human.glb",
+      "modelSha256": "a4217e6567212f5eb7e636dbb1e9ff6bb1c5071b33770e0e6159ee7336c4a4e4",
+      "sourceTexture": "wt_interface/item/character/christopher_christmas.dtx",
+      "sourceSha256": "3494d2746ef49eafe6d2d71ec3b0c9470a3da6f68dc94b109390e63ab2942d94"
+    },
+    "pair-model254": {
+      "asset": "res://assets/full_ui/textures/20447d2c89a177a851a5a723.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model254-human.glb",
+      "modelSha256": "1a6f1ffbb6ead1339bfcf22dc0bad37812b3f58c4842bd649652c0097d585965",
+      "sourceTexture": "wt_interface/item/character/angela_christmas.dtx",
+      "sourceSha256": "8ee1610d7b86126153be39c62a0545a619e1dcb10a717110d7493936364a5bdb"
+    },
+    "pair-model31": {
+      "asset": "res://assets/full_ui/textures/6a934a9dc8c389631a5e840d.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model31-human.glb",
+      "modelSha256": "b8ebbde1fa33f038bab1b19f7617c865f0f45bb16308972e675cf1fb6cf899ed",
+      "sourceTexture": "wt_interface/item/character/pedro_christmas.dtx",
+      "sourceSha256": "ef99c961377b863a5041cd75713d6fd5dc42a1f13b137f8de3cae384e420205a"
+    },
+    "pair-model442": {
+      "asset": "res://assets/ui/character_portraits/pair-model442.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model442-human.glb",
+      "modelSha256": "3ce78de4354b8ffee23e5178658901d74b394ec4b2df671ab8cb44242b11b4ba"
+    },
+    "pair-model444": {
+      "asset": "res://assets/ui/character_portraits/pair-model444.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model444-human.glb",
+      "modelSha256": "ea362f4c4f31cbabec1085b9ee19c44bb48b73453f173d8c76da45dfab32cd7f"
+    },
+    "pair-model446": {
+      "asset": "res://assets/full_ui/textures/72fb9ce221d8ab5e37cf0ecd.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model446-human.glb",
+      "modelSha256": "0c9f0d69e21a0b59d65385e934939aa82838d5b0087290d410620bfe0d670a5c",
+      "sourceTexture": "wt_interface/item/character/hanna_n.dtx",
+      "sourceSha256": "6498240a5d9df3e0039687c373997a3e04d65f7e1530b1ad2a88620ea19fffbf"
+    },
+    "pair-model448": {
+      "asset": "res://assets/full_ui/textures/0622b393f2010f505b03846b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model448-human.glb",
+      "modelSha256": "485557ec5a9bdce40bd9eb2a45930b11431ad4f559e8f93ed0ef3f1abac585d4",
+      "sourceTexture": "wt_interface/item/character/eliana_n.dtx",
+      "sourceSha256": "bb098741d2c0f312988ae7be6c6798f93b67eb651d690bc0f9d7c0fcf571d954"
+    },
+    "pair-model458": {
+      "asset": "res://assets/full_ui/textures/e53b3a378d9b6bd19c843ad1.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model458-human.glb",
+      "modelSha256": "277b2978153a26c6c37f6bca3fc8b3c7386ba171bbeee4ac7c4d797098cb74ce",
+      "sourceTexture": "wt_interface/item/character/hanna_xmas_n.dtx",
+      "sourceSha256": "048cee6b577a0e09ee9a629c7033d4169d06a1e0960a94003736d639a50c60be"
+    },
+    "pair-model460": {
+      "asset": "res://assets/full_ui/textures/c5e3fcc28533ec8fba443c9e.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model460-human.glb",
+      "modelSha256": "66bdbafaef25a4ff8a1084c716c4dc5ef4e7417ee37ea4316e953e3ffa77373b",
+      "sourceTexture": "wt_interface/item/character/eliana_xmas_n.dtx",
+      "sourceSha256": "5f08b6fb6baee67504efb0b868b3dcc7970a0e0665ea170d782fe12106eefdf5"
+    },
+    "pair-model478": {
+      "asset": "res://assets/full_ui/textures/2c1d4f7e60fedc8fadc4f5f8.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model478-human.glb",
+      "modelSha256": "f7103719032121a8520ee52662260ba330780d75a2a8aae04f9627c16f9163f1",
+      "sourceTexture": "wt_interface/item/character/3party_tetra_n.dtx",
+      "sourceSha256": "23896d39de4041f2c390b3f3bdbab02cb2fb5b7641fe6ef86a0e53c2137af776"
+    },
+    "pair-model480": {
+      "asset": "res://assets/full_ui/textures/fbef5946fb8f2caedbd0f170.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model480-human.glb",
+      "modelSha256": "55cc4c21c0ea16dd28abfc26820bcdb79c32cb6019a64a3e7cc2c99f0e5169e8",
+      "sourceTexture": "wt_interface/item/character/3party_caracin_n.dtx",
+      "sourceSha256": "df7091f726cf52a320066487c976d745c5073d04a9003f4bbd8cf83849a321a0"
+    },
+    "pair-model482": {
+      "asset": "res://assets/full_ui/textures/b468ddecf6ecb944107e891c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model482-human.glb",
+      "modelSha256": "ab42518c0361fa11e101cbbe3f18e47bb4566407da2f4bc0cf52e38436104f2b",
+      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
+      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d"
+    },
+    "pair-model484": {
+      "asset": "res://assets/full_ui/textures/ad5e747accfcdf31d92939be.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model484-human.glb",
+      "modelSha256": "211f3844c0776ae2e00292a69835f26a659c5d6bbc16ea508915959a73e232c5",
+      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
+      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e"
+    },
+    "pair-model494": {
+      "asset": "res://assets/full_ui/textures/7e355a73bf6139d10bbe74a4.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model494-human.glb",
+      "modelSha256": "d809947b5fd034293716a8045f1adb1762b37c85e55fe2a64e2d4ae24108a7b7",
+      "sourceTexture": "wt_interface/item/character/riccardo_christmas.dtx",
+      "sourceSha256": "83636411cc8bbc5e60975206de22e095c88e268cfd2aae1abaa2a17c9b9e7984"
+    },
+    "pair-model495": {
+      "asset": "res://assets/full_ui/textures/85da895535b0bd278fadf03b.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model495-human.glb",
+      "modelSha256": "9061499eef94ca7b700fe51423df07d58cd3ad300a2c7332ce2cd8cd649f0b35",
+      "sourceTexture": "wt_interface/item/character/matt_christmas.dtx",
+      "sourceSha256": "ece87da8a18a399d98d0449225227b483a2e021af443f3c9b2608e11a3ce1b2d"
+    },
+    "pair-model496": {
+      "asset": "res://assets/full_ui/textures/20447d2c89a177a851a5a723.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model496-human.glb",
+      "modelSha256": "1a6f1ffbb6ead1339bfcf22dc0bad37812b3f58c4842bd649652c0097d585965",
+      "sourceTexture": "wt_interface/item/character/angela_christmas.dtx",
+      "sourceSha256": "8ee1610d7b86126153be39c62a0545a619e1dcb10a717110d7493936364a5bdb"
+    },
+    "pair-model497": {
+      "asset": "res://assets/full_ui/textures/07484a3df32ac9f2cf37f6d5.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model497-human.glb",
+      "modelSha256": "c9f6df23a8e2895849d1e60a6fe6b35ac76fa0e25ce189e4acf99fe833a6adf2",
+      "sourceTexture": "wt_interface/item/character/kate_christmas.dtx",
+      "sourceSha256": "b5ffe811324cfede73e34121f12aee3d37ebdaaca8ff8317b41b3b5f26546648"
+    },
+    "pair-model544": {
+      "asset": "res://assets/full_ui/textures/45f4e25ca69cfb14ed5f561a.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model544-human.glb",
+      "modelSha256": "34280363666695529f3e2fdf4c1c985106ab39fe2eefec523c81cfd85c367c13",
+      "sourceTexture": "wt_interface/item/character/ezel_n.dtx",
+      "sourceSha256": "dae47f554f0da56e6594285dea90d29e7dfe833097d078f48c8061a3e1cd0c06"
+    },
+    "pair-model546": {
+      "asset": "res://assets/full_ui/textures/6b60231a23392a4d660f09eb.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model546-human.glb",
+      "modelSha256": "9f9c7064cd6c5d25abfa1f298b7013c35cacfa19f22738fda7afa6ba32319f73",
+      "sourceTexture": "wt_interface/item/character/azap_n.dtx",
+      "sourceSha256": "ebae98c3d5918498ba6ed761bc1018157233f8dbae3c3f78a6226341a31bbce6"
+    },
+    "pair-model556": {
+      "asset": "res://assets/full_ui/textures/3119842c42f9773d3d504df9.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model556-human.glb",
+      "modelSha256": "7539623c9b56121081c765b2326a63b6cad66dbfccabb14cba264b2aeb6b6f4a",
+      "sourceTexture": "wt_interface/item/character/muhammadramadan_n.dtx",
+      "sourceSha256": "e6593ac18f7bdebd55839743885e10cd15ffab940285535534a77311a6dbfc93"
+    },
+    "pair-model558": {
+      "asset": "res://assets/ui/character_portraits/pair-model558.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model558-human.glb",
+      "modelSha256": "8ebdabe16d322e16736372cc4831ed78a57fc52deda54afe24e8575b2414aa34"
+    },
+    "pair-model580": {
+      "asset": "res://assets/full_ui/textures/5ac6072886c77ec94de9d47d.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model580-human.glb",
+      "modelSha256": "a414edfe36f7ce47c87928f8e2daebf226734eef461070c0453bc3cb3d5a57e8",
+      "sourceTexture": "wt_interface/item/character/steven_gerrard_n.dtx",
+      "sourceSha256": "979c2b7ac31997e2e75445d849dd8c64d237965ff330a5ef5143f5e4fbfea3e3"
+    },
+    "pair-model582": {
+      "asset": "res://assets/full_ui/textures/17a842b6ee430b525c1efe1c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model582-human.glb",
+      "modelSha256": "0072729abece626a7c62b177e3ba121d9ece9994b101a403e2bf5202e5724fb6",
+      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
+      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f"
+    },
+    "pair-model584": {
+      "asset": "res://assets/full_ui/textures/fb079ccf7622967f7f3ea491.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model584-human.glb",
+      "modelSha256": "d4153f21f51113a115fc0300748af408e35d691dd096423ac278cc4e891d51bf",
+      "sourceTexture": "wt_interface/item/character/steven_gerrard_camo_n.dtx",
+      "sourceSha256": "d595cae32aeabc6bff37e361a1f30aaa34c0a1ca237c8994735d2b27659aeff6"
+    },
+    "pair-model586": {
+      "asset": "res://assets/full_ui/textures/17a842b6ee430b525c1efe1c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model586-human.glb",
+      "modelSha256": "34b1ed7b8c37eaf551a4ade0e6860fcac9a6797ccb7c55bf6fff9e365ae20209",
+      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
+      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f"
+    },
+    "pair-model592": {
+      "asset": "res://assets/full_ui/textures/acabb63019fd9fa6a17ed91f.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model592-human.glb",
+      "modelSha256": "d74b43c60a42dc74166a1b3e81f93e7c242edb779403799e005f7323853cea12",
+      "sourceTexture": "wt_interface/item/character/ezel_villain_n.dtx",
+      "sourceSha256": "dce09940f744f14c605ffda1364142431f8fd98ffd5a21e776b48dc471c7861a"
+    },
+    "pair-model594": {
+      "asset": "res://assets/full_ui/textures/a16cf2f16605e440d88c14e3.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model594-human.glb",
+      "modelSha256": "f839fd3ec991befbe1655a7a3d275c4ccf815383185238ffbbdf6d23e9f63bdc",
+      "sourceTexture": "wt_interface/item/character/azap_villain_n.dtx",
+      "sourceSha256": "5f90baec1ba3eb609c4dd36f74cd04d6c90b7f64e4a271024f361b994ae0417d"
+    },
+    "pair-model596": {
+      "asset": "res://assets/ui/character_portraits/pair-model596.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model596-human.glb",
+      "modelSha256": "e5c3e0426a7eb8bb0685cc314aea9b472e654ec657f6ac7da4acddac24e253f4"
+    },
+    "pair-model598": {
+      "asset": "res://assets/ui/character_portraits/pair-model598.png",
+      "kind": "rendered_model_preview",
+      "model": "res://assets/library/characters/pair-model598-human.glb",
+      "modelSha256": "da2d6a89edc2f0454947ba90e846a5be784e56471ab1c80cfce5e7e89a4b06f7"
+    },
+    "pair-model616": {
+      "asset": "res://assets/full_ui/textures/30a245fec9b8cea262cfdd46.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model616-human.glb",
+      "modelSha256": "bf47b08d300714111f7ce501958b9b8414facec19f1ef1d952039226747572a3",
+      "sourceTexture": "wt_interface/item/character/tetra_camo_n.dtx",
+      "sourceSha256": "b5497f9dc784abe7ba8d40dcc8de38bb730d9186927420fc5a0e527c5247cd3a"
+    },
+    "pair-model618": {
+      "asset": "res://assets/full_ui/textures/a1f240e486bce2ee6b0e34d1.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model618-human.glb",
+      "modelSha256": "2baf805c17ae49d941bd0a014dd6900811af0fd8f4c79b958fdbedcfab18507d",
+      "sourceTexture": "wt_interface/item/character/caracin_camo_n.dtx",
+      "sourceSha256": "09330baaca66e6d1ae885c0301e8bc57306a4c34f794edd567c84f27311b8c29"
+    },
+    "pair-model620": {
+      "asset": "res://assets/full_ui/textures/2cdffb7f96fdcc6e8c743b72.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model620-human.glb",
+      "modelSha256": "7404caa9cf3d91defa3a8ae47b7a8b7aadf7e06598c6246016024410f4de7e44",
+      "sourceTexture": "wt_interface/item/character/ezel_villain2_n.dtx",
+      "sourceSha256": "2780c4d760c1d5c2db429e6988783db331fa40d2bdc37418c208ed52cd5b0233"
+    },
+    "pair-model622": {
+      "asset": "res://assets/full_ui/textures/83907efd98eea0e02c36cf48.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model622-human.glb",
+      "modelSha256": "d7dc3817e04f4bfc62546099d759866f0023c7d847c75b80012f67fe2c1b7b61",
+      "sourceTexture": "wt_interface/item/character/azap_villain2_n.dtx",
+      "sourceSha256": "91014d237ced28007759f0ba8ebe407013648d6b7067be756e215e1a80dacab6"
+    },
+    "pair-model624": {
+      "asset": "res://assets/full_ui/textures/b468ddecf6ecb944107e891c.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model624-human.glb",
+      "modelSha256": "a6bb584eff2e6442ab58bc6750f2bbe3c4f08505d7b21569765a68d98ea7ccc5",
+      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
+      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d"
+    },
+    "pair-model626": {
+      "asset": "res://assets/full_ui/textures/ad5e747accfcdf31d92939be.png",
+      "kind": "source_icon",
+      "model": "res://assets/library/characters/pair-model626-human.glb",
+      "modelSha256": "20f67d76c2317cc9fff964057a98ce6df892739dda2c717905564dbbde6bb29e",
+      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
+      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e"
     }
   },
   "note": "Exact normalized model/name matches use original 2D icons; remaining previews are rendered from the actual imported human model. No inferred rarity, ownership or stats."

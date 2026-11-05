@@ -118,7 +118,7 @@ def quaternion(matrix):
         q=np.zeros(4);q[i]=.25*s;q[j]=(m[j,i]+m[i,j])/s;q[k]=(m[k,i]+m[i,k])/s;q[3]=(m[k,j]-m[j,k])/s
     return (q/np.linalg.norm(q)).tolist()
 
-def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=True):
+def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=True,external_texture_dir=None):
     if asset['info']['skeletonSha256']!=donor['info']['skeletonSha256']:raise ValueError('Animation skeleton differs from mesh skeleton')
     data=bytearray();doc=dict(asset=dict(version='2.0',generator='Wolf Rogue audited LTB converter'),scene=0,scenes=[dict(nodes=[0])],nodes=[dict(name='WolfRogueCharacter',scale=[root_scale]*3,children=[1])],meshes=[],skins=[],bufferViews=[],accessors=[],materials=[],images=[],textures=[],samplers=[dict(magFilter=9729,minFilter=9987,wrapS=10497,wrapT=10497)],animations=[])
     def buffer(raw,target=None):
@@ -133,7 +133,15 @@ def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=
         doc['accessors'].append(item);return len(doc['accessors'])-1
     material_map={}
     for slot,(name,png) in skins.items():
-        view=buffer(png);doc['images'].append(dict(name=name,bufferView=view,mimeType='image/png'));index=len(doc['images'])-1
+        if external_texture_dir is not None:
+            external_texture_dir.mkdir(parents=True,exist_ok=True)
+            image_path=external_texture_dir/(hashlib.sha256(png).hexdigest()+'.png')
+            if not image_path.exists():image_path.write_bytes(png)
+            import os
+            doc['images'].append(dict(name=name,uri=os.path.relpath(image_path,path.parent).replace('\\','/')))
+        else:
+            view=buffer(png);doc['images'].append(dict(name=name,bufferView=view,mimeType='image/png'))
+        index=len(doc['images'])-1
         doc['textures'].append(dict(source=index,sampler=0));doc['materials'].append(dict(name=name,pbrMetallicRoughness=dict(baseColorTexture=dict(index=index),metallicFactor=0,roughnessFactor=.85),doubleSided=True,alphaMode='MASK',alphaCutoff=.25))
         if not alpha_mask:doc['materials'][-1].update(alphaMode='OPAQUE')
         material_map[slot]=len(doc['materials'])-1
@@ -160,7 +168,7 @@ def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=
         static_posture=len(times)==1 and exported=='crouch'
         if static_posture:times=np.array([0,.5],dtype=np.float32)
         elif len(times)<2 or times[-1]<=0:raise ValueError('Static clip cannot satisfy motion requirement')
-        animation=dict(name=exported,samplers=[],channels=[]);input_index=accessor(times,'SCALAR',bounds=True)
+        animation=dict(name=exported,samplers=[],channels=[],extras=dict(sourceClip=source,sourceSha256=donor['info'].get('sha256'),rootMotion='XZ frozen; collision controller' if freeze_root else 'Source root motion'));input_index=accessor(times,'SCALAR',bounds=True)
         for bone,track in enumerate(clip['tracks']):
             for key,kind in [('translation','VEC3'),('rotation','VEC4')]:
                 values=track[key].copy()

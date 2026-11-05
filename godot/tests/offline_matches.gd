@@ -19,7 +19,7 @@ func run():
 	check(offline_book.owned.size() == available.size() and available.size() > 800, "Offline collection exposes actual imported weapons without a server")
 	check(offline_book.equip(available[-1].id), "Offline weapons can be equipped locally")
 	var maps = game.map_catalog.offline_maps()
-	check(maps.size() == 19, "All 19 geometries have independent offline navigation")
+	check(maps.size() == 34, "All 34 geometries have independent offline navigation")
 	check(game.map_catalog.preview_record(1, 46).is_empty(), "Offline map 46 does not invent its original mode pairing")
 	var summaries = []
 	for entry in maps:
@@ -32,7 +32,7 @@ func run():
 		var points = game.offline_spawn_points()
 		if points.is_empty():
 			print("OFFLINE_SPAWN_DIAGNOSTIC ", entry.number, " player=",game.player.position," closest=",NavigationServer3D.map_get_closest_point(game.offline_navigation_map,game.player.position)," regions=",NavigationServer3D.map_get_regions(game.offline_navigation_map).size())
-		check(not points.is_empty(), "Reachable clear bot spawns: " + str(entry.number))
+		check(not points.is_empty(), "Clear source-team bot spawns: " + str(entry.number))
 		if points.is_empty(): continue
 		check(game.spawn_enemy(), "Bot instantiates")
 		var enemy = game.enemies.get_children().filter(func(node):return not node.is_queued_for_deletion())[0]
@@ -40,13 +40,17 @@ func run():
 		var before = enemy.position
 		for i in range(50): await physics_frame
 		var travelled = enemy.position.distance_to(before)
+		if travelled<=0.25:print("BOT_TRAVEL_DIAG ",entry.number," from=",before," pos=",enemy.position," state=",enemy.state," target=",enemy.destination," next=",enemy.navigator.get_next_path_position()," velocity=",enemy.velocity," patrol=",enemy.patrol_points.size()," seen=",enemy.sees_player," hp=",game.health)
 		check(travelled > 0.25, "Bot follows path: " + str(entry.number))
 		game.menu_open = true
 		before = enemy.position
 		for i in range(5): await physics_frame
 		check(enemy.position.is_equal_approx(before), "Menu pauses bot movement")
 		game.menu_open = false
-		summaries.append({"number": int(entry.number), "safeBotSpawns": points.size(), "botTravelMetres": travelled})
+		var origin=NavigationServer3D.map_get_closest_point(game.offline_navigation_map,game.player.position)
+		var enemy_origin=NavigationServer3D.map_get_closest_point(game.offline_navigation_map,before)
+		var connected=game.navigation_graph.connected(enemy_origin,origin)
+		summaries.append({"number": int(entry.number), "safeBotSpawns": points.size(), "botTravelMetres": travelled,"crossTeamRoute":connected,"spawnBasis":"Original source team anchors; separate NoTeam group only when one team tag is missing"})
 		game.kills = 9;enemy.damage(1000)
 		check(game.kills == 10 and not game.running and game.last_result.title == "Arena tamamlandı", "Victory ends local match")
 		check(game.start_round() and game.kills == 0 and game.health == 100, "Retry resets score and health")
@@ -54,6 +58,15 @@ func run():
 		game.take_damage(100)
 		check(not game.running and game.last_result.title == "Yenildin", "Death ends local match")
 		await process_frame
+		game.local_room.team="red";check(game.start_round(),"Red player starts source team zone: "+str(entry.number))
+		await physics_frame;await physics_frame
+		var blue_spawns=game.offline_spawn_points("blue")
+		check(not blue_spawns.is_empty(),"Blue bot source zone exists: "+str(entry.number))
+		for team in ["red","blue"]:
+			var source_points=game.team_start_points(game.map_catalog.offline_record(int(entry.number)),team)
+			var positions=blue_spawns if team=="blue" else [game.preview_spawn]
+			check(positions.all(func(point):return source_points.any(func(anchor):return point.distance_to(Vector3(anchor.position[0],anchor.position[1],anchor.position[2]))<3.6)),"Team "+team+" stays in its original spawn group: "+str(entry.number))
+		game.running=false
 	game.local_room = {"mode": 0, "map": 9999}
 	check(not game.start_round() and not game.running, "Unknown map cannot silently start arena")
 	game.local_room = {"mode": 1, "map": 1}

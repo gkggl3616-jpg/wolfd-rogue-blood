@@ -16,6 +16,7 @@ var content: Control
 var links = {}
 var history = []
 var virtual_width = 1024.0
+var safe_insets=Vector4.ZERO
 var pending_refresh = false
 var building = false
 var source_layouts = []
@@ -27,6 +28,8 @@ var modal: Control
 var selected = {}
 var search_query = ""
 var filter_id = "all"
+var quality_id="all"
+var preview_team="blue"
 var target_primary_slot = "primary"
 var offset = 0
 var room_title: LineEdit
@@ -60,6 +63,7 @@ var last_error = ""
 func _ready():
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
+	clip_contents=true
 	theme = Art.theme()
 	resized.connect(schedule_refresh)
 	refresh()
@@ -86,7 +90,8 @@ func refresh():
 	var shade = ColorRect.new();shade.color = Color(0,0,0,0.45) if overlay else Color("050709");shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(shade)
 	# The supplied PC recordings fill both 4:3 and 16:9 displays. Legacy 2D
 	# coordinates stretch on each axis; a centered 4:3 canvas adds false gutters.
-	canvas = Control.new();canvas.size = Vector2(virtual_width,768);canvas.scale = dimensions/Vector2(1024,768);add_child(canvas)
+	var safe=usable_rect()
+	canvas = Control.new();canvas.clip_contents=true;canvas.size = Vector2(virtual_width,768);canvas.position=safe.position;canvas.scale = safe.size/Vector2(1024,768);add_child(canvas)
 	var lobby_background=page in ["lobby","room","create_room","maps","pin","profile","rankbook"]
 	if not overlay:background("wt_interface/lobby/lb_bg.dtx" if lobby_background else "wt_interface/inven_shop/is_bg.dtx",607 if lobby_background else 352)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
@@ -99,6 +104,17 @@ func refresh():
 		for node in content.find_children("*","LineEdit",true,false):
 			if node.get_meta("navigation_input","")==input_id:node.grab_focus();node.caret_column=mini(caret,node.text.length());break
 	if not last_error.is_empty(): show_error(last_error)
+
+func usable_rect():
+	var rect=get_viewport_rect()
+	var inset=safe_insets
+	if OS.has_feature("android"):
+		var safe=DisplayServer.get_display_safe_area()
+		if safe.has_area():
+			var mapped=get_viewport().get_final_transform().affine_inverse()*Rect2(safe)
+			mapped=rect.intersection(mapped)
+			if mapped.has_area():rect=mapped
+	return Rect2(rect.position+Vector2(inset.x,inset.y),Vector2(maxf(1,rect.size.x-inset.x-inset.z),maxf(1,rect.size.y-inset.y-inset.w)))
 
 func trace(source):
 	if source not in source_layouts: source_layouts.append(source)
@@ -180,7 +196,8 @@ func navigate(next,remember=true,back_step=false):
 	if next=="create_room" and page!="create_room":
 		room_draft={"title":"Yerel Oda","mode":0,"map":0,"team":"blue","playerForm":"human","botDifficulty":"normal"}
 		room_draft.merge(game.local_room,true)
-	page = next;offset = 0;selected = {};search_query = "";filter_id = "all";last_error = ""
+	if next=="Dövmeler" and page!="Dövmeler":preview_angle=PI
+	page = next;offset = 0;selected = {};search_query = "";filter_id = "all";quality_id="all";last_error = ""
 	refresh()
 
 func go_back():
@@ -262,6 +279,8 @@ func replace_preview(entry):
 	if resource==null:return
 	preview_model=resource.instantiate();preview_model.scale*=1.6;preview_root.add_child(preview_model)
 	preview_model.rotation.y=preview_angle
+	for mesh in preview_model.find_children("*","MeshInstance3D",true,false):
+		if str(mesh.name).to_lower().begins_with("tattoo"):mesh.hide()
 	for animation in preview_model.find_children("*","AnimationPlayer",true,false):
 		if animation.has_animation("idle"):animation.play("idle");animation.advance(0)
 	CameraFit.frame(preview_camera,preview_root,Vector2(preview_view.size))

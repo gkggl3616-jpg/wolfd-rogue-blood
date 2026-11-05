@@ -26,7 +26,7 @@ func run():
 	check(game.player.camera.position.x==0 and game.player.camera_arm.position.y>0.5,"Wolf camera centers the model and raises the swept arm")
 	check(absf(game.player.camera.fov-70)<0.2,"Wolf projection reaches its calibrated field of view")
 	check(not game.source_hud.cross.visible and game.source_hud.slots.all(func(button):return not button.visible),"Wolf view hides human reticle and weapon strip")
-	var wall=game.block(Vector3(0,2.6,10),Vector3(4,5,0.25),"576371")
+	var wall=game.block(game.player.global_position+Vector3(0,2.5,2),Vector3(4,5,0.25),"576371")
 	await frames(8)
 	check(game.player.camera_arm.get_hit_length()<3.3,"Raised third-person camera still retracts at an actual wall")
 	wall.queue_free();game.player.switch_form();await frames(20)
@@ -49,7 +49,7 @@ func run():
 	game.spawn_clock=1000;await frames()
 	var radar=game.source_hud.radar
 	check(radar.visible and radar.current_number==84,"Radar follows the actual loaded source map")
-	check(radar.records.size()==19,"Radar contains only the 19 selected maps")
+	check(radar.records.size()==34,"Radar contains only the 34 selected maps")
 	for row in radar.records:
 		var resource=load(row.asset) as Texture2D
 		check(resource!=null and row.originalPcRadar==false,"Radar image is explicitly a derived floor plan: "+str(row.number))

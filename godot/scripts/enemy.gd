@@ -1,6 +1,8 @@
 extends CharacterBody3D
 const Rules=preload("res://scripts/bot_rules.gd")
+const Traversal=preload("res://scripts/bot_traversal.gd")
 var game
+var team="red"
 var kind="wolf"
 var display_name="Bot"
 var difficulty="normal"
@@ -46,6 +48,8 @@ var reloads_completed=0
 var rolls_completed=0
 var brain_enabled=true
 var cover_clock=0.0
+var link_flight={}
+var jumps_completed=0
 
 func _ready():
  profile=Rules.profile(difficulty)
@@ -53,8 +57,11 @@ func _ready():
  set_meta("enemy",true)
  collider=CollisionShape3D.new();capsule=CapsuleShape3D.new();capsule.radius=0.42;capsule.height=1.9;collider.shape=capsule;collider.position.y=0.95;add_child(collider)
  navigator=NavigationAgent3D.new();navigator.path_desired_distance=0.55;navigator.target_desired_distance=0.8;navigator.radius=0.42;navigator.height=1.9;add_child(navigator)
+ navigator.link_reached.connect(begin_link_traversal)
  if game.offline_navigation_map.is_valid():navigator.set_navigation_map(game.offline_navigation_map)
- body=load(game.character_info[kind].asset).instantiate();body.scale*=1.6;body.rotation.y=PI;add_child(body);body_base=body.transform
+ var character=game.book.character_for_team(team)
+ if character.is_empty():character=game.character_info
+ body=load(character[kind].asset).instantiate();body.scale*=1.6;body.rotation.y=PI;add_child(body);body_base=body.transform
  var players=body.find_children("*","AnimationPlayer",true,false)
  if not players.is_empty():
   anim=players[0]
@@ -62,7 +69,7 @@ func _ready():
    if anim.has_animation(clip):anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
   play("idle");anim.advance(0)
  if kind=="human":prepare_weapon()
- var indicator=Label3D.new();indicator.text=("İNSAN" if kind=="human" else "KURT")+" · "+profile.name;indicator.position.y=2.25;indicator.font_size=26;indicator.modulate=Color("e2b2a7");indicator.billboard=BaseMaterial3D.BILLBOARD_ENABLED;add_child(indicator)
+ var indicator=Label3D.new();indicator.text=("İNSAN" if kind=="human" else "KURT")+" · "+profile.name;indicator.position.y=2.25;indicator.font_size=26;indicator.modulate=Color("e2b2a7") if team=="red" else Color("92c9ed");indicator.billboard=BaseMaterial3D.BILLBOARD_ENABLED;add_child(indicator)
  build_patrol()
  destination=patrol_points[0] if not patrol_points.is_empty() else global_position
 
@@ -213,6 +220,12 @@ func melee_hit():
 
 func _physics_process(delta):
  if not game.is_combat_active() or health<=0 or is_queued_for_deletion():return
+ if not link_flight.is_empty():
+  link_flight.elapsed+=delta
+  velocity=link_flight.velocity-Vector3.UP*20*link_flight.elapsed
+  move_and_slide();play("jump")
+  if link_flight.elapsed>=link_flight.seconds or (link_flight.elapsed>0.1 and is_on_floor()):link_flight={};jumps_completed+=1;path_clock=0
+  return
  attack_clock=maxf(0,attack_clock-delta);reaction=maxf(0,reaction-delta);memory=maxf(0,memory-delta);roll_cooldown=maxf(0,roll_cooldown-delta);cover_clock=maxf(0,cover_clock-delta)
  if position.y<game.preview_spawn.y-150:queue_free();return
  if not is_on_floor():velocity.y-=20*delta
@@ -231,7 +244,7 @@ func _physics_process(delta):
   if reload_remaining<=0:
    var refill=mini(capacity-ammo,reserve);ammo+=refill;reserve-=refill;reloads_completed+=1;state="investigate";active_clip=""
  else:
-  if capsule.height<1.9:
+  if capsule.height<1.5:
    var query=PhysicsShapeQueryParameters3D.new();var shape=CapsuleShape3D.new();shape.radius=0.42;shape.height=1.9;query.shape=shape;query.transform=Transform3D(Basis.IDENTITY,global_position+Vector3.UP*0.95);query.collision_mask=1;query.exclude=[get_rid()]
    if get_world_3d().direct_space_state.intersect_shape(query,1).is_empty():capsule.height=1.9;collider.position.y=0.95
   if brain_enabled:
@@ -258,10 +271,51 @@ func _physics_process(delta):
    var direction=next.normalized() if not navigator.is_navigation_finished() else Vector3.ZERO
    var speed=5.2 if has_target or state=="cover" else 3.0
    velocity.x=direction.x*speed;velocity.z=direction.z*speed
-   if direction.length()>0.1:rotation.y=lerp_angle(rotation.y,atan2(-direction.x,-direction.z),delta*5);play("crouch_run" if capsule.height<1.9 else "run")
+   if direction.length()>0.1:
+    adapt_stance(direction)
+    if capsule.height<1.5:velocity.x*=0.6;velocity.z*=0.6
+    rotation.y=lerp_angle(rotation.y,atan2(-direction.x,-direction.z),delta*5);play("jump" if not is_on_floor() else ("crouch_run" if capsule.height<1.5 else "run"))
    else:play("idle")
- if not rolling:try_step(Vector3(velocity.x,0,velocity.z)*delta)
+ if not rolling:
+  var motion=Vector3(velocity.x,0,velocity.z)*delta
+  if not try_step(motion):try_jump(motion)
+ if not link_flight.is_empty():velocity=link_flight.velocity
  move_and_slide()
+
+func begin_link_traversal(details):
+ if not link_flight.is_empty() or not details.has("rid") or not is_on_floor():return
+ var owner_id=NavigationServer3D.link_get_owner_id(details.rid)
+ var link=instance_from_id(owner_id) if owner_id!=0 else null
+ if not is_instance_valid(link) or not link.has_meta("traversal"):return
+ var spec=link.get_meta("traversal");var a=spec.feetEntry;var b=spec.feetExit
+ var from=Vector3(a[0],a[1],a[2]);var to=Vector3(b[0],b[1],b[2])
+ if global_position.distance_to(to)<global_position.distance_to(from):var swap=from;from=to;to=swap
+ if global_position.distance_to(from)>0.8:return
+ var flight=Traversal.plan(get_world_3d().direct_space_state,global_position,to,[get_rid()])
+ if flight.is_empty():return
+ flight.elapsed=0.0;link_flight=flight;capsule.height=1.2;collider.position.y=0.6;play("jump")
+
+func adapt_stance(direction):
+ var query=PhysicsShapeQueryParameters3D.new();query.collision_mask=1;query.exclude=[get_rid()]
+ var shape=CapsuleShape3D.new();shape.radius=0.42;shape.height=1.9;query.shape=shape
+ var ahead=global_position+direction*0.7
+ query.transform=Transform3D(Basis.IDENTITY,ahead+Vector3.UP)
+ if get_world_3d().direct_space_state.intersect_shape(query,1).is_empty():return
+ shape.height=1.2;query.transform.origin=ahead+Vector3.UP*0.65
+ if get_world_3d().direct_space_state.intersect_shape(query,1).is_empty():capsule.height=1.2;collider.position.y=0.6
+
+func try_jump(motion):
+ if motion.length()<0.001 or not is_on_floor() or rolling or reload_remaining>0:return false
+ var forward=motion.normalized()*0.9
+ if not test_move(global_transform,forward):return false
+ var ray=PhysicsRayQueryParameters3D.create(global_position+forward+Vector3.UP*0.9,global_position+forward+Vector3.UP*0.3,1,[get_rid()])
+ var hit=get_world_3d().direct_space_state.intersect_ray(ray)
+ if hit.is_empty() or hit.normal.y<0.67:return false
+ var rise=hit.position.y-global_position.y
+ if rise<0.38 or rise>0.8:return false
+ var raised=global_transform.translated(Vector3.UP*(rise+0.08))
+ if test_move(global_transform,Vector3.UP*(rise+0.08)) or test_move(raised,forward):return false
+ velocity.y=6.3;play("jump");return true
 
 func try_step(motion):
  if not is_on_floor() or motion.length()<0.001 or not test_move(global_transform,motion):return false

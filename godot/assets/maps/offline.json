@@ -80,8 +80,8 @@
     "geometrySha256": "3a41118a3dc6d9d2ea5d49ca789a825489dc625b97b41ecb225afb86e96f26bf",
     "navigation": "res://assets/maps/offline/72.res",
     "number": 72,
-    "polygons": 7024,
-    "sha256": "8a368250b922905c1a73f2e6924d7467040a12bdad7ce94035f0d0c6dbc7ddd7"
+    "polygons": 9474,
+    "sha256": "99f1aab5cdea315eba29bcd3b40530a607b5a064a00628f7a8cbdf7baaf8892e"
   },
   {
     "geometrySha256": "59e6d0d31caf2c916deb8fa6fef394bb3d500f614db9838c5ff5fc6c3fcc4d8a",
@@ -131,5 +131,110 @@
     "number": 110,
     "polygons": 957,
     "sha256": "9ee73b79b9de3ebc576329f77c633dd9c1e7364aa98d876dc0c2833e72368ed4"
+  },
+  {
+    "geometrySha256": "acc35a122af1beec8c40dfa1c02bda6aedd7a3494560f8af26b8292ef5135578",
+    "navigation": "res://assets/maps/offline/36.res",
+    "number": 36,
+    "polygons": 749,
+    "sha256": "eb39776a6f82bb2124e13658d158f156bf8ab6b271355f22d5a8813883c364f3"
+  },
+  {
+    "geometrySha256": "e1ad1028e93710926295bc6d449e0c97d79cd4982222c5c08675657fa622b75c",
+    "navigation": "res://assets/maps/offline/69.res",
+    "number": 69,
+    "polygons": 1218,
+    "sha256": "f544515ee0d4530820cdfdeba607dda572e30babb896e0ae69047dc6ea78b2f7"
+  },
+  {
+    "geometrySha256": "0edf5e547d2ba367b3e976c686cd96bfbe37c7005b38874f693e0beb264e51eb",
+    "navigation": "res://assets/maps/offline/87.res",
+    "number": 87,
+    "polygons": 781,
+    "sha256": "fcdf63ce31f22c3b0d8474a242c32cb7068b0fff57e43cc940dc8f83be55fb31"
+  },
+  {
+    "geometrySha256": "3eb6ff9d304ad2c6aae8c7de2d061c8371675d6192c4c5d531cde3df33f54411",
+    "navigation": "res://assets/maps/offline/17.res",
+    "number": 17,
+    "polygons": 718,
+    "sha256": "0477983666a5235db0b58702f5a3057ef9196b613dbd7b611ef1c0b15efc501d"
+  },
+  {
+    "geometrySha256": "4ac7831ee50fe8d70333cd03f4c9a6b1f3349b21ffbc1ab8984d5bb5e9808235",
+    "navigation": "res://assets/maps/offline/51.res",
+    "number": 51,
+    "polygons": 1838,
+    "sha256": "7d0a6e2be0b8a82f8d8a6333e992f80276bcd326c016fd374d001290979af80e"
+  },
+  {
+    "geometrySha256": "54aaac746e6545ffb37f32f89331a60787de21804b94884fe3858aa53de3d0ea",
+    "navigation": "res://assets/maps/offline/89.res",
+    "number": 89,
+    "polygons": 779,
+    "sha256": "2553c4bfacc72e2251971e76bc854e097175f9df1181011251c3978f2e9d5d42"
+  },
+  {
+    "geometrySha256": "696f6f4683fda191da1923a57c35f5ca4d6e405a30c8245a99ebc3c9c740ec31",
+    "navigation": "res://assets/maps/offline/37.res",
+    "number": 37,
+    "polygons": 1302,
+    "sha256": "16d989b69fbc42466f129e56623514e3df94b5d054908a8876d73f78f89bc9ce"
+  },
+  {
+    "geometrySha256": "6bed8b0fbd91a5b5b41ebad78831bf05c502d40c0807daa8b207bb702a5ceae8",
+    "navigation": "res://assets/maps/offline/42.res",
+    "number": 42,
+    "polygons": 823,
+    "sha256": "096d8b73e729c5f2832defcc04833f3da7117a58dfc7784f6a7325eb4dcc65c9"
+  },
+  {
+    "geometrySha256": "7497b716facc8b83b50c351ade04df2e806c3e3ab6d612dc26b9b3c81013f2a6",
+    "navigation": "res://assets/maps/offline/20.res",
+    "number": 20,
+    "polygons": 1157,
+    "sha256": "de02eec182d918e65b57bec19822cafd2a7086641eff5991f3d564508bc82f53"
+  },
+  {
+    "geometrySha256": "39b6b7d4665c97a6b430c1252f54c860d5240d6ebbea03e4ecf5c63815edd71b",
+    "navigation": "res://assets/maps/offline/24.res",
+    "number": 24,
+    "polygons": 3579,
+    "sha256": "06f2094ad523c1c31c231147b60ddb4b63f1b24ddbee6e56f1895863c2b391f4"
+  },
+  {
+    "geometrySha256": "3867052deea2f5021cec89865707ff061989db38ff46515148210da520487a88",
+    "navigation": "res://assets/maps/offline/68.res",
+    "number": 68,
+    "polygons": 234,
+    "sha256": "a7df281215c1ffb867b705e34fbad30afa4f94697597d37e4231330547dbed48"
+  },
+  {
+    "geometrySha256": "c3f9a7b598acd36a15e3aa3d497ec400caba754cebbb4cf5f14b54fc7376de2f",
+    "navigation": "res://assets/maps/offline/41.res",
+    "number": 41,
+    "polygons": 659,
+    "sha256": "61d2bc952ecad236af946c501971245d25ea17f9c25f6ac7bb9c3a7ac94dede0"
+  },
+  {
+    "geometrySha256": "d5e978aa79f3e2e98495d40a6574183c6d7ff3895b21a7f6d76d77083497e099",
+    "navigation": "res://assets/maps/offline/56.res",
+    "number": 56,
+    "polygons": 5991,
+    "sha256": "fec7ba2fdb681db6ecf6e628014439e86ac9cbcceccba6ab97ae17b99aee0ead"
+  },
+  {
+    "geometrySha256": "0a5c26144042f673199cb7f2b7ecbf9ad1606ad6f4f5415726a4ea9bd5ca8999",
+    "navigation": "res://assets/maps/offline/61.res",
+    "number": 61,
+    "polygons": 767,
+    "sha256": "4170d49365d591a77817f43260bfbb4b9549d3c01fa6f4be60aa0752c3a369e6"
+  },
+  {
+    "geometrySha256": "a62c1fd57abea3cb3d06dcf25d3614704f51275923e6086b1627d0a3ffa90a16",
+    "navigation": "res://assets/maps/offline/106.res",
+    "number": 106,
+    "polygons": 495,
+    "sha256": "527ae173c03379ef4699f822bb38a811447a195e2da7f1f071dc22df71becb5f"
   }
 ]

@@ -85,7 +85,8 @@ func run():
 	game.player.set_physics_process(false);game.set_process(false)
 	for character_row in game.book.characters:
 		if character_row.get("available")!=true:continue
-		ensure(game.select_library_character(character_row) and game.player.anim.has_animation("airborne_attack"),"source airborne clip imports for "+character_row.id)
+		game.local_room.team=character_row.sourceTeam
+		ensure(game.select_library_character(character_row) and game.character_info.id==character_row.id and game.player.anim.has_animation("airborne_attack"),"source airborne clip imports for "+character_row.id)
 		var source_clip=game.player.anim.get_animation("airborne_attack")
 		game.player.anim.play("airborne_attack");game.player.anim.seek(source_clip.length*0.35,true)
 		var skeleton=game.player.wolf.find_children("*","Skeleton3D",true,false)[0]
