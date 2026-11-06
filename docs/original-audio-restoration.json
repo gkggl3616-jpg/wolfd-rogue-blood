@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "utc": "2026-11-04T14:12:41.368487+00:00",
+  "driveFileId": "1UqJsReUFibnxW8_WMu1i_ys9cjSonhGA",
+  "changes": [
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_snd/mapsound/am_bell.wav",
+      "sha256": "523dd2df700a78d0777b3eb0144a26c5a8753905213d998310a75c197f2a0d31",
+      "bytes": 79916,
+      "asset": "res://assets/shared_media/audio/523dd2df700a78d0777b3eb0.wav",
+      "conversion": "original PCM16 WAV copied byte-for-byte",
+      "updatedRuntimeBindings": 1,
+      "previousRuntimeAssets": [
+        "res://assets/shared_media/audio/d06b5c1b7757cfbef4622b44.wav"
+      ]
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_snd/mapsound/am_hawk.wav",
+      "sha256": "4fa91bcbbef89ccde82b74819203b47cffcb830731696c622acda62f7916a9f6",
+      "bytes": 77100,
+      "asset": "res://assets/shared_media/audio/4fa91bcbbef89ccde82b7481.wav",
+      "conversion": "original PCM16 WAV copied byte-for-byte",
+      "updatedRuntimeBindings": 1,
+      "previousRuntimeAssets": [
+        "res://assets/shared_media/audio/fd6033b09db6d41997ce13e0.wav"
+      ]
+    }
+  ],
+  "sourceHashesVerifiedAgainst": "docs/pc-content-scan.jsonl.gz",
+  "fullGamePortComplete": false,
+  "historicalContainerVariantsRetained": true,
+  "selectionPolicy": "Runtime sounds map uses the supplied PC RAR version; sources/conflictingSourcePaths preserve historical archive variants."
+}

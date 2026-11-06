@@ -5,6 +5,7 @@ config/name="Wolf Rogue Blood"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+config/quit_on_go_back=false
 
 [display]
 window/size/viewport_width=1280
@@ -12,6 +13,7 @@ window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/handheld/orientation=0
 
 [rendering]
@@ -23,7 +25,10 @@ environment/defaults/default_clear_color=Color(0.055, 0.07, 0.10, 1)
 
 [input_devices]
 pointing/emulate_touch_from_mouse=false
-pointing/emulate_mouse_from_touch=false
+pointing/emulate_mouse_from_touch=true
 
 [audio]
 driver/enable_input=false
+
+[navigation]
+3d/merge_rasterizer_cell_scale=0.1

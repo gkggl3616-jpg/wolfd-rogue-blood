@@ -1,0 +1,5966 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "eb9c7715da168ea1bf5e54de7754aba0860ea69561d86c0c0b62ac8515289650",
+  "groups": {
+    "Howling_Reboot_1_Red": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.0,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\SPHERE_ROLLING_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|WT_FX\\GLOW\\SPHERE_EFFECT_1.DTX"
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "1,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|..."
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.158678,
+                0.886275,
+                0.258824,
+                0.164706,
+                0.301961
+              ],
+              [
+                0.2,
+                0.0,
+                0.0,
+                0.0,
+                0.321569
+              ],
+              [
+                0.241322,
+                0.956863,
+                0.603922,
+                0.376471,
+                0.301961
+              ],
+              [
+                0.28595,
+                0.0,
+                0.0,
+                0.0,
+                0.329412
+              ],
+              [
+                0.328926,
+                0.921569,
+                0.313726,
+                0.07451,
+                0.337255
+              ],
+              [
+                0.368595,
+                0.0,
+                0.0,
+                0.0,
+                0.337255
+              ],
+              [
+                0.408264,
+                0.976471,
+                0.968628,
+                0.811765,
+                0.337255
+              ],
+              [
+                0.57686,
+                0.901961,
+                0.701961,
+                0.14902,
+                0.313726
+              ],
+              [
+                0.619835,
+                0.0,
+                0.0,
+                0.0,
+                0.313726
+              ],
+              [
+                0.67438,
+                1.0,
+                0.0,
+                0.0,
+                0.313726
+              ],
+              [
+                0.786777,
+                0.658824,
+                0.227451,
+                0.101961,
+                0.266667
+              ],
+              [
+                0.826446,
+                0.0,
+                0.0,
+                0.0,
+                0.266667
+              ],
+              [
+                0.872727,
+                0.337255,
+                0.058824,
+                0.156863,
+                0.164706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                5.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/82dfcabb81e78ee8a489.glb",
+          "sha256": "bc0d7bba607e4e92eddbe2c3093879abad86bff372458deea187c9cc4803a91e",
+          "frames": [
+            "res://assets/abilities/source_roars/c893b6e83e99bbb2486b.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 1.0,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\SHOCK_CIRCLE_1.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              1.0
+            ],
+            "MaxParticleLifeSpan": [
+              1.0
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              0.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "1, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              0.0
+            ],
+            "MaxAngularVelocity": [
+              180.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.112397,
+                0.941177,
+                0.541177,
+                0.541177,
+                0.627451
+              ],
+              [
+                0.608264,
+                0.941177,
+                0.541177,
+                0.541177,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                50.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                50.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/4cf36cfb0917e3bdc6a2.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 0.763,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\PLAZMACORE_1.DTX"
+            ],
+            "EmissionInterval": [
+              0.15
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.4
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              3.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -50.0
+            ],
+            "MaxAngularVelocity": [
+              50.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.046281,
+                0.972549,
+                0.956863,
+                0.737255,
+                0.184314
+              ],
+              [
+                0.947107,
+                0.937255,
+                0.603922,
+                0.376471,
+                0.203922
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                9.090909,
+                0.0,
+                0.0
+              ],
+              [
+                0.072758,
+                27.272728,
+                0.0,
+                0.0
+              ],
+              [
+                0.169205,
+                34.659092,
+                0.0,
+                0.0
+              ],
+              [
+                0.600677,
+                37.5,
+                0.0,
+                0.0
+              ],
+              [
+                0.817259,
+                29.545454,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                7.386364,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/870da9546bb1a9d03fb3.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 0.842,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              20.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              20.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.239216
+              ],
+              [
+                0.110744,
+                0.34902,
+                0.109804,
+                0.07451,
+                0.301961
+              ],
+              [
+                0.676033,
+                0.34902,
+                0.109804,
+                0.07451,
+                0.329412
+              ],
+              [
+                1.0,
+                0.07451,
+                0.07451,
+                0.07451,
+                0.301961
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                350.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                350.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 0.404,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR"
+            ],
+            "Texture": [
+              "dtx|..."
+            ],
+            "EmissionInterval": [
+              0.2
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.3
+            ],
+            "MinRadius": [
+              70.0
+            ],
+            "MaxRadius": [
+              80.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -30.0
+            ],
+            "MaxAngularVelocity": [
+              30.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/421e51cd83cf39852213.png",
+            "res://assets/abilities/source_roars/4fe53c616b7590a22852.png",
+            "res://assets/abilities/source_roars/16efab9d199d22ca9038.png"
+          ],
+          "fps": 8,
+          "source": "WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR",
+          "sourceSha256": "03118123e4d94b9209001227f2a48a2c248cf82cc5c21c7d09efcc2f93b88ba7"
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.398,
+          "end": 0.874,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|WT_FX\\GLOW\\ELECTRIC_SEQ_5.SPR"
+            ],
+            "Texture": [
+              "dtx|..."
+            ],
+            "EmissionInterval": [
+              0.2
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.3
+            ],
+            "MinRadius": [
+              50.0
+            ],
+            "MaxRadius": [
+              70.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -40.0
+            ],
+            "MaxAngularVelocity": [
+              40.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                13.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                13.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/028951a11b5d5eb28b73.png",
+            "res://assets/abilities/source_roars/689c26d79935e309ec4a.png",
+            "res://assets/abilities/source_roars/9add69f135f0fcb2a018.png"
+          ],
+          "fps": 8,
+          "source": "WT_FX\\GLOW\\ELECTRIC_SEQ_5.SPR",
+          "sourceSha256": "6e60f9d612e590c2981732c4c12dbf10cc6100758c3dead0fc768f9092fb4140"
+        }
+      ]
+    },
+    "Howling_Reboot_1_Blue": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.0,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\SPHERE_ROLLING_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|WT_FX\\GLOW\\SPHERE_EFFECT_1.DTX"
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "1,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|..."
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.158678,
+                0.066667,
+                0.8,
+                0.8,
+                0.301961
+              ],
+              [
+                0.2,
+                0.0,
+                0.0,
+                0.0,
+                0.321569
+              ],
+              [
+                0.241322,
+                0.713726,
+                0.929412,
+                0.956863,
+                0.301961
+              ],
+              [
+                0.28595,
+                0.0,
+                0.0,
+                0.0,
+                0.329412
+              ],
+              [
+                0.328926,
+                0.066667,
+                0.8,
+                0.8,
+                0.337255
+              ],
+              [
+                0.368595,
+                0.0,
+                0.0,
+                0.0,
+                0.337255
+              ],
+              [
+                0.408264,
+                0.784314,
+                0.94902,
+                0.972549,
+                0.337255
+              ],
+              [
+                0.57686,
+                0.066667,
+                0.8,
+                0.8,
+                0.313726
+              ],
+              [
+                0.619835,
+                0.0,
+                0.0,
+                0.0,
+                0.313726
+              ],
+              [
+                0.67438,
+                0.066667,
+                0.8,
+                0.8,
+                0.313726
+              ],
+              [
+                0.786777,
+                0.047059,
+                0.529412,
+                0.529412,
+                0.266667
+              ],
+              [
+                0.826446,
+                0.0,
+                0.0,
+                0.0,
+                0.266667
+              ],
+              [
+                0.872727,
+                0.027451,
+                0.337255,
+                0.337255,
+                0.164706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                5.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/82dfcabb81e78ee8a489.glb",
+          "sha256": "bc0d7bba607e4e92eddbe2c3093879abad86bff372458deea187c9cc4803a91e",
+          "frames": [
+            "res://assets/abilities/source_roars/c893b6e83e99bbb2486b.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 1.0,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\SHOCK_CIRCLE_1.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              1.0
+            ],
+            "MaxParticleLifeSpan": [
+              1.0
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              0.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "1, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              0.0
+            ],
+            "MaxAngularVelocity": [
+              180.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.112397,
+                0.329412,
+                0.839216,
+                0.956863,
+                0.627451
+              ],
+              [
+                0.608264,
+                0.329412,
+                0.839216,
+                0.956863,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                50.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                50.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/4cf36cfb0917e3bdc6a2.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 0.763,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\PLAZMACORE_1.DTX"
+            ],
+            "EmissionInterval": [
+              0.15
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.4
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              3.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -50.0
+            ],
+            "MaxAngularVelocity": [
+              50.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.046281,
+                0.647059,
+                0.87451,
+                0.968628,
+                0.184314
+              ],
+              [
+                0.947107,
+                0.247059,
+                0.301961,
+                0.776471,
+                0.203922
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                9.090909,
+                0.0,
+                0.0
+              ],
+              [
+                0.072758,
+                27.272728,
+                0.0,
+                0.0
+              ],
+              [
+                0.169205,
+                34.659092,
+                0.0,
+                0.0
+              ],
+              [
+                0.605753,
+                34.659092,
+                0.0,
+                0.0
+              ],
+              [
+                0.807107,
+                27.84091,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                9.090909,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/870da9546bb1a9d03fb3.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 0.842,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              20.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              20.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.239216
+              ],
+              [
+                0.110744,
+                0.086275,
+                0.121569,
+                0.337255,
+                0.301961
+              ],
+              [
+                0.676033,
+                0.086275,
+                0.121569,
+                0.337255,
+                0.329412
+              ],
+              [
+                1.0,
+                0.07451,
+                0.07451,
+                0.07451,
+                0.301961
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                350.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                350.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 0.404,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR"
+            ],
+            "Texture": [
+              "dtx|..."
+            ],
+            "EmissionInterval": [
+              0.2
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.3
+            ],
+            "MinRadius": [
+              70.0
+            ],
+            "MaxRadius": [
+              80.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -30.0
+            ],
+            "MaxAngularVelocity": [
+              30.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.658824,
+                0.764706,
+                0.976471,
+                0.0
+              ],
+              [
+                1.0,
+                0.658824,
+                0.764706,
+                0.976471,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/421e51cd83cf39852213.png",
+            "res://assets/abilities/source_roars/4fe53c616b7590a22852.png",
+            "res://assets/abilities/source_roars/16efab9d199d22ca9038.png"
+          ],
+          "fps": 8,
+          "source": "WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR",
+          "sourceSha256": "03118123e4d94b9209001227f2a48a2c248cf82cc5c21c7d09efcc2f93b88ba7"
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.398,
+          "end": 0.874,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -10.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|WT_FX\\GLOW\\ELECTRIC_SEQ_5.SPR"
+            ],
+            "Texture": [
+              "dtx|..."
+            ],
+            "EmissionInterval": [
+              0.2
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.3
+            ],
+            "MaxParticleLifeSpan": [
+              0.3
+            ],
+            "MinRadius": [
+              50.0
+            ],
+            "MaxRadius": [
+              70.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -40.0
+            ],
+            "MaxAngularVelocity": [
+              40.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.658824,
+                0.764706,
+                0.976471,
+                0.0
+              ],
+              [
+                1.0,
+                0.658824,
+                0.764706,
+                0.976471,
+                0.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                13.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                13.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/028951a11b5d5eb28b73.png",
+            "res://assets/abilities/source_roars/689c26d79935e309ec4a.png",
+            "res://assets/abilities/source_roars/9add69f135f0fcb2a018.png"
+          ],
+          "fps": 8,
+          "source": "WT_FX\\GLOW\\ELECTRIC_SEQ_5.SPR",
+          "sourceSha256": "6e60f9d612e590c2981732c4c12dbf10cc6100758c3dead0fc768f9092fb4140"
+        }
+      ]
+    },
+    "Howling_Fire_1": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\TRAIL_ILLUSION_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|..."
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "0,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|WT_FX\\GLOW\\TRAIL_ILLUSION_1.SPR"
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ],
+              [
+                0.175207,
+                1.0,
+                0.364706,
+                0.121569,
+                0.47451
+              ],
+              [
+                0.624793,
+                1.0,
+                0.364706,
+                0.121569,
+                0.47451
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                0.7,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.7,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/b9889428dedcac6d210d.glb",
+          "sha256": "d7bf6c7dbb840873b7837db00ee7bb122647bc8b0059bf7b54449f10d1c720c8",
+          "frames": [
+            "res://assets/abilities/source_roars/79cb472ba6bf06d88650.png",
+            "res://assets/abilities/source_roars/240c6f814e31e30cc531.png",
+            "res://assets/abilities/source_roars/9095d668f0f72a3844f3.png",
+            "res://assets/abilities/source_roars/a4fcb42f3cf1a375717d.png",
+            "res://assets/abilities/source_roars/187a24af20037c6df22d.png",
+            "res://assets/abilities/source_roars/060037e0a167814818db.png",
+            "res://assets/abilities/source_roars/bca18411cfb6680cc3e9.png",
+            "res://assets/abilities/source_roars/0ebd326428ee710ade65.png",
+            "res://assets/abilities/source_roars/f81fbb746f02d0cc02f4.png",
+            "res://assets/abilities/source_roars/f5050a7e066d45259304.png"
+          ],
+          "fps": 10
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.347,
+          "end": 1.48,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\FIRE_EMBERS_2.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              10
+            ],
+            "GravityAcceleration": [
+              100.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.5
+            ],
+            "MaxParticleLifeSpan": [
+              0.8
+            ],
+            "MinRadius": [
+              30.0
+            ],
+            "MaxRadius": [
+              40.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -60.0,
+                0.0,
+                -60.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                60.0,
+                20.0,
+                60.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -150.0
+            ],
+            "MaxAngularVelocity": [
+              150.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.47451
+              ],
+              [
+                0.08595,
+                0.984314,
+                0.941177,
+                0.647059,
+                0.458824
+              ],
+              [
+                0.419835,
+                0.968628,
+                0.792157,
+                0.521569,
+                0.494118
+              ],
+              [
+                0.808264,
+                0.984314,
+                0.431373,
+                0.101961,
+                0.486275
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.509804
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                13.068181,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                21.59091,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/c0d7757684ac88321078.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              1000.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.564706
+              ],
+              [
+                0.031405,
+                1.0,
+                0.592157,
+                0.486275,
+                0.521569
+              ],
+              [
+                0.117355,
+                1.0,
+                0.27451,
+                0.101961,
+                0.509804
+              ],
+              [
+                0.201653,
+                1.0,
+                0.592157,
+                0.486275,
+                0.556863
+              ],
+              [
+                0.289256,
+                1.0,
+                0.27451,
+                0.101961,
+                0.556863
+              ],
+              [
+                0.375207,
+                1.0,
+                0.592157,
+                0.486275,
+                0.576471
+              ],
+              [
+                0.457851,
+                1.0,
+                0.27451,
+                0.101961,
+                0.556863
+              ],
+              [
+                0.540496,
+                1.0,
+                0.592157,
+                0.486275,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.666667
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                400.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                400.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "Howling_Ice_1": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\TRAIL_ILLUSION_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|..."
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "0,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|WT_FX\\GLOW\\TRAIL_ILLUSION_1.SPR"
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ],
+              [
+                0.170248,
+                0.447059,
+                0.976471,
+                0.984314,
+                0.509804
+              ],
+              [
+                0.624793,
+                0.121569,
+                0.756863,
+                1.0,
+                0.47451
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                0.7,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.7,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/b9889428dedcac6d210d.glb",
+          "sha256": "d7bf6c7dbb840873b7837db00ee7bb122647bc8b0059bf7b54449f10d1c720c8",
+          "frames": [
+            "res://assets/abilities/source_roars/79cb472ba6bf06d88650.png",
+            "res://assets/abilities/source_roars/240c6f814e31e30cc531.png",
+            "res://assets/abilities/source_roars/9095d668f0f72a3844f3.png",
+            "res://assets/abilities/source_roars/a4fcb42f3cf1a375717d.png",
+            "res://assets/abilities/source_roars/187a24af20037c6df22d.png",
+            "res://assets/abilities/source_roars/060037e0a167814818db.png",
+            "res://assets/abilities/source_roars/bca18411cfb6680cc3e9.png",
+            "res://assets/abilities/source_roars/0ebd326428ee710ade65.png",
+            "res://assets/abilities/source_roars/f81fbb746f02d0cc02f4.png",
+            "res://assets/abilities/source_roars/f5050a7e066d45259304.png"
+          ],
+          "fps": 10
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 0.596,
+          "properties": {
+            "UpdatePos": [
+              "0,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "0"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -30.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\SMOKE\\SMOKE_5.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              7
+            ],
+            "GravityAcceleration": [
+              10.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.2
+            ],
+            "MaxParticleLifeSpan": [
+              0.5
+            ],
+            "MinRadius": [
+              20.0
+            ],
+            "MaxRadius": [
+              60.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -100.0,
+                -100.0,
+                30.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                100.0,
+                100.0,
+                90.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -10.0
+            ],
+            "MaxAngularVelocity": [
+              10.0
+            ],
+            "BlendMode": [
+              "0, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.321569,
+                0.831373,
+                1.0,
+                0.831373
+              ],
+              [
+                0.170248,
+                0.2,
+                0.858824,
+                1.0,
+                0.329412
+              ],
+              [
+                0.608264,
+                0.847059,
+                0.956863,
+                1.0,
+                0.603922
+              ],
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.125212,
+                38.863636,
+                0.0,
+                0.0
+              ],
+              [
+                0.306261,
+                50.454548,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                60.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/c37cbfc5cfaed2449cfa.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              1000.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.564706
+              ],
+              [
+                0.031405,
+                0.631373,
+                0.87451,
+                0.984314,
+                0.521569
+              ],
+              [
+                0.117355,
+                0.137255,
+                0.713726,
+                0.956863,
+                0.509804
+              ],
+              [
+                0.201653,
+                0.631373,
+                0.87451,
+                0.984314,
+                0.556863
+              ],
+              [
+                0.289256,
+                0.137255,
+                0.713726,
+                0.956863,
+                0.556863
+              ],
+              [
+                0.375207,
+                0.631373,
+                0.87451,
+                0.984314,
+                0.576471
+              ],
+              [
+                0.457851,
+                0.137255,
+                0.713726,
+                0.956863,
+                0.556863
+              ],
+              [
+                0.540496,
+                0.631373,
+                0.87451,
+                0.984314,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.666667
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                400.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                400.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "Howling_Radiation_1": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\TRAIL_ILLUSION_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|..."
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "0,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|WT_FX\\GLOW\\TRAIL_ILLUSION_1.SPR"
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ],
+              [
+                0.168595,
+                0.858824,
+                0.992157,
+                0.709804,
+                0.439216
+              ],
+              [
+                0.624793,
+                0.521569,
+                0.839216,
+                0.282353,
+                0.47451
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                0.7,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.7,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/b9889428dedcac6d210d.glb",
+          "sha256": "d7bf6c7dbb840873b7837db00ee7bb122647bc8b0059bf7b54449f10d1c720c8",
+          "frames": [
+            "res://assets/abilities/source_roars/79cb472ba6bf06d88650.png",
+            "res://assets/abilities/source_roars/240c6f814e31e30cc531.png",
+            "res://assets/abilities/source_roars/9095d668f0f72a3844f3.png",
+            "res://assets/abilities/source_roars/a4fcb42f3cf1a375717d.png",
+            "res://assets/abilities/source_roars/187a24af20037c6df22d.png",
+            "res://assets/abilities/source_roars/060037e0a167814818db.png",
+            "res://assets/abilities/source_roars/bca18411cfb6680cc3e9.png",
+            "res://assets/abilities/source_roars/0ebd326428ee710ade65.png",
+            "res://assets/abilities/source_roars/f81fbb746f02d0cc02f4.png",
+            "res://assets/abilities/source_roars/f5050a7e066d45259304.png"
+          ],
+          "fps": 10
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.032,
+          "end": 0.432,
+          "properties": {
+            "UpdatePos": [
+              "0,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "0"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\WATERFALL\\INK_SHOCK_2.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              10.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.4
+            ],
+            "MaxParticleLifeSpan": [
+              0.4
+            ],
+            "MinRadius": [
+              5.0
+            ],
+            "MaxRadius": [
+              20.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -5.0,
+                -5.0,
+                2.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                5.0,
+                5.0,
+                5.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -5.0
+            ],
+            "MaxAngularVelocity": [
+              5.0
+            ],
+            "BlendMode": [
+              "0, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.811765,
+                1.0,
+                0.701961,
+                0.831373
+              ],
+              [
+                0.171901,
+                0.0,
+                1.0,
+                0.247059,
+                0.486275
+              ],
+              [
+                0.604959,
+                0.121569,
+                0.556863,
+                0.156863,
+                0.831373
+              ],
+              [
+                1.0,
+                0.203922,
+                0.427451,
+                0.231373,
+                1.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                2.386364,
+                0.0,
+                0.0
+              ],
+              [
+                0.081218,
+                25.090908,
+                0.0,
+                0.0
+              ],
+              [
+                0.21489,
+                35.545452,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                39.727272,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/ede6cd47de62bf2e5131.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              1000.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.564706
+              ],
+              [
+                0.031405,
+                0.701961,
+                1.0,
+                0.701961,
+                0.521569
+              ],
+              [
+                0.117355,
+                0.203922,
+                1.0,
+                0.203922,
+                0.509804
+              ],
+              [
+                0.201653,
+                0.701961,
+                1.0,
+                0.701961,
+                0.556863
+              ],
+              [
+                0.289256,
+                0.203922,
+                1.0,
+                0.203922,
+                0.556863
+              ],
+              [
+                0.375207,
+                0.701961,
+                1.0,
+                0.701961,
+                0.576471
+              ],
+              [
+                0.457851,
+                0.203922,
+                1.0,
+                0.203922,
+                0.556863
+              ],
+              [
+                0.540496,
+                0.701961,
+                1.0,
+                0.701961,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.666667
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                400.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                400.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.086,
+          "end": 0.583,
+          "properties": {
+            "UpdatePos": [
+              "0,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "0"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\WATERFALL\\INK_SHOCK_2.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              2
+            ],
+            "GravityAcceleration": [
+              10.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.5
+            ],
+            "MaxParticleLifeSpan": [
+              0.5
+            ],
+            "MinRadius": [
+              5.0
+            ],
+            "MaxRadius": [
+              20.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -5.0,
+                -5.0,
+                2.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                5.0,
+                5.0,
+                5.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -3.0
+            ],
+            "MaxAngularVelocity": [
+              3.0
+            ],
+            "BlendMode": [
+              "0, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.811765,
+                1.0,
+                0.701961,
+                0.831373
+              ],
+              [
+                0.171901,
+                0.0,
+                1.0,
+                0.247059,
+                0.486275
+              ],
+              [
+                0.604959,
+                0.121569,
+                0.556863,
+                0.156863,
+                0.831373
+              ],
+              [
+                1.0,
+                0.203922,
+                0.427451,
+                0.231373,
+                1.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                2.386364,
+                0.0,
+                0.0
+              ],
+              [
+                0.079526,
+                19.090908,
+                0.0,
+                0.0
+              ],
+              [
+                0.209814,
+                24.659092,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                30.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/ede6cd47de62bf2e5131.png"
+          ],
+          "fps": 1
+        }
+      ]
+    },
+    "Howling_Lightning_1": {
+      "nodes": [
+        {
+          "type": "LTBModel",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Model": [
+              "ltb|WT_FX\\GLOW\\TRAIL_ILLUSION_1.LTB"
+            ],
+            "Skin0": [
+              "dtx|..."
+            ],
+            "Skin1": [
+              "dtx|..."
+            ],
+            "Skin2": [
+              "dtx|..."
+            ],
+            "Skin3": [
+              "dtx|..."
+            ],
+            "Skin4": [
+              "dtx|..."
+            ],
+            "Normal": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Facing": [
+              "2,CameraFacing,AlongNormal,ParentAlign"
+            ],
+            "Shadow": [
+              "0,No,Yes"
+            ],
+            "OverrideAniLength": [
+              "0,No,Yes"
+            ],
+            "AniName": [
+              ""
+            ],
+            "AniLength": [
+              0.0
+            ],
+            "RenderStyle0": [
+              "ltb|WT_RS\\ADDITIVE.LTB"
+            ],
+            "RenderStyle1": [
+              "ltb|..."
+            ],
+            "RenderStyle2": [
+              "ltb|..."
+            ],
+            "RenderStyle3": [
+              "ltb|..."
+            ],
+            "SyncToModelAnim": [
+              "0,No,Yes"
+            ],
+            "SyncToKey": [
+              "0,No,Yes"
+            ],
+            "SpriteSkin0": [
+              "spr|WT_FX\\GLOW\\TRAIL_ILLUSION_1.SPR"
+            ],
+            "SpriteSkin1": [
+              "spr|..."
+            ],
+            "SpriteSkin2": [
+              "spr|..."
+            ],
+            "SpriteSkin3": [
+              "spr|..."
+            ],
+            "SpriteSkin4": [
+              "spr|..."
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ],
+              [
+                0.170248,
+                0.984314,
+                0.992157,
+                0.709804,
+                0.486275
+              ],
+              [
+                0.624793,
+                0.929412,
+                0.913726,
+                0.192157,
+                0.47451
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.458824
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                0.7,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.7,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "asset": "res://assets/abilities/source_roars/b9889428dedcac6d210d.glb",
+          "sha256": "d7bf6c7dbb840873b7837db00ee7bb122647bc8b0059bf7b54449f10d1c720c8",
+          "frames": [
+            "res://assets/abilities/source_roars/79cb472ba6bf06d88650.png",
+            "res://assets/abilities/source_roars/240c6f814e31e30cc531.png",
+            "res://assets/abilities/source_roars/9095d668f0f72a3844f3.png",
+            "res://assets/abilities/source_roars/a4fcb42f3cf1a375717d.png",
+            "res://assets/abilities/source_roars/187a24af20037c6df22d.png",
+            "res://assets/abilities/source_roars/060037e0a167814818db.png",
+            "res://assets/abilities/source_roars/bca18411cfb6680cc3e9.png",
+            "res://assets/abilities/source_roars/0ebd326428ee710ade65.png",
+            "res://assets/abilities/source_roars/f81fbb746f02d0cc02f4.png",
+            "res://assets/abilities/source_roars/f5050a7e066d45259304.png"
+          ],
+          "fps": 10
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 0.008,
+          "end": 0.998,
+          "properties": {
+            "UpdatePos": [
+              "0,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "0"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR"
+            ],
+            "Texture": [
+              "dtx|..."
+            ],
+            "EmissionInterval": [
+              0.1
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              10.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.1
+            ],
+            "MaxParticleLifeSpan": [
+              0.2
+            ],
+            "MinRadius": [
+              30.0
+            ],
+            "MaxRadius": [
+              70.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -5.0,
+                -5.0,
+                2.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                5.0,
+                5.0,
+                5.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -10.0
+            ],
+            "MaxAngularVelocity": [
+              10.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.984314,
+                1.0,
+                0.321569,
+                0.831373
+              ],
+              [
+                0.171901,
+                0.972549,
+                0.992157,
+                0.501961,
+                0.486275
+              ],
+              [
+                0.604959,
+                0.992157,
+                1.0,
+                0.847059,
+                0.831373
+              ],
+              [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/421e51cd83cf39852213.png",
+            "res://assets/abilities/source_roars/4fe53c616b7590a22852.png",
+            "res://assets/abilities/source_roars/16efab9d199d22ca9038.png"
+          ],
+          "fps": 8,
+          "source": "WT_FX\\GLOW\\ELECTRIC_SEQ_1.SPR",
+          "sourceSha256": "03118123e4d94b9209001227f2a48a2c248cf82cc5c21c7d09efcc2f93b88ba7"
+        },
+        {
+          "type": "DynaLight",
+          "start": 0.0,
+          "end": 1.003,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "cry"
+            ],
+            "Offset": [
+              [
+                0.0,
+                -100.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              1000.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Flicker": [
+              0
+            ],
+            "ForceLightWorld": [
+              "1, No, Yes"
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.564706
+              ],
+              [
+                0.031405,
+                0.984314,
+                0.976471,
+                0.631373,
+                0.521569
+              ],
+              [
+                0.117355,
+                1.0,
+                0.909804,
+                0.086275,
+                0.509804
+              ],
+              [
+                0.201653,
+                0.984314,
+                0.976471,
+                0.631373,
+                0.556863
+              ],
+              [
+                0.289256,
+                1.0,
+                0.909804,
+                0.086275,
+                0.556863
+              ],
+              [
+                0.375207,
+                0.984314,
+                0.976471,
+                0.631373,
+                0.576471
+              ],
+              [
+                0.457851,
+                1.0,
+                0.909804,
+                0.086275,
+                0.556863
+              ],
+              [
+                0.540496,
+                0.984314,
+                0.976471,
+                0.631373,
+                0.564706
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.666667
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                400.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                400.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "Howling_Wraith_1": {
+      "nodes": [
+        {
+          "type": "ParticleSystem",
+          "start": 0.0,
+          "end": 1.6,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "ChangeEffect"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "0,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\SMOKE\\SHOCK_CIRCLE_5.DTX"
+            ],
+            "EmissionInterval": [
+              0.06
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.2
+            ],
+            "MaxParticleLifeSpan": [
+              0.2
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              1.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "1, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -30.0
+            ],
+            "MaxAngularVelocity": [
+              30.0
+            ],
+            "BlendMode": [
+              "0, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.38843,
+                0.031373,
+                0.031373,
+                0.031373,
+                0.07451
+              ],
+              [
+                0.504132,
+                0.0,
+                0.0,
+                0.0,
+                0.086275
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "Sk": [
+              [
+                0.001692,
+                44.545452,
+                0.0,
+                0.0
+              ],
+              [
+                0.318105,
+                38.977272,
+                0.0,
+                0.0
+              ],
+              [
+                0.675127,
+                29.43182,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                12.500001,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/6f642c15f4f6e464ccce.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 1.598,
+          "end": 1.758,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "ChangeEffect"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\SMOKE\\SMOKE_2.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              3
+            ],
+            "GravityAcceleration": [
+              30.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              1.0
+            ],
+            "MaxParticleLifeSpan": [
+              1.2
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              30.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -80.0,
+                -30.0,
+                -80.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                80.0,
+                50.0,
+                80.0
+              ]
+            ],
+            "Type": [
+              "2, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -30.0
+            ],
+            "MaxAngularVelocity": [
+              30.0
+            ],
+            "BlendMode": [
+              "0, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "0, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.101961,
+                0.101961,
+                0.101961,
+                0.976471
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                4.772727,
+                0.0,
+                0.0
+              ],
+              [
+                0.049069,
+                47.045452,
+                0.0,
+                0.0
+              ],
+              [
+                0.13198,
+                62.386364,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                68.522728,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/cdbb87317851b9c57392.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 1.605,
+          "end": 2.0,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "ChangeEffect"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                -30.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\FIRE_EMBERS_3.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              12
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.5
+            ],
+            "MaxParticleLifeSpan": [
+              0.6
+            ],
+            "MinRadius": [
+              30.0
+            ],
+            "MaxRadius": [
+              80.0
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                -80.0,
+                -80.0,
+                -80.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                80.0,
+                80.0,
+                80.0
+              ]
+            ],
+            "Type": [
+              "0, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -30.0
+            ],
+            "MaxAngularVelocity": [
+              30.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "0, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.992157,
+                0.937255,
+                0.8,
+                0.47451
+              ],
+              [
+                0.719008,
+                0.941177,
+                0.027451,
+                0.027451,
+                0.439216
+              ],
+              [
+                1.0,
+                0.286275,
+                0.109804,
+                0.039216,
+                0.486275
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                13.181818,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/07cae4e1a08eb988d988.png"
+          ],
+          "fps": 1
+        },
+        {
+          "type": "ParticleSystem",
+          "start": 1.605,
+          "end": 1.705,
+          "properties": {
+            "UpdatePos": [
+              "4,Fixed,Follow,PlayerView,NodeAttach,SocketAttach,PV_NodeAttach,PV_SocketAttach"
+            ],
+            "AttachName": [
+              "ChangeEffect"
+            ],
+            "Offset": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "RotateAdd": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "DisableAtDist": [
+              "1,No,Yes"
+            ],
+            "MenuLayer": [
+              0
+            ],
+            "MaxStartOffset": [
+              0.0
+            ],
+            "RandomizeStartOffset": [
+              "1,No,Yes"
+            ],
+            "StartOffsetInterval": [
+              0.0
+            ],
+            "SmoothShutDown": [
+              "1,No,Yes"
+            ],
+            "DetailLevel": [
+              "0,All,High,Medium,Low,Medium+High,Low+Medium,Low+High"
+            ],
+            "IsGore": [
+              "0,No,Yes"
+            ],
+            "Sprite": [
+              "spr|..."
+            ],
+            "Texture": [
+              "dtx|WT_FX\\GLOW\\SHOCK_GROUND_2.DTX"
+            ],
+            "EmissionInterval": [
+              -1.0
+            ],
+            "ParticlesPerEmission": [
+              1
+            ],
+            "GravityAcceleration": [
+              0.0
+            ],
+            "AdditionalAcceleration": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "MinParticleLifeSpan": [
+              0.15
+            ],
+            "MaxParticleLifeSpan": [
+              0.15
+            ],
+            "MinRadius": [
+              0.0
+            ],
+            "MaxRadius": [
+              0.1
+            ],
+            "EmissionPlane": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MinParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "MaxParticleVelocity": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ]
+            ],
+            "Type": [
+              "1, Sphere, Point, Circle, Cone, Cylinder"
+            ],
+            "PercentToBounce": [
+              0.0
+            ],
+            "FlipRenderingOrder": [
+              "0, No, Yes"
+            ],
+            "LightParticles": [
+              "0, No, Yes"
+            ],
+            "RotateParticles": [
+              "1, No, Yes"
+            ],
+            "MinAngularVelocity": [
+              -5.0
+            ],
+            "MaxAngularVelocity": [
+              5.0
+            ],
+            "BlendMode": [
+              "1, None, Additive, Multiply"
+            ],
+            "MoveParticlesWithSystem": [
+              "1, No, Yes"
+            ],
+            "CollideModels": [
+              "0, No, Yes"
+            ],
+            "Friction": [
+              0.0
+            ],
+            "VelocityType": [
+              "0, Random, FromCenter"
+            ],
+            "InfiniteLife": [
+              "0, No, Yes"
+            ],
+            "SplatPercent": [
+              0.0
+            ],
+            "KillOnSplat": [
+              "1, No, Yes"
+            ],
+            "SplatEffect": [
+              ""
+            ],
+            "Rotate": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "EffectShaderID": [
+              -1
+            ],
+            "Ck": [
+              [
+                0.0,
+                0.984314,
+                0.909804,
+                0.764706,
+                0.521569
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.576471
+              ]
+            ],
+            "Sk": [
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.431472,
+                61.81818,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                80.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "frames": [
+            "res://assets/abilities/source_roars/c3971be0ffbf0ca332f3.png"
+          ],
+          "fps": 1
+        }
+      ]
+    }
+  },
+  "characters": {
+    "pair-model48": "Howling_Fire_1",
+    "pair-model66": "Howling_Lightning_1",
+    "pair-model68": "Howling_Lightning_1",
+    "pair-model70": "Howling_Radiation_1",
+    "pair-model72": "Howling_Radiation_1",
+    "pair-model104": "Howling_Ice_1",
+    "pair-model106": "Howling_Ice_1",
+    "pair-model108": "Howling_Fire_1",
+    "pair-model110": "Howling_Fire_1",
+    "pair-model112": "Howling_Fire_1",
+    "pair-model506": "Howling_Ice_1",
+    "pair-model508": "Howling_Fire_1",
+    "pair-model540": "Howling_Reboot_1_Blue",
+    "pair-model542": "Howling_Reboot_1_Red",
+    "pair-model604": "Howling_Ice_1",
+    "pair-model606": "Howling_Ice_1",
+    "pair-model44": "Howling_Ice_1",
+    "pair-model46": "Howling_Ice_1",
+    "pair-model50": "Howling_Fire_1",
+    "pair-model146": "Howling_Ice_1",
+    "pair-model148": "Howling_Ice_1",
+    "pair-model150": "Howling_Ice_1",
+    "pair-model152": "Howling_Ice_1",
+    "pair-model170": "Howling_Ice_1",
+    "pair-model172": "Howling_Ice_1",
+    "pair-model174": "Howling_Ice_1",
+    "pair-model176": "Howling_Ice_1",
+    "pair-model194": "Howling_Lightning_1",
+    "pair-model212": "Howling_Ice_1",
+    "pair-model214": "Howling_Ice_1",
+    "pair-model216": "Howling_Ice_1",
+    "pair-model218": "Howling_Ice_1",
+    "pair-model442": "Howling_Ice_1",
+    "pair-model444": "Howling_Fire_1",
+    "pair-model446": "Howling_Ice_1",
+    "pair-model448": "Howling_Fire_1",
+    "pair-model458": "Howling_Ice_1",
+    "pair-model460": "Howling_Fire_1",
+    "pair-model482": "Howling_Reboot_1_Blue",
+    "pair-model484": "Howling_Reboot_1_Red",
+    "pair-model494": "Howling_Ice_1",
+    "pair-model495": "Howling_Ice_1",
+    "pair-model496": "Howling_Ice_1",
+    "pair-model497": "Howling_Ice_1",
+    "pair-model544": "Howling_Lightning_1",
+    "pair-model546": "Howling_Radiation_1",
+    "pair-model592": "Howling_Lightning_1",
+    "pair-model594": "Howling_Radiation_1",
+    "pair-model620": "Howling_Lightning_1",
+    "pair-model622": "Howling_Radiation_1",
+    "pair-model624": "Howling_Reboot_1_Blue",
+    "pair-model626": "Howling_Reboot_1_Red"
+  },
+  "textures": {
+    "wt_fx/glow/sphere_effect_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/c893b6e83e99bbb2486b.png",
+      "sha256": "2c3d9e398c6f90b00a456abe832fdcb560e98884d36d3c1d0e9ce8559f350556",
+      "source": "WT_FX\\GLOW\\SPHERE_EFFECT_1.DTX",
+      "sourceSha256": "4e201d2d8470101966799bf3b8ea8c8d156ddb384075e50d103f29f84b777da9"
+    },
+    "wt_fx/glow/shock_circle_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/4cf36cfb0917e3bdc6a2.png",
+      "sha256": "96e789d47e92096219bbf2c93663baca38657dc83af797432508f629a3555d97",
+      "source": "WT_FX\\GLOW\\SHOCK_CIRCLE_1.DTX",
+      "sourceSha256": "8bd1857841ba054991a21c813fa7c4afa10b496c28be4fb44e544359267e9f67"
+    },
+    "wt_fx/glow/plazmacore_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/870da9546bb1a9d03fb3.png",
+      "sha256": "227f5a4fba92b620572b67583cfc5d57e43f7288e90d57c01afd0380fcd054ed",
+      "source": "WT_FX\\GLOW\\PLAZMACORE_1.DTX",
+      "sourceSha256": "aedae16e78aefa62c93ed2abf5731fea47f66d672dc21c95520f248557383162"
+    },
+    "wt_fx/glow/electric_seq_1_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/421e51cd83cf39852213.png",
+      "sha256": "77b3fe5fdb421773210ad1a0cd0c9e67b1d6982e763ec8cdec265cc3b72e6494",
+      "source": "WT_FX\\Glow\\Electric_Seq_1_1.dtx",
+      "sourceSha256": "978d8dde008e9efc548751d3665d86b03ada2b2d888f5d3bfc75062e5db0a96b"
+    },
+    "wt_fx/glow/electric_seq_1_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/4fe53c616b7590a22852.png",
+      "sha256": "8928fb992c8da8a60a950de7db85684cca17bf1c29e0064dd71053474bfe742d",
+      "source": "WT_FX\\Glow\\Electric_Seq_1_2.dtx",
+      "sourceSha256": "27cadd317107fa057595561b6aeff4f9c16361e33627bab8e3844ac4a4202e8b"
+    },
+    "wt_fx/glow/electric_seq_1_3.dtx": {
+      "asset": "res://assets/abilities/source_roars/16efab9d199d22ca9038.png",
+      "sha256": "d36f447ea48a260cbb8defc6fa9c06922a4fc5de306bdaaa27a3242a4c719c4f",
+      "source": "WT_FX\\Glow\\Electric_Seq_1_3.dtx",
+      "sourceSha256": "00d6bac1fe4201185020f98c1e8dd9c140a8bb5282036c155d26f626a7722dfb"
+    },
+    "wt_fx/glow/electric_seq_5_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/028951a11b5d5eb28b73.png",
+      "sha256": "db897678e90122315eb7ebb9f565f32db37cd3a95ff1a4e42bfccb197885c8b0",
+      "source": "WT_FX\\Glow\\Electric_Seq_5_1.dtx",
+      "sourceSha256": "536abd2d69f41408b6d9cbe1ca7af6703138edfbcd55224b2a1b5a748aa24063"
+    },
+    "wt_fx/glow/electric_seq_5_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/689c26d79935e309ec4a.png",
+      "sha256": "da1b6ef004f23584ad16f58d3e591a9ca627d6814c8210b410bf9b461ba8ad36",
+      "source": "WT_FX\\Glow\\Electric_Seq_5_2.dtx",
+      "sourceSha256": "eadd32d2b0e2d06bfe363ee785ec5e93e23c151108ec66493410df350c160204"
+    },
+    "wt_fx/glow/electric_seq_5_3.dtx": {
+      "asset": "res://assets/abilities/source_roars/9add69f135f0fcb2a018.png",
+      "sha256": "40192de7f8e23cb6764e7f736d8cd018123d6b612a1651f5da1bf12d7efc5876",
+      "source": "WT_FX\\Glow\\Electric_Seq_5_3.dtx",
+      "sourceSha256": "66d886cbc18bbd07bdc317f760478e7caf8dcfc4a4d5ee73791f9bed05f0ce9a"
+    },
+    "wt_fx/glow/trail_illusion_1_0.dtx": {
+      "asset": "res://assets/abilities/source_roars/79cb472ba6bf06d88650.png",
+      "sha256": "078058a67932dbe76e7b03f1d5ec7252247355c4c75ccbc2ce99d9a8342493da",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_0.dtx",
+      "sourceSha256": "9294038cd64917ed6c28b26a8ff103cabee6e28c9713c991440f4df06b18836a"
+    },
+    "wt_fx/glow/trail_illusion_1_1.dtx": {
+      "asset": "res://assets/abilities/source_roars/240c6f814e31e30cc531.png",
+      "sha256": "fa5102c78920d2ffc664925010471f26e9db60e03c192c61eaeacb58607ae626",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_1.dtx",
+      "sourceSha256": "2ef51ae7b376517a76f120a0961b737a3a824f2212d2db8658fe5589f35c863d"
+    },
+    "wt_fx/glow/trail_illusion_1_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/9095d668f0f72a3844f3.png",
+      "sha256": "e841e72306ef9fa1a52cbf5eae4353a6b2169e83114014edfd6f92cfc559b4a8",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_2.dtx",
+      "sourceSha256": "3b340cebf0da742b26b2ad9a9961e68d41aaeb08a44873de09db43aefab5da7a"
+    },
+    "wt_fx/glow/trail_illusion_1_3.dtx": {
+      "asset": "res://assets/abilities/source_roars/a4fcb42f3cf1a375717d.png",
+      "sha256": "06c709927b6ecc4f6548e878dfc2cefc9ee999424748db5c048cc90f24c621c6",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_3.dtx",
+      "sourceSha256": "dfbbb528918da78fc5c92dc4e302f366b4aa12730a107d0c99fb07b1c0043639"
+    },
+    "wt_fx/glow/trail_illusion_1_4.dtx": {
+      "asset": "res://assets/abilities/source_roars/187a24af20037c6df22d.png",
+      "sha256": "64a71648aedb144ac66535613b80ec09f46a86a61a6cc892abbcf76f115b6898",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_4.dtx",
+      "sourceSha256": "d0e59f48f485b7085fd7cea51a93527da5b2c603b149ea03463bcb7942fb4a1c"
+    },
+    "wt_fx/glow/trail_illusion_1_5.dtx": {
+      "asset": "res://assets/abilities/source_roars/060037e0a167814818db.png",
+      "sha256": "ce6a129d389b1b79025892ab794aff7485d28ba568a59b10464e7fa9e5aee713",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_5.dtx",
+      "sourceSha256": "9431b64b2530eb90ca204cc2d82396c325cbd2f960cf31ae2e24753bcb13fc2a"
+    },
+    "wt_fx/glow/trail_illusion_1_6.dtx": {
+      "asset": "res://assets/abilities/source_roars/bca18411cfb6680cc3e9.png",
+      "sha256": "23c50ff376d1691fd49165734d60e40bdc24c32e46755ce893235ec270d2e74c",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_6.dtx",
+      "sourceSha256": "5d0c425287de38cfc813af94885b5cf7f4e230920a6681e6a3fbf8be12c833a9"
+    },
+    "wt_fx/glow/trail_illusion_1_7.dtx": {
+      "asset": "res://assets/abilities/source_roars/0ebd326428ee710ade65.png",
+      "sha256": "241d1b26838f69e6ec9c611933ebb34ec63d777c7b087bc51570bbb3c8c91495",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_7.dtx",
+      "sourceSha256": "97a02f426c19159683b46f4a6e555788b245a851a9f1b8a6ad67591aec811366"
+    },
+    "wt_fx/glow/trail_illusion_1_8.dtx": {
+      "asset": "res://assets/abilities/source_roars/f81fbb746f02d0cc02f4.png",
+      "sha256": "86adebefda52672ca1805598ce7881c00ab9d8be0209f9e3c96770039224fff5",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_8.dtx",
+      "sourceSha256": "74d45377ec8f2dd8a12d0992f17ff1d451103e9176ff6fd57b840e8a1b5ffec3"
+    },
+    "wt_fx/glow/trail_illusion_1_9.dtx": {
+      "asset": "res://assets/abilities/source_roars/f5050a7e066d45259304.png",
+      "sha256": "d0d017ffcd11d0184edd8e2e6121b2a39d838ba68889cedc424e8f59495aa465",
+      "source": "WT_FX\\Glow\\Trail_Illusion_1_9.dtx",
+      "sourceSha256": "56b6be3212d4b82d21331fb1f6f768d75a1d92309a1c119fa23eb81e8296e831"
+    },
+    "wt_fx/glow/fire_embers_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/c0d7757684ac88321078.png",
+      "sha256": "edc070ca7d7b2e5d99025f6b66b9fc13db0b2d0ce8f94833847ba9e326ca3f3a",
+      "source": "WT_FX\\GLOW\\FIRE_EMBERS_2.DTX",
+      "sourceSha256": "a19bcf91cd0b95467f6d765b30a3c6b704e03cefcf31882ba19b6331241e0365"
+    },
+    "wt_fx/smoke/smoke_5.dtx": {
+      "asset": "res://assets/abilities/source_roars/c37cbfc5cfaed2449cfa.png",
+      "sha256": "11a84262bb1c333b9e665c1d7733a1eacf69dea0696bdd492b9e1111a2a60649",
+      "source": "WT_FX\\SMOKE\\SMOKE_5.DTX",
+      "sourceSha256": "236c004718c4fb3c1718a722fadb186a7d2f9a5992287933bc9fa605f3ddf73b"
+    },
+    "wt_fx/waterfall/ink_shock_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/ede6cd47de62bf2e5131.png",
+      "sha256": "ecb39dd110cfc618d7bbe56f79cbdbd9d4cb1ce1729f62f4dd18e960cc0acbdd",
+      "source": "WT_FX\\WATERFALL\\INK_SHOCK_2.DTX",
+      "sourceSha256": "29ec8d55392729cc1672d9327c98e9597c0bb585b45b5e97dc1ef15ba7aa6bfd"
+    },
+    "wt_fx/smoke/shock_circle_5.dtx": {
+      "asset": "res://assets/abilities/source_roars/6f642c15f4f6e464ccce.png",
+      "sha256": "e0f27449e8850412ee952ccb7aa8b4bbf5fa703eb95685fb031f017f6872685c",
+      "source": "WT_FX\\SMOKE\\SHOCK_CIRCLE_5.DTX",
+      "sourceSha256": "e3fb49a4f1476783ffec69a97362549f2e6e613453b0dd629aca7948324718ce"
+    },
+    "wt_fx/smoke/smoke_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/cdbb87317851b9c57392.png",
+      "sha256": "d4f4213bb0156a41b4c62eea98be71fdedd1298657c3e0b91f905f7e30e8c9b4",
+      "source": "WT_FX\\SMOKE\\SMOKE_2.DTX",
+      "sourceSha256": "704d220e2f5fbfcb3d6d07afc117082413c6753dc76ecbaea78fcafc1a8df9e5"
+    },
+    "wt_fx/glow/fire_embers_3.dtx": {
+      "asset": "res://assets/abilities/source_roars/07cae4e1a08eb988d988.png",
+      "sha256": "d66db237749a4bca3cffc6743a44f56970726dfec4ac687a79712101265ff1e4",
+      "source": "WT_FX\\GLOW\\FIRE_EMBERS_3.DTX",
+      "sourceSha256": "458d6144112a4308918b604599294107c97c3bc3d6c63825f83e1884cdaacc0a"
+    },
+    "wt_fx/glow/shock_ground_2.dtx": {
+      "asset": "res://assets/abilities/source_roars/c3971be0ffbf0ca332f3.png",
+      "sha256": "bafd9be013ace2330f26a3b1f43a66159b4beea7547ecc65f8f693c35fd77807",
+      "source": "WT_FX\\GLOW\\SHOCK_GROUND_2.DTX",
+      "sourceSha256": "f357b15c6bd65143a8bf03253cadd1a5697800aabad11fbd86ec69e2569dc8dd"
+    }
+  },
+  "failures": [],
+  "scope": "Original models/sprites, timing and color/scale curves. Particle emission and socket fallback use a bounded mobile adapter; not every PC engine feature."
+}

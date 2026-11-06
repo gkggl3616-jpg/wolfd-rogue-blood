@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "normalExtraHealth": 200,
+  "mutationExtraHealth": 99,
+  "sources": [
+    {
+      "url": "https://wolfteam.softnyx-is.com/GameInfo/Character/OneGeneration/christopher.aspx",
+      "fact": "When howling, additional Strength (HP) +200; current official character guide, not a decoded Reboot or mutation parameter."
+    },
+    {
+      "url": "https://www.neoseeker.com/wolf-team/faqs/172247-walkthrough.html",
+      "fact": "Historic PC wolf shield descriptions; version differs from the supplied PC archive."
+    },
+    {
+      "url": "https://tropedia.fandom.com/wiki/Wolf_Team",
+      "fact": "Historic basic wolf shield of 99 HP, rechargeable by roaring."
+    }
+  ],
+  "implementation": "Explicit offline adaptation: a completed howl replenishes (never adds) 200 normal-form or 99 mutation-form extra HP. Damage consumes extra HP first. Interrupted/restarted howls grant nothing. Clears on transformation, respawn, mutation and character replacement. These caps are not certified values for every PC variant. No unverified howl speed multiplier."
+}

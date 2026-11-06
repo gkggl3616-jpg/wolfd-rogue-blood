@@ -1,0 +1,89 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "transparent-character-016",
+      "path": "docs/review/update-016/transparent-character-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4799c1aa98fefae6efcee844a748c2a8c85ae7bc800c7a35f2d83cde78229b7b"
+    },
+    {
+      "height": 720,
+      "name": "large-wolf-inventory-016",
+      "path": "docs/review/update-016/large-wolf-inventory-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b2211dcc3e745f21be2e90315d52dfd58d77c666e08fa0a2a45ff4b2d81a6212"
+    },
+    {
+      "height": 720,
+      "name": "power-inventory-016",
+      "path": "docs/review/update-016/power-inventory-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2d0c377e3320f93e5ff8679c6fe9cdf39fd34337c070c4eaeb44b632cf698257"
+    },
+    {
+      "height": 720,
+      "name": "ally-bot-selection-016",
+      "path": "docs/review/update-016/ally-bot-selection-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3a7fc0bfc824f58a127f82889d3a489c33213ced4196c02bf2a27291b6fc2e7f"
+    },
+    {
+      "height": 720,
+      "name": "team-rosters-016",
+      "path": "docs/review/update-016/team-rosters-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "db9a6f0db8d3144ae076a02c2159434965752a259932ac6168c084e32a0e096c"
+    },
+    {
+      "height": 720,
+      "name": "allied-bot-match-016",
+      "path": "docs/review/update-016/allied-bot-match-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "37ac53d5641422d855fbb982cf67e866d5fced1ccc568aac06f794c441a1dfb0"
+    },
+    {
+      "height": 720,
+      "name": "tattoo-before-roar-016",
+      "path": "docs/review/update-016/tattoo-before-roar-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4745686755cb68452f503adda28e16b7cd9d4ad98e7d1c71f9b7c2926215814c"
+    },
+    {
+      "height": 720,
+      "name": "howling_fire_1-016",
+      "path": "docs/review/update-016/howling_fire_1-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fd43fc638155aaa323e8f8752c567b1f012c7b5e8ff5c13b4abf18a885e17898"
+    },
+    {
+      "height": 720,
+      "name": "howling_ice_1-016",
+      "path": "docs/review/update-016/howling_ice_1-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0b60408c7fbc20373b7674270228b9210d7e7dc704488f8c3024c059c4c448cf"
+    },
+    {
+      "height": 720,
+      "name": "howling_lightning_1-016",
+      "path": "docs/review/update-016/howling_lightning_1-016.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d58e48b03229eb816fd741c6a582cc7195c7005f21c5adf32f46588bda23050d"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureActors": true,
+  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+}

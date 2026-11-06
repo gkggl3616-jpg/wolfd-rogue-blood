@@ -20,7 +20,22 @@
     92,
     82,
     83,
-    84
+    84,
+    36,
+    69,
+    87,
+    17,
+    51,
+    89,
+    37,
+    42,
+    20,
+    24,
+    68,
+    41,
+    56,
+    61,
+    106
   ],
   "sourceTables": {
     "modes": {
@@ -72,7 +87,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -108,7 +127,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -140,7 +163,10 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -176,7 +202,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -212,7 +242,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -244,7 +278,10 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -271,7 +308,8 @@
       ],
       "sourceOffset": 570,
       "mapNumbers": [
-        84
+        84,
+        51
       ],
       "implementationStatus": "catalog_only"
     },
@@ -328,7 +366,8 @@
       "mapNumbers": [
         65,
         92,
-        100
+        100,
+        51
       ],
       "implementationStatus": "catalog_only"
     },
@@ -357,7 +396,9 @@
       "mapNumbers": [
         65,
         92,
-        100
+        100,
+        51,
+        41
       ],
       "implementationStatus": "catalog_only"
     },
@@ -393,7 +434,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -429,7 +474,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -465,7 +514,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -501,7 +554,11 @@
         84,
         92,
         97,
-        100
+        100,
+        51,
+        41,
+        61,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -530,7 +587,10 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87,
+        61
       ],
       "implementationStatus": "catalog_only"
     },
@@ -559,7 +619,10 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87,
+        61
       ],
       "implementationStatus": "catalog_only"
     },
@@ -588,7 +651,9 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87
       ],
       "implementationStatus": "catalog_only"
     },
@@ -617,7 +682,10 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87,
+        61
       ],
       "implementationStatus": "catalog_only"
     },
@@ -646,7 +714,10 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87,
+        61
       ],
       "implementationStatus": "catalog_only"
     },
@@ -675,7 +746,9 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        69,
+        87
       ],
       "implementationStatus": "catalog_only"
     },
@@ -703,7 +776,8 @@
       "sourceOffset": 1736,
       "mapNumbers": [
         44,
-        59
+        59,
+        37
       ],
       "implementationStatus": "catalog_only"
     },
@@ -732,7 +806,8 @@
       "mapNumbers": [
         44,
         59,
-        110
+        110,
+        87
       ],
       "implementationStatus": "catalog_only"
     },
@@ -761,7 +836,10 @@
       "mapNumbers": [
         26,
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -790,7 +868,10 @@
       "mapNumbers": [
         26,
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -819,7 +900,10 @@
       "mapNumbers": [
         26,
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -848,7 +932,10 @@
       "mapNumbers": [
         26,
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -876,7 +963,10 @@
       "sourceOffset": 2560,
       "mapNumbers": [
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -904,7 +994,10 @@
       "sourceOffset": 2648,
       "mapNumbers": [
         31,
-        44
+        44,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -933,7 +1026,10 @@
       "mapNumbers": [
         59,
         92,
-        100
+        100,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -962,7 +1058,10 @@
       "mapNumbers": [
         59,
         92,
-        100
+        100,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -991,7 +1090,10 @@
       "mapNumbers": [
         59,
         92,
-        100
+        100,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1020,7 +1122,10 @@
       "mapNumbers": [
         59,
         92,
-        100
+        100,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1049,7 +1154,10 @@
       "mapNumbers": [
         59,
         92,
-        100
+        100,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1078,7 +1186,10 @@
       "mapNumbers": [
         59,
         65,
-        92
+        92,
+        87,
+        51,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1107,7 +1218,9 @@
       "mapNumbers": [
         2,
         82,
-        83
+        83,
+        51,
+        24
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1136,7 +1249,9 @@
       "mapNumbers": [
         2,
         82,
-        83
+        83,
+        51,
+        24
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1165,7 +1280,9 @@
       "mapNumbers": [
         2,
         82,
-        83
+        83,
+        51,
+        24
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1192,7 +1309,9 @@
       ],
       "sourceOffset": 3294,
       "mapNumbers": [
-        72
+        72,
+        20,
+        68
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1219,7 +1338,9 @@
       ],
       "sourceOffset": 3336,
       "mapNumbers": [
-        72
+        72,
+        20,
+        68
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1246,7 +1367,64 @@
       ],
       "sourceOffset": 3380,
       "mapNumbers": [
-        72
+        72,
+        20,
+        68
+      ],
+      "implementationStatus": "catalog_only"
+    },
+    {
+      "id": 6100,
+      "sourceName": "Wolf Rush_Arcade",
+      "sourceFlags": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        6,
+        13,
+        6,
+        1,
+        255,
+        95,
+        1,
+        3,
+        0,
+        0,
+        0
+      ],
+      "sourceOffset": 3424,
+      "mapNumbers": [
+        20,
+        68
+      ],
+      "implementationStatus": "catalog_only"
+    },
+    {
+      "id": 6200,
+      "sourceName": "Wolf Rush Boss",
+      "sourceFlags": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        6,
+        14,
+        6,
+        3,
+        255,
+        95,
+        1,
+        3,
+        0,
+        0,
+        0
+      ],
+      "sourceOffset": 3476,
+      "mapNumbers": [
+        56
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1277,7 +1455,10 @@
         65,
         84,
         92,
-        97
+        97,
+        51,
+        41,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1308,7 +1489,10 @@
         65,
         84,
         92,
-        97
+        97,
+        51,
+        41,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1339,7 +1523,91 @@
         65,
         84,
         92,
-        97
+        97,
+        51,
+        41,
+        106
+      ],
+      "implementationStatus": "catalog_only"
+    },
+    {
+      "id": 11200,
+      "sourceName": "Ladder_Match Point_All VS All",
+      "sourceFlags": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        3,
+        1,
+        1,
+        255,
+        16,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "sourceOffset": 3866,
+      "mapNumbers": [
+        17
+      ],
+      "implementationStatus": "catalog_only"
+    },
+    {
+      "id": 11210,
+      "sourceName": "Ladder_Match Point_Wolf VS Wolf",
+      "sourceFlags": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        3,
+        4,
+        4,
+        1,
+        0,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "sourceOffset": 3944,
+      "mapNumbers": [
+        17
+      ],
+      "implementationStatus": "catalog_only"
+    },
+    {
+      "id": 11220,
+      "sourceName": "Ladder_Match Point_Human VS Human",
+      "sourceFlags": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        3,
+        3,
+        3,
+        255,
+        16,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "sourceOffset": 4026,
+      "mapNumbers": [
+        17
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1367,7 +1635,8 @@
       "sourceOffset": 4112,
       "mapNumbers": [
         44,
-        59
+        59,
+        87
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1394,7 +1663,10 @@
       ],
       "sourceOffset": 4180,
       "mapNumbers": [
-        31
+        31,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1421,7 +1693,10 @@
       ],
       "sourceOffset": 4264,
       "mapNumbers": [
-        31
+        31,
+        87,
+        89,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1449,7 +1724,9 @@
       "sourceOffset": 4332,
       "mapNumbers": [
         59,
-        92
+        92,
+        87,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1477,7 +1754,9 @@
       "sourceOffset": 4410,
       "mapNumbers": [
         59,
-        92
+        92,
+        87,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1531,7 +1810,9 @@
       ],
       "sourceOffset": 4788,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1558,7 +1839,9 @@
       ],
       "sourceOffset": 4862,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1585,7 +1868,9 @@
       ],
       "sourceOffset": 4920,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1612,7 +1897,9 @@
       ],
       "sourceOffset": 5024,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1639,7 +1926,9 @@
       ],
       "sourceOffset": 5112,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1666,7 +1955,9 @@
       ],
       "sourceOffset": 5216,
       "mapNumbers": [
-        59
+        59,
+        87,
+        106
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1694,7 +1985,8 @@
       "sourceOffset": 5956,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1722,7 +2014,8 @@
       "sourceOffset": 6026,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1750,7 +2043,8 @@
       "sourceOffset": 6080,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1778,7 +2072,8 @@
       "sourceOffset": 6146,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1806,7 +2101,8 @@
       "sourceOffset": 6246,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1834,7 +2130,8 @@
       "sourceOffset": 6330,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     },
@@ -1862,7 +2159,8 @@
       "sourceOffset": 6430,
       "mapNumbers": [
         59,
-        92
+        92,
+        42
       ],
       "implementationStatus": "catalog_only"
     }
@@ -7053,6 +7351,3733 @@
       "asset": null,
       "previewAvailable": true,
       "sourceBytes": 5654288
+    },
+    {
+      "number": 36,
+      "path": "cqc zone.dat",
+      "displayName": "Cqc Zone",
+      "allowedModeIds": [],
+      "modeEvidence": [],
+      "status": "mode_unverified",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": false,
+      "sourceBytes": 5786195
+    },
+    {
+      "number": 69,
+      "path": "rose.dat",
+      "displayName": "Rose",
+      "allowedModeIds": [
+        2000,
+        2001,
+        2010,
+        2020,
+        2021,
+        2022
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 2000,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 13713,
+          "attributeEvidence": [
+            41137
+          ]
+        },
+        {
+          "modeId": 2001,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 14213,
+          "attributeEvidence": [
+            41137
+          ]
+        },
+        {
+          "modeId": 2010,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            4,
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 14713,
+          "attributeEvidence": [
+            41137
+          ]
+        },
+        {
+          "modeId": 2020,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 15137,
+          "attributeEvidence": [
+            41137
+          ]
+        },
+        {
+          "modeId": 2021,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 15637,
+          "attributeEvidence": [
+            41137
+          ]
+        },
+        {
+          "modeId": 2022,
+          "mapIndex": 11,
+          "category": 2,
+          "sourceName": "Rose",
+          "sourceSort": 12813,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 16137,
+          "attributeEvidence": [
+            41137
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 8954788
+    },
+    {
+      "number": 87,
+      "path": "station.dat",
+      "displayName": "Station",
+      "allowedModeIds": [
+        2000,
+        2001,
+        2010,
+        2020,
+        2021,
+        2022,
+        2100,
+        3000,
+        3001,
+        3020,
+        3021,
+        3022,
+        3030,
+        4000,
+        4001,
+        4020,
+        4021,
+        4022,
+        4023,
+        8000,
+        8001,
+        8020,
+        8021,
+        8022,
+        8023,
+        12100,
+        13000,
+        13001,
+        14000,
+        14001
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 2000,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 13647,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2001,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 14147,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2010,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            4,
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 14647,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2020,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 15071,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2021,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 15571,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2022,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 16071,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 2100,
+          "mapIndex": 6,
+          "category": 2,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            5,
+            2,
+            2,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 16944,
+          "attributeEvidence": [
+            39731
+          ]
+        },
+        {
+          "modeId": 3000,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 18237,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 3001,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 18901,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 3020,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 19565,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 3021,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 20229,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 3022,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 20893,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 3030,
+          "mapIndex": 6,
+          "category": 4,
+          "sourceName": "Station",
+          "sourceSort": 12808,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            4,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 21401,
+          "attributeEvidence": [
+            58192
+          ]
+        },
+        {
+          "modeId": 4000,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 21950,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 4001,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 22521,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 4020,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 23092,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 4021,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 23663,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 4022,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24234,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 4023,
+          "mapIndex": 6,
+          "category": 1,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24805,
+          "attributeEvidence": [
+            3391
+          ]
+        },
+        {
+          "modeId": 12100,
+          "mapIndex": 6,
+          "category": 11,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            5,
+            2,
+            2,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 29768,
+          "attributeEvidence": [
+            120067
+          ]
+        },
+        {
+          "modeId": 13000,
+          "mapIndex": 6,
+          "category": 13,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29937,
+          "attributeEvidence": [
+            128697
+          ]
+        },
+        {
+          "modeId": 13001,
+          "mapIndex": 6,
+          "category": 13,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 30295,
+          "attributeEvidence": [
+            128697
+          ]
+        },
+        {
+          "modeId": 14000,
+          "mapIndex": 6,
+          "category": 12,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 30690,
+          "attributeEvidence": [
+            124367
+          ]
+        },
+        {
+          "modeId": 14001,
+          "mapIndex": 6,
+          "category": 12,
+          "sourceName": "Station",
+          "sourceSort": 8,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 30941,
+          "attributeEvidence": [
+            124367
+          ]
+        },
+        {
+          "modeId": 8000,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 34782,
+          "attributeEvidence": [
+            148703
+          ]
+        },
+        {
+          "modeId": 8001,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 34815,
+          "attributeEvidence": [
+            148703
+          ]
+        },
+        {
+          "modeId": 8020,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 34848,
+          "attributeEvidence": [
+            148703
+          ]
+        },
+        {
+          "modeId": 8021,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 34881,
+          "attributeEvidence": [
+            148703
+          ]
+        },
+        {
+          "modeId": 8022,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 34914,
+          "attributeEvidence": [
+            148703
+          ]
+        },
+        {
+          "modeId": 8023,
+          "mapIndex": 6,
+          "category": 15,
+          "sourceName": "Station",
+          "sourceSort": 2,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 34947,
+          "attributeEvidence": [
+            148703
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 4506099
+    },
+    {
+      "number": 17,
+      "path": "battlezone_l.dat",
+      "displayName": "Battle Zone2",
+      "allowedModeIds": [
+        11200,
+        11210,
+        11220
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 11200,
+          "mapIndex": 53,
+          "category": 14,
+          "sourceName": "Battle Zone2",
+          "sourceSort": 35,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            3,
+            1,
+            1,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29481,
+          "attributeEvidence": [
+            142161
+          ]
+        },
+        {
+          "modeId": 11210,
+          "mapIndex": 53,
+          "category": 14,
+          "sourceName": "Battle Zone2",
+          "sourceSort": 35,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            3,
+            4,
+            4,
+            1,
+            0,
+            2,
+            0
+          ],
+          "sourceOffset": 29524,
+          "attributeEvidence": [
+            142161
+          ]
+        },
+        {
+          "modeId": 11220,
+          "mapIndex": 53,
+          "category": 14,
+          "sourceName": "Battle Zone2",
+          "sourceSort": 35,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            3,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29567,
+          "attributeEvidence": [
+            142161
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 1880267
+    },
+    {
+      "number": 51,
+      "path": "junk_field.dat",
+      "displayName": "Junk Field",
+      "allowedModeIds": [
+        1000,
+        1001,
+        1010,
+        1020,
+        1021,
+        1022,
+        1023,
+        1025,
+        1026,
+        1100,
+        1101,
+        1120,
+        1121,
+        4000,
+        4001,
+        4020,
+        4021,
+        4022,
+        4023,
+        5000,
+        5100,
+        5200,
+        11000,
+        11010,
+        11020
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 1000,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 318,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1001,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 1570,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1010,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 2777,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1020,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 3760,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1021,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 5012,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1022,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 6219,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1023,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 6970,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1025,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 7536,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1026,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 7986,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1100,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 8719,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1101,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 9971,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1120,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 11223,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 1121,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 12475,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4000,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 22028,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4001,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 22599,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4020,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 23170,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4021,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 23741,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4022,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24312,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 4023,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 12818,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24883,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 5000,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            7,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25233,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 5100,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            8,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25527,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 5200,
+          "mapIndex": 19,
+          "category": 1,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            9,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25821,
+          "attributeEvidence": [
+            6880
+          ]
+        },
+        {
+          "modeId": 11000,
+          "mapIndex": 19,
+          "category": 14,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 27806,
+          "attributeEvidence": [
+            138349
+          ]
+        },
+        {
+          "modeId": 11010,
+          "mapIndex": 19,
+          "category": 14,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            2,
+            0
+          ],
+          "sourceOffset": 28424,
+          "attributeEvidence": [
+            138349
+          ]
+        },
+        {
+          "modeId": 11020,
+          "mapIndex": 19,
+          "category": 14,
+          "sourceName": "Junk Field",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29042,
+          "attributeEvidence": [
+            138349
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 8546928
+    },
+    {
+      "number": 89,
+      "path": "storage_bomb.dat",
+      "displayName": "Storage",
+      "allowedModeIds": [
+        3000,
+        3001,
+        3020,
+        3021,
+        3022,
+        3030,
+        13000,
+        13001
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 3000,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 18270,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 3001,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 18934,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 3020,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 19598,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 3021,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 20262,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 3022,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 20926,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 3030,
+          "mapIndex": 8,
+          "category": 4,
+          "sourceName": "Storage",
+          "sourceSort": 12810,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            4,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 21434,
+          "attributeEvidence": [
+            58941
+          ]
+        },
+        {
+          "modeId": 13000,
+          "mapIndex": 8,
+          "category": 13,
+          "sourceName": "Storage",
+          "sourceSort": 10,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29970,
+          "attributeEvidence": [
+            129446
+          ]
+        },
+        {
+          "modeId": 13001,
+          "mapIndex": 8,
+          "category": 13,
+          "sourceName": "Storage",
+          "sourceSort": 10,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 30328,
+          "attributeEvidence": [
+            129446
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 9120029
+    },
+    {
+      "number": 37,
+      "path": "crash bridge.dat",
+      "displayName": "Bridge",
+      "allowedModeIds": [
+        2030
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 2030,
+          "mapIndex": 40,
+          "category": 3,
+          "sourceName": "Bridge",
+          "sourceSort": 12824,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            4,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 16687,
+          "attributeEvidence": [
+            53475
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 13640059
+    },
+    {
+      "number": 42,
+      "path": "factory.dat",
+      "displayName": "train factory",
+      "allowedModeIds": [
+        3000,
+        3001,
+        3020,
+        3021,
+        3022,
+        3030,
+        4000,
+        4001,
+        4020,
+        4021,
+        4022,
+        4023,
+        9000,
+        9001,
+        9010,
+        9020,
+        9021,
+        9022,
+        9023,
+        13000,
+        13001,
+        14000,
+        14001
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 3000,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 18303,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 3001,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 18967,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 3020,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 19631,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 3021,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 20295,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 3022,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 20959,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 3030,
+          "mapIndex": 10,
+          "category": 4,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            4,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 21467,
+          "attributeEvidence": [
+            59598
+          ]
+        },
+        {
+          "modeId": 4000,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 21983,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 4001,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 22554,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 4020,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 23125,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 4021,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 23696,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 4022,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24267,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 4023,
+          "mapIndex": 10,
+          "category": 1,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 24838,
+          "attributeEvidence": [
+            5448
+          ]
+        },
+        {
+          "modeId": 13000,
+          "mapIndex": 10,
+          "category": 13,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 30003,
+          "attributeEvidence": [
+            130103
+          ]
+        },
+        {
+          "modeId": 13001,
+          "mapIndex": 10,
+          "category": 13,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            3,
+            1,
+            3,
+            3,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 30361,
+          "attributeEvidence": [
+            130103
+          ]
+        },
+        {
+          "modeId": 14000,
+          "mapIndex": 10,
+          "category": 12,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 30723,
+          "attributeEvidence": [
+            125122
+          ]
+        },
+        {
+          "modeId": 14001,
+          "mapIndex": 10,
+          "category": 12,
+          "sourceName": "train factory",
+          "sourceSort": 12,
+          "sourceField": 0,
+          "sourceFlags": [
+            4,
+            1,
+            3,
+            3,
+            255,
+            31,
+            2,
+            0
+          ],
+          "sourceOffset": 30974,
+          "attributeEvidence": [
+            125122
+          ]
+        },
+        {
+          "modeId": 9000,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 36907,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9001,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 36960,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9010,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 37013,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9020,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 37066,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9021,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 37119,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9022,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 37172,
+          "attributeEvidence": [
+            152911
+          ]
+        },
+        {
+          "modeId": 9023,
+          "mapIndex": 122,
+          "category": 16,
+          "sourceName": "train factory_FFA",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            9,
+            1,
+            1,
+            1,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 37225,
+          "attributeEvidence": [
+            152911
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 7355027
+    },
+    {
+      "number": 20,
+      "path": "break_out.dat",
+      "displayName": "WR_Break-Out_5",
+      "allowedModeIds": [
+        6005,
+        6010,
+        6015,
+        6100
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 6005,
+          "mapIndex": 108,
+          "category": 5,
+          "sourceName": "WR_Break-Out_5",
+          "sourceSort": 21,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            10,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 26399,
+          "attributeEvidence": [
+            101244
+          ]
+        },
+        {
+          "modeId": 6010,
+          "mapIndex": 109,
+          "category": 5,
+          "sourceName": "WR_Break-Out_10",
+          "sourceSort": 20,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            11,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 26777,
+          "attributeEvidence": [
+            102167
+          ]
+        },
+        {
+          "modeId": 6015,
+          "mapIndex": 110,
+          "category": 5,
+          "sourceName": "WR_Break-Out_15",
+          "sourceSort": 19,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            12,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 27067,
+          "attributeEvidence": [
+            103088
+          ]
+        },
+        {
+          "modeId": 6100,
+          "mapIndex": 111,
+          "category": 5,
+          "sourceName": "WR_Break-Out_A",
+          "sourceSort": 7,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            13,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 27394,
+          "attributeEvidence": [
+            104007
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 11807782
+    },
+    {
+      "number": 24,
+      "path": "cage.dat",
+      "displayName": "Cage",
+      "allowedModeIds": [
+        5000,
+        5100,
+        5200
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 5000,
+          "mapIndex": 50,
+          "category": 1,
+          "sourceName": "Cage",
+          "sourceSort": 32,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            7,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25272,
+          "attributeEvidence": [
+            12739
+          ]
+        },
+        {
+          "modeId": 5100,
+          "mapIndex": 50,
+          "category": 1,
+          "sourceName": "Cage",
+          "sourceSort": 32,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            8,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25566,
+          "attributeEvidence": [
+            12739
+          ]
+        },
+        {
+          "modeId": 5200,
+          "mapIndex": 50,
+          "category": 1,
+          "sourceName": "Cage",
+          "sourceSort": 32,
+          "sourceField": 0,
+          "sourceFlags": [
+            5,
+            9,
+            5,
+            3,
+            255,
+            63,
+            1,
+            0
+          ],
+          "sourceOffset": 25860,
+          "attributeEvidence": [
+            12739
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 7724869
+    },
+    {
+      "number": 68,
+      "path": "purge.dat",
+      "displayName": "WR_Purge_5",
+      "allowedModeIds": [
+        6005,
+        6010,
+        6015,
+        6100
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 6005,
+          "mapIndex": 100,
+          "category": 5,
+          "sourceName": "WR_Purge_5",
+          "sourceSort": 18,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            10,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 26360,
+          "attributeEvidence": [
+            97612
+          ]
+        },
+        {
+          "modeId": 6010,
+          "mapIndex": 101,
+          "category": 5,
+          "sourceName": "WR_Purge_10",
+          "sourceSort": 17,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            11,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 26736,
+          "attributeEvidence": [
+            98521
+          ]
+        },
+        {
+          "modeId": 6015,
+          "mapIndex": 102,
+          "category": 5,
+          "sourceName": "WR_Purge_15",
+          "sourceSort": 16,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            12,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 27026,
+          "attributeEvidence": [
+            99428
+          ]
+        },
+        {
+          "modeId": 6100,
+          "mapIndex": 103,
+          "category": 5,
+          "sourceName": "WR_Purge_A",
+          "sourceSort": 6,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            13,
+            6,
+            1,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 27355,
+          "attributeEvidence": [
+            100333
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 10212547
+    },
+    {
+      "number": 41,
+      "path": "explosivearsenal.dat",
+      "displayName": "Explosive Arsenal",
+      "allowedModeIds": [
+        1000,
+        1001,
+        1010,
+        1020,
+        1021,
+        1022,
+        1026,
+        1100,
+        1101,
+        1120,
+        1121,
+        11000,
+        11010,
+        11020
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 1000,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 975,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1001,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 2227,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1010,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 3358,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1020,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 4417,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1021,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 5669,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1022,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 6800,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1026,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 8317,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1100,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 9376,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1101,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 10628,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1120,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 11880,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 1121,
+          "mapIndex": 62,
+          "category": 1,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 12844,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 13132,
+          "attributeEvidence": [
+            19988
+          ]
+        },
+        {
+          "modeId": 11000,
+          "mapIndex": 62,
+          "category": 14,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 44,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 28147,
+          "attributeEvidence": [
+            144765
+          ]
+        },
+        {
+          "modeId": 11010,
+          "mapIndex": 62,
+          "category": 14,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 44,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            2,
+            0
+          ],
+          "sourceOffset": 28765,
+          "attributeEvidence": [
+            144765
+          ]
+        },
+        {
+          "modeId": 11020,
+          "mapIndex": 62,
+          "category": 14,
+          "sourceName": "Explosive Arsenal",
+          "sourceSort": 44,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29383,
+          "attributeEvidence": [
+            144765
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 19642262
+    },
+    {
+      "number": 56,
+      "path": "machupicchu_boss.dat",
+      "displayName": "WRB_Machu Picchu",
+      "allowedModeIds": [
+        6200
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 6200,
+          "mapIndex": 89,
+          "category": 5,
+          "sourceName": "WRB_Machu Picchu",
+          "sourceSort": 71,
+          "sourceField": 0,
+          "sourceFlags": [
+            6,
+            14,
+            6,
+            3,
+            255,
+            95,
+            1,
+            0
+          ],
+          "sourceOffset": 27441,
+          "attributeEvidence": [
+            91396
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 21779619
+    },
+    {
+      "number": 61,
+      "path": "paien_lab_door.dat",
+      "displayName": "Paien Lab ADV",
+      "allowedModeIds": [
+        1000,
+        1001,
+        1020,
+        1021,
+        1100,
+        1101,
+        1120,
+        1121,
+        2000,
+        2001,
+        2020,
+        2021
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 1000,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 1145,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1001,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 2397,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1020,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 4587,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1021,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 5839,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1100,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 9546,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1101,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 10798,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1120,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 12050,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 1121,
+          "mapIndex": 107,
+          "category": 1,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 89,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 13302,
+          "attributeEvidence": [
+            23964
+          ]
+        },
+        {
+          "modeId": 2000,
+          "mapIndex": 107,
+          "category": 2,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 12889,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 13876,
+          "attributeEvidence": [
+            43877
+          ]
+        },
+        {
+          "modeId": 2001,
+          "mapIndex": 107,
+          "category": 2,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 12889,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 14376,
+          "attributeEvidence": [
+            43877
+          ]
+        },
+        {
+          "modeId": 2020,
+          "mapIndex": 107,
+          "category": 2,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 12889,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 15300,
+          "attributeEvidence": [
+            43877
+          ]
+        },
+        {
+          "modeId": 2021,
+          "mapIndex": 107,
+          "category": 2,
+          "sourceName": "Paien Lab ADV",
+          "sourceSort": 12889,
+          "sourceField": 0,
+          "sourceFlags": [
+            2,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 15800,
+          "attributeEvidence": [
+            43877
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 4974936
+    },
+    {
+      "number": 106,
+      "path": "underworld.dat",
+      "displayName": "UnderWorld",
+      "allowedModeIds": [
+        1000,
+        1001,
+        1010,
+        1020,
+        1021,
+        1022,
+        1100,
+        1101,
+        1120,
+        1121,
+        8000,
+        8001,
+        8020,
+        8021,
+        8022,
+        8023,
+        11000,
+        11010,
+        11020
+      ],
+      "modeEvidence": [
+        {
+          "modeId": 1000,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 540,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1001,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 1792,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1010,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "sourceOffset": 2958,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1020,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 3982,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1021,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 5234,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1022,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 6400,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1100,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 8941,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1101,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 10193,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1120,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 11445,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 1121,
+          "mapIndex": 48,
+          "category": 1,
+          "sourceName": "UnderWorld",
+          "sourceSort": 12830,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            2,
+            3,
+            3,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 12697,
+          "attributeEvidence": [
+            11449
+          ]
+        },
+        {
+          "modeId": 11000,
+          "mapIndex": 48,
+          "category": 14,
+          "sourceName": "UnderWorld",
+          "sourceSort": 30,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            1,
+            1,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 27952,
+          "attributeEvidence": [
+            140875
+          ]
+        },
+        {
+          "modeId": 11010,
+          "mapIndex": 48,
+          "category": 14,
+          "sourceName": "UnderWorld",
+          "sourceSort": 30,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            4,
+            4,
+            1,
+            0,
+            2,
+            0
+          ],
+          "sourceOffset": 28570,
+          "attributeEvidence": [
+            140875
+          ]
+        },
+        {
+          "modeId": 11020,
+          "mapIndex": 48,
+          "category": 14,
+          "sourceName": "UnderWorld",
+          "sourceSort": 30,
+          "sourceField": 0,
+          "sourceFlags": [
+            1,
+            1,
+            3,
+            3,
+            255,
+            16,
+            2,
+            0
+          ],
+          "sourceOffset": 29188,
+          "attributeEvidence": [
+            140875
+          ]
+        },
+        {
+          "modeId": 8000,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 34980,
+          "attributeEvidence": [
+            149458
+          ]
+        },
+        {
+          "modeId": 8001,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 35021,
+          "attributeEvidence": [
+            149458
+          ]
+        },
+        {
+          "modeId": 8020,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 35062,
+          "attributeEvidence": [
+            149458
+          ]
+        },
+        {
+          "modeId": 8021,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            255,
+            31,
+            1,
+            0
+          ],
+          "sourceOffset": 35103,
+          "attributeEvidence": [
+            149458
+          ]
+        },
+        {
+          "modeId": 8022,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            4,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 35144,
+          "attributeEvidence": [
+            149458
+          ]
+        },
+        {
+          "modeId": 8023,
+          "mapIndex": 48,
+          "category": 15,
+          "sourceName": "UnderWorldR",
+          "sourceSort": 3,
+          "sourceField": 0,
+          "sourceFlags": [
+            8,
+            1,
+            1,
+            1,
+            38,
+            16,
+            1,
+            0
+          ],
+          "sourceOffset": 35185,
+          "attributeEvidence": [
+            149458
+          ]
+        }
+      ],
+      "status": "mode_verified_gameplay_pending",
+      "enabled": false,
+      "asset": null,
+      "previewAvailable": true,
+      "sourceBytes": 9478500
     }
   ],
   "unresolvedModeLinks": [

@@ -8,6 +8,8 @@
   "apkProduced": true,
   "binaryContentsModified": false,
   "note": "The renamed Windows binary is a byte-identical reference copy. Embedded resources, original service references and signatures are preserved.",
-  "androidBuildType": "debug-offline-prototype",
-  "physicalAndroidDeviceTested": false
+  "androidBuildType": "signed-offline-release",
+  "physicalAndroidDeviceTested": false,
+  "offlineAndroidPackage": "com.wolfrogue.blood.offline",
+  "offlineVersion": "0.17.0-offline"
 }

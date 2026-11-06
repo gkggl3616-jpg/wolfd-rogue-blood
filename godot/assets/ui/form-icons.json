@@ -1,0 +1,20 @@
+[
+  {
+    "asset": "res://assets/ui/form-icons/human.png",
+    "basis": "derived_source_model_silhouette",
+    "form": "human",
+    "model": "res://assets/library/characters/pair-model0-human.glb",
+    "modelSha256": "378a758139e1994cc3b873d6408eb2d8dbf27e1b5bc78b968ea80d06193b0128",
+    "originalPcHudSprite": false,
+    "sha256": "9e20b3408841bbb8b580d045dbf930c0ab4ea1b962b1418652b6579e908e32ee"
+  },
+  {
+    "asset": "res://assets/ui/form-icons/wolf.png",
+    "basis": "derived_source_model_silhouette",
+    "form": "wolf",
+    "model": "res://assets/library/characters/pair-model0-wolf.glb",
+    "modelSha256": "1ddf00468752c3d624d4bf9f995c43c0a4571bc3eb6a0d869caf1640db92938c",
+    "originalPcHudSprite": false,
+    "sha256": "c439cab70e5ca48b81604af96a3d16eaa09da0b2ec05b7e29b6cf50efe46d7b3"
+  }
+]

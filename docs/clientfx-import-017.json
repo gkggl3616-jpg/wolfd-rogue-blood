@@ -1,0 +1,972 @@
+{
+  "sourceSha256": "eb9c7715da168ea1bf5e54de7754aba0860ea69561d86c0c0b62ac8515289650",
+  "issues": [
+    {
+      "group": "Sprite01",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/menu/spr/nolf.spr'"
+    },
+    {
+      "group": "Fire_Fuse",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "'root/props/models/genpigeon.ltb'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 3,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 4,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 5,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 6,
+      "type": "Sprite",
+      "reason": "'root/fx/test/expparticle01.spr'"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 7,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: fx/test/snd/explosions/explosion6.wav"
+    },
+    {
+      "group": "Exp_Ammunition",
+      "node": 10,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: ..."
+    },
+    {
+      "group": "Sun",
+      "node": 3,
+      "type": "LTBModel",
+      "reason": "'root/props/skins/genpigeon.dtx'"
+    },
+    {
+      "group": "Smokebomb3",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/ninja_smoke.wav"
+    },
+    {
+      "group": "ScopeOutFX",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/interface/menu/skins/mainintroall.dtx'"
+    },
+    {
+      "group": "Welder_PV_Muzz",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/guns/welder/torch8.dtx'"
+    },
+    {
+      "group": "Welder_HH_Muzz",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/guns/welder/torch8.dtx'"
+    },
+    {
+      "group": "Gen_FireExtinguisher",
+      "node": 3,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/fireext_01.wav"
+    },
+    {
+      "group": "Gen_Elec_Blue02",
+      "node": 0,
+      "type": "LightningFX",
+      "reason": "'root/fx/beams/elec_blue07.dtx'"
+    },
+    {
+      "group": "Wee",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/peeing.wav"
+    },
+    {
+      "group": "In_Fire_32",
+      "node": 4,
+      "type": "CreateFX",
+      "reason": "Nested effect not found: Si_Firepit"
+    },
+    {
+      "group": "tazergreen",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/fx/guns/tazer/indicatorlight.spr'"
+    },
+    {
+      "group": "Gen_PlantDirt",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/texturescripts/global_dust1.dtx'"
+    },
+    {
+      "group": "Impact_Foliage",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/leaf3.dtx'"
+    },
+    {
+      "group": "Impact_Foliage",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/leaf2.dtx'"
+    },
+    {
+      "group": "Impact_Foliage",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/leaf1.dtx'"
+    },
+    {
+      "group": "Impact_Foliage",
+      "node": 3,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/leaf3.dtx'"
+    },
+    {
+      "group": "Impact_WaterContainer",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/waterfall/water_wave_4.spr'"
+    },
+    {
+      "group": "impact_trashbag",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake1.dtx'"
+    },
+    {
+      "group": "impact_trashbag",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake2.dtx'"
+    },
+    {
+      "group": "impact_trashbag",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake3.dtx'"
+    },
+    {
+      "group": "impact_trashbag",
+      "node": 3,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake3.dtx'"
+    },
+    {
+      "group": "TakingArmor",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/interface/hud/spr/armorhit.spr'"
+    },
+    {
+      "group": "Debris_Paper",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/paper1.dtx'"
+    },
+    {
+      "group": "Debris_Paper",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/paper2.dtx'"
+    },
+    {
+      "group": "Debris_Paper",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/paper3.dtx'"
+    },
+    {
+      "group": "Debris_Paper",
+      "node": 4,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/paper1.dtx'"
+    },
+    {
+      "group": "SnowmobileImpact_SnowyDirt",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/texturescripts/global_dust1.dtx'"
+    },
+    {
+      "group": "SnowmobileImpact_Flesh",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/texturescripts/global_dust1.dtx'"
+    },
+    {
+      "group": "PlaneExplode",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: guns/snd/impacts/explosions/explosion2.wav"
+    },
+    {
+      "group": "ScopeOutCateInFX",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/interface/menu/skins/mainintroall.dtx'"
+    },
+    {
+      "group": "ScopeOutCateInFX",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/catebgrnd.spr'"
+    },
+    {
+      "group": "debris_cobwebs",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/cobweb1.dtx'"
+    },
+    {
+      "group": "debris_cobwebs",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/cobweb2.dtx'"
+    },
+    {
+      "group": "debris_cobwebs",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/cobweb3.dtx'"
+    },
+    {
+      "group": "debris_cobwebs",
+      "node": 3,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/cobweb1.dtx'"
+    },
+    {
+      "group": "tazerred",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/fx/guns/tazer/indicatorlight.spr'"
+    },
+    {
+      "group": "Electrocute_3rd_Inst_1",
+      "node": 2,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/elecyloop.wav"
+    },
+    {
+      "group": "Fire_Basic_Med_Low",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/truckfirelp_1.wav"
+    },
+    {
+      "group": "Fire_Basic_Big_Low",
+      "node": 4,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/truckfirelp_1.wav"
+    },
+    {
+      "group": "Decay_3rd",
+      "node": 9,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: guns/snd/perfume/bodyremove.wav"
+    },
+    {
+      "group": "AIBodyRemove",
+      "node": 2,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: guns/snd/perfume/bodyremove.wav"
+    },
+    {
+      "group": "Impact_Decay",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: guns/snd/perfume/bodyremove.wav"
+    },
+    {
+      "group": "SS_Damage",
+      "node": 6,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: chars/snd/ssonfire.wav"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/harmguy.spr'"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/isako.spr'"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/supersoldr.spr'"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 3,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/robot.spr'"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 4,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/ninja.spr'"
+    },
+    {
+      "group": "CreditEnd2",
+      "node": 5,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/pierre.spr'"
+    },
+    {
+      "group": "CreditEnd1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/interface/menu/spr/hawkinsbarnes.spr'"
+    },
+    {
+      "group": "Impact_Porcelain",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake1.dtx'"
+    },
+    {
+      "group": "Impact_Porcelain",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake2.dtx'"
+    },
+    {
+      "group": "Impact_Porcelain",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake3.dtx'"
+    },
+    {
+      "group": "Impact_Porcelain",
+      "node": 3,
+      "type": "ParticleSystem",
+      "reason": "'root/texfx/foliage/sake3.dtx'"
+    },
+    {
+      "group": "Exp_Basic2",
+      "node": 11,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/test/exp_ring.dtx'"
+    },
+    {
+      "group": "Exp_Basic2",
+      "node": 12,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/test/exp_ring.dtx'"
+    },
+    {
+      "group": "Exp_Basictest",
+      "node": 14,
+      "type": "CreateFX",
+      "reason": "Nested effect not found: Oh_ElectricSpark"
+    },
+    {
+      "group": "ElectricSpark",
+      "node": 2,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: snd/event/ub_arcloop.wav"
+    },
+    {
+      "group": "FleshDefense_1",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/fleshdefense/10018.dtx'"
+    },
+    {
+      "group": "FleshDefense_1",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/fleshdefense/10018.dtx'"
+    },
+    {
+      "group": "FleshDefense",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/fleshdefense/10018.dtx'"
+    },
+    {
+      "group": "berserker_RHand1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/berserker_tfi/tfi.dtx'"
+    },
+    {
+      "group": "SmartSuction6",
+      "node": 6,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/smartwolfe/smartsuction.ltb'"
+    },
+    {
+      "group": "Trail_flame_hh",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/flame/trail_flame2.spr.spr'"
+    },
+    {
+      "group": "Trail_flame_hh",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/flame/trail_flame2.spr.spr'"
+    },
+    {
+      "group": "Trail_flame_hh",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/flame/trail_flame2.spr.spr'"
+    },
+    {
+      "group": "JA_Waterfall01",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "D_Waterfall_s",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "exp_ice",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/freezemodel/freeze_0_0.dtx'"
+    },
+    {
+      "group": "cryicewolf",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/flame/10061.dtx'"
+    },
+    {
+      "group": "Impact_Spark",
+      "node": 3,
+      "type": "LTBModel",
+      "reason": "Vertex animation is not supported by this converter"
+    },
+    {
+      "group": "Petra_carrier",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/petra_fxobj/pr_heli.dtx'"
+    },
+    {
+      "group": "Background_lighting",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/game/fx/background_lighting/swordattackhit_b.dtx'"
+    },
+    {
+      "group": "Background_lighting",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "'root/game/fx/background_lighting/backgroundattack1_a.dtx'"
+    },
+    {
+      "group": "Background_lighting",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "'root/game/fx/background_lighting/swordattackhit_b.dtx'"
+    },
+    {
+      "group": "BG_Blood",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/fx/bg_blood/bg_blood.dtx'"
+    },
+    {
+      "group": "BG_Blood",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/fx/bg_blood/bg_blood.dtx'"
+    },
+    {
+      "group": "Fire_BG",
+      "node": 3,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: wt_snd/fxsnd/am_fire_sm_loop.wav"
+    },
+    {
+      "group": "Light_wall",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "Vertex animation is not supported by this converter"
+    },
+    {
+      "group": "Light_wall",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "Vertex animation is not supported by this converter"
+    },
+    {
+      "group": "Light_wall",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "Vertex animation is not supported by this converter"
+    },
+    {
+      "group": "Light_wall",
+      "node": 3,
+      "type": "LTBModel",
+      "reason": "Vertex animation is not supported by this converter"
+    },
+    {
+      "group": "Stimpack",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_d.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_d.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_d.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 3,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_b.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 4,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_a.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 5,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_a.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 6,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/blue_glow.dtx'"
+    },
+    {
+      "group": "Stimpack",
+      "node": 7,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/stimpack/stimpack_c.dtx'"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 2,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 3,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 4,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 5,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "BG_Tube_electro",
+      "node": 6,
+      "type": "LTBModel",
+      "reason": "Unsupported mesh bone palette"
+    },
+    {
+      "group": "Bossgrenade",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/glow/flash1.dtx'"
+    },
+    {
+      "group": "Warp",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/heatwave.spr'"
+    },
+    {
+      "group": "Boss_Damage_Exp_1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/flame/exp_seq_2/comp 1_00004.dtx'"
+    },
+    {
+      "group": "Boss_Damage_Exp_2",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/flame/exp_seq_2/comp 1_00004.dtx'"
+    },
+    {
+      "group": "Exp_Basic_Xmas",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/glow/flash1.dtx'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/tatoo_glow.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/smoke/smoke_seq_1_1.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1_1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/tatoo_glow.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1_1",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/tatoo_glow.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1_1",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/tatoo_glow.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1_1",
+      "node": 3,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/tatoo_glow.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_1_1",
+      "node": 4,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/shock_spot_1.dtx'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_2",
+      "node": 1,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/glow/swirl_upstream_3.dtx'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_2",
+      "node": 3,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/shock_circle_3.spr'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_2",
+      "node": 4,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/glow/swirl_upstream_3.dtx'"
+    },
+    {
+      "group": "Wolf_Tatoo_Effect_2",
+      "node": 5,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/shock_circle_3.spr'"
+    },
+    {
+      "group": "FlyBug",
+      "node": 0,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/flybug.dtx'"
+    },
+    {
+      "group": "FlyBug",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/flybug.dtx'"
+    },
+    {
+      "group": "FlyBug",
+      "node": 2,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/flybug.dtx'"
+    },
+    {
+      "group": "FlyBug",
+      "node": 3,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/flybug.dtx'"
+    },
+    {
+      "group": "FlyBug",
+      "node": 4,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/flybug.dtx'"
+    },
+    {
+      "group": "Light_Dust",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/light_dust.spr'"
+    },
+    {
+      "group": "Light_Dust",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/light_dust.spr'"
+    },
+    {
+      "group": "Light_Dust",
+      "node": 2,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/light_dust.spr'"
+    },
+    {
+      "group": "Water_FootStep_1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/waterfall/water_wave_1.spr'"
+    },
+    {
+      "group": "Shield_Wolf_1_Impact",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: ..."
+    },
+    {
+      "group": "Exp_Granade_1",
+      "node": 7,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/alpha/dust_8.dtx'"
+    },
+    {
+      "group": "Exp_Sand_1",
+      "node": 7,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/alpha/dust_4.dtx'"
+    },
+    {
+      "group": "Glow_Spot_1",
+      "node": 0,
+      "type": "Sprite",
+      "reason": "'root/wt_fx/glow/flare_1.spr'"
+    },
+    {
+      "group": "Damage_Lightning_1",
+      "node": 2,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: wt_snd/fxsnd/scratch_dot_lightning.wav"
+    },
+    {
+      "group": "Damage_flames_1",
+      "node": 1,
+      "type": "PlaySound",
+      "reason": "Source sound unavailable: wt_snd/fxsnd/scratch_dot_explosion.wav"
+    },
+    {
+      "group": "Exp_Ramadan_1",
+      "node": 1,
+      "type": "Sprite",
+      "reason": "'root/fx/glow/flash1.dtx'"
+    },
+    {
+      "group": "Pride_Step5_1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step5.dtx'"
+    },
+    {
+      "group": "Pride_Step5_1",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step4_1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step4.dtx'"
+    },
+    {
+      "group": "Pride_Step4_1",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step3_1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step3.dtx'"
+    },
+    {
+      "group": "Pride_Step3_1",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step2_1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step2.dtx'"
+    },
+    {
+      "group": "Pride_Step2_1",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step1_1",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step1.dtx'"
+    },
+    {
+      "group": "Pride_Step1_1",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step1_2",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step1.dtx'"
+    },
+    {
+      "group": "Pride_Step1_2",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step2_2",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step2.dtx'"
+    },
+    {
+      "group": "Pride_Step2_2",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step3_2",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step3.dtx'"
+    },
+    {
+      "group": "Pride_Step3_2",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step4_2",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step4.dtx'"
+    },
+    {
+      "group": "Pride_Step4_2",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    },
+    {
+      "group": "Pride_Step5_2",
+      "node": 0,
+      "type": "LTBModel",
+      "reason": "'root/wt_fx/tatooeffect/tatoo_legend_step5.dtx'"
+    },
+    {
+      "group": "Pride_Step5_2",
+      "node": 1,
+      "type": "ParticleSystem",
+      "reason": "'root/wt_fx/glow/glow_seq_01/glow_seq_01.spr'"
+    }
+  ],
+  "typeCounts": {
+    "Sprite": 332,
+    "ParticleSystem": 1231,
+    "DynaLight": 227,
+    "FlareSpriteFX": 11,
+    "LTBModel": 330,
+    "PlaySound": 129,
+    "CamJitter": 45,
+    "CreateFX": 25,
+    "LightningFX": 29,
+    "PolyTrail": 41,
+    "SpriteSystem": 2
+  },
+  "scope": "Source event definitions and original assets; engine rendering adapter has explicit mobile bounds. Unavailable source/test nodes remain reported, never substituted.",
+  "groups": 632,
+  "availableGroups": 549,
+  "models": 95,
+  "textures": 1625,
+  "characters": 186
+}

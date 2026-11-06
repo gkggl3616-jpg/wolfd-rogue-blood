@@ -1,0 +1,797 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "allCharacterStatesValidated": false,
+  "captures": [
+    {
+      "height": 720,
+      "name": "launcher-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/launcher-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/title"
+      ],
+      "width": 1280,
+      "sha256": "ace915cb85b4f511a055694d9891e3836e3702e24a9fefa8825bd48249afb4d2"
+    },
+    {
+      "height": 720,
+      "name": "lobby-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/lobby-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/battle"
+      ],
+      "width": 1280,
+      "sha256": "e4d2940d95bb1a5d348a3a8f676aecad7a38b6d9c52587f80bd74175ff6d7b29"
+    },
+    {
+      "height": 720,
+      "name": "extra-sections-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/extra-sections-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/battle",
+        "interface/messagebox"
+      ],
+      "width": 1280,
+      "sha256": "2a6d742e354b3cafb3a345a0e6d86672495d5b87a67870ddf2aeceeffd426b44"
+    },
+    {
+      "height": 720,
+      "name": "inventory-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/inventory-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "54d50342855646506774541fc3fca1645a07ba72fc721567b0c5ff1e43ad55bb"
+    },
+    {
+      "height": 720,
+      "name": "weapon-properties-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/weapon-properties-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "a663702a652f7698d4559fb35cbeb4bc4fec34a12f91a70f28c5a0dcb5afe2b7"
+    },
+    {
+      "height": 720,
+      "name": "secondary-slot-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/secondary-slot-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "8b1b74376c0fd85e2b1f7fc9da086a79b536cfeb85e06de42e12911da80f82ab"
+    },
+    {
+      "height": 768,
+      "name": "inventory-native-1024",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        1.25
+      ],
+      "path": "docs/review/pc-native/inventory-native-1024.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1024,
+      "sha256": "874b31bf6f52e2696624132d1b74538ce163d2a2a3a9002bd2c675286ee62453"
+    },
+    {
+      "height": 1080,
+      "name": "inventory-1920",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/inventory-1920.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1920,
+      "sha256": "ce97f0bbeac9e480021e1b43504b3065f47e2337f3d58a8b2eed6e0278a8775c"
+    },
+    {
+      "height": 720,
+      "name": "shop-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/shop-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/shop",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "031adc3469c74fc6e5f808617d73a1408e73dbac50c7e441f7b8bfc4d7da9670"
+    },
+    {
+      "height": 720,
+      "name": "characters-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/characters-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet",
+        "interface/charequipmentpage"
+      ],
+      "width": 1280,
+      "sha256": "aba31e23eca4149ecfe70c153967b891180849222b560a7a845e6b8c0aa24ec9"
+    },
+    {
+      "height": 720,
+      "name": "tattoos-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/tattoos-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "5ddff502402d859a6d3708e1e8389f39e8eeb4a716bb19b496d6d08c61b98b12"
+    },
+    {
+      "height": 720,
+      "name": "effects-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/effects-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "9a501f25703d86bb0b07762f8656580152ffdb76549059d890631b5bc89127e1"
+    },
+    {
+      "height": 720,
+      "name": "power-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/power-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/shoppropertypage",
+        "interface/itemlistbuttonex",
+        "section/inventory",
+        "interface/equipmentpropertysheet",
+        "interface/iteminfopropertysheet",
+        "interface/abilityequipmentpage"
+      ],
+      "width": 1280,
+      "sha256": "276a0778150f6125b9a39140c74269204d39cb7a8570b33b2c4647a42c7c902a"
+    },
+    {
+      "height": 720,
+      "name": "cards-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/cards-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/card/cardsection",
+        "interface/card/carditem",
+        "interface/card/cardpropertysheet"
+      ],
+      "width": 1280,
+      "sha256": "bdffda55eb612f611bf0b04763d1339763156028b0c9df13ce0471b2f52ff489"
+    },
+    {
+      "height": 720,
+      "name": "settings-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/settings-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gameoption",
+        "interface/optionpropertysheet",
+        "interface/soundpropertypage"
+      ],
+      "width": 1280,
+      "sha256": "8020f283a3926c587962ab17694e1af63379a6843f8d15fcbc2ccfe99dea9f78"
+    },
+    {
+      "height": 720,
+      "name": "settings-controls-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/settings-controls-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gameoption",
+        "interface/optionpropertysheet",
+        "interface/controlpropertypage1"
+      ],
+      "width": 1280,
+      "sha256": "307eb5b4f379ead31f20d5e89d04c41c3ae1355ecf4feae5b5ef74fe7bb3a421"
+    },
+    {
+      "height": 720,
+      "name": "settings-graphics-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/settings-graphics-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gameoption",
+        "interface/optionpropertysheet",
+        "interface/graphicpropertypage"
+      ],
+      "width": 1280,
+      "sha256": "238d5968f6ed557794b2573f54b4766ff0cf9381139a6ef50631ae943f0bee65"
+    },
+    {
+      "height": 720,
+      "name": "settings-other-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/settings-other-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gameoption",
+        "interface/optionpropertysheet",
+        "interface/theotherspropertypage"
+      ],
+      "width": 1280,
+      "sha256": "ff6e6b3c4da3990cac6df945562719e25bd8a611ec7397796ab94a817e92b95a"
+    },
+    {
+      "height": 720,
+      "name": "settings-unsaved-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/settings-unsaved-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gameoption",
+        "interface/optionpropertysheet",
+        "interface/theotherspropertypage",
+        "interface/messagebox"
+      ],
+      "width": 1280,
+      "sha256": "deb9c17b6a672612f2e136478ba53475d44f5f84da2c174c73033a075c0de060"
+    },
+    {
+      "height": 720,
+      "name": "profile-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/profile-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/userrecord",
+        "interface/userinfopropertypage"
+      ],
+      "width": 1280,
+      "sha256": "c137211d204dbdccdd1f8a2600e451a03588f90d47d6622f0fea90b56f6e7e6d"
+    },
+    {
+      "height": 720,
+      "name": "gifts-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/gifts-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/inventory",
+        "interface/giftbox"
+      ],
+      "width": 1280,
+      "sha256": "2ffcc2f289db488f5a2b73e4b1481674f00f4faa37b02b7862545514e82db020"
+    },
+    {
+      "height": 720,
+      "name": "events-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/events-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/wolfeventdialog"
+      ],
+      "width": 1280,
+      "sha256": "922fabb034ecd62657005f853ec3e5323ea12b0eb4b96e4e388d8b040901ed72"
+    },
+    {
+      "height": 720,
+      "name": "missions-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/missions-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/wolfpass/wolfpassmissiondlg"
+      ],
+      "width": 1280,
+      "sha256": "a513eb39125f1af4a9bdbd1f0d9b5efbb4f110e5622c9a5bebcb3f0b0b448835"
+    },
+    {
+      "height": 720,
+      "name": "friends-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/friends-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gamebuddy",
+        "interface/userrecord"
+      ],
+      "width": 1280,
+      "sha256": "6bdfc313b48adff0f9c856b8bade38fb7be507a5e6726895103dc906364e0f3a"
+    },
+    {
+      "height": 720,
+      "name": "clan-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/clan-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/pride",
+        "interface/messagebox"
+      ],
+      "width": 1280,
+      "sha256": "e26b14ae7afde2cfa34203ad1468dc96b7a9f588efc7d29d7af3025ef8fc6899"
+    },
+    {
+      "height": 720,
+      "name": "ranking-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/ranking-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/rankingsection"
+      ],
+      "width": 1280,
+      "sha256": "8f7199822256813e59a9639c6d3cc5eba80feaa4bade5b540b921ca636aeab1e"
+    },
+    {
+      "height": 720,
+      "name": "create-room-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/create-room-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/createfield"
+      ],
+      "width": 1280,
+      "sha256": "ba95c037556c137edc1c53f3c6b90c1e1829a9bbe2cac596a19dc8f3cdc4664e"
+    },
+    {
+      "height": 720,
+      "name": "room-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/room-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/field"
+      ],
+      "width": 1280,
+      "sha256": "e9bd095111f1b58e1c624a9c39831dfc5450819bbdc6b612a2efc63698ae69ab"
+    },
+    {
+      "height": 720,
+      "name": "human-1280",
+      "path": "docs/review/pc-native/human-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1b9fe69f5a2010de59238b1e912c96fb5925842bd99eef4880846abf69ee649a"
+    },
+    {
+      "height": 720,
+      "name": "pause-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/pause-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "interface/gamemenu"
+      ],
+      "width": 1280,
+      "sha256": "d571a87af354ba9a05b916180aef59ff2a25ca42274fdba56114776164a8dd1b"
+    },
+    {
+      "height": 720,
+      "name": "wolf-1280",
+      "path": "docs/review/pc-native/wolf-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "153ed7e977d1afaf0572c14ab51d5a3f9e93c2407a5dd091a9c7799b12c69489"
+    },
+    {
+      "height": 720,
+      "name": "wolf-wall-hold-1280",
+      "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7c95247bec8fe0e62a503c95a7272e60fec9dc5d21a82bb79ec2c322c0845b80"
+    },
+    {
+      "height": 720,
+      "name": "airborne-attack-1280",
+      "path": "docs/review/pc-native/airborne-attack-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "306111d729353c0215a8ca580d53fabb3f2ed016ac1c0ebf6e32729cf20ea0c0"
+    },
+    {
+      "height": 720,
+      "name": "container-ship-1280",
+      "path": "docs/review/pc-native/container-ship-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e82559b350f8e5aecaa5e4d01fc0489f38a1a7a1fb6a8601e779b6dd7b088eda"
+    },
+    {
+      "height": 720,
+      "name": "offline-room-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/offline-room-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/field"
+      ],
+      "width": 1280,
+      "sha256": "1f6c7548e6be86f4550b5214b945b31e220fb8a7575857f989364951563de4da"
+    },
+    {
+      "height": 720,
+      "name": "offline-container-bots-1280",
+      "path": "docs/review/pc-native/offline-container-bots-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "da611932cdd0eda98de83c4e9965aaa9a99f07d6aa036ca5bee89cd1a560040b"
+    },
+    {
+      "height": 720,
+      "name": "offline-result-1280",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/offline-result-1280.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/result"
+      ],
+      "width": 1280,
+      "sha256": "848561efcd4210cdc5da4a52ac3bfde6cba64658624cfefc348136e0bebbb1f7"
+    },
+    {
+      "height": 720,
+      "name": "human-bot-hard-1280",
+      "path": "docs/review/pc-native/human-bot-hard-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d74c4eafea7e755594b6929a148d91ff4165890a0f1b3500f2d1ea9a0798f30a"
+    },
+    {
+      "height": 720,
+      "name": "bot-reload-1280",
+      "path": "docs/review/pc-native/bot-reload-1280.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9e036522121f9d67a451d6bbbf054dc41da3fba3886f92b45f56f3248935f634"
+    },
+    {
+      "height": 992,
+      "name": "wolf-reference-aspect-2160",
+      "path": "docs/review/pc-native/wolf-reference-aspect-2160.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "b9877be3dffee1e8132178065878ce501805432f63b4d5c8eb67f866cdaaf92c"
+    },
+    {
+      "height": 992,
+      "name": "human-reference-aspect-2160",
+      "path": "docs/review/pc-native/human-reference-aspect-2160.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "43d85ae7698684d649abb5d68ef3dc22b1656e6ce28cec47bd4cdb592aeb9136"
+    },
+    {
+      "height": 1080,
+      "name": "lobby-1920",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/lobby-1920.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/battle"
+      ],
+      "width": 1920,
+      "sha256": "052c5108749fb26ceba893ba4024334741b395083fc7a1cfc244cd7c60feb2ce"
+    },
+    {
+      "height": 1080,
+      "name": "servers-1920",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        0.9375
+      ],
+      "path": "docs/review/pc-native/servers-1920.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/serverlist"
+      ],
+      "width": 1920,
+      "sha256": "894cf79fccf9444bc7d365c43a8d64f749060e04b2a4889547e298ec21c2a316"
+    },
+    {
+      "height": 768,
+      "name": "lobby-native-1024",
+      "nativeCanvasPosition": [
+        0.0,
+        0.0
+      ],
+      "nativeCanvasScale": [
+        1.25,
+        1.25
+      ],
+      "path": "docs/review/pc-native/lobby-native-1024.png",
+      "saved": true,
+      "sourceLayouts": [
+        "section/battle"
+      ],
+      "width": 1024,
+      "sha256": "768d3efce8212ac031af94d269322decbac72ea046ad67275d158b7236d6ced2"
+    }
+  ],
+  "display": "X11",
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+}

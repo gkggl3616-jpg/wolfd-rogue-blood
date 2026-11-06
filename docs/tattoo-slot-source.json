@@ -1,0 +1,964 @@
+{
+  "source": "wolfteam kurtları/Root/wt_attributes/exitemtext.dat",
+  "sourceSha256": "04a124ed80f3045a5f1a0a593171909d1e703c50536b212be1f9724c12e36554",
+  "sourceRecords": 1070,
+  "binding": "Exact source id + UTF-16 name explicitly declares (Sol)/(Sağ); source wolf meshes preserve Tattoo_Arm_L/R UV surfaces.",
+  "bound": [
+    {
+      "id": "tattoo-20001",
+      "sourceId": 20001,
+      "name": "Anka Kuşu Dövme (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/7276b84a93edf67b5dce9094.png",
+      "textSourceOffset": 214428
+    },
+    {
+      "id": "tattoo-21001",
+      "sourceId": 21001,
+      "name": "Anka Kuşu Dövmesi (Sağ) ",
+      "role": "right",
+      "texture": "res://assets/library/textures/7276b84a93edf67b5dce9094.png",
+      "textSourceOffset": 263936
+    },
+    {
+      "id": "tattoo-20019",
+      "sourceId": 20019,
+      "name": "Ejder Dövmesi (Sol) ",
+      "role": "left",
+      "texture": "res://assets/library/textures/97012b74fc7feeb2c5c8c9c7.png",
+      "textSourceOffset": 284910
+    },
+    {
+      "id": "tattoo-20005",
+      "sourceId": 20005,
+      "name": "Aslan Dövmesi (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/d2efc46af8b912867b23f7b4.png",
+      "textSourceOffset": 287182
+    },
+    {
+      "id": "tattoo-20006",
+      "sourceId": 20006,
+      "name": "Pegasus Dövmesi (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/23ac5dc344c0de1e0e8b5b4e.png",
+      "textSourceOffset": 288014
+    },
+    {
+      "id": "tattoo-20007",
+      "sourceId": 20007,
+      "name": "Tarantula Dövmesi (Sol) ",
+      "role": "left",
+      "texture": "res://assets/library/textures/18bb04a97ea612f4ccc098df.png",
+      "textSourceOffset": 289064
+    },
+    {
+      "id": "tattoo-20008",
+      "sourceId": 20008,
+      "name": "Boğa Dövmesi (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/b3a776738f33f277ed9d4cc7.png",
+      "textSourceOffset": 290162
+    },
+    {
+      "id": "tattoo-21002",
+      "sourceId": 21002,
+      "name": "Ejder Dövmesi (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/97012b74fc7feeb2c5c8c9c7.png",
+      "textSourceOffset": 372332
+    },
+    {
+      "id": "tattoo-21016",
+      "sourceId": 21016,
+      "name": "Aslan Dövmesi (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/d2efc46af8b912867b23f7b4.png",
+      "textSourceOffset": 290998
+    },
+    {
+      "id": "tattoo-21017",
+      "sourceId": 21017,
+      "name": "Pegasus Dövmesi (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/23ac5dc344c0de1e0e8b5b4e.png",
+      "textSourceOffset": 292108
+    },
+    {
+      "id": "tattoo-21018",
+      "sourceId": 21018,
+      "name": "Tarantula Dövmesi (Sağ) ",
+      "role": "right",
+      "texture": "res://assets/library/textures/18bb04a97ea612f4ccc098df.png",
+      "textSourceOffset": 292964
+    },
+    {
+      "id": "tattoo-21019",
+      "sourceId": 21019,
+      "name": "Boğa Dövmesi (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/b3a776738f33f277ed9d4cc7.png",
+      "textSourceOffset": 294120
+    },
+    {
+      "id": "tattoo-20003",
+      "sourceId": 20003,
+      "name": "Ejder Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/03b94741f5ea3d373b48441b.png",
+      "textSourceOffset": 264892
+    },
+    {
+      "id": "tattoo-20009",
+      "sourceId": 20009,
+      "name": "Anka Kuşu Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/a65efc0c185c2721a06a9408.png",
+      "textSourceOffset": 299838
+    },
+    {
+      "id": "tattoo-20010",
+      "sourceId": 20010,
+      "name": "Pegasus Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/ab9e6980e7ce23f22a60160b.png",
+      "textSourceOffset": 296380
+    },
+    {
+      "id": "tattoo-20011",
+      "sourceId": 20011,
+      "name": "Tarantula Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/5bb7c26fd0186df576eae442.png",
+      "textSourceOffset": 297518
+    },
+    {
+      "id": "tattoo-20012",
+      "sourceId": 20012,
+      "name": "Boğa Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/4cfb63a900492ae775e9254f.png",
+      "textSourceOffset": 298694
+    },
+    {
+      "id": "tattoo-21023",
+      "sourceId": 21023,
+      "name": "Ejder Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/03b94741f5ea3d373b48441b.png",
+      "textSourceOffset": 301006
+    },
+    {
+      "id": "tattoo-21024",
+      "sourceId": 21024,
+      "name": "Anka Kuşu Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/a65efc0c185c2721a06a9408.png",
+      "textSourceOffset": 302146
+    },
+    {
+      "id": "tattoo-21025",
+      "sourceId": 21025,
+      "name": "Aslan Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/1638b37582ca4a69bfb9cc8e.png",
+      "textSourceOffset": 303312
+    },
+    {
+      "id": "tattoo-21026",
+      "sourceId": 21026,
+      "name": "Pegasus Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/ab9e6980e7ce23f22a60160b.png",
+      "textSourceOffset": 304452
+    },
+    {
+      "id": "tattoo-21027",
+      "sourceId": 21027,
+      "name": "Tarantula Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/5bb7c26fd0186df576eae442.png",
+      "textSourceOffset": 305620
+    },
+    {
+      "id": "tattoo-21028",
+      "sourceId": 21028,
+      "name": "Boğa Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/4cfb63a900492ae775e9254f.png",
+      "textSourceOffset": 306796
+    },
+    {
+      "id": "tattoo-20013",
+      "sourceId": 20013,
+      "name": "Ejder Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/0f1f5a4210e0432ac5686f5d.png",
+      "textSourceOffset": 314820
+    },
+    {
+      "id": "tattoo-20014",
+      "sourceId": 20014,
+      "name": "Anka Kuşu Dövmesi Mor (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/d670b89ef873aa7393e52c61.png",
+      "textSourceOffset": 315962
+    },
+    {
+      "id": "tattoo-20015",
+      "sourceId": 20015,
+      "name": "Aslan Dövmesi Mor (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/a4914f3670532d2febf996a3.png",
+      "textSourceOffset": 317120
+    },
+    {
+      "id": "tattoo-20016",
+      "sourceId": 20016,
+      "name": "Pegasus Dövmesi Mor (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/5391bf64f815e6a7ef6f13db.png",
+      "textSourceOffset": 318252
+    },
+    {
+      "id": "tattoo-20017",
+      "sourceId": 20017,
+      "name": "Tarantula Dövmesi Mor (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/11ec169a738d31c1cab3e379.png",
+      "textSourceOffset": 319380
+    },
+    {
+      "id": "tattoo-20018",
+      "sourceId": 20018,
+      "name": "Boğa Dövmesi Mor (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/1f5dd264bb6317f5abd9724d.png",
+      "textSourceOffset": 320550
+    },
+    {
+      "id": "tattoo-21029",
+      "sourceId": 21029,
+      "name": "Ejder Dövmesi Mor (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/0f1f5a4210e0432ac5686f5d.png",
+      "textSourceOffset": 321686
+    },
+    {
+      "id": "tattoo-21030",
+      "sourceId": 21030,
+      "name": "Anka Kuşu Dövmesi Bordo (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/d670b89ef873aa7393e52c61.png",
+      "textSourceOffset": 322820
+    },
+    {
+      "id": "tattoo-21031",
+      "sourceId": 21031,
+      "name": "Aslan Dövmesi Mor (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/a4914f3670532d2febf996a3.png",
+      "textSourceOffset": 323986
+    },
+    {
+      "id": "tattoo-21032",
+      "sourceId": 21032,
+      "name": "Pegasus Dövmesi Mor (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/5391bf64f815e6a7ef6f13db.png",
+      "textSourceOffset": 325116
+    },
+    {
+      "id": "tattoo-21033",
+      "sourceId": 21033,
+      "name": "Tarantula Dövmesi Mor (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/11ec169a738d31c1cab3e379.png",
+      "textSourceOffset": 326244
+    },
+    {
+      "id": "tattoo-21034",
+      "sourceId": 21034,
+      "name": "Boğa Dövmesi Mor (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/1f5dd264bb6317f5abd9724d.png",
+      "textSourceOffset": 327412
+    },
+    {
+      "id": "tattoo-20004",
+      "sourceId": 20004,
+      "name": "Ejder Dövmesi Lacivert (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/cf49745afb559cff4f197f91.png",
+      "textSourceOffset": 335546
+    },
+    {
+      "id": "tattoo-20020",
+      "sourceId": 20020,
+      "name": "Anka Kuşu Dövmesi Lacivert (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/5a583478d0abc142b54945fc.png",
+      "textSourceOffset": 336702
+    },
+    {
+      "id": "tattoo-20022",
+      "sourceId": 20022,
+      "name": "Pegasus Dövmesi Lacivert (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/2c0e8caca4a3a30d592890a6.png",
+      "textSourceOffset": 339032
+    },
+    {
+      "id": "tattoo-20023",
+      "sourceId": 20023,
+      "name": "Tarantula Dövmesi Lacivert (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/5d6a035d7e14c0feec4c6fe8.png",
+      "textSourceOffset": 340180
+    },
+    {
+      "id": "tattoo-20024",
+      "sourceId": 20024,
+      "name": "Boğa Dövmesi Lacivert (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/99044789b7a988715b6d8e58.png",
+      "textSourceOffset": 341368
+    },
+    {
+      "id": "tattoo-21035",
+      "sourceId": 21035,
+      "name": "Ejder Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/cf49745afb559cff4f197f91.png",
+      "textSourceOffset": 342524
+    },
+    {
+      "id": "tattoo-21036",
+      "sourceId": 21036,
+      "name": "Anka Kuşu Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/5a583478d0abc142b54945fc.png",
+      "textSourceOffset": 343678
+    },
+    {
+      "id": "tattoo-21037",
+      "sourceId": 21037,
+      "name": "Aslan Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/cd33d0c8ff59cc37e32967b8.png",
+      "textSourceOffset": 344858
+    },
+    {
+      "id": "tattoo-21038",
+      "sourceId": 21038,
+      "name": "Pegasus Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/2c0e8caca4a3a30d592890a6.png",
+      "textSourceOffset": 346010
+    },
+    {
+      "id": "tattoo-21039",
+      "sourceId": 21039,
+      "name": "Tarantula Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/5d6a035d7e14c0feec4c6fe8.png",
+      "textSourceOffset": 347158
+    },
+    {
+      "id": "tattoo-21040",
+      "sourceId": 21040,
+      "name": "Boğa Dövmesi Lacivert (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/99044789b7a988715b6d8e58.png",
+      "textSourceOffset": 348346
+    },
+    {
+      "id": "tattoo-20025",
+      "sourceId": 20025,
+      "name": "Ejder Dövmesi Altın (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/51d6c325e46f8e91fc7a070d.png",
+      "textSourceOffset": 356430
+    },
+    {
+      "id": "tattoo-20026",
+      "sourceId": 20026,
+      "name": "Anka Kuşu Dövmesi Altın (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/69259bdcb9ebd96989036e85.png",
+      "textSourceOffset": 357572
+    },
+    {
+      "id": "tattoo-20027",
+      "sourceId": 20027,
+      "name": "Aslan Dövmesi Altın (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/519de2eda21149ca15cd9969.png",
+      "textSourceOffset": 358738
+    },
+    {
+      "id": "tattoo-20028",
+      "sourceId": 20028,
+      "name": "Pegasus Dövmesi Altın (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/b45ded3c009704dcec127df4.png",
+      "textSourceOffset": 359878
+    },
+    {
+      "id": "tattoo-20029",
+      "sourceId": 20029,
+      "name": "Tarantula Dövmesi Altın (Sol) ",
+      "role": "left",
+      "texture": "res://assets/library/textures/6494238a586ecf604d6b884a.png",
+      "textSourceOffset": 361014
+    },
+    {
+      "id": "tattoo-20030",
+      "sourceId": 20030,
+      "name": "Boğa Dövmesi Altın (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/ac2b46f3cd766862ebc8d7d6.png",
+      "textSourceOffset": 362202
+    },
+    {
+      "id": "tattoo-21041",
+      "sourceId": 21041,
+      "name": "Ejder Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/51d6c325e46f8e91fc7a070d.png",
+      "textSourceOffset": 363354
+    },
+    {
+      "id": "tattoo-21042",
+      "sourceId": 21042,
+      "name": "Anka Kuşu Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/69259bdcb9ebd96989036e85.png",
+      "textSourceOffset": 364496
+    },
+    {
+      "id": "tattoo-21043",
+      "sourceId": 21043,
+      "name": "Aslan Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/519de2eda21149ca15cd9969.png",
+      "textSourceOffset": 365670
+    },
+    {
+      "id": "tattoo-21044",
+      "sourceId": 21044,
+      "name": "Pegasus Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/b45ded3c009704dcec127df4.png",
+      "textSourceOffset": 366810
+    },
+    {
+      "id": "tattoo-21045",
+      "sourceId": 21045,
+      "name": "Tarantula Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/6494238a586ecf604d6b884a.png",
+      "textSourceOffset": 367946
+    },
+    {
+      "id": "tattoo-21046",
+      "sourceId": 21046,
+      "name": "Boğa Dövmesi Altın (Sağ)",
+      "role": "right",
+      "texture": "res://assets/library/textures/ac2b46f3cd766862ebc8d7d6.png",
+      "textSourceOffset": 369128
+    },
+    {
+      "id": "tattoo-20800",
+      "sourceId": 20800,
+      "name": "Ejder Dövmesi Bordo (Sol)",
+      "role": "left",
+      "texture": "res://assets/library/textures/03b94741f5ea3d373b48441b.png",
+      "textSourceOffset": 371384
+    }
+  ],
+  "models": [
+    {
+      "character": "pair-model0",
+      "asset": "res://assets/library/characters/pair-model0-wolf.glb",
+      "sourceSha256": "1e458a8b98e878d1d9cbe5ac16ba5d94d2a59bb11a7100e56d9c3653e4138e05",
+      "meshes": [
+        "Tattoo_body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model1",
+      "asset": "res://assets/library/characters/pair-model1-wolf.glb",
+      "sourceSha256": "91bff6e43ed84e28baa38ecf54b0f33cc6bc3f667b9960ad7d7f7fae3e980a14",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model48",
+      "asset": "res://assets/library/characters/pair-model48-wolf.glb",
+      "sourceSha256": "9c1990174fa6266187429b05de4488e7df11e9800e9e0aa2d6353d6de6095ecf",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model58",
+      "asset": "res://assets/library/characters/pair-model58-wolf.glb",
+      "sourceSha256": "08f7494315ae1bcb64339ce537a6a4e60a27f1090978da0aead7867659cde4a0",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model66",
+      "asset": "res://assets/library/characters/pair-model66-wolf.glb",
+      "sourceSha256": "e0316ad7ac4f2a3b3aa4f6f30e8e83f25029b06038504b4ac30a06ba465e7d7b",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model68",
+      "asset": "res://assets/library/characters/pair-model68-wolf.glb",
+      "sourceSha256": "c1776d253ee95363e0377ec2847d655d2905975dd78fe6f0917b6667fa1e36e8",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model70",
+      "asset": "res://assets/library/characters/pair-model70-wolf.glb",
+      "sourceSha256": "623d7fac4173e9e770f7eefad0ec10f42b2fecb9c16de9d05c1ae1394bc541ce",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model72",
+      "asset": "res://assets/library/characters/pair-model72-wolf.glb",
+      "sourceSha256": "5791009c4389e1a06c287ec04aacff4dd95cd585f04f15328be23330fc0d8cde",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model74",
+      "asset": "res://assets/library/characters/pair-model74-wolf.glb",
+      "sourceSha256": "3e42b1484cc410d74a0ce45a3efcab5a571966ebf0d9b4d9e048f7c56a9391fe",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model78",
+      "asset": "res://assets/library/characters/pair-model78-wolf.glb",
+      "sourceSha256": "1c0c64419063e75d27b271605b8816b90b6a9244d58d19dc09f10a9acb7331fb",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model100",
+      "asset": "res://assets/library/characters/pair-model100-wolf.glb",
+      "sourceSha256": "29af6ada2f0b56ab253cd2cee5c3ed7eac9185501f77b679263e79244f586b24",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model104",
+      "asset": "res://assets/library/characters/pair-model104-wolf.glb",
+      "sourceSha256": "d835ba5c1ce99506653711e47e0632203fc25814ab3c34dfd88a6588cc94abb8",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model106",
+      "asset": "res://assets/library/characters/pair-model106-wolf.glb",
+      "sourceSha256": "539f12bd8d1098def4e70532ab3b5689104dc129192ba773810c66c29697bb46",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model108",
+      "asset": "res://assets/library/characters/pair-model108-wolf.glb",
+      "sourceSha256": "2eac7a2d7c0bec85ea08c71611ae0c0332c7ee7b524601ab50da07a699d78b1a",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model110",
+      "asset": "res://assets/library/characters/pair-model110-wolf.glb",
+      "sourceSha256": "35ad5f0bec9fabfd0dd83848125a0cff1b899a61a87ef8a880bcd15f2014dcbe",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model112",
+      "asset": "res://assets/library/characters/pair-model112-wolf.glb",
+      "sourceSha256": "9ee6e1ff73621aca0af3d3e3f2a6a539b3dab79564437d0b484f684fc0017570",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model114",
+      "asset": "res://assets/library/characters/pair-model114-wolf.glb",
+      "sourceSha256": "08f7494315ae1bcb64339ce537a6a4e60a27f1090978da0aead7867659cde4a0",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model206",
+      "asset": "res://assets/library/characters/pair-model206-wolf.glb",
+      "sourceSha256": "3e42b1484cc410d74a0ce45a3efcab5a571966ebf0d9b4d9e048f7c56a9391fe",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model208",
+      "asset": "res://assets/library/characters/pair-model208-wolf.glb",
+      "sourceSha256": "f94389c2b2fab5edd623e809dec3f897b15a8cade8119e07869aa4bd1ff0d6c3",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model210",
+      "asset": "res://assets/library/characters/pair-model210-wolf.glb",
+      "sourceSha256": "1c0c64419063e75d27b271605b8816b90b6a9244d58d19dc09f10a9acb7331fb",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model452",
+      "asset": "res://assets/library/characters/pair-model452-wolf.glb",
+      "sourceSha256": "65eb4dd3381a7fd323f81ada28914bbaa88da61e05daa1ca0e4ef200f285a93e",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model472",
+      "asset": "res://assets/library/characters/pair-model472-wolf.glb",
+      "sourceSha256": "40dc7e42aea46b64be8ca2bbe544d11c266254bddd72280176da80a90a0b6da8",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model476",
+      "asset": "res://assets/library/characters/pair-model476-wolf.glb",
+      "sourceSha256": "7bc1e5401d9c75955660781b0ecc86d02710e0240f4ab019b37d2c4cd23a6692",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model486",
+      "asset": "res://assets/library/characters/pair-model486-wolf.glb",
+      "sourceSha256": "1894d5a52c31aa91db738db576f541a11650df5d51fbe9c892bb36c2fa10c420",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model488",
+      "asset": "res://assets/library/characters/pair-model488-wolf.glb",
+      "sourceSha256": "8a43ea3a1c56dfddbbdd22d1ae9540fccf6648027227f6bc2008ad38148fdf1a",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model490",
+      "asset": "res://assets/library/characters/pair-model490-wolf.glb",
+      "sourceSha256": "1f788e6e7f40bd76a0718ed0cb153a4dc68ddcd83f7a29fc4e3d6c8e363df19f",
+      "meshes": [
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R",
+        "Tattoo_Body"
+      ]
+    },
+    {
+      "character": "pair-model492",
+      "asset": "res://assets/library/characters/pair-model492-wolf.glb",
+      "sourceSha256": "426bc80b2a54f36fad91fa6cd38600f4fdbe39651d16ba661e1293efa70e5f6b",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model498",
+      "asset": "res://assets/library/characters/pair-model498-wolf.glb",
+      "sourceSha256": "e892393dddaf0048d84812a62703f4f7f223470b31b062bd57613da6eb401114",
+      "meshes": [
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R",
+        "Tattoo_Body"
+      ]
+    },
+    {
+      "character": "pair-model500",
+      "asset": "res://assets/library/characters/pair-model500-wolf.glb",
+      "sourceSha256": "9c5025e565e2ef1db1f2cf966983596bf4d92ddcd90cbd4414df34b3d66adc52",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model502",
+      "asset": "res://assets/library/characters/pair-model502-wolf.glb",
+      "sourceSha256": "f08b97af7185cc3a28b9ff3f774162d5a148690d7ce132ff5d020707abcb950b",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model504",
+      "asset": "res://assets/library/characters/pair-model504-wolf.glb",
+      "sourceSha256": "18c8076977f9c628220f5f297098032aca1679a70a2213a1ac65bf7879ffaa3c",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model506",
+      "asset": "res://assets/library/characters/pair-model506-wolf.glb",
+      "sourceSha256": "442b2b0605853d1dcd98fb4dd4482e59d4ce19a1164015a3b8aa27a880dc1d5e",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model508",
+      "asset": "res://assets/library/characters/pair-model508-wolf.glb",
+      "sourceSha256": "5103d41574f2db3b691b1481b8dd4c02b0deb23de873f2d31a0dfeaa11ceebe0",
+      "meshes": [
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L",
+        "Tattoo_Body"
+      ]
+    },
+    {
+      "character": "pair-model510",
+      "asset": "res://assets/library/characters/pair-model510-wolf.glb",
+      "sourceSha256": "d0c2aca3ed103c5da67c53ff83628fb82e66c5bbcd29ec6ae34bef5444e364d3",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model512",
+      "asset": "res://assets/library/characters/pair-model512-wolf.glb",
+      "sourceSha256": "b5763d2a8d0d57ae5e0dfa4c74993601e77d0cecf59256520490ff4030f30229",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model526",
+      "asset": "res://assets/library/characters/pair-model526-wolf.glb",
+      "sourceSha256": "5eb942f872e2da8dc392e3688d2228fb1752f1dde15c235d8ca122773eb53745",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model528",
+      "asset": "res://assets/library/characters/pair-model528-wolf.glb",
+      "sourceSha256": "d30d6a54d82f305f3d3d02960019ce1d30d395fc25f5f6e799d0ac0bd8de0eb6",
+      "meshes": [
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L",
+        "Tattoo_Body"
+      ]
+    },
+    {
+      "character": "pair-model540",
+      "asset": "res://assets/library/characters/pair-model540-wolf.glb",
+      "sourceSha256": "1cb498a571252cce1c88c1f5acc794266c75239cffae0b61131acfba4b7355fd",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model542",
+      "asset": "res://assets/library/characters/pair-model542-wolf.glb",
+      "sourceSha256": "dacdb204f3faf611168b624ee465327f83ca4c7e9a2b13d3ef1124965bf2d024",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model560",
+      "asset": "res://assets/library/characters/pair-model560-wolf.glb",
+      "sourceSha256": "3f3a819002fe964fd31b92ba1d586878d44a258a3d486d27a4945f90721a35c4",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model562",
+      "asset": "res://assets/library/characters/pair-model562-wolf.glb",
+      "sourceSha256": "3a030c4891431b31004ae4c51fc87f11190ae1681fd4884357817e899d562139",
+      "meshes": [
+        "Tattoo_Arm_R",
+        "Tattoo_Body",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model568",
+      "asset": "res://assets/library/characters/pair-model568-wolf.glb",
+      "sourceSha256": "c69a56cd1532dd7659dd8be2efb3ab2ea0510fdf2180dcccbc23e8b06a68049a",
+      "meshes": [
+        "Tattoo_Arm_R",
+        "Tattoo_Body",
+        "Tattoo_Arm_L"
+      ]
+    },
+    {
+      "character": "pair-model570",
+      "asset": "res://assets/library/characters/pair-model570-wolf.glb",
+      "sourceSha256": "35e71e196020321a49ade8448dcd0b81601547a8d84a7b6a7af3fcd6330a701c",
+      "meshes": [
+        "Tattoo_Arm_R",
+        "Tattoo_Arm_L",
+        "Tattoo_Body"
+      ]
+    },
+    {
+      "character": "pair-model576",
+      "asset": "res://assets/library/characters/pair-model576-wolf.glb",
+      "sourceSha256": "fa46f6ec135de31b7e2b4dd417f486743099ecfb6bca5268dd0e3fb8b0f34683",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model578",
+      "asset": "res://assets/library/characters/pair-model578-wolf.glb",
+      "sourceSha256": "44937bb7781c66d4a6a403d013419597af5c5d3277debb9414f2f5441c2e0193",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model604",
+      "asset": "res://assets/library/characters/pair-model604-wolf.glb",
+      "sourceSha256": "676f828ab8b4c2f4beb222d571e2ea00a79c15e4e9c133b596f9bf9219e9013a",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model606",
+      "asset": "res://assets/library/characters/pair-model606-wolf.glb",
+      "sourceSha256": "fe72ca706a83b711df236c692c391b52aadc7c3477f4fd6f163ea418d26fef4e",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    },
+    {
+      "character": "pair-model614",
+      "asset": "res://assets/library/characters/pair-model614-wolf.glb",
+      "sourceSha256": "e105cad1df9dbb5a4f56a84fa048c39666cc2d3eede73c037ef607535aeb66f0",
+      "meshes": [
+        "Tattoo_Body",
+        "Tattoo_Arm_L",
+        "Tattoo_Arm_R"
+      ]
+    }
+  ],
+  "pcStatBonusesImplemented": false,
+  "unknownRolesRemainUnsupported": true
+}

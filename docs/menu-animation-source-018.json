@@ -1,0 +1,31 @@
+{
+  "donors": {
+    "wt_chars/models/wt_new_man_ch.ltb": {
+      "sourceSha256": "f026978087746f5b44df7cf90a8927a189d2596f2660e01f369518a209fbd950",
+      "clips": {
+        "unarmed": {
+          "sourceClip": "UI_Default_Idle",
+          "frames": 50
+        },
+        "primary": {
+          "sourceClip": "Ui_Mainweapon_Idle",
+          "frames": 51
+        }
+      }
+    },
+    "wt_chars/models/wt_new_woman_ch.ltb": {
+      "sourceSha256": "09934a5863d786084e45738dc8fd8fe30f0980e8f4ffd4a031779139cf25c2dc",
+      "clips": {
+        "unarmed": {
+          "sourceClip": "UI_Default_Idle",
+          "frames": 50
+        },
+        "primary": {
+          "sourceClip": "Ui_MainWeapon_Idle",
+          "frames": 51
+        }
+      }
+    }
+  },
+  "assetSha256": "1682c192ce0f6edfe3cc8c9378b7e459b4186de216adcf370ea607e01ff9b8c7"
+}

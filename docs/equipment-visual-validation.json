@@ -1,0 +1,147 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "captures": [
+    {
+      "height": 720,
+      "name": "gift-inbox-013",
+      "path": "docs/review/equipment-013/gift-inbox-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bd3f813f18450ba93696642aaac6c9fb15bc953974b13e89467e99c4b836990f"
+    },
+    {
+      "height": 720,
+      "name": "gift-confirmation-013",
+      "path": "docs/review/equipment-013/gift-confirmation-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3b6100184df192bb46c1d3b3af35b004a13f6979872130d8d25a28695b5deb2e"
+    },
+    {
+      "height": 720,
+      "name": "wolf-power-inventory-013",
+      "path": "docs/review/equipment-013/wolf-power-inventory-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6270c064494df4eb97bc7e4559b2608d2b4c2fd8c05e9dd4bb4abf2f57e2e7b1"
+    },
+    {
+      "height": 720,
+      "name": "wolf-bag-filter-013",
+      "path": "docs/review/equipment-013/wolf-bag-filter-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bd7c8d0678880515e56bee16703e6dd7cc421c93599276b3c23097b4cf440514"
+    },
+    {
+      "height": 720,
+      "name": "wolf-tattoo-inventory-013",
+      "path": "docs/review/equipment-013/wolf-tattoo-inventory-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "09d1593e9611217d3eb19cc5160f39013186be92cc52bc611f47ffa329359446"
+    },
+    {
+      "height": 720,
+      "name": "human-loadout-slots-013",
+      "path": "docs/review/equipment-013/human-loadout-slots-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2a8ea3a28844d711bcf2c7bd7be7868317a8bd07cbac15b5809dc39487cd8457"
+    },
+    {
+      "height": 720,
+      "name": "human-weapon-properties-013",
+      "path": "docs/review/equipment-013/human-weapon-properties-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c2a544f27f8cf916beaefe570e91f8e23f4179d919db01489845ee89a05faeb7"
+    },
+    {
+      "height": 720,
+      "name": "round-weapon-selection-013",
+      "path": "docs/review/equipment-013/round-weapon-selection-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e7329540e1193c985eb9e75f23066b2d8d1116917b3e68b22bb27fd52ed17b94"
+    },
+    {
+      "height": 720,
+      "name": "round-wolf-selection-013",
+      "path": "docs/review/equipment-013/round-wolf-selection-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0ff3e719303d3bd758dfce15e33cf7f9dcb184bd93704b6895e31cf9a0b440d2"
+    },
+    {
+      "height": 720,
+      "name": "wolf-power-blue-013",
+      "path": "docs/review/equipment-013/wolf-power-blue-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c21cffb1e741ac41e9dd92051af8fbdc67338f7176dc81effe7c96bfeb794b0d"
+    },
+    {
+      "height": 720,
+      "name": "wolf-guardian-blue-013",
+      "path": "docs/review/equipment-013/wolf-guardian-blue-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "04087ed3f2c6aa1f356b9eb5b15626d0fe3ba56d8c2dbc5f395b466c781979f7"
+    },
+    {
+      "height": 720,
+      "name": "wolf-ghost-blue-013",
+      "path": "docs/review/equipment-013/wolf-ghost-blue-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "729a5b85201b3577a147b9761b3048ff7aef728c6beecbeceee6be279596b3a3"
+    },
+    {
+      "height": 720,
+      "name": "wolf-power-red-013",
+      "path": "docs/review/equipment-013/wolf-power-red-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e06558043e30c02af332ffcf64b3425a162201986fef38c5612f3f57b7d43cb9"
+    },
+    {
+      "height": 720,
+      "name": "wolf-guardian-red-013",
+      "path": "docs/review/equipment-013/wolf-guardian-red-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0e693b8eef6688991d5a026bd6fb744ec4f34dc7d0bcc97c51e192b1a7e5726e"
+    },
+    {
+      "height": 720,
+      "name": "wolf-ghost-red-013",
+      "path": "docs/review/equipment-013/wolf-ghost-red-013.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "25e6c3063f49c6580aa92798952a7e6df5ef19627474ac001704a51718467ed1"
+    },
+    {
+      "height": 768,
+      "name": "round-wolf-selection-native-013",
+      "path": "docs/review/equipment-013/round-wolf-selection-native-013.png",
+      "saved": true,
+      "width": 1024,
+      "sha256": "b975dc1f97431b0708d88424edf1b633bf1f9b2641b73fca660c801ca7bc8689"
+    },
+    {
+      "height": 768,
+      "name": "gift-history-native-013",
+      "path": "docs/review/equipment-013/gift-history-native-013.png",
+      "saved": true,
+      "width": 1024,
+      "sha256": "5a3ccb97deec23f9a46081dcbca154b53a266e60e093c35c78b4761640944e24"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureGifts": true,
+  "testFixtureLocalCash": 2000,
+  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+}

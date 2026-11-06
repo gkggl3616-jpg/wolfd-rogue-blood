@@ -1,0 +1,444 @@
+[
+  {
+    "asset": "res://assets/maps/radar/1.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "dd1357376607d4c643500cabd22e8c02dfca842c064e4f15888b95ba2f838278",
+    "number": 1,
+    "originalPcRadar": false,
+    "sha256": "fd7294c6a37d88168bde808962f5d912e32babb769659f826bf7be629a56ca8b",
+    "worldOrigin": [
+      -150.428161621094,
+      -199.776428222656
+    ],
+    "worldSize": 319.788006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/2.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "a7858eb2acc10d14dcdabeadb3e97eba7d8645fe07747bc691915509a4c39967",
+    "number": 2,
+    "originalPcRadar": false,
+    "sha256": "fd7294c6a37d88168bde808962f5d912e32babb769659f826bf7be629a56ca8b",
+    "worldOrigin": [
+      -150.428161621094,
+      -199.776428222656
+    ],
+    "worldSize": 319.788006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/26.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "cc3c2b0b0c27360f988a6d44d88fa6d97a3418484e88eeb2d34e96b22aba66b4",
+    "number": 26,
+    "originalPcRadar": false,
+    "sha256": "21d558c38884be68c10637cd8fae3a6a08d8cbc00cd0266abc0599a30fd7278d",
+    "worldOrigin": [
+      -84.9118194580078,
+      -161.779739379883
+    ],
+    "worldSize": 238.464003295898
+  },
+  {
+    "asset": "res://assets/maps/radar/31.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "716bcf696d2e4a5786d5faed90784cc35ee431417918142a2e336895f7cb2d75",
+    "number": 31,
+    "originalPcRadar": false,
+    "sha256": "06d3c554cd19218d13d0fc26b55da29b07f574b4e62be80739204c62fcccee0e",
+    "worldOrigin": [
+      -229.343292236328,
+      -215.497222900391
+    ],
+    "worldSize": 433.188006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/44.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "32f1440df8452e7c2b437cfd41d7b279ef6351f4404b253f15876d1901db4ac0",
+    "number": 44,
+    "originalPcRadar": false,
+    "sha256": "44b9c88d172911582d8fe5bbec66c970f23e05e6f9658a03d1b9a5908f35bce5",
+    "worldOrigin": [
+      -205.502014160156,
+      -187.103576660156
+    ],
+    "worldSize": 356.724019775391
+  },
+  {
+    "asset": "res://assets/maps/radar/46.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "6b8a642a40c3f504b5d051d7bee47263edcd536d555aaef2f770febf55576e54",
+    "number": 46,
+    "originalPcRadar": false,
+    "sha256": "183f1e06c1a8830337acf102bb2e80df4c7249a4accd7d8acf8bf87785379b27",
+    "worldOrigin": [
+      -138.197204589844,
+      -138.171188354492
+    ],
+    "worldSize": 276.371993408203
+  },
+  {
+    "asset": "res://assets/maps/radar/50.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "3b7246238664f150f8a82d8e108bc48082f0b5b083defffb69c0db3c64acb115",
+    "number": 50,
+    "originalPcRadar": false,
+    "sha256": "2bd7298505a0e63c376b93c7706bf84b1dd9d12cddd845155848c94ff9f91737",
+    "worldOrigin": [
+      -94.8847503662109,
+      -92.5076293945312
+    ],
+    "worldSize": 185.004003295898
+  },
+  {
+    "asset": "res://assets/maps/radar/57.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "47c2436df9bdd7b4505b496408e66c59224c41ec2c45ee95f7ce86e5835cb6de",
+    "number": 57,
+    "originalPcRadar": false,
+    "sha256": "fbd9d4c56b3c2457a89c063ed0053b2fb40a88ef72d9e7ea7816bae651d6d77c",
+    "worldOrigin": [
+      -51.3360061645508,
+      -45.5832099914551
+    ],
+    "worldSize": 106.272009887695
+  },
+  {
+    "asset": "res://assets/maps/radar/58.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "9c6c7e2fe89fc2b10455cd553a1ef66f7b3e42395992e00194b818cb4ba666fb",
+    "number": 58,
+    "originalPcRadar": false,
+    "sha256": "bf7461c9fa26308fdedb77ee229e533ca76577bd628bd7cb98a36165f4628154",
+    "worldOrigin": [
+      -53.9809684753418,
+      -50.8876724243164
+    ],
+    "worldSize": 108.864003295898
+  },
+  {
+    "asset": "res://assets/maps/radar/59.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "4237b12eb329c41b00aa51d465a170524e742bdc2f8f2b91f868ac056a8f406a",
+    "number": 59,
+    "originalPcRadar": false,
+    "sha256": "59e6fdc33c5f891b39330fa4c117f6d44423dd0ae742e09c76354ec4f123b333",
+    "worldOrigin": [
+      -69.4960021972656,
+      -59.7380027770996
+    ],
+    "worldSize": 120.528006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/65.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "c9f8f2cc84a8056e6ea5a33ddd80ba5cab7a44bb5f2f2cc48f23157829110bf8",
+    "number": 65,
+    "originalPcRadar": false,
+    "sha256": "0684ecff7bbf2c79c1c9babc1d1ba54fbe9322ddd6e19cda5de0bcacfb7dcf2e",
+    "worldOrigin": [
+      -229.606002807617,
+      -186.472869873047
+    ],
+    "worldSize": 367.74
+  },
+  {
+    "asset": "res://assets/maps/radar/72.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "99f1aab5cdea315eba29bcd3b40530a607b5a064a00628f7a8cbdf7baaf8892e",
+    "number": 72,
+    "originalPcRadar": false,
+    "sha256": "1b41a4437d3f7f137494c712cf23ad57d9cdfce70654249a66917c71135f93d5",
+    "worldOrigin": [
+      -163.852416992188,
+      -146.123138427734
+    ],
+    "worldSize": 310.52162109375
+  },
+  {
+    "asset": "res://assets/maps/radar/82.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "c6c474b3e620326dd65b45c623ef0e71f052df1e899348eee4f538ba7c2a81e5",
+    "number": 82,
+    "originalPcRadar": false,
+    "sha256": "497d113a58e54ded97d69bf4dd479e20ee3c5eb7f86adefdeea7c39b4b8dc7d4",
+    "worldOrigin": [
+      -122.192596435547,
+      -101.593360900879
+    ],
+    "worldSize": 212.544019775391
+  },
+  {
+    "asset": "res://assets/maps/radar/83.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "bb02a7f5c5a60313fe3de63c93b614ef3ee52b0a12e0c7340feecb4776c8aee0",
+    "number": 83,
+    "originalPcRadar": false,
+    "sha256": "4d446dceea1c07bda1b6309bbe3d90098d568061394d4cc65f6dea643eae4add",
+    "worldOrigin": [
+      -135.686981201172,
+      -144.35481262207
+    ],
+    "worldSize": 267.948006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/84.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "3aefc7118040ba70a99d6a537baa636fc644920ab5ab5a2ca897d52187b047fb",
+    "number": 84,
+    "originalPcRadar": false,
+    "sha256": "27b3ccc1df1f556f7e7b83cf337d7d8f339ffcecf13adc38cee5877a4ed65285",
+    "worldOrigin": [
+      -84.5240020751953,
+      -84.8646240234375
+    ],
+    "worldSize": 169.451993408203
+  },
+  {
+    "asset": "res://assets/maps/radar/92.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "78e00cec9070c6fdb4c591eb618430f66c405e332ebb3a2e7325dea04ff202fa",
+    "number": 92,
+    "originalPcRadar": false,
+    "sha256": "9c2c9061c55d34281d697daeee1d73ec9c7f37ff0b33fa52bfdc2b4c29135f2c",
+    "worldOrigin": [
+      -112.088722229004,
+      -97.1842498779297
+    ],
+    "worldSize": 189.216013183594
+  },
+  {
+    "asset": "res://assets/maps/radar/97.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "44fbe9375bc03baeeaca4b28cbf8d81d91dc0b23c7077f90a07f80e2736cd299",
+    "number": 97,
+    "originalPcRadar": false,
+    "sha256": "71fc9e00858eba15a9ed816fe297bc9820de5588c148fb6a0126fa9255e4ca23",
+    "worldOrigin": [
+      -163.2412109375,
+      -162.465087890625
+    ],
+    "worldSize": 325.727973632813
+  },
+  {
+    "asset": "res://assets/maps/radar/100.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "a9a6ad00426ada4e7e13d69fb952b88dc371124489a5d911548215517781db1b",
+    "number": 100,
+    "originalPcRadar": false,
+    "sha256": "c885d44cd2c751e14d2bab07f36b5ad913b4ea1325b2ff226138795c85fce290",
+    "worldOrigin": [
+      -78.8927230834961,
+      -92.5729293823242
+    ],
+    "worldSize": 165.24
+  },
+  {
+    "asset": "res://assets/maps/radar/110.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "9ee73b79b9de3ebc576329f77c633dd9c1e7364aa98d876dc0c2833e72368ed4",
+    "number": 110,
+    "originalPcRadar": false,
+    "sha256": "08f4b7c78173e285ee6455f9a080e22a4f79a610b06250286ccea33afed826fd",
+    "worldOrigin": [
+      -74.8360061645508,
+      -48.0673942565918
+    ],
+    "worldSize": 122.148006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/36.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "eb39776a6f82bb2124e13658d158f156bf8ab6b271355f22d5a8813883c364f3",
+    "number": 36,
+    "originalPcRadar": false,
+    "sha256": "d1409f9ea63b04ed6d1167b5bfe1ccb138daf292bea446f614b0381495e8eff4",
+    "worldOrigin": [
+      -57.3535461425781,
+      -29.6613159179688
+    ],
+    "worldSize": 58.2335980224609
+  },
+  {
+    "asset": "res://assets/maps/radar/69.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "f544515ee0d4530820cdfdeba607dda572e30babb896e0ae69047dc6ea78b2f7",
+    "number": 69,
+    "originalPcRadar": false,
+    "sha256": "44d6d12d14728ee87cf1b1666049500bb1ce243fd8034139687358e88db538c8",
+    "worldOrigin": [
+      -69.1491088867188,
+      -67.5029907226562
+    ],
+    "worldSize": 122.147998352051
+  },
+  {
+    "asset": "res://assets/maps/radar/87.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "fcdf63ce31f22c3b0d8474a242c32cb7068b0fff57e43cc940dc8f83be55fb31",
+    "number": 87,
+    "originalPcRadar": false,
+    "sha256": "a12cb9a6c51b213a1629ab608cbc59c8ebda8df68709f4a345315df4cbf0e2b0",
+    "worldOrigin": [
+      -43.6382026672363,
+      -43.4069976806641
+    ],
+    "worldSize": 87.1560049438477
+  },
+  {
+    "asset": "res://assets/maps/radar/17.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "0477983666a5235db0b58702f5a3057ef9196b613dbd7b611ef1c0b15efc501d",
+    "number": 17,
+    "originalPcRadar": false,
+    "sha256": "89c800d3e324fb5fee7c88e7d2b3fd52d0fd05838468469bf37463d6ef2a806d",
+    "worldOrigin": [
+      -57.2024307250977,
+      -59.1096534729004
+    ],
+    "worldSize": 117.288006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/51.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "7d0a6e2be0b8a82f8d8a6333e992f80276bcd326c016fd374d001290979af80e",
+    "number": 51,
+    "originalPcRadar": false,
+    "sha256": "b95fa0d689ba96b8cf24f814f93a757d92f7391eb099434beb0e55f4493bdea5",
+    "worldOrigin": [
+      -262.377502441406,
+      -179.337371826172
+    ],
+    "worldSize": 300.996013183594
+  },
+  {
+    "asset": "res://assets/maps/radar/89.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "2553c4bfacc72e2251971e76bc854e097175f9df1181011251c3978f2e9d5d42",
+    "number": 89,
+    "originalPcRadar": false,
+    "sha256": "c8083465497e39192cd9f1dad7d0e578553e405d90fda7e5edfee00b64ec2d6c",
+    "worldOrigin": [
+      -64.0446472167969,
+      -63.4093017578125
+    ],
+    "worldSize": 127.008006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/37.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "16d989b69fbc42466f129e56623514e3df94b5d054908a8876d73f78f89bc9ce",
+    "number": 37,
+    "originalPcRadar": false,
+    "sha256": "4f3401e5c2b5c181122386d8c040cdfea6739ea756b463b637257516804157e0",
+    "worldOrigin": [
+      -86.4305267333984,
+      -85.4013061523438
+    ],
+    "worldSize": 164.16
+  },
+  {
+    "asset": "res://assets/maps/radar/42.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "096d8b73e729c5f2832defcc04833f3da7117a58dfc7784f6a7325eb4dcc65c9",
+    "number": 42,
+    "originalPcRadar": false,
+    "sha256": "c5b244d5c3e4b14dde180bde9dd5039095abf1eaaf1ebabd2f04c30ae33d73a9",
+    "worldOrigin": [
+      -66.7536849975586,
+      -30.7380714416504
+    ],
+    "worldSize": 93.96
+  },
+  {
+    "asset": "res://assets/maps/radar/20.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "de02eec182d918e65b57bec19822cafd2a7086641eff5991f3d564508bc82f53",
+    "number": 20,
+    "originalPcRadar": false,
+    "sha256": "64d2c11c4015a531fe4cefb3a16b54f8b6f5dc90537cc5a5b5afe305914790fb",
+    "worldOrigin": [
+      -44.7447509765625,
+      -44.744758605957
+    ],
+    "worldSize": 89.5104052734375
+  },
+  {
+    "asset": "res://assets/maps/radar/24.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "06f2094ad523c1c31c231147b60ddb4b63f1b24ddbee6e56f1895863c2b391f4",
+    "number": 24,
+    "originalPcRadar": false,
+    "sha256": "b36de89229b5d1a66ad759edf5de6c3e48674fdc513080c8c62e78a5f3d399e5",
+    "worldOrigin": [
+      -71.9193725585938,
+      -58.4436149597168
+    ],
+    "worldSize": 119.059197692871
+  },
+  {
+    "asset": "res://assets/maps/radar/68.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "a7df281215c1ffb867b705e34fbad30afa4f94697597d37e4231330547dbed48",
+    "number": 68,
+    "originalPcRadar": false,
+    "sha256": "2e110ac8a203c08803b0cdc1354c0d1c9dab43e4d25c0dd8474e62936811eea9",
+    "worldOrigin": [
+      -76.8244781494141,
+      -77.8210601806641
+    ],
+    "worldSize": 153.576013183594
+  },
+  {
+    "asset": "res://assets/maps/radar/41.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "61d2bc952ecad236af946c501971245d25ea17f9c25f6ac7bb9c3a7ac94dede0",
+    "number": 41,
+    "originalPcRadar": false,
+    "sha256": "a115ecd9182b3701eaf1797295cea1ad4556293d06d4a69b7a824b04ac0461e8",
+    "worldOrigin": [
+      -53.1205253601074,
+      -53.1539192199707
+    ],
+    "worldSize": 106.272009887695
+  },
+  {
+    "asset": "res://assets/maps/radar/56.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "fec7ba2fdb681db6ecf6e628014439e86ac9cbcceccba6ab97ae17b99aee0ead",
+    "number": 56,
+    "originalPcRadar": false,
+    "sha256": "b1501e5293988f1f8ed24a29d6a10e23b86525fe0a1e0a21dba12809e244cd9c",
+    "worldOrigin": [
+      -179.709991455078,
+      -176.799423217773
+    ],
+    "worldSize": 345.708006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/61.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "4170d49365d591a77817f43260bfbb4b9549d3c01fa6f4be60aa0752c3a369e6",
+    "number": 61,
+    "originalPcRadar": false,
+    "sha256": "e4aae9073ee8633e930b6c73a76d5b990e843b4fdb46859abaa783827ff746a5",
+    "worldOrigin": [
+      -60.3440055847168,
+      -60.2500038146973
+    ],
+    "worldSize": 120.528006591797
+  },
+  {
+    "asset": "res://assets/maps/radar/106.png",
+    "basis": "navigation_mesh_xz_local_projection",
+    "navigationSha256": "527ae173c03379ef4699f822bb38a811447a195e2da7f1f071dc22df71becb5f",
+    "number": 106,
+    "originalPcRadar": false,
+    "sha256": "ee6da69d3b9c48114ac4fb6761d5b60c44d7cc1cf9837f236c7113f7da3fb24a",
+    "worldOrigin": [
+      -45.0826950073242,
+      -40.2870140075684
+    ],
+    "worldSize": 80.6976013183594
+  }
+]

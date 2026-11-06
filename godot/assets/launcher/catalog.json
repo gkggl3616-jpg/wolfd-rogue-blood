@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    {
+      "section": "GLOBAL",
+      "fields": {
+        "WIDTH": "1020",
+        "HEIGHT": "666",
+        "NOTICE_X": "-20",
+        "NOTICE_Y": "-20",
+        "NOTICE_WIDTH": "10",
+        "NOTICE_HEIGHT": "10",
+        "PATCH_PROGRESS_X": "0",
+        "PATCH_PROGRESS_Y": "596",
+        "PATCH_PROGRESS_WIDTH": "1020",
+        "PATCH_PROGRESS_HEIGHT": "30",
+        "ID_X": "501",
+        "ID_Y": "455",
+        "ID_WIDTH": "260",
+        "ID_HEIGHT": "26",
+        "PASSWORD_X": "501",
+        "PASSWORD_Y": "504",
+        "PASSWORD_WIDTH": "260",
+        "PASSWORD_HEIGHT": "26",
+        "ID_SAVE_X": "500",
+        "ID_SAVE_Y": "553",
+        "ID_SAVE_WIDTH": "13",
+        "ID_SAVE_HEIGHT": "13"
+      }
+    },
+    {
+      "section": "WINDOW",
+      "fields": {
+        "NORESIZING": "1"
+      }
+    },
+    {
+      "section": "COLOR",
+      "fields": {
+        "PROG_TEXT": "191, 181, 235",
+        "WINDOW_ALPHA": "255, 0, 255"
+      }
+    },
+    {
+      "section": "AREA BACKGROUND",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\BackGround.bmp, 0, 0, 1020, 666",
+        "POSITION": "0, 0"
+      }
+    },
+    {
+      "section": "AREA TITLE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\BackGround.bmp, 0, 0, 1020, 666",
+        "POSITION": "0, 0"
+      }
+    },
+    {
+      "section": "AREA DOWNLOAD",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Downloading.bmp, 0, 0, 1020, 666",
+        "POSITION": "0, 0",
+        "FLAG": "HIDE"
+      }
+    },
+    {
+      "section": "AREA GUNCELLENIYOR",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Guncelleniyor.bmp, 0, 0, 148, 21",
+        "POSITION": "30, 567"
+      }
+    },
+    {
+      "section": "AREA MINIMIZE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Minimize-Normal.bmp, 0, 0, 7, 8",
+        "IMAGE_RIDE": ".\\UI\\Minimize-Over.bmp, 0, 0, 7, 8",
+        "IMAGE_CLICK": ".\\UI\\Minimize-Over.bmp, 0, 0, 7, 8",
+        "POSITION": "989, 9"
+      }
+    },
+    {
+      "section": "AREA CLOSE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Close-Normal.bmp, 0, 0, 8, 8",
+        "IMAGE_RIDE": ".\\UI\\Close-Over.bmp, 0, 0, 8, 8",
+        "IMAGE_CLICK": ".\\UI\\Close-Over.bmp, 0, 0, 8, 8",
+        "POSITION": "1003, 9"
+      }
+    },
+    {
+      "section": "AREA HOMEPAGE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Homepage-Normal.bmp, 0, 0, 73, 12",
+        "IMAGE_RIDE": ".\\UI\\Homepage-Over.bmp, 0, 0, 73, 12",
+        "IMAGE_CLICK": ".\\UI\\Homepage-Over.bmp, 0, 0, 73, 12",
+        "POSITION": "226, 34"
+      }
+    },
+    {
+      "section": "AREA FORUM",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Forum-Normal.bmp, 0, 0, 48, 12",
+        "IMAGE_RIDE": ".\\UI\\Forum-Over.bmp, 0, 0, 48, 12",
+        "IMAGE_CLICK": ".\\UI\\Forum-Over.bmp, 0, 0, 48, 12",
+        "POSITION": "339, 34"
+      }
+    },
+    {
+      "section": "AREA CASH",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\ChargeJP-Normal.bmp, 0, 0, 59, 16",
+        "IMAGE_RIDE": ".\\UI\\ChargeJP-Over.bmp, 0, 0, 59, 16",
+        "IMAGE_CLICK": ".\\UI\\ChargeJP-Over.bmp, 0, 0, 59, 16",
+        "POSITION": "635, 34"
+      }
+    },
+    {
+      "section": "AREA DESTEK",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Destek-Normal.bmp, 0, 0, 48, 12",
+        "IMAGE_RIDE": ".\\UI\\Destek-Over.bmp, 0, 0, 48, 12",
+        "IMAGE_CLICK": ".\\UI\\Destek-Over.bmp, 0, 0, 48, 12",
+        "POSITION": "734, 34"
+      }
+    },
+    {
+      "section": "AREA WEB_PAGE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Blank.bmp, 0, 0, 498, 305",
+        "POSITION": "492, 120",
+        "FLAG": "HIDE"
+      }
+    },
+    {
+      "section": "AREA ID_PASSWORD",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\UserName.bmp, 0, 0, 276, 83",
+        "POSITION": "500, 449",
+        "FLAG": "HIDE"
+      }
+    },
+    {
+      "section": "AREA GAME_START",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\GameStart-Normal.bmp, 0, 0, 212,90",
+        "IMAGE_RIDE": ".\\UI\\GameStart-Over.bmp, 0, 0, 212, 90",
+        "IMAGE_CLICK": ".\\UI\\GameStart-Update.bmp, 0, 0, 212, 90",
+        "POSITION": "778, 445"
+      }
+    },
+    {
+      "section": "AREA SIFREMI",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Sifremi_Unuttum.bmp, 0, 0, 93, 13",
+        "IMAGE_RIDE": ".\\UI\\Sifremi_Unuttum_Over.bmp, 0, 0, 93, 13",
+        "IMAGE_CLICK": ".\\UI\\Sifremi_Unuttum_Over.bmp, 0, 0, 93, 13",
+        "POSITION": "663, 554"
+      }
+    },
+    {
+      "section": "AREA REGIST",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Ucretsiz_Uye_Ol.bmp, 0, 0, 106, 13",
+        "IMAGE_RIDE": ".\\UI\\Ucretsiz_Uye_Ol_Over.bmp, 0, 0, 106, 13",
+        "IMAGE_CLICK": ".\\UI\\Ucretsiz_Uye_Ol_Over.bmp, 0, 0, 106, 13",
+        "POSITION": "875, 554"
+      }
+    },
+    {
+      "section": "AREA FACEBOOK",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Facebook-Normal.bmp, 0, 0, 20, 20",
+        "IMAGE_RIDE": ".\\UI\\Facebook-Over.bmp, 0, 0, 20, 20",
+        "IMAGE_CLICK": ".\\UI\\Facebook-Over.bmp, 0, 0, 20, 20",
+        "POSITION": "865, 630"
+      }
+    },
+    {
+      "section": "AREA TWITTER",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Twitter-Normal.bmp, 0, 0, 20, 20",
+        "IMAGE_RIDE": ".\\UI\\Twitter-Over.bmp, 0, 0, 20, 20",
+        "IMAGE_CLICK": ".\\UI\\Twitter-Over.bmp, 0, 0, 20, 20",
+        "POSITION": "900, 630"
+      }
+    },
+    {
+      "section": "AREA YOUTUBE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Youtube-Normal.bmp, 0, 0, 20, 20",
+        "IMAGE_RIDE": ".\\UI\\Youtube-Over.bmp, 0, 0, 20, 20",
+        "IMAGE_CLICK": ".\\UI\\Youtube-Over.bmp, 0, 0, 20, 20",
+        "POSITION": "935, 630"
+      }
+    },
+    {
+      "section": "AREA GOOGLE",
+      "fields": {
+        "IMAGE_NORMAL": ".\\UI\\Google-Normal.bmp, 0, 0, 20, 20",
+        "IMAGE_RIDE": ".\\UI\\Google-Over.bmp, 0, 0, 20, 20",
+        "IMAGE_CLICK": ".\\UI\\Google-Over.bmp, 0, 0, 20, 20",
+        "POSITION": "970, 630"
+      }
+    }
+  ],
+  "textures": {
+    "ui/background.bmp": {
+      "asset": "res://assets/launcher/textures/b49f4ea6a5fff84bc3108dba.png",
+      "width": 1020,
+      "height": 666,
+      "sha256": "b49f4ea6a5fff84bc3108dbaa672e4143a6a30c572a423e7075488a6516ff034",
+      "sourceSha256": "20f3618bfbeea9efd05a280badf12e845de27b0eca2b155dde6288e7bb0aa2f8"
+    },
+    "ui/chargejp-normal.bmp": {
+      "asset": "res://assets/launcher/textures/534847704e724e0d2e2976c2.png",
+      "width": 59,
+      "height": 16,
+      "sha256": "534847704e724e0d2e2976c2330cdc23be356f481ccccd49138088fe864b5b39",
+      "sourceSha256": "7b01e9301fabdd088e8c74dcf10ccd949c919b9323045ba478c09ce91719a92a"
+    },
+    "ui/chargejp-over.bmp": {
+      "asset": "res://assets/launcher/textures/50f617af5681542179ee3b7e.png",
+      "width": 59,
+      "height": 16,
+      "sha256": "50f617af5681542179ee3b7e64937013fb6a9f38fa0a7e9308ea49e290f52be1",
+      "sourceSha256": "85bd8b733b9113ff121246d314ccaa79cf049b71573438ecad186533ca1f3782"
+    },
+    "ui/close-normal.bmp": {
+      "asset": "res://assets/launcher/textures/60530480dd957ef078dbf0d5.png",
+      "width": 8,
+      "height": 8,
+      "sha256": "60530480dd957ef078dbf0d5d130a853dbfa60340218aa179e1985b6bd000274",
+      "sourceSha256": "1dcaa4b85e1b96ce2b27be63cc5b7db63daae5fbf431d5940dfc47869dc24bb8"
+    },
+    "ui/close-over.bmp": {
+      "asset": "res://assets/launcher/textures/33ae5302d401ffb73922818d.png",
+      "width": 8,
+      "height": 8,
+      "sha256": "33ae5302d401ffb73922818d67a5960ad04d04dfaca761542612e4f7eb15f572",
+      "sourceSha256": "8b3c9e6f7bebee72f17aab1141414cd21c41f8842e4579d134dfb9af726f1e3b"
+    },
+    "ui/destek-normal.bmp": {
+      "asset": "res://assets/launcher/textures/ecfe352b010b2bd37d104373.png",
+      "width": 48,
+      "height": 12,
+      "sha256": "ecfe352b010b2bd37d104373f0d43f793e83278f66903fa754bcdb80a518665f",
+      "sourceSha256": "d1e79f879390ef83525d18e6720f5716bea9996ef77e094703b5bdcfd5c89d61"
+    },
+    "ui/destek-over.bmp": {
+      "asset": "res://assets/launcher/textures/616acdc334d6fca8ea405267.png",
+      "width": 48,
+      "height": 12,
+      "sha256": "616acdc334d6fca8ea405267dfaff231827f16d41442e7f19e680fd286a5b995",
+      "sourceSha256": "32a71e6a5ece9c669da70a7f2d0d934748dc4f1de571561ff746bacf1941fa3b"
+    },
+    "ui/downloading.bmp": {
+      "asset": "res://assets/launcher/textures/41f5f458a372d0cc3d35f2b9.png",
+      "width": 1020,
+      "height": 666,
+      "sha256": "41f5f458a372d0cc3d35f2b9667d0b270404b8527c1359887967e34c885e8c10",
+      "sourceSha256": "7946adcc975dc10fbe4f43cd3b052ca554c61f32d8239e8ba34cc3e471345f8d"
+    },
+    "ui/facebook-normal.bmp": {
+      "asset": "res://assets/launcher/textures/ea79eafbda871555bb99ef19.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "ea79eafbda871555bb99ef196bddc39dd8a0c539d07bf12dfeac4f87af693736",
+      "sourceSha256": "7becf689ac066438b98e2bd97e5fa82507f47a71773cb867b142398fcb007f82"
+    },
+    "ui/facebook-over.bmp": {
+      "asset": "res://assets/launcher/textures/cbf24d316a6a42c8b0c26cbb.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "cbf24d316a6a42c8b0c26cbb0fd471e4710ff87a943e737472b5a6c289e2a593",
+      "sourceSha256": "d505c868475b8172395fed114d35a6631103831cf5763248184dfe0402e13c13"
+    },
+    "ui/forum-normal.bmp": {
+      "asset": "res://assets/launcher/textures/b36b9adf43c063a393d0bf9a.png",
+      "width": 48,
+      "height": 12,
+      "sha256": "b36b9adf43c063a393d0bf9a96cd312815658c4807e2cb7eb17bd3419300267d",
+      "sourceSha256": "64d95c5c5c1077a9b7c7dde26b5f3f569e4f9e97442120df1de8163b9b3b64d3"
+    },
+    "ui/forum-over.bmp": {
+      "asset": "res://assets/launcher/textures/bf430699b6c04f0db311e6b3.png",
+      "width": 48,
+      "height": 12,
+      "sha256": "bf430699b6c04f0db311e6b388fd7ac8f122146c26b95e44e8f5b212f31020e3",
+      "sourceSha256": "22e417342fdcfdad9b8dad9b3db0839fa3f927ffeff3c3f002c8e29d134cde3c"
+    },
+    "ui/gamestart-normal.bmp": {
+      "asset": "res://assets/launcher/textures/e3f4b1b339797a57e7d8abae.png",
+      "width": 212,
+      "height": 90,
+      "sha256": "e3f4b1b339797a57e7d8abae1d326bfc7ee0db3689c9c74028ca6d4bd5cc255f",
+      "sourceSha256": "b796b1d20063c22813b0a7b4015b54a6b313d96b32303f1799e5244b6e6106c1"
+    },
+    "ui/gamestart-over.bmp": {
+      "asset": "res://assets/launcher/textures/03e969208d4c3c06025d32e2.png",
+      "width": 212,
+      "height": 90,
+      "sha256": "03e969208d4c3c06025d32e2f88a5b272edf3a15540c869f1adc026d26333ebd",
+      "sourceSha256": "147544dd01f53a7499bc3ee6a535e4667b52a940477cf31103f56bf9c9d48dcc"
+    },
+    "ui/gamestart-update.bmp": {
+      "asset": "res://assets/launcher/textures/07509ec1d668e2043bcf55ef.png",
+      "width": 212,
+      "height": 90,
+      "sha256": "07509ec1d668e2043bcf55efa67ccf03cf9e3b654c8a3f4105dd9c4bbe55034d",
+      "sourceSha256": "b74619da0d6062b74276d6a4cc65f33dce8b3253cf5e4c2af66e7cae5455a14f"
+    },
+    "ui/guncelleniyor.bmp": {
+      "asset": "res://assets/launcher/textures/075fe8bd0e1eb023cdd30955.png",
+      "width": 148,
+      "height": 21,
+      "sha256": "075fe8bd0e1eb023cdd309556d9a0565e9b14906122defa40270022716c00f9f",
+      "sourceSha256": "b7109c258c4d3cb20e85b31374f1dfcd0b61623804092cddab5c5c738d6ba20b"
+    },
+    "ui/homepage-normal.bmp": {
+      "asset": "res://assets/launcher/textures/5cff473cc321b29fa1436e12.png",
+      "width": 73,
+      "height": 12,
+      "sha256": "5cff473cc321b29fa1436e128b3c644334e55cf307757786e4538869cc9e82f4",
+      "sourceSha256": "a22018d7ec15c6e817ba65b676e242e48e0654156b3c18325bad3bb586f09f2e"
+    },
+    "ui/homepage-over.bmp": {
+      "asset": "res://assets/launcher/textures/ac6cc9b3d70b4f3ce4006a2a.png",
+      "width": 73,
+      "height": 12,
+      "sha256": "ac6cc9b3d70b4f3ce4006a2a774f803dd9a48df20006433a11f2c5bb7c44dda8",
+      "sourceSha256": "4460fd2d3b0a2a202414155c95acdce9221593d7d25f916b904d1900971a5c1d"
+    },
+    "ui/minimize-normal.bmp": {
+      "asset": "res://assets/launcher/textures/85c50b2157cdd02ae9b8750d.png",
+      "width": 7,
+      "height": 8,
+      "sha256": "85c50b2157cdd02ae9b8750d6f94d1823f207c3f2c361a18f55920fae0add65f",
+      "sourceSha256": "32efd7380f6cb99df3c08cc64fa1ff59b876d2f067ea6c127d02170c3ddac268"
+    },
+    "ui/minimize-over.bmp": {
+      "asset": "res://assets/launcher/textures/6f6bf4e0ae89a4b2eed69754.png",
+      "width": 7,
+      "height": 8,
+      "sha256": "6f6bf4e0ae89a4b2eed697548d80b7cb4f4b317735ac80f89057cd51c4ea885d",
+      "sourceSha256": "bc10adb984a363d781317ad1eeb97b7f411dc5bcde264fa1759b5a5ef37e8118"
+    },
+    "ui/sifremi_unuttum.bmp": {
+      "asset": "res://assets/launcher/textures/e10bc1d7fa4aec30283f027a.png",
+      "width": 93,
+      "height": 13,
+      "sha256": "e10bc1d7fa4aec30283f027ad2b5d1ee78f9766259dafc2509cbd3bbd417f91d",
+      "sourceSha256": "3970462096ffe87f56f3b72733b60562c8e82cbeefe4d30ec8370d02f26bc0cd"
+    },
+    "ui/sifremi_unuttum_over.bmp": {
+      "asset": "res://assets/launcher/textures/0efcbd940ea03ea496636aaf.png",
+      "width": 93,
+      "height": 13,
+      "sha256": "0efcbd940ea03ea496636aafe34f87311abfb8f93097dbd7a08e234fbf56dc59",
+      "sourceSha256": "19a6a4f216212a7fa519c98e33054d8bc3e7319d4b1128a728bfc9a94a42ee90"
+    },
+    "ui/twitter-normal.bmp": {
+      "asset": "res://assets/launcher/textures/47951bcf4ca7387631d9280b.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "47951bcf4ca7387631d9280b96cd63ffa2baa1cdb3ff3865814803d6c0f95667",
+      "sourceSha256": "6934e251dfbdf15fd76ab9bf9bad99a0be1efd0ef4e6e36af707489bb024a8e3"
+    },
+    "ui/twitter-over.bmp": {
+      "asset": "res://assets/launcher/textures/473e06eacc8d73f643b5a85a.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "473e06eacc8d73f643b5a85aaa36a524ba9cfc58bf97fc5125565195632501d3",
+      "sourceSha256": "8a9f1d3f19fd557e5d2b0aaa961e184b3d1d0bfd3957b8facfa3d39a1fd729f6"
+    },
+    "ui/ucretsiz_uye_ol.bmp": {
+      "asset": "res://assets/launcher/textures/f1a02ca511d96df05cb07fca.png",
+      "width": 106,
+      "height": 13,
+      "sha256": "f1a02ca511d96df05cb07fcacb411ffcd809d51aea59f23066ba6752256cb80b",
+      "sourceSha256": "2e4c28e84c42681891dfff4c4e47ae1a0d07adb5702809feee3d1d9edc16349f"
+    },
+    "ui/ucretsiz_uye_ol_over.bmp": {
+      "asset": "res://assets/launcher/textures/abbea0c0e197ace795071cba.png",
+      "width": 106,
+      "height": 13,
+      "sha256": "abbea0c0e197ace795071cbac72471bfe3d8a1203f0e872dc40eee20702b82da",
+      "sourceSha256": "7e378439c2a8f7bad6382581d56be626e3ffb71b29be1da35ed34c1cbd76c28a"
+    },
+    "ui/username.bmp": {
+      "asset": "res://assets/launcher/textures/42f6127d37d69beb679173e3.png",
+      "width": 270,
+      "height": 83,
+      "sha256": "42f6127d37d69beb679173e329190bbca828fbe261017d6689d59cf6ada68379",
+      "sourceSha256": "673054bd1f68cd541b04fa6bdaa973bae1cfb6fb0f88a1d2eeb33ef85b77197b"
+    },
+    "ui/youtube-normal.bmp": {
+      "asset": "res://assets/launcher/textures/abf33be6c14fd78267666319.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "abf33be6c14fd7826766631917d9c972eb6a400008c7a2e1c681c7a89e8091bd",
+      "sourceSha256": "ab6d0fa059214ce174475ce3f8d58f80fb3683d44c0d19c666f741b3227b81d0"
+    },
+    "ui/youtube-over.bmp": {
+      "asset": "res://assets/launcher/textures/1f7459313bb29afe31b14978.png",
+      "width": 20,
+      "height": 20,
+      "sha256": "1f7459313bb29afe31b1497805fb9ffb50d6e6417d9c91ba9813128db5f1cd58",
+      "sourceSha256": "c59dcaed2b9479774efd15402628d1f3a4a8bbfbd82ecaef218f463e3cf52858"
+    }
+  },
+  "accountAuthenticationImplemented": false,
+  "source": "NyxLauncherEnc.xfs/UI.dat"
+}

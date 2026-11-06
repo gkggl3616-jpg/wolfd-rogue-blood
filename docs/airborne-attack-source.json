@@ -1,0 +1,495 @@
+{
+  "sourceCondition": "Item 19601: run, jump, strong attack",
+  "sourceClipMapping": "T_WallDashAtk, actual donor per character",
+  "mappingScope": "Source clip identity verified; action interpretation is a port mapping, not reverse-engineered PC code.",
+  "characters": [
+    {
+      "character": "pair-model0",
+      "asset": "res://assets/library/characters/pair-model0-wolf.glb",
+      "assetSha256": "1ddf00468752c3d624d4bf9f995c43c0a4571bc3eb6a0d869caf1640db92938c",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model1",
+      "asset": "res://assets/library/characters/pair-model1-wolf.glb",
+      "assetSha256": "d2d76a1f1a548b808fea05c7eaf3c5f8cd082002fe5052ad0c98e215817dd0e4",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model48",
+      "asset": "res://assets/library/characters/pair-model48-wolf.glb",
+      "assetSha256": "bdef1ccef4837c15c9a64ec4bb9482f46150f10b2c10be3812a4a1a03250659b",
+      "sourceDonor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+      "sourceSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model58",
+      "asset": "res://assets/library/characters/pair-model58-wolf.glb",
+      "assetSha256": "c9b8e1a0ace182f2abd2f71ddd3345d45de4a94f05a3c7e28a30d1d026076502",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model66",
+      "asset": "res://assets/library/characters/pair-model66-wolf.glb",
+      "assetSha256": "3cac600cc626aea2dc36e4484ea66f56d07364aaf2e198de0745f989e1518189",
+      "sourceDonor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
+      "sourceSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model68",
+      "asset": "res://assets/library/characters/pair-model68-wolf.glb",
+      "assetSha256": "82c7f0bf719a1ef9709f0212c6c73e3bc6ea5fd440fef7f6356ff3cbb90e54f7",
+      "sourceDonor": "wt_chars/models/wt_se_lightningwolf_ch.ltb",
+      "sourceSha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model70",
+      "asset": "res://assets/library/characters/pair-model70-wolf.glb",
+      "assetSha256": "2eb0ff30dc3ecbe209d2998df384568dc357ecefbe6b242930a62805935943b4",
+      "sourceDonor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
+      "sourceSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model72",
+      "asset": "res://assets/library/characters/pair-model72-wolf.glb",
+      "assetSha256": "52338bbaed9916ca866795dae9753ac2bd7428fa06eefb6530fe00462fdbbfba",
+      "sourceDonor": "wt_chars/models/wt_se_radiationwolf_ch.ltb",
+      "sourceSha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model74",
+      "asset": "res://assets/library/characters/pair-model74-wolf.glb",
+      "assetSha256": "ebc33e690e51b5327dd7f2f783c3d0f0dd117bc33c1ed5f66431c9bd624305c6",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model78",
+      "asset": "res://assets/library/characters/pair-model78-wolf.glb",
+      "assetSha256": "9a4f9d21e2e7f76f0656d7ac48522125ea9ea2681762c51a6b7fcc041a4516f5",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model100",
+      "asset": "res://assets/library/characters/pair-model100-wolf.glb",
+      "assetSha256": "add3b2b51263748b5afebb27b9de597d4dcbc3b45632855ea6f7d12417ed65a1",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model104",
+      "asset": "res://assets/library/characters/pair-model104-wolf.glb",
+      "assetSha256": "822645adf30c3eceeb54e4fc6aa6827f10bec65f4e73fa0540e912618c55bd1b",
+      "sourceDonor": "wt_chars/models/wt_se_icewolf_ch.ltb",
+      "sourceSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model106",
+      "asset": "res://assets/library/characters/pair-model106-wolf.glb",
+      "assetSha256": "4ec445e771c0815a98c378683cdec143095c28402597480f01bddd85c5b5c55f",
+      "sourceDonor": "wt_chars/models/wt_se_icewolf_ch.ltb",
+      "sourceSha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model108",
+      "asset": "res://assets/library/characters/pair-model108-wolf.glb",
+      "assetSha256": "3ab23bd02e3d229330be50b503dca90481eb4d6b2bc7fb1ea3f28f8817fa4f63",
+      "sourceDonor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+      "sourceSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model110",
+      "asset": "res://assets/library/characters/pair-model110-wolf.glb",
+      "assetSha256": "16bee053d9f0da3133254df08a78aa94c8f5bfc126d48c4a28b11e60e704517f",
+      "sourceDonor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+      "sourceSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model112",
+      "asset": "res://assets/library/characters/pair-model112-wolf.glb",
+      "assetSha256": "0ef58873d2d7408c93a05b64bb7b9abcbe050c117b82a142cc568eccf73ec653",
+      "sourceDonor": "wt_chars/models/wt_se_firewolf_ch.ltb",
+      "sourceSha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model114",
+      "asset": "res://assets/library/characters/pair-model114-wolf.glb",
+      "assetSha256": "c9b8e1a0ace182f2abd2f71ddd3345d45de4a94f05a3c7e28a30d1d026076502",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model206",
+      "asset": "res://assets/library/characters/pair-model206-wolf.glb",
+      "assetSha256": "ebc33e690e51b5327dd7f2f783c3d0f0dd117bc33c1ed5f66431c9bd624305c6",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model208",
+      "asset": "res://assets/library/characters/pair-model208-wolf.glb",
+      "assetSha256": "706fa937b7cf3b108583f8fff2265815583b688e67b29db760b593bfaba4c36f",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model210",
+      "asset": "res://assets/library/characters/pair-model210-wolf.glb",
+      "assetSha256": "9a4f9d21e2e7f76f0656d7ac48522125ea9ea2681762c51a6b7fcc041a4516f5",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model452",
+      "asset": "res://assets/library/characters/pair-model452-wolf.glb",
+      "assetSha256": "4f8976eb29f0b2f68a32420a3963974a1f5628feb01d86c5a611af347d107194",
+      "sourceDonor": "wt_chars/models/wt_new_wolf_ch.ltb",
+      "sourceSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.9
+    },
+    {
+      "character": "pair-model472",
+      "asset": "res://assets/library/characters/pair-model472-wolf.glb",
+      "assetSha256": "025997368f9f8df216e55be4e5a143cddd38004b34544208abc9e94852ebb248",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model476",
+      "asset": "res://assets/library/characters/pair-model476-wolf.glb",
+      "assetSha256": "d9fa31d522611b892a86aea8f1de909cea04fdbdbc28bc53732bc0a860af1df6",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model486",
+      "asset": "res://assets/library/characters/pair-model486-wolf.glb",
+      "assetSha256": "116711fa320b4c010db1ef2dcf9bddfbeaddffa814b5e9804db5258c35c1cfaf",
+      "sourceDonor": "wt_chars/models/r2_man_wolf.ltb",
+      "sourceSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model488",
+      "asset": "res://assets/library/characters/pair-model488-wolf.glb",
+      "assetSha256": "04067b0bf62684ff517e47d91b85c5560c0f2353b8b08118a7b54fafd2732814",
+      "sourceDonor": "wt_chars/models/r2_man_wolf.ltb",
+      "sourceSha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model490",
+      "asset": "res://assets/library/characters/pair-model490-wolf.glb",
+      "assetSha256": "e044642330ec5525527890012a2f2a0c03121872dfa76832de00d948aba18edb",
+      "sourceDonor": "wt_chars/models/r2_woman_wolf.ltb",
+      "sourceSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model492",
+      "asset": "res://assets/library/characters/pair-model492-wolf.glb",
+      "assetSha256": "82e73a7d18cc6c9d7e4066622fa497ad901da9d0758bba9e7a82dac13b94bca7",
+      "sourceDonor": "wt_chars/models/r2_woman_wolf.ltb",
+      "sourceSha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model498",
+      "asset": "res://assets/library/characters/pair-model498-wolf.glb",
+      "assetSha256": "ec051e2b69771b9d04e0a00bfe246c468eecc6411bcc07472bfe103ba25cdb6a",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model500",
+      "asset": "res://assets/library/characters/pair-model500-wolf.glb",
+      "assetSha256": "6a3fa7de3da2c1375683350a82a1ba0c6a7d7daf9238c3eb12399fc502b6eee0",
+      "sourceDonor": "wt_chars/models/r3_woman_wolf.ltb",
+      "sourceSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model502",
+      "asset": "res://assets/library/characters/pair-model502-wolf.glb",
+      "assetSha256": "1455687bd5bafdbf28dd2aedfa9f7af93eb3546e26d5ddf5450f00d0960a2f22",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model504",
+      "asset": "res://assets/library/characters/pair-model504-wolf.glb",
+      "assetSha256": "7f747e062c23b515a4b0c043c0b6aeca1aaccbccf90b87cf82620c62ea5ad373",
+      "sourceDonor": "wt_chars/models/r3_woman_wolf.ltb",
+      "sourceSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model506",
+      "asset": "res://assets/library/characters/pair-model506-wolf.glb",
+      "assetSha256": "db56b3592f5eba4b0a9ab00fd28d4b7ee352ddc32120eae1d9034d0a1c15530e",
+      "sourceDonor": "wt_chars/models/bluelegend_re_wolf.ltb",
+      "sourceSha256": "090cbb60613c8077cf9f9ea6590a97750e7588b664cfab6d65773256ccb1bd0f",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model508",
+      "asset": "res://assets/library/characters/pair-model508-wolf.glb",
+      "assetSha256": "97b0948558993f356b14881301f71603ad42915575693295455da92a4f06738c",
+      "sourceDonor": "wt_chars/models/redlegend_re_wolf.ltb",
+      "sourceSha256": "5c4b6446a78b70ffd426e867d68b4067300c4f05ccfc0158eea419698d1faf19",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model510",
+      "asset": "res://assets/library/characters/pair-model510-wolf.glb",
+      "assetSha256": "0b6cd24a630a2a35e7c734ebc578d680ee4a52d9a8667b96718b9d2a4ed7aaf4",
+      "sourceDonor": "wt_chars/models/turkey_wolf.ltb",
+      "sourceSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model512",
+      "asset": "res://assets/library/characters/pair-model512-wolf.glb",
+      "assetSha256": "d8050857b97f2d4556829e3c2a4b823108dd48581c137d40271e9333c75b670a",
+      "sourceDonor": "wt_chars/models/turkey_wolf.ltb",
+      "sourceSha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model526",
+      "asset": "res://assets/library/characters/pair-model526-wolf.glb",
+      "assetSha256": "dda01125d9609f6cd8dc42ec708487ad6f76f4e57f7d94059ab26d2c21cd600f",
+      "sourceDonor": "wt_chars/models/r1_combat edition_wolf.ltb",
+      "sourceSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model528",
+      "asset": "res://assets/library/characters/pair-model528-wolf.glb",
+      "assetSha256": "b900f9aa678ba342c45cf7185cb3c9cfce5980f4cfb6b66651e9332a7cc9b315",
+      "sourceDonor": "wt_chars/models/r1_combat edition_wolf.ltb",
+      "sourceSha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model540",
+      "asset": "res://assets/library/characters/pair-model540-wolf.glb",
+      "assetSha256": "aa2d03841a7b24e5f4966de0ab33a94edf569c6e2af27a37ebad27528edd43d7",
+      "sourceDonor": "wt_chars/models/wt_wolf_wraith.ltb",
+      "sourceSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f",
+      "skeletonSha256": "2b7321ee2f131f1361432303959ce39290e0e7cc1e3887fbcefbb76705eec7a7",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.733
+    },
+    {
+      "character": "pair-model542",
+      "asset": "res://assets/library/characters/pair-model542-wolf.glb",
+      "assetSha256": "cd85af6ec364e15f8d2dd6178d109f6b1614aa97fc75d21c8230e31e504ab213",
+      "sourceDonor": "wt_chars/models/wt_wolf_wraith.ltb",
+      "sourceSha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f",
+      "skeletonSha256": "2b7321ee2f131f1361432303959ce39290e0e7cc1e3887fbcefbb76705eec7a7",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 0.733
+    },
+    {
+      "character": "pair-model560",
+      "asset": "res://assets/library/characters/pair-model560-wolf.glb",
+      "assetSha256": "c0d56c966311387d87bfb2ec2b7bb753521579c66d3438d26b2e321bbf65c40e",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model562",
+      "asset": "res://assets/library/characters/pair-model562-wolf.glb",
+      "assetSha256": "ec8398fab9a58d609ca13631ef6868569e59469da395ad1dc64c2c264b4f28e3",
+      "sourceDonor": "wt_chars/models/r1_wolf.ltb",
+      "sourceSha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model568",
+      "asset": "res://assets/library/characters/pair-model568-wolf.glb",
+      "assetSha256": "4c02ccb0749c8119b01a2572174f02a2ea7d32088dca0c6bbc13ea910dd6e48f",
+      "sourceDonor": "wt_chars/models/wt_wolf_hacker.ltb",
+      "sourceSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model570",
+      "asset": "res://assets/library/characters/pair-model570-wolf.glb",
+      "assetSha256": "302db3f47231e86c7a567be31420641e5723091159b5b1bb9198f6e93a501a4d",
+      "sourceDonor": "wt_chars/models/wt_wolf_hacker.ltb",
+      "sourceSha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model576",
+      "asset": "res://assets/library/characters/pair-model576-wolf.glb",
+      "assetSha256": "02ff5591bef5ce1f3e223b1f002bf04a5c99f260444259e38ba012c77ff5b15b",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model578",
+      "asset": "res://assets/library/characters/pair-model578-wolf.glb",
+      "assetSha256": "d53d13f268e496d8b8cdd7b2b5c254d2480fb63e3e3794c88932b5da3a2daf11",
+      "sourceDonor": "wt_chars/models/r3_woman_wolf.ltb",
+      "sourceSha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model604",
+      "asset": "res://assets/library/characters/pair-model604-wolf.glb",
+      "assetSha256": "350654930d3cb72f62b950fb86042835f516c32d8256382d869ccacc3e2983dc",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model606",
+      "asset": "res://assets/library/characters/pair-model606-wolf.glb",
+      "assetSha256": "63765a42d080d0e5f1259c7c6d7f5cd6240577b2a281b4f9dc57cf7329c40ada",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    },
+    {
+      "character": "pair-model614",
+      "asset": "res://assets/library/characters/pair-model614-wolf.glb",
+      "assetSha256": "c4aa6b269dd748e37571a3d2f327aee68d4a02341eacca593a1efc27403bb6d0",
+      "sourceDonor": "wt_chars/models/r3_man_wolf.ltb",
+      "sourceSha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "skeletonSha256": "acf1d54bfd40adbaebb9467df053e2e264367e61ac441565233cb7760f542bd3",
+      "sourceClip": "T_WallDashAtk",
+      "durationSeconds": 1.166
+    }
+  ],
+  "sourceNumericTuningVerified": false,
+  "runtimeValidation": {
+    "codeSha256": "bd9739a658abe951e4d2eb8d83578c0e6e7b5100f6e0788d01bb0e9c84ed1f4e",
+    "scope": "48 imported action clips, finite bone poses at 35% duration, plus one physical attack/cancellation/LOS scenario. Not every animation frame or original PC visual acceptance.",
+    "contactSheet": "docs/review/airborne-hit-pose-contact.png",
+    "contactSha256": "0b5d013cbe9a7c656771a97e6136a91c357d8cfe4845ed20dd16a5110deafba3",
+    "physicalAndroidDeviceTested": false
+  }
+}

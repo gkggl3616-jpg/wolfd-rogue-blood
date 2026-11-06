@@ -1,0 +1,18 @@
+{
+  "url": "https://vt.tiktok.com/ZSp6dY4W2/",
+  "resolvedUrl": "https://www.tiktok.com/@wolftimemobile/video/7704772190906125620?_r=1&_t=ZS-9BAlI5I1hvY",
+  "duration": 85,
+  "videoSha256": "caf351cddb220fa1fabc0619e147afe4ea410c5fe4cb32c10bb2461f72db3bce",
+  "reviewMethod": "Sampled gameplay/menu frames across the downloaded video, including cropped full-width UI; not a claim of comparison of every frame.",
+  "observations": [
+    "Video uses a modified free shop with 999999 cash; original archive shop prices differ.",
+    "Wolf ability card, claws and tattoos are offered in shop tabs; equipment is separate.",
+    "Wolf hand trails follow their animated anchors; ground roar must not rotate with the neck."
+  ],
+  "applied": [
+    "four direction buttons and equipped wolf-run action",
+    "shop/inventory ownership separation",
+    "source-table pricing joins with explicit unpriced entries",
+    "ground-ring parent orientation and nested hand FX reference coordinates"
+  ]
+}

@@ -1,0 +1,100 @@
+extends SceneTree
+const Book=preload("res://scripts/content_book.gd")
+const Game=preload("res://scripts/game.gd")
+const Equipment=preload("res://scripts/equipment.gd")
+const Art=preload("res://ui/source_theme.gd")
+var checks=0
+var failures=[]
+func ensure(value,label):
+ checks+=1
+ if not value:failures.append(label);push_error(label)
+func frames(n=4):
+ for i in range(n):await process_frame
+func _initialize():call_deferred("run")
+func run():
+ var path="user://sets018-%d/wallet.json" % Time.get_ticks_usec();DirAccess.make_dir_recursive_absolute(path.get_base_dir())
+ var ledger=Game.new();ledger.message=Label.new();ledger.wallet_storage_path=path;ledger.book=Book.new(false,"",true);ledger.equipment=Equipment.new(false);ledger.sync_collection()
+ ensure(ledger.source_sets.items.size()==206,"Only complete, priced original sets are purchasable")
+ var item=ledger.source_sets.items.filter(func(row):return row.offers.any(func(offer):return offer.currency=="cash") and row.members.size()>2)[0]
+ var before=ledger.inbox.state.messages.size();var result=ledger.buy_source_set(item.id,"cash","purchase")
+ ensure(result.ok and result.count==item.members.size() and ledger.inbox.state.messages.size()==before+item.members.size(),"One purchase delivers every original component together")
+ ensure(ledger.wallet_text("cash")=="∞" and ledger.wallet_text("kp")=="∞","Set purchases preserve requested unlimited Nakit and KP")
+ ensure(ledger.buy_source_set(item.id,"cash","purchase").get("duplicate",false) and ledger.inbox.state.messages.size()==before+item.members.size(),"Repeated request delivers and spends exactly once")
+ ensure(ledger.buy_source_set(item.id,"cash","purchase-long").ok,"Distinct request sharing a prefix is not mistaken for a replay")
+ for message in ledger.inbox.state.messages.duplicate(true):
+  if message.sourceKey.begins_with("set-buy-"):ensure(ledger.accept_gift(message.id).ok,"Every package component can be explicitly accepted: "+message.item)
+ var reopened=Game.new();reopened.message=Label.new();reopened.wallet_storage_path=path;reopened.book=Book.new(false,"",true);reopened.equipment=Equipment.new(false);reopened.load_wallet();reopened.sync_collection()
+ ensure(item.members.all(func(member):return reopened.collection_owned(member.id)),"All accepted package components survive a process-style reload")
+ var balance=ledger.wallet.duplicate();var inbox=ledger.inbox.state.duplicate(true);DirAccess.make_dir_absolute(path+".pending")
+ ensure(not ledger.buy_source_set(item.id,"cash","save-failure").ok and ledger.wallet==balance and ledger.inbox.state==inbox,"Failed atomic save grants no subset and changes no balance")
+ DirAccess.remove_absolute(path+".pending")
+ ensure(not ledger.buy_source_set("missing","cash","bad").ok and not ledger.buy_source_set(item.id,"gp","bad-currency").ok,"Unknown sets and unsupported currency fail closed")
+ ledger.inbox.state.messages.clear()
+ for i in range(255):ledger.inbox.enqueue(ledger.inbox.state,"cash","cash","Dolu kutu",1,"fill-%d" % i)
+ balance=ledger.wallet.duplicate();inbox=ledger.inbox.state.duplicate(true)
+ ensure(not ledger.buy_source_set(item.id,"cash","full").ok and ledger.inbox.state==inbox and ledger.wallet==balance,"Insufficient gift capacity rejects entire package without partial delivery")
+ var gold=ledger.source_sets.items.filter(func(row):return row.offers.any(func(offer):return offer.currency=="gold"))
+ ensure(ledger.wallet.gold==0 and not ledger.buy_source_set(item.id,"gold","no-gold").ok,"Gold remains finite and insufficient gold cannot buy a source package")
+ for node in [ledger,reopened]:node.message.free();node.free()
+ var game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames();game.set_process(false);game.book.offline_edition=true;game.sync_collection();game.book.acquire_all()
+ var og=game.book.tattoos.filter(func(row):return row.name.begins_with("OG Dövmesi") and int(row.sourceId) in [12955,20803,21803])
+ ensure(og.size()==3,"Reference OG gold set contains all three original body regions")
+ for row in og:ensure(game.book.set_tattoo(row.role,row.texture,row.id),"Original OG role equips "+row.role)
+ ensure(game.book.tattoo_bonuses().damagePercent==765,"Literal source 255 values reproduce the reference +765 total")
+ var og_cards=game.book.tattoos.filter(func(row):return row.name.begins_with("OG Dövmesi"))
+ ensure(og_cards.size()==18 and og_cards.all(func(row):return row.has("iconSource") and row.icon!=row.texture),"All OG cards use original separate shop art while preserving tattoo skin UV texture")
+ ensure(og[0].icon!=og[1].icon and og[1].icon!=og[2].icon and og[0].icon!=og[2].icon,"Reference OG body, left and right have three different original illustrations")
+ ensure(game.book.tattoos.all(func(row):return not row.name.to_lower().begins_with("tattoo") and not "_" in row.name),"No source tattoo filenames leak into visible names")
+ ensure(game.map_catalog.data.modes.all(func(row):return not row.displayName.contains("Deathmatch") and not row.displayName.contains("Conquest") and not row.displayName.contains("Ice Hold")),"All 67 original mode identifiers retain translated display names")
+ for number in game.map_catalog.photos:
+  ensure(Art.map_photo(game.map_catalog,int(number))!=null and not game.map_catalog.photo(number).get("source","").begins_with("res://assets/maps/geometry"),"Original map thumbnail renders: "+str(number))
+ game.show_library("Karakterler");var ui=game.library_panel;await frames()
+ ensure(ui.preview_model.get_meta("menu_source_clip","")=="UI_Default_Idle","Unarmed inventory preview uses the original neutral menu animation")
+ for entry in game.book.characters:
+  if not entry.get("available",false):continue
+  var model=load(entry.human.asset).instantiate();root.add_child(model)
+  ensure(preload("res://scripts/menu_preview.gd").apply(model,entry) and model.get_meta("menu_source_clip","")=="UI_Default_Idle","Every admitted human has the neutral source pose: "+entry.id)
+  model.free()
+ var female=game.book.characters.filter(func(row):return row.id=="pair-model48")[0];ui.preview_wolf=false;ui.replace_preview(female)
+ ensure(ui.preview_model.get_meta("menu_source_clip","")=="UI_Default_Idle","Female donor also resolves the original neutral menu clip")
+ for dimensions in [Vector2i(1280,720),Vector2i(800,450),Vector2i(2160,992),Vector2i(2712,1220)]:
+  root.size=dimensions;await frames();ui.safe_insets=Vector4(20,8,26,10);ui.refresh();await frames()
+  var safe=ui.usable_rect();var transform=root.get_final_transform()
+  for key in ui.links:
+   var button=ui.links[key]
+   if button.get_parent().name!="ResponsiveHeader" or not button.visible:continue
+   var bounds=button.get_global_rect();var physical=transform*bounds
+   ensure(safe.encloses(bounds) and physical.size.x>=43 and physical.size.y>=43,"Phone toolbar stays within safe bounds with 44px targets: "+str(dimensions)+key)
+  ensure(not ui.links.has("WOLF\nPASS") and not ui.links.has("‹ KLAN ZİNCİRİ ›") and ui.links.has("Diğer"),"Removed features absent; overflow route exists")
+ root.size=Vector2i(1280,720);await frames();ui.safe_insets=Vector4.ZERO;ui.navigate("Setler");await frames()
+ ensure(ui.currency_values.cash.text=="∞ N" and ui.currency_values.kp.text=="∞ KP" and ui.currency_values.jt.text=="— JT","Separate currency column preserves unlimited Nakit/KP and never invents JoyToken balance")
+ ensure(ui.profile_label.get_global_rect().end.x<ui.wallet_label.get_global_rect().position.x,"Profile and currency areas do not overlap")
+ ui.navigate("Dövmeler");ui.search_query="OG";ui.detail_helper.refresh_grid()
+ var arranged=ui.detail_helper.entries
+ ensure(arranged.size()==15 and arranged[0].role=="left" and arranged[1].role=="body" and arranged[2].role=="right","OG grid places left arm, torso, right arm together in the same row")
+ ensure(arranged.filter(func(row):return row.name.contains("Altın")).size()==3,"Only one gold OG card remains for each body region")
+ ui.selected=og.filter(func(row):return row.role=="body")[0];ui.detail_helper.show_details()
+ var overlays=ui.preview_model.find_children("*","MeshInstance3D",true,false).filter(func(mesh):return str(mesh.name).to_lower().begins_with("tattoo") and mesh.visible)
+ ensure(overlays.size()==3 and overlays.all(func(mesh):return mesh.material_override.render_priority==1 and not mesh.material_override.no_depth_test),"OG overlays render after transparent fur while retaining depth testing")
+ game.player.apply_tattoos()
+ var live=game.player.wolf.find_children("*","MeshInstance3D",true,false).filter(func(mesh):return str(mesh.name).to_lower().begins_with("tattoo") and mesh.visible)
+ ensure(live.size()==3 and live.all(func(mesh):return mesh.material_override.render_priority==1),"The same original OG overlay order applies in actual matches")
+ var body=overlays.filter(func(mesh):return str(mesh.name).to_lower()=="tattoo_body")[0];var original=body.get_meta("source_tattoo_mesh");var uv_before=original.surface_get_arrays(0);var uv_after=body.mesh.surface_get_arrays(0)
+ var a=uv_before[Mesh.ARRAY_TEX_UV];var b=uv_after[Mesh.ARRAY_TEX_UV];var uv_correct=a.size()==b.size()
+ for i in range(a.size()):uv_correct=uv_correct and b[i]==Vector2(a[i].y,a[i].x)
+ ensure(uv_correct and uv_before[Mesh.ARRAY_VERTEX]==uv_after[Mesh.ARRAY_VERTEX] and uv_before[Mesh.ARRAY_BONES]==uv_after[Mesh.ARRAY_BONES] and uv_before[Mesh.ARRAY_WEIGHTS]==uv_after[Mesh.ARRAY_WEIGHTS],"OG torso UV correction preserves geometry, skeleton and weights")
+ preload("res://scripts/tattoo_uv.gd").apply(body,false);ensure(body.mesh==original,"Removing OG restores exact source UVs for other tattoos")
+ ui.navigate("Setler")
+ ensure(ui.detail_helper.entries.size()==206 and ui.detail_helper.grid.get_child_count()>0,"Source set shop opens real item cards")
+ ui.detail_helper.scroll_to(240);ensure(ui.offset>0,"Set list supports finger scrolling")
+ game.local_room={"title":"Kaynak Ayar","mode":1000,"map":84,"team":"blue","allyBots":4,"enemyBots":4};ui.navigate("room");ui.links.ChangeRule.pressed.emit();await frames()
+ ensure(ui.page=="room_settings" and "interface/changefielddialog" in ui.source_layouts,"Room settings use the actual source right-hand parameter editor")
+ var editor=ui.detail_helper;editor.capacity.select(0);editor.capacity.item_selected.emit(0)
+ ensure(editor.allies.item_count==1 and editor.enemies.item_count==2,"A two-player capacity leaves no allied bot slot and one enemy slot")
+ editor.apply();ensure(game.local_room.capacity==2 and game.bot_limit("blue")==0 and game.bot_limit("red")==1,"Confirmed source-room capacity is enforced by actual bot population")
+ ui.links.ChangeRule.pressed.emit();editor=ui.detail_helper;editor.view.find_widget("FieldNameEditBox").text="Kaydedilmeyecek";editor.view.find_widget("FieldNameEditBox").text_changed.emit("Kaydedilmeyecek");ui.links.PLCancel.pressed.emit()
+ ensure(game.local_room.title=="Kaynak Ayar","Cancel leaves the real room unchanged")
+ ui.links.ChangeRule.pressed.emit();editor=ui.detail_helper;editor.capacity.select(7);editor.capacity.item_selected.emit(7);editor.goal.select(editor.goal.item_count-1);editor.goal.item_selected.emit(editor.goal.item_count-1);editor.clock.select(1);editor.clock.item_selected.emit(1);editor.apply()
+ ensure(game.local_room.capacity==16 and game.local_room.pointGoal==160 and game.local_room.matchSeconds==1200,"Source goals/time and room capacity apply together")
+ game.queue_free();await frames()
+ var f=FileAccess.open("res://../docs/presentation-018-validation.json",FileAccess.WRITE);f.store_string(JSON.stringify({"passed":failures.is_empty(),"checks":checks,"failures":failures,"physicalAndroidDeviceTested":false},"  ")+"\n");f.close();print("PRESENTATION_018_QA ",checks," failures=",failures);quit(0 if failures.is_empty() else 1)

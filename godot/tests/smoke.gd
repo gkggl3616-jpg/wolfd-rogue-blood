@@ -21,13 +21,15 @@ func run():
 	game.test_mode = true
 	root.add_child(game)
 	await frames(3)
-	if not ensure(game.map_catalog.valid and game.map_catalog.data.maps.size() == 19,"exactly nineteen selected maps load"):return
+	if not ensure(game.map_catalog.valid and game.map_catalog.data.maps.size() == 34,"exactly thirty-four selected maps load"):return
 	if not ensure(game.map_catalog.belongs_to_mode(3001,26) and not game.map_catalog.belongs_to_mode(1001,26),"Cappadocia belongs to destruction and cannot leak into deathmatch"):return
 	if not ensure(game.map_catalog.belongs_to_mode(6010,72) and not game.map_catalog.belongs_to_mode(3001,72),"Ruins is restricted to its wolf rush modes"):return
 	if not ensure(game.map_catalog.belongs_to_mode(5000,82) and not game.map_catalog.belongs_to_mode(1001,82),"Secret Lab is restricted to wolfhunt"):return
 	if not ensure(game.map_catalog.map_record(46).allowedModeIds.is_empty() and game.map_catalog.map_record(47).is_empty(),"unverified Gobekli is retained without substituting the night variant"):return
-	if not ensure(game.map_catalog.random_ready_map(1001).is_empty() and game.map_catalog.random_ready_map(-1).is_empty(),"random map selection cannot fall back to unready or unrelated maps"):return
+	if not ensure(game.map_catalog.random_ready_map(3000).is_empty() and game.map_catalog.random_ready_map(-1).is_empty(),"random map selection cannot fall back to unready or unrelated maps"):return
 	game.show_maps()
+	for i in range(game.mode_picker.item_count):
+		if game.mode_picker.get_item_id(i)==3000:game.mode_picker.select(i);game.refresh_mode_maps();break
 	if not ensure(game.map_start.disabled and game.map_picker.item_count > 0,"mode picker shows linked maps while unfinished maps cannot start"):return
 	await frames(3)
 	if not ensure(game.overlay.get_global_rect().position.y >= 0 and game.overlay.get_global_rect().end.y <= root.size.y,"map selection panel fits the landscape screen"):return
@@ -111,7 +113,7 @@ func run():
 	if not ensure(game.player.viewmodel.visible and game.player.weapon_anim.has_animation("reload") and game.player.weapon_anim.has_animation("fire"),"human first-person weapon and hand animations are imported"):return
 	game.touch.direction_buttons = true
 	await frames(2)
-	if not ensure(game.touch.buttons.size() == 11 and game.touch.buttons[7].visible,"four movement buttons and separate run button are available"):return
+	if not ensure(game.touch.buttons.size() == 12 and game.touch.buttons[7].visible,"four movement buttons, separate run and wolf roll buttons are available"):return
 	game.player.switch_form()
 	game.equipment.equip_power(0)
 	game.player.reset_locomotion()
@@ -222,7 +224,7 @@ func run():
 		if game.map_picker.get_item_id(index) == 84:
 			game.map_picker.select(index)
 	game.refresh_map_status()
-	if not ensure(not game.map_preview.disabled and game.map_start.disabled,"source map exploration is distinct from an unfinished original mode"):return
+	if not ensure(not game.map_preview.disabled and not game.map_start.disabled,"source map supports distinct exploration and its newly implemented deathmatch"):return
 	game.start_map_preview()
 	await frames(35)
 	if not ensure(game.exploring and game.active_map != null and game.player.is_on_floor(),"source Container Ship scene loads and its source spawn rests on the generated collision"):return
