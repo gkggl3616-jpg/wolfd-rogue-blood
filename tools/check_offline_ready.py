@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10}
+    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -105,7 +105,7 @@ def check(root=ROOT):
     for item in powers.get('items',[]):
         if not (root/'godot'/item.get('icon','__missing_icon__').removeprefix('res://')).is_file():blockers.append('Power item icon missing: '+str(item.get('id')))
         if item.get('trail'):verify_asset(item['trail'],'source claw trail '+item['id'])
-    for filename,minimum in [('mobile-016-validation.json',31),('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
+    for filename,minimum in [('shop-controls-017-validation.json',61),('clientfx-gameplay-017-validation.json',817),('mobile-016-validation.json',31),('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
         path=root/'docs'/filename
         proof=json.loads(path.read_text()) if path.is_file() else {}
         if proof.get('passed') is not True or proof.get('checks',0)<minimum:blockers.append('Incomplete update verification: '+filename)
@@ -138,6 +138,37 @@ def check(root=ROOT):
             if node.get('asset'):verify_asset(node,'roar mesh '+key)
             for frame in node.get('frames',[]):
                 if not (root/'godot'/frame.removeprefix('res://')).is_file():blockers.append('Roar sprite frame missing: '+frame)
+    fx=json.loads((root/'godot/assets/clientfx/catalog.json').read_bytes())
+    if fx.get('sourceGroupCount')!=628 or len(fx.get('projectiles',{}))!=4 or len(fx.get('models',{}))<95:
+        blockers.append('Complete source ClientFX/native effect catalogue missing')
+    for texture in fx.get('textures',{}).values():verify_asset(texture,'ClientFX texture '+texture['source'])
+    for model in fx.get('models',{}).values():verify_asset(model,'ClientFX model '+model['source'])
+    for char in fx.get('characters',{}).values():
+        for form in char.values():
+            for name in form.get('effects',{}).values():
+                if name not in fx.get('groups',{}) or not fx['groups'][name].get('available'):blockers.append('Bound character FX incomplete: '+name)
+    if hashlib.sha256(gzip.decompress((root/'docs/pc_sources_017/fx.txt.gz').read_bytes())).hexdigest()!=fx.get('nativeButesSha256'):
+        blockers.append('Native effect source differs from packaged aliases')
+    events=json.loads((root/'godot/assets/gameplay/animation-events.json').read_bytes())
+    if events!=json.loads(gzip.decompress((root/'docs/animation-events-source-017.json.gz').read_bytes())) or events.get('failures'):
+        blockers.append('Animation event/socket extraction evidence differs from runtime')
+    facts=json.loads((root/'godot/assets/gameplay/source.json').read_bytes())
+    if facts.get('voiceRows')!=791 or facts.get('missingVoices'):blockers.append('Source voice event mapping incomplete')
+    for name,row in facts['sources'].items():
+        source=root/'docs/pc_sources_017'/(name+'.dat.gz')
+        if hashlib.sha256(gzip.decompress(source.read_bytes())).hexdigest()!=row['sha256']:blockers.append('Gameplay source changed: '+name)
+    shop=json.loads((root/'godot/assets/items/shop.json').read_bytes())
+    if shop.get('currencyPolicy',{}).get('unlimited')!=['cash','kp']:blockers.append('Requested unlimited Nakit/KP policy is missing')
+    shop_source=gzip.decompress((root/'docs/pc_sources_017/shopdata.dat.gz').read_bytes())
+    shop_proof=json.loads(gzip.decompress((root/'docs/shop-source-017.json.gz').read_bytes()))
+    if shop.get('recordCount')!=4934 or shop.get('recordBytes')!=359 or shop['sourceSha256']!=hashlib.sha256(shop_source).hexdigest() or shop_proof['sourceSha256']!=shop['sourceSha256']:
+        blockers.append('Original shop price table provenance mismatch')
+    import struct
+    for item in shop['items'].values():
+        for offer in item['offers']:
+            start=offer['sourceOffset']
+            if struct.unpack_from('<I',shop_source,start+4)[0]!=item['sourceId'] or struct.unpack_from('<i',shop_source,start+shop['currencyOffsets'][offer['currency']]+offer['sourceOptionIndex']*4)[0]!=offer['price']:
+                blockers.append('Shop price differs from literal original table: '+item['id'])
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

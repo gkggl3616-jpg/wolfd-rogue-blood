@@ -11,6 +11,7 @@ const NAMES = {"entry":"Giriş", "servers":"Sunucular", "lobby":"Lobi", "room":"
 const SERVICE_LAYOUTS = {"events":"interface/wolfeventdialog", "missions":"interface/mission/missionsheet", "gifts":"interface/giftbox", "friends":"interface/gamebuddy", "clan":"section/pride", "ranking":"section/rankingsection"}
 var game
 var page = "lobby"
+var collection_shop = false
 var canvas: Control
 var content: Control
 var links = {}
@@ -35,6 +36,8 @@ var offset = 0
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
+var room_goal:OptionButton
+var room_time:OptionButton
 var room_allies: OptionButton
 var room_enemies: OptionButton
 var room_difficulty: OptionButton
@@ -181,7 +184,7 @@ func _process(_delta):
 	if is_instance_valid(rank_image) and last_rank_gp!=int(game.wallet.gp):
 		var rank=game.ranks.current(int(game.wallet.gp));rank_image.texture=Art.texture(rank.asset);rank_background.texture=Art.texture(rank.background);rank_image.tooltip_text=rank.name+" · Yerel rütbe";last_rank_gp=int(game.wallet.gp)
 	if is_instance_valid(profile_label):profile_label.text=game.profile_name
-	if is_instance_valid(wallet_label): wallet_label.text = "ALTIN:  %d     KP:  %d\nNAKİT:  %d     GP:  %d\nÇevrimiçi hesap bağlı değil" % [game.wallet.gold,game.wallet.kp,game.wallet.cash,game.wallet.gp]
+	if is_instance_valid(wallet_label): wallet_label.text = "ALTIN:  %d     KP:  %s\nNAKİT:  %s     GP:  %d\nÇevrimiçi hesap bağlı değil" % [game.wallet.gold,game.wallet_text("kp"),game.wallet_text("cash"),game.wallet.gp]
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 
 func navigate(next,remember=true,back_step=false):
@@ -199,6 +202,8 @@ func navigate(next,remember=true,back_step=false):
 		room_draft={"title":"Yerel Oda","mode":0,"map":0,"team":"blue","playerForm":"human","botDifficulty":"normal"}
 		room_draft.merge(game.local_room,true)
 	if next=="Dövmeler" and page!="Dövmeler":preview_angle=PI
+	if next=="Mağaza":collection_shop=true
+	elif next=="Envanter":collection_shop=false
 	page = next;offset = 0;selected = {};search_query = "";filter_id = "all";quality_id="all";last_error = ""
 	refresh()
 
@@ -251,7 +256,9 @@ func mode_picker(parent,at,dimensions,allow_training=true):
 	if allow_training: picker.add_item("Kurt Avı · Yerel",game.LocalHunt.MODE)
 	if allow_training: picker.add_item("Öğretici Mod · Yerel",game.LocalTutorial.MODE)
 	if allow_training: picker.add_item("Kurt Savaşı · Yerel",game.WOLF_BATTLE)
-	for mode in game.map_catalog.data.modes: picker.add_item(mode.sourceName,int(mode.id))
+	for mode in game.map_catalog.data.modes:
+		var title={1000:"Ölüm Oyunu",1001:"Ölüm Oyunu · Ağır Silah",1010:"Ölüm Oyunu · Kurt Savaşı",1020:"Ölüm Oyunu · İnsan",1021:"Ölüm Oyunu · İnsan/Ağır"}.get(int(mode.id),mode.sourceName)
+		picker.add_item(title,int(mode.id))
 	parent.add_child(picker);return picker
 
 func map_picker(parent,at,dimensions):

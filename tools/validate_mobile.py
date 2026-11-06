@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def code_fingerprint():
     digest=hashlib.sha256()
     files=sorted((ROOT/'godot').glob('scripts/*.gd'))+sorted((ROOT/'godot').glob('ui/*.gd'))+sorted((ROOT/'godot').glob('ui/*.gdshader'))+[(ROOT/'godot/project.godot')]
-    files += [ROOT/'godot/assets'/name for name in ['maps/photos.json','ui/ranks.json','items/boxes.json','library/visuals.json','items/power.json','mutations/catalog.json','library/characters.json','ui/character-portraits.json','maps/catalog.json','mobile-import-profile.json','maps/traversals.json','abilities/source-roars.json']]
+    files += [ROOT/'godot/assets'/name for name in ['maps/photos.json','ui/ranks.json','items/boxes.json','library/visuals.json','items/power.json','items/shop.json','mutations/catalog.json','library/characters.json','ui/character-portraits.json','maps/catalog.json','mobile-import-profile.json','maps/traversals.json','abilities/source-roars.json','clientfx/catalog.json','gameplay/source.json','gameplay/animation-events.json','gameplay/strong-clips.json']]
     for path in files:
         digest.update(str(path.relative_to(ROOT)).encode());digest.update(b'\0');digest.update(path.read_bytes());digest.update(b'\0')
     return digest.hexdigest()
@@ -29,7 +29,7 @@ def validate(godot, report=None):
         ('asset_prerequisites', [sys.executable, 'tools/check_android_ready.py']),
         ('godot_import', [godot, '--headless', '--path', 'godot', '--editor', '--import', '--quit']),
     ]
-    for script in ['mobile_016', 'mobile_015', 'bot_traversals_015', 'persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'gameplay_reference', 'bot_behaviour', 'pc_reference_expansion', 'round_equipment_gifts', 'ui_templates', 'ui_flows']:
+    for script in ['shop_controls_017','clientfx_017', 'mobile_016', 'mobile_015', 'bot_traversals_015', 'persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'gameplay_reference', 'bot_behaviour', 'pc_reference_expansion', 'round_equipment_gifts', 'ui_templates', 'ui_flows']:
         steps.append((script, [godot, '--headless', '--path', 'godot', '--fixed-fps', '60', '--script', f'res://tests/{script}.gd']))
     results = []
     for name, command in steps:

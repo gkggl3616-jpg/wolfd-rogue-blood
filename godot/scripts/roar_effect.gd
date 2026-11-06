@@ -35,7 +35,6 @@ func begin(seconds):
 	if active or cooldown > 0 or not player.is_wolf or player.game.menu_open or not player.game.running: return false
 	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = duration + 0.8;bind_tattoos();aura.hide()
 	source_effect.begin()
-	if not player.game.test_mode: audio.play()
 	return true
 
 func stop():

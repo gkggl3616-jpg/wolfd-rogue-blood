@@ -89,6 +89,8 @@ func maps_for_mode(mode_id, ready_only = false):
 func unavailable_reason(mode_id, map_number):
 	if not belongs_to_mode(mode_id, map_number):
 		return "Bu harita seçilen moda bağlı değil."
+	if preload("res://scripts/source_match_rules.gd").supports(mode_id):
+		return "" if not offline_record(map_number).is_empty() else "Kaynak haritanın çevrimdışı hazırlığı eksik."
 	var entry = map_record(map_number)
 	if entry.get("status") != "ready" or entry.get("enabled") != true:
 		return "Mod eşleşmesi doğrulandı. Özgün harita sahnesinin aktarımı bekleniyor."

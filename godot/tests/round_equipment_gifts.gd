@@ -89,7 +89,7 @@ func run():
 	game.open_round_selection("wolf");game.selection_panel._process(11);ensure(not game.selection_active,"countdown expiry resumes without changing selection")
 	game.show_home();game.pc_panel.navigate("power");var ui=game.pc_panel;ensure(ui.detail_helper.entries.size()==game.power_catalog.items.size()+game.equipment.rules.items.size(),"power inventory contains real existing dash plus six new supplies")
 	ui.filter_id="bag";ui.detail_helper.refresh_grid();ensure(ui.detail_helper.entries.size()==1 and ui.detail_helper.entries[0].id=="13006","bag tab filters real bag items")
-	ui.filter_id="claw";ui.detail_helper.refresh_grid();ensure(ui.detail_helper.entries.size()==game.power_catalog.items.filter(func(row):return row.slot=="claw").size()+1,"claw tab includes both supported abilities")
+	ui.filter_id="claw";ui.detail_helper.refresh_grid();ensure(ui.detail_helper.entries.size()==game.power_catalog.items.filter(func(row):return row.slot=="claw").size(),"claw tab contains claws while wolf ability stays in other powers")
 	ui.navigate("gifts");ensure("interface/giftbox" in ui.source_layouts and ui.detail_helper.view!=null,"gift page uses the PC gift window")
 	for link in ["Etkinlikler","Sıralama","Mağaza","Envanter","Klan","Hediyeler","Arkadaşlar","Profil","Web","Ayarlar","Geri","WOLF\nPASS","‹ KLAN ZİNCİRİ ›"]:ensure(ui.links.has(link),"toolbar route exists: "+link)
 	game.local_room={"mode":game.WOLF_BATTLE,"map":0};ensure(game.start_round(true) and game.player.is_wolf and game.selection_panel.kind=="wolf","wolf battle starts with mutation choice")

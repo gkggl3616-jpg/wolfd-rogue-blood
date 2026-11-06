@@ -4,14 +4,17 @@ var output
 var captures=[]
 func _initialize():output=OS.get_cmdline_user_args()[0];DirAccess.make_dir_recursive_absolute(output);call_deferred("run")
 func frames(n=8):
+ var draw=RenderingServer.render_loop_enabled
+ if n>10:RenderingServer.render_loop_enabled=false
  for i in range(n):await process_frame
+ RenderingServer.render_loop_enabled=draw
 func capture(name):
  await frames();await RenderingServer.frame_post_draw
  var image=root.get_texture().get_image();var path=output.path_join(name+".png");var error=image.save_png(path)
  captures.append({"name":name,"path":path,"width":image.get_width(),"height":image.get_height(),"saved":error==OK})
 func run():
  root.size=Vector2i(1280,720);game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
- game.book.offline_edition=true;game.show_library("Karakterler");await capture("transparent-character-016")
+ game.book.offline_edition=true;game.book.acquire_all();game.show_library("Karakterler");await capture("transparent-character-016")
  var ui=game.library_panel;ui.navigate("Dövmeler");await capture("large-wolf-inventory-016")
  ui.navigate("power");await capture("power-inventory-016")
  ui.navigate("create_room");ui.room_allies.select(3);ui.room_allies.item_selected.emit(3);await capture("ally-bot-selection-016")
@@ -30,6 +33,6 @@ func run():
    game.book.set_tattoo("body",tattoo.texture,tattoo.id);game.player.apply_tattoos()
   await frames(22);game.player.set_physics_process(false)
   if group=="Howling_Fire_1":await capture("tattoo-before-roar-016")
-  game.player.action_time=0;game.player.begin_roar();await frames(15);await capture(group.to_lower()+"-016");game.player.roar_effect.stop()
+  game.player.action_time=0;game.player.begin_roar();await frames(70);await capture(group.to_lower()+"-016");game.player.roar_effect.stop()
  game.queue_free();await frames()
  var file=FileAccess.open(output.path_join("report.json"),FileAccess.WRITE);file.store_string(JSON.stringify({"captures":captures,"failures":0,"rendering":RenderingServer.get_current_rendering_method(),"physicalAndroidDeviceTested":false,"testFixtureActors":true},"  ")+"\n");file.close();quit()

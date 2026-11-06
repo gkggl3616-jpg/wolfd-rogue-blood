@@ -14,7 +14,7 @@ var center = Vector2.ZERO
 var thumb = Vector2.ZERO
 var buttons = []
 var last_size = Vector2.ZERO
-var direction_buttons = false
+var direction_buttons = true
 var action_fingers = {}
 var ui_scale = 1.0
 var stick_radius = 64.0
@@ -44,7 +44,9 @@ func _ready():
 		buttons.append(button)
 	buttons[5].pressed.connect(func():
 		if can_control():
-			game.player.normal_run_toggled = not game.player.normal_run_toggled
+			if game.player.is_wolf:
+				if game.player.can_wolf_run():game.player.wolf_run_armed=not game.player.wolf_run_armed
+			else:game.player.normal_run_toggled = not game.player.normal_run_toggled
 	)
 	resize()
 
@@ -72,13 +74,14 @@ func _process(_delta):
 		buttons[i].visible = direction_buttons
 	buttons[11].visible = game.player.is_wolf
 	buttons[4].visible = not game.hunt.active and int(game.local_room.get("mode",0))!=game.WOLF_BATTLE
-	buttons[5].get_child(0).text = "KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU"
+	buttons[5].visible=not game.player.is_wolf or game.equipment.has_wolf_ability()
+	buttons[5].get_child(0).text = "KURT KOŞ" if game.player.is_wolf else ("KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU")
 	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
 	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"
 	buttons[0].get_child(0).visible = false
 	buttons[4].get_child(0).visible = false
 	buttons[2].get_child(0).text = "ÇÖMEL"
-	var icon_state=[game.player.is_wolf,game.player.weapon_info.get("category","rifle"),game.player.mutation_id]
+	var icon_state=[game.player.is_wolf,game.player.weapon_info.get("category","rifle"),game.player.mutation_id,game.equipment.has_wolf_ability()]
 	if last_icon_state!=icon_state:
 		last_icon_state=icon_state
 		for button in buttons:
@@ -90,11 +93,15 @@ func _process(_delta):
 			if key=="aim" and game.player.is_wolf:key="strong"
 			var image=button.get_child(1) as Sprite2D
 			image.texture=icon_textures.get(key)
+			if key=="sprint" and game.player.is_wolf:image.texture=Art.atlas("res://assets/items/wolf-dash.png",Rect2(0,0,288,168))
 			if key=="strong" and game.player.mutation_id in ["guardian","ghost"]:image.texture=Art.texture("wt_interface/play/common/skillup_%swolf.dtx" % game.player.mutation_id)
 			if button.action=="transform" and game.player.is_wolf:image.texture=Art.texture("res://assets/ui/form-icons/human.png")
 			if image.texture:
 				image.scale=Vector2.ONE*(44.0/maxf(image.texture.get_width(),image.texture.get_height()))
 			button.get_child(0).visible=image.texture==null and not button.action in ["forward","backward","left","right"]
+			if key=="sprint":
+				button.get_child(0).visible=game.player.is_wolf
+				button.get_child(0).position.y=27 if game.player.is_wolf else -8
 	if get_viewport_rect().size != last_size:
 		resize()
 	if not visible:
@@ -179,12 +186,13 @@ func _draw():
 			continue
 		var radius = (32 if button.action == "fire" else 27) * ui_scale
 		var color = Color(0.04,0.05,0.06,0.64)
-		if Input.is_action_pressed(button.action) or (button.action == "sprint" and game.player.normal_run_toggled):
+		if Input.is_action_pressed(button.action) or (button.action == "sprint" and (game.player.wolf_run_armed if game.player.is_wolf else game.player.normal_run_toggled)):
 			color = color.lightened(0.35)
 		draw_circle(button.position,radius,color)
 		var border = Color(0.67,0.73,0.75,0.55)
 		if button.action == "transform":border = Color("b19a38")
 		if button.action == "aim" and game.player.is_wolf:border=Color("bd944b")
+		if button.action == "sprint" and game.player.is_wolf:border=Color("7ecbe2")
 		draw_arc(button.position,radius,0,TAU,48,border,1.4*ui_scale,true)
 		if button.action in ["forward","backward","left","right"]:
 			var direction={"forward":Vector2.UP,"backward":Vector2.DOWN,"left":Vector2.LEFT,"right":Vector2.RIGHT}[button.action]

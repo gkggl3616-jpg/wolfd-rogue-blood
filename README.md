@@ -1,10 +1,10 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.16.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.17.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
 
-[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.16.0-offline/WolfRogueBlood-0.16.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
+[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.17.0-offline/WolfRogueBlood-0.17.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
-[0.16 envanter, takım botları, kükreme/takla düzeltmeleri ve fotoğraflar](docs/PC_REFERANS_016.md)
+[0.17 yön düğmeleri, sahiplik, mağaza, kaynak efektleri ve fotoğraflar](docs/PC_REFERANS_017.md)
 
 [0.13 değişiklikleri ve fotoğraflar](docs/PC_REFERANS_013.md) · Maç başı ekipman/kurt seçimi, altı kaynak mutasyon modeli, onaylanan hediyeler, güç yuvaları ve referans üst menüsü.
 
@@ -18,7 +18,7 @@ Windows'taki yayımlanmamış son çalışma bu ortamda yok. Özellikle son ış
 
 ## Bu devam çalışmasında uygulananlar
 
-- Son oynanış videosuna göre kurt kamerası, kompakt HUD ve joystick düzeni yenilendi. Bütün oyun içi eylem düğmeleri yuvarlak ve görselli: mermi, pençe ve gerçek modelden şarjör. Mevcut 19 haritanın her birine konum/yön gösteren türetilmiş radar eklendi. Kolay/Normal/Zor insan-kurt botları aynı can ve isabet hasarıyla; görüş, hafıza, koşu, siper, takla ve sınırlı şarjör/yedek davranışını kullanır. [Kaynaklar, sınırlar ve fotoğraflar](docs/OYNANIS_REFERANSI.md).
+- Son oynanış videosuna göre kurt kamerası, kompakt HUD ve yön düğmeleri yenilendi. Bütün oyun içi eylem düğmeleri yuvarlak ve görselli: mermi, pençe ve gerçek modelden şarjör. Mevcut 19 haritanın her birine konum/yön gösteren türetilmiş radar eklendi. Kolay/Normal/Zor insan-kurt botları aynı can ve isabet hasarıyla; görüş, hafıza, koşu, siper, takla ve sınırlı şarjör/yedek davranışını kullanır. [Kaynaklar, sınırlar ve fotoğraflar](docs/OYNANIS_REFERANSI.md).
 
 - 19 kaynak haritaya ayrı çevrimdışı bot maçı eklendi. Önceden hazırlanmış yürüyüş ağları, erişilebilir ve kapsül boşluğu olan bot doğma noktaları, gerçek haritada başlat/ölüm/süre/sonuç/tekrar akışı bulunur. #46'nın özgün mod eşleşmesi uydurulmadan bağımsız yerel eğitimde açılması sağlandı. Özgün PC modlarının hazır olma denetimleri korunur.
 - Giriş, lobi, yerel oda, koleksiyon ve ayarlar tek kaynak arayüz katmanına taşındı. 365 düzen / 4.934 bileşen oluşturulur; kaynak atlasları ve 1024×768 koordinatları, verilen PC videolarındaki gibi iki eksende ekrana yayılarak kullanılır. 3B karakter oranı ayrı korunur. Üst simge menüsü, yatay beş ekipman seti, solda etkin silahlar ve sağda 3×3 eşya listesi yeniden kuruldu. İkinci ana silah, bağımsız cephane geçişi ve 331 kaynak kart yüzü önizlemesi eklendi. Ayar taslağı, geri/iptal ve beş ekipman seti gerçek GUI tıklamalarıyla sınanır. Bu, bütün özgün ekran davranışlarının tamamlandığı anlamına gelmez. [Arayüzün kapsamı ve açık eşlemeler](docs/ARAYUZ_YENIDEN_KURULUM.md).
@@ -83,7 +83,7 @@ Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İnd
 
 [Tam PC sürümünün teslim engelleri](assets/delivery-status.json) `python tools/check_delivery.py` ile yeniden hesaplanır. Varsayılan derleme yolu bu denetimi korur. Kullanıcının son istediği **gerçek sunucu hariç, mümkün olan yerel sürüm** için ayrı `-Offline` / `build_offline_android.py` yolu, ayrı uygulama kimliği ve `check_offline_ready.py` denetimi vardır. Çevrimdışı APK, tamamlanmış PC aktarımı olarak işaretlenmez.
 
-- Yalnızca seçilen 19 harita korunur: **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. 19'u bağımsız çevrimdışı botlu eğitimde açılır; özgün PC maç kuralları değildir. Özgün modlara bağlı gezinti 18 haritada bulunur; 46'nın PC mod bağlantısı belirsizdir ve 47 ile değiştirilmez.
+- Seçilen 19 temel harita korunur ve 15 yeni kaynak harita eklenir (toplam 34): **58, 59, 65, 72, 1, 2, 26, 31, 44, 46, 50, 110, 57, 100, 97, 92, 82, 83, 84**. 19'u bağımsız çevrimdışı botlu eğitimde açılır; özgün PC maç kuralları değildir. Özgün modlara bağlı gezinti 18 haritada bulunur; 46'nın PC mod bağlantısı belirsizdir ve 47 ile değiştirilmez.
 - 62 mod/alt modun özgün maç kuralları, tur akışı ve sonuçları tamamlanmadı.
 - 48 çiftin önceki katalogda kabul edilmiş olması, kurtarılan her modelin bütün durumlarının yeniden doğrulandığı anlamına gelmez. 216 silah modeli / 903 kaynak varyantı da 903 ayrı, tam doğrulanmış silah davranışı demek değildir.
 - Özgün arayüz akışlarının tümü, hesap/oda/maç sunucusu, bütün efekt grafikleri ve gömülü ışık haritalarının çalışma zamanı uygulaması eksik.

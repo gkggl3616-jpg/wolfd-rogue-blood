@@ -12,6 +12,16 @@ import subprocess
 ROOT=Path(__file__).resolve().parents[1]
 REFERENCE=re.compile(r'''["'](res://[^"'\r\n]+)["']''')
 TEXT={'.gd','.tscn','.tres','.godot','.json'}
+# Exact negative fixtures and write-only reports in excluded QA scripts.
+# Keep them in the evidence instead of reporting them as missing game assets.
+TEST_REFERENCES={
+    ('godot/tests/combat_continuation.gd','res://missing-character.glb'):'negative_model_fixture',
+    ('godot/tests/pc_reference_expansion.gd','res://not-a-reward.png'):'negative_reward_fixture',
+    ('godot/tests/persistence.gd','res://__missing_unbound_tattoo__.png'):'negative_tattoo_fixture',
+    ('godot/tests/human_reference.gd','res://../docs/human-reference-validation.json'):'test_report_output',
+    ('godot/tests/pc_reference_expansion.gd','res://../docs/pc-reference-expansion-validation.json'):'test_report_output',
+    ('godot/tests/round_equipment_gifts.gd','res://../docs/round-equipment-gift-validation.json'):'test_report_output',
+}
 
 
 def resource_path(reference):
@@ -23,7 +33,7 @@ def run():
     names=subprocess.run(['rg','--files','--hidden','-0','-g','!.git','-g','!.godot','-g','!__pycache__',
                           '-g','!docs/project-file-audit.jsonl.gz','-g','!docs/project-file-audit-summary.json','.'],cwd=ROOT,stdout=subprocess.PIPE,check=True).stdout.split(b'\0')
     files=sorted({name.decode().removeprefix('./') for name in names if name})
-    issues=[];types=Counter();total=0;references=0;windows=[];models=0
+    issues=[];expected=[];types=Counter();total=0;references=0;windows=[];models=0
     output=ROOT/'docs/project-file-audit.jsonl.gz'
     with gzip.open(output,'wt',encoding='utf-8') as report:
         for name in files:
@@ -47,6 +57,10 @@ def run():
                 for reference in sorted(set(REFERENCE.findall(content))) if path.is_relative_to(ROOT/'godot') else []:
                     if any(token in reference for token in ['%','{','*']) or reference.startswith('res://.godot/'):continue
                     if not Path(reference).suffix:continue
+                    reason=TEST_REFERENCES.get((name,reference))
+                    if reason:
+                        expected.append({'path':name,'resource':reference,'reason':reason})
+                        continue
                     references+=1;target=resource_path(reference)
                     if target is None or not target.exists():issues.append({'path':name,'issue':'missing_literal_resource','resource':reference})
             elif path.suffix.lower()=='.glb':
@@ -64,7 +78,7 @@ def run():
                                 if uri and not uri.startswith('data:') and not (path.parent/uri).is_file():issues.append({'path':name,'issue':'missing_glb_dependency','resource':uri})
             elif path.suffix.lower()=='.png' and not head.startswith(b'\x89PNG\r\n\x1a\n'):issues.append({'path':name,'issue':'png_header'})
     summary={'schemaVersion':1,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'filesHashed':len(files),'bytesRead':total,
-             'fileTypes':dict(types),'literalResourceReferencesChecked':references,'glbHeadersChecked':models,'issues':issues,
+             'fileTypes':dict(types),'literalResourceReferencesChecked':references,'glbHeadersChecked':models,'issues':issues,'expectedTestReferences':expected,
              'windowsExecutablesInProject':windows,'runtimeBehaviorValidated':False,'originalPcPixelEquivalenceValidated':False,
              'scope':'Every nonignored repository file read and SHA-256 hashed; Godot literal resource paths, JSON syntax, GLB containers and PNG headers checked. Git objects, generated caches and this audit output are excluded.'}
     (ROOT/'docs/project-file-audit-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')

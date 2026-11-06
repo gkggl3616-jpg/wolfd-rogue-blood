@@ -12,7 +12,7 @@ func capture(name):
  captures.append({"name":name,"path":path,"width":pixels.get_width(),"height":pixels.get_height(),"saved":error==OK})
 func run():
  root.size=Vector2i(2160,992);game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
- game.book.offline_edition=true;game.book.acquire_all();game.show_library("Karakterler");var ui=game.library_panel
+ game.book.offline_edition=true;game.book.acquire_all();game.book.acquire_all();game.show_library("Karakterler");var ui=game.library_panel
  ui.safe_insets=Vector4(36,8,44,12);ui.filter_id="red";ui.refresh();await capture("red-characters-phone-015")
  ui.filter_id="blue";ui.selected={};ui.preview_wolf=false;ui.refresh();await capture("blue-characters-phone-015")
  root.size=Vector2i(1280,720);ui.safe_insets=Vector4.ZERO;ui.navigate("Dövmeler");await capture("tattoo-triplets-015")

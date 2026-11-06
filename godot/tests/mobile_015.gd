@@ -18,11 +18,11 @@ func _initialize():call_deferred("run")
 func run():
  root.size=Vector2i(1280,720)
  game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
- game.set_process(false);game.book.offline_edition=true
+ game.set_process(false);game.book.offline_edition=true;game.book.acquire_all()
  var available=game.book.characters.filter(func(row):return row.get("available",false))
  ensure(available.size()>100 and available.all(func(row):return row.get("sourceTeam","") in ["red","blue"]),"Available models retain exact source team identities")
  var path="user://team-015-"+str(Time.get_ticks_usec())+".json"
- var book=Book.new(true,path,true);var chosen={}
+ var book=Book.new(true,path,true);book.acquire_all();var chosen={}
  for team in ["red","blue"]:
   var row=available.filter(func(item):return item.sourceTeam==team)[-1];chosen[team]=row
   ensure(book.choose_character(row.id),"Save independent "+team+" character")
@@ -60,7 +60,8 @@ func run():
  ensure(not game.player.roar_effect.aura.visible and game.player.roar_effect.light.light_energy==0,"Roar never displays the unrelated purple circle")
  ensure(Vector2(game.player.position.x-before.x,game.player.position.z-before.z).length()<0.05,"Roar locks translation")
  game.player.roar_effect.stop();game.player.move_axis=Vector2.ZERO
- ensure(game.equip_power_item("16020"),"Local source claw equips without inventing online ownership")
+ game.inbox.state.powerCounts["16020"]=1 # Explicit accepted-item test fixture, not an offline catalogue grant.
+ ensure(game.equip_power_item("16020"),"Owned source claw equips without inventing online ownership")
  ensure(game.gear_stats().damagePercent==20 and game.gear_stats().rangePercent==10,"Equipped claw applies its own source percentages")
  ensure(game.player.claw_trail.begin(),"Source claw ribbon binds to actual four endpoint bones")
  await frames(2);ensure(game.player.claw_trail.meshes.size()==2,"Both hands render independent source trail ribbons")

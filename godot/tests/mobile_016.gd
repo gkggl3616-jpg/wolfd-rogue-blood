@@ -70,8 +70,11 @@ func run():
  game.book.set_tattoo("body",tattoo.texture,tattoo.id);game.player.apply_tattoos();var roar=game.player.roar_effect
  ensure(not roar.materials.is_empty(),"Actual equipped source tattoo binds to roar material")
  var texture=roar.materials[0].albedo_texture
- ensure(roar.begin(1.0) and roar.source_effect.active_group=="Howling_Fire_1" and not roar.source_effect.parts.is_empty(),"Source character uses its own named PC Howling group and meshes")
- roar.advance(0.5)
+ game.player.action_time=0;roar.cooldown=0
+ ensure(game.player.begin_roar() and roar.source_effect.active_group=="Howling_Fire_1","Source character schedules its own named PC Howling group")
+ for i in range(70):await physics_frame
+ ensure(not roar.source_effect.parts.is_empty(),"Source Howling meshes start at the animation key instead of prematurely")
+ roar.advance(0.01)
  ensure(roar.materials[0].albedo_texture==texture and roar.materials[0].emission_texture==texture and roar.materials[0].emission_energy_multiplier<=0.45,"Roar retains original tattoo color texture and bounds brightness")
  game.menu_open=true;roar.advance(0.01);await frames()
  ensure(not roar.active and roar.materials[0].emission_energy_multiplier==0 and roar.source_effect.parts.is_empty(),"Pause removes source effects and tattoo glow")

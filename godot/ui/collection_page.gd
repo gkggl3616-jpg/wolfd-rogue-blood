@@ -52,6 +52,9 @@ func build_native():
 	ui.trace("interface/shoppropertypage");ui.trace("interface/itemlistbuttonex")
 	var section=ui.native("section/shop" if ui.page=="Mağaza" else "section/inventory",ui.content)
 	for node in section.controls:node.visible=node.get_meta("source_record").name in ["WeaponState","Inventory"]
+	var heading=ColorRect.new();heading.position=Vector2(354,61);heading.size=Vector2(419,27);heading.color=Color.BLACK;heading.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(heading)
+	ui.text(ui.content,"DÜKKAN" if ui.collection_shop else "ENVANTER",Vector2(366,62),Vector2(180,25),18)
+	ui.button(ui.content,"ENVANTERE GEÇ" if ui.collection_shop else "MAĞAZAYA GEÇ",Vector2(548,62),Vector2(220,25),switch_collection_mode)
 	build_categories()
 	if ui.page=="Dövmeler":
 		role_picker=ui.map_picker(ui.content,Vector2(788,122),Vector2(208,27))
@@ -74,7 +77,7 @@ func build_native():
 	swipe=load("res://ui/swipe_grid.gd").new();swipe.page=self;swipe.position=grid.position;swipe.size=grid.size;ui.content.add_child(swipe)
 	details=Control.new();details.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(details)
 	if ui.page=="Envanter":build_loadouts()
-	if ui.page=="power":build_power_slots()
+	if ui.page=="power" and not ui.collection_shop:build_power_slots()
 	refresh_grid()
 
 func build_categories():
@@ -87,7 +90,7 @@ func build_categories():
 		var node=tab(ROOT+"shop_iv_tab_02_01.dtx",entry[1],Vector2(366+i*82,90),Vector2(80,25),selected,func():
 			if entry[0]=="equipment":ui.navigate("Kutular")
 			elif entry[0]==ui.page:ui.refresh()
-			else:ui.navigate(entry[0])
+			else:ui.navigate("Mağaza" if entry[0]=="Envanter" and ui.collection_shop else entry[0])
 		)
 		node.tooltip_text=["Silah","Güç / Dövme","Karakter","Ekipman","Özel efektler"][i]
 		category_tabs.append(node)
@@ -173,14 +176,15 @@ func native_rows():
 	for row in source:
 		if ui.quality_id!="all" and Quality.label(row)!=ui.quality_id:continue
 		if ui.page=="Karakterler" and ui.filter_id in ["red","blue","common"] and row.get("sourceTeam","common")!=ui.filter_id:continue
-		if ui.page=="power" and ui.filter_id not in ["all","power"] and row.get("category","claw")!=ui.filter_id:continue
+		if ui.page=="power" and ui.filter_id not in ["all","power"] and row.get("category","other")!=ui.filter_id:continue
 		if ui.page=="Dövmeler" and ui.filter_id!="all" and row.role!=ui.filter_id:continue
 		if ui.page in ["Mağaza","Envanter"]:
 			if row.get("engineImported")!=true or row.get("available")!=true:continue
-			if ui.page=="Envanter" and not ui.game.book.owned.get(row.id,false):continue
+			if not ui.collection_shop and not ui.game.book.owned.get(row.id,false):continue
 			if ui.filter_id=="special" and row.category not in ["knife","grenade","rocket","launcher"]:continue
 			if ui.filter_id not in ["all","special"] and ui.game.book.slot_for(row.category)!=ui.filter_id:continue
 		if ui.page=="Karakterler" and row.get("available")!=true:continue
+		if ui.game.book.offline_edition and not ui.collection_shop and ui.page in ["Karakterler","Dövmeler","power"] and not ui.game.collection_owned(row.id):continue
 		if not ui.search_query.is_empty() and not normalized(title(row)+" "+str(row.get("sourceId",""))).contains(normalized(ui.search_query)):continue
 		rows.append(row)
 	if ui.page=="Dövmeler" and ui.filter_id=="all":
@@ -230,11 +234,14 @@ func refresh_native_grid(scrolling=false):
 		cell.set_meta("row_y",int(i/3)*117);cell.position.y-=fmod(swipe.scroll,117.0)
 		cell.disabled=entry.get("placeholder",false)
 		cell.button_group=group
-		if ui.page=="power":
-			var count=(1 if entry.get("offlineAvailable",false) and ui.game.book.offline_edition else int(ui.game.inbox.state.powerCounts.get(str(entry.id),0)))
+		if ui.page=="power" and not ui.collection_shop:
+			var count=int(ui.game.inbox.state.powerCounts.get(ui.game.item_key(entry.id),0))
 			var equipped=str(entry.id) in ui.game.inbox.state.powerSlots.values() or (str(entry.id) in ["19601","19601.0"] and ui.game.equipment.has_wolf_ability())
 			ui.text(cell,"Kullanılıyor" if equipped else ("Kalan adet: %d" % count if str(entry.id) not in ["19601","19601.0"] else "Kullanılabilir"),Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
-		if ui.page in ["Envanter","Mağaza"] and entry.id in ui.game.book.slots.values():ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
+		if not ui.collection_shop and ui.page in ["Envanter","Mağaza"] and entry.id in ui.game.book.slots.values():ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
+		if ui.collection_shop and not entry.get("placeholder",false):
+			var offers=ui.game.shop_offers(entry.id)
+			ui.text(cell,price_text(offers[0]) if not offers.is_empty() else "Fiyat doğrulanmadı",Vector2(4,94),Vector2(201,16),11,Color("e8cc73"))
 		cell.pressed.connect(func():ui.selected=entry;show_details())
 	page_label.text="%d / %d  ·  %d eşya" % [int(ui.offset/9)+1,maxi(1,int(ceil(float(entries.size())/9))),entries.filter(func(row):return not row.get("placeholder",false)).size()]
 	if not scrolling:show_details()
@@ -281,7 +288,7 @@ func show_native_details():
 		if ui.page=="Mağaza":
 			ui.paragraph(details,title(entry),Vector2(16,119),Vector2(320,35),14)
 			Art.sprite(details,entry.icon,Vector2(16,175),Vector2(320,230)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			ui.paragraph(details,"Çevrimdışı koleksiyon · Bu cihazda kullanılabilir." if ui.game.book.offline_edition else "Satın alma hizmeti bağlı değil.",Vector2(18,433),Vector2(310,45),12)
+			ui.paragraph(details,"Mağazadan al; hediye kutusunda onaylayıp envantere aktar.",Vector2(18,433),Vector2(310,45),12)
 	elif ui.page=="Karakterler":build_character(entry)
 	elif ui.page=="Dövmeler":build_tattoo(entry)
 	elif ui.page=="power":build_power(entry)
@@ -289,6 +296,8 @@ func show_native_details():
 		preview_sprite=Art.sprite(details,entry.frames[0],Vector2(20,190),Vector2(310,280));preview_sprite.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		effect_frames=entry.frames;effect_fps=float(entry.fps);effect_time=0
 		ui.paragraph(details,"Efekt önizlemesi.",Vector2(674,577),Vector2(328,100),12)
+
+	if ui.collection_shop:build_purchase(entry)
 
 func build_character(entry):
 	ui.trace("interface/charequipmentpage")
@@ -306,10 +315,10 @@ func build_character(entry):
 		else:ui.show_error("Karakter kaydedilemedi.")
 	)
 	ui.button(details,"AT",Vector2(516,710),Vector2(140,28),func():ui.confirm("KARAKTER","Çevrimdışı kaynak koleksiyonu kalıcıdır; karakter silinmez.",func():pass))
-	var count=ui.game.book.characters.filter(func(row):return row.get("available",false)).size()
+	var count=ui.game.book.characters.filter(func(row):return row.get("available",false) and ui.game.book.owns(row.id)).size()
 	ui.text(details,"Karakter Slotu %d / %d" % [count,count],Vector2(789,125),Vector2(207,22),11,Color("8bb7b1"))
 	ui.content.move_child(details,ui.content.get_child_count()-1)
-	body(entry.name+"\n\nYerel koleksiyonda kullanılabilir.\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.\nSüre sınırı yok.")
+	body(entry.name+"\n\n"+("Envanterde" if ui.game.collection_owned(entry.id) else "Mağaza önizlemesi")+"\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.")
 
 func build_tattoo(entry):
 	build_team_buttons(false)
@@ -356,6 +365,10 @@ func build_power_slots():
 
 func build_power(entry):
 	ui.trace("interface/abilityequipmentpage")
+	if ui.collection_shop:
+		build_team_buttons(false);character_heading()
+		ui.preview_wolf=true
+		ui.build_preview(Vector2(2,148),Vector2(350,592),ui.game.book.character_for_team(ui.preview_team))
 	if str(entry.id) in ["19601","19601.0"]:
 		body(entry.description)
 		var equipped=ui.game.equipment.has_wolf_ability()
@@ -364,7 +377,7 @@ func build_power(entry):
 			ui.game.player.reset_locomotion();ui.refresh()
 		)
 		return
-	var count=(1 if entry.get("offlineAvailable",false) and ui.game.book.offline_edition else int(ui.game.inbox.state.powerCounts.get(entry.id,0)));var equipped=ui.game.inbox.state.powerSlots.get(entry.slot,"")==entry.id
+	var count=int(ui.game.inbox.state.powerCounts.get(ui.game.item_key(entry.id),0));var equipped=ui.game.inbox.state.powerSlots.get(entry.slot,"")==entry.id
 	var copy=entry.description
 	if info_tab=="properties":
 		var tuning=entry.mobileTuning
@@ -384,14 +397,6 @@ func build_power(entry):
 		elif ui.game.equip_power_item(entry.id):ui.refresh()
 		else:ui.show_error("Önce hediye kutusundan eşyayı al.")
 	,count>0 or equipped)
-	ui.button(details,"Al · %d nakit" % entry.localPrice,Vector2(514,710),Vector2(142,28),func():
-		var request="power-%d-%d" % [Time.get_ticks_usec(),randi()]
-		ui.confirm("SATIN AL",entry.name+"\n%d yerel nakit harcansın mı?" % entry.localPrice,func():
-			var result=ui.game.buy_power(entry.id,request)
-			if result.ok:ui.navigate("gifts")
-			else:ui.show_error(result.error)
-		,func():pass)
-	)
 
 func select_relative(direction):
 	if entries.is_empty():return
@@ -429,3 +434,30 @@ func character_heading():
 	var cover=ColorRect.new();cover.position=Vector2(0,61);cover.size=Vector2(344,31);cover.color=Color.BLACK;cover.mouse_filter=Control.MOUSE_FILTER_IGNORE;details.add_child(cover)
 	Art.sprite(details,ROOT+"iv_ch_top.dtx",Vector2(0,61),Vector2(256,32))
 	ui.button(details,"GÜÇ+",Vector2(0,90),Vector2(84,27),func():ui.navigate("power"))
+
+func price_text(offer):return "%d %s" % [int(offer.price),{"gold":"Altın","cash":"Nakit","kp":"KP"}.get(offer.currency,offer.currency)]
+func switch_collection_mode():
+	ui.collection_shop=not ui.collection_shop
+	ui.navigate(("Mağaza" if ui.collection_shop else "Envanter") if ui.page in ["Mağaza","Envanter"] else ui.page)
+func build_purchase(entry):
+	for node in details.get_children():
+		if node.position.y>=710:details.remove_child(node);node.queue_free()
+	var offers=ui.game.shop_offers(entry.id)
+	var owned=ui.game.collection_owned(entry.id)
+	if owned and ui.game.shop_catalog.items.get(ui.game.item_key(entry.id),{}).get("kind","")!="power":
+		ui.button(details,"Envanterde · Kullan",Vector2(366,710),Vector2(290,28),func():ui.collection_shop=false;ui.navigate("Envanter" if ui.page=="Mağaza" else ui.page))
+		return
+	if offers.is_empty():
+		ui.button(details,"Kaynak fiyatı doğrulanmadı",Vector2(366,710),Vector2(290,28),func():pass,false)
+		return
+	var picker=ui.map_picker(details,Vector2(366,671),Vector2(290,29))
+	for offer in offers:picker.add_item(price_text(offer))
+	ui.text(details,"1 adet · Kalıcı yerel kullanım",Vector2(366,641),Vector2(290,25),12)
+	ui.button(details,"SATIN AL",Vector2(366,710),Vector2(290,28),func():
+		var offer=offers[picker.selected];var request="purchase-%d-%d" % [Time.get_ticks_usec(),randi()]
+		ui.confirm("SATIN AL",title(entry)+"\n"+price_text(offer)+"\n1 adet · Kalıcı yerel kullanım\nHediye kutusuna gönderilecek.",func():
+			var result=ui.game.buy_shop(entry.id,offer.currency,request)
+			if result.ok:ui.navigate("gifts")
+			else:ui.show_error(result.error)
+		,func():pass)
+	)

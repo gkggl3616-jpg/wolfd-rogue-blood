@@ -23,7 +23,7 @@
       "path": "docs/review/equipment-013/wolf-power-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "602ab7d84d39413ad3126b8d6d372f4fae37834eef747c5fb9209f86693cf34f"
+      "sha256": "85980276b60b03698f4cc1d50498e1124e46d9a73634ce272b93b4d5e5b47b25"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/equipment-013/wolf-bag-filter-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "db335761d363c2d551edc0f4b6e139c902372d35354da00a95142edb95155e96"
+      "sha256": "c6affe4f3174457a9bdbc0b936ca6848a780abf6726419eff55a41b1f8475e09"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/equipment-013/wolf-tattoo-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7df90fe65ae83738595be067f25c71d205bc93ee726cb6782ad0b2bd6e9cf584"
+      "sha256": "4c3cb745686a70e29b12766e946e56573092b49577488c95c294c96d842872d3"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/equipment-013/human-loadout-slots-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7b458330d16215819758168460171a768d0ccf6641ef3efe58ee157ad5763512"
+      "sha256": "e631dbd90a3150150f3160d501b7fa1f722358a515b7f18a48efde2300dcc00f"
     },
     {
       "height": 720,
@@ -55,7 +55,7 @@
       "path": "docs/review/equipment-013/human-weapon-properties-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9ec3d2c1f7ad7c3dc7877274eb59ce3180e510cceaf07a74f5d23b058dd3f3bf"
+      "sha256": "285bafd68bbcbd72b136b25e4bd5392bc02480c24f1932114cf873b31e69a157"
     },
     {
       "height": 720,
@@ -79,7 +79,7 @@
       "path": "docs/review/equipment-013/wolf-power-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7a63c5e18776b3ab5749c268056d0499bbcecd46b892276931027a1fe1937730"
+      "sha256": "04643b07fe7016b8ba061aca03d2520e6a655b871224856b0adb93d0ed915449"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d7302890ee3eccf19c4cdb3e5a18034d0f6bd1cc2599614be8d19d61a11354dd"
+      "sha256": "50db0e14c4ed145982841f76d4cf9aaea0fa433ae8abf1b2a45cbf15406cc5a9"
     },
     {
       "height": 720,
@@ -95,7 +95,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0ae4c29acfbd2128e4d74a5259ff314329b63dcde1a38ab23b144495df6f3650"
+      "sha256": "77814ccd4e6a4002d15afe1efc52dec5c9f4615c3db88b847af0c06928f0aba8"
     },
     {
       "height": 720,
@@ -103,7 +103,7 @@
       "path": "docs/review/equipment-013/wolf-power-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e56555536b0682173fbaae74ddad8f2528d56c213735ea54e199a45174f4a9be"
+      "sha256": "5761622a0ea09f3b77a66fd0a627ef2b938790b2bc803818a433782fa8248165"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4cf4e03d7ac26676fbc91d474066aa88581c98b96c02095a03b52d35dae3b158"
+      "sha256": "a593c6e1b65531e0f5756494532d534c8fbda8bb445c9021821ff73d7c029684"
     },
     {
       "height": 720,
@@ -119,7 +119,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "71d539237e00658722a10c9fda358e979fa62d1c38ad3de034b1c761f5541631"
+      "sha256": "947c7beb260a91b5f17d6b14998616b6f19c2757c4d07d4b4b6d1ffc6df85cc1"
     },
     {
       "height": 768,
@@ -143,5 +143,5 @@
   "rendering": "gl_compatibility",
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
-  "runtimeCodeSha256": "57670ee0e699f4856968459eaf8855b27a4799563ece9d6a8beac36585545eaf"
+  "runtimeCodeSha256": "92a474928760e18b25efeaa826986df17706376556cfceac69f36b0f629c7634"
 }

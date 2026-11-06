@@ -3,13 +3,15 @@ extends Node3D
 # Sampling lifetime is a mobile render choice; texture and bindings are source data.
 var player
 var remaining=0.0
+var source_control=false
+var enabled_sides=[true,true]
 var bindings=[]
 var skeleton
 var samples=[]
 var meshes=[]
 var material
 func clear():
-	remaining=0;samples=[];bindings=[]
+	remaining=0;samples=[];bindings=[];source_control=false;enabled_sides=[true,true]
 	for node in meshes:
 		if is_instance_valid(node):node.queue_free()
 	meshes=[]
@@ -30,10 +32,17 @@ func begin():
 	for i in range(2):
 		var mesh=MeshInstance3D.new();mesh.mesh=ImmediateMesh.new();mesh.material_override=material;mesh.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF;add_child(mesh);meshes.append(mesh)
 	remaining=0.18;return true
+func source_window(side,enabled):
+	if side<0 or side>1:return
+	if not source_control:
+		if remaining<=0 and not begin():return
+		source_control=true;enabled_sides=[false,false]
+	enabled_sides[side]=enabled
+	if not enabled_sides.any(func(v):return v):clear()
 func _process(delta):
 	if remaining<=0:return
 	if not player.game.is_combat_active() or not player.is_wolf or not is_instance_valid(skeleton):clear();return
-	remaining-=delta
+	remaining=0.18 if source_control else remaining-delta
 	if remaining<=0:clear();return
 	var positions=[]
 	for bone in bindings:positions.append(to_local(skeleton.global_transform*skeleton.get_bone_global_pose(bone).origin))
@@ -41,6 +50,7 @@ func _process(delta):
 	if samples.size()>8:samples.pop_front()
 	if samples.size()<2:return
 	for side in range(2):
+		meshes[side].visible=enabled_sides[side]
 		var mesh=meshes[side].mesh as ImmediateMesh;mesh.clear_surfaces();mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
 		for i in range(samples.size()):
 			for j in range(2):

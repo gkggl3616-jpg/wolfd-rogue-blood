@@ -8,6 +8,8 @@ var tattoos = []
 var effects = []
 var models = {}
 var owned = {}
+var default_owned = {}
+var inventory_revision = 3
 var slots = {}
 var loadouts = []
 var active_loadout = 0
@@ -17,7 +19,7 @@ var selected_character = ""
 var selected_tattoos = {}
 var selected_tattoo_ids={}
 var selected_characters={}
-const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": false, "invert_y": false, "shadows": false, "fps": 60}
+const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": true, "invert_y": false, "shadows": false, "fps": 60}
 var settings = DEFAULT_SETTINGS.duplicate(true)
 var local_name = "Yerel oyuncu"
 var persistent = true
@@ -43,15 +45,15 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 		var result = AtomicStore.read_json(storage_path)
 		var stored = result.data
 		var version = stored.get("schemaVersion", 1)
-		save_blocked = not result.ok or not (version is int or version is float) or (version != 1 and version != 2)
+		save_blocked = not result.ok or not (version is int or version is float) or (version != 1 and version != 2 and version != 3)
 		if save_blocked:
 			stored = {}
 		var saved_name = stored.get("localName", "Yerel oyuncu")
 		if valid_local_name(saved_name): local_name = saved_name.strip_edges()
 		var saved_owned = stored.get("owned", {})
 		if saved_owned is Dictionary:
-			for item in weapons:
-				if saved_owned.get(item.id) == true and item.get("engineImported") == true: owned[item.id] = true
+			for item in weapons+characters+tattoos:
+				if saved_owned.get(item.id) == true and (not offline_edition or version>=3): owned[item.id] = true
 		var saved_slots = stored.get("slots", {})
 		if saved_slots is Dictionary: slots = saved_slots
 		var presets = stored.get("loadouts", [])
@@ -77,21 +79,26 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 		if team_choices is Dictionary:
 			for team in ["red","blue"]:
 				if characters.any(func(row):return row.id==team_choices.get(team,"") and row.get("sourceTeam",team)==team and row.get("available",false)):selected_characters[team]=team_choices[team]
-		var saved_settings = stored.get("settings", {})
+		var saved_settings = stored.get("settings", {}).duplicate() if stored.get("settings",{}) is Dictionary else {}
+		if version<3 and offline_edition:saved_settings["directions"]=true
 		if saved_settings is Dictionary:
 			for key in settings:
 				var setting = validated_setting(key, saved_settings.get(key, settings[key]))
 				if setting != null: settings[key] = setting
 	var defaults = {}
-	# An explicitly local collection in the separately identified offline app.
-	# No purchase, account ownership or server grant is implied.
-	if offline_edition:
-		for item in weapons:
-			if item.get("engineImported") == true and item.get("available") == true: owned[item.id] = true
+	# Source assets are the shop catalogue, never an ownership grant.
 	for kind in ["rifle", "pistol", "knife", "grenade"]:
 		for item in weapons:
 			if item.category == kind and item.get("engineImported") == true:
-				owned[item.id] = true;defaults[slot_for(kind)] = item.id;break
+				owned[item.id] = true;default_owned[item.id]=true;defaults[slot_for(kind)] = item.id;break
+	for team in ["red","blue"]:
+		for entry in characters:
+			if entry.get("available",false) and entry.get("sourceTeam","")==team:
+				owned[entry.id]=true;default_owned[entry.id]=true;break
+	for role in ["left","body","right"]:
+		for entry in tattoos:
+			if entry.role==role:
+				owned[entry.id]=true;default_owned[entry.id]=true;break
 	if loadouts.is_empty(): loadouts.append(slots.duplicate())
 	while loadouts.size() < 5: loadouts.append(defaults.duplicate())
 	for preset in loadouts:
@@ -128,8 +135,8 @@ func acquire(id):
 
 func acquire_all():
 	var previous = owned.duplicate()
-	for item in weapons:
-		if item.get("engineImported") == true: owned[item.id] = true
+	for item in weapons+characters+tattoos:
+		if item.get("engineImported",true) == true: owned[item.id] = true
 	if save(): return true
 	owned.clear();owned.merge(previous);return false
 
@@ -205,6 +212,7 @@ func set_local_name(value):
 
 func choose_character(id):
 	if not characters.any( func(row): return row.id == id and row.get("available") == true): return false
+	if offline_edition and not owns(id):return false
 	var entry=characters.filter(func(row):return row.id==id)[0]
 	var previous_choices=selected_characters.duplicate();selected_characters[entry.get("sourceTeam","blue")]=id
 	var previous = selected_character;selected_character = id
@@ -219,6 +227,7 @@ func set_tattoo(role, texture, item_id=""):
 	else:
 		var choices=tattoos.filter(func(row):return row.texture==texture and row.role==role and (item_id=="" or row.id==item_id))
 		if item_id!="" and choices.size()!=1:return false
+		if offline_edition and (choices.is_empty() or not owns(choices[0].id)):return false
 		selected_tattoos[role] = texture
 		if choices.size()==1:selected_tattoo_ids[role]=choices[0].id
 		else:selected_tattoo_ids.erase(role)
@@ -231,7 +240,7 @@ func tattoo_matches_role(role, texture):
 func save():
 	if not persistent: return true
 	if save_blocked: return false
-	return AtomicStore.write_json(storage_path, {"schemaVersion": 2, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattooIds":selected_tattoo_ids,"teamCharacters":selected_characters,"tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})
+	return AtomicStore.write_json(storage_path, {"schemaVersion": 3, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattooIds":selected_tattoo_ids,"teamCharacters":selected_characters,"tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})
 
 func character_for_team(team):
 	var chosen=selected_characters.get(team,selected_character)
@@ -247,3 +256,23 @@ func tattoo_bonuses():
 			if row.id==selected_tattoo_ids[role] and row.role==role and row.texture==selected_tattoos.get(role,""):
 				for key in totals:totals[key]+=float(row.get("appliedBonuses",{}).get(key,0))
 	return totals
+
+# The wallet ledger is authoritative for confirmed purchases. Old offline
+# all-unlocked collections migrate to defaults plus their accepted gifts.
+func owns(id):return owned.get(str(id),false)
+func apply_entitlements(entitlements):
+	if not offline_edition:return
+	owned=default_owned.duplicate()
+	for id in entitlements:
+		if entitlements[id]==true:owned[str(id)]=true
+	for preset in loadouts:
+		for slot in preset.keys():
+			if not owns(preset[slot]):
+				var defaults=weapons.filter(func(row):return default_owned.has(row.id) and slot_for(row.category)==slot)
+				if defaults.is_empty():preset.erase(slot)
+				else:preset[slot]=defaults[0].id
+	for team in selected_characters.keys():
+		if not owns(selected_characters[team]):selected_characters.erase(team)
+	if not owns(selected_character):selected_character=""
+	for role in selected_tattoo_ids.keys():
+		if not owns(selected_tattoo_ids[role]):selected_tattoo_ids.erase(role);selected_tattoos.erase(role)

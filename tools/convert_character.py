@@ -118,7 +118,7 @@ def quaternion(matrix):
         q=np.zeros(4);q[i]=.25*s;q[j]=(m[j,i]+m[i,j])/s;q[k]=(m[k,i]+m[i,k])/s;q[3]=(m[k,j]-m[j,k])/s
     return (q/np.linalg.norm(q)).tolist()
 
-def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=True,external_texture_dir=None):
+def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=True,external_texture_dir=None,allow_untextured=False):
     if asset['info']['skeletonSha256']!=donor['info']['skeletonSha256']:raise ValueError('Animation skeleton differs from mesh skeleton')
     data=bytearray();doc=dict(asset=dict(version='2.0',generator='Wolf Rogue audited LTB converter'),scene=0,scenes=[dict(nodes=[0])],nodes=[dict(name='WolfRogueCharacter',scale=[root_scale]*3,children=[1])],meshes=[],skins=[],bufferViews=[],accessors=[],materials=[],images=[],textures=[],samplers=[dict(magFilter=9729,minFilter=9987,wrapS=10497,wrapT=10497)],animations=[])
     def buffer(raw,target=None):
@@ -158,7 +158,10 @@ def glb(asset,donor,skins,clips,path,root_scale=.01,freeze_root=True,alpha_mask=
         if mesh['material'] not in material_map and mesh['name'].casefold().startswith('tattoo'):continue
         attrs=dict(POSITION=accessor(mesh['positions'],'VEC3',target=34962,bounds=True),NORMAL=accessor(mesh['normals'],'VEC3',target=34962),TEXCOORD_0=accessor(mesh['uvs'],'VEC2',target=34962),JOINTS_0=accessor(mesh['joints'],'VEC4',5123,34962),WEIGHTS_0=accessor(mesh['weights'],'VEC4',target=34962))
         primitive=dict(attributes=attrs,indices=accessor(mesh['indices'],'SCALAR',5123,34963),mode=4)
-        if mesh['material'] not in material_map:raise ValueError('Mesh skin slot has no texture')
+        if mesh['material'] not in material_map:
+            if not allow_untextured:raise ValueError('Mesh skin slot has no texture')
+            material_map[mesh['material']]=len(doc['materials'])
+            doc['materials'].append(dict(name='Source untextured slot '+str(mesh['material']),pbrMetallicRoughness=dict(metallicFactor=0,roughnessFactor=1),doubleSided=True))
         primitive['material']=material_map[mesh['material']];doc['meshes'].append(dict(name=mesh['name'],primitives=[primitive]))
         doc['nodes'][0]['children'].append(len(doc['nodes']));doc['nodes'].append(dict(name=mesh['name'],mesh=len(doc['meshes'])-1,skin=0))
     for exported,source in clips.items():

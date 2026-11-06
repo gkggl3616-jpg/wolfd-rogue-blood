@@ -56,7 +56,7 @@ func run():
 	ensure(enemy.health==100,"a roar cannot simultaneously deal a claw attack")
 	game.player.roar_effect.stop();game.equipment.equip_power(19601)
 	game.player.reset_combat();game.player.position=Vector3(0,0.1,0);await frames(3);game.player.wolf_running=true
-	ensure(not game.strong_attack(),"airborne strong attack cannot start on the ground")
+	ensure(not game.player.begin_air_attack(),"airborne attack controller cannot start on the ground; the contextual button can use the separate source ground claw")
 	await airborne();game.equipment.equip_power(0)
 	ensure(not game.strong_attack(),"airborne strong attack requires the equipped source power item")
 	game.equipment.equip_power(19601);game.player.wolf_running=false

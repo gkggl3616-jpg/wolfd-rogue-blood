@@ -27,6 +27,7 @@ const WolfMutations=preload("res://scripts/wolf_mutations.gd")
 const WOLF_BATTLE=900003
 var inbox=GiftInbox.new()
 var mutations=WolfMutations.new()
+var shop_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/shop.json"))
 var power_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/power.json"))
 var round_selection_enabled=false
 var selection_transform=false
@@ -53,6 +54,10 @@ var library_panel: Control
 var pc_panel: Control
 var source_hud: Control
 var game_audio
+var clientfx
+var match_rules=preload("res://scripts/source_match_rules.gd").new()
+var announced_last_minute=false
+var first_kill_announced=false
 var equipment
 var map_catalog
 var mode_picker: OptionButton
@@ -119,6 +124,7 @@ func _ready():
 	book = ContentBook.new(not test_mode, "user://collection.json", OS.has_feature("offline_release"))
 	profile_name = book.local_name
 	game_audio = Node.new();game_audio.set_script(GameAudio);game_audio.game = self;add_child(game_audio)
+	clientfx=Node.new();clientfx.set_script(preload("res://scripts/clientfx_system.gd"));clientfx.game=self;add_child(clientfx)
 	equipment = EquipmentScript.new( not test_mode)
 	map_catalog = MapCatalogScript.new()
 	var roster = JSON.parse_string(FileAccess.get_file_as_string("res://assets/roster.json"))
@@ -133,6 +139,7 @@ func _ready():
 		if entry.get("available", false) and (entry.id == book.selected_character or (book.selected_character == "" and entry.id == "pair-model0")): character_info = entry
 	setup_inputs()
 	load_wallet()
+	sync_collection()
 	build_world()
 	player = CharacterBody3D.new()
 	player.set_script(PlayerScript)
@@ -299,6 +306,7 @@ func activate_prepared_weapon(item,prepared):
 
 func equip_library_weapon(item):
 	if not book.owned.get(item.id,false):return false
+	if running and match_rules.enabled and not match_rules.weapon_allowed(item.get("category","")):return false
 	var prepared=player.prepare_library_weapon(item)
 	if prepared.is_empty():return false
 	activate_prepared_weapon(item,prepared);return true
@@ -341,7 +349,8 @@ func effect_with(fragment):
 
 func explode(where, amount, kind):
 	var fx = effect_with("smoke_seq_1" if kind == "smoke" else "exp_seq_1")
-	if not fx.is_empty(): play_source_effect(fx, where)
+	if clientfx.canonical("Exp_Smoke_1" if kind=="smoke" else "Exp_Granade_2")!="":clientfx.play("Exp_Smoke_1" if kind=="smoke" else "Exp_Granade_2",null,where)
+	elif not fx.is_empty(): play_source_effect(fx, where)
 	if kind == "smoke": return
 	for enemy in enemies.get_children():
 		if not hostile(enemy,local_room.get("team","blue")):continue
@@ -456,7 +465,7 @@ func start_selected_map():
 		map_status.text = reason
 		return
 
-	get_tree().change_scene_to_file(map_catalog.map_record(map_number).asset)
+	local_room={"title":"Yerel Ölüm Oyunu","mode":mode_id,"map":map_number,"team":"blue"};start_round(true)
 
 func pause_game_menu():
 	open_interface("pause")
@@ -490,6 +499,9 @@ func start_round(with_selection=false):
 	if not is_local_mode(int(local_room.get("mode",0))):
 		announce("Özgün mod kuralları henüz tamamlanmadı.")
 		return false
+	if preload("res://scripts/source_match_rules.gd").supports(local_room.get("mode",0)) and not map_catalog.belongs_to_mode(int(local_room.mode),int(local_room.get("map",0))):
+		announce("Harita bu özgün moda bağlı değil.");return false
+	game_audio.clear_match_voices();match_rules.configure(local_room);announced_last_minute=false;first_kill_announced=false
 	close_round_selection();round_selection_enabled=with_selection
 	var team_character=book.character_for_team(local_room.get("team","blue"))
 	if not team_character.is_empty() and team_character.id!=character_info.id:
@@ -519,7 +531,7 @@ func start_round(with_selection=false):
 		remove_child(active_map)
 		active_map.queue_free()
 	set_arena_active(record.is_empty())
-	preview_spawn = Vector3(0, 0.1, 12 if local_room.get("team","blue")=="blue" else -12)
+	preview_spawn = Vector3(0 if local_room.get("team","blue")=="blue" else 3, 0.1, 12 if local_room.get("team","blue")=="blue" else -12)
 	preview_name = "Eğitim Arenası"
 	var spawn_yaw = 0.0 if local_room.get("team","blue")=="blue" else PI
 	if not record.is_empty():
@@ -531,6 +543,7 @@ func start_round(with_selection=false):
 		install_navigation(record.navigation,active_map)
 		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
 		ambient.map_number = map_number;active_map.add_child(ambient)
+		var source_fx=Node3D.new();source_fx.set_script(preload("res://scripts/map_source_effects.gd"));source_fx.game=self;source_fx.map_number=map_number;active_map.add_child(source_fx)
 		var anchors=team_start_points(record,local_room.get("team","blue"))
 		if anchors.is_empty():announce("Takım doğma alanı doğrulanamadı.");return false
 		var anchor = anchors[0]
@@ -558,7 +571,7 @@ func start_round(with_selection=false):
 	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
 	if hunt.active:hunt.begin(local_room.get("playerForm","human"))
 	tutorial.active=int(local_room.get("mode",0))==LocalTutorial.MODE
-	time_left = 90
+	time_left = match_rules.seconds
 	reloading = 0
 	player.position = preview_spawn
 	player.velocity = Vector3.ZERO
@@ -579,12 +592,23 @@ func start_round(with_selection=false):
 		if not player.is_wolf:player.switch_form(true)
 	elif not hunt.active and not tutorial.active and with_selection and player.is_wolf:player.switch_form(true)
 	health=max_health()
+	if match_rules.enabled:
+		if match_rules.form_lock!="mixed" and player.is_wolf!=(match_rules.form_lock=="wolf"):player.switch_form(true)
+		if not player.is_wolf and not match_rules.weapon_allowed(player.weapon_info.get("category","")):
+			var candidates=book.weapons.filter(func(w):return w.get("available",false) and book.owned.get(w.id,false) and match_rules.weapon_allowed(w.category) and w.category=="rifle")
+			if not candidates.is_empty():equip_library_weapon(candidates[0])
+	game_audio.match_sound("round_start")
 	if with_selection and not tutorial.active:open_round_selection()
-	announce("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye")
+	announce(("%d Puan · %d dakika" % [match_rules.goal,match_rules.seconds/60]) if match_rules.enabled else ("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye"))
 	update_hud()
 	return true
 
-func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE,WOLF_BATTLE]
+func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE,WOLF_BATTLE] or preload("res://scripts/source_match_rules.gd").supports(value)
+func announce_kill_sound(team,headshot):
+	if not first_kill_announced:
+		first_kill_announced=true;game_audio.match_sound("round_first_kill_"+team)
+	if headshot:game_audio.match_sound("head_shot")
+func target_score():return match_rules.goal if match_rules.enabled else 10
 func open_round_selection(kind="",transform_after=false):
 	if not running or tutorial.active or exploring:return false
 	close_round_selection();touch.reset();player.velocity=Vector3.ZERO
@@ -794,6 +818,9 @@ func _process(delta):
 			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear()
 			announce("Takımına geri döndün")
 	time_left -= delta
+	if match_rules.enabled and time_left<=60 and not announced_last_minute:
+		announced_last_minute=true
+		game_audio.match_sound("left_1_minute")
 	spawn_clock -= delta
 	if spawn_clock<=0:
 		var own=local_room.get("team","blue");var opposing="red" if own=="blue" else "blue"
@@ -805,7 +832,9 @@ func _process(delta):
 		spawn_clock=3.5
 	if time_left <= 0:
 		if hunt.active:finish_hunt_round(false)
-		else:end_round("Süre doldu")
+		else:
+			if match_rules.enabled:match_rules.decide(team_score("red"),team_score("blue"))
+			end_round("Berabere" if match_rules.enabled and match_rules.winner=="draw" else "Süre doldu")
 	update_hud()
 
 func bot_limit(team):
@@ -828,13 +857,14 @@ func bot_defeated(victim,context):
 	var team=context.get("attackerTeam","")
 	if team not in ["red","blue"] or team==victim.team:return
 	team_frags[team]+=1
+	announce_kill_sound(team,false)
 	kill_feed.push_front({"attacker":context.get("name","Bot"),"target":victim.display_name,"weapon":context.get("weapon","Pençe"),"weaponId":"","headshot":false,"attackerTeam":team,"targetTeam":victim.team,"remaining":6.0})
 	if kill_feed.size()>5:kill_feed.resize(5)
 	if hunt.active:
 		if victim.team!=local_room.get("team","blue"):
 			hunt.round_kills+=1
 			if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
-	elif team_score(team)>=10:end_round("Arena tamamlandı" if team==local_room.get("team","blue") else "Yenildin")
+	elif team_score(team)>=target_score():end_round("Arena tamamlandı" if team==local_room.get("team","blue") else "Yenildin")
 	update_hud()
 
 func spawn_enemy(kind="",difficulty="",team=""):
@@ -852,7 +882,7 @@ func spawn_enemy(kind="",difficulty="",team=""):
 	enemy.game = self
 	enemy.team=team
 	enemy.rotation.y=PI if team=="red" else 0.0
-	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human")))
+	enemy.kind=match_rules.form_lock if match_rules.enabled and match_rules.form_lock!="mixed" else (kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))))
 	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
@@ -957,6 +987,7 @@ func attack():
 			var damage = int(player.weapon_info.get("damage", 25))*(2 if head else 1)
 			var actual=mini(hit.collider.health,damage)
 			if head:match_stats.headshots+=1
+			clientfx.play("Impact_Flesh",null,hit.position)
 			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head})
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 			announce(("Kafadan isabet +%d" if head else "İsabet +%d") % actual)
@@ -972,7 +1003,7 @@ func wolf_melee_hit(amount,reach,caption):
 	if not is_combat_active():return
 	player.cancel_cloak()
 	reach=reach*(1.0+float(gear_stats().rangePercent)/100.0)+float(power_bonus("claw","rangeBonus",0))
-	if is_instance_valid(player.claw_trail):player.claw_trail.begin()
+	if is_instance_valid(player.claw_trail) and (not is_instance_valid(player.source_events) or not player.source_events.has_spline()):player.claw_trail.begin()
 	amount=roundi(amount*wolf_damage_multiplier()*(1.0+float(gear_stats().damagePercent)/100.0))+int(power_bonus("claw","damageBonus",0))
 	for enemy in enemies.get_children():
 		if not running:break
@@ -989,7 +1020,8 @@ func strong_attack():
 	if not is_combat_active() or not player.is_wolf:return false
 	if player.mutation_id=="guardian":return player.begin_guard()
 	if player.mutation_id=="ghost":return player.begin_cloak()
-	if player.begin_air_attack():announce("Havada güçlü saldırı");return true
+	if player.begin_ground_strong():match_stats.attacks+=1;announce("Güçlü pençe");return true
+	if player.begin_air_attack():match_stats.attacks+=1;announce("Havada güçlü saldırı");return true
 	return false
 
 func reload_weapon():
@@ -1009,6 +1041,7 @@ func reload_weapon():
 func enemy_defeated(context={}):
 	if not is_combat_active():return
 	kills += 1
+	announce_kill_sound(local_room.get("team","blue"),context.get("headshot",false))
 	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0,"weaponId":current_weapon_id if not player.is_wolf else "","attackerTeam":local_room.get("team","blue"),"targetTeam":"red" if local_room.get("team","blue")=="blue" else "blue"})
 	if kill_feed.size()>5:kill_feed.resize(5)
 	grant_money("cash", 25, "Arena hedef ödülü")
@@ -1016,7 +1049,7 @@ func enemy_defeated(context={}):
 	if hunt.active:
 		hunt.round_kills+=1
 		if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
-	elif team_score(local_room.get("team","blue")) >= 10:
+	elif team_score(local_room.get("team","blue")) >= target_score():
 		grant_money("gold", roundi(10*(1+float(gear_stats().goldPercent)/100.0)), "Arena tamamlandı")
 		end_round("Arena tamamlandı")
 	update_hud()
@@ -1026,18 +1059,23 @@ func take_damage(amount, source_position=null, attacker={}):
 		return
 	if attacker.get("attackerTeam","")==local_room.get("team","blue"):return
 	if player.guard_remaining>0:amount=maxi(1,int(ceil(amount*0.5)))
+	game_audio.play_at("root/wt_snd/player/attacked/%s_attacked%d.wav" % ["wolf" if player.is_wolf else "human",randi_range(1,2)],player.global_position,false)
+	if player.guard_remaining>0:clientfx.play("FleshDefense",player)
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		game_audio.voice(player,0)
 		deaths+=1
 		kill_feed.push_front({"attacker":attacker.get("name","Bot"),"target":profile_name,"headshot":false,"weaponId":"","weapon":attacker.get("weapon","Pençe"),"attackerTeam":"red" if local_room.get("team","blue")=="blue" else "blue","targetTeam":local_room.get("team","blue"),"remaining":6.0})
 		if kill_feed.size()>5:kill_feed.resize(5)
 		if hunt.active:finish_hunt_round(false)
-		elif int(local_room.get("allyBots",0))>0 and team_score("red" if local_room.get("team","blue")=="blue" else "blue")<10:
+		elif (match_rules.enabled or int(local_room.get("allyBots",0))>0) and team_score("red" if local_room.get("team","blue")=="blue" else "blue")<target_score():
 			respawn_remaining=3.0;player.reset_combat();touch.reset();announce("Yeniden doğuş · 3 saniye")
 		else:end_round("Yenildin")
 
 func end_round(title):
+	if match_rules.enabled and match_rules.winner=="":match_rules.decide(team_score("red"),team_score("blue"))
+	if match_rules.enabled:game_audio.match_sound("round_draw" if match_rules.winner=="draw" else "round_"+match_rules.winner+"_win")
 	close_round_selection()
 	if not match_id.is_empty() and not match_id in career.state.matches:
 		var next=career.result(match_id,kills,match_stats.headshots,hunt.wins if hunt.active else 0,tutorial.active and tutorial.step>=tutorial.STEPS.size())
@@ -1046,7 +1084,7 @@ func end_round(title):
 			if not next.claimed.get(mission.id,false) and int(next.totals[mission.stat])>=int(mission.goal):
 				if not inbox.enqueue(pending,"cash","cash",mission.name,int(mission.cash),"mission-"+mission.id,"Sistem · Görevler").is_empty():next.claimed[mission.id]=true
 		if save_wallet(null,null,next,pending):career.state=next;inbox.state=pending
-	running=false;last_result={"title":title,"kills":kills,"health":health,"stats":match_stats.duplicate(),"hunt":hunt.active,"wins":hunt.wins,"losses":hunt.losses}
+	running=false;last_result={"title":title,"kills":kills,"health":health,"stats":match_stats.duplicate(),"hunt":hunt.active,"wins":hunt.wins,"losses":hunt.losses,"winner":match_rules.winner,"victory":match_rules.winner==local_room.get("team","blue") if match_rules.enabled else team_score(local_room.get("team","blue"))>=target_score()}
 	open_interface("result")
 
 func announce(text):
@@ -1056,7 +1094,7 @@ func announce(text):
 func update_hud():
 	if not hud_label:
 		return
-	hud_label.text = "WOLF ROGUE BLOOD · %s\n%s\nNakit %d  ·  KP %d\nAltın %d  ·  GP %d" % ["KURT" if player.is_wolf else "İNSAN", profile_name, int(wallet.cash), int(wallet.kp), int(wallet.gold), int(wallet.gp)]
+	hud_label.text = "WOLF ROGUE BLOOD · %s\n%s\nNakit %s  ·  KP %s\nAltın %d  ·  GP %d" % ["KURT" if player.is_wolf else "İNSAN", profile_name, wallet_text("cash"), wallet_text("kp"), int(wallet.gold), int(wallet.gp)]
 	if exploring:
 		hud_label.text = "WOLF ROGUE BLOOD · %s\nHARİTA GEZİNTİSİ · Maç kuralları kapalı\n%s" % [preview_name, "KURT" if player.is_wolf else "İNSAN"]
 	if is_instance_valid(source_hud): source_hud.refresh_from_game()
@@ -1088,6 +1126,7 @@ func save_wallet(candidate = null,box_candidate=null,career_candidate=null,inbox
 	if wallet_save_blocked: return false
 	if candidate == null: candidate = wallet
 	var payload=candidate.duplicate(true)
+	normalize_unlimited_wallet(payload)
 	payload.localBoxes=boxes.state if box_candidate==null else box_candidate
 	payload.localCareer=career.state if career_candidate==null else career_candidate
 	payload.giftInbox=inbox.state if inbox_candidate==null else inbox_candidate
@@ -1095,14 +1134,17 @@ func save_wallet(candidate = null,box_candidate=null,career_candidate=null,inbox
 
 func box_action(action,id,request):
 	if remote_player!="":return {"ok":false,"error":"Kutular yalnızca bu cihazdaki yerel bakiye ile kullanılır."}
-	var result=boxes.prepare(action,id,request,wallet)
+	var funds=wallet.duplicate();normalize_unlimited_wallet(funds)
+	var result=boxes.prepare(action,id,request,funds)
 	if not result.ok or result.get("duplicate",false):return result
+	normalize_unlimited_wallet(result.wallet)
 	var pending=inbox.state.duplicate(true)
 	if action=="buy":
 		result.state.counts[id]=int(result.state.counts.get(id,0))-1
 		if inbox.enqueue(pending,"box",id,boxes.box(id).name,1,"purchase-"+request,"Mağaza").is_empty():return {"ok":false,"error":"Hediye kutusu dolu."}
+	elif action=="open":pending.entitlements[result.reward.rewardId]=true
 	if not save_wallet(result.wallet,result.state,null,pending):return {"ok":false,"error":"Kayıt başarısız; bakiye ve kutu değiştirilmedi."}
-	wallet=result.wallet;boxes.state=result.state;inbox.state=pending;update_hud();return result
+	wallet=result.wallet;boxes.state=result.state;inbox.state=pending;sync_collection();update_hud();return result
 
 func claim_career(id):
 	if remote_player!="":return {"ok":false,"error":"Yerel ödüller yalnızca bu cihazda kullanılır."}
@@ -1115,7 +1157,9 @@ func claim_career(id):
 
 func power_item(id):
 	for item in power_catalog.items:
-		if item.id==str(id):return item
+		if item_key(item.id)==item_key(id):return item
+	if item_key(id)=="19601":
+		var item=equipment.rules.items[0].duplicate(true);item.id="19601";item.slot="ability";item.category="other";item.consumable=false;item.mobileTuning={};return item
 	return {}
 func power_bonus(slot,key,fallback):
 	var item=power_item(inbox.state.powerSlots.get(slot,""))
@@ -1128,6 +1172,7 @@ func gear_stats():
 	for key in ["rangePercent","damagePercent"]:stats[key]+=float(power_bonus("claw",key,0))
 	return stats
 func seed_gifts():
+	if book!=null and book.offline_edition:return
 	if inbox.state.get("welcome",false):return
 	var pending=inbox.state.duplicate(true)
 	inbox.enqueue(pending,"power","19002",power_item("19002").name,3,"welcome-medical","Sistem · Başlangıç")
@@ -1143,8 +1188,10 @@ func accept_gift(id):
 	var balance=wallet.duplicate();var box_state=boxes.state.duplicate(true)
 	match gift.kind:
 		"cash":
-			if int(balance.cash)+int(gift.amount)>1000000000:return {"ok":false,"error":"Bakiye sınırı dolu; hediye korunuyor."}
-			balance.cash=int(balance.cash)+int(gift.amount)
+			if is_unlimited_currency("cash"):balance.cash=1000000000
+			else:
+				if int(balance.cash)+int(gift.amount)>1000000000:return {"ok":false,"error":"Bakiye sınırı dolu; hediye korunuyor."}
+				balance.cash=int(balance.cash)+int(gift.amount)
 		"box":
 			if boxes.box(gift.item).is_empty() or int(box_state.counts.get(gift.item,0))+int(gift.amount)>999:return {"ok":false,"error":"Kutu aktarımı kullanılamıyor."}
 			box_state.counts[gift.item]=int(box_state.counts.get(gift.item,0))+int(gift.amount)
@@ -1164,8 +1211,12 @@ func accept_gift(id):
 		_:return {"ok":false,"error":"Hediye türü desteklenmiyor."}
 	gift.status="accepted";gift.acceptedAt=Time.get_unix_time_from_system()
 	if not save_wallet(balance,box_state,null,pending):return {"ok":false,"error":"Aktarım kaydedilemedi; hediye korunuyor."}
-	wallet=balance;boxes.state=box_state;inbox.state=pending;update_hud();return {"ok":true}
+	wallet=balance;boxes.state=box_state;inbox.state=pending;sync_collection();update_hud();return {"ok":true}
 func buy_power(id,request):
+	if book!=null and book.offline_edition:
+		var offers=shop_offers(id)
+		if offers.is_empty():return {"ok":false,"error":"Kaynak fiyatı doğrulanmadı."}
+		return buy_shop(id,offers[0].currency,request)
 	if remote_player!="" or not request is String or request.is_empty() or request.length()>160:return {"ok":false,"error":"Yerel işlem gerekli."}
 	var item=power_item(id)
 	if inbox.state.messages.any(func(row):return row.sourceKey=="power-buy-"+request):return {"ok":true,"duplicate":true}
@@ -1178,7 +1229,8 @@ func equip_power_item(id):
 	if remote_player!="":return false
 	var item=power_item(id)
 	if item.is_empty():return false
-	if not (item.get("offlineAvailable",false) and book!=null and book.offline_edition) and int(inbox.state.powerCounts.get(str(id),0))<=0:return false
+	if int(inbox.state.powerCounts.get(item_key(id),0))<=0:return false
+	if item.slot=="ability":return equipment.equip_power(19601)
 	var pending=inbox.state.duplicate(true);pending.powerSlots[item.slot]=str(id)
 	if not save_wallet(null,null,null,pending):return false
 	inbox.state=pending;return true
@@ -1263,3 +1315,66 @@ func equip_item_from_ui(item,target_slot=""):
 	activate_prepared_weapon(item,prepared)
 	current_loadout_slot=target_slot if target_slot!="" else book.slot_for(item.category)
 	return true
+
+func item_key(value):
+	var key=str(value)
+	return key.trim_suffix(".0") if key.ends_with(".0") and key.trim_suffix(".0").is_valid_int() else key
+func shop_offers(id):return shop_catalog.items.get(item_key(id),{}).get("offers",[])
+func collection_owned(id):
+	var key=item_key(id)
+	if shop_catalog.items.get(key,{}).get("kind","")=="power":return int(inbox.state.powerCounts.get(key,0))>0
+	return book.owns(key)
+func sync_collection():
+	if book==null or not book.offline_edition:return
+	var pending=inbox.state.duplicate(true);var changed=false
+	var balance=wallet.duplicate();normalize_unlimited_wallet(balance)
+	# Previously revealed, validated box rewards are real acquisitions too.
+	for reward in boxes.state.history:
+		if not pending.entitlements.has(reward.rewardId):pending.entitlements[reward.rewardId]=true;changed=true
+	if not inbox.state.get("starter017",false):
+		# Explicit offline starter allowance: one item per power slot, never
+		# the complete asset catalogue. Existing claimed supplies are retained.
+		for id in ["19001","19501","13006","16011","19601"]:
+			pending.powerCounts[id]=maxi(1,int(pending.powerCounts.get(id,0)))
+		pending.starter017=true;changed=true
+	if (changed or balance!=wallet) and save_wallet(balance,null,null,pending):inbox.state=pending;wallet=balance
+	book.apply_entitlements(inbox.state.entitlements)
+	equipment.owned=[19601] if int(inbox.state.powerCounts.get("19601",0))>0 else []
+	if not 19601 in equipment.owned:equipment.power_slot=0
+	for slot in inbox.state.powerSlots.keys():
+		if int(inbox.state.powerCounts.get(inbox.state.powerSlots[slot],0))<=0:inbox.state.powerSlots.erase(slot)
+func buy_shop(id,currency,request):
+	if remote_player!="" or not request is String or request.is_empty() or request.length()>160:return {"ok":false,"error":"Yerel işlem gerekli."}
+	var key=item_key(id);var row=shop_catalog.items.get(key,{})
+	var source_key="shop-017-"+request
+	if inbox.state.messages.any(func(message):return message.sourceKey==source_key):return {"ok":true,"duplicate":true}
+	if row.is_empty():return {"ok":false,"error":"Eşya mağazada bulunamadı."}
+	var offers=row.offers.filter(func(offer):return offer.currency==currency)
+	if offers.size()!=1 or not wallet.has(currency):return {"ok":false,"error":"Bu para biriminde doğrulanmış fiyat yok."}
+	var price=int(offers[0].price)
+	if price<=0 or (not is_unlimited_currency(currency) and int(wallet[currency])<price):return {"ok":false,"error":"Bakiye yetersiz."}
+	var item={}
+	match row.kind:
+		"weapon":item=book.weapon(key)
+		"character":
+			for entry in book.characters:
+				if entry.id==key and entry.get("available",false):item=entry;break
+		"tattoo":
+			for entry in book.tattoos:
+				if entry.id==key:item=entry;break
+		"power":item=power_item(key)
+	if item.is_empty() or item.get("available",true)!=true:return {"ok":false,"error":"Eşya kullanıma hazır değil."}
+	if row.kind!="power" and collection_owned(key):return {"ok":false,"error":"Bu eşya zaten envanterde."}
+	if row.kind!="power" and inbox.state.messages.any(func(message):return message.item==key and message.status=="pending" and message.expires>=Time.get_unix_time_from_system()):return {"ok":false,"error":"Eşya hediye kutusunda alınmayı bekliyor."}
+	var pending=inbox.state.duplicate(true);var balance=wallet.duplicate();normalize_unlimited_wallet(balance)
+	if not is_unlimited_currency(currency):balance[currency]-=price
+	if inbox.enqueue(pending,row.kind,key,item.name,1,source_key,"Mağaza").is_empty():return {"ok":false,"error":"Hediye kutusu dolu."}
+	if not save_wallet(balance,null,null,pending):return {"ok":false,"error":"Alışveriş kaydedilemedi; bakiye korunuyor."}
+	wallet=balance;inbox.state=pending;update_hud();return {"ok":true,"delivery":"giftInbox"}
+
+func is_unlimited_currency(currency):
+	return remote_player=="" and book!=null and book.offline_edition and currency in shop_catalog.get("currencyPolicy",{}).get("unlimited",[])
+func normalize_unlimited_wallet(candidate):
+	for currency in ["cash","kp"]:
+		if is_unlimited_currency(currency):candidate[currency]=1000000000
+func wallet_text(currency):return "∞" if is_unlimited_currency(currency) else str(int(wallet.get(currency,0)))

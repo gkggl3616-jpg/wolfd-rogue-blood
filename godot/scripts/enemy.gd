@@ -4,6 +4,8 @@ const Traversal=preload("res://scripts/bot_traversal.gd")
 var game
 var team="red"
 var opponent
+var character_info={}
+var source_events
 var target_clock=0.0
 var kind="wolf"
 var display_name="Bot"
@@ -64,6 +66,7 @@ func _ready():
  if game.offline_navigation_map.is_valid():navigator.set_navigation_map(game.offline_navigation_map)
  var character=game.book.character_for_team(team)
  if character.is_empty():character=game.character_info
+ character_info=character
  body=load(character[kind].asset).instantiate();body.scale*=1.6;body.rotation.y=PI;add_child(body);body_base=body.transform
  var players=body.find_children("*","AnimationPlayer",true,false)
  if not players.is_empty():
@@ -73,6 +76,7 @@ func _ready():
   play("idle");anim.advance(0)
  if kind=="human":prepare_weapon()
  var indicator=Label3D.new();indicator.text=("İNSAN" if kind=="human" else "KURT")+" · "+profile.name;indicator.position.y=2.25;indicator.font_size=26;indicator.modulate=Color("e2b2a7") if team=="red" else Color("92c9ed");indicator.billboard=BaseMaterial3D.BILLBOARD_ENABLED;add_child(indicator)
+ source_events=Node.new();source_events.set_script(preload("res://scripts/actor_source_events.gd"));source_events.actor=self;add_child(source_events)
  build_patrol()
  destination=patrol_points[0] if not patrol_points.is_empty() else global_position
 
@@ -382,6 +386,7 @@ func damage(amount,context={}):
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
  if health<=0:
+  game.game_audio.voice(self,0)
   collision_layer=0;context=context.duplicate();context.target=display_name
   if context.get("actor","")=="bot":game.bot_defeated(self,context)
   else:game.enemy_defeated(context)

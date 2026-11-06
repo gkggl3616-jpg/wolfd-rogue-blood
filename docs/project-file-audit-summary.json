@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "utc": "2026-11-06T04:09:05.461479+00:00",
-  "filesHashed": 53854,
-  "bytesRead": 3662913405,
+  "utc": "2026-11-06T09:42:43.448922+00:00",
+  "filesHashed": 54844,
+  "bytesRead": 3738096621,
   "fileTypes": {
     "": 1,
-    ".md": 20,
-    ".json": 121,
-    ".gz": 6,
+    ".md": 21,
+    ".json": 131,
+    ".gz": 19,
     ".txt": 3,
-    ".png": 24899,
+    ".png": 25285,
     ".jpg": 3,
-    ".import": 26515,
-    ".glb": 633,
+    ".import": 26978,
+    ".glb": 728,
     ".wav": 1363,
     ".scn": 1,
     ".svg": 2,
@@ -23,48 +23,49 @@
     ".cfg": 1,
     ".tscn": 1,
     ".godot": 1,
-    ".gd": 89,
-    ".uid": 88,
+    ".gd": 97,
+    ".uid": 96,
     ".gdshader": 1,
     ".dat": 1,
-    ".py": 45,
+    ".py": 51,
     ".ps1": 2,
     ".js": 1,
     ".html": 1,
     ".css": 1
   },
-  "literalResourceReferencesChecked": 44126,
-  "glbHeadersChecked": 633,
-  "issues": [
+  "literalResourceReferencesChecked": 45842,
+  "glbHeadersChecked": 728,
+  "issues": [],
+  "expectedTestReferences": [
     {
       "path": "godot/tests/combat_continuation.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://missing-character.glb"
+      "resource": "res://missing-character.glb",
+      "reason": "negative_model_fixture"
     },
     {
       "path": "godot/tests/human_reference.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://../docs/human-reference-validation.json"
+      "resource": "res://../docs/human-reference-validation.json",
+      "reason": "test_report_output"
     },
     {
       "path": "godot/tests/pc_reference_expansion.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://../docs/pc-reference-expansion-validation.json"
+      "resource": "res://../docs/pc-reference-expansion-validation.json",
+      "reason": "test_report_output"
     },
     {
       "path": "godot/tests/pc_reference_expansion.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://not-a-reward.png"
+      "resource": "res://not-a-reward.png",
+      "reason": "negative_reward_fixture"
     },
     {
       "path": "godot/tests/persistence.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://__missing_unbound_tattoo__.png"
+      "resource": "res://__missing_unbound_tattoo__.png",
+      "reason": "negative_tattoo_fixture"
     },
     {
       "path": "godot/tests/round_equipment_gifts.gd",
-      "issue": "missing_literal_resource",
-      "resource": "res://../docs/round-equipment-gift-validation.json"
+      "resource": "res://../docs/round-equipment-gift-validation.json",
+      "reason": "test_report_output"
     }
   ],
   "windowsExecutablesInProject": [

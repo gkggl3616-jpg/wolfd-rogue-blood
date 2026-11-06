@@ -64,7 +64,7 @@ func show_reward(item,animate=false,box_icon=""):
 	progress=ProgressBar.new();progress.position=Vector2(300,477);progress.size=Vector2(424,18);progress.show_percentage=false;ui.modal.add_child(progress);progress.visible=animate
 	ui.text(ui.modal,"Kazanılan eşya · Yerel koleksiyona kaydedildi",Vector2(280,516),Vector2(464,26),13).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	accept=ui.button(ui.modal,"Dövmeyi kullan",Vector2(283,562),Vector2(220,32),func():
-		if ui.game.book.set_tattoo(item.role,item.texture):ui.game.player.apply_tattoos();ui.close_modal();ui.navigate("Dövmeler")
+		if ui.game.book.set_tattoo(item.role,item.texture,item.rewardId):ui.game.player.apply_tattoos();ui.close_modal();ui.navigate("Dövmeler")
 		else:ui.show_error("Dövme seçimi kaydedilemedi.")
 	);accept.disabled=animate
 	ui.button(ui.modal,"Tamam",Vector2(523,562),Vector2(220,32),func():ui.close_modal();ui.refresh())

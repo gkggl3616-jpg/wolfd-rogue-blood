@@ -10,7 +10,11 @@ class PlayerDouble extends RefCounted:
 	var look_total = Vector2.ZERO
 	func look(delta): look_total += delta
 
+class EquipmentDouble extends RefCounted:
+	func has_wolf_ability():return false
+
 class GameDouble extends RefCounted:
+	var equipment=EquipmentDouble.new()
 	var running = true
 	var menu_open = false
 	var application_suspended = false

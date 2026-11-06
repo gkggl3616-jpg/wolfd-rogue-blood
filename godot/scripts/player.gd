@@ -19,6 +19,7 @@ var body_shape: CollisionShape3D
 var capsule: CapsuleShape3D
 var crouching = false
 var wolf_running = false
+var wolf_run_armed = false
 var movement_clock = 0.0
 var last_forward_press = -10.0
 var forward_held = false
@@ -32,6 +33,10 @@ var weapon_action_time = 0.0
 var auxiliary_magazines = []
 var mutation_id="normal"
 var claw_trail
+var source_events
+var pending_strong=false
+var character_info:Dictionary:
+	get:return game.character_info if game!=null else {}
 var guard_remaining=0.0
 var cloak_remaining=0.0
 var mutation_energy=100.0
@@ -118,6 +123,7 @@ func _ready():
 	apply_tattoos()
 	roar_effect = Node3D.new();roar_effect.set_script(preload("res://scripts/roar_effect.gd"));roar_effect.player = self;add_child(roar_effect)
 	claw_trail=Node3D.new();claw_trail.set_script(preload("res://scripts/claw_trail.gd"));claw_trail.player=self;add_child(claw_trail)
+	source_events=Node.new();source_events.set_script(preload("res://scripts/actor_source_events.gd"));source_events.actor=self;add_child(source_events)
 
 func choose_animation_player():
 	var model = wolf if is_wolf else human
@@ -315,11 +321,14 @@ func switch_form(force=false):
 	if not game.running or game.menu_open:
 		return
 	if game.hunt.active and not force:return
-	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE and not force:return
+	if (int(game.local_room.get("mode",0))==game.WOLF_BATTLE or (game.match_rules.enabled and game.match_rules.form_lock!="mixed")) and not force:return
 	if not is_wolf and not force and not game.tutorial.active and game.round_selection_enabled:
 		game.open_round_selection("wolf",true);return
 	var fraction=float(game.health)/maxi(1,game.max_health())
 	is_wolf = not is_wolf
+	if is_instance_valid(source_events):source_events.reset()
+	game.game_audio.play_at("root/wt_snd/player/wolf_changetowolf.wav" if is_wolf else "root/wt_snd/player/wolf_changetohuman.wav",global_position,false)
+	game.clientfx.play("ChangeCharEffect",self)
 	cancel_cloak();guard_remaining=0;game.health=maxi(1,mini(game.max_health(),roundi(fraction*game.max_health())))
 	end_roll()
 	if is_instance_valid(roar_effect): roar_effect.stop()
@@ -357,6 +366,7 @@ func reset_locomotion():
 	end_wall_hold()
 	end_air_attack()
 	wolf_running = false
+	wolf_run_armed = false
 	last_forward_press = -10.0
 	forward_held = false
 	move_axis = Vector2.ZERO
@@ -396,6 +406,8 @@ func _physics_process(delta):
 	if forward_now and not forward_held:
 		register_forward_press()
 	forward_held = forward_now
+	if not can_wolf_run():wolf_run_armed=false
+	if wolf_run_armed and forward_now and can_wolf_run():wolf_running=true
 	if not can_wolf_run() or not forward_now or Input.is_action_pressed("crouch"):
 		wolf_running = false
 	var direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized()
@@ -556,7 +568,13 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
+	pending_strong=false
 	cancel_cloak();guard_remaining=0;mutation_energy=100
 	reset_locomotion();shot_cooldown=0;action_time=0;weapon_action_time=0;roll_cooldown=0;wall_hold_cooldown=0
 	if is_instance_valid(roar_effect):roar_effect.stop();roar_effect.cooldown=0
 	current_clip="";play_clip("idle")
+
+func begin_ground_strong():
+	if not game.is_combat_active() or not is_wolf or not is_on_floor() or action_time>0 or rolling or air_attacking or wall_holding:return false
+	if not game.clientfx.install_strong(self):return false
+	reset_locomotion();roar_effect.stop();pending_strong=true;current_clip="";play_clip("strong_attack");action_time=anim.get_animation("strong_attack").length;shot_cooldown=action_time;return true

@@ -12,9 +12,9 @@ func frames(count=3):
 func run():
 	root.size=Vector2i(1280,720)
 	var game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
-	check(not game.book.settings.directions,"New profiles use the reference's single joystick")
+	check(game.book.settings.directions,"New profiles use the four direction buttons requested for this update")
 	game.start_round();game.spawn_clock=1000;await frames(10)
-	check(game.touch.buttons.filter(func(button):return button.visible).all(func(button):return button.get_child(1).texture!=null),"Every active circular control has a real action image")
+	check(game.touch.buttons.filter(func(button):return button.visible).all(func(button):return button.action in ["forward","backward","left","right"] or button.get_child(1).texture!=null),"Circular directions have arrow graphics and action controls have original item images")
 	check(is_equal_approx(game.player.pivot.rotation.x,game.player.pitch),"First look cannot jump from an unapplied initial pitch")
 	check(game.source_hud.slots.all(func(button):return button.flat and button.get_child(0).texture!=null),"Weapon belt uses actual equipped icons without generic text plates")
 	check(game.source_hud.cross.is_visible_in_tree(),"Human aiming reticle is visible")
