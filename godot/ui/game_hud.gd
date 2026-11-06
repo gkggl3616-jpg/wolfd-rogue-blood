@@ -26,6 +26,8 @@ var preview_name:Label
 var map_name:Label
 var power_buttons=[]
 var power_counts=[]
+var power_icons=[]
+var extra_hp:Label
 var slots=[]
 var slot_icons=[]
 var slot_ids=[]
@@ -66,6 +68,7 @@ func _ready():
 	# self_modulate hides only the plate, not its health-number child.
 	health_view.find_widget("HPBack").self_modulate.a=0
 	health_view.find_widget("HealthPoint").modulate=Color("f32639")
+	extra_hp=Art.label("",Vector2(110,18),12,Color("c9e8f0"));extra_hp.position=Vector2(0,45);health_view.add_child(extra_hp)
 	weapon_view=part("interface/hudweapon",Vector2(116,64),["CurrentBullet","MaxBullet"])
 	weapon_name=Art.label("",Vector2(260,20),12);weapon_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;pc_layer.add_child(weapon_name)
 	score_view=part("interface/hudscore",Vector2(312,64),["Mode","RedTeamScore","BlueTeamScore"])
@@ -110,9 +113,9 @@ func _ready():
 		var key=Art.label(str([1,2,5,4][number]),Vector2(10,14),8,Color("c1b77e"));key.position=Vector2(18,29);button.add_child(key)
 		pc_layer.add_child(button);slots.append(button);slot_icons.append(icon);slot_ids.append(slot);game.gui_touch_blockers.append(button);number+=1
 	for slot in ["support","energy"]:
-		var button=round_button(Vector2(46,46));button.pressed.connect(func():game.use_power(slot));button.set_meta("power_slot",slot);pc_layer.add_child(button);game.gui_touch_blockers.append(button);power_buttons.append(button)
-		Art.sprite(button,game.power_item("19002" if slot=="support" else "19502").icon,Vector2(7,5),Vector2(32,27)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		var count=Art.label("",Vector2(42,14),9);count.position=Vector2(2,30);count.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;button.add_child(count);power_counts.append(count)
+		var button=round_button(Vector2(56,56));button.pressed.connect(func():game.use_power(slot));button.set_meta("power_slot",slot);pc_layer.add_child(button);game.gui_touch_blockers.append(button);power_buttons.append(button)
+		var image=Art.sprite(button,"",Vector2(7,8),Vector2(42,30));image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;power_icons.append(image)
+		var count=Art.label("",Vector2(42,14),9);count.position=Vector2(7,39);count.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;button.add_child(count);power_counts.append(count)
 	resized.connect(arrange);arrange();refresh_from_game()
 
 func arrange():
@@ -122,7 +125,7 @@ func arrange():
 	var factor=dimensions.y/645.0
 	pc_layer.scale=Vector2.ONE*factor;pc_layer.size=dimensions/factor
 	var native=pc_layer.size
-	health_view.position=Vector2(24,native.y-53)
+	health_view.position=Vector2(24,native.y-71)
 	weapon_view.position=Vector2(native.x-143,native.y-91);weapon_name.position=Vector2(native.x-287,native.y-25)
 	score_view.position=Vector2(native.x*0.5-156,4)
 	timer_view.position=Vector2(native.x*0.5-43,64)
@@ -132,7 +135,7 @@ func arrange():
 	scoreboard_button.position=Vector2(native.x*0.05+96,7);feed.position=Vector2(native.x-389,170);feed_layer.position=Vector2(native.x-389,170)
 	guide.position=Vector2(native.x*0.5-350,native.y-150)
 	for i in range(slots.size()):slots[i].position=Vector2(native.x*0.5-104+i*52,native.y-48)
-	for i in range(power_buttons.size()):power_buttons[i].position=Vector2(native.x*0.37+i*55,native.y-107)
+	for i in range(power_buttons.size()):power_buttons[i].position=Vector2(native.x*0.37+i*65,native.y-123)
 	cross.position=dimensions*0.5-Vector2(16,16)
 
 func refresh_from_game():
@@ -141,7 +144,10 @@ func refresh_from_game():
 	for i in range(power_buttons.size()):
 		var button=power_buttons[i];var id=game.inbox.state.powerSlots.get(button.get_meta("power_slot"),"");var count=int(game.inbox.state.powerCounts.get(id,0))
 		button.visible=game.player.is_wolf and id!="";button.disabled=count<=0 or not game.is_combat_active();power_counts[i].text=str(count)
-		button.tooltip_text=game.power_item(id).get("name","")
+		var item=game.power_item(id);button.tooltip_text=item.get("name","")
+		if power_icons[i].get_meta("power_id","unset")!=id:
+			var region=item.get("iconRegion",[0,0,210,75]);power_icons[i].texture=Art.atlas(item.get("icon",""),Rect2(region[0],region[1],region[2],region[3]));power_icons[i].set_meta("power_id",id)
+	extra_hp.text="YP  %d" % game.player.extra_health if game.player.is_wolf else ""
 	cross.visible=visible and not game.player.is_wolf
 	scope.visible=visible and game.player.is_scoped();cross.visible=cross.visible and not scope.visible
 	refresh_feed()

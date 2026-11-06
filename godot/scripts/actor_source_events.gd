@@ -18,6 +18,9 @@ func reset():
 func stop_roar():
 	var info=system.model_record(actor);var name=info.get("effects",{}).get("ClientFXOnce3","")
 	for node in system.group_instances(actor,name):node.queue_free()
+func restart_roar():
+	game.game_audio.stop_actor_voice(actor);stop_roar();last_clip="";last_time=-0.001;last_record={}
+	if is_instance_valid(actor.claw_trail):actor.claw_trail.clear()
 func has_spline():return str(system.animation_record(actor,str(actor.anim.current_animation))).to_lower().contains("spline") if is_instance_valid(actor.anim) else false
 func _process(_delta):
 	if not game.is_match_active() or not game.actor_alive(actor):

@@ -32,8 +32,9 @@ func bind_tattoos():
 			var material = mesh.material_override;material.emission_enabled = true;material.emission_texture = material.albedo_texture;material.emission = Color.WHITE;material.emission_energy_multiplier = 0;materials.append(material)
 
 func begin(seconds):
-	if active or cooldown > 0 or not player.is_wolf or player.game.menu_open or not player.game.running: return false
-	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = duration + 0.8;bind_tattoos();aura.hide()
+	if not player.is_wolf or player.game.menu_open or not player.game.running: return false
+	stop();cooldown=0
+	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = 0;bind_tattoos();aura.hide()
 	source_effect.begin()
 	return true
 
@@ -47,7 +48,8 @@ func advance(delta):
 	if not active: return
 	if not player.is_wolf or player.game.menu_open or not player.game.running: stop();return
 	elapsed += delta
-	if elapsed >= duration: stop();return
+	if elapsed >= duration:
+		player.restore_howl_health();stop();return
 	var phase = elapsed / duration
 	intensity = sin(PI * phase) * (0.85 + 0.15 * sin(elapsed * 22))
 	for material in materials: material.emission_energy_multiplier = intensity * 0.45

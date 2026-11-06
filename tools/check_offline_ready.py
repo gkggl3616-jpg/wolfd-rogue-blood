@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -28,6 +28,8 @@ def check(root=ROOT):
                 image = root/capture.get('path', '__missing_capture__')
                 if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != capture.get('sha256'):
                     blockers.append('Visual evidence missing or changed: '+capture.get('name', '?'))
+    update=json.loads((root/'docs/mobile-019-validation.json').read_text()) if (root/'docs/mobile-019-validation.json').is_file() else {}
+    if not update.get('passed') or update.get('checks',0)<30:blockers.append('Current model, gift, header, claw, repeated howl and audio regressions are incomplete')
     catalogue = root/'godot/assets/maps/offline.json'
     entries = json.loads(catalogue.read_text()) if catalogue.is_file() else []
     if len(entries) != 34 or len({int(row['number']) for row in entries}) != 34:

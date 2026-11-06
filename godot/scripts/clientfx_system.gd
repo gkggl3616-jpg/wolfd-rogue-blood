@@ -43,7 +43,7 @@ func model_record(actor):
 func animation_record(actor,clip):
 	var info=model_record(actor);var donor=info.get("donor","")
 	var form=game.game_audio.actor_form(actor)
-	var aliases={"idle":"LSt","run":"LRF","jump":"LJJ","attack":"UMFi1" if form=="wolf" else "URi1Fi","reload":"URi1Re","crouch":"LC","crouch_run":"LCWF","roar":"T_CRY","wolf_run":"T_WallDash","body_attack":"T_Bodyatk","special_attack":"T_Specialatk","wall_hold":"T_WallHold_L","airborne_attack":"T_WallDashAtk","strong_attack":"UMFi3"}
+	var aliases={"idle":"LSt","run":"LRF","jump":"LJJ","attack":"UMFi1" if form=="wolf" else "URi1Fi","reload":"URi1Re","crouch":"LC","crouch_run":"LCWF","roar":"T_CRY","wolf_run":"T_WallDash","body_attack":"T_Bodyatk","special_attack":"T_Specialatk","wall_hold":"T_WallHold_L","airborne_attack":"T_WallDashAtk","strong_attack":"UMFi3","attack_right":"UMFi2"}
 	var source=aliases.get(clip,clip)
 	var action=actor.character_info.get(form,{}).get("sourceActions",{}).get(clip,{})
 	if actor!=game.player or actor.mutation_id=="normal":
@@ -71,13 +71,19 @@ func socket_transform(actor,name):
 	return Transform3D(actor.global_basis,actor.global_position+Vector3.UP*1.6)
 
 var strong_data={}
+var right_data={}
 func install_strong(actor):
-	if not is_instance_valid(actor.anim):return false
-	if actor.anim.has_animation("strong_attack"):return true
 	if strong_data.is_empty():strong_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/strong-clips.json")).donors
+	return install_action(actor,"strong_attack",strong_data)
+func install_right_attack(actor):
+	if right_data.is_empty():right_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/right-clips.json")).donors
+	return install_action(actor,"attack_right",right_data)
+func install_action(actor,clip,data):
+	if not is_instance_valid(actor.anim):return false
+	if actor.anim.has_animation(clip):return true
 	var donor=model_record(actor).get("donor","")
-	if not strong_data.has(donor):return false
-	var source=strong_data[donor];var model=actor.wolf if actor==game.player else actor.body
+	if not data.has(donor):return false
+	var source=data[donor];var model=actor.wolf if actor==game.player else actor.body
 	var skeletons=model.find_children("*","Skeleton3D",true,false)
 	if skeletons.is_empty():return false
 	var skeleton=skeletons[0];var animation_root=actor.anim.get_node(actor.anim.root_node);var path=str(animation_root.get_path_to(skeleton));var animation=Animation.new();animation.length=source.times[-1]-source.times[0]
@@ -88,7 +94,7 @@ func install_strong(actor):
 		for i in range(source.times.size()):
 			var p=row.positions[i];var q=row.rotations[i];var time=source.times[i]-source.times[0]
 			animation.track_insert_key(pos,time,Vector3(p[0],p[1],p[2]));animation.track_insert_key(rot,time,Quaternion(q[0],q[1],q[2],q[3]).normalized())
-	var library=actor.anim.get_animation_library("").duplicate();library.add_animation("strong_attack",animation)
+	var library=actor.anim.get_animation_library("").duplicate();library.add_animation(clip,animation)
 	var current=actor.anim.current_animation;var time=actor.anim.current_animation_position
 	actor.anim.remove_animation_library("");actor.anim.add_animation_library("",library)
 	if current!="":actor.anim.play(current);actor.anim.seek(time,true)

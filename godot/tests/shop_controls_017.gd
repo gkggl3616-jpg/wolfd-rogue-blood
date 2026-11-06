@@ -108,7 +108,7 @@ func run():
  ensure(game.touch.direction_buttons and game.touch.buttons.slice(7,11).all(func(button):return button.visible),"Four circular direction targets replace the default joystick")
  game.equipment.equip_power(0);await frames();ensure(not game.touch.buttons[5].visible,"Wolf-run button hides without equipped ability")
  ensure(game.equip_power_item("19601"),"Owned starter wolf ability can be equipped")
- await frames();ensure(game.touch.buttons[5].visible and game.touch.buttons[5].get_child(1).texture!=null,"Equipped wolf ability exposes its original illustrated run button")
+ await frames();ensure(not game.touch.buttons[5].visible,"Requested redundant wolf-run target remains removed with equipped ability")
  game.touch.buttons[5].pressed.emit();await physics(2);ensure(game.player.wolf_run_armed and not game.player.wolf_running,"Run button arms the ability without moving a stationary wolf")
  Input.action_press("forward");await physics(2);ensure(game.player.wolf_running,"Forward input starts the armed four-legged wolf run")
  Input.action_release("forward");await physics(2);game.player.reset_locomotion()

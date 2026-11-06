@@ -6,6 +6,7 @@ var tab="received"
 var page=0
 var cards=[]
 var view
+var art_cache={}
 func build():
 	var background=ui.native("section/inventory",ui.content);background.show_only(["WeaponState","Inventory"])
 	view=ui.native("interface/giftbox",ui.content,Vector2(190,83),Vector2(643,625))
@@ -21,24 +22,34 @@ func rows():
 	if tab=="sent":return []
 	var result=ui.game.inbox.state.messages.filter(func(row):return (row.status=="accepted") if tab=="history" else row.status=="pending")
 	result.reverse();return result
-func icon(gift):
+func artwork(gift):
+	var cache_key=gift.kind+":"+gift.item
+	if art_cache.has(cache_key):return art_cache[cache_key]
+	var entry={}
 	match gift.kind:
-		"box":return ui.game.boxes.box(gift.item).get("icon","")
-		"power":return ui.game.power_item(gift.item).get("icon","")
-		"weapon":return ui.game.book.weapon(gift.item).get("icon","")
+		"box":entry=ui.game.boxes.box(gift.item)
+		"power":entry=ui.game.power_item(gift.item)
+		"weapon":entry=ui.game.book.weapon(gift.item)
 		"tattoo":
 			for row in ui.game.book.tattoos:
-				if row.id==gift.item:return row.texture
-		"character":
-			return JSON.parse_string(FileAccess.get_file_as_string("res://assets/ui/character-portraits.json")).portraits.get(gift.item,{}).get("asset","")
-	return "wt_interface/all/a_lb_icon_gift.dtx"
+				if row.id==gift.item:entry=row;break
+		"character":entry=JSON.parse_string(FileAccess.get_file_as_string("res://assets/ui/character-portraits.json")).portraits.get(gift.item,{})
+	var region=entry.get("region",entry.get("iconRegion",[0,0,210,75] if gift.kind in ["weapon","power"] else []))
+	var result={"asset":entry.get("icon",entry.get("asset",entry.get("texture","wt_interface/all/a_lb_icon_gift.dtx"))),"region":Rect2(region[0],region[1],region[2],region[3]) if region.size()==4 else Rect2()}
+	if gift.kind=="character":
+		var texture=Art.texture(result.asset)
+		if texture:
+			var occupied=Rect2(texture.get_image().get_used_rect());var trimmed=result.region.intersection(occupied) if result.region.has_area() else occupied
+			if trimmed.has_area():result.region=trimmed
+	art_cache[cache_key]=result;return result
 func render():
 	for node in cards:node.get_parent().remove_child(node);node.queue_free()
 	cards.clear();var entries=rows();var pages=maxi(1,ceili(entries.size()/12.0));page=clampi(page,0,pages-1)
 	var counter=ui.text(view,"%d / %d" % [page+1,pages],Vector2(282,591),Vector2(69,27),14);counter.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;cards.append(counter)
 	for i in range(mini(12,entries.size()-page*12)):
 		var gift=entries[page*12+i];var cell=Card.create(view,Vector2(3+(i%3)*211,58+int(i/3)*118),Vector2(209,116),func():confirm_gift(gift));cards.append(cell);cell.set_meta("gift_id",gift.id)
-		Art.sprite(cell,icon(gift),Vector2(5,4),Vector2(198,69),Rect2(0,0,210,75) if gift.kind=="weapon" else Rect2()).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		var art=artwork(gift)
+		var picture=Art.sprite(cell,art.asset,Vector2(5,4),Vector2(198,69),art.region);picture.name="GiftArtwork";picture.stretch_mode=TextureRect.STRETCH_SCALE
 		var date=Time.get_date_string_from_unix_time(int(gift.created)).replace("-",".")
 		ui.text(cell,date,Vector2(6,4),Vector2(190,19),11)
 		ui.text(cell,gift.name,Vector2(5,77),Vector2(199,18),12)

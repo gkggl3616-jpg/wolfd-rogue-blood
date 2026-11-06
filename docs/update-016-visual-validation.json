@@ -6,7 +6,7 @@
       "path": "docs/review/update-016/transparent-character-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0483e30d34323301e7f7e9012b16e367d4a7e33dd8611dd1783418bba2bc0fe8"
+      "sha256": "4799c1aa98fefae6efcee844a748c2a8c85ae7bc800c7a35f2d83cde78229b7b"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-016/large-wolf-inventory-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "71902ccf78dc5258ddffdfb16ccef13d4b67171972e277920d6220447a087f3b"
+      "sha256": "b2211dcc3e745f21be2e90315d52dfd58d77c666e08fa0a2a45ff4b2d81a6212"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-016/power-inventory-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3661174eeb00b37c555d65174949f342acec7c7c741265b4cc7891215608158e"
+      "sha256": "2d0c377e3320f93e5ff8679c6fe9cdf39fd34337c070c4eaeb44b632cf698257"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-016/ally-bot-selection-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0202feccd85cd74b83bf13efd211a9b3b14aa251186a4c32896c1432406e2dda"
+      "sha256": "3a7fc0bfc824f58a127f82889d3a489c33213ced4196c02bf2a27291b6fc2e7f"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-016/team-rosters-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e5799266bd95cb549fe0e95fdb6b3fd175278aa77d6a242e49ab1c15ff65d0f5"
+      "sha256": "db9a6f0db8d3144ae076a02c2159434965752a259932ac6168c084e32a0e096c"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-016/allied-bot-match-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fd6a94b5e151ebb80f9609428dcef897128509156f7e9c2328d17f4d2f91aa03"
+      "sha256": "37ac53d5641422d855fbb982cf67e866d5fced1ccc568aac06f794c441a1dfb0"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-016/tattoo-before-roar-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ced5b2808ced1526c0b43c9a50c7fc2c67d63c6026db4a425346676d0f4ff25f"
+      "sha256": "4745686755cb68452f503adda28e16b7cd9d4ad98e7d1c71f9b7c2926215814c"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-016/howling_fire_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0e16f217a75e5997b3c286c8a6d4e3b9dd1f503fcfdc3325a71187d86b64c6a7"
+      "sha256": "fd43fc638155aaa323e8f8752c567b1f012c7b5e8ff5c13b4abf18a885e17898"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-016/howling_ice_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6cf9801ed4bf0ab2f515c96447be7067da01953209c77c75480e92dde537143a"
+      "sha256": "0b60408c7fbc20373b7674270228b9210d7e7dc704488f8c3024c059c4c448cf"
     },
     {
       "height": 720,
@@ -78,12 +78,12 @@
       "path": "docs/review/update-016/howling_lightning_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "92c262ad2e65db0ff26ff3c723cd7b521880ca4f565ba13cd7d49f864bc8854a"
+      "sha256": "d58e48b03229eb816fd741c6a582cc7195c7005f21c5adf32f46588bda23050d"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureActors": true,
-  "runtimeCodeSha256": "d0f000021c13d2ae74824a8d50bbf448af18539c1d2bba27df8297388d4624f5"
+  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
 }

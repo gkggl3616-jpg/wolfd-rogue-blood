@@ -957,11 +957,16 @@ func attack():
 		if kind == "grenade": announce("Bomba kalmadı");return
 		reload_weapon()
 		return
-	player.shot_cooldown = 0.55 if player.is_wolf else float(player.weapon_info.fireIntervalMs) / 1000.0
-	player.action_time = 0.45
+	player.shot_cooldown = 0.55/player.CLAW_SPEED if player.is_wolf else float(player.weapon_info.fireIntervalMs) / 1000.0
+	player.action_time = 0.45/player.CLAW_SPEED if player.is_wolf else 0.45
 	player.current_clip = ""
 	match_stats.attacks+=1
-	player.play_clip("attack")
+	var attack_clip="attack"
+	if player.is_wolf:
+		clientfx.install_right_attack(player)
+		if player.next_right_attack and player.anim.has_animation("attack_right"):attack_clip="attack_right"
+		player.next_right_attack=not player.next_right_attack
+	player.play_clip(attack_clip)
 	if player.is_wolf:
 		notify_bot_noise(player.global_position,8)
 		var body_attack = player.wolf_running and equipment.has_wolf_ability() and player.anim.has_animation("body_attack")
@@ -1063,6 +1068,8 @@ func take_damage(amount, source_position=null, attacker={}):
 	if player.guard_remaining>0:amount=maxi(1,int(ceil(amount*0.5)))
 	game_audio.play_at("root/wt_snd/player/attacked/%s_attacked%d.wav" % ["wolf" if player.is_wolf else "human",randi_range(1,2)],player.global_position,false)
 	if player.guard_remaining>0:clientfx.play("FleshDefense",player)
+	if player.is_wolf and player.extra_health>0:
+		var absorbed=mini(player.extra_health,amount);player.extra_health-=absorbed;amount-=absorbed
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:

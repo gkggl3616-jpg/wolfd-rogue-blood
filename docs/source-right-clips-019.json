@@ -1,0 +1,142 @@
+{
+  "sourceDonors": [
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r2_woman_wolf.ltb",
+      "sha256": "994a57b593c053f01f2d3da64d0ba4ad88ed2c2ad0b6a443cfd52601e68eec23",
+      "bytes": 3596042
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/redlegend_re_wolf.ltb",
+      "sha256": "5c4b6446a78b70ffd426e867d68b4067300c4f05ccfc0158eea419698d1faf19",
+      "bytes": 3602556
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r3_woman_wolf.ltb",
+      "sha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
+      "bytes": 3535332
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_b_turkey_lightning.ltb",
+      "sha256": "582d7cfb23422ea69a0036833ac61c031329ad4a9bb017b65aa0d62c6ec362df",
+      "bytes": 3508225
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_reboot_mn.ltb",
+      "sha256": "7fb9fae9af48d8d610b164bd7514faaf221ac3fa29bc5afc75a0e23a09bc844b",
+      "bytes": 3535332
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_hacker.ltb",
+      "sha256": "cf28d05143189dedb2f76c59c13cd78a8809220f2c7e0564e7bd68016419a279",
+      "bytes": 3971123
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r1_combat edition_wolf.ltb",
+      "sha256": "9c28ce0568f6c7f0ef2d6e8ae86d0dfbb9e06cde6d46b2211043c55f19bcd9fb",
+      "bytes": 3560056
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r2_man_wolf.ltb",
+      "sha256": "edc1b08c451da68a2b3f6d5a801efe4f812d06674553d8c29339ab26d6df44f1",
+      "bytes": 3640003
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_3party_wolf_woman_ch.ltb",
+      "sha256": "af341cae7e345681203f02be9f4b60bf0aa1f8fbde3f8b3d394accdabf892ba5",
+      "bytes": 3855661
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_guardian_ch.ltb",
+      "sha256": "f5e1e35d3c95726ac8f47dd9200570697dd53c725731a243dbf7b96ae704deb7",
+      "bytes": 1751902
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_woman_r_ch.ltb",
+      "sha256": "97abdd066e44cdb93653e614081fd056db373a07966888b5403d787cba75b7fd",
+      "bytes": 3985566
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_se_radiationwolf_ch.ltb",
+      "sha256": "93085d674df4bae1c824f4a640a2f703a24b9aee9cdff083040d7434ca6d7d33",
+      "bytes": 2109507
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r1_wolf.ltb",
+      "sha256": "09ae380ec3e42173d4223e7c998268d91d27f53ce16a20cdbbd96baf5d3542e3",
+      "bytes": 3485256
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/3party_red.ltb",
+      "sha256": "e5fcdb1fb03fed92fb571a0fb4b107044f900587504a9efb8d8ae2bd99de49e8",
+      "bytes": 4938941
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/bluelegend_re_wolf.ltb",
+      "sha256": "090cbb60613c8077cf9f9ea6590a97750e7588b664cfab6d65773256ccb1bd0f",
+      "bytes": 3602625
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_woman_b_ch.ltb",
+      "sha256": "6feeba3088d8922956e8223dd35b7e6e95c405f06fe762e748402b898837d93b",
+      "bytes": 3985607
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_se_lightningwolf_ch.ltb",
+      "sha256": "4aa8079d33200c6b63ced5d92feb4e6b2ec12183210f58b339710364b79f8677",
+      "bytes": 2109506
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_power_ch.ltb",
+      "sha256": "b8612db22690c92ce8cbffff6aae0f8f175bfd13762b61dc1708b579a41df66a",
+      "bytes": 1916185
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_new_wolf_ch.ltb",
+      "sha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "bytes": 2088235
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_r_turkey_radiation.ltb",
+      "sha256": "49afc22e27251f2989970801af77cca0854876bfd5f386413467a53f5b907f09",
+      "bytes": 3508210
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_se_firewolf_ch.ltb",
+      "sha256": "26c40855d4d38c7972d4e9b355d1be836725c448443ab3b7614b17b779b29034",
+      "bytes": 2109507
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/3party_blue.ltb",
+      "sha256": "3b6e7e7ee60fb9c9d2b4dd3efcd24f0d9a02a87fe12de192149f446b6ac4be4f",
+      "bytes": 4123628
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/turkey_wolf.ltb",
+      "sha256": "0ae3f7c5c2530d792cd5240eaa51dabd0f5547bb990a8cdc1e677c7ef06fb3f6",
+      "bytes": 3508210
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_wraith.ltb",
+      "sha256": "02775da4048109d5bfa6635d64420fe388094da1638eca6c4f73f75b1ad64c8f",
+      "bytes": 4881752
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_se_icewolf_ch.ltb",
+      "sha256": "8a2d555e3fcf39d1a88ec88005647cfc26531a29a165e2aed7db7aa6c07af692",
+      "bytes": 2109506
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/r3_man_wolf.ltb",
+      "sha256": "91034058457aa9388d2545ddcaae3aa65a8e7b385ecd8639a85564946310bf8b",
+      "bytes": 3515801
+    },
+    {
+      "sourcePath": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_ghost_ch.ltb",
+      "sha256": "5612025aad3925c522eddba34e615c813eed368ceeddc92452b209efb58887f1",
+      "bytes": 2437714
+    }
+  ],
+  "archive": "pc-archive-inventory.json.gz",
+  "conversionTool": "tools/import_right_clips_019.py",
+  "baseGlbsModified": false
+}

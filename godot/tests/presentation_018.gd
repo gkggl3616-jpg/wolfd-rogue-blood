@@ -57,7 +57,7 @@ func run():
   model.free()
  var female=game.book.characters.filter(func(row):return row.id=="pair-model48")[0];ui.preview_wolf=false;ui.replace_preview(female)
  ensure(ui.preview_model.get_meta("menu_source_clip","")=="UI_Default_Idle","Female donor also resolves the original neutral menu clip")
- for dimensions in [Vector2i(1280,720),Vector2i(800,450),Vector2i(2160,992)]:
+ for dimensions in [Vector2i(1280,720),Vector2i(800,450),Vector2i(2160,992),Vector2i(2712,1220)]:
   root.size=dimensions;await frames();ui.safe_insets=Vector4(20,8,26,10);ui.refresh();await frames()
   var safe=ui.usable_rect();var transform=root.get_final_transform()
   for key in ui.links:

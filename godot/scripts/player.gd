@@ -35,6 +35,9 @@ var mutation_id="normal"
 var claw_trail
 var source_events
 var pending_strong=false
+var next_right_attack=false
+var extra_health=0
+const CLAW_SPEED=1.15
 var character_info:Dictionary:
 	get:return game.character_info if game!=null else {}
 var guard_remaining=0.0
@@ -126,6 +129,7 @@ func _ready():
 	source_events=Node.new();source_events.set_script(preload("res://scripts/actor_source_events.gd"));source_events.actor=self;add_child(source_events)
 
 func choose_animation_player():
+	preload("res://scripts/wolf_surface.gd").apply(wolf)
 	var model = wolf if is_wolf else human
 	var players = model.find_children("*", "AnimationPlayer", true, false)
 	anim = players[0] if not players.is_empty() else null
@@ -137,6 +141,7 @@ func choose_animation_player():
 
 func play_clip(clip):
 	if anim and anim.has_animation(clip) and current_clip != clip:
+		anim.speed_scale=CLAW_SPEED if clip in ["attack","attack_right"] and is_wolf else 1.0
 		anim.play(clip, 0.12)
 		current_clip = clip
 
@@ -235,6 +240,7 @@ func prepare_character(info):
 	return models
 
 func apply_prepared_character(models):
+	extra_health=0
 	reset_locomotion()
 	if is_instance_valid(roar_effect):roar_effect.stop()
 	for model in [human,wolf]:remove_child(model);model.queue_free()
@@ -255,6 +261,7 @@ func prepare_mutation(id):
 	if animations.is_empty() or not animations[0].has_animation("idle"):model.free();return null
 	return model
 func apply_mutation(model,id):
+	extra_health=0
 	var fraction=float(game.health)/maxi(1,game.max_health())
 	reset_locomotion();cancel_cloak();guard_remaining=0
 	if is_instance_valid(roar_effect):roar_effect.stop()
@@ -298,11 +305,17 @@ func apply_tattoos():
 	if is_instance_valid(roar_effect): roar_effect.bind_tattoos()
 
 func begin_roar():
-	if rolling or air_attacking or wall_holding: return false
-	if action_time > 0 or not anim or not anim.has_animation("roar"): return false
+	if not game.is_combat_active() or not is_wolf or rolling or air_attacking or wall_holding: return false
+	if not anim or not anim.has_animation("roar"): return false
 	var seconds = anim.get_animation("roar").length
 	if not roar_effect.begin(seconds): return false
-	reset_locomotion();play_clip("roar");action_time = seconds;return true
+	if is_instance_valid(source_events):source_events.restart_roar()
+	reset_locomotion();pending_strong=false;current_clip="";play_clip("roar");anim.seek(0,true);action_time = seconds;return true
+
+func restore_howl_health():
+	# Offline adaptation of the documented additional howling HP, not SP.
+	var tuning=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/howl.json"))
+	extra_health=int(tuning.normalExtraHealth if mutation_id=="normal" else tuning.mutationExtraHealth)
 
 func _exit_tree():
 	if is_instance_valid(fire_sound):
@@ -327,6 +340,7 @@ func switch_form(force=false):
 	if not is_wolf and not force and not game.tutorial.active and game.round_selection_enabled:
 		game.open_round_selection("wolf",true);return
 	var fraction=float(game.health)/maxi(1,game.max_health())
+	extra_health=0
 	is_wolf = not is_wolf
 	if is_instance_valid(source_events):source_events.reset()
 	game.game_audio.play_at("root/wt_snd/player/wolf_changetowolf.wav" if is_wolf else "root/wt_snd/player/wolf_changetohuman.wav",global_position,false)
@@ -570,6 +584,7 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
+	extra_health=0;next_right_attack=false
 	pending_strong=false
 	cancel_cloak();guard_remaining=0;mutation_energy=100
 	reset_locomotion();shot_cooldown=0;action_time=0;weapon_action_time=0;roll_cooldown=0;wall_hold_cooldown=0

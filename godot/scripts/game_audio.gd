@@ -8,8 +8,10 @@ var music: AudioStreamPlayer
 var music_key = ""
 var last_played = ""
 var suspended = false
+var master_limiter:AudioEffectHardLimiter
 
 func _ready():
+	master_limiter=AudioEffectHardLimiter.new();master_limiter.ceiling_db=-1.0;AudioServer.add_bus_effect(0,master_limiter)
 	for bus_name in BUSES.values():
 		if AudioServer.get_bus_index(bus_name) < 0:
 			AudioServer.add_bus()
@@ -67,7 +69,7 @@ func _process(_delta):
 	for audio in active_voices:
 		if is_instance_valid(audio):audio.stream_paused=suspended or (game.menu_open and not audio.get_meta("allow_menu",false))
 	if suspended: return
-	var key = "root/wt_snd/background/game.ogg" if game.running and not game.menu_open else "root/wt_snd/background/lobby.ogg"
+	var key=desired_music()
 	if key == music_key: return
 	music_key = key
 	music.stop()
@@ -76,7 +78,15 @@ func _process(_delta):
 		if music.stream is AudioStreamOggVorbis: music.stream.loop = true
 		music.play()
 
+func desired_music():
+	if game.running:return ""
+	var panel=game.library_panel if is_instance_valid(game.library_panel) else game.pc_panel
+	var page=panel.page if is_instance_valid(panel) else "lobby"
+	return "root/wt_snd/background/game.ogg" if page in ["room","create_room","room_settings"] else "root/wt_snd/background/lobby.ogg"
+
 func _exit_tree():
+	for i in range(AudioServer.get_bus_effect_count(0)-1,-1,-1):
+		if AudioServer.get_bus_effect(0,i)==master_limiter:AudioServer.remove_bus_effect(0,i)
 	if get_tree() and get_tree().node_added.is_connected(on_node_added):
 		get_tree().node_added.disconnect(on_node_added)
 	ui.stop()
@@ -111,9 +121,18 @@ func play_at(key,where=Vector3.ZERO,spatial=true,bus="WolfEffects",volume=-12.0,
 	audio.set_meta("allow_menu",allow_menu);audio.bus=bus;audio.volume_db=volume;audio.stream=load(entry.asset)
 	if spatial:audio.position=where;audio.max_distance=38
 	add_child(audio);active_voices.append(audio);audio.finished.connect(audio.queue_free);audio.play();return true
+func stop_actor_voice(actor,event=2):
+	for node in active_voices:
+		if is_instance_valid(node) and node.get_meta("voice_actor",0)==actor.get_instance_id() and node.get_meta("voice_event",-1)==event:
+			node.stop();node.queue_free()
 func voice(actor,event):
 	var keys=voice_keys(actor,event)
-	return false if keys.is_empty() else play_at(keys.pick_random(),actor.global_position,actor!=game.player,"WolfEffects",-12,event==0)
+	if keys.is_empty():return false
+	if event==2:stop_actor_voice(actor,event)
+	var played=play_at(keys.pick_random(),actor.global_position,actor!=game.player,"WolfEffects",-12,event==0)
+	if played and not game.test_mode:
+		active_voices[-1].set_meta("voice_actor",actor.get_instance_id());active_voices[-1].set_meta("voice_event",event)
+	return played
 func natural_sound(actor,weapon,slot):
 	var bank=gameplay_sources().weaponSounds.get(str(weapon),{}).get("sounds",[]);var index=int(slot)-10
 	if index<0 or index>=bank.size() or bank[index].key=="":return false

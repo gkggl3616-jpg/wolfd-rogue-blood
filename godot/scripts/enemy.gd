@@ -67,7 +67,9 @@ func _ready():
  var character=game.book.character_for_team(team)
  if character.is_empty():character=game.character_info
  character_info=character
- body=load(character[kind].asset).instantiate();body.scale*=1.6;body.rotation.y=PI;add_child(body);body_base=body.transform
+ body=load(character[kind].asset).instantiate()
+ if kind=="wolf":preload("res://scripts/wolf_surface.gd").apply(body)
+ body.scale*=1.6;body.rotation.y=PI;add_child(body);body_base=body.transform
  var players=body.find_children("*","AnimationPlayer",true,false)
  if not players.is_empty():
   anim=players[0]

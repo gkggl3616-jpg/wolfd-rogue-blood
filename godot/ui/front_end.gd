@@ -155,10 +155,11 @@ func build_header():
 	# Physical screen coordinates keep touch targets and text readable regardless
 	# of the legacy 1024x768 canvas's separate horizontal/vertical scales.
 	var safe=usable_rect();var pixels=get_viewport().get_final_transform().get_scale().abs()
-	var height=clampf(safe.size.y*pixels.y*0.10,64,76)
-	var strip=Control.new();strip.name="ResponsiveHeader";strip.position=safe.position;strip.scale=Vector2.ONE/pixels;strip.size=Vector2(safe.size.x*pixels.x,height);add_child(strip)
+	var density=maxf(1,minf(safe.size.x*pixels.x/1280.0,safe.size.y*pixels.y/640.0))
+	var height=72.0
+	var strip=Control.new();strip.name="ResponsiveHeader";strip.position=safe.position;strip.scale=Vector2.ONE*density/pixels;strip.size=Vector2(safe.size.x*pixels.x/density,height);add_child(strip)
 	var mark=ColorRect.new();mark.color=Color("222628");mark.size=strip.size;mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;strip.add_child(mark)
-	var header_virtual=height/pixels.y/canvas.scale.y
+	var header_virtual=height*density/pixels.y/canvas.scale.y
 	content.scale.y=(768-header_virtual)/(768-44)
 	content.position.y=header_virtual-44*content.scale.y
 	if page=="admin":content.position.y=header_virtual;content.scale.y=(768-header_virtual)/768
@@ -167,11 +168,13 @@ func build_header():
 		CameraFit.frame(preview_camera,preview_root,Vector2(preview_view.size))
 	var entries=[["Etkinlikler","events","event"],["Sıralama","ranking","ranking"],["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Klan","clan","pride"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Web","web","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
 	var wallet_x=clampf(strip.size.x*0.275,132,352);var wallet_width=clampf(strip.size.x*0.133,100,170)
-	var account_width=wallet_x+wallet_width+8;var slots=maxi(4,int((strip.size.x-account_width-12)/48))
+	var account_width=wallet_x+wallet_width+8;var slots=maxi(4,int((strip.size.x-account_width-12)/56))
 	if slots<12:
 		var priority=["Mağaza","Envanter","Geri","Hediyeler","Ayarlar","Etkinlikler","Sıralama","Klan","Arkadaşlar","Profil","Web"].slice(0,maxi(1,slots-1))
 		entries=entries.filter(func(entry):return entry[0] in priority)
-	var start_x=strip.size.x-8-(entries.size()+1)*48
+	var start_x=account_width+8
+	var pitch=(strip.size.x-8-start_x)/(entries.size()+1)
+	var icon_size=minf(height-8,pitch-4)
 	var rank=game.ranks.current(int(game.wallet.gp))
 	rank_background=Art.sprite(strip,rank.background,Vector2(8,(height-32)/2),Vector2(32,32));rank_image=Art.sprite(strip,rank.asset,Vector2(8,(height-32)/2),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Yerel rütbe"
 	last_rank_gp=-1
@@ -191,15 +194,15 @@ func build_header():
 	currency_values.jt.tooltip_text="JoyToken hesabı bağlı değil."
 	for i in range(entries.size()):
 		var entry=entries[i]
-		var node=Art.icon_button(strip,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(start_x+i*48,(height-44)/2),entry[0],func():
+		var node=Art.icon_button(strip,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(start_x+i*pitch,(height-icon_size)/2),entry[0],func():
 			if entry[1]=="back":go_back()
 			else:navigate(entry[1])
 		)
-		node.size=Vector2(44,44);node.stretch_mode=TextureButton.STRETCH_SCALE
+		node.size=Vector2.ONE*icon_size;node.stretch_mode=TextureButton.STRETCH_SCALE
 		links[entry[0]]=node
 		if entry[1]==page:node.modulate=Color("ffe36a")
 		if entry[1]=="gifts" and game.inbox.pending_count()>0:text(node,str(game.inbox.pending_count()),Vector2(25,0),Vector2(18,16),11,Art.GOLD)
-	links["Diğer"]=button(strip,"☰",Vector2(start_x+entries.size()*48,(height-44)/2),Vector2(44,44),choose_section)
+	links["Diğer"]=button(strip,"☰",Vector2(start_x+entries.size()*pitch,(height-icon_size)/2),Vector2.ONE*icon_size,choose_section)
 	var power_link=Button.new();power_link.hide();strip.add_child(power_link);power_link.pressed.connect(func():navigate("power"));links["Güç"]=power_link
 
 func choose_section():
@@ -321,7 +324,9 @@ func replace_preview(entry):
 	if is_instance_valid(preview_model):preview_root.remove_child(preview_model);preview_model.queue_free()
 	var resource=load(entry.wolf.asset if preview_wolf else entry.human.asset) as PackedScene
 	if resource==null:return
-	preview_model=resource.instantiate();preview_model.scale*=1.6;preview_root.add_child(preview_model)
+	preview_model=resource.instantiate()
+	if preview_wolf:preload("res://scripts/wolf_surface.gd").apply(preview_model)
+	preview_model.scale*=1.6;preview_root.add_child(preview_model)
 	preview_model.rotation.y=preview_angle
 	for mesh in preview_model.find_children("*","MeshInstance3D",true,false):
 		if str(mesh.name).to_lower().begins_with("tattoo"):mesh.hide()

@@ -74,7 +74,7 @@ func _process(_delta):
 		buttons[i].visible = direction_buttons
 	buttons[11].visible = game.player.is_wolf
 	buttons[4].visible = not game.hunt.active and int(game.local_room.get("mode",0))!=game.WOLF_BATTLE
-	buttons[5].visible=not game.player.is_wolf or game.equipment.has_wolf_ability()
+	buttons[5].visible=not game.player.is_wolf
 	buttons[5].get_child(0).text = "KURT KOŞ" if game.player.is_wolf else ("KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU")
 	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
 	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"
