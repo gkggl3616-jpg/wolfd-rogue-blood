@@ -52,7 +52,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.19 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.19 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · 0.20 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.20 geliştirme")
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
@@ -124,8 +124,8 @@ func room():
 	view.set_value("MaxChars","%d Oyuncu" % int(data.get("capacity",16)))
 	if training:
 		var rules=preload("res://scripts/source_match_rules.gd").new();rules.configure(data)
-		view.set_value("MissionObject",("%d Puan" % rules.goal) if rules.enabled else ("3 raunt · 4 rakip" if hunting else "10 hedef"))
-		view.set_value("RoundTime",("%d dakika" % (rules.seconds/60)) if rules.enabled else "90 saniye")
+		view.set_value("MissionObject",(("%d Tur" % rules.goal) if rules.round_based else ("%d Puan" % rules.goal)) if rules.enabled else ("3 raunt · 4 rakip" if hunting else "10 hedef"))
+		view.set_value("RoundTime",("%d:%02d" % [rules.seconds/60,rules.seconds%60]) if rules.enabled else "90 saniye")
 		if rules.enabled:view.set_value("GameMode",ui.game.map_catalog.mode_name(int(data.mode)))
 		ui.paragraph(ui.content,"Botlar: %s\nİnsan ve kurt · Hasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
 		var opponent=view.find_widget("BlueTeam" if data.team=="red" else "RedTeam")
@@ -190,7 +190,7 @@ func create_room():
 	var gallery=ui.button(ui.content,"▣",Vector2(677,461),Vector2(42,28),map_gallery);gallery.tooltip_text="Haritaları fotoğraflarıyla seç"
 	ui.room_goal=ui.map_picker(ui.content,Vector2(310,500),Vector2(95,26))
 	ui.room_time=ui.map_picker(ui.content,Vector2(410,500),Vector2(104,26))
-	ui.room_goal.item_selected.connect(func(i):ui.room_draft.pointGoal=ui.room_goal.get_item_id(i))
+	ui.room_goal.item_selected.connect(func(i):ui.room_draft.pointGoal=ui.room_goal.get_item_id(i);ui.room_draft.roundGoal=ui.room_goal.get_item_id(i))
 	ui.room_time.item_selected.connect(func(i):ui.room_draft.matchSeconds=ui.room_time.get_item_id(i))
 	var refresh_photo=func():view.find_widget("SelectMap").texture=Art.map_photo(ui.game.map_catalog,ui.room_map.get_selected_id())
 	var fill=func():
@@ -200,14 +200,14 @@ func create_room():
 		if source:
 			var rules=preload("res://scripts/source_match_rules.gd").new();var draft=ui.room_draft.duplicate();draft.mode=ui.room_mode.get_selected_id();rules.configure(draft)
 			for row in rules.record.goals:
-				ui.room_goal.add_item("%d Puan" % int(row.points),int(row.points))
-				if int(row.points)==rules.goal:ui.room_goal.select(ui.room_goal.item_count-1)
+				ui.room_goal.add_item(("%d Tur" % int(row.rounds)) if rules.round_based else ("%d Puan" % int(row.points)),int(row.rounds if rules.round_based else row.points))
+				if int(row.rounds if rules.round_based else row.points)==rules.goal:ui.room_goal.select(ui.room_goal.item_count-1)
 			for row in rules.record.times:
-				ui.room_time.add_item("%d dakika" % (int(row.seconds)/60),int(row.seconds))
+				ui.room_time.add_item("%d:%02d" % [int(row.seconds)/60,int(row.seconds)%60],int(row.seconds))
 				if int(row.seconds)==rules.seconds:ui.room_time.select(ui.room_time.item_count-1)
 			ui.room_draft.pointGoal=rules.goal;ui.room_draft.matchSeconds=rules.seconds
 		ui.room_map.clear()
-		if ui.game.is_local_mode(ui.room_mode.get_selected_id()):
+		if ui.game.is_local_mode(ui.room_mode.get_selected_id()) and not source:
 			ui.room_map.add_item("Eğitim Arenası",0)
 			for map in ui.game.map_catalog.offline_maps():ui.room_map.add_item(map.displayName,int(map.number))
 		else:
@@ -226,7 +226,7 @@ func create_room():
 	enable("Cancel",ui.go_back);ui.links.PLCancel=ui.links.Cancel;ui.links.PLExit=ui.links.Cancel
 	enable("Confirm",func():
 		if name.text.strip_edges().length()<2 or ui.room_map.item_count==0:ui.show_error("Oda adı ve moda bağlı harita gerekli.");return
-		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team,"botDifficulty":ui.room_difficulty.get_selected_metadata(),"playerForm":"wolf" if ui.room_form.selected==1 else "human","allyBots":ui.room_allies.selected,"enemyBots":ui.room_enemies.selected,"pointGoal":ui.room_goal.get_selected_id(),"matchSeconds":ui.room_time.get_selected_id()};ui.navigate("room")
+		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team,"botDifficulty":ui.room_difficulty.get_selected_metadata(),"playerForm":"wolf" if ui.room_form.selected==1 else "human","allyBots":ui.room_allies.selected,"enemyBots":ui.room_enemies.selected,"roundGoal":ui.room_goal.get_selected_id(),"pointGoal":ui.room_goal.get_selected_id(),"matchSeconds":ui.room_time.get_selected_id()};ui.navigate("room")
 	);ui.links.PLOK=ui.links.Confirm
 
 

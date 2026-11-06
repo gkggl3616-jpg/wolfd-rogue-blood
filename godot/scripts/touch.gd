@@ -27,7 +27,7 @@ func _ready():
 		for key in catalog:
 			var entry=catalog[key]
 			icon_textures[key]=Art.atlas(entry.asset,Rect2(entry.region[0],entry.region[1],entry.region[2],entry.region[3])) if entry.has("region") else Art.texture(entry.asset)
-	for item in [["fire", "ATEŞ"], ["jump", "ZIPLA"], ["crouch", "EĞİL"], ["reload", "ŞARJÖR"], ["transform", "DÖNÜŞ"], ["sprint", "KOŞ"], ["aim", "NİŞAN"], ["forward", "İLERİ"], ["backward", "GERİ"], ["left", "SOL"], ["right", "SAĞ"], ["roll", "TAKLA"]]:
+	for item in [["fire", "ATEŞ"], ["jump", "ZIPLA"], ["crouch", "EĞİL"], ["reload", "ŞARJÖR"], ["transform", "DÖNÜŞ"], ["sprint", "KOŞ"], ["aim", "NİŞAN"], ["forward", "İLERİ"], ["backward", "GERİ"], ["left", "SOL"], ["right", "SAĞ"], ["roll", "TAKLA"],["interact","BOMBA"]]:
 		var button = TouchTarget.new()
 		button.action = item[0]
 		add_child(button)
@@ -48,6 +48,7 @@ func _ready():
 				if game.player.can_wolf_run():game.player.wolf_run_armed=not game.player.wolf_run_armed
 			else:game.player.normal_run_toggled = not game.player.normal_run_toggled
 	)
+	icon_textures.interact=Art.texture("wt_interface/play/bomb_setup.dtx")
 	resize()
 
 func can_control():
@@ -64,14 +65,18 @@ func resize():
 		buttons[i].position = last_size * locations[i]
 	for i in range(4):
 		buttons[i+7].position = center + [Vector2(0,-70), Vector2(0,70), Vector2(-70,0), Vector2(70,0)][i] * ui_scale
+	buttons[12].position=last_size*Vector2(0.89,0.55)
 	buttons[11].position = last_size * Vector2(0.65, 0.91)
-	for button in buttons:button.scale = Vector2.ONE * ui_scale
+	for button in buttons:
+		var custom=preload("res://scripts/control_layout.gd");var factor=custom.scale_for(game.book.control_layout,button.action)
+		button.scale=Vector2.ONE*ui_scale*factor;button.position=custom.center(game.book.control_layout,button.action,button.position,last_size,38*ui_scale*factor)
 	queue_redraw()
 
 func _process(_delta):
 	visible = can_control()
 	for i in range(7, 11):
 		buttons[i].visible = direction_buttons
+	buttons[12].visible=game.destruction.enabled and game.health>0
 	buttons[11].visible = game.player.is_wolf
 	buttons[4].visible = not game.hunt.active and int(game.local_room.get("mode",0))!=game.WOLF_BATTLE
 	buttons[5].visible=not game.player.is_wolf
@@ -152,7 +157,7 @@ func _unhandled_input(event):
 			continue
 		if button.action in ["forward", "backward", "left", "right"] and not direction_buttons:
 			continue
-		if event.position.distance_to(button.position) <= (38 if button.action == "fire" else 34) * ui_scale:
+		if event.position.distance_to(button.position) <= (38 if button.action == "fire" else 34) * button.scale.x:
 			var was_held = button.action in action_fingers.values()
 			action_fingers[event.index] = button.action
 			if not was_held:
@@ -184,7 +189,7 @@ func _draw():
 	for button in buttons:
 		if not button.visible:
 			continue
-		var radius = (32 if button.action == "fire" else 27) * ui_scale
+		var radius = (32 if button.action == "fire" else 27) * button.scale.x
 		var color = Color(0.04,0.05,0.06,0.64)
 		if Input.is_action_pressed(button.action) or (button.action == "sprint" and (game.player.wolf_run_armed if game.player.is_wolf else game.player.normal_run_toggled)):
 			color = color.lightened(0.35)
@@ -193,23 +198,23 @@ func _draw():
 		if button.action == "transform":border = Color("b19a38")
 		if button.action == "aim" and game.player.is_wolf:border=Color("bd944b")
 		if button.action == "sprint" and game.player.is_wolf:border=Color("7ecbe2")
-		draw_arc(button.position,radius,0,TAU,48,border,1.4*ui_scale,true)
+		draw_arc(button.position,radius,0,TAU,48,border,1.4*button.scale.x,true)
 		if button.action in ["forward","backward","left","right"]:
 			var direction={"forward":Vector2.UP,"backward":Vector2.DOWN,"left":Vector2.LEFT,"right":Vector2.RIGHT}[button.action]
 			var across=Vector2(-direction.y,direction.x)
-			draw_colored_polygon(PackedVector2Array([button.position+direction*13*ui_scale,button.position-direction*7*ui_scale+across*9*ui_scale,button.position-direction*7*ui_scale-across*9*ui_scale]),Color("d6dddd"))
+			draw_colored_polygon(PackedVector2Array([button.position+direction*13*button.scale.x,button.position-direction*7*button.scale.x+across*9*button.scale.x,button.position-direction*7*button.scale.x-across*9*button.scale.x]),Color("d6dddd"))
 		if button.get_child(1).texture!=null:continue
 		if button.action == "fire":
 			if game.player.is_wolf:
 				for i in range(3):
-					var at = button.position + Vector2(-12+i*8,-8)*ui_scale
-					draw_line(at,at+Vector2(9,17)*ui_scale,Color(0.9,0.92,0.94,0.9),3*ui_scale,true)
+					var at = button.position + Vector2(-12+i*8,-8)*button.scale.x
+					draw_line(at,at+Vector2(9,17)*button.scale.x,Color(0.9,0.92,0.94,0.9),3*button.scale.x,true)
 			else:
-				draw_arc(button.position,11*ui_scale,0,TAU,24,Color(0.9,0.92,0.94,0.9),1.5*ui_scale,true)
+				draw_arc(button.position,11*button.scale.x,0,TAU,24,Color(0.9,0.92,0.94,0.9),1.5*button.scale.x,true)
 				for i in range(4):
 					var dir = Vector2.from_angle(PI*i/2)
-					draw_line(button.position+dir*7*ui_scale,button.position+dir*16*ui_scale,Color.WHITE,1.5*ui_scale,true)
+					draw_line(button.position+dir*7*button.scale.x,button.position+dir*16*button.scale.x,Color.WHITE,1.5*button.scale.x,true)
 		elif button.action == "transform":
 			for offset in [Vector2(-8,-6),Vector2(-3,-11),Vector2(4,-11),Vector2(9,-5)]:
-				draw_circle(button.position+offset*ui_scale,3*ui_scale,Color("d8c063"))
-			draw_circle(button.position+Vector2(0,5)*ui_scale,7*ui_scale,Color("d8c063"))
+				draw_circle(button.position+offset*button.scale.x,3*button.scale.x,Color("d8c063"))
+			draw_circle(button.position+Vector2(0,5)*button.scale.x,7*button.scale.x,Color("d8c063"))

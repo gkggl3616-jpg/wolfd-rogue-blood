@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "normalExtraHealth": 200,
+  "schemaVersion": 2,
+  "normalExtraHealth": 99,
   "mutationExtraHealth": 99,
   "sources": [
     {
@@ -16,5 +16,5 @@
       "fact": "Historic basic wolf shield of 99 HP, rechargeable by roaring."
     }
   ],
-  "implementation": "Explicit offline adaptation: a completed howl replenishes (never adds) 200 normal-form or 99 mutation-form extra HP. Damage consumes extra HP first. Interrupted/restarted howls grant nothing. Clears on transformation, respawn, mutation and character replacement. These caps are not certified values for every PC variant. No unverified howl speed multiplier."
+  "implementation": "Offline common 99-YP capacity, progressive refill over one complete source roar animation; 1 YP/second decay slowed by source retention percent. SP is separate: 1000 start/2000 cap, +100 per personal kill, 100 per nonstarter weapon in selected loadout or nondefault mutation. Standard loadout free. These shared numerical rules are explicit mobile tuning; original variant caps, SP rewards/costs and decay constants are not fully decoded."
 }

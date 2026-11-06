@@ -11,8 +11,10 @@ var textures_enabled = true
 class SourceLabel extends Label:
 	func _get_minimum_size():return Vector2.ZERO
 class SourceInput extends LineEdit:
+	func _has_point(point):return editable and Rect2(Vector2.ZERO,size).has_point(point)
 	func _get_minimum_size():return Vector2.ZERO
 class SourceChoice extends OptionButton:
+	func _has_point(point):return not disabled and Rect2(Vector2.ZERO,size).grow(12).has_point(point)
 	func _get_minimum_size():return Vector2.ZERO
 
 class SourceSlider extends Range:
@@ -25,7 +27,7 @@ class SourceSlider extends Range:
 		focus_mode = Control.FOCUS_ALL
 		value_changed.connect(func(_value):queue_redraw())
 	func _has_point(point):
-		return Rect2(Vector2(0,-12),Vector2(size.x,size.y+24)).has_point(point)
+		return editable and Rect2(Vector2(0,-26),Vector2(size.x,size.y+52)).has_point(point)
 	func _draw():
 		if background:draw_texture_rect(background,Rect2(Vector2.ZERO,size),false)
 		var weight=clampf((value-min_value)/maxf(0.001,max_value-min_value),0,1)
@@ -136,7 +138,7 @@ func create_widget(record):
 			node = DigitDisplay.new();node.texture = source;node.cell = dimensions;node.step = float(field(record,"numberheightspacing",dimensions.y));node.spacing = float(field(record,"numberspacing",0));node.alignment = int(field(record,"numberalign",1))
 			var area = rect(field(record,"numberrect",[]));at = area.position;dimensions = area.size
 		"button":
-			node = TextureButton.new();node.ignore_texture_size = true;node.stretch_mode = TextureButton.STRETCH_SCALE;node.disabled = true
+			node = preload("res://ui/touch_button.gd").new();node.ignore_texture_size = true;node.stretch_mode = TextureButton.STRETCH_SCALE;node.disabled = true
 			node.texture_normal = atlas(source,rect(field(record,"buttondefaultrect",[0,0,dimensions.x,dimensions.y])))
 			node.texture_hover = atlas(source,rect(field(record,"buttonoverrect",[])))
 			node.texture_pressed = atlas(source,rect(field(record,"buttonclickrect",[])))
@@ -181,7 +183,7 @@ func create_widget(record):
 	node.name = str(record.name).validate_node_name();node.position = at;node.size = dimensions
 	node.set_meta("source_record",record);node.set_meta("source_layout",layout_id);node.set_meta("adapter",adapter)
 	if int(field(record,"fontfaceindex",0))==51:node.set_meta("font_binding_pending",51)
-	if adapter in ["image","text","digits","group","line"]: node.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if adapter in ["image","text","digits","group","line"] or adapter not in ["button","input","choice","slider","list","text_area","color","dialog"]: node.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	else: node.mouse_filter = Control.MOUSE_FILTER_STOP
 	if adapter != "dialog": node.visible = field(record,"renderstate",true) != false
 	return node

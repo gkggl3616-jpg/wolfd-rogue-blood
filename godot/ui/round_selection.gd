@@ -20,6 +20,7 @@ func build():
 		var label=Art.label("",Vector2(218,29),16,Color("c6a769"));label.position=Vector2(12,4);button.add_child(label)
 		var cost=Art.label("0",Vector2(25,28),15,Color("c6a769"));cost.position=Vector2(211,4);button.add_child(cost)
 		if kind=="human":
+			cost.text=str(game.loadout_sp_cost(value));button.disabled=game.loadout_sp_cost(value)>game.match_sp
 			label.text=game.book.loadout_names[value];var lines=[]
 			for slot in ["primary","secondary_primary","pistol","knife","grenade"]:
 				var entry=game.book.weapon(game.book.loadouts[value].get(slot,""))
@@ -27,7 +28,7 @@ func build():
 			var copy=Art.label("\n".join(lines),Vector2(223,145),14,Color("c6a769"));copy.position=Vector2(10,40);button.add_child(copy)
 			button.pressed.connect(func():game.choose_round_loadout(value))
 		else:
-			var profile=game.mutations.profile(value);label.text=profile.name
+			var profile=game.mutations.profile(value);label.text=profile.name;cost.text="0" if value=="normal" else "100";button.disabled=value!="normal" and game.match_sp<100
 			var icon="res://assets/mutations/normal-blue.png" if value=="normal" else game.mutations.model(value,game.local_room.get("team","blue")).get("portrait","")
 			Art.sprite(button,icon,Vector2(116,37),Vector2(123,151)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			for row in range(4):
@@ -38,7 +39,7 @@ func build():
 				var ability=Art.label("SAVUNMA" if profile.guard else "SAKLAN",Vector2(105,22),12,Color("bba982"));ability.position=Vector2(10,159);button.add_child(ability)
 			button.pressed.connect(func():game.choose_round_mutation(value))
 	var standard=Art.button(canvas,"Standart" if kind=="human" else "Mevcut seçimle devam",Vector2(337,573),Vector2(350,34),func():game.choose_round_loadout(0) if kind=="human" else game.finish_round_selection())
-	standard.tooltip_text="Yerel maçta seçim SP harcamaz."
+	standard.tooltip_text="Standart ekipman ücretsiz. Diğer setlerin SP bedeli yerel uyarlamadır."
 func _process(delta):
 	visible=game.running and not game.menu_open
 	if not game.running:game.close_round_selection();return

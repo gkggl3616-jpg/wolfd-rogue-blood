@@ -7,7 +7,7 @@
       "path": "docs/review/pc-reference/entry-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ace915cb85b4f511a055694d9891e3836e3702e24a9fefa8825bd48249afb4d2"
+      "sha256": "77a255028a1334c437bab3a1ba7b878642198eb0c03dd0932bc1eccc3678c492"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/pc-reference/second-password-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "45eb74e0668b30eb0f9754b56ae80326b2ef2e0707a8eabf866375fb4fe9fcac"
+      "sha256": "bb3112592db8b4c8775eb847c0147c8672500797b574615735a111c9b7630a96"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/pc-reference/wolf-tattoo-slots-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ad41e0e841ab798440bec1414886502cf038debe26a1956cf0dcc9f646c95fba"
+      "sha256": "ee05e0e498c097be17b2e6ae5a7d0105ffdbddd75a3233d5bba8c7059da67f9b"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/pc-reference/box-reward-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "390f6c5cb23351d51ec58b6ab6fe8019a8db6515ebe1e9590ed1676587f48935"
+      "sha256": "5ce1d5eb17010f5b11114939f0c5188b9ae516fe8e69713af9ad0ef69d446170"
     },
     {
       "height": 720,
@@ -95,7 +95,7 @@
       "path": "docs/review/pc-reference/hunt-wolf-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fc78210aed2c7e95bf871e8df8357ae90a7e50592eccebb7b864b397c6201063"
+      "sha256": "bf9f30b55b11ecc18bbb02991ea71e2a71959642a61d2f565573ec53c7c31b55"
     },
     {
       "height": 720,
@@ -103,7 +103,7 @@
       "path": "docs/review/pc-reference/match-scoreboard-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b9eaf1b327b31eb5a0583a0617e13f480db2f7d4c344b7b9849f464bac9af261"
+      "sha256": "042232c191f0b9a6522431425b595cfcbc23a074c760d7c58933ccbc61edf6b1"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/pc-reference/tutorial-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "06de46d9de4e277ffb719d31aaba21a7ad6843bc120a0097dc425933c5a477de"
+      "sha256": "970e176eedca06985fdfa08d9d30a759b80b55c0f2fb3ea48f18965b82af98c7"
     },
     {
       "height": 720,
@@ -119,7 +119,7 @@
       "path": "docs/review/pc-reference/sniper-scope-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4ebaecd856ec620683d4b03bbea019622ed83ba299dc7e3115565d9f2137147f"
+      "sha256": "d53c3b5ef8e5eef0e26c01c843526d98c7414f455000af9fc240b1d0d19323a3"
     },
     {
       "height": 768,
@@ -134,5 +134,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureLocalCash": 1000,
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1"
 }

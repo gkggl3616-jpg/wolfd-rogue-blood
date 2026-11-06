@@ -54,7 +54,7 @@
       "path": "docs/review/update-018/turkish-create-room-018.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7fe6dee9113729ac6bc504e0e71d63b099d4646790fec5db91c404d3bf6b9d4a"
+      "sha256": "c0dcdd723e1baac6f1de0a8f3083d7e5af0525524a112d50fdc3f5ed54fe82ae"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-018/original-map-gallery-018.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b42d77afe79e60aa3231abf0d87d3f722e5cf5c173c2353435efdcbab72a72b2"
+      "sha256": "ec4b90c96c6c2828ab317cecd06a7afe660924958e66917d95176ac505bebaa4"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-018/source-room-settings-018.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f37e1961557a41864f2d35f86cde7491d46c7400baeaaa129c1f832f8d9c7228"
+      "sha256": "ae6d464a95f3b815903bbaae408e2802998c47e0e0b34a2c7c9c360b7d51712d"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-018/native-room-parameters-018.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4d2d633c28c115698b08a137e213d196b9ddd7837ee24c04955beddab2332ffa"
+      "sha256": "82802b2ee9ddc48226f5476ed5dbf22a1137253e5e81605b2a9ad74282bba9e4"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-018/source-room-invite-018.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8cbc759d42ae7e29d98ff2cfff17cdf8afddbeb0d3dd1f7fd6eca138c90918c8"
+      "sha256": "3f6fda8c56aa4ee815d4aad6b1c998abee34cb10a69e607bdf5dc623eee088d3"
     },
     {
       "height": 720,
@@ -117,5 +117,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureCatalogueUnlocked": true,
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1"
 }

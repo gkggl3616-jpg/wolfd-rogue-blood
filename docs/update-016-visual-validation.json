@@ -14,7 +14,7 @@
       "path": "docs/review/update-016/large-wolf-inventory-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b2211dcc3e745f21be2e90315d52dfd58d77c666e08fa0a2a45ff4b2d81a6212"
+      "sha256": "6e86752700c75cb46a52ee48062f68af389e52a2f4bd752767fb40496ab7cb4c"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-016/team-rosters-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "db9a6f0db8d3144ae076a02c2159434965752a259932ac6168c084e32a0e096c"
+      "sha256": "648f35933d0f881a7f7bb79eb244195e4466e0e30c886dcbc2f17d58df1e0bf4"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-016/allied-bot-match-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "37ac53d5641422d855fbb982cf67e866d5fced1ccc568aac06f794c441a1dfb0"
+      "sha256": "ac5e1ad0e0bcddd8572bda4db3a611469757631f56364d37af4bf865ae56bf49"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-016/tattoo-before-roar-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4745686755cb68452f503adda28e16b7cd9d4ad98e7d1c71f9b7c2926215814c"
+      "sha256": "1b4351a16aeef545bdec8175737b4053b74df280c4d22304aad7f55133e7b497"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-016/howling_fire_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fd43fc638155aaa323e8f8752c567b1f012c7b5e8ff5c13b4abf18a885e17898"
+      "sha256": "a21f831bed89f0940fc6138e219b5d68203b5c4076c3d2adb54a21afdbf61db1"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-016/howling_ice_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0b60408c7fbc20373b7674270228b9210d7e7dc704488f8c3024c059c4c448cf"
+      "sha256": "8a54f11485d8b31c84e3b80b781b6f02b38844285dc47803b62b4f4007c57887"
     },
     {
       "height": 720,
@@ -78,12 +78,12 @@
       "path": "docs/review/update-016/howling_lightning_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d58e48b03229eb816fd741c6a582cc7195c7005f21c5adf32f46588bda23050d"
+      "sha256": "bcf902054f4658f37c923e6471540d3bdfe027c603a9bf070f8c6fbe30044884"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureActors": true,
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1"
 }

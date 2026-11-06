@@ -15,6 +15,9 @@ class EquipmentDouble extends RefCounted:
 
 class GameDouble extends RefCounted:
 	var equipment=EquipmentDouble.new()
+	var book={"control_layout":{}}
+	var destruction={"enabled":false}
+	var health=100
 	var running = true
 	var menu_open = false
 	var application_suspended = false
@@ -59,7 +62,7 @@ func drag(index, point, delta):
 
 func run():
 	root.size = Vector2i(1280, 720)
-	for action in ["fire", "jump", "crouch", "reload", "transform", "sprint", "aim", "forward", "backward", "left", "right", "roll"]:
+	for action in ["fire", "jump", "crouch", "reload", "transform", "sprint", "aim", "forward", "backward", "left", "right", "roll","interact"]:
 		if not InputMap.has_action(action): InputMap.add_action(action)
 	game = GameDouble.new()
 	touch = Touch.new();touch.game = game;root.add_child(touch)

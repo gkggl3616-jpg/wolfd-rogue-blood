@@ -1,10 +1,12 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.19.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.20.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
 
-[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.19.0-offline/WolfRogueBlood-0.19.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
+[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
-[0.19 kurt model çizimi, büyük menü/hediye resimleri, çift pençe ve kükreme](docs/PC_REFERANS_019.md)
+[0.20 dövme resimleri, düzenlenebilir kontroller, YP/SP ve Yıkım turları](docs/PC_REFERANS_020.md)
+
+[0.19 kurt çizimi ve çift pençe](docs/PC_REFERANS_019.md)
 
 [0.18 özgün harita fotoğrafları, OG ve 206 kaynak set](docs/PC_REFERANS_018.md)
 

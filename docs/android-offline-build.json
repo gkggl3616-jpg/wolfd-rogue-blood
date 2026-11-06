@@ -1,8 +1,8 @@
 {
   "zipIntegrityVerified": true,
-  "entries": 54321,
+  "entries": 54330,
   "runtimeReferencesResolved": 23396,
-  "cataloguesVerified": 37,
+  "cataloguesVerified": 38,
   "nativeLibraries": [
     {
       "abi": "arm64-v8a",
@@ -36,10 +36,10 @@
     }
   ],
   "package": "com.wolfrogue.blood.offline",
-  "versionCode": 19,
-  "versionName": "0.19.0-offline",
-  "bytes": 1553559799,
-  "sha256": "7ac9b5992f54e143d993cd811fb592f2ead16dbe70e98b18afffe182d48d081f",
+  "versionCode": 20,
+  "versionName": "0.20.0-offline",
+  "bytes": 1553638330,
+  "sha256": "f2cba63574cca01ddd25c30596f1b0d963334b8cc5142cb3df53021345936f2e",
   "signerCertificateSha256": "ac83df14f9d2e77a5b68fb9e1b24ecd2f1363abd35917632189f1c8ef6761b91",
   "minimumAndroidSdk": 24,
   "targetAndroidSdk": 36,
@@ -52,9 +52,9 @@
   "fullOriginalGamePort": false,
   "physicalAndroidDeviceTested": false,
   "androidEmulatorTested": false,
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5",
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1",
   "scope": "Local bot matches, imported collection and PC-source UI; real servers excluded.",
   "buildType": "signed-offline-release",
   "apkProduced": true,
-  "artifact": "WolfRogueBlood-0.19.0-offline.apk"
+  "artifact": "WolfRogueBlood-0.20.0-offline.apk"
 }

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -30,6 +30,10 @@ def check(root=ROOT):
                     blockers.append('Visual evidence missing or changed: '+capture.get('name', '?'))
     update=json.loads((root/'docs/mobile-019-validation.json').read_text()) if (root/'docs/mobile-019-validation.json').is_file() else {}
     if not update.get('passed') or update.get('checks',0)<30:blockers.append('Current model, gift, header, claw, repeated howl and audio regressions are incomplete')
+    update20=json.loads((root/'docs/mobile-020-validation.json').read_text()) if (root/'docs/mobile-020-validation.json').is_file() else {}
+    if not update20.get('passed') or update20.get('checks',0)<43:blockers.append('Control arrangement, real close taps, SP/YP, bomb and turn regressions are incomplete')
+    sites20=json.loads((root/'docs/destruction-sites-020-validation.json').read_text()) if (root/'docs/destruction-sites-020-validation.json').is_file() else {}
+    if not sites20.get('passed') or len(sites20.get('sites',[]))!=12:blockers.append('All twelve source bomb areas must pass navigation admission')
     catalogue = root/'godot/assets/maps/offline.json'
     entries = json.loads(catalogue.read_text()) if catalogue.is_file() else []
     if len(entries) != 34 or len({int(row['number']) for row in entries}) != 34:

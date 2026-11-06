@@ -75,6 +75,7 @@ func _ready():
 	clip_contents=true
 	theme = Art.theme()
 	resized.connect(schedule_refresh)
+	if page=="Dövmeler":preview_angle=PI
 	refresh()
 
 func schedule_refresh():
@@ -106,6 +107,8 @@ func refresh():
 	if not overlay and page!="entry":
 		var clean_top=ColorRect.new();clean_top.size=Vector2(1024,94);clean_top.color=Color.BLACK;clean_top.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(clean_top)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
+	if page=="controls":
+		var editor=preload("res://ui/control_editor.gd").new();editor.ui=self;add_child(editor);building=false;return
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
 	if page not in ["entry","pause"] and not (page=="Ayarlar" and overlay):build_header()
 	text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
@@ -148,7 +151,7 @@ func button(parent,title,at,dimensions,callback,enabled=true):
 
 func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 	trace(source)
-	var node = Layout.new();parent.add_child(node);node.configure(source,dimensions);node.position = at
+	var node = Layout.new();parent.add_child(node);node.configure(source,dimensions);node.position = at;call_deferred("raise_close_controls")
 	return node
 
 func build_header():
@@ -335,6 +338,11 @@ func replace_preview(entry):
 		for animation in preview_model.find_children("*","AnimationPlayer",true,false):
 			if animation.has_animation("idle"):animation.play("idle");animation.advance(0)
 	CameraFit.frame(preview_camera,preview_root,Vector2(preview_view.size))
+
+func raise_close_controls():
+	for node in find_children("*","TextureButton",true,false):
+		if node.has_method("close_control") and node.close_control() and not node.disabled and node.get_parent()!=self:
+			var transform=node.get_global_transform();node.reparent(self,true);node.scale=transform.get_scale();node.position=transform.origin
 
 func preview_input(event):
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:preview_drag=event.pressed;preview_container.accept_event()

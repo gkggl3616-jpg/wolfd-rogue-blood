@@ -28,6 +28,7 @@ var power_buttons=[]
 var power_counts=[]
 var power_icons=[]
 var extra_hp:Label
+var sp_label:Label
 var slots=[]
 var slot_icons=[]
 var slot_ids=[]
@@ -68,6 +69,7 @@ func _ready():
 	# self_modulate hides only the plate, not its health-number child.
 	health_view.find_widget("HPBack").self_modulate.a=0
 	health_view.find_widget("HealthPoint").modulate=Color("f32639")
+	sp_label=Art.label("",Vector2(180,22),14);pc_layer.add_child(sp_label)
 	extra_hp=Art.label("",Vector2(110,18),12,Color("c9e8f0"));extra_hp.position=Vector2(0,45);health_view.add_child(extra_hp)
 	weapon_view=part("interface/hudweapon",Vector2(116,64),["CurrentBullet","MaxBullet"])
 	weapon_name=Art.label("",Vector2(260,20),12);weapon_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;pc_layer.add_child(weapon_name)
@@ -125,6 +127,7 @@ func arrange():
 	var factor=dimensions.y/645.0
 	pc_layer.scale=Vector2.ONE*factor;pc_layer.size=dimensions/factor
 	var native=pc_layer.size
+	sp_label.position=Vector2(native.x-170,native.y-125)
 	health_view.position=Vector2(24,native.y-71)
 	weapon_view.position=Vector2(native.x-143,native.y-91);weapon_name.position=Vector2(native.x-287,native.y-25)
 	score_view.position=Vector2(native.x*0.5-156,4)
@@ -136,7 +139,17 @@ func arrange():
 	guide.position=Vector2(native.x*0.5-350,native.y-150)
 	for i in range(slots.size()):slots[i].position=Vector2(native.x*0.5-104+i*52,native.y-48)
 	for i in range(power_buttons.size()):power_buttons[i].position=Vector2(native.x*0.37+i*65,native.y-123)
+	for row in layout_targets():
+		var key=row[0];var button=row[1];var custom=preload("res://scripts/control_layout.gd");var weight=custom.scale_for(game.book.control_layout,key)
+		var base=(button.position+button.size/2)*factor;button.scale=Vector2.ONE*weight
+		button.position=custom.center(game.book.control_layout,key,base,dimensions,maxf(button.size.x,button.size.y)*weight*factor/2)/factor-button.size*weight/2
 	cross.position=dimensions*0.5-Vector2(16,16)
+
+func layout_targets():
+	var rows=[["menu",menu],["inventory",inventory],["scoreboard",scoreboard_button]]
+	for i in range(slots.size()):rows.append(["slot_"+slot_ids[i],slots[i]])
+	for i in range(power_buttons.size()):rows.append([["support","energy"][i],power_buttons[i]])
+	return rows
 
 func refresh_from_game():
 	visible=game.running and not game.menu_open
@@ -147,13 +160,16 @@ func refresh_from_game():
 		var item=game.power_item(id);button.tooltip_text=item.get("name","")
 		if power_icons[i].get_meta("power_id","unset")!=id:
 			var region=item.get("iconRegion",[0,0,210,75]);power_icons[i].texture=Art.atlas(item.get("icon",""),Rect2(region[0],region[1],region[2],region[3]));power_icons[i].set_meta("power_id",id)
+	sp_label.text="SP  %d" % game.match_sp
+	if game.destruction.enabled:
+		guide.visible=true;guide.text=("Tur %d · %d / %d · Hedef %d" % [game.destruction.number,game.destruction.wins.red,game.destruction.wins.blue,game.destruction.limit])+((" · Bomba %d" % ceili(game.destruction.fuse)) if game.destruction.planted else " · Bomba için E / BOMBA basılı tut")
 	extra_hp.text="YP  %d" % game.player.extra_health if game.player.is_wolf else ""
 	cross.visible=visible and not game.player.is_wolf
 	scope.visible=visible and game.player.is_scoped();cross.visible=cross.visible and not scope.visible
 	refresh_feed()
-	guide.visible=game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
-	guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled]
+	guide.visible=game.destruction.enabled or game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
+	if not game.destruction.enabled:guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled,game.destruction.wins.duplicate(),game.destruction.number]
 	if state==last_state:return
 	last_state=state
 	health_view.set_value("HealthPoint",game.health)
@@ -163,6 +179,8 @@ func refresh_from_game():
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
 	var blue=game.local_room.get("team","blue")=="blue"
 	score_view.set_value("RedTeamScore",game.team_score("red"));score_view.set_value("BlueTeamScore",game.team_score("blue"));score_view.set_value("Mode",("Ölüm Oyunu   %d Puan" % game.target_score()) if game.match_rules.enabled else "Yerel Eğitim   10 Puan")
+	if game.destruction.enabled:
+		score_view.set_value("Mode","Yıkım · %d Tur" % game.destruction.limit);score_view.set_value("RedTeamScore",game.destruction.wins.red);score_view.set_value("BlueTeamScore",game.destruction.wins.blue)
 	if game.hunt.active:
 		score_view.set_value("RedTeamScore",game.hunt.round_kills);score_view.set_value("BlueTeamScore",game.LocalHunt.TARGET);score_view.set_value("Mode","Kurt Avı · %d/3" % game.hunt.round_number)
 	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE:score_view.set_value("Mode","Kurt Savaşı")

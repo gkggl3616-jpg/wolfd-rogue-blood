@@ -54,7 +54,7 @@
       "path": "docs/review/update-019/full-card-character-gifts-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "941f13ba9cabc2c40eea340c900534e77f55eca35e5444a146eabf2ac6355817"
+      "sha256": "3f897f7bd85b038a10b47250af3c275bbac04a91b94d92279b47fee2769614dd"
     },
     {
       "height": 450,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-019/wolf-hud-powers-run-button-removed-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "369d81591e2cf328efc939326949ef3be3bde0086db84d35466687e9b0895aa3"
+      "sha256": "510601a7f2dc105708a2aa99a81f6dbd029692c9644541592c67af69cb2acf88"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-019/original-left-claw-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "43e8c4b18c24ca14eb0d221d468c4d3486662157210dfadeb077624913a1f05b"
+      "sha256": "f6a0b0523fdaffce781b79efedf912de84f38d440c4be724e8711bdfbac148cf"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-019/original-right-claw-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e6d06d4bf899f285baf57ceac820e45b3339feef27a97dd567cdfa9d032c4742"
+      "sha256": "ffdd3c00e6c35c62440c983e2860cd62832dc51824bc54798d754b87fcdc7ec8"
     },
     {
       "height": 720,
@@ -102,7 +102,7 @@
       "path": "docs/review/update-019/restarted-source-howl-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1d546d0fd789108b300dd9b851d7a59aa1914b9a742d1641323a0fc970169aeb"
+      "sha256": "e28f5d9c109a22541e9aeb2cac535a868b0de743f1accc6d99b769d5fbf03e9e"
     },
     {
       "height": 720,
@@ -110,7 +110,7 @@
       "path": "docs/review/update-019/howl-extra-health-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8cccac163e69307032755de7737c1c8b05018a0a6d95bf0bd353eda2b09d4dc7"
+      "sha256": "07d21f0819e083771969e7ce897b8fd26f728c56e91ce8b508a66c7ecf915486"
     }
   ],
   "failures": 0,
@@ -118,5 +118,5 @@
   "rendering": "gl_compatibility",
   "testFixtureCatalogueUnlocked": true,
   "testFixtureGifts": true,
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1"
 }

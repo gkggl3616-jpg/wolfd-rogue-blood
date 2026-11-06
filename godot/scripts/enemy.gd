@@ -182,7 +182,8 @@ func think():
    if opponent==game.player and game.player.is_wolf and distance<4 and game.player.action_time>0 and randf()<float(profile.dodgeChance):begin_dodge()
  else:
   state="patrol"
-  if patrol_points.is_empty():destination=global_position
+  if game.destruction.enabled:destination=game.destruction.objective(self)
+  elif patrol_points.is_empty():destination=global_position
   elif global_position.distance_to(destination)<1.0:
    patrol_index=(patrol_index+1)%patrol_points.size();destination=patrol_points[patrol_index]
 
@@ -388,6 +389,7 @@ func damage(amount,context={}):
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
  if health<=0:
+  if game.destruction.enabled:game.destruction.actor_dead(team)
   game.game_audio.voice(self,0)
   collision_layer=0;context=context.duplicate();context.target=display_name
   if context.get("actor","")=="bot":game.bot_defeated(self,context)

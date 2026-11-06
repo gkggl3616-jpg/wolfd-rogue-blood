@@ -51,7 +51,7 @@ func build():
  maps.item_selected.connect(func(_i):draft.map=maps.get_selected_id();refresh_photo())
  ui.button(ui.content,"▣",Vector2(978,377),Vector2(42,24),func():show_maps())
  goal=picker("MissionObjectComboBox");clock=picker("RoundTimeComboBox")
- goal.item_selected.connect(func(_i):draft.pointGoal=goal.get_selected_id())
+ goal.item_selected.connect(func(_i):draft.pointGoal=goal.get_selected_id();draft.roundGoal=goal.get_selected_id())
  clock.item_selected.connect(func(_i):draft.matchSeconds=clock.get_selected_id())
  for name in ["TeamChangeRoleOption","GamingEnter","Observe"]:
   var button=view.find_widget(name);button.disabled=true;button.tooltip_text="Bu seçenek çevrimiçi oda hizmetinde kullanılır."
@@ -79,8 +79,8 @@ func fill_variants():
  draft.mode=variant.get_selected_id();fill_rules()
 func fill_rules():
  maps.clear();var local=ui.game.is_local_mode(int(draft.mode))
- if local:maps.add_item("Eğitim Arenası",0)
- for row in (ui.game.map_catalog.offline_maps() if local else ui.game.map_catalog.maps_for_mode(int(draft.mode))):maps.add_item(row.displayName,int(row.number))
+ if local and not Rules.supports(int(draft.mode)):maps.add_item("Eğitim Arenası",0)
+ for row in (ui.game.map_catalog.offline_maps() if local and not Rules.supports(int(draft.mode)) else ui.game.map_catalog.maps_for_mode(int(draft.mode))):maps.add_item(row.displayName,int(row.number))
  for i in range(maps.item_count):
   if maps.get_item_id(i)==int(draft.map):maps.select(i)
  if maps.item_count:draft.map=maps.get_selected_id()
@@ -88,12 +88,12 @@ func fill_rules():
  goal.disabled=not rules.enabled;clock.disabled=not rules.enabled
  if rules.enabled:
   for row in rules.record.goals:
-   goal.add_item("%d Puan" % int(row.points),int(row.points))
-   if int(row.points)==rules.goal:goal.select(goal.item_count-1)
+   goal.add_item(("%d Tur" % int(row.rounds)) if rules.round_based else ("%d Puan" % int(row.points)),int(row.rounds if rules.round_based else row.points))
+   if int(row.rounds if rules.round_based else row.points)==rules.goal:goal.select(goal.item_count-1)
   for row in rules.record.times:
-   clock.add_item("%d dakika" % (int(row.seconds)/60),int(row.seconds))
+   clock.add_item("%d:%02d" % [int(row.seconds)/60,int(row.seconds)%60],int(row.seconds))
    if int(row.seconds)==rules.seconds:clock.select(clock.item_count-1)
-  draft.pointGoal=rules.goal;draft.matchSeconds=rules.seconds
+  draft.pointGoal=rules.goal;draft.roundGoal=rules.goal;draft.matchSeconds=rules.seconds
  else:goal.add_item("Yerel kural");clock.add_item("90 saniye")
  fill_bot_limits();refresh_photo()
 func fill_bot_limits():

@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "ace915cb85b4f511a055694d9891e3836e3702e24a9fefa8825bd48249afb4d2"
+      "sha256": "77a255028a1334c437bab3a1ba7b878642198eb0c03dd0932bc1eccc3678c492"
     },
     {
       "height": 720,
@@ -243,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "5ddff502402d859a6d3708e1e8389f39e8eeb4a716bb19b496d6d08c61b98b12"
+      "sha256": "24d05e4dab0613a1aa05568d45441c8cc9eb97cb0c5fcd0244afaf888e8134a6"
     },
     {
       "height": 720,
@@ -332,7 +332,7 @@
         "interface/soundpropertypage"
       ],
       "width": 1280,
-      "sha256": "8020f283a3926c587962ab17694e1af63379a6843f8d15fcbc2ccfe99dea9f78"
+      "sha256": "4eac41d9ae5254f626d73284fad4dc2cc804eca4d7cfc45c3a18b14b6f77a8ab"
     },
     {
       "height": 720,
@@ -353,7 +353,7 @@
         "interface/controlpropertypage1"
       ],
       "width": 1280,
-      "sha256": "307eb5b4f379ead31f20d5e89d04c41c3ae1355ecf4feae5b5ef74fe7bb3a421"
+      "sha256": "dd0e6e7a7ee12fff9253fee9538cec2ea729164b894c5552eaa7bf43f66fe7be"
     },
     {
       "height": 720,
@@ -374,7 +374,7 @@
         "interface/graphicpropertypage"
       ],
       "width": 1280,
-      "sha256": "238d5968f6ed557794b2573f54b4766ff0cf9381139a6ef50631ae943f0bee65"
+      "sha256": "158df797e54dd42d2eb5176b2274dff102d6365fc3dca447b5289fd7dc17a10d"
     },
     {
       "height": 720,
@@ -395,7 +395,7 @@
         "interface/theotherspropertypage"
       ],
       "width": 1280,
-      "sha256": "ff6e6b3c4da3990cac6df945562719e25bd8a611ec7397796ab94a817e92b95a"
+      "sha256": "cea387a6843b4389394cce1a889cc57a6cb4a507f7385313d88370d607b1490d"
     },
     {
       "height": 720,
@@ -417,7 +417,7 @@
         "interface/messagebox"
       ],
       "width": 1280,
-      "sha256": "deb9c17b6a672612f2e136478ba53475d44f5f84da2c174c73033a075c0de060"
+      "sha256": "7241a1a1d7e39aa77f2ebf8e8348d37716c0e5f0337f6d4990596a70663c73b9"
     },
     {
       "height": 720,
@@ -437,7 +437,7 @@
         "interface/userinfopropertypage"
       ],
       "width": 1280,
-      "sha256": "c137211d204dbdccdd1f8a2600e451a03588f90d47d6622f0fea90b56f6e7e6d"
+      "sha256": "b816b8362ec08453024da36d2f9826a63b483b161016006bf6f5a4665340acbe"
     },
     {
       "height": 720,
@@ -457,7 +457,7 @@
         "interface/giftbox"
       ],
       "width": 1280,
-      "sha256": "2ffcc2f289db488f5a2b73e4b1481674f00f4faa37b02b7862545514e82db020"
+      "sha256": "dcf66f7c6e268c1448d9c9680292ec58d781edaef3c7d73afda6c5b58f4323af"
     },
     {
       "height": 720,
@@ -476,7 +476,7 @@
         "interface/wolfeventdialog"
       ],
       "width": 1280,
-      "sha256": "922fabb034ecd62657005f853ec3e5323ea12b0eb4b96e4e388d8b040901ed72"
+      "sha256": "7a1e62adc2cb21ac457c6fa1e31eb5fd6d746a781f73eaaf15d09470835d07d9"
     },
     {
       "height": 720,
@@ -515,7 +515,7 @@
         "interface/userrecord"
       ],
       "width": 1280,
-      "sha256": "6bdfc313b48adff0f9c856b8bade38fb7be507a5e6726895103dc906364e0f3a"
+      "sha256": "74dcd0001eb49eba5a68cfc9c84c70d2589e3b36f46ad9311390028d73f7f12f"
     },
     {
       "height": 720,
@@ -600,7 +600,7 @@
       "path": "docs/review/pc-native/human-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1b9fe69f5a2010de59238b1e912c96fb5925842bd99eef4880846abf69ee649a"
+      "sha256": "5bc107c8ab3285ba4efb0def1f04f75ec2c663509d6d455e9aa58b2dd32ffd49"
     },
     {
       "height": 720,
@@ -619,7 +619,7 @@
         "interface/gamemenu"
       ],
       "width": 1280,
-      "sha256": "d571a87af354ba9a05b916180aef59ff2a25ca42274fdba56114776164a8dd1b"
+      "sha256": "284dc4ea641bdf6bd6d152b12e8ef21fdc89515b5e407d232f901555e9b30d48"
     },
     {
       "height": 720,
@@ -627,7 +627,7 @@
       "path": "docs/review/pc-native/wolf-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "153ed7e977d1afaf0572c14ab51d5a3f9e93c2407a5dd091a9c7799b12c69489"
+      "sha256": "8230661c092f19ecf5a7f0fc284f6afbfc6398b1f7650e722bc95e7828e09e71"
     },
     {
       "height": 720,
@@ -635,7 +635,7 @@
       "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7c95247bec8fe0e62a503c95a7272e60fec9dc5d21a82bb79ec2c322c0845b80"
+      "sha256": "dcbb59694d4e08ae821d3e012a794c56609d0d82dce214af3ebe12ca1660df9f"
     },
     {
       "height": 720,
@@ -643,7 +643,7 @@
       "path": "docs/review/pc-native/airborne-attack-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "306111d729353c0215a8ca580d53fabb3f2ed016ac1c0ebf6e32729cf20ea0c0"
+      "sha256": "4d0a4a8b765f8a9a522a19395d7317fbbda046c8173a665c2cd39a1370881daa"
     },
     {
       "height": 720,
@@ -651,7 +651,7 @@
       "path": "docs/review/pc-native/container-ship-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e82559b350f8e5aecaa5e4d01fc0489f38a1a7a1fb6a8601e779b6dd7b088eda"
+      "sha256": "51a5f534e664ed5e50fe68cffa64e64db337fe56620a3df6ca8d5f1f74304856"
     },
     {
       "height": 720,
@@ -678,7 +678,7 @@
       "path": "docs/review/pc-native/offline-container-bots-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "da611932cdd0eda98de83c4e9965aaa9a99f07d6aa036ca5bee89cd1a560040b"
+      "sha256": "8efaf516ff2fecd6ebd43d8ae36d0fc44d6dcb6c7a9ff7a269de0fd22d7bd1e4"
     },
     {
       "height": 720,
@@ -705,7 +705,7 @@
       "path": "docs/review/pc-native/human-bot-hard-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d74c4eafea7e755594b6929a148d91ff4165890a0f1b3500f2d1ea9a0798f30a"
+      "sha256": "735833fa4e9cce4788e14c08d2a6c734cf2b927019fa62ad0a9c0b9abc910628"
     },
     {
       "height": 720,
@@ -713,7 +713,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9e036522121f9d67a451d6bbbf054dc41da3fba3886f92b45f56f3248935f634"
+      "sha256": "eb026bb44838880524c166c2f2a69c6c8f24375ef44756d04a79f933442bac8d"
     },
     {
       "height": 992,
@@ -721,7 +721,7 @@
       "path": "docs/review/pc-native/wolf-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "b9877be3dffee1e8132178065878ce501805432f63b4d5c8eb67f866cdaaf92c"
+      "sha256": "9f1119492664c01741ed788b0440e7c8f6c972881c99bfad04620372f47fa9bb"
     },
     {
       "height": 992,
@@ -729,7 +729,7 @@
       "path": "docs/review/pc-native/human-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "43d85ae7698684d649abb5d68ef3dc22b1656e6ce28cec47bd4cdb592aeb9136"
+      "sha256": "43962dbfc083463c3098703d0707ad0407ad8eb7aa1aa6ce0cf8aadfe560425e"
     },
     {
       "height": 1080,
@@ -793,5 +793,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5"
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1"
 }

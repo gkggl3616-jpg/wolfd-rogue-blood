@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-06T16:23:16.616136+00:00",
+  "utc": "2026-11-06T19:28:41.741530+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "14ee711eab383102442072f3676754cc3f6934fc0264baa67c038b6ec9743df5",
+  "runtimeCodeSha256": "2c124688a11b5eff2e7623cea2127cb69c40efdf2c5bfde68ea0349f02ed46a1",
   "passed": true,
   "steps": [
     {
@@ -18,6 +18,18 @@
     },
     {
       "name": "godot_import",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "mobile_020",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "destruction_sites_020",
       "passed": true,
       "exitCode": 0,
       "errors": []

@@ -8,7 +8,7 @@ const BUTTON_TEXTURE = "wt_interface/all/a_button_ok.dtx"
 
 # The PC action plate has four 90x28 states. Stretch only its empty column;
 # stretching a weapon card (or the baked TAMAM caption) changes the entire UI.
-class ActionButton extends TextureButton:
+class ActionButton extends "res://ui/touch_button.gd":
 	var sheet: Texture2D
 	func _draw():
 		if sheet == null:return
@@ -119,7 +119,7 @@ static func button(parent, text, at: Vector2, dimensions: Vector2, callback = Ca
 	return node
 
 static func atlas_button(parent,source,regions,at,dimensions,callback=Callable()):
-	var node=TextureButton.new();node.ignore_texture_size=true;node.stretch_mode=TextureButton.STRETCH_SCALE;node.position=at;node.size=dimensions
+	var node=preload("res://ui/touch_button.gd").new();node.ignore_texture_size=true;node.stretch_mode=TextureButton.STRETCH_SCALE;node.position=at;node.size=dimensions
 	node.texture_normal=atlas(source,regions[0]);node.texture_hover=atlas(source,regions[1]);node.texture_pressed=atlas(source,regions[2]);node.texture_disabled=atlas(source,regions[-1])
 	if callback.is_valid():node.pressed.connect(callback)
 	node.set_meta("source_texture",key(source));parent.add_child(node);return node

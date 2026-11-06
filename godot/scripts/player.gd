@@ -37,6 +37,8 @@ var source_events
 var pending_strong=false
 var next_right_attack=false
 var extra_health=0
+var howl_fraction=0.0
+var extra_decay=0.0
 const CLAW_SPEED=1.15
 var character_info:Dictionary:
 	get:return game.character_info if game!=null else {}
@@ -313,9 +315,14 @@ func begin_roar():
 	reset_locomotion();pending_strong=false;current_clip="";play_clip("roar");anim.seek(0,true);action_time = seconds;return true
 
 func restore_howl_health():
-	# Offline adaptation of the documented additional howling HP, not SP.
-	var tuning=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/howl.json"))
-	extra_health=int(tuning.normalExtraHealth if mutation_id=="normal" else tuning.mutationExtraHealth)
+	extra_health=99;howl_fraction=0
+func advance_howl_health(delta):
+	howl_fraction+=delta*99/maxf(0.1,roar_effect.duration)
+	var amount=int(howl_fraction);howl_fraction-=amount;extra_health=mini(99,extra_health+amount)
+func decay_howl_health(delta):
+	if not game.is_combat_active() or not is_wolf or roar_effect.active:return
+	extra_decay+=delta/maxf(1,1+float(game.gear_stats().get("healthPercent",0))/100.0)
+	if extra_decay>=1:extra_health=maxi(0,extra_health-int(extra_decay));extra_decay=fmod(extra_decay,1)
 
 func _exit_tree():
 	if is_instance_valid(fire_sound):
@@ -595,3 +602,6 @@ func begin_ground_strong():
 	if not game.is_combat_active() or not is_wolf or not is_on_floor() or action_time>0 or rolling or air_attacking or wall_holding:return false
 	if not game.clientfx.install_strong(self):return false
 	reset_locomotion();roar_effect.stop();pending_strong=true;current_clip="";play_clip("strong_attack");action_time=anim.get_animation("strong_attack").length;shot_cooldown=action_time;return true
+
+func _process(delta):
+	if is_instance_valid(roar_effect):decay_howl_health(delta)

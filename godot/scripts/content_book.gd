@@ -22,6 +22,7 @@ var selected_tattoo_ids={}
 var selected_characters={}
 const DEFAULT_SETTINGS = {"sensitivity": 1.0, "volume": 0.8, "music_volume": 1.0, "effects_volume": 1.0, "weapons_volume": 1.0, "ui_volume": 1.0, "directions": true, "invert_y": false, "shadows": false, "fps": 60}
 var settings = DEFAULT_SETTINGS.duplicate(true)
+var control_layout={}
 var local_name = "Yerel oyuncu"
 var persistent = true
 var storage_path = "user://collection.json"
@@ -85,6 +86,8 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 		if team_choices is Dictionary:
 			for team in ["red","blue"]:
 				if characters.any(func(row):return row.id==team_choices.get(team,"") and row.get("sourceTeam",team)==team and row.get("available",false)):selected_characters[team]=team_choices[team]
+		var layout=stored.get("controlLayout",{})
+		if preload("res://scripts/control_layout.gd").valid(layout):control_layout=layout.duplicate(true)
 		var saved_settings = stored.get("settings", {}).duplicate() if stored.get("settings",{}) is Dictionary else {}
 		if version<3 and offline_edition:saved_settings["directions"]=true
 		if saved_settings is Dictionary:
@@ -185,6 +188,12 @@ func set_setting(key, value):
 	if save(): return true
 	settings[key] = previous;return false
 
+func set_control_layout(candidate):
+	if not preload("res://scripts/control_layout.gd").valid(candidate):return false
+	var previous=control_layout;control_layout=candidate.duplicate(true)
+	if save():return true
+	control_layout=previous;return false
+
 func default_settings():
 	return DEFAULT_SETTINGS.duplicate(true)
 
@@ -254,7 +263,7 @@ func tattoo_uv_transpose(role,texture):
 func save():
 	if not persistent: return true
 	if save_blocked: return false
-	return AtomicStore.write_json(storage_path, {"schemaVersion": 3, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattooIds":selected_tattoo_ids,"teamCharacters":selected_characters,"tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation})
+	return AtomicStore.write_json(storage_path, {"schemaVersion": 3, "owned": owned, "slots": slots, "loadouts": loadouts, "activeLoadout": active_loadout, "character": selected_character, "tattooIds":selected_tattoo_ids,"teamCharacters":selected_characters,"tattoos": selected_tattoos, "settings": settings, "localName": local_name,"wolfMutation":wolf_mutation,"controlLayout":control_layout})
 
 func character_for_team(team):
 	var chosen=selected_characters.get(team,selected_character)
