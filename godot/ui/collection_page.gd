@@ -293,10 +293,9 @@ func show_native_details():
 func build_character(entry):
 	ui.trace("interface/charequipmentpage")
 	build_team_buttons(true)
+	character_heading()
 	ui.preview_angle=-0.12
-	ui.build_preview(Vector2(22,180),Vector2(310,537),entry)
-	var environment=ui.preview_root.find_children("*","WorldEnvironment",true,false)
-	if not environment.is_empty():environment[0].environment.background_color=Color("071014")
+	ui.build_preview(Vector2(2,145),Vector2(350,596),entry)
 	var icon=portraits.get(entry.id,{}).get("asset","")
 	Art.sprite(details,icon,Vector2(272,78),Vector2(66,86),Rect2(0,0,73,75)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	ui.button(details,"N",Vector2(273,165),Vector2(31,23),func():ui.preview_wolf=false;ui.replace_preview(entry))
@@ -309,23 +308,14 @@ func build_character(entry):
 	ui.button(details,"AT",Vector2(516,710),Vector2(140,28),func():ui.confirm("KARAKTER","Çevrimdışı kaynak koleksiyonu kalıcıdır; karakter silinmez.",func():pass))
 	var count=ui.game.book.characters.filter(func(row):return row.get("available",false)).size()
 	ui.text(details,"Karakter Slotu %d / %d" % [count,count],Vector2(789,125),Vector2(207,22),11,Color("8bb7b1"))
-	plate(details,Vector2(1,494),Vector2(112,213))
-	ui.text(details,"STATS",Vector2(8,497),Vector2(95,24),16)
-	var profile=ui.game.mutations.profile(ui.game.book.wolf_mutation)
-	var rows=[["YP",profile.health if ui.preview_wolf else 100,200.0],["HIZ",profile.speed if ui.preview_wolf else 4.1,8.0],["GÜÇ",profile.damage if ui.preview_wolf else ui.game.book.weapon(ui.game.book.slots.primary).gameplayTuning.damage,100.0],["GP +%",roundi(float(ui.game.power_bonus("bag","localGpBonus",0))*100),100.0]]
-	for i in range(rows.size()):
-		var row=rows[i];var y=529+i*31;ui.text(details,row[0],Vector2(6,y),Vector2(45,21),10)
-		var bar=ProgressBar.new();bar.position=Vector2(48,y+5);bar.size=Vector2(39,8);bar.max_value=row[2];bar.value=row[1];bar.show_percentage=false
-		var bg=StyleBoxFlat.new();bg.bg_color=Color("3d4547");var fill=StyleBoxFlat.new();fill.bg_color=Color("dfbd31");bar.add_theme_stylebox_override("background",bg);bar.add_theme_stylebox_override("fill",fill);details.add_child(bar)
-		ui.text(details,str(row[1]),Vector2(89,y),Vector2(24,21),10)
-	ui.text(details,"Yerel değerler",Vector2(5,681),Vector2(105,20),10,Color("9bb4b5"))
 	ui.content.move_child(details,ui.content.get_child_count()-1)
 	body(entry.name+"\n\nYerel koleksiyonda kullanılabilir.\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.\nSüre sınırı yok.")
 
 func build_tattoo(entry):
 	build_team_buttons(false)
+	character_heading()
 	var known=entry.role in ["body","left","right"]
-	ui.preview_wolf=true;ui.build_preview(Vector2(14,180),Vector2(326,478),ui.game.book.character_for_team(ui.preview_team))
+	ui.preview_wolf=true;ui.build_preview(Vector2(2,148),Vector2(350,592),ui.game.book.character_for_team(ui.preview_team))
 	var shown=ui.game.book.selected_tattoos.duplicate()
 	if known:shown[entry.role]=entry.texture
 	for mesh in ui.preview_model.find_children("*","MeshInstance3D",true,false):
@@ -340,20 +330,6 @@ func build_tattoo(entry):
 	for key in bonuses:
 		if float(bonuses[key])!=0:copy+="\n"+{"damagePercent":"Hasar","rangePercent":"Menzil","healthPercent":"YP","speedPercent":"Hız","gpPercent":"GP","goldPercent":"Altın"}.get(key,key)+": +%"+str(bonuses[key])
 	body(copy)
-	plate(details,Vector2(2,494),Vector2(112,90))
-	var applied=ui.game.book.tattoo_bonuses()
-	ui.text(details,"STATS",Vector2(8,498),Vector2(100,20),14)
-	ui.paragraph(details,"Hasar +%%%d\nMenzil +%%%d\nYP +%%%d" % [applied.damagePercent,applied.rangePercent,applied.healthPercent],Vector2(8,522),Vector2(100,64),11)
-	ui.text(details,"Sürükle · Çevir",Vector2(145,160),Vector2(190,20),11)
-	for i in range(3):
-		var role=["left","body","right"][i];var at=Vector2(18+i*106,666);var texture=ui.game.book.selected_tattoos.get(role,"")
-		var button=SourceCard.create(details,at,Vector2(100,72),func():
-			if texture=="":return
-			for row in ui.game.book.tattoos:
-				if row.texture==texture:ui.selected=row;show_details();break
-		)
-		if texture!="":Art.sprite(button,texture,Vector2(3,3),Vector2(94,48)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		ui.text(button,["Sol kol","Sırt","Sağ kol"][i],Vector2(3,50),Vector2(94,20),12).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	ui.button(details,"Tak" if known else "Bölge belirsiz",Vector2(366,710),Vector2(290,28),func():
 		if ui.game.book.set_tattoo(entry.role,entry.texture,entry.id):ui.game.player.apply_tattoos();ui.refresh();ui.show_error("Dövme kaydedildi.")
 		else:ui.show_error("Dövme kaydedilemedi.")
@@ -377,9 +353,6 @@ func build_power_slots():
 		if not entry.is_empty():
 			ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11)
 			cell.pressed.connect(func():ui.selected=entry;show_details())
-	ui.text(ui.content,"KURT GÜCÜ",Vector2(8,500),Vector2(103,25),13,Art.GOLD)
-	var profile=ui.game.mutations.profile(ui.game.book.wolf_mutation)
-	ui.paragraph(ui.content,"YP: %d\nHasar: %d\nHız: %.1f\nGP: +%%%d" % [profile.health,profile.damage,profile.speed,roundi(float(ui.game.power_bonus("bag","localGpBonus",0))*100)],Vector2(8,529),Vector2(103,120),12)
 
 func build_power(entry):
 	ui.trace("interface/abilityequipmentpage")
@@ -442,9 +415,17 @@ func weapon_properties(entry):
 func build_team_buttons(filter_characters):
 	for i in range(2):
 		var team="red" if i==0 else "blue"
-		var button=ui.button(details,"Kırmızı" if i==0 else "Mavi",Vector2(18+i*113,119),Vector2(106,27),func():
+		var region=Rect2(48,0,30,31) if i==0 else Rect2(83,0,25,31)
+		var button=Art.atlas_button(details,ROOT+"iv_ch_tab.dtx",[region,Rect2(region.position+Vector2(0,31),region.size),Rect2(region.position+Vector2(0,62),region.size)],Vector2(41+i*36,119),Vector2(32,29),func():
 			ui.preview_team=team
 			if filter_characters:ui.filter_id=team;ui.offset=0;refresh_grid()
 			else:show_details()
 		)
-		button.modulate=Color("eaaaaf") if i==0 else Color("a0cde5")
+		button.tooltip_text="Kırmızı takım" if i==0 else "Mavi takım"
+		button.toggle_mode=true;button.set_pressed_no_signal((ui.selected.get("sourceTeam",ui.preview_team) if filter_characters else ui.preview_team)==team)
+		button.set_meta("source_team",team)
+
+func character_heading():
+	var cover=ColorRect.new();cover.position=Vector2(0,61);cover.size=Vector2(344,31);cover.color=Color.BLACK;cover.mouse_filter=Control.MOUSE_FILTER_IGNORE;details.add_child(cover)
+	Art.sprite(details,ROOT+"iv_ch_top.dtx",Vector2(0,61),Vector2(256,32))
+	ui.button(details,"GÜÇ+",Vector2(0,90),Vector2(84,27),func():ui.navigate("power"))

@@ -35,6 +35,8 @@ var offset = 0
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
+var room_allies: OptionButton
+var room_enemies: OptionButton
 var room_difficulty: OptionButton
 var room_form: OptionButton
 var room_draft = {"title":"Yerel Oda","mode":0,"map":0,"team":"blue"}
@@ -265,11 +267,11 @@ func build_preview(at,dimensions,entry):
 	var container=SubViewportContainer.new();container.position=at;container.size=dimensions*canvas.scale;container.scale=Vector2.ONE/canvas.scale;container.stretch=true;content.add_child(container)
 	preview_container = container
 	container.gui_input.connect(preview_input)
-	preview_view=SubViewport.new();preview_view.size=Vector2i(dimensions*canvas.scale);preview_view.own_world_3d=true;container.add_child(preview_view)
+	preview_view=SubViewport.new();preview_view.size=Vector2i(dimensions*canvas.scale);preview_view.own_world_3d=true;preview_view.transparent_bg=true;container.add_child(preview_view)
 	preview_root=Node3D.new();preview_view.add_child(preview_root)
-	var environment=WorldEnvironment.new();var settings=Environment.new();settings.background_mode=Environment.BG_COLOR;settings.background_color=Color("0c1418");settings.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;settings.ambient_light_energy=0.7;environment.environment=settings;preview_root.add_child(environment)
+	var environment=WorldEnvironment.new();var settings=Environment.new();settings.background_mode=Environment.BG_CLEAR_COLOR;settings.background_color=Color(0,0,0,0);settings.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;settings.ambient_light_energy=0.7;environment.environment=settings;preview_root.add_child(environment)
 	var light=DirectionalLight3D.new();light.rotation_degrees=Vector3(-30,-25,0);light.light_energy=1.6;preview_root.add_child(light)
-	preview_camera=Camera3D.new();preview_camera.fov=50;preview_root.add_child(preview_camera)
+	preview_camera=Camera3D.new();preview_camera.fov=50;preview_camera.projection=Camera3D.PROJECTION_ORTHOGONAL;preview_root.add_child(preview_camera)
 	replace_preview(entry)
 
 func replace_preview(entry):

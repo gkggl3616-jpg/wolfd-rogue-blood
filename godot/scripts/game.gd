@@ -77,6 +77,8 @@ var ammo = 30
 var reserve = 120
 var reloading = 0.0
 var deaths=0
+var respawn_remaining=0.0
+var team_frags={"red":0,"blue":0}
 var kills = 0
 var time_left = 90.0
 var spawn_clock = 0.0
@@ -342,6 +344,7 @@ func explode(where, amount, kind):
 	if not fx.is_empty(): play_source_effect(fx, where)
 	if kind == "smoke": return
 	for enemy in enemies.get_children():
+		if not hostile(enemy,local_room.get("team","blue")):continue
 		var distance = enemy.global_position.distance_to(where)
 		if distance > 6: continue
 		var query = PhysicsRayQueryParameters3D.create(where + Vector3.UP * 0.1, enemy.global_position + Vector3.UP, 1, [player.get_rid()])
@@ -535,7 +538,7 @@ func start_round(with_selection=false):
 		for candidate in anchors:
 			var p=Vector3(candidate.position[0],candidate.position[1],candidate.position[2])
 			var nav=NavigationServer3D.map_get_closest_point(offline_navigation_map,p)
-			if opposing.any(func(other):return navigation_graph.connected(nav,NavigationServer3D.map_get_closest_point(offline_navigation_map,Vector3(other.position[0],other.position[1],other.position[2])))):
+			if opposing.any(func(other):return navigation_graph.connected(NavigationServer3D.map_get_closest_point(offline_navigation_map,Vector3(other.position[0],other.position[1],other.position[2])),nav)):
 				anchor=candidate;break
 		preview_spawn = Vector3(anchor.position[0], anchor.position[1], anchor.position[2])
 		spawn_yaw = float(anchor.yaw)
@@ -549,7 +552,7 @@ func start_round(with_selection=false):
 	ammo = weapon_capacity()
 	reserve = ammo * 4
 	weapon_ammo.clear()
-	kills = 0;deaths=0
+	kills = 0;deaths=0;team_frags={"red":0,"blue":0};respawn_remaining=0
 	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear()
 	match_id=Crypto.new().generate_random_bytes(16).hex_encode()
 	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
@@ -616,7 +619,8 @@ func choose_round_mutation(id):
 	close_round_selection()
 	if transform_after and not player.is_wolf:player.switch_form(true)
 	update_hud();return true
-func is_combat_active():return running and not menu_open and not application_suspended and not selection_active and (not hunt.active or hunt.phase=="combat")
+func is_match_active():return running and not menu_open and not application_suspended and not selection_active and (not hunt.active or hunt.phase=="combat")
+func is_combat_active():return is_match_active() and health>0
 func finish_hunt_round(won):
 	if not hunt.finish_round(won):return
 	for enemy in enemies.get_children():enemy.collision_layer=0;enemy.queue_free()
@@ -651,9 +655,9 @@ func install_navigation(asset,parent):
 			if int(row.number)!=offline_map_number or row.navigationSha256!=FileAccess.get_sha256(asset):continue
 			for spec in row.links:
 				var a=spec.entry;var b=spec.exit;var link=NavigationLink3D.new()
-				link.start_position=Vector3(a[0],a[1],a[2]);link.end_position=Vector3(b[0],b[1],b[2]);link.bidirectional=true;link.enter_cost=1.0;link.set_meta("traversal",spec)
+				link.start_position=Vector3(a[0],a[1],a[2]);link.end_position=Vector3(b[0],b[1],b[2]);link.bidirectional=spec.get("bidirectional",true);link.enter_cost=1.0;link.set_meta("traversal",spec)
 				link.set_navigation_map(map);parent.add_child(link)
-				navigation_graph.join_points(link.start_position,link.end_position)
+				navigation_graph.join_points(link.start_position,link.end_position,link.bidirectional)
 	NavigationServer3D.region_set_map(navigation_region.get_rid(),map)
 	NavigationServer3D.region_set_navigation_mesh(navigation_region.get_rid(),navigation_region.navigation_mesh)
 	NavigationServer3D.map_force_update(map)
@@ -784,29 +788,71 @@ func _process(delta):
 	if tutorial.active:
 		if tutorial.advance(self):end_round("Öğretici tamamlandı")
 		update_hud();return
+	if respawn_remaining>0:
+		respawn_remaining=maxf(0,respawn_remaining-delta)
+		if respawn_remaining<=0:
+			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear()
+			announce("Takımına geri döndün")
 	time_left -= delta
 	spawn_clock -= delta
-	if spawn_clock <= 0 and enemies.get_child_count() < 4 and (not hunt.active or hunt.spawned<LocalHunt.TARGET):
-		if spawn_enemy() and hunt.active:hunt.spawned+=1
-		spawn_clock = 3.5
+	if spawn_clock<=0:
+		var own=local_room.get("team","blue");var opposing="red" if own=="blue" else "blue"
+		for team in [opposing,own]:
+			var wanted=bot_limit(team)
+			var alive=enemies.get_children().filter(func(bot):return not bot.is_queued_for_deletion() and bot.team==team).size()
+			if alive<wanted and (not hunt.active or team==own or hunt.spawned<LocalHunt.TARGET):
+				if spawn_enemy("","",team) and hunt.active and team==opposing:hunt.spawned+=1
+		spawn_clock=3.5
 	if time_left <= 0:
 		if hunt.active:finish_hunt_round(false)
 		else:end_round("Süre doldu")
 	update_hud()
 
-func spawn_enemy(kind="",difficulty=""):
-	var team="red" if local_room.get("team","blue")=="blue" else "blue"
+func bot_limit(team):
+	if int(local_room.get("mode",0))==LocalTutorial.MODE:return 0
+	return clampi(int(local_room.get("allyBots",0) if team==local_room.get("team","blue") else local_room.get("enemyBots",4)),0,4)
+
+func actor_alive(actor):
+	return is_instance_valid(actor) and not actor.is_queued_for_deletion() and (health>0 if actor==player else actor.health>0)
+func actor_team(actor):return local_room.get("team","blue") if actor==player else actor.team
+func hostile(actor,team):return actor_alive(actor) and actor_team(actor)!=team
+func combat_targets(team):
+	var result=[]
+	if hostile(player,team):result.append(player)
+	for bot in enemies.get_children():
+		if hostile(bot,team):result.append(bot)
+	return result
+func team_score(team):return int(team_frags.get(team,0))+(kills if team==local_room.get("team","blue") else deaths)
+func bot_defeated(victim,context):
+	if not is_match_active():return
+	var team=context.get("attackerTeam","")
+	if team not in ["red","blue"] or team==victim.team:return
+	team_frags[team]+=1
+	kill_feed.push_front({"attacker":context.get("name","Bot"),"target":victim.display_name,"weapon":context.get("weapon","Pençe"),"weaponId":"","headshot":false,"attackerTeam":team,"targetTeam":victim.team,"remaining":6.0})
+	if kill_feed.size()>5:kill_feed.resize(5)
+	if hunt.active:
+		if victim.team!=local_room.get("team","blue"):
+			hunt.round_kills+=1
+			if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
+	elif team_score(team)>=10:end_round("Arena tamamlandı" if team==local_room.get("team","blue") else "Yenildin")
+	update_hud()
+
+func spawn_enemy(kind="",difficulty="",team=""):
+	if team=="":team="red" if local_room.get("team","blue")=="blue" else "blue"
+	if team not in ["red","blue"]:return false
 	var zone_z=-12.0 if team=="red" else 12.0
-	var points = [Vector3(-6,0.1,zone_z),Vector3(0,0.1,zone_z),Vector3(6,0.1,zone_z)]
+	var points = [Vector3(-9,0.1,zone_z),Vector3(-6,0.1,zone_z),Vector3(-3,0.1,zone_z),Vector3(3,0.1,zone_z),Vector3(6,0.1,zone_z),Vector3(9,0.1,zone_z)]
 	if offline_map_number != 0:
 		points = offline_spawn_points(team)
 		if points.is_empty(): return false
+	points=points.filter(func(p):return p.distance_to(player.position)>1.3 and enemies.get_children().all(func(bot):return bot.is_queued_for_deletion() or bot.position.distance_to(p)>1.1))
+	if points.is_empty():return false
 	var enemy = CharacterBody3D.new()
 	enemy.set_script(EnemyScript)
 	enemy.game = self
 	enemy.team=team
 	enemy.rotation.y=PI if team=="red" else 0.0
-	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else (hunt.enemy_kind() if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human")))
+	enemy.kind=kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human")))
 	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
@@ -858,7 +904,7 @@ func offline_spawn_points(team=""):
 			if absf(supported.y-floor_hit.position.y)>0.5 or Vector2(supported.x-pos.x,supported.z-pos.z).length()>0.35:continue
 			clearance.transform=Transform3D(Basis.IDENTITY,pos+Vector3.UP*0.95)
 			if not get_world_3d().direct_space_state.intersect_shape(clearance,1).is_empty():continue
-			var occupied=pos.distance_to(player.position)<3.5
+			var occupied=pos.distance_to(player.position)<(1.3 if team==local_room.get("team","blue") else 3.5)
 			for enemy in enemies.get_children():
 				if not enemy.is_queued_for_deletion() and enemy.position.distance_to(pos)<1.2:occupied=true;break
 			if not occupied and points.all(func(p):return p.distance_to(pos)>0.7):
@@ -906,7 +952,7 @@ func attack():
 	var hit = get_world_3d().direct_space_state.intersect_ray(query)
 	if hit:
 		end = hit.position
-		if hit.collider.has_meta("enemy"):
+		if hit.collider.has_meta("enemy") and hostile(hit.collider,local_room.get("team","blue")):
 			var head=kind!="knife" and hit.collider.is_head_hit(hit.position,origin,(end-origin).normalized())
 			var damage = int(player.weapon_info.get("damage", 25))*(2 if head else 1)
 			var actual=mini(hit.collider.health,damage)
@@ -930,6 +976,7 @@ func wolf_melee_hit(amount,reach,caption):
 	amount=roundi(amount*wolf_damage_multiplier()*(1.0+float(gear_stats().damagePercent)/100.0))+int(power_bonus("claw","damageBonus",0))
 	for enemy in enemies.get_children():
 		if not running:break
+		if not hostile(enemy,local_room.get("team","blue")):continue
 		var offset=enemy.global_position-player.global_position
 		if offset.length()>=reach or offset.normalized().dot(-player.global_basis.z)<=0.1:continue
 		var query=PhysicsRayQueryParameters3D.create(player.global_position+Vector3.UP,enemy.global_position+Vector3.UP,3,[player.get_rid()])
@@ -969,7 +1016,7 @@ func enemy_defeated(context={}):
 	if hunt.active:
 		hunt.round_kills+=1
 		if hunt.round_kills>=LocalHunt.TARGET:finish_hunt_round(true)
-	elif kills >= 10:
+	elif team_score(local_room.get("team","blue")) >= 10:
 		grant_money("gold", roundi(10*(1+float(gear_stats().goldPercent)/100.0)), "Arena tamamlandı")
 		end_round("Arena tamamlandı")
 	update_hud()
@@ -977,6 +1024,7 @@ func enemy_defeated(context={}):
 func take_damage(amount, source_position=null, attacker={}):
 	if not is_combat_active() or amount<=0:
 		return
+	if attacker.get("attackerTeam","")==local_room.get("team","blue"):return
 	if player.guard_remaining>0:amount=maxi(1,int(ceil(amount*0.5)))
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
@@ -985,6 +1033,8 @@ func take_damage(amount, source_position=null, attacker={}):
 		kill_feed.push_front({"attacker":attacker.get("name","Bot"),"target":profile_name,"headshot":false,"weaponId":"","weapon":attacker.get("weapon","Pençe"),"attackerTeam":"red" if local_room.get("team","blue")=="blue" else "blue","targetTeam":local_room.get("team","blue"),"remaining":6.0})
 		if kill_feed.size()>5:kill_feed.resize(5)
 		if hunt.active:finish_hunt_round(false)
+		elif int(local_room.get("allyBots",0))>0 and team_score("red" if local_room.get("team","blue")=="blue" else "blue")<10:
+			respawn_remaining=3.0;player.reset_combat();touch.reset();announce("Yeniden doğuş · 3 saniye")
 		else:end_round("Yenildin")
 
 func end_round(title):

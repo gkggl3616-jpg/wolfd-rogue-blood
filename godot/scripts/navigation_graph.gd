@@ -1,6 +1,8 @@
 extends RefCounted
 # Conservative connected components prevent asking Godot 4.7's corridor search
 # to retry an unreachable island (which otherwise emits a native query error).
+var directed_links=[]
+var reachability_cache={}
 var polygons=[]
 var boxes=[]
 var centers=[]
@@ -73,12 +75,26 @@ func component(point):
 
 func connected(from,to):
  var a=component(from)
- return a>=0 and a==component(to)
+ var b=component(to)
+ if a<0 or b<0:return false
+ if a==b:return true
+ if reachability_cache.has(a):return reachability_cache[a].has(b)
+ var visited={a:true};var queue=[a]
+ while not queue.is_empty():
+  var current=queue.pop_front()
+  for link in directed_links:
+   if find(link[0])!=current:continue
+   var next=find(link[1])
+   if not visited.has(next):visited[next]=true;queue.append(next)
+ reachability_cache[a]=visited
+ return visited.has(b)
 
-func join_points(from,to):
+func join_points(from,to,bidirectional=true):
  var a=component(from);var b=component(to)
  if a<0 or b<0:return false
- a=find(a);b=find(b)
+ a=find(a);b=find(b);reachability_cache.clear()
+ if not bidirectional:
+  directed_links.append([a,b]);return true
  if a!=b:parents[b]=a
  for i in range(parents.size()):components[i]=find(i)
  component_cache.clear()
@@ -87,7 +103,7 @@ func join_points(from,to):
 func nearest_in_component(origin,target):
  var group=component(origin)
  if group<0:return null
- if component(target)==group:return target
+ if connected(origin,target):return target
  var best=null;var distance=INF
  for i in range(centers.size()):
   if components[i]!=group:continue

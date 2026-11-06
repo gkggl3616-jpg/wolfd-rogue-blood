@@ -15,10 +15,10 @@ func run():
   ensure(links.size()==record.links.size(),"All verified links install: "+str(record.number))
   for index in range(links.size()):
    var link=links[index];var spec=link.get_meta("traversal")
-   for reversed in [false,true]:
+   for reversed in ([false,true] if spec.get("bidirectional",true) else [false]):
     var e=spec.feetExit if reversed else spec.feetEntry;var target=spec.feetEntry if reversed else spec.feetExit
     var bot=CharacterBody3D.new();bot.set_script(load("res://scripts/enemy.gd"));bot.game=game;bot.kind="wolf";bot.brain_enabled=false;bot.position=Vector3(e[0],e[1],e[2]);game.enemies.add_child(bot)
-    bot.set_physics_process(false)
+    bot.set_physics_process(false);bot.capsule.height=1.2;bot.collider.position.y=0.6
     for i in range(20):bot.velocity.y=-2;bot.move_and_slide();await physics_frame
     bot.begin_link_traversal({"rid":link.get_rid()})
     var began=not bot.link_flight.is_empty();ensure(began,"Launch swept link %d/%d/%s" % [int(record.number),index,str(reversed)])

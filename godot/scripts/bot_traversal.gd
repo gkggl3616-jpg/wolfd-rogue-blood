@@ -3,8 +3,8 @@ extends RefCounted
 # through the ballistic arc. No teleport, invisible floor or collision bypass.
 static func plan(world,from,to,exclude=[]):
  var flat=Vector3(to.x-from.x,0,to.z-from.z)
- if flat.length()>3.05 or absf(to.y-from.y)>0.85:return {}
- var seconds=clampf(flat.length()/5.2,0.22,0.6)
+ if flat.length()>4.05 or to.y-from.y>0.99 or from.y-to.y>3.0:return {}
+ var seconds=clampf(maxf(flat.length()/7.0,sqrt(absf(to.y-from.y)/10.0)),0.22,0.62)
  var velocity=flat/seconds+Vector3.UP*((to.y-from.y+10*seconds*seconds)/seconds)
  if velocity.y>6.3 or velocity.y<0:return {}
  var shape=CapsuleShape3D.new();shape.radius=0.42;shape.height=1.2

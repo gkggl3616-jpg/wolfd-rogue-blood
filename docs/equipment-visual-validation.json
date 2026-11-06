@@ -7,7 +7,7 @@
       "path": "docs/review/equipment-013/gift-inbox-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3aed83896f1cd4da6c5ed09016448e30caef6c7270679f053b6e23ff9abc2b62"
+      "sha256": "b2b5ff53f79de9807742bcf2075839f27cf35aefc6adf542c3f2e76dd86d7d1b"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/equipment-013/gift-confirmation-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f2a6d2f47924029ccfbb7f17bb870e716af74e0444baf6e6b769e47f6317fd1e"
+      "sha256": "dd7aec65ace1dbca1abd3f45f684c4cb2ffd11469851bd74b6d943e214d52726"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/equipment-013/wolf-power-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a5850f41e7953b458935c700b6880a620706999e73875e0bd4ddf7d068ac9f82"
+      "sha256": "602ab7d84d39413ad3126b8d6d372f4fae37834eef747c5fb9209f86693cf34f"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/equipment-013/wolf-bag-filter-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "12c9e8a2035b26806aab5ea9342ced23956c3c4b33b87fc65318da2e4f45b5e2"
+      "sha256": "db335761d363c2d551edc0f4b6e139c902372d35354da00a95142edb95155e96"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/equipment-013/wolf-tattoo-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "579d6aa8ee8d9e5fffda83e4950c3785a7578b8f06fbca9f9131ea61b515fdfc"
+      "sha256": "7df90fe65ae83738595be067f25c71d205bc93ee726cb6782ad0b2bd6e9cf584"
     },
     {
       "height": 720,
@@ -135,7 +135,7 @@
       "path": "docs/review/equipment-013/gift-history-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "82e82a07627b1af9bdf0afe9615d5ad34edad85c80b3d4bb1d880891ff23d819"
+      "sha256": "0e47d2489d6ef9cb3cb09e9d3615ae700c25b2fcd6ce85ca46d04e19911dcbce"
     }
   ],
   "failures": 0,
@@ -143,5 +143,5 @@
   "rendering": "gl_compatibility",
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
-  "runtimeCodeSha256": "bebb6273a5f7de73e8390a162f312c72ac3907eca4806f5352ca00203a468e84"
+  "runtimeCodeSha256": "57670ee0e699f4856968459eaf8855b27a4799563ece9d6a8beac36585545eaf"
 }

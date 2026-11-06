@@ -29,12 +29,12 @@ func run():
   var pairs={}
   for a in points:
    var cell=Vector2i(floori(a.point.x/3),floori(a.point.z/3))
-   for x in range(-1,2):
-    for z in range(-1,2):
+   for x in range(-2,3):
+    for z in range(-2,3):
      for b in buckets.get(cell+Vector2i(x,z),[]):
-      if a.component>=b.component or absf(a.point.y-b.point.y)>0.85:continue
+      if a.component>=b.component or absf(a.point.y-b.point.y)>3.0:continue
       var distance=a.point.distance_to(b.point)
-      if distance<0.05 or distance>3.1:continue
+      if distance<0.05 or distance>5.1:continue
       var key=Vector2i(a.component,b.component)
       if not pairs.has(key):pairs[key]=[]
       var values=pairs[key]
@@ -54,10 +54,12 @@ func run():
      feet.append(hit.position+Vector3.UP*0.12)
     if feet.size()!=2:continue
     var forward=Traverse.plan(world,feet[0],feet[1]);var backward=Traverse.plan(world,feet[1],feet[0])
-    if forward.is_empty() or backward.is_empty():continue
-    links.append({"entry":arr(candidate.a),"exit":arr(candidate.b),"feetEntry":arr(feet[0]),"feetExit":arr(feet[1]),"forwardSeconds":forward.seconds,"backwardSeconds":backward.seconds})
-    graph.join_points(candidate.a,candidate.b);break
-  results.append({"number":number,"geometrySha256":preview.sha256,"navigationSha256":record.sha256,"links":links,"validation":"Both directions: 24 swept crouched-capsule ballistic samples, 3.05m horizontal / 0.85m vertical limit, launch velocity <=6.3m/s. Local bot traversal, not decoded PC links."})
+    if forward.is_empty() and backward.is_empty():continue
+    var bidirectional=not forward.is_empty() and not backward.is_empty()
+    if forward.is_empty():candidate={"a":candidate.b,"b":candidate.a};feet.reverse();forward=backward
+    links.append({"entry":arr(candidate.a),"exit":arr(candidate.b),"feetEntry":arr(feet[0]),"feetExit":arr(feet[1]),"forwardSeconds":forward.seconds,"backwardSeconds":backward.get("seconds",0),"bidirectional":bidirectional})
+    graph.join_points(candidate.a,candidate.b,bidirectional);break
+  results.append({"number":number,"geometrySha256":preview.sha256,"navigationSha256":record.sha256,"links":links,"validation":"Both directions: 24 swept crouched-capsule ballistic samples, 4.05m horizontal / 0.99m up / 3m down limit, launch velocity <=6.3m/s. Local bot traversal, not decoded PC links."})
   print("BOT_TRAVERSALS ",number," boundaries=",points.size()," componentPairs=",pairs.size()," admitted=",links.size())
   root.remove_child(scene);scene.queue_free();await process_frame
  var file=FileAccess.open("res://assets/maps/traversals.json",FileAccess.WRITE);file.store_string(JSON.stringify(results,"  ")+"\n");file.close();quit()

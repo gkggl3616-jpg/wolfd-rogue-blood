@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10}
+    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -105,7 +105,7 @@ def check(root=ROOT):
     for item in powers.get('items',[]):
         if not (root/'godot'/item.get('icon','__missing_icon__').removeprefix('res://')).is_file():blockers.append('Power item icon missing: '+str(item.get('id')))
         if item.get('trail'):verify_asset(item['trail'],'source claw trail '+item['id'])
-    for filename,minimum in [('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
+    for filename,minimum in [('mobile-016-validation.json',31),('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
         path=root/'docs'/filename
         proof=json.loads(path.read_text()) if path.is_file() else {}
         if proof.get('passed') is not True or proof.get('checks',0)<minimum:blockers.append('Incomplete update verification: '+filename)
@@ -123,6 +123,21 @@ def check(root=ROOT):
                 if character[form['form']]['sha256']!=form['assetSha256']:blockers.append('Character capture uses a different source import: '+character['id'])
                 capture=root/form['path']
                 if not capture.is_file() or hashlib.sha256(capture.read_bytes()).hexdigest()!=form['captureSha256']:blockers.append('Character capture missing or changed: '+character['id'])
+    import gzip
+    roar_path=root/'godot/assets/abilities/source-roars.json'
+    roar=json.loads(roar_path.read_text())
+    if roar.get('failures') or len(roar.get('characters',{}))!=52 or len(roar.get('groups',{}))!=7:
+        blockers.append('Source Howling groups and character bindings incomplete')
+    if hashlib.sha256(gzip.decompress((root/'docs/pc-clientfx.fxf.gz').read_bytes())).hexdigest()!=roar.get('sourceSha256'):
+        blockers.append('Source ClientFX digest mismatch')
+    if not set(roar.get('characters',{})).issubset({row['id'] for row in characters if row.get('available')}):
+        blockers.append('Roar refers to an unavailable source character')
+    for key,texture in roar.get('textures',{}).items():verify_asset(texture,'roar texture '+key)
+    for key,group in roar.get('groups',{}).items():
+        for node in group.get('nodes',[]):
+            if node.get('asset'):verify_asset(node,'roar mesh '+key)
+            for frame in node.get('frames',[]):
+                if not (root/'godot'/frame.removeprefix('res://')).is_file():blockers.append('Roar sprite frame missing: '+frame)
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

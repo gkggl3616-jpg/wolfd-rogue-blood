@@ -7,7 +7,7 @@
       "path": "docs/review/pc-reference/entry-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0d654d96bffe603729b677d093c3363666c950b52c5301e2d7f41ab445c62fc9"
+      "sha256": "c1ed23de13bbd130b5c69bb99e81d64bb2bb2dd75dd451269fa4b8dfbe4f3eb3"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/pc-reference/second-password-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "21e40f23c7a3e51acdce4fb61de89623b7c2d6ed6ea58de61d5365ab8157615d"
+      "sha256": "fc234acbe9821034f42e4740b809940e966b57f5f292e54287f321df118c19f9"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/pc-reference/wolf-tattoo-slots-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e10aa5cb212cf2c190c22252a7bd872ec807e35ad501547188bc8baea6d0c057"
+      "sha256": "1c1cb03a134a97c6a6b0faad550ea1ac607670243ce79362745243b620203f8b"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/pc-reference/box-reward-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "99eec21f0f3a7f515094139a7ea88207a103f5fe2e405755d4492623cb1e6f54"
+      "sha256": "c7d7b37ad725aadc9b0b7242c17e9a8062fdd5b4c13129f0b3fafca7bba155af"
     },
     {
       "height": 720,
@@ -103,7 +103,7 @@
       "path": "docs/review/pc-reference/match-scoreboard-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "575fbe7b3aebe1cd08b75a2dbb67d253024c69e7044674b0fb2b9665abf87f8d"
+      "sha256": "3257a1f6ccd2f68020913b15b9064f939413c6106b6247365d5c9260e891049b"
     },
     {
       "height": 720,
@@ -134,5 +134,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureLocalCash": 1000,
-  "runtimeCodeSha256": "bebb6273a5f7de73e8390a162f312c72ac3907eca4806f5352ca00203a468e84"
+  "runtimeCodeSha256": "57670ee0e699f4856968459eaf8855b27a4799563ece9d6a8beac36585545eaf"
 }

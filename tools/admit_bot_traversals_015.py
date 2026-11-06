@@ -5,8 +5,8 @@ passed={(int(r['map']),r['link'],r['reversed']) for r in proof['landings'] if r[
 for record in records:
  accepted=[]
  for index,link in enumerate(record['links']):
-  if all((int(record['number']),index,direction) in passed for direction in [False,True]):accepted.append(link)
-  else:rejected.append({'map':record['number'],'candidateIndex':index,'candidate':link,'reason':'Both directions must launch and land within 0.85m in actual bot collision physics'})
- record['links']=accepted;record['validation']+=' Also admitted by two-direction CharacterBody3D landing tests.'
+  if all((int(record['number']),index,direction) in passed for direction in ([False,True] if link.get("bidirectional",True) else [False])):accepted.append(link)
+  else:rejected.append({'map':record['number'],'candidateIndex':index,'candidate':link,'reason':'Every enabled direction must launch and land within 0.85m in actual bot collision physics'})
+ record['links']=accepted;record['validation']+=' Also admitted by CharacterBody3D landing tests for every enabled direction.'
 (ROOT/'docs/bot-traversal-rejections-015.json').write_text(json.dumps({'rejected':rejected,'candidateFailures':proof['failures'],'finalLinkCount':sum(len(r['links']) for r in records)},indent=2)+'\n')
 path.write_text(json.dumps(records,indent=2)+'\n');print('Accepted links',sum(len(r['links']) for r in records),'rejected',len(rejected))

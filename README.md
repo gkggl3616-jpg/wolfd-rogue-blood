@@ -1,10 +1,10 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.15.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.16.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık yerel koleksiyon içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
 
-[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.15.0-offline/WolfRogueBlood-0.15.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
+[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.16.0-offline/WolfRogueBlood-0.16.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
-[0.15 takım karakterleri, dövme/pençe güçleri, kontroller ve fotoğraflar](docs/PC_REFERANS_015.md)
+[0.16 envanter, takım botları, kükreme/takla düzeltmeleri ve fotoğraflar](docs/PC_REFERANS_016.md)
 
 [0.13 değişiklikleri ve fotoğraflar](docs/PC_REFERANS_013.md) · Maç başı ekipman/kurt seçimi, altı kaynak mutasyon modeli, onaylanan hediyeler, güç yuvaları ve referans üst menüsü.
 

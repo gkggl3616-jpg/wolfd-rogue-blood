@@ -19,7 +19,7 @@ func run():
 	game.take_damage(100,null,{"name":"QA Enemy","weapon":"Tüfek"})
 	ensure(game.deaths==1 and game.kill_feed[0].attacker=="QA Enemy","actual lethal bot damage generates death announcement")
 	game.show_library("Karakterler");await frames();var ui=game.library_panel
-	ensure(ui.preview_model!=null and ui.preview_container.position.y==180,"full body preview uses the new character framing")
+	ensure(ui.preview_model!=null and ui.preview_view.transparent_bg and ui.preview_container.position.y==145,"full body preview uses the new character framing")
 	for title in ["N","M","AT","Karakteri kullan"]:ensure(ui.links.has(title),"character action exists: "+title)
-	ensure(ui.detail_helper.details.find_children("*","ProgressBar",true,false).size()==4,"stats panel shows four verified local attributes")
+	ensure(ui.detail_helper.details.find_children("*","ProgressBar",true,false).is_empty(),"unrequested stats panel is removed")
 	var report={"checks":checks,"passed":errors.is_empty(),"failures":errors};var file=FileAccess.open("res://../docs/human-reference-validation.json",FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close();game.queue_free();await frames();print(JSON.stringify(report));quit(0 if errors.is_empty() else 1)

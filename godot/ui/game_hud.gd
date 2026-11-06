@@ -147,7 +147,7 @@ func refresh_from_game():
 	refresh_feed()
 	guide.visible=game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
 	guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths]
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.book.slots.duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate()]
 	if state==last_state:return
 	last_state=state
 	health_view.set_value("HealthPoint",game.health)
@@ -156,7 +156,7 @@ func refresh_from_game():
 	weapon_name.text="KURT" if game.player.is_wolf else ("ŞARJÖR…" if game.reloading>0 else game.player.weapon_info.get("name",""))
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
 	var blue=game.local_room.get("team","blue")=="blue"
-	score_view.set_value("RedTeamScore",game.deaths if blue else game.kills);score_view.set_value("BlueTeamScore",game.kills if blue else game.deaths);score_view.set_value("Mode","Yerel Eğitim   10 Puan")
+	score_view.set_value("RedTeamScore",game.team_score("red"));score_view.set_value("BlueTeamScore",game.team_score("blue"));score_view.set_value("Mode","Yerel Eğitim   10 Puan")
 	if game.hunt.active:
 		score_view.set_value("RedTeamScore",game.hunt.round_kills);score_view.set_value("BlueTeamScore",game.LocalHunt.TARGET);score_view.set_value("Mode","Kurt Avı · %d/3" % game.hunt.round_number)
 	if int(game.local_room.get("mode",0))==game.WOLF_BATTLE:score_view.set_value("Mode","Kurt Savaşı")

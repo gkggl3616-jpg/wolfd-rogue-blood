@@ -66,6 +66,10 @@ func run():
 			var source_points=game.team_start_points(game.map_catalog.offline_record(int(entry.number)),team)
 			var positions=blue_spawns if team=="blue" else [game.preview_spawn]
 			check(positions.all(func(point):return source_points.any(func(anchor):return point.distance_to(Vector3(anchor.position[0],anchor.position[1],anchor.position[2]))<3.6)),"Team "+team+" stays in its original spawn group: "+str(entry.number))
+		check(game.spawn_enemy("wolf","normal","red"),"Allied bot spawns inside the player's source team zone: "+str(entry.number))
+		var allied=game.enemies.get_children().filter(func(bot):return not bot.is_queued_for_deletion() and bot.team=="red")
+		var own_anchors=game.team_start_points(game.map_catalog.offline_record(int(entry.number)),"red")
+		check(allied.size()==1 and own_anchors.any(func(anchor):return allied[0].position.distance_to(Vector3(anchor.position[0],anchor.position[1],anchor.position[2]))<3.6),"Allied bot never substitutes opposing spawn: "+str(entry.number))
 		game.running=false
 	game.local_room = {"mode": 0, "map": 9999}
 	check(not game.start_round() and not game.running, "Unknown map cannot silently start arena")

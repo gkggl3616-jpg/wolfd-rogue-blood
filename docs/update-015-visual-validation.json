@@ -7,7 +7,7 @@
       "path": "docs/review/update-015/red-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "7bea1e331c7b2d4dc4003dadc4da005fa3f4b4355a3ea16d6b9101f2e1307e7a"
+      "sha256": "f65fb6a32bdc5b409ebde7b4dd258cb700558763c99a0cb9f189d10f1910ac30"
     },
     {
       "height": 992,
@@ -15,7 +15,7 @@
       "path": "docs/review/update-015/blue-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "54cc8e4bc2c5b79122c2d55666cc5a088cb9fcd8126a51c4a2bef3ecb4ff0417"
+      "sha256": "c5f4da5fd00476961d6c352f71671b26a4de989fb87e54366973576d8eafe455"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/update-015/tattoo-triplets-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "10e61974bd8a0ee66837769d954e782e967c21611a10fbc65637718567e991d9"
+      "sha256": "036cdf386ed606c2f0ebf0c778c4436606a2c5e6253e36217d1cae9389005432"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/update-015/red-wolf-tattoos-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e7fe1db077f0d86eab97124e61fafe55928e6d9cae36e591e6539e8fe6aec717"
+      "sha256": "769db2af5c7ab55d80706b817bef9199a5d0fa273561f39fdb7ec86ddd0cca48"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/update-015/blue-wolf-tattoos-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ac0b71ad18b7dcd77821c939e7a2192689ae54793c52d897dff66e582fba7261"
+      "sha256": "5c4fbfc968ca5ff4497371c75e3ab1dd1acf779174a6962778c1ee0db4cf5947"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/update-015/source-claw-powers-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "083021ccf4c651cbecb1b032fe9b51bb182eebd70aa442ba9221e276ec566f43"
+      "sha256": "d08611a72b1235165d5c13e2142562397dc4bcdb267f938316d7517002fd7c87"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/update-015/new-maps-selection-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7c55a4ca0f0212ed9505e271445bcef785fe75f8abea7681816122ff6b8d117a"
+      "sha256": "826934fc561b41e8947b8d0bf9f6703666638a7b0f1d1725c26b737cc714ffd2"
     },
     {
       "height": 720,
@@ -86,5 +86,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "safeInsetsFixture": true,
-  "runtimeCodeSha256": "bebb6273a5f7de73e8390a162f312c72ac3907eca4806f5352ca00203a468e84"
+  "runtimeCodeSha256": "57670ee0e699f4856968459eaf8855b27a4799563ece9d6a8beac36585545eaf"
 }

@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "0d654d96bffe603729b677d093c3363666c950b52c5301e2d7f41ab445c62fc9"
+      "sha256": "c1ed23de13bbd130b5c69bb99e81d64bb2bb2dd75dd451269fa4b8dfbe4f3eb3"
     },
     {
       "height": 720,
@@ -220,7 +220,7 @@
         "interface/charequipmentpage"
       ],
       "width": 1280,
-      "sha256": "1046f51046081f278ccdeaad98709f9c1f554f41c1b4b2449810f0882b6e49ef"
+      "sha256": "25e1c82637460eb7ea6ca1677251d15378faa17b2ca14425222de84a16692756"
     },
     {
       "height": 720,
@@ -243,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "10e61974bd8a0ee66837769d954e782e967c21611a10fbc65637718567e991d9"
+      "sha256": "036cdf386ed606c2f0ebf0c778c4436606a2c5e6253e36217d1cae9389005432"
     },
     {
       "height": 720,
@@ -290,7 +290,7 @@
         "interface/abilityequipmentpage"
       ],
       "width": 1280,
-      "sha256": "92ff0a9b4a7265c571421866272704a5179b6c41b418f5027bcfd6b92a904ef5"
+      "sha256": "5d3176be6391193240c459befd22df350c1bf165dc9d9ddd1ac1d9652de953c3"
     },
     {
       "height": 720,
@@ -573,7 +573,7 @@
         "interface/createfield"
       ],
       "width": 1280,
-      "sha256": "141ada9d9d516e4b0d291fcceee6171d9da64c60d10c8a547054ecb32dba53b8"
+      "sha256": "091feb733bec18020b36de31f32d97e57bd1258ec45c66886194aa611bb3e2d8"
     },
     {
       "height": 720,
@@ -793,5 +793,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "bebb6273a5f7de73e8390a162f312c72ac3907eca4806f5352ca00203a468e84"
+  "runtimeCodeSha256": "57670ee0e699f4856968459eaf8855b27a4799563ece9d6a8beac36585545eaf"
 }

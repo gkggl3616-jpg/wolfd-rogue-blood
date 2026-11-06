@@ -43,6 +43,8 @@ var roll_elapsed = 0.0
 var roll_duration = 0.65
 var roll_cooldown = 0.0
 var roll_direction = Vector3.ZERO
+var roll_travel=0.0
+const ROLL_DISTANCE=3.0
 var roll_base = Transform3D.IDENTITY
 var wall_holding = false
 var wall_hold_remaining = 0.0
@@ -405,7 +407,8 @@ func _physics_process(delta):
 	elif (Input.is_action_pressed("sprint") or normal_run_toggled) and axis.length() > 0.1:
 		speed *= float(game.equipment.rules.mobileAdaptation.normalSprintMultiplier)
 	if Input.is_action_just_pressed("roll"): begin_roll()
-	if rolling: direction = roll_direction;speed = 8.5
+	if rolling:
+		direction=roll_direction;speed=ROLL_DISTANCE/maxf(0.1,roll_duration)
 	if air_attacking:
 		direction=air_attack_direction;speed=float(game.equipment.rules.mobileAdaptation.airAttackSpeed)
 	crouching = Input.is_action_pressed("crouch") or rolling
@@ -430,7 +433,13 @@ func _physics_process(delta):
 		if not rolling: play_clip("jump");action_time = 0.55
 	velocity.x = move_toward(velocity.x, direction.x * speed, delta * 28)
 	velocity.z = move_toward(velocity.z, direction.z * speed, delta * 28)
+	var before_roll=global_position
+	if rolling:
+		var remaining=maxf(0,ROLL_DISTANCE-roll_travel)
+		var flat=Vector2(velocity.x,velocity.z).limit_length(remaining/maxf(delta,0.0001))
+		velocity.x=flat.x;velocity.z=flat.y
 	move_and_slide()
+	if rolling:roll_travel+=Vector2(global_position.x-before_roll.x,global_position.z-before_roll.z).length()
 	advance_roll(delta)
 	advance_air_attack(delta)
 	if Input.is_action_just_pressed("transform"):
@@ -459,7 +468,7 @@ func begin_roll():
 	roll_direction = (transform.basis * Vector3(axis.x, 0, axis.y)).normalized() if axis.length() > 0.15 else Vector3.ZERO
 	if axis.length()<=0.15:velocity.x=0;velocity.z=0
 	roll_duration = anim.get_animation("special_attack").length
-	roll_base = wolf.transform;rolling = true;roll_elapsed = 0;roll_cooldown = roll_duration + 0.45;action_time = roll_duration;play_clip("special_attack");return true
+	roll_base = wolf.transform;rolling = true;roll_elapsed = 0;roll_travel=0;roll_cooldown = roll_duration + 0.45;action_time = roll_duration;play_clip("special_attack");return true
 
 func advance_roll(delta):
 	if not rolling: return
@@ -467,13 +476,13 @@ func advance_roll(delta):
 	for i in get_slide_collision_count():
 		if get_slide_collision(i).get_normal().dot(roll_direction) < - 0.5: end_roll();return
 	roll_elapsed += delta
-	if roll_elapsed >= roll_duration: end_roll();return
+	if roll_elapsed >= roll_duration or roll_travel>=ROLL_DISTANCE-0.001: end_roll();return
 
 
 
 func end_roll():
 	if not rolling: return
-	rolling = false;roll_elapsed = 0;wolf.transform = roll_base;action_time = 0
+	rolling = false;roll_elapsed = 0;velocity.x=0;velocity.z=0;wolf.transform = roll_base;action_time = 0
 
 func begin_wall_hold():
 	if wall_holding or rolling or wall_hold_cooldown > 0 or not wolf_running or not can_wolf_run(): return false

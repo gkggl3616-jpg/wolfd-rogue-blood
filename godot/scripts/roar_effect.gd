@@ -10,6 +10,7 @@ var audio: AudioStreamPlayer3D
 var aura: AnimatedSprite3D
 var light: OmniLight3D
 var materials = []
+var source_effect
 
 func _ready():
 	audio = AudioStreamPlayer3D.new();audio.stream = load("res://assets/abilities/wolf-roar.wav");audio.volume_db = -12;audio.max_distance = 24;add_child(audio)
@@ -21,6 +22,7 @@ func _ready():
 			frames.set_animation_speed("default", entry.fps);break
 	aura.sprite_frames = frames;aura.hide()
 	light = OmniLight3D.new();light.position = Vector3(0, 1.1, 0.1);light.light_color = Color(0.62, 0.22, 1);light.omni_range = 2.8;light.shadow_enabled = false;light.light_energy = 0;add_child(light)
+	source_effect=Node3D.new();source_effect.set_script(preload("res://scripts/source_roar.gd"));source_effect.player=player;add_child(source_effect)
 	bind_tattoos()
 
 func bind_tattoos():
@@ -32,10 +34,12 @@ func bind_tattoos():
 func begin(seconds):
 	if active or cooldown > 0 or not player.is_wolf or player.game.menu_open or not player.game.running: return false
 	duration = maxf(0.1, seconds);elapsed = 0;active = true;cooldown = duration + 0.8;bind_tattoos();aura.hide()
+	source_effect.begin()
 	if not player.game.test_mode: audio.play()
 	return true
 
 func stop():
+	if is_instance_valid(source_effect):source_effect.stop()
 	active = false;elapsed = 0;intensity = 0;audio.stop();aura.stop();aura.hide();light.light_energy = 0
 	for material in materials: material.emission_energy_multiplier = 0
 
@@ -47,7 +51,7 @@ func advance(delta):
 	if elapsed >= duration: stop();return
 	var phase = elapsed / duration
 	intensity = sin(PI * phase) * (0.85 + 0.15 * sin(elapsed * 22))
-	for material in materials: material.emission_energy_multiplier = intensity * 4
+	for material in materials: material.emission_energy_multiplier = intensity * 0.45
 	aura.modulate.a = intensity * 0.65;aura.scale = Vector3.ONE * (0.65 + phase * 0.5);light.light_energy = 0
 
 func _process(delta): advance(delta)

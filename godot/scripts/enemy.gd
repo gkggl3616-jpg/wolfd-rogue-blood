@@ -3,6 +3,8 @@ const Rules=preload("res://scripts/bot_rules.gd")
 const Traversal=preload("res://scripts/bot_traversal.gd")
 var game
 var team="red"
+var opponent
+var target_clock=0.0
 var kind="wolf"
 var display_name="Bot"
 var difficulty="normal"
@@ -53,6 +55,7 @@ var jumps_completed=0
 
 func _ready():
  profile=Rules.profile(difficulty)
+ opponent=game.player if team!=game.local_room.get("team","blue") else null
  collision_layer=2;collision_mask=3;floor_snap_length=0.35;floor_max_angle=deg_to_rad(48)
  set_meta("enemy",true)
  collider=CollisionShape3D.new();capsule=CapsuleShape3D.new();capsule.radius=0.42;capsule.height=1.9;collider.shape=capsule;collider.position.y=0.95;add_child(collider)
@@ -112,22 +115,34 @@ func reachable(point):
  var path=NavigationServer3D.map_get_path(map,start,end,true)
  return path.size()>=2 and path[-1].distance_to(end)<0.8
 
+func choose_opponent():
+ var candidates=game.combat_targets(team)
+ candidates.sort_custom(func(a,b):return global_position.distance_squared_to(a.global_position)<global_position.distance_squared_to(b.global_position))
+ var previous=opponent
+ for candidate in candidates:
+  opponent=candidate
+  if can_see_player():return
+ opponent=previous if game.actor_alive(previous) else (candidates[0] if not candidates.is_empty() else null)
+
 func can_see_player():
- var offset=game.player.global_position-global_position
+ if not game.actor_alive(opponent):return false
+ var offset=opponent.global_position-global_position
  if offset.length()>38:return false
- if game.player.is_cloaked() and offset.length()>3:return false
+ if opponent.has_method("is_cloaked") and opponent.is_cloaked() and offset.length()>3:return false
  var flat=Vector3(offset.x,0,offset.z)
  if flat.length()>3 and flat.normalized().dot(-global_basis.z)<-0.25:return false
  return line_to_player()
 
 func line_to_player():
+ if not game.actor_alive(opponent):return false
  var eye=global_position+Vector3.UP*1.4
- var height=game.player.capsule.height*0.58 if is_instance_valid(game.player.capsule) else 1.0
- var query=PhysicsRayQueryParameters3D.create(eye,game.player.global_position+Vector3.UP*height,1,[get_rid()])
+ var height=opponent.capsule.height*0.58 if is_instance_valid(opponent.capsule) else 1.0
+ var query=PhysicsRayQueryParameters3D.create(eye,opponent.global_position+Vector3.UP*height,3,[get_rid()])
  var hit=get_world_3d().direct_space_state.intersect_ray(query)
- return not hit.is_empty() and hit.collider==game.player
+ return not hit.is_empty() and hit.collider==opponent
 
 func hear_noise(point,radius):
+ if not game.actor_alive(opponent):return
  if health<=0 or not game.running or game.menu_open:return
  var distance=point.distance_to(global_position)
  var query=PhysicsRayQueryParameters3D.create(global_position+Vector3.UP,point+Vector3.UP,1,[get_rid(),game.player.get_rid()])
@@ -136,10 +151,12 @@ func hear_noise(point,radius):
   last_known=point;has_target=true;memory=float(profile.memory);destination=point
 
 func think():
+ target_clock-=float(profile.think)
+ if target_clock<=0 or not game.actor_alive(opponent):choose_opponent();target_clock=0.5
  var visible_now=can_see_player()
  if visible_now:
   if not sees_player:reaction=float(profile.reaction)
-  last_known=game.player.global_position;has_target=true;memory=float(profile.memory)
+  last_known=opponent.global_position;has_target=true;memory=float(profile.memory)
  sees_player=visible_now
  if not sees_player and memory<=0:has_target=false
  if rolling or reload_remaining>0:return
@@ -156,7 +173,7 @@ func think():
   var distance=global_position.distance_to(last_known)
   if sees_player and reaction<=0:
    if distance<(22 if kind=="human" and ammo>0 else 1.8):state="attack"
-   if game.player.is_wolf and distance<4 and game.player.action_time>0 and randf()<float(profile.dodgeChance):begin_dodge()
+   if opponent==game.player and game.player.is_wolf and distance<4 and game.player.action_time>0 and randf()<float(profile.dodgeChance):begin_dodge()
  else:
   state="patrol"
   if patrol_points.is_empty():destination=global_position
@@ -203,23 +220,29 @@ func begin_dodge(direction=Vector3.ZERO):
 
 func fire():
  if not game.running or game.menu_open or health<=0 or attack_clock>0:return false
+ if not game.actor_alive(opponent):return false
  if kind!="human" or ammo<=0 or reload_remaining>0 or rolling or reaction>0 or not sees_player or not line_to_player():return false
  ammo-=1;shots_fired+=1;attack_clock=fire_interval;play("attack")
  var eye=global_position+Vector3.UP*1.4
- var target=game.player.global_position+Vector3.UP*game.player.capsule.height*0.58
+ var target=opponent.global_position+Vector3.UP*opponent.capsule.height*0.58
  var direction=(target-eye).normalized()
  var spread=float(profile.spread)
  direction=(direction+global_basis.x*randf_range(-spread,spread)+Vector3.UP*randf_range(-spread,spread)).normalized()
- var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(eye,eye+direction*45,1,[get_rid()]))
- if hit and hit.collider==game.player:game.take_damage(Rules.DAMAGE,global_position,{"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe"})
+ var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(eye,eye+direction*45,3,[get_rid()]))
+ if hit and hit.collider==opponent:hit_opponent()
  if not game.test_mode:fire_sound.play()
  return true
 
+func hit_opponent():
+ if not game.hostile(opponent,team):return
+ var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot"}
+ if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
+ else:opponent.damage(Rules.DAMAGE,context)
 func melee_hit():
- if global_position.distance_to(game.player.global_position)<2.1 and line_to_player():game.take_damage(Rules.DAMAGE,global_position,{"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe"})
+ if game.actor_alive(opponent) and global_position.distance_to(opponent.global_position)<2.1 and line_to_player():hit_opponent()
 
 func _physics_process(delta):
- if not game.is_combat_active() or health<=0 or is_queued_for_deletion():return
+ if not game.is_match_active() or health<=0 or is_queued_for_deletion():return
  if not link_flight.is_empty():
   link_flight.elapsed+=delta
   velocity=link_flight.velocity-Vector3.UP*20*link_flight.elapsed
@@ -250,9 +273,9 @@ func _physics_process(delta):
   if brain_enabled:
    think_clock-=delta
    if think_clock<=0:think_clock=float(profile.think);think()
-  if state=="attack" and sees_player:
+  if state=="attack" and sees_player and game.actor_alive(opponent):
    velocity.x=0;velocity.z=0
-   var offset=game.player.global_position-global_position;offset.y=0
+   var offset=opponent.global_position-global_position;offset.y=0
    if offset.length()>0.1:rotation.y=lerp_angle(rotation.y,atan2(-offset.x,-offset.z),delta*7)
    if attack_clock<=0 and reaction<=0:
     if kind=="human" and ammo>0:fire()
@@ -353,9 +376,15 @@ func is_head_hit(point,ray_origin=null,ray_direction=null):
 
 func damage(amount,context={}):
  if health<=0 or amount<=0:return false
- game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
+ if context.get("actor","")!="bot":
+  if team==game.local_room.get("team","blue"):return false
+  game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
+ elif context.get("attackerTeam",team)==team:return false
  health-=amount
  if health<=0:
-  collision_layer=0;context=context.duplicate();context.target=display_name;game.enemy_defeated(context);queue_free()
+  collision_layer=0;context=context.duplicate();context.target=display_name
+  if context.get("actor","")=="bot":game.bot_defeated(self,context)
+  else:game.enemy_defeated(context)
+  queue_free()
  elif sees_player and randf()<float(profile.dodgeChance):begin_dodge()
  return true
