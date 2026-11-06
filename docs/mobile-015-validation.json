@@ -1,6 +1,9 @@
 {
-  "checks": 388,
+  "checks": 381,
   "failures": [],
   "passed": true,
-  "physicalAndroidDeviceTested": false
+  "physicalAndroidDeviceTested": false,
+  "tattooItemsChecked": 819,
+  "tattooRowsChecked": 335,
+  "visibleTattooItemsChecked": 816
 }

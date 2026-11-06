@@ -1,0 +1,75 @@
+{
+  "provider": "Higgsfield video analysis",
+  "manualFrameReview": false,
+  "id": "9e26eb35-9c52-4189-8419-a58a4e6a2eca",
+  "video_input_id": null,
+  "youtube_url": "https://www.youtube.com/watch?v=__oWuPcF2Gw",
+  "status": "completed",
+  "fail_reason": null,
+  "video_s3_url": null,
+  "scenes": [
+    {
+      "audio": "Ambient desktop clicking sounds; no voiceover.",
+      "label": "Opening Hook",
+      "visual": "A desktop recording shows the Bandicam software interface open over a Windows 7 wallpaper. A system error message regarding 'No audio capture device found' is displayed. A mouse cursor moves to click 'OK' on the error dialog, closing it. The lighting is the standard monitor glow, and the desktop icons are visible on the left side of the screen.",
+      "shot_type": "Wide Shot",
+      "scene_number": 1,
+      "timestamp_end": "0:04",
+      "timestamp_start": "0:00"
+    },
+    {
+      "audio": "Electronic loading music starts, characteristic of early 2010s online shooters; fast-paced and synth-heavy.",
+      "label": "Usage Scenarios",
+      "visual": "The mouse cursor navigates through various desktop shortcuts and then clicks the Wolfteam game icon. The screen transitions to a black screen as the game begins to load, followed by the game's login and lobby interface appearing. The interface is grey and cluttered with various menu options and social feeds.",
+      "shot_type": "Wide Shot",
+      "scene_number": 2,
+      "timestamp_end": "0:15",
+      "timestamp_start": "0:04"
+    },
+    {
+      "audio": "Menu selection sound effects (sharp clicks) layered over the game's background music.",
+      "label": "Usage Scenarios",
+      "visual": "Inside the game lobby, the user selects 'Create Room.' A small popup window appears in the center of the screen where the user enters a room title and adjusts settings. The cursor clicks through the 'Map' selection, settling on a desert-themed preview image.",
+      "shot_type": "Wide Shot",
+      "scene_number": 3,
+      "timestamp_end": "0:30",
+      "timestamp_start": "0:15"
+    },
+    {
+      "audio": "Steady synth-loop background music continues; clicking sound effects accompany each menu interaction.",
+      "label": "Usage Scenarios",
+      "visual": "The user enters the room waiting area. They click on the 'Settings' button on the right side of the screen. A large dropdown menu for map selection is opened, showing various thumbnails for different game environments. The user scrolls through the list slowly, hovering over several options.",
+      "shot_type": "Wide Shot",
+      "scene_number": 4,
+      "timestamp_end": "0:45",
+      "timestamp_start": "0:30"
+    },
+    {
+      "audio": "The game's lobby music maintains a constant volume and tempo.",
+      "label": "Usage Scenarios",
+      "visual": "The user continues to browse through the map settings. They select different game modes and player counts from the dropdown menus. The visual focus is on the middle section of the screen where the game room parameters are listed in white text against the dark grey background.",
+      "shot_type": "Wide Shot",
+      "scene_number": 5,
+      "timestamp_end": "1:00",
+      "timestamp_start": "0:45"
+    },
+    {
+      "audio": "Clicking sound effects for window transitions and button presses.",
+      "label": "Usage Scenarios",
+      "visual": "The user clicks on 'Invite' at the bottom of the screen. A new window pops up showing a list of online players. They scroll through the list, then close the invite window and return to the main lobby interface to finalize room settings.",
+      "shot_type": "Wide Shot",
+      "scene_number": 6,
+      "timestamp_end": "1:15",
+      "timestamp_start": "1:00"
+    },
+    {
+      "audio": "The game music cuts off abruptly, replaced by the faint ambient sound of the recording stopping.",
+      "label": "Call to Action",
+      "visual": "The user exits the game back to the desktop. They bring the Bandicam window back to focus and click the 'Stop' recording button. The mouse moves toward the Windows Start menu as the video recording concludes.",
+      "shot_type": "Wide Shot",
+      "scene_number": 7,
+      "timestamp_end": "1:31",
+      "timestamp_start": "1:15"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "utc": "2026-11-06T09:42:43.448922+00:00",
-  "filesHashed": 54844,
-  "bytesRead": 3738096621,
+  "utc": "2026-11-06T14:47:52.286086+00:00",
+  "filesHashed": 54891,
+  "bytesRead": 3750664888,
   "fileTypes": {
     "": 1,
-    ".md": 21,
-    ".json": 131,
-    ".gz": 19,
+    ".md": 22,
+    ".json": 139,
+    ".gz": 24,
     ".txt": 3,
-    ".png": 25285,
+    ".png": 25300,
     ".jpg": 3,
     ".import": 26978,
     ".glb": 728,
@@ -23,17 +23,17 @@
     ".cfg": 1,
     ".tscn": 1,
     ".godot": 1,
-    ".gd": 97,
-    ".uid": 96,
+    ".gd": 104,
+    ".uid": 102,
     ".gdshader": 1,
     ".dat": 1,
-    ".py": 51,
+    ".py": 56,
     ".ps1": 2,
     ".js": 1,
     ".html": 1,
     ".css": 1
   },
-  "literalResourceReferencesChecked": 45842,
+  "literalResourceReferencesChecked": 46209,
   "glbHeadersChecked": 728,
   "issues": [],
   "expectedTestReferences": [
@@ -61,6 +61,11 @@
       "path": "godot/tests/persistence.gd",
       "resource": "res://__missing_unbound_tattoo__.png",
       "reason": "negative_tattoo_fixture"
+    },
+    {
+      "path": "godot/tests/presentation_018.gd",
+      "resource": "res://../docs/presentation-018-validation.json",
+      "reason": "test_report_output"
     },
     {
       "path": "godot/tests/round_equipment_gifts.gd",

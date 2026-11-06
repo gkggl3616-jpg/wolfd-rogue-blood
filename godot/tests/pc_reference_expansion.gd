@@ -142,11 +142,11 @@ func run():
 	ui.detail_helper.role_picker.select(1);ui.detail_helper.role_picker.item_selected.emit(1)
 	ensure(ui.detail_helper.entries.all(func(row):return row.role=="body"),"body filter never mixes arm or unresolved tattoo entries")
 	ui.preview_input(__drag_event());ensure(not is_zero_approx(ui.preview_angle),"preview drag rotates the actual source model")
-	ui.navigate("wolfpass");ensure("interface/wolfpass/wolfpassdlg" in ui.source_layouts,"pass uses the native PC reward-track dialog")
+	ui.navigate("wolfpass");ensure(ui.page=="missions","removed pass route redirects to missions")
 	ui.navigate("missions");ensure("interface/wolfpass/wolfpassmissiondlg" in ui.source_layouts,"local mission progress uses the PC mission dialog")
 	game.show_home();game.pc_panel.navigate("create_room");ensure(game.pc_panel.room_draft.team=="blue" and game.pc_panel.room_title.text=="Yerel Oda","minimal older room data receives safe title/team defaults in the source creator")
 	game.queue_free();await frames()
-	var report={"passed":failures.is_empty(),"checks":checks,"failures":failures,"sourceMapPhotos":19,"renderedMapPreviews":15,"sourceRanks":62,"explicitSourceArmTattoos":59,"physicalAndroidDeviceTested":false,"originalPcRulesEquivalenceValidated":false}
+	var report={"passed":failures.is_empty(),"checks":checks,"failures":failures,"sourceMapPhotos":34,"renderedMapPreviews":0,"sourceRanks":62,"explicitSourceArmTattoos":59,"physicalAndroidDeviceTested":false,"originalPcRulesEquivalenceValidated":false}
 	var file=FileAccess.open(ProjectSettings.globalize_path("res://../docs/pc-reference-expansion-validation.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
 	print("PC_REFERENCE_EXPANSION_QA ",checks," checks; failures=",failures);quit(0 if failures.is_empty() else 1)
 func __drag_event():

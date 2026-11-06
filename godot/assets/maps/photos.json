@@ -1,5 +1,6 @@
 {
-  "association": "Original 19 PC thumbnails retain exact attribute associations. Fifteen added worlds use labelled Godot renders of their actual geometry.",
+  "schemaVersion": 1,
+  "sourceAttributeSha256": "b3974fef37dbe4e6a7fed9187d1112aa8063a4d8ae97bd1d3b87ca3c0188690c",
   "maps": [
     {
       "asset": "res://assets/maps/thumbnails/1.png",
@@ -233,141 +234,192 @@
       "sourceSha256": "91248849539537acdeb4c9554cf661285eb8671fd329d3773344aadee91fb63d"
     },
     {
+      "number": 36,
+      "name": "Cqc Zone",
       "asset": "res://assets/maps/thumbnails/36.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 36.0,
-      "sha256": "b42fba9e5ec3a7cf073b4aba6cab19efee67291bc203ee02259e89da91cd1862",
-      "source": "res://assets/maps/geometry/36.glb",
-      "sourceSha256": "acc35a122af1beec8c40dfa1c02bda6aedd7a3494560f8af26b8292ef5135578"
+      "sha256": "1bcf7a34d55f1e6f3f5aa37a4541200a5b80b0668c03f263cbe20f285ee739f8",
+      "source": "wolfteam kurtları/Root/wt_interface/map/survival.dtx",
+      "sourceSha256": "3c55cc563c5b58a89b9d5bf111da3dbc5a28eefd88e1f957a9249df57816f2f6",
+      "attributeOffsets": [
+        10806
+      ]
     },
     {
+      "number": 69,
+      "name": "Rose",
       "asset": "res://assets/maps/thumbnails/69.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 69.0,
-      "sha256": "aa1bc847d1f55d9ed69f728cbd452f195b001a711948757eae9c9074fcadf7de",
-      "source": "res://assets/maps/geometry/69.glb",
-      "sourceSha256": "e1ad1028e93710926295bc6d449e0c97d79cd4982222c5c08675657fa622b75c"
+      "sha256": "741775f7d266b31c86b9f1ff15618efc46c14d2430d3529ed1d493cd2d5448f3",
+      "source": "wolfteam kurtları/Root/wt_interface/map/rose.dtx",
+      "sourceSha256": "451897042e5d50bfb2fec0c1cce1ef28743c12926fb05f81dc86b0bc1274e3b3",
+      "attributeOffsets": [
+        41137
+      ]
     },
     {
+      "number": 87,
+      "name": "Station",
       "asset": "res://assets/maps/thumbnails/87.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 87.0,
-      "sha256": "9fbb9dcc347cff863710fb2afe68e9e8728b5f6ea38bb173d57c3fee8f4a26b4",
-      "source": "res://assets/maps/geometry/87.glb",
-      "sourceSha256": "0edf5e547d2ba367b3e976c686cd96bfbe37c7005b38874f693e0beb264e51eb"
+      "sha256": "e1c4502201cb408d4be51418d92906f341c1394b81a21471670cd21aa44482f1",
+      "source": "wolfteam kurtları/Root/wt_interface/map/station.dtx",
+      "sourceSha256": "67648a26538656e9fed5b358ef33895aa8a3a8da13d56781b6e0a94663786d2a",
+      "attributeOffsets": [
+        3391,
+        39731,
+        58192,
+        120067,
+        124367,
+        128697,
+        148703
+      ]
     },
     {
+      "number": 17,
+      "name": "Battle Zone2",
       "asset": "res://assets/maps/thumbnails/17.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 17.0,
-      "sha256": "730f1669db43b6dda926f53356caa2dd8e530f47d65636741f754f270377023f",
-      "source": "res://assets/maps/geometry/17.glb",
-      "sourceSha256": "3eb6ff9d304ad2c6aae8c7de2d061c8371675d6192c4c5d531cde3df33f54411"
+      "sha256": "403b73a397f0d0afe20bfbddaf0d4174d1dc708a284d621dab37cf7800718d26",
+      "source": "wolfteam kurtları/Root/wt_interface/map/battlezone.dtx",
+      "sourceSha256": "424c5e61d8c6cab0bab52caad49a940ba8fd9c2f95b30a88d5bbaea6256e4b92",
+      "attributeOffsets": [
+        142161
+      ]
     },
     {
+      "number": 51,
+      "name": "Junk Field",
       "asset": "res://assets/maps/thumbnails/51.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 51.0,
-      "sha256": "3f2c06278ad3965e4d1f6f8e5566f96926b3e2faba7b5d1ed8a8c8e35dd7f9b4",
-      "source": "res://assets/maps/geometry/51.glb",
-      "sourceSha256": "4ac7831ee50fe8d70333cd03f4c9a6b1f3349b21ffbc1ab8984d5bb5e9808235"
+      "sha256": "f875562ea1e50a34950c17f912920f6f2ddb84503a6e922d2d9d6c81b3e83451",
+      "source": "wolfteam kurtları/Root/wt_interface/map/junkfield.dtx",
+      "sourceSha256": "b9e778f1d6c63271c53899454162c9a1e507fc494a2dbab1bd10fd68df5d6266",
+      "attributeOffsets": [
+        6880,
+        138349
+      ]
     },
     {
+      "number": 89,
+      "name": "Storage",
       "asset": "res://assets/maps/thumbnails/89.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 89.0,
-      "sha256": "58dca6b673362bfaf4f38721fc73b4f420c02dcd254e72e66bf6b3dcfb117183",
-      "source": "res://assets/maps/geometry/89.glb",
-      "sourceSha256": "54aaac746e6545ffb37f32f89331a60787de21804b94884fe3858aa53de3d0ea"
+      "sha256": "8777be0b8acf28763e438c3d211a5ec331f6b4e4d0e0c4e8d9cb5a3efd4045b9",
+      "source": "wolfteam kurtları/Root/wt_interface/map/storage.dtx",
+      "sourceSha256": "48b2129af0fcf81bdf15dce7863b27d27041b27d304b38c78d23170dcb708da7",
+      "attributeOffsets": [
+        58941,
+        129446
+      ]
     },
     {
+      "number": 37,
+      "name": "Bridge",
       "asset": "res://assets/maps/thumbnails/37.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 37.0,
-      "sha256": "fcd1cecc5d791cde8e9071755c7e4ecd6ab3dc3ac1be6b9c0178574a0955fde3",
-      "source": "res://assets/maps/geometry/37.glb",
-      "sourceSha256": "696f6f4683fda191da1923a57c35f5ca4d6e405a30c8245a99ebc3c9c740ec31"
+      "sha256": "eba6f62adaa1a3e431b04286b715d15c56d020c7aa107d07a6f76327269a4666",
+      "source": "wolfteam kurtları/Root/wt_interface/map/crashbridge.dtx",
+      "sourceSha256": "f25005afe781cc2dc079c5ee82ffd8df2e3f9afc1194bc23475da464d43dd81e",
+      "attributeOffsets": [
+        53475
+      ]
     },
     {
+      "number": 42,
+      "name": "train factory",
       "asset": "res://assets/maps/thumbnails/42.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 42.0,
-      "sha256": "35891bea003462bec99afcb11692b44567596a6d9c401b457a243cc214c98969",
-      "source": "res://assets/maps/geometry/42.glb",
-      "sourceSha256": "6bed8b0fbd91a5b5b41ebad78831bf05c502d40c0807daa8b207bb702a5ceae8"
+      "sha256": "0be5eafb08d5f3ed03a170d3ab5de00fb7d2b9449aa864663963eef1913c2e5c",
+      "source": "wolfteam kurtları/Root/wt_interface/map/trainfactory.dtx",
+      "sourceSha256": "dbda5f27b0e596a397811644c4495faf104984e7916a9dfb1384cf79cbb26b07",
+      "attributeOffsets": [
+        5448,
+        59598,
+        125122,
+        130103,
+        152911
+      ]
     },
     {
+      "number": 20,
+      "name": "WR_Break-Out_5",
       "asset": "res://assets/maps/thumbnails/20.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 20.0,
-      "sha256": "efb17eafc21248fbad5688846ebc66f971677d2716057b46c8945b5099916da5",
-      "source": "res://assets/maps/geometry/20.glb",
-      "sourceSha256": "7497b716facc8b83b50c351ade04df2e806c3e3ab6d612dc26b9b3c81013f2a6"
+      "sha256": "5e8dbaf6b8d610becb2200f40d44d75d901bc754513a6fcf5acb51275c1fdcf9",
+      "source": "wolfteam kurtları/Root/wt_interface/map/break_out.dtx",
+      "sourceSha256": "af4f2337450fa9450f6a4319ef1d208065a581e7b845b7e752d75df0c7d20101",
+      "attributeOffsets": [
+        101244,
+        102167,
+        103088,
+        104007
+      ]
     },
     {
+      "number": 24,
+      "name": "Cage",
       "asset": "res://assets/maps/thumbnails/24.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 24.0,
-      "sha256": "58710d01d39bbdc3e5f8b6828841886ddfac2b0843ad36dabbfefc10548b6c45",
-      "source": "res://assets/maps/geometry/24.glb",
-      "sourceSha256": "39b6b7d4665c97a6b430c1252f54c860d5240d6ebbea03e4ecf5c63815edd71b"
+      "sha256": "e266b816d7329f93d1ad638fa4e452bdf5a0d5372df7fbc691d6ecf2f3854c90",
+      "source": "wolfteam kurtları/Root/wt_interface/map/cage.dtx",
+      "sourceSha256": "9b22207b52769ba9eb447ca7d22d733f4d10971051a713e0db1069abe0ab49d9",
+      "attributeOffsets": [
+        12739
+      ]
     },
     {
+      "number": 68,
+      "name": "WR_Purge_5",
       "asset": "res://assets/maps/thumbnails/68.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 68.0,
-      "sha256": "e3f0fc18fe0d6475236fc4194d27744a1e04e56625e9b71460e004f9e3cc8fd9",
-      "source": "res://assets/maps/geometry/68.glb",
-      "sourceSha256": "3867052deea2f5021cec89865707ff061989db38ff46515148210da520487a88"
+      "sha256": "67bf2865fc8b81f45b01829274ee23982399d65afed4350c216a4148a1c84945",
+      "source": "wolfteam kurtları/Root/wt_interface/map/purge.dtx",
+      "sourceSha256": "321207a3b47991f79bc17a0b797f22b5df08ca54c50ede4e5bc9d98a6c8fbe17",
+      "attributeOffsets": [
+        97612,
+        98521,
+        99428,
+        100333
+      ]
     },
     {
+      "number": 41,
+      "name": "Explosive Arsenal",
       "asset": "res://assets/maps/thumbnails/41.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 41.0,
-      "sha256": "fbedc3af8b32e328fdfb24ec9ccb8de19d4892d82b2eca946f8ab80597c33785",
-      "source": "res://assets/maps/geometry/41.glb",
-      "sourceSha256": "c3f9a7b598acd36a15e3aa3d497ec400caba754cebbb4cf5f14b54fc7376de2f"
+      "sha256": "6169c9f7b479b66ad6936d597f9b38423a2ae7600aa292948dfb07a2ec66e4cc",
+      "source": "wolfteam kurtları/Root/wt_interface/map/explosivearsenal.dtx",
+      "sourceSha256": "e22c5834cd58cc8b9dbd4315d174ec4e3df6261270f0024be88c5f3e7ef2ade9",
+      "attributeOffsets": [
+        19988,
+        144765
+      ]
     },
     {
+      "number": 56,
+      "name": "WRB_Machu Picchu",
       "asset": "res://assets/maps/thumbnails/56.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 56.0,
-      "sha256": "a21797058f8f316442e627ac255c87a8a41b58fae85d5092404bf48850c87fb9",
-      "source": "res://assets/maps/geometry/56.glb",
-      "sourceSha256": "d5e978aa79f3e2e98495d40a6574183c6d7ff3895b21a7f6d76d77083497e099"
+      "sha256": "f0bfa5dd31059394596565eed0a901246d2ec13ad72731d0228a70655dddb623",
+      "source": "wolfteam kurtları/Root/wt_interface/map/machupicchu_boss.dtx",
+      "sourceSha256": "bf6dda2238fe9505fbcb30b5cc8458794e69907ae4b96f7505356566de867ad7",
+      "attributeOffsets": [
+        91396
+      ]
     },
     {
+      "number": 61,
+      "name": "Paien Lab ADV",
       "asset": "res://assets/maps/thumbnails/61.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 61.0,
-      "sha256": "447bc8061835116f89e747fb2edf5aa2f4c0cf69a3ca83b86c0aeea3a48cc015",
-      "source": "res://assets/maps/geometry/61.glb",
-      "sourceSha256": "0a5c26144042f673199cb7f2b7ecbf9ad1606ad6f4f5415726a4ea9bd5ca8999"
+      "sha256": "21d330a75eb837386ea040ceb543acfae2c5207747cc3b13b0a1347a1990f78a",
+      "source": "wolfteam kurtları/Root/wt_interface/map/paienlabadv.dtx",
+      "sourceSha256": "c824375ede5984ffb6659dbe4dbdbae85078a9e38ba3a1697d27f737dd588c65",
+      "attributeOffsets": [
+        23964,
+        43877
+      ]
     },
     {
+      "number": 106,
+      "name": "UnderWorld",
       "asset": "res://assets/maps/thumbnails/106.png",
-      "kind": "rendered_world_preview",
-      "note": "Actual converted map rendered at source spawn. Original PC photograph unavailable from remote archive during this update.",
-      "number": 106.0,
-      "sha256": "24e71cca3ce50198ef59406d0f401b53ffc59463bcaaf9da4610f8e5bc68c0bc",
-      "source": "res://assets/maps/geometry/106.glb",
-      "sourceSha256": "a62c1fd57abea3cb3d06dcf25d3614704f51275923e6086b1627d0a3ffa90a16"
+      "sha256": "d7f56d870df5ca9a4e7ce433910be2e47e413379120106de60fc6f9d3dc84be4",
+      "source": "wolfteam kurtları/Root/wt_interface/map/underworld.dtx",
+      "sourceSha256": "38d6e9d20e8ad8efd80d99e8695f40e56cbec8cc8837944ea1d27c4bebb0b77a",
+      "attributeOffsets": [
+        11449,
+        140875,
+        149458
+      ]
     }
   ],
-  "schemaVersion": 1.0,
-  "sourceAttributeSha256": "b3974fef37dbe4e6a7fed9187d1112aa8063a4d8ae97bd1d3b87ca3c0188690c"
+  "association": "Exact world-file reference and thumbnail path from typed PC mapattribute.dat record; not a name guess."
 }

@@ -20,7 +20,7 @@ func _input(event):
 					if cell is BaseButton and not cell.disabled and cell.get_global_rect().has_point(event.position):cell.button_pressed=true;cell.pressed.emit();break
 			finger=-1;dragging=false;get_viewport().set_input_as_handled()
 	elif event is InputEventScreenDrag and event.index==finger:
-		var travel=(event.position.y-start.y)/maxf(0.1,page.ui.canvas.scale.y)
+		var travel=(event.position.y-start.y)/maxf(0.1,page.ui.canvas.scale.y*page.ui.content.scale.y)
 		if absf(travel)>12:dragging=true
 		if dragging:page.scroll_to(start_scroll-travel)
 		get_viewport().set_input_as_handled()

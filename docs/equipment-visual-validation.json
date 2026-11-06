@@ -7,7 +7,7 @@
       "path": "docs/review/equipment-013/gift-inbox-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b2b5ff53f79de9807742bcf2075839f27cf35aefc6adf542c3f2e76dd86d7d1b"
+      "sha256": "b1377fdba01eb4faa27a3737af400546b14bc3fd31fb298285e536baaf73f7b0"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/equipment-013/gift-confirmation-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "dd7aec65ace1dbca1abd3f45f684c4cb2ffd11469851bd74b6d943e214d52726"
+      "sha256": "c4135fc076ef8cf0df8a9e717b149a1c82d13f37ab54846b5ec08781e7bee64e"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/equipment-013/wolf-power-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "85980276b60b03698f4cc1d50498e1124e46d9a73634ce272b93b4d5e5b47b25"
+      "sha256": "90ad5d877a540a01745f137c1bd7348b767103e363e49576b1be6afeaa96cfc0"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/equipment-013/wolf-bag-filter-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c6affe4f3174457a9bdbc0b936ca6848a780abf6726419eff55a41b1f8475e09"
+      "sha256": "00712fe0c16d9e35172870728a2e9ed5bc0293240ff7468abdafb096becfa001"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/equipment-013/wolf-tattoo-inventory-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4c3cb745686a70e29b12766e946e56573092b49577488c95c294c96d842872d3"
+      "sha256": "951a2c3d88c38951f2b9b807bdae6ba64b543b92cfa8de28771434abba16ea9b"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/equipment-013/human-loadout-slots-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e631dbd90a3150150f3160d501b7fa1f722358a515b7f18a48efde2300dcc00f"
+      "sha256": "044cc33e985ef45921a7b8a17ef2ef36b8632e78b8b4f24d85fcd70bb1fa9d37"
     },
     {
       "height": 720,
@@ -55,7 +55,7 @@
       "path": "docs/review/equipment-013/human-weapon-properties-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "285bafd68bbcbd72b136b25e4bd5392bc02480c24f1932114cf873b31e69a157"
+      "sha256": "3fcebb9f49fc07fb17dafb479512ebfbe59aeaf4d2ae4e86bd0aba14b2d8d376"
     },
     {
       "height": 720,
@@ -135,7 +135,7 @@
       "path": "docs/review/equipment-013/gift-history-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "0e47d2489d6ef9cb3cb09e9d3615ae700c25b2fcd6ce85ca46d04e19911dcbce"
+      "sha256": "e4e37b1cf4a439eca4cad28dd12154155b3c18bf0bc293ad2fabc8489017af36"
     }
   ],
   "failures": 0,
@@ -143,5 +143,5 @@
   "rendering": "gl_compatibility",
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
-  "runtimeCodeSha256": "92a474928760e18b25efeaa826986df17706376556cfceac69f36b0f629c7634"
+  "runtimeCodeSha256": "d0f000021c13d2ae74824a8d50bbf448af18539c1d2bba27df8297388d4624f5"
 }

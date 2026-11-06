@@ -75,7 +75,10 @@ func run():
  touch(game.touch,41,fire,false);ensure(not Input.is_action_pressed("fire"),"Fire drag releases cleanly")
  game.show_library("Dövmeler");await frames();var ui=game.library_panel
  var helper=ui.detail_helper
- ensure(helper.entries.filter(func(row):return not row.get("placeholder",false)).size()==game.book.tattoos.size(),"Family grouping retains every tattoo, including duplicate named variants")
+ var shown_tattoos=helper.entries.filter(func(row):return not row.get("placeholder",false));var shown_ids=shown_tattoos.map(func(row):return row.id)
+ ensure(shown_tattoos.size()==816,"Only the three same-art older gold OG cards are consolidated")
+ ensure(game.book.tattoos.all(func(row):return row.get("canonicalId",row.id) in shown_ids),"Every original tattoo is represented by itself or its documented gold OG alias")
+ var tattoo_item_count=game.book.tattoos.size();var tattoo_row_count=int(helper.entries.size()/3)
  for i in range(0,helper.entries.size(),3):
   ensure(helper.entries[i].role=="left" and helper.entries[i+1].role=="body" and helper.entries[i+2].role=="right","Tattoo family stays left/body/right")
  var selected=ui.selected.id;var swipe=helper.swipe;var at=swipe.get_global_rect().get_center()
@@ -94,6 +97,6 @@ func run():
  ui.filter_id="red";ui.offset=0;ui.detail_helper.refresh_grid();ensure(ui.detail_helper.entries.all(func(row):return row.sourceTeam=="red"),"Red filter never substitutes blue models")
  ui.filter_id="blue";ui.offset=0;ui.detail_helper.refresh_grid();ensure(ui.detail_helper.entries.all(func(row):return row.sourceTeam=="blue"),"Blue filter never substitutes red models")
  game.queue_free();await frames()
- var report={"passed":failures.is_empty(),"checks":checks,"failures":failures,"physicalAndroidDeviceTested":false}
+ var report={"tattooItemsChecked":tattoo_item_count,"visibleTattooItemsChecked":shown_tattoos.size(),"tattooRowsChecked":tattoo_row_count,"passed":failures.is_empty(),"checks":checks,"failures":failures,"physicalAndroidDeviceTested":false}
  var file=FileAccess.open(ProjectSettings.globalize_path("res://").path_join("../docs/mobile-015-validation.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
  print("MOBILE_015_QA ",checks," failures=",failures);quit(0 if failures.is_empty() else 1)

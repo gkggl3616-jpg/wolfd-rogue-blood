@@ -100,7 +100,7 @@ func run():
  game.library_panel.detail_helper.switch_collection_mode();ensure(game.library_panel.page=="Envanter" and game.library_panel.detail_helper.loadout_tabs.size()==5 and game.library_panel.detail_helper.entries.size()==4,"Switching back restores owned inventory and all five equipment tabs")
  game.library_panel.navigate("Mağaza")
  game.library_panel.navigate("power");ensure(is_instance_valid(game.library_panel.preview_model) and game.library_panel.detail_helper.equipped_cards.is_empty(),"Power shop shows the large real wolf preview instead of inventory slot placeholders")
- game.library_panel.navigate("Dövmeler");ensure(game.library_panel.detail_helper.entries.filter(func(row):return not row.get("placeholder",false)).size()==819,"Shop mode survives switching to all tattoo families")
+ game.library_panel.navigate("Dövmeler");ensure(game.library_panel.detail_helper.entries.filter(func(row):return not row.get("placeholder",false)).size()==816,"Shop shows every distinct tattoo, with older same-art gold OG aliases consolidated")
  game.library_panel.collection_shop=false;game.library_panel.refresh();ensure(game.library_panel.detail_helper.entries.filter(func(row):return not row.get("placeholder",false)).size()==3,"Tattoo inventory excludes unbought family members")
  game.local_room={"mode":0,"map":0,"team":"blue","allyBots":0,"enemyBots":0};game.start_round();game.spawn_clock=10000
  if not game.player.is_wolf:game.player.switch_form(true)

@@ -18,7 +18,7 @@ func run():
 	await capture("entry-012")
 	game.show_home();game.pc_panel.navigate("pin");await capture("second-password-012")
 	game.pc_panel.navigate("rankbook");await capture("rank-catalogue-012")
-	game.pc_panel.navigate("wolfpass");await capture("wolf-pass-012")
+	game.pc_panel.navigate("missions");await capture("toolbar-missions-012")
 	game.pc_panel.navigate("missions");await capture("local-missions-012")
 	game.pc_panel.navigate("create_room");var ui=game.pc_panel
 	for i in range(ui.room_map.item_count):

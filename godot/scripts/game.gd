@@ -28,6 +28,7 @@ const WOLF_BATTLE=900003
 var inbox=GiftInbox.new()
 var mutations=WolfMutations.new()
 var shop_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/shop.json"))
+var source_sets=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/sets.json"))
 var power_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/power.json"))
 var round_selection_enabled=false
 var selection_transform=false
@@ -388,7 +389,7 @@ func refresh_mode_maps():
 	refresh_map_status()
 
 func refresh_map_status():
-	if is_instance_valid(map_photo):map_photo.texture=SourceArt.atlas(map_catalog.photo(map_picker.get_selected_id()).get("asset",""),Rect2(0,0,407,120))
+	if is_instance_valid(map_photo):map_photo.texture=SourceArt.map_photo(map_catalog,map_picker.get_selected_id())
 	if map_picker.item_count == 0:
 		map_status.text = "Bu mod için doğrulanmış seçili harita yok."
 		map_start.disabled = true
@@ -839,7 +840,8 @@ func _process(delta):
 
 func bot_limit(team):
 	if int(local_room.get("mode",0))==LocalTutorial.MODE:return 0
-	return clampi(int(local_room.get("allyBots",0) if team==local_room.get("team","blue") else local_room.get("enemyBots",4)),0,4)
+	var own=team==local_room.get("team","blue");var slots=int(clampi(int(local_room.get("capacity",16)),2,16)/2)-(1 if own else 0)
+	return clampi(int(local_room.get("allyBots",0) if own else local_room.get("enemyBots",4)),0,mini(4,slots))
 
 func actor_alive(actor):
 	return is_instance_valid(actor) and not actor.is_queued_for_deletion() and (health>0 if actor==player else actor.health>0)
@@ -1378,3 +1380,24 @@ func normalize_unlimited_wallet(candidate):
 	for currency in ["cash","kp"]:
 		if is_unlimited_currency(currency):candidate[currency]=1000000000
 func wallet_text(currency):return "∞" if is_unlimited_currency(currency) else str(int(wallet.get(currency,0)))
+
+func source_set(id):
+	for item in source_sets.items:
+		if item.id==str(id):return item
+	return {}
+func buy_source_set(id,currency,request):
+	if remote_player!="" or not request is String or request.is_empty() or request.length()>140:return {"ok":false,"error":"Yerel işlem gerekli."}
+	var item=source_set(id);var prefix="set-buy-"+request.sha256_text()+"-"
+	if inbox.state.messages.any(func(message):return message.sourceKey.begins_with(prefix)):return {"ok":true,"duplicate":true}
+	if item.is_empty() or not item.available:return {"ok":false,"error":"Setin bütün kaynak içeriği kullanıma hazır değil."}
+	var offers=item.offers.filter(func(offer):return offer.currency==currency)
+	if offers.size()!=1 or not wallet.has(currency):return {"ok":false,"error":"Kaynak set fiyatı yok."}
+	var price=int(offers[0].price)
+	if price<=0 or (not is_unlimited_currency(currency) and int(wallet[currency])<price):return {"ok":false,"error":"Bakiye yetersiz."}
+	var pending=inbox.state.duplicate(true);var balance=wallet.duplicate();normalize_unlimited_wallet(balance)
+	if not is_unlimited_currency(currency):balance[currency]-=price
+	for i in range(item.members.size()):
+		var member=item.members[i]
+		if inbox.enqueue(pending,member.kind,member.id,member.name,1,prefix+str(i),"Mağaza · "+item.name).is_empty():return {"ok":false,"error":"Hediye kutusunda setin tamamı için yer yok."}
+	if not save_wallet(balance,null,null,pending):return {"ok":false,"error":"Set kaydedilemedi; bakiye ve eşyalar korunuyor."}
+	wallet=balance;inbox.state=pending;update_hud();return {"ok":true,"delivery":"giftInbox","count":item.members.size()}

@@ -85,14 +85,18 @@ func build_categories():
 	# Inventory tabs have their own atlas and two distinct rows. The shop's
 	# FIRSAT/GÜNLÜK tabs do not belong over the inventory title.
 	var categories=[["Envanter",Rect2(0,0,65,25)],["power",Rect2(67,0,65,25)],["Karakterler",Rect2(134,0,65,25)],["equipment",Rect2(0,112,65,25)],["Efektler",Rect2(67,112,65,25)]]
+	if ui.collection_shop:categories.append(["Setler",Rect2(67,112,65,25)])
 	for i in range(categories.size()):
 		var entry=categories[i];var selected=ui.page==entry[0] or (entry[0]=="power" and ui.page=="Dövmeler") or (entry[0]=="Envanter" and ui.page=="Mağaza")
-		var node=tab(ROOT+"shop_iv_tab_02_01.dtx",entry[1],Vector2(366+i*82,90),Vector2(80,25),selected,func():
+		var node=tab(ROOT+"shop_iv_tab_02_01.dtx",entry[1],Vector2(366+i*(68 if ui.collection_shop else 82),90),Vector2(66 if ui.collection_shop else 80,25),selected,func():
 			if entry[0]=="equipment":ui.navigate("Kutular")
 			elif entry[0]==ui.page:ui.refresh()
 			else:ui.navigate("Mağaza" if entry[0]=="Envanter" and ui.collection_shop else entry[0])
 		)
-		node.tooltip_text=["Silah","Güç / Dövme","Karakter","Ekipman","Özel efektler"][i]
+		if entry[0]=="Setler":
+			var cover=ColorRect.new();cover.size=node.size;cover.color=Color("303539");cover.mouse_filter=Control.MOUSE_FILTER_IGNORE;node.add_child(cover)
+			ui.text(node,"SETLER",Vector2.ZERO,node.size,12,Art.GOLD).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		node.tooltip_text=["Silah","Güç / Dövme","Karakter","Ekipman","Özel efektler","Setler"][i]
 		category_tabs.append(node)
 	var rows=[]
 	var source=ROOT+"is_store_list_tab_02.dtx"
@@ -125,7 +129,8 @@ func card(parent,entry,at,selected=false):
 	var icon=entry.get("icon",entry.get("texture",""))
 	if ui.page=="Karakterler":icon=portraits.get(entry.id,{}).get("asset","")
 	if icon!="":
-		var region=Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza"] or (ui.page=="Karakterler" and portraits.get(entry.id,{}).get("kind")=="source_icon") else Rect2()
+		var region=Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza"] else Rect2()
+		if ui.page=="Karakterler":region=portrait_region(entry.id)
 		if entry.has("iconRegion"):var r=entry.iconRegion;region=Rect2(r[0],r[1],r[2],r[3])
 		var fallback=ui.page=="Karakterler" and portraits.get(entry.id,{}).get("kind")=="rendered_model_preview"
 		if fallback:
@@ -187,6 +192,12 @@ func native_rows():
 		if ui.game.book.offline_edition and not ui.collection_shop and ui.page in ["Karakterler","Dövmeler","power"] and not ui.game.collection_owned(row.id):continue
 		if not ui.search_query.is_empty() and not normalized(title(row)+" "+str(row.get("sourceId",""))).contains(normalized(ui.search_query)):continue
 		rows.append(row)
+	if ui.page=="Dövmeler":
+		var unique={}
+		for row in rows:
+			var key=row.get("canonicalId",row.id)
+			if not unique.has(key) or row.id==key:unique[key]=row
+		rows=unique.values()
 	if ui.page=="Dövmeler" and ui.filter_id=="all":
 		var families={}
 		for row in rows:
@@ -241,7 +252,7 @@ func refresh_native_grid(scrolling=false):
 		if not ui.collection_shop and ui.page in ["Envanter","Mağaza"] and entry.id in ui.game.book.slots.values():ui.text(cell,"Kullanılıyor",Vector2(4,94),Vector2(201,16),11,Color("c4cccf"))
 		if ui.collection_shop and not entry.get("placeholder",false):
 			var offers=ui.game.shop_offers(entry.id)
-			ui.text(cell,price_text(offers[0]) if not offers.is_empty() else "Fiyat doğrulanmadı",Vector2(4,94),Vector2(201,16),11,Color("e8cc73"))
+			ui.text(cell,price_text(offers[0]) if not offers.is_empty() else no_price_text(entry.id),Vector2(4,94),Vector2(201,16),11,Color("e8cc73"))
 		cell.pressed.connect(func():ui.selected=entry;show_details())
 	page_label.text="%d / %d  ·  %d eşya" % [int(ui.offset/9)+1,maxi(1,int(ceil(float(entries.size())/9))),entries.filter(func(row):return not row.get("placeholder",false)).size()]
 	if not scrolling:show_details()
@@ -265,7 +276,9 @@ func show_native_details():
 	plate(details,Vector2(366,540),Vector2(290,164));plate(details,Vector2(664,564),Vector2(348,174))
 	ui.text(details,title(entry),Vector2(372,544),Vector2(278,22),12)
 	var icon=portraits.get(entry.get("id",""),{}).get("asset","") if ui.page=="Karakterler" else entry.get("icon",entry.get("texture",""))
-	if icon!="":Art.sprite(details,icon,Vector2(376,571),Vector2(270,121),Rect2(0,0,210,75) if ui.page in ["Envanter","Mağaza","Karakterler"] else Rect2()).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	var info_region=Rect2()
+	if entry.has("iconRegion"):var r=entry.iconRegion;info_region=Rect2(r[0],r[1],r[2],r[3])
+	if icon!="":Art.sprite(details,icon,Vector2(376,571),Vector2(270,121),(portrait_region(entry.id) if ui.page=="Karakterler" else Rect2(0,0,210,75)) if ui.page in ["Envanter","Mağaza","Karakterler"] else info_region).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	ui.trace("interface/iteminfopropertysheet")
 	# This supplied Turkish atlas has 27px normal/hover/selected rows. The old
 	# attribute file still describes 25px rows and cuts the selected caption.
@@ -316,9 +329,21 @@ func build_character(entry):
 	)
 	ui.button(details,"AT",Vector2(516,710),Vector2(140,28),func():ui.confirm("KARAKTER","Çevrimdışı kaynak koleksiyonu kalıcıdır; karakter silinmez.",func():pass))
 	var count=ui.game.book.characters.filter(func(row):return row.get("available",false) and ui.game.book.owns(row.id)).size()
-	ui.text(details,"Karakter Slotu %d / %d" % [count,count],Vector2(789,125),Vector2(207,22),11,Color("8bb7b1"))
+	var total=ui.game.book.characters.filter(func(row):return row.get("available",false)).size()
+	ui.text(details,"Karakter Slotu %d / %d" % [count,total],Vector2(789,125),Vector2(207,22),11,Color("8bb7b1"))
 	ui.content.move_child(details,ui.content.get_child_count()-1)
-	body(entry.name+"\n\n"+("Envanterde" if ui.game.collection_owned(entry.id) else "Mağaza önizlemesi")+"\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir.")
+	var copy=entry.name+"\n\n"+("Envanterde" if ui.game.collection_owned(entry.id) else "Mağaza önizlemesi")+"\nİnsan/kurt görünümünü N/M düğmeleriyle değiştir."
+	if info_tab=="properties":
+		copy="KAYNAK KARAKTER PUANLARI\n"
+		var stats=entry.get("sourceStats",{})
+		for form in ["human","wolf"]:
+			if not stats.has(form):continue
+			copy+="\n"+("İNSAN" if form=="human" else "KURT")+"\n"
+			var names=["Baş zırhı","Gövde zırhı","Kol zırhı","Bacak zırhı","Fazladan YP","Özel saldırı direnci","Hız"] if form=="human" else ["Saldırı menzili","Saldırı hasarı","Dönüşüm hızı","Fazladan YP","Zırh","Hız"]
+			for i in range(names.size()):copy+=names[i]+": +%d\n" % stats[form].values[i]
+			copy+="GP: +%%%d · Altın: +%%%d\n" % [stats[form].gpPercent,stats[form].goldPercent]
+		copy+="\nKaynak puanlarıdır. Bölgesel zırh etkileri yerel savaşta henüz uygulanmıyor."
+	body(copy)
 
 func build_tattoo(entry):
 	build_team_buttons(false)
@@ -331,13 +356,15 @@ func build_tattoo(entry):
 		var name=str(mesh.name).to_lower()
 		if not name.begins_with("tattoo"):continue
 		var role="body" if "body" in name else ("left" if name.ends_with("_l") else "right")
+		preload("res://scripts/tattoo_uv.gd").apply(mesh,ui.game.book.tattoo_uv_transpose(role,shown.get(role,"")))
 		if not shown.has(role) or not ui.game.book.tattoo_matches_role(role,shown[role]):mesh.hide();continue
 		var material=StandardMaterial3D.new();material.albedo_texture=load(shown[role]);material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA;material.cull_mode=BaseMaterial3D.CULL_DISABLED;material.roughness=0.7
+		material.render_priority=ui.game.book.tattoo_render_priority(shown[role])
 		mesh.material_override=material;mesh.show()
 	var copy="Bölge: "+{"body":"Gövde","left":"Sol kol","right":"Sağ kol"}.get(entry.role,"Belirsiz")+"\n"+entry.description
 	var bonuses=entry.get("appliedBonuses",{})
 	for key in bonuses:
-		if float(bonuses[key])!=0:copy+="\n"+{"damagePercent":"Hasar","rangePercent":"Menzil","healthPercent":"YP","speedPercent":"Hız","gpPercent":"GP","goldPercent":"Altın"}.get(key,key)+": +%"+str(bonuses[key])
+		if float(bonuses[key])!=0:copy+="\n"+ui.game.book.stat_labels.get(key,key)+": +%"+str(bonuses[key])
 	body(copy)
 	ui.button(details,"Tak" if known else "Bölge belirsiz",Vector2(366,710),Vector2(290,28),func():
 		if ui.game.book.set_tattoo(entry.role,entry.texture,entry.id):ui.game.player.apply_tattoos();ui.refresh();ui.show_error("Dövme kaydedildi.")
@@ -448,7 +475,8 @@ func build_purchase(entry):
 		ui.button(details,"Envanterde · Kullan",Vector2(366,710),Vector2(290,28),func():ui.collection_shop=false;ui.navigate("Envanter" if ui.page=="Mağaza" else ui.page))
 		return
 	if offers.is_empty():
-		ui.button(details,"Kaynak fiyatı doğrulanmadı",Vector2(366,710),Vector2(290,28),func():pass,false)
+		var linked=ui.game.shop_catalog.items.get(ui.game.item_key(entry.id),{}).get("relatedSets",[])
+		ui.button(details,"İçeren setleri göster" if not linked.is_empty() else no_price_text(entry.id),Vector2(366,710),Vector2(290,28),func():ui.set_filter_item=ui.game.item_key(entry.id);ui.navigate("Setler"),not linked.is_empty())
 		return
 	var picker=ui.map_picker(details,Vector2(366,671),Vector2(290,29))
 	for offer in offers:picker.add_item(price_text(offer))
@@ -461,3 +489,11 @@ func build_purchase(entry):
 			else:ui.show_error(result.error)
 		,func():pass)
 	)
+
+func portrait_region(id):
+	var rect=portraits.get(id,{}).get("region",[0,0,210,75]);return Rect2(rect[0],rect[1],rect[2],rect[3])
+
+func no_price_text(id):
+	var item=ui.game.shop_catalog.items.get(ui.game.item_key(id),{})
+	if not item.get("relatedSets",[]).is_empty():return "Set içinde alınabilir"
+	return "Kaynak tabloda fiyat yok" if not item.get("sourceOffsets",[]).is_empty() else "Kaynak satış kaydı yok"

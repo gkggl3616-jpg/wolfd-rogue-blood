@@ -17,9 +17,10 @@ out=ROOT/'godot/assets/maps/thumbnails';out.mkdir(exist_ok=True)
 ui=json.loads((ROOT/'godot/assets/ui/catalog.json').read_text())['textures']
 previous={r['number']:r for r in json.loads((ROOT/'godot/assets/maps/photos.json').read_text())['maps']}
 def get(m):
+ if m['number'] in previous and 'geometry/' not in previous[m['number']].get('source',''):return previous[m['number']]
  path=normalized('worlds/retailmultiplayer/'+m['path']);matches=[row for row in attrs if row['path']==path];sources={normalized(row['thumbnail']) for row in matches};assert len(sources)==1
- source=sources.pop();member=lookup[normalized('wolfteam kurtları/Root/'+source)];raw=folder/(str(m['number'])+'.dtx')
- if m['number'] in previous:return previous[m['number']]
+ source=sources.pop();member=lookup.get(normalized('wolfteam kurtları/Root/'+source),lookup.get(source));assert member
+ raw=folder/(str(m['number'])+'.dtx')
  native=ui.get(source)
  if native:
   png=ROOT/'godot'/native['asset'].removeprefix('res://')

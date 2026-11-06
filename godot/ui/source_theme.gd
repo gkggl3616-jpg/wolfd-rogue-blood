@@ -35,6 +35,13 @@ static func texture(source):
 	var info = catalog().get("textures", {}).get(key(source), {})
 	return load(info.asset) if not info.is_empty() and ResourceLoader.exists(info.asset) else null
 
+static func map_photo(map_catalog,number):
+	var image=texture(map_catalog.photo(number).get("asset",""))
+	if image==null:return null
+	var region=Rect2(Vector2.ZERO,image.get_size())
+	if image.get_width()>=407 and image.get_height()>=120:region=Rect2(0,0,407,120)
+	return atlas(image,region)
+
 static func atlas(source, region: Rect2):
 	var image = texture(source) if source is String else source
 	if image == null or not region.has_area() or region.position.x < 0 or region.position.y < 0 or region.end.x > image.get_width() or region.end.y > image.get_height(): return null

@@ -6,6 +6,7 @@ var weapons = []
 var characters = []
 var tattoos = []
 var effects = []
+var stat_labels={}
 var models = {}
 var owned = {}
 var default_owned = {}
@@ -41,6 +42,11 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 	var visuals = read_json("res://assets/library/visuals.json")
 	tattoos = visuals.get("tattoos", [])
 	effects = visuals.get("effects", [])
+	var presentation=read_json("res://assets/presentation/catalog.json");var labels=presentation.get("items",{});stat_labels=presentation.get("statLabels",{})
+	for item in characters+tattoos:
+		if labels.has(item.id):item["sourceName"]=item.name;item.name=labels[item.id].name
+		if presentation.get("characterStats",{}).has(item.id):item["sourceStats"]=presentation.characterStats[item.id]
+
 	if persistent and FileAccess.file_exists(storage_path):
 		var result = AtomicStore.read_json(storage_path)
 		var stored = result.data
@@ -237,6 +243,14 @@ func set_tattoo(role, texture, item_id=""):
 func tattoo_matches_role(role, texture):
 	return tattoos.any(func(row): return row.texture == texture and row.get("role", "unknown") == role)
 
+func tattoo_render_priority(texture):
+	for row in tattoos:
+		if row.texture==texture:return int(row.get("renderPriority",0))
+	return 0
+
+func tattoo_uv_transpose(role,texture):
+	return tattoos.any(func(row):return row.role==role and row.texture==texture and row.get("uvTranspose",false))
+
 func save():
 	if not persistent: return true
 	if save_blocked: return false
@@ -250,7 +264,7 @@ func character_for_team(team):
 		if row.get("available",false) and row.get("sourceTeam",team)==team:return row
 	return {}
 func tattoo_bonuses():
-	var totals={"rangePercent":0,"damagePercent":0,"healthPercent":0,"speedPercent":0,"gpPercent":0,"goldPercent":0}
+	var totals={"rangePercent":0,"damagePercent":0,"healthPercent":0,"speedPercent":0,"gpPercent":0,"goldPercent":0,"transformPercent":0,"armorPercent":0}
 	for role in selected_tattoo_ids:
 		for row in tattoos:
 			if row.id==selected_tattoo_ids[role] and row.role==role and row.texture==selected_tattoos.get(role,""):

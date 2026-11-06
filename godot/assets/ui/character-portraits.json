@@ -2,1384 +2,2716 @@
   "portraits": {
     "pair-model0": {
       "asset": "res://assets/full_ui/textures/144b0e04d9f12b73ac472d64.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/pedro_re_n.dtx",
+      "sourceSha256": "028f42fd8c80af28a8917ac909c280b9b6e3aaaa404b3e3815828655d4c8c7c0",
       "model": "res://assets/library/characters/pair-model0-human.glb",
       "modelSha256": "378a758139e1994cc3b873d6408eb2d8dbf27e1b5bc78b968ea80d06193b0128",
-      "sourceTexture": "wt_interface/item/character/pedro_re_n.dtx",
-      "sourceSha256": "028f42fd8c80af28a8917ac909c280b9b6e3aaaa404b3e3815828655d4c8c7c0"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model1": {
       "asset": "res://assets/full_ui/textures/c4166e5fcefa5b75e6204b4d.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/christopher_re_n.dtx",
+      "sourceSha256": "0d5cd2a8458b382c58ba105322db3b805a05ea5055bf4d3fc605e35142c80563",
       "model": "res://assets/library/characters/pair-model1-human.glb",
       "modelSha256": "22b1e78ac23a99c71658ad7be41dffac4faf5ff0252a04ac1987a73c887415e6",
-      "sourceTexture": "wt_interface/item/character/christopher_re_n.dtx",
-      "sourceSha256": "0d5cd2a8458b382c58ba105322db3b805a05ea5055bf4d3fc605e35142c80563"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model48": {
-      "asset": "res://assets/ui/character_portraits/pair-model48.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/cda3ba7a120bf49fe41225f0.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/adriana_special_edition.dtx",
+      "sourceSha256": "36a32b6bb1906615ce523c43a3fdc539e137930aae86ec07140f55ac430c9045",
       "model": "res://assets/library/characters/pair-model48-human.glb",
-      "modelSha256": "92181968ef0e000953751e70e5ec030fa43bb0a79fea9ce484e77134b5966bfd"
+      "modelSha256": "92181968ef0e000953751e70e5ec030fa43bb0a79fea9ce484e77134b5966bfd",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model58": {
-      "asset": "res://assets/full_ui/textures/513ac79a49b6e96e6321a390.png",
+      "asset": "res://assets/full_ui/textures/74cd1ed3cf861d58656edca3.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi.dtx",
+      "sourceSha256": "2fbc9784cae536ff47127f45ee123f4c784cf7accc98318f6929bd6f39565cb7",
       "model": "res://assets/library/characters/pair-model58-human.glb",
       "modelSha256": "8cb90e2c1f6b3e094ca1604531ac71d03765ba6fcdc04ae26f0d726f8d2cbce9",
-      "sourceTexture": "wt_interface/item/character/geremi.dtx",
-      "sourceSha256": "f33fe92b4874f366fc699be87465509aa158703c54ae3b6a701f46307b0459bb"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model66": {
-      "asset": "res://assets/ui/character_portraits/pair-model66.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/299399e14615612ade929452.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/marien_arnault_special_edition.dtx",
+      "sourceSha256": "e72e6d92ba73420f6d23ba3e65a2eac412723d7ee4a795559d421c893f50e654",
       "model": "res://assets/library/characters/pair-model66-human.glb",
-      "modelSha256": "6d9eb113a0eade83e2362ce15c82aadd3008001449d6287740513d8eb92a1427"
+      "modelSha256": "6d9eb113a0eade83e2362ce15c82aadd3008001449d6287740513d8eb92a1427",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model68": {
-      "asset": "res://assets/ui/character_portraits/pair-model68.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/21e06290a490c658b6bc54a7.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/reinhard_schneider_special_edition.dtx",
+      "sourceSha256": "986bff8da5a4957914df9e0e15096e07a4d4fb41602583b2e44185bb456d48a8",
       "model": "res://assets/library/characters/pair-model68-human.glb",
-      "modelSha256": "754a698d152efd51baee804f48c0130111cceff63de5b8bf8fbf77b6b740d978"
+      "modelSha256": "754a698d152efd51baee804f48c0130111cceff63de5b8bf8fbf77b6b740d978",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model70": {
-      "asset": "res://assets/ui/character_portraits/pair-model70.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/0a4a9d70880f7e191767d2ba.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/lin_meiling_special_edition.dtx",
+      "sourceSha256": "9e7858821be0fce264755596ca4b8d840ebffa333aaf8c3b1eb95d9df9f6db5e",
       "model": "res://assets/library/characters/pair-model70-human.glb",
-      "modelSha256": "b3a847d02b9ea14cb50f8623b5f2ac7ef16280cfedd64865b904e04d4e686c24"
+      "modelSha256": "b3a847d02b9ea14cb50f8623b5f2ac7ef16280cfedd64865b904e04d4e686c24",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model72": {
-      "asset": "res://assets/ui/character_portraits/pair-model72.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/8bcec3ecf1f163db3f88c710.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/moshin_special_edition.dtx",
+      "sourceSha256": "74c83d02684b120135db105dcb10ea87991d1d5e133ab888e7370f4a9f28f983",
       "model": "res://assets/library/characters/pair-model72-human.glb",
-      "modelSha256": "44d53d01b9f39364227df3f054f351212514c46e59ab30b118ae037b5a612c95"
+      "modelSha256": "44d53d01b9f39364227df3f054f351212514c46e59ab30b118ae037b5a612c95",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model74": {
-      "asset": "res://assets/ui/character_portraits/pair-model74.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/8efa0b60884a581019ed0c8c.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/sarah_linda.dtx",
+      "sourceSha256": "645cb29d38309c51954d4dca9a6a67d3d387720b4799c87aef3782a1074f9765",
       "model": "res://assets/library/characters/pair-model74-human.glb",
-      "modelSha256": "5ef4171edc9603339d911940470356c98b14f42a0beeefe7cfa57b96c7c3188b"
+      "modelSha256": "5ef4171edc9603339d911940470356c98b14f42a0beeefe7cfa57b96c7c3188b",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model78": {
-      "asset": "res://assets/ui/character_portraits/pair-model78.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/4b764b63a79fc833ace22589.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate_blume.dtx",
+      "sourceSha256": "d0ad655c115f33e5a56ac05f2db89cfaec720c45d27aa5d30fd28f0ce4fde33f",
       "model": "res://assets/library/characters/pair-model78-human.glb",
-      "modelSha256": "5eb43876ce47c0ba9cd89314502a61ab7d186217d65c6ad70c611592e641eccc"
+      "modelSha256": "5eb43876ce47c0ba9cd89314502a61ab7d186217d65c6ad70c611592e641eccc",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model100": {
-      "asset": "res://assets/full_ui/textures/535684a499a6b7fdaa65bd02.png",
+      "asset": "res://assets/full_ui/textures/59979878f0dc18b36e38fc23.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_tsc.dtx",
+      "sourceSha256": "257da75c0c6e71ebbe0afd0daad33420f948c201c3a123edf4fc91daa7cfbf01",
       "model": "res://assets/library/characters/pair-model100-human.glb",
       "modelSha256": "2fefe07e1d162c1a874df101b9e5a6c5e73c35d25551a9a7cb2af65543b6d80f",
-      "sourceTexture": "wt_interface/item/character/geremi_tsc.dtx",
-      "sourceSha256": "110c905fe2243a5c34b93e99230c783f4a96d8f785a17e55cc9ecb77bd588301"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model104": {
-      "asset": "res://assets/ui/character_portraits/pair-model104.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/61eced2a346dc2eaa58650a3.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_yasuko_se.dtx",
+      "sourceSha256": "e7fcbb335e1c18d7ae7f0a4ed14b35a5ede849534eda9baa524110bc8c71223d",
       "model": "res://assets/library/characters/pair-model104-human.glb",
-      "modelSha256": "040b111ab1503d5de97d96ce0d55fe32603e4b367742c73acb7d752a0f84f452"
+      "modelSha256": "040b111ab1503d5de97d96ce0d55fe32603e4b367742c73acb7d752a0f84f452",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model106": {
-      "asset": "res://assets/full_ui/textures/bcbc333a6e1532560bbba3be.png",
+      "asset": "res://assets/full_ui/textures/858d29680292dfa097e98d9d.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_demir_se.dtx",
+      "sourceSha256": "391d5acbc88d8102b0ae2d1a4677ae0206a05903266312b6976befb38afa918a",
       "model": "res://assets/library/characters/pair-model106-human.glb",
       "modelSha256": "ff85cd675e04f7ab8dc19c2e3e368262ba23ca5f080f7ec084af9ae714cad141",
-      "sourceTexture": "wt_interface/item/character/yigit_demir_se.dtx",
-      "sourceSha256": "b6994017ad393604addb725243848607e92f851fcb128423e4bdcdaf8cfb5df7"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model108": {
-      "asset": "res://assets/full_ui/textures/e8bb430fc90c10ece4f912e4.png",
+      "asset": "res://assets/full_ui/textures/bb22cf5e7a917f7b9641235b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_se.dtx",
+      "sourceSha256": "5d01848699f294ed2c24d7c4f325f345cc1c37f5b81936d211c8a8d18a110c7d",
       "model": "res://assets/library/characters/pair-model108-human.glb",
       "modelSha256": "f2616c0fdea28f943cd9d146af365347c7bd90bbacf360ddac8516c6833eb8e5",
-      "sourceTexture": "wt_interface/item/character/ivanov_se.dtx",
-      "sourceSha256": "10f60adbd55317fc5bf2e5e805775f1d8f627872e23d5dab92ea77d07bf66739"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model110": {
-      "asset": "res://assets/full_ui/textures/0c6f4af7ca20f3111de759a0.png",
+      "asset": "res://assets/full_ui/textures/0ccb7b7385aac5b69a0b4685.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_song_se.dtx",
+      "sourceSha256": "63248e70ad8ea44bc736090578734051437141ad16ce3df2749ef7a1dc455278",
       "model": "res://assets/library/characters/pair-model110-human.glb",
       "modelSha256": "317cc3e5d921b23ebbef4a3819856c5462af271c3a71503701031fdf47aea55b",
-      "sourceTexture": "wt_interface/item/character/geremi_song_se.dtx",
-      "sourceSha256": "6d166684939c004f12eab60c8c73a8de38781f074c417f581e38b9104e0fbeda"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model112": {
-      "asset": "res://assets/full_ui/textures/e322a517fcaf80598fa4d563.png",
+      "asset": "res://assets/full_ui/textures/f18dad55fa75180094ad920e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yavuz_selim.dtx",
+      "sourceSha256": "2dc583b5dc8e5f322acc1d4f76bab77c7c43cf83680b16cbe7973d1ef6e5a115",
       "model": "res://assets/library/characters/pair-model112-human.glb",
       "modelSha256": "12621c4620a7aace1986f3153608c7a01a0b121ba8441f6cda99ef130dd4ff05",
-      "sourceTexture": "wt_interface/item/character/yavuz_selim.dtx",
-      "sourceSha256": "6b753748dde863bc4e2ec269505431aca49197bd676fb0c13d4074f7d18fc071"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model114": {
-      "asset": "res://assets/full_ui/textures/114e8ce9a5ab6086ce40742b.png",
+      "asset": "res://assets/full_ui/textures/972526557a158eacd2fb062e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_military.dtx",
+      "sourceSha256": "940dd53beeb9893afb7b7e334eac1ce162a8e10176012401685296adf8ee23bc",
       "model": "res://assets/library/characters/pair-model114-human.glb",
       "modelSha256": "1a3e39741de3e6eb9cbd117658e3c0d7e021d027b49601bc5174cecba2978cfc",
-      "sourceTexture": "wt_interface/item/character/geremi_military.dtx",
-      "sourceSha256": "6db948031688468875cbd3d8bd39689e64bf95d2fb1c702b9ee8a63317f8dc75"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model206": {
-      "asset": "res://assets/full_ui/textures/a68d10d7f9a1e7d4871c7063.png",
+      "asset": "res://assets/full_ui/textures/e4b7e3255fbcea9981ddea0b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/sarah_jungle.dtx",
+      "sourceSha256": "1916b654114bde9e7e2278f819b3971f422ebb8fff98b8ceae9b7c7accef8f3e",
       "model": "res://assets/library/characters/pair-model206-human.glb",
       "modelSha256": "3770429e79138cc9ade15dd8170046512e390c1cdb43d6933167d0ccd062ad6c",
-      "sourceTexture": "wt_interface/item/character/sarah_jungle.dtx",
-      "sourceSha256": "07edcc843ef1bf17672ae2911fb7f5d5ee5192b46203341003dd573acd2a3235"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model208": {
-      "asset": "res://assets/full_ui/textures/2bdd0069b4c82df6354f71b2.png",
+      "asset": "res://assets/full_ui/textures/202d8bab23fd2616abbc2056.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/matt_jungle.dtx",
+      "sourceSha256": "bb94620f1ea2b1b0cc5d2cd277249e4ef5158fe9a56bb913b1645eb4d763b39e",
       "model": "res://assets/library/characters/pair-model208-human.glb",
       "modelSha256": "0fdf36cce8ba13dbe7f5759d00fc253182b42ab9240325464c938f5609eadaef",
-      "sourceTexture": "wt_interface/item/character/matt_jungle.dtx",
-      "sourceSha256": "04c2084fedb8831cb21ef54d62e9a25ebd0be270b061a9d0110e8d9e19a3e057"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model210": {
-      "asset": "res://assets/full_ui/textures/2864f9aff550beb67d10d39d.png",
+      "asset": "res://assets/full_ui/textures/604b40bb2d116155c40e2367.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate_jungle.dtx",
+      "sourceSha256": "24833114f04246a85c5d2248b224be35ba123bbdd9e52265be7e7b960781ada0",
       "model": "res://assets/library/characters/pair-model210-human.glb",
       "modelSha256": "5748874bef20d95fc69e29cd375b6710511be21846bb72bed0fa1f3be4fb2389",
-      "sourceTexture": "wt_interface/item/character/kate_jungle.dtx",
-      "sourceSha256": "6e43010c1b0daf5602aecaaa5c07316eb878cbf499f325cc79cbd332a8893a5a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model452": {
       "asset": "res://assets/full_ui/textures/f50b88beb122586adb5af53b.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/jacy brewster_n.dtx",
+      "sourceSha256": "0d3e8b76488d15dd063f97b05b7f23f571abdf0492b2ab8981f5c12274bc37e7",
       "model": "res://assets/library/characters/pair-model452-human.glb",
       "modelSha256": "e18a8f482438d5551be93e61e7ca13e3c58543da8b21d994d57cc57f4c52a2fe",
-      "sourceTexture": "wt_interface/item/character/jacy brewster_n.dtx",
-      "sourceSha256": "0d3e8b76488d15dd063f97b05b7f23f571abdf0492b2ab8981f5c12274bc37e7"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model472": {
       "asset": "res://assets/full_ui/textures/fcf11a7b2b39d13d885b5530.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/angela_re_n.dtx",
+      "sourceSha256": "fabf1be8a8e3a9535467d17f41672e06736f589d3daa6dd6ac31e0e04b558956",
       "model": "res://assets/library/characters/pair-model472-human.glb",
       "modelSha256": "3b122682c1c3944daf90dfb7bba39c795ee76f4657a79257f2e1813fce8ffac7",
-      "sourceTexture": "wt_interface/item/character/angela_re_n.dtx",
-      "sourceSha256": "fabf1be8a8e3a9535467d17f41672e06736f589d3daa6dd6ac31e0e04b558956"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model476": {
       "asset": "res://assets/full_ui/textures/d623a820b72082697142b41b.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/linmeiling_re_n.dtx",
+      "sourceSha256": "c325a09f1cee5dfe0735b06da698af0ebe6af4524fa27c2387acd5d05f3fb62f",
       "model": "res://assets/library/characters/pair-model476-human.glb",
       "modelSha256": "cd71ae3c666d15252632631b3e2abbc8026e0b3355053c326db37fa20be9f148",
-      "sourceTexture": "wt_interface/item/character/linmeiling_re_n.dtx",
-      "sourceSha256": "c325a09f1cee5dfe0735b06da698af0ebe6af4524fa27c2387acd5d05f3fb62f"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model486": {
       "asset": "res://assets/full_ui/textures/7f76f3c7697b4ff606626e21.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/reinhard_re_n.dtx",
+      "sourceSha256": "15cb3ec16a7dd79c6ac748c03640862f3322ca3ca2679b5c7b6b1b4e56ed59ee",
       "model": "res://assets/library/characters/pair-model486-human.glb",
       "modelSha256": "adce853ba4be2fdde0e99a74e9e6a3f03b081bc6f53015cbaa3b73b7a49e02ef",
-      "sourceTexture": "wt_interface/item/character/reinhard_re_n.dtx",
-      "sourceSha256": "15cb3ec16a7dd79c6ac748c03640862f3322ca3ca2679b5c7b6b1b4e56ed59ee"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model488": {
       "asset": "res://assets/full_ui/textures/678591b6392a3af3065d7101.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/hamadah_re_n.dtx",
+      "sourceSha256": "d02c68bf65fd4a268819543111e2ec166ef02b5cc979872acf7b69f28ca45588",
       "model": "res://assets/library/characters/pair-model488-human.glb",
       "modelSha256": "cd473485c3885504a755b3c47994dab56a5c5d5b23c882c6c71d17ab91e6fd03",
-      "sourceTexture": "wt_interface/item/character/hamadah_re_n.dtx",
-      "sourceSha256": "d02c68bf65fd4a268819543111e2ec166ef02b5cc979872acf7b69f28ca45588"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model490": {
       "asset": "res://assets/full_ui/textures/1e020dd5d66877ee42fd7476.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/marien_re_n.dtx",
+      "sourceSha256": "8277f13e00b840ad188b99595c7d8a2b388a48d3a3a62e8cfb138a175c11e671",
       "model": "res://assets/library/characters/pair-model490-human.glb",
       "modelSha256": "8764ed39509df270c0f99f708969815a1dd9f1bf9588f99155d7657fd8b8a1a4",
-      "sourceTexture": "wt_interface/item/character/marien_re_n.dtx",
-      "sourceSha256": "8277f13e00b840ad188b99595c7d8a2b388a48d3a3a62e8cfb138a175c11e671"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model492": {
       "asset": "res://assets/full_ui/textures/01b5887b7b4caeb6f99114cb.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/adriana_re_n.dtx",
+      "sourceSha256": "a8142b64c2e2c42ace41e52ca15b4fb179840cd42b412012b995d8c309d4eb04",
       "model": "res://assets/library/characters/pair-model492-human.glb",
       "modelSha256": "4ef9c08227d097509da84dbbeb6ff93ef94eaf165f6a5a062f815e3d12323c99",
-      "sourceTexture": "wt_interface/item/character/adriana_re_n.dtx",
-      "sourceSha256": "a8142b64c2e2c42ace41e52ca15b4fb179840cd42b412012b995d8c309d4eb04"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model498": {
       "asset": "res://assets/full_ui/textures/c2fe0bfa2370df9387328928.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/yigit_re_n.dtx",
+      "sourceSha256": "30fc1f2df612a3e361900718e6a62b9f04fbc0ca0f94ce598b926953e0d09064",
       "model": "res://assets/library/characters/pair-model498-human.glb",
       "modelSha256": "52cc1d20677ba8790a64cf0335a28f4e9b2be1b5b2c5832160f807afefddc516",
-      "sourceTexture": "wt_interface/item/character/yigit_re_n.dtx",
-      "sourceSha256": "30fc1f2df612a3e361900718e6a62b9f04fbc0ca0f94ce598b926953e0d09064"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model500": {
       "asset": "res://assets/full_ui/textures/0f64b8da800382ad2edafdbc.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/tomita_re_n.dtx",
+      "sourceSha256": "8f8e592c2cb701a929fca77bef322a0ecc6ab690ff020b243122dbbdb0f93aab",
       "model": "res://assets/library/characters/pair-model500-human.glb",
       "modelSha256": "11f8a548aca3c26a7db844b72ce407797a068c408b85d77058cd84f073b53ce2",
-      "sourceTexture": "wt_interface/item/character/tomita_re_n.dtx",
-      "sourceSha256": "8f8e592c2cb701a929fca77bef322a0ecc6ab690ff020b243122dbbdb0f93aab"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model502": {
       "asset": "res://assets/full_ui/textures/3fe3a9d2eab5c0dfe9fcc440.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/geremi_re_n.dtx",
+      "sourceSha256": "d59bf9ad18703dd675b8a71047309cafff2d3b9654da1ba3ce39ad2df8931325",
       "model": "res://assets/library/characters/pair-model502-human.glb",
       "modelSha256": "9031bbe2a0251af6fd1e22a14d3d51b3aeaa48db2f245834271782c9f924e1d1",
-      "sourceTexture": "wt_interface/item/character/geremi_re_n.dtx",
-      "sourceSha256": "d59bf9ad18703dd675b8a71047309cafff2d3b9654da1ba3ce39ad2df8931325"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model504": {
       "asset": "res://assets/full_ui/textures/9296fd8e04418a424efdaa05.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/illude_re_n.dtx",
+      "sourceSha256": "0abd2bab0673c4ae0327b7aab66fb2def5b966d58f0a487ca498dacec2b76e41",
       "model": "res://assets/library/characters/pair-model504-human.glb",
       "modelSha256": "96dae5c8f9bb36303a49935b0d32f9db46c7314b048a9fc92a7c0ffac54b5f33",
-      "sourceTexture": "wt_interface/item/character/illude_re_n.dtx",
-      "sourceSha256": "0abd2bab0673c4ae0327b7aab66fb2def5b966d58f0a487ca498dacec2b76e41"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model506": {
       "asset": "res://assets/ui/character_portraits/pair-model506.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model506-human.glb",
-      "modelSha256": "2fb5890636038b8c4b1206685cba79bc129ac0c6797a74f8411ab343f387c2bf"
+      "modelSha256": "2fb5890636038b8c4b1206685cba79bc129ac0c6797a74f8411ab343f387c2bf",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model508": {
       "asset": "res://assets/full_ui/textures/a5f0a70a6370fbdbdbfac70a.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/ates - red legend reboot_n.dtx",
+      "sourceSha256": "86d98a504e666dbd074aa8ae879b01014e7bfd28fbc94d2e1e5ad0783d0a045b",
       "model": "res://assets/library/characters/pair-model508-human.glb",
       "modelSha256": "d7644bb63f4d6a1d7adc6e59e79ae4d835a6e9b1b74e97265a8e91f7f5a0bb62",
-      "sourceTexture": "wt_interface/item/character/ates - red legend reboot_n.dtx",
-      "sourceSha256": "86d98a504e666dbd074aa8ae879b01014e7bfd28fbc94d2e1e5ad0783d0a045b"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model510": {
       "asset": "res://assets/full_ui/textures/a3c8631bee635e8a4eab5c99.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/mert_n.dtx",
+      "sourceSha256": "caa4b7443c43bad49bf96b85f044b17dc71cf9db12d2390a70612d9e213dd068",
       "model": "res://assets/library/characters/pair-model510-human.glb",
       "modelSha256": "149940a85511554f1a1f7800c85b171981e9ff9b9e3aa3deaee1f7793a91a172",
-      "sourceTexture": "wt_interface/item/character/mert_n.dtx",
-      "sourceSha256": "caa4b7443c43bad49bf96b85f044b17dc71cf9db12d2390a70612d9e213dd068"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model512": {
       "asset": "res://assets/full_ui/textures/9b29ed33dd0f49ac34011a1b.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/sarp_n.dtx",
+      "sourceSha256": "d5413647ce164ab086222ff435700cedcdb3cae8523a3906eaa418f5a10e6915",
       "model": "res://assets/library/characters/pair-model512-human.glb",
       "modelSha256": "2b67b0b425fc4104071f78b9452dabbe3debf20dbe6539b6cd0f152efc7b311b",
-      "sourceTexture": "wt_interface/item/character/sarp_n.dtx",
-      "sourceSha256": "d5413647ce164ab086222ff435700cedcdb3cae8523a3906eaa418f5a10e6915"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model526": {
       "asset": "res://assets/full_ui/textures/51ddce8ea760653cd247528e.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/christopher_ce_n.dtx",
+      "sourceSha256": "d40d6fcb458cadfbf73b703217b90aca44bae6328b678e699b4dfc98580a6fed",
       "model": "res://assets/library/characters/pair-model526-human.glb",
       "modelSha256": "6cfc406aaa694056489ff933330bc12d9be2faf6ee6d91a338b76b7b2d54885b",
-      "sourceTexture": "wt_interface/item/character/christopher_ce_n.dtx",
-      "sourceSha256": "d40d6fcb458cadfbf73b703217b90aca44bae6328b678e699b4dfc98580a6fed"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model528": {
       "asset": "res://assets/full_ui/textures/67fe47429ebb19765bcaa983.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/pedro_ce_n.dtx",
+      "sourceSha256": "54575b54a58762ee01126c1298151895950e2bba33a26585ce4e3ecc048c4ebb",
       "model": "res://assets/library/characters/pair-model528-human.glb",
       "modelSha256": "1fa98e91e994f9bdd403b4c20a336dbb97d506cff73b7353b319a4573a305773",
-      "sourceTexture": "wt_interface/item/character/pedro_ce_n.dtx",
-      "sourceSha256": "54575b54a58762ee01126c1298151895950e2bba33a26585ce4e3ecc048c4ebb"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model540": {
       "asset": "res://assets/full_ui/textures/d63aa5120d63784c3f5ef6b0.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/simon_glazkov_n.dtx",
+      "sourceSha256": "3ef58badcc63f760f365aa1a500277dd593a8cc5d1a79f7facf55be477f56c76",
       "model": "res://assets/library/characters/pair-model540-human.glb",
       "modelSha256": "bb2ab3a4e0f08568a5ef5c53b4e77a1bad65a5d8327f86bf4f6c2de0536ddf17",
-      "sourceTexture": "wt_interface/item/character/simon_glazkov_n.dtx",
-      "sourceSha256": "3ef58badcc63f760f365aa1a500277dd593a8cc5d1a79f7facf55be477f56c76"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model542": {
       "asset": "res://assets/full_ui/textures/407a24980166e7e33286a976.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/amelli_binoche_n.dtx",
+      "sourceSha256": "57118a711bb02b88ec18fa7979497f591e18d6c845669593efcadddb89da60c4",
       "model": "res://assets/library/characters/pair-model542-human.glb",
       "modelSha256": "ddd6a47d8926bad3b023f7336066582429f44ff5299468ac8556121b9d74b0f2",
-      "sourceTexture": "wt_interface/item/character/amelli_binoche_n.dtx",
-      "sourceSha256": "57118a711bb02b88ec18fa7979497f591e18d6c845669593efcadddb89da60c4"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model560": {
       "asset": "res://assets/full_ui/textures/56055c5a3fe8b072f523d2f8.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/wilsonstrotsky_n.dtx",
+      "sourceSha256": "d0d4f4b946b844590b6fb215d702ccbb2e033d5bc6a4756857870dff3817225e",
       "model": "res://assets/library/characters/pair-model560-human.glb",
       "modelSha256": "d6b775e9ae7e74b633f96beb329fdc2ec615da8ffb3d65a9bb80f874f0af059a",
-      "sourceTexture": "wt_interface/item/character/wilsonstrotsky_n.dtx",
-      "sourceSha256": "d0d4f4b946b844590b6fb215d702ccbb2e033d5bc6a4756857870dff3817225e"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model562": {
       "asset": "res://assets/full_ui/textures/015669e5cfd5a4eb0352631e.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/el-17_n.dtx",
+      "sourceSha256": "65127a413362ef1bfc3903ac75485cf854e7a087c3be91588acb2fda34f5af5e",
       "model": "res://assets/library/characters/pair-model562-human.glb",
       "modelSha256": "a242c41d6117a96e530aaf25d72a19a6af78fff67797c68eabbc8737fcde799c",
-      "sourceTexture": "wt_interface/item/character/el-17_n.dtx",
-      "sourceSha256": "65127a413362ef1bfc3903ac75485cf854e7a087c3be91588acb2fda34f5af5e"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model568": {
       "asset": "res://assets/ui/character_portraits/pair-model568.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model568-human.glb",
-      "modelSha256": "fcb3c50bc0c1167bc74fdaf5d70c83a3e9d7ce65ce0e1811febea16d4b5ccdaf"
+      "modelSha256": "fcb3c50bc0c1167bc74fdaf5d70c83a3e9d7ce65ce0e1811febea16d4b5ccdaf",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model570": {
       "asset": "res://assets/full_ui/textures/56db4d309c868f128de445cf.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/leona_n.dtx",
+      "sourceSha256": "084eb12c4f43bab9b35c3366347608a1bb092193e6bb73ca024496ef3288b645",
       "model": "res://assets/library/characters/pair-model570-human.glb",
       "modelSha256": "a8dca9503af078f990df8404f3c3a9a82b3bc3d8b1eb0a85354c3165feb97b3e",
-      "sourceTexture": "wt_interface/item/character/leona_n.dtx",
-      "sourceSha256": "084eb12c4f43bab9b35c3366347608a1bb092193e6bb73ca024496ef3288b645"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model576": {
       "asset": "res://assets/full_ui/textures/c56639bc890a2ba5512c16cc.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/brian_n.dtx",
+      "sourceSha256": "c509b98104b252ed8993a4f19e2887d69ef31f9f598cef14444678cb2ba742a7",
       "model": "res://assets/library/characters/pair-model576-human.glb",
       "modelSha256": "6b115af07d298a97470d4a956a9258aac1025a57ba7802392f2cfcbc46ea8cad",
-      "sourceTexture": "wt_interface/item/character/brian_n.dtx",
-      "sourceSha256": "c509b98104b252ed8993a4f19e2887d69ef31f9f598cef14444678cb2ba742a7"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model578": {
       "asset": "res://assets/full_ui/textures/f52c8c35c462d47fd6338062.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/youjin_n.dtx",
+      "sourceSha256": "0ac965fff2c005386218df2b365f2078b963882824671534110e0ad5fe3b4cce",
       "model": "res://assets/library/characters/pair-model578-human.glb",
       "modelSha256": "c9113d75e5826747dc68ae487e30f60e071eb852e3cd6f1fdfb0564de298bacf",
-      "sourceTexture": "wt_interface/item/character/youjin_n.dtx",
-      "sourceSha256": "0ac965fff2c005386218df2b365f2078b963882824671534110e0ad5fe3b4cce"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model604": {
       "asset": "res://assets/full_ui/textures/b2962ec305f077b37e40c22a.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/christopher_nano_n.dtx",
+      "sourceSha256": "ffe64c815416b63e32d301be8b4d5d2fce143b0d505c89eb1a97db291fad95a3",
       "model": "res://assets/library/characters/pair-model604-human.glb",
       "modelSha256": "4306850f77f77d207cbc1895e33d210d36c66ca74b140c075b6903f83312a5f7",
-      "sourceTexture": "wt_interface/item/character/christopher_nano_n.dtx",
-      "sourceSha256": "ffe64c815416b63e32d301be8b4d5d2fce143b0d505c89eb1a97db291fad95a3"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model606": {
       "asset": "res://assets/full_ui/textures/2ea01ecabb1d88924fcfe307.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/pedro_nano_n.dtx",
+      "sourceSha256": "aa33086786ea317fd2a43fe11843c737b8020b9c9f0d4756f67cda1311085c4f",
       "model": "res://assets/library/characters/pair-model606-human.glb",
       "modelSha256": "1b9ce67af35b54d45a07411d932e0383da9135d3038a5804ebd8c7871a489b32",
-      "sourceTexture": "wt_interface/item/character/pedro_nano_n.dtx",
-      "sourceSha256": "aa33086786ea317fd2a43fe11843c737b8020b9c9f0d4756f67cda1311085c4f"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model614": {
       "asset": "res://assets/full_ui/textures/8f34dd254f6d07365bad1611.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/lin meiling nano_n.dtx",
+      "sourceSha256": "126178728fbafdf85ce85ba7200d1beee246e922b5c52d1849b4b10ebb7f6bd1",
       "model": "res://assets/library/characters/pair-model614-human.glb",
       "modelSha256": "81ac6d0f16cefd07e07494f7215c43f22c309cacf119a2f681364572dbbaaabe",
-      "sourceTexture": "wt_interface/item/character/lin meiling nano_n.dtx",
-      "sourceSha256": "126178728fbafdf85ce85ba7200d1beee246e922b5c52d1849b4b10ebb7f6bd1"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model21": {
-      "asset": "res://assets/full_ui/textures/a440953ec8d463b6391352d8.png",
+      "asset": "res://assets/full_ui/textures/001f732c6a18ae0b2f8c31f2.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela.dtx",
+      "sourceSha256": "29333119620ec59245201da7c48b293d1a6ce28b58c1f54216903e50bef4442d",
       "model": "res://assets/library/characters/pair-model21-human.glb",
       "modelSha256": "48b7a5aa27ffd8210815818405c3e7ebc99faeae65caf2c43159419f4e56c4f8",
-      "sourceTexture": "wt_interface/item/character/angela.dtx",
-      "sourceSha256": "fd628572937593e6efe97026958f94f5292cff4317d39b848711430ef78df371"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model23": {
-      "asset": "res://assets/full_ui/textures/d6507cc7896d87a49fbc3e00.png",
+      "asset": "res://assets/full_ui/textures/6dae515654d7af77006e40dd.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/christopher.dtx",
+      "sourceSha256": "b9a84c8cf8d03bba03f1ede41f36a51877a4bd456aed9c0a4ae52a1524dc9e73",
       "model": "res://assets/library/characters/pair-model23-human.glb",
       "modelSha256": "c2db5cb476de3b8802a4838f620f3fef48433f4c3732ac11be043f3ed6b5f919",
-      "sourceTexture": "wt_interface/item/character/christopher.dtx",
-      "sourceSha256": "3b8e2cde912e63deabbb233617014e75899a9bd0eaea2d5394de4830a584d8ef"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model20": {
-      "asset": "res://assets/full_ui/textures/1c63743daf395150e5f75507.png",
+      "asset": "res://assets/full_ui/textures/5f56488d3f906fa4498f5e5d.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/adriana.dtx",
+      "sourceSha256": "dc22d8aec6921692d7dfd772a190402374002ce6ab7d876ccbaee7bdc8647125",
       "model": "res://assets/library/characters/pair-model20-human.glb",
       "modelSha256": "9ea83379715f8f2986733cc975da35ffa50760781e647e07e3ce579ca573ae23",
-      "sourceTexture": "wt_interface/item/character/adriana.dtx",
-      "sourceSha256": "a13ebcc824ddeab904e0e374abd5fee48149678a88fe0efa378ece8b21d2d632"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model22": {
-      "asset": "res://assets/full_ui/textures/eb9b5f39ae6e594dda09bfe8.png",
+      "asset": "res://assets/full_ui/textures/26e84693749131e13532cbc3.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/pedro.dtx",
+      "sourceSha256": "d0734fb2b770b34ebddce1523283215e866259215d4c1ef6470f07d2239f1235",
       "model": "res://assets/library/characters/pair-model22-human.glb",
       "modelSha256": "b8bf11acd4b3545b64d33326651d8dc995afe752cc5a7c49ce0a9c1187ea9601",
-      "sourceTexture": "wt_interface/item/character/pedro.dtx",
-      "sourceSha256": "52938c13f0973a1a5ebdd1ab8e7601729a80da8a5dd0280cfc43d40e9354fffe"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model42": {
-      "asset": "res://assets/full_ui/textures/6b28a5df4cf88512da0b1ede.png",
+      "asset": "res://assets/full_ui/textures/3bc9d657d45eff11dd6a20bb.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien.dtx",
+      "sourceSha256": "4b3c7b93bec15f238585b83e2316e48b041c94658fb7d316051a1f2a9afdd802",
       "model": "res://assets/library/characters/pair-model42-human.glb",
       "modelSha256": "2e802379aabc39ed980a29672e37e2bf9370940d687f508a7e2e3b2e82fd9640",
-      "sourceTexture": "wt_interface/item/character/marien.dtx",
-      "sourceSha256": "63b9b993d4edca3b6474c8e0c38bb976796c480fa1738dd3d9a804c36277a668"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model40": {
-      "asset": "res://assets/full_ui/textures/0fdb3544f94d9aa56e88cb9c.png",
+      "asset": "res://assets/full_ui/textures/7b649b9a955b26f743510d7b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard.dtx",
+      "sourceSha256": "bbfdae95ec62545627db71a3d1a9b467f8c6c98402e1a14c8001ef9a1d7bc254",
       "model": "res://assets/library/characters/pair-model40-human.glb",
       "modelSha256": "1570482534a2c59b4950244e17872c704be6bdf5d75408458c098ce1b2e85b33",
-      "sourceTexture": "wt_interface/item/character/reinhard.dtx",
-      "sourceSha256": "0a024c33c48b1444b95e18ff817db53a2f7005cdc7c9a5a983d929714881d63a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model38": {
-      "asset": "res://assets/full_ui/textures/49e79443e12804314dbcd798.png",
+      "asset": "res://assets/full_ui/textures/d14c6e7b9d634c0b5466f3e9.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/lin.dtx",
+      "sourceSha256": "d91ec4aa1cb075b75e2d983eb1544bad259c79e75f3425dbd74d53ba44474b1a",
       "model": "res://assets/library/characters/pair-model38-human.glb",
       "modelSha256": "57840cae5e60711ad27cf9dd1962c042fd4ce761d3e9aa2b9a06781d9734ba73",
-      "sourceTexture": "wt_interface/item/character/lin.dtx",
-      "sourceSha256": "d05584d503683ec940e018c2972d345b749e692345251be6ff2e1e7c5fb13f40"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model36": {
       "asset": "res://assets/ui/character_portraits/pair-model36.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model36-human.glb",
-      "modelSha256": "c310b1626489d043fef8095599f67eca8981a89daaff7f67d4799b4a406cad3c"
+      "modelSha256": "c310b1626489d043fef8095599f67eca8981a89daaff7f67d4799b4a406cad3c",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model44": {
-      "asset": "res://assets/ui/character_portraits/pair-model44.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/c97d1622dfc37649c0f09f64.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/angela_special_edition.dtx",
+      "sourceSha256": "0eacaf7cc75db2fbbc0614ff44e3053f0ca75d7c18bbcb481f66d051541f0bb6",
       "model": "res://assets/library/characters/pair-model44-human.glb",
-      "modelSha256": "0edb37e26ed12733ed662a30437e98492ae962efada0086c7a68506c48f31dd9"
+      "modelSha256": "0edb37e26ed12733ed662a30437e98492ae962efada0086c7a68506c48f31dd9",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model46": {
-      "asset": "res://assets/ui/character_portraits/pair-model46.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/16e5bddb97d2f04fceeeb957.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/christopher_special_edition.dtx",
+      "sourceSha256": "387a40f202eea60a6c06eea737a4a7fc497ea0078959553539716ea97f440d6a",
       "model": "res://assets/library/characters/pair-model46-human.glb",
-      "modelSha256": "0084a0db25f4ccad335d0133cd1c672d256ae123cd2a698143e3236502adb579"
+      "modelSha256": "0084a0db25f4ccad335d0133cd1c672d256ae123cd2a698143e3236502adb579",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model50": {
-      "asset": "res://assets/ui/character_portraits/pair-model50.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/3124b7ae5c5f74cb1aa1bf99.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/exitem/large/pedro_special_edition.dtx",
+      "sourceSha256": "62c3e9a754edb6c939e05167fd1720cc7f6a1c5e6d27d19e9f108f725b278732",
       "model": "res://assets/library/characters/pair-model50-human.glb",
-      "modelSha256": "d258b5ea2d2b4d9fd49e9398eebb4046782ca169df47f5eb2200031b17e985ad"
+      "modelSha256": "d258b5ea2d2b4d9fd49e9398eebb4046782ca169df47f5eb2200031b17e985ad",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model52": {
-      "asset": "res://assets/full_ui/textures/fa313dc8ba5536b4ebfda5c4.png",
+      "asset": "res://assets/full_ui/textures/d345cf529421e3429848c282.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita.dtx",
+      "sourceSha256": "5fb09a2b4835e451cbdb43e3f54aa3e1de7c2c67e4e389dc2e64317cf33bff3d",
       "model": "res://assets/library/characters/pair-model52-human.glb",
       "modelSha256": "9003e06b92ce15d8d6a3b225c0fb8864564795c9bf45c0b04f0d43da632824cd",
-      "sourceTexture": "wt_interface/item/character/tomita.dtx",
-      "sourceSha256": "c55e3d68c2602abde3a37fe4afb2b171bc20120aa44157cef7fab504601aec72"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model54": {
-      "asset": "res://assets/full_ui/textures/9e78025742c061424ce87ce9.png",
+      "asset": "res://assets/full_ui/textures/8bcefc2bc1f21dac844da247.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit.dtx",
+      "sourceSha256": "c87321e42fd91fa869d3b8b0c374939c8c7a2122210fa6dc47dc30fb82654e7f",
       "model": "res://assets/library/characters/pair-model54-human.glb",
       "modelSha256": "7dcd0a194cb9bd682e1a1ba9a1e741216a54e9329bd313dc84ae67b82578c47d",
-      "sourceTexture": "wt_interface/item/character/yigit.dtx",
-      "sourceSha256": "a60662cc398219318d8fb4c3cdc930685d37c291d7e4a1857a3da31fe326c86c"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model56": {
       "asset": "res://assets/ui/character_portraits/pair-model56.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model56-human.glb",
-      "modelSha256": "00b1db1e10bbf60681ce5939beccda2a09c6ecd44d367d9041863efb00c218cb"
+      "modelSha256": "00b1db1e10bbf60681ce5939beccda2a09c6ecd44d367d9041863efb00c218cb",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model76": {
       "asset": "res://assets/ui/character_portraits/pair-model76.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model76-human.glb",
-      "modelSha256": "88d1d90f3fe8f4abbf7509e410e5952ed2582622d956b8f79c42f7da17b7eac1"
+      "modelSha256": "88d1d90f3fe8f4abbf7509e410e5952ed2582622d956b8f79c42f7da17b7eac1",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model80": {
       "asset": "res://assets/ui/character_portraits/pair-model80.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model80-human.glb",
-      "modelSha256": "614771acde0fd3d527fa8cc14429c851b6ff846e6abbc956208b4616799a69ca"
+      "modelSha256": "614771acde0fd3d527fa8cc14429c851b6ff846e6abbc956208b4616799a69ca",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model62": {
-      "asset": "res://assets/full_ui/textures/a82aac3ae4ba69733fadf760.png",
+      "asset": "res://assets/full_ui/textures/09ac3e041d69705e3125569b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/adriana_adult.dtx",
+      "sourceSha256": "5a5ebcf5908eddf033bbb05525c33f8c3951f30d3e58bd94896285986f90e3d7",
       "model": "res://assets/library/characters/pair-model62-human.glb",
       "modelSha256": "6e6f3e00ff290c4101728618cd971a1d07481782df3a76fd85291ce17619e062",
-      "sourceTexture": "wt_interface/item/character/adriana_adult.dtx",
-      "sourceSha256": "b8ecaf655131eb316696bfad8c859f5fda127b22d26a3f0bb1028d5c09b64864"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model63": {
-      "asset": "res://assets/full_ui/textures/a440953ec8d463b6391352d8.png",
+      "asset": "res://assets/full_ui/textures/001f732c6a18ae0b2f8c31f2.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela.dtx",
+      "sourceSha256": "29333119620ec59245201da7c48b293d1a6ce28b58c1f54216903e50bef4442d",
       "model": "res://assets/library/characters/pair-model63-human.glb",
       "modelSha256": "a27024c3223bfed13615f7eba6c291ad68dd19d9365f3d77ac7bc1207a97a783",
-      "sourceTexture": "wt_interface/item/character/angela.dtx",
-      "sourceSha256": "fd628572937593e6efe97026958f94f5292cff4317d39b848711430ef78df371"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model64": {
-      "asset": "res://assets/full_ui/textures/49e79443e12804314dbcd798.png",
+      "asset": "res://assets/full_ui/textures/d14c6e7b9d634c0b5466f3e9.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/lin.dtx",
+      "sourceSha256": "d91ec4aa1cb075b75e2d983eb1544bad259c79e75f3425dbd74d53ba44474b1a",
       "model": "res://assets/library/characters/pair-model64-human.glb",
       "modelSha256": "a84ad323ec17afe94c4bd9bcc2096ebad19840c56b95d08c173d83eb30d5aa9d",
-      "sourceTexture": "wt_interface/item/character/lin.dtx",
-      "sourceSha256": "d05584d503683ec940e018c2972d345b749e692345251be6ff2e1e7c5fb13f40"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model65": {
-      "asset": "res://assets/full_ui/textures/6b28a5df4cf88512da0b1ede.png",
+      "asset": "res://assets/full_ui/textures/3bc9d657d45eff11dd6a20bb.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien.dtx",
+      "sourceSha256": "4b3c7b93bec15f238585b83e2316e48b041c94658fb7d316051a1f2a9afdd802",
       "model": "res://assets/library/characters/pair-model65-human.glb",
       "modelSha256": "275e7eef8de75d8ea77564f6088f2b5b3e1241b2591c01f5454736e61e83b7a1",
-      "sourceTexture": "wt_interface/item/character/marien.dtx",
-      "sourceSha256": "63b9b993d4edca3b6474c8e0c38bb976796c480fa1738dd3d9a804c36277a668"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model82": {
-      "asset": "res://assets/full_ui/textures/6fb050b0275c6957d320413e.png",
+      "asset": "res://assets/full_ui/textures/ff5b35da6a091126831ea69e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela_soccer.dtx",
+      "sourceSha256": "8f45f0fdbd3e645daed0608959f9a6d54cb43923faf4c6e8c737c647722ef649",
       "model": "res://assets/library/characters/pair-model82-human.glb",
       "modelSha256": "eb6fe0436b508abefe8d8682668118e6f24024af780e15196104dc9c657c2a87",
-      "sourceTexture": "wt_interface/item/character/angela_soccer.dtx",
-      "sourceSha256": "8feb037b38955bab28896a750a6afcb781f6463f9b1128c99a8bd7a90c085b6b"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model83": {
-      "asset": "res://assets/full_ui/textures/9eb05296b3a94470775903b2.png",
+      "asset": "res://assets/full_ui/textures/054931effe58630ed3019fbd.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/christopher_soccer.dtx",
+      "sourceSha256": "ec1c7fdb3130b7b2b3991b0c349d4fb2751a5d383f5327c196f005b411298ecc",
       "model": "res://assets/library/characters/pair-model83-human.glb",
       "modelSha256": "93e1b7b4348d3f094e9fc5102dd01d46c3082e48f3398e3f28dd10f5863bd097",
-      "sourceTexture": "wt_interface/item/character/christopher_soccer.dtx",
-      "sourceSha256": "4884d0c434230b808b8bb2430eb11e501a4beefc4a5c0bf6059a71f59321aeb1"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model84": {
-      "asset": "res://assets/full_ui/textures/e818f8529ee6ff3f7bb58b7b.png",
+      "asset": "res://assets/full_ui/textures/323a5d7dfc15103dcd4ac372.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/adriana_soccer.dtx",
+      "sourceSha256": "9ea88b4004ed49eb1105041f6e71723b53b88355241ff075df2c92dfda2e407a",
       "model": "res://assets/library/characters/pair-model84-human.glb",
       "modelSha256": "90903e92e0190503b6d9d39d6f1f07135ee0b5b1eba35caf2aefdce615b9cc69",
-      "sourceTexture": "wt_interface/item/character/adriana_soccer.dtx",
-      "sourceSha256": "fc53ffb1a37f2d98a3c80999acbfd65e36c64b77abfd8090dab80117cab521bb"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model85": {
-      "asset": "res://assets/full_ui/textures/06bd30ffe7a41c41909c0a90.png",
+      "asset": "res://assets/full_ui/textures/280b42fe6a9c714760b2f147.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/pedro_soccer.dtx",
+      "sourceSha256": "524b69c8ae54d76814be6b76f023f074406bcb5c6f5213dfce5c9275763b7670",
       "model": "res://assets/library/characters/pair-model85-human.glb",
       "modelSha256": "cc35d220e537573e8199ec2e21f0507caa60f32828616495f9fcf84d88e65115",
-      "sourceTexture": "wt_interface/item/character/pedro_soccer.dtx",
-      "sourceSha256": "6ced06590d2c03db8c09006b4a3f46dd9c0b9183f0365d9bf6c59edf414cc443"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model86": {
-      "asset": "res://assets/full_ui/textures/7e444e56b6787ebab317b0d0.png",
+      "asset": "res://assets/full_ui/textures/a366b1dafb25e12d9b15744b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien_soccer.dtx",
+      "sourceSha256": "9fd8be7846cb846e6cf629c64ca97f6cee6d6af35093a64601cd8161ed5342b0",
       "model": "res://assets/library/characters/pair-model86-human.glb",
       "modelSha256": "e603e7e80e0e112831931171b8da0f1dd9ec3a7febf6e54b9ca19d70fbe2ab98",
-      "sourceTexture": "wt_interface/item/character/marien_soccer.dtx",
-      "sourceSha256": "3cbfbdd68e80a15322306c7daf4d23e506141721a34b399bd9bea784c9cfe1ab"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model87": {
-      "asset": "res://assets/full_ui/textures/ddc5f1e5b4431690cc0d8414.png",
+      "asset": "res://assets/full_ui/textures/eac1737e02c9e1bc657bfb7b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard_soccer.dtx",
+      "sourceSha256": "158a7a162c3f11f118c8a5187e45f5cb0e5acc830204e508c433f626975770aa",
       "model": "res://assets/library/characters/pair-model87-human.glb",
       "modelSha256": "02487c6946d3646f8494586f8a08018b2d13ca984477e59bfaf1dfaa134cd0b1",
-      "sourceTexture": "wt_interface/item/character/reinhard_soccer.dtx",
-      "sourceSha256": "0ac85565b26af65336fb0f58dbcf61ae0f39dddaab6b4dcfa3153332b31b6c3f"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model88": {
       "asset": "res://assets/ui/character_portraits/pair-model88.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model88-human.glb",
-      "modelSha256": "67b826a535c4c10e4560491bc198f8c199caf0c7baf1eda2c3bd7238e0b24efc"
+      "modelSha256": "67b826a535c4c10e4560491bc198f8c199caf0c7baf1eda2c3bd7238e0b24efc",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model89": {
       "asset": "res://assets/ui/character_portraits/pair-model89.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model89-human.glb",
-      "modelSha256": "5b9a9e6d3a10bc6abd74ded9055b17445fd704037d6a38f64c0649613374a68e"
+      "modelSha256": "5b9a9e6d3a10bc6abd74ded9055b17445fd704037d6a38f64c0649613374a68e",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model92": {
       "asset": "res://assets/ui/character_portraits/pair-model92.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model92-human.glb",
-      "modelSha256": "f3058ebe404c48e7a1d8c789a6e0d3f7effe24bbd1e32144afe58bf92941bfda"
+      "modelSha256": "f3058ebe404c48e7a1d8c789a6e0d3f7effe24bbd1e32144afe58bf92941bfda",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model93": {
       "asset": "res://assets/ui/character_portraits/pair-model93.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model93-human.glb",
-      "modelSha256": "224b37cadc2c065efc50ee68097fa84a535d9f6d68655c23444849500f0be58c"
+      "modelSha256": "224b37cadc2c065efc50ee68097fa84a535d9f6d68655c23444849500f0be58c",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model90": {
       "asset": "res://assets/ui/character_portraits/pair-model90.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model90-human.glb",
-      "modelSha256": "9db8eb66e9025eb30f0bf7060a7678c0c67eb7d30c98a41c712d6d5a202fc4b3"
+      "modelSha256": "9db8eb66e9025eb30f0bf7060a7678c0c67eb7d30c98a41c712d6d5a202fc4b3",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model91": {
       "asset": "res://assets/ui/character_portraits/pair-model91.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model91-human.glb",
-      "modelSha256": "78480a0f50adf986877857144ba55e08e278c7d93491ee77eac2c1e64fe7f2ad"
+      "modelSha256": "78480a0f50adf986877857144ba55e08e278c7d93491ee77eac2c1e64fe7f2ad",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model96": {
-      "asset": "res://assets/full_ui/textures/af84029009bbe3ab7e7c82dc.png",
+      "asset": "res://assets/full_ui/textures/614fdf23dec417b61e1351e5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/pedro_tsc.dtx",
+      "sourceSha256": "05a0de09b307db559d5d91f0db5bf8f9b198b64f5e7de97a8abbe3f41309db04",
       "model": "res://assets/library/characters/pair-model96-human.glb",
       "modelSha256": "444bd7c084dd32c78372ac523cdc91fd31b3ecc31f758ce306b93c6cc693b00f",
-      "sourceTexture": "wt_interface/item/character/pedro_tsc.dtx",
-      "sourceSha256": "d90b954d99271d8a08ce4afd1f6bd77289e1deb3fda27989fdc012e5ca2ad490"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model98": {
-      "asset": "res://assets/full_ui/textures/b072aca7c6a120da2916fe09.png",
+      "asset": "res://assets/full_ui/textures/33cba0a83659a17f88e5e9c1.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/hamadah_tsc.dtx",
+      "sourceSha256": "635f2317d7ec7ba8e554d28c7b5c9f00b915522757e726a2670b048773ad1a46",
       "model": "res://assets/library/characters/pair-model98-human.glb",
       "modelSha256": "217b2a4cc00ec80aa876e6995e3d42ac36d5195a31fb52ef89dde04ff665fdd2",
-      "sourceTexture": "wt_interface/item/character/hamadah_tsc.dtx",
-      "sourceSha256": "3902f2bb5c2cfbcfca835f2d0782c96d62568f477c4de8108300be368c0cb48a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model116": {
-      "asset": "res://assets/full_ui/textures/0e836ccda6299894124ac37f.png",
+      "asset": "res://assets/full_ui/textures/86cc4d79a7a30b6cb6e6ad00.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_military.dtx",
+      "sourceSha256": "aa6c3c7bcf61ef391e7c3619331b4b6e71b774e682b65d77c48ffeaf749fd323",
       "model": "res://assets/library/characters/pair-model116-human.glb",
       "modelSha256": "c287d97aa51b4e56383400149a9d9713a2ce4a9876aa6d216849ad8df5e47eea",
-      "sourceTexture": "wt_interface/item/character/ivanov_military.dtx",
-      "sourceSha256": "03a844954762aae4cb5dc6b729f1e4d3aff2fd107148045693da270810df9d52"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model118": {
-      "asset": "res://assets/full_ui/textures/f884e3c6e5bc22575f72cd2f.png",
+      "asset": "res://assets/full_ui/textures/d010be08d7ec10e5b34ebc6e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_military.dtx",
+      "sourceSha256": "f2443b39cd7aaa484b1633b01c8d34f7f28ff4973f71b0489f0480fe8a4891ee",
       "model": "res://assets/library/characters/pair-model118-human.glb",
       "modelSha256": "9be8f7344a411f1bce069aae9b2e67c79e6a950301a4877b8952fecc3ad76300",
-      "sourceTexture": "wt_interface/item/character/yigit_military.dtx",
-      "sourceSha256": "336e7d65f5995ffc1764c904fdbe654cd389358241a04c38625177b47dabdbda"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model120": {
-      "asset": "res://assets/full_ui/textures/a520ee179ebcf98d6c0a2af6.png",
+      "asset": "res://assets/full_ui/textures/f342c36e2bea7024d54666c5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_military.dtx",
+      "sourceSha256": "dd5e1ed20595ca7a2e73854fc43b5f1765e696eb148390e0ccdd9a3341d9ff3f",
       "model": "res://assets/library/characters/pair-model120-human.glb",
       "modelSha256": "919e3227e55f39788055a336110cbd962472b7dabe394526c56e5b69df4b1dd5",
-      "sourceTexture": "wt_interface/item/character/tomita_military.dtx",
-      "sourceSha256": "7a6bd2cf7a2bd0218aa398ea626685390728572ab1153db2b4a37cecef1c9715"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model122": {
-      "asset": "res://assets/full_ui/textures/85da895535b0bd278fadf03b.png",
+      "asset": "res://assets/full_ui/textures/3a61d39c3e30b0f399f04420.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/matt_christmas.dtx",
+      "sourceSha256": "fb164269436895a02acc3379befb235f7b840d0a29660031c90db9f3b46f0a92",
       "model": "res://assets/library/characters/pair-model122-human.glb",
       "modelSha256": "9061499eef94ca7b700fe51423df07d58cd3ad300a2c7332ce2cd8cd649f0b35",
-      "sourceTexture": "wt_interface/item/character/matt_christmas.dtx",
-      "sourceSha256": "ece87da8a18a399d98d0449225227b483a2e021af443f3c9b2608e11a3ce1b2d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model124": {
-      "asset": "res://assets/full_ui/textures/07484a3df32ac9f2cf37f6d5.png",
+      "asset": "res://assets/full_ui/textures/0a3242fcf6b29dc03a99031e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate_christmas.dtx",
+      "sourceSha256": "ded6d39f503403042bd54afa215bc367817081b854d92e3904ad02d0b395b523",
       "model": "res://assets/library/characters/pair-model124-human.glb",
       "modelSha256": "c9f6df23a8e2895849d1e60a6fe6b35ac76fa0e25ce189e4acf99fe833a6adf2",
-      "sourceTexture": "wt_interface/item/character/kate_christmas.dtx",
-      "sourceSha256": "b5ffe811324cfede73e34121f12aee3d37ebdaaca8ff8317b41b3b5f26546648"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model126": {
-      "asset": "res://assets/full_ui/textures/7e355a73bf6139d10bbe74a4.png",
+      "asset": "res://assets/full_ui/textures/77ac0cd06d636a663e7f2e4e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/riccardo_christmas.dtx",
+      "sourceSha256": "3e2d5d89ee26efd8a58b49c0463a6082fa518339156ea31c48c0fb36201edadb",
       "model": "res://assets/library/characters/pair-model126-human.glb",
       "modelSha256": "d809947b5fd034293716a8045f1adb1762b37c85e55fe2a64e2d4ae24108a7b7",
-      "sourceTexture": "wt_interface/item/character/riccardo_christmas.dtx",
-      "sourceSha256": "83636411cc8bbc5e60975206de22e095c88e268cfd2aae1abaa2a17c9b9e7984"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model128": {
-      "asset": "res://assets/full_ui/textures/419e41a3979c189f5086ebfa.png",
+      "asset": "res://assets/full_ui/textures/22205f65ef90cff018b99561.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/sarah_christmas.dtx",
+      "sourceSha256": "f50449626a4b398d1bb84ca431fe753ffe6e0dccafaa3e87ca33f1acc25408f5",
       "model": "res://assets/library/characters/pair-model128-human.glb",
       "modelSha256": "0d5d2eee2a9bc8428c0baf3bd1707649eb1506a3144aa1ba44cf24d2a0f7089f",
-      "sourceTexture": "wt_interface/item/character/sarah_christmas.dtx",
-      "sourceSha256": "678ac17a1a2c4b9e362d49e6215709ed805aa0046dfe0168c5a3b9451141b408"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model130": {
-      "asset": "res://assets/ui/character_portraits/pair-model130.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/889ae7aacb4dd61bf8af2511.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi song_suit.dtx",
+      "sourceSha256": "f7db9d72f6ec9cef4f5963ffd6fb87d4e50d546f1b784219428728f5f4116f1e",
       "model": "res://assets/library/characters/pair-model130-human.glb",
-      "modelSha256": "10ea8454c1316aaae87654517466f0068baadb34aa63e675def71161824c59c2"
+      "modelSha256": "10ea8454c1316aaae87654517466f0068baadb34aa63e675def71161824c59c2",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model132": {
-      "asset": "res://assets/full_ui/textures/4631dc3026cd77549eeea5d6.png",
+      "asset": "res://assets/full_ui/textures/4865d2fb5e2e8a7a2afea35d.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_suit.dtx",
+      "sourceSha256": "6aefeecc7ddabdecb5e9809f5ae10a8f09e36a374af4f2e2c49f10b4be0df452",
       "model": "res://assets/library/characters/pair-model132-human.glb",
       "modelSha256": "46933fb977d0110f99856e11d9e0a784bc194681f1107aa9760f4bef4aec1474",
-      "sourceTexture": "wt_interface/item/character/ivanov_suit.dtx",
-      "sourceSha256": "2fcaee296083a7915f46615427cf51bfd679088b209da8c9460aa2c6c82a456b"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model134": {
-      "asset": "res://assets/full_ui/textures/3d8024e350622cfd8c2c3c35.png",
+      "asset": "res://assets/full_ui/textures/849bc1557ca67bdb1cb821f4.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_suit.dtx",
+      "sourceSha256": "729e004db50db8c8cccec86c0ae5598abc571dcde2e4c849293032c9208e70a6",
       "model": "res://assets/library/characters/pair-model134-human.glb",
       "modelSha256": "af41207157c897ce0830febcec39c2c3fd6e6ce4256116f8c7e5e22a6ff0a45e",
-      "sourceTexture": "wt_interface/item/character/yigit_suit.dtx",
-      "sourceSha256": "d887799d067a4a4230acedf97b1733975d4715efac7de9dc969c0fef372eb8ec"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model136": {
-      "asset": "res://assets/full_ui/textures/4059e8d0558aa3ba370f6a89.png",
+      "asset": "res://assets/full_ui/textures/a8235d025fe1e1175734f655.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_suit.dtx",
+      "sourceSha256": "eab76badf88681d894e1cc66fa60a9bf3515d70d54bff378ef83b9c98f389d48",
       "model": "res://assets/library/characters/pair-model136-human.glb",
       "modelSha256": "1419efb88bd2c2bc92a01f5f22fd5f437583cfce42b5ce633a7ef1ba1e30846c",
-      "sourceTexture": "wt_interface/item/character/tomita_suit.dtx",
-      "sourceSha256": "572f25913938c5f9658d82ed43aef57ea7a215241c59ea94b821de785666a235"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model138": {
-      "asset": "res://assets/full_ui/textures/77c448357685a87a5d687feb.png",
+      "asset": "res://assets/full_ui/textures/b730fa712a742fbc32394b52.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_valentine.dtx",
+      "sourceSha256": "920b3e52615992b087b7e4ab4ada030121c288f63bdd463429710d19c039b9be",
       "model": "res://assets/library/characters/pair-model138-human.glb",
       "modelSha256": "21a85225b8dab39d2f33f110afae354bdef7df15156398d5ea38faf8c427f679",
-      "sourceTexture": "wt_interface/item/character/geremi_valentine.dtx",
-      "sourceSha256": "d8f48c1455bee51ceef578349fe0ba0077658f9785fc42aa7ea152ee0f0a5aef"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model140": {
-      "asset": "res://assets/full_ui/textures/20a6938cd22ebc7f1345fde3.png",
+      "asset": "res://assets/full_ui/textures/3b53be27e08f139829865d5c.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_valentine.dtx",
+      "sourceSha256": "a76f8fad50566cbda040e53448da12dde3a34f92882b7c042f37ad4330c076fe",
       "model": "res://assets/library/characters/pair-model140-human.glb",
       "modelSha256": "9275fda25f28e5739c6c231f44bb026ca10ab1fb3c241cb879d5f9d3c3b31554",
-      "sourceTexture": "wt_interface/item/character/ivanov_valentine.dtx",
-      "sourceSha256": "ed860efef275ca9d84ee85c985e2904dc89d77691ceb5fd2278faf22b15ed1da"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model142": {
-      "asset": "res://assets/full_ui/textures/95c3b6bcf95dc203b2a4a627.png",
+      "asset": "res://assets/full_ui/textures/dc43eedf972c4f12cc98e6fa.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_valentine.dtx",
+      "sourceSha256": "23492c5c9db731893935000e0d4950d122e2d8775cf77f958cfb86fbb64833ae",
       "model": "res://assets/library/characters/pair-model142-human.glb",
       "modelSha256": "7909d680f6ce123462e9870c748ed47fd8ef3af465cf8a8cec6c8fce29a87b04",
-      "sourceTexture": "wt_interface/item/character/yigit_valentine.dtx",
-      "sourceSha256": "2cc3acf71d20bec4460fb54ba4a911b519703d1ddd9f231316d272d70d59d7b9"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model144": {
-      "asset": "res://assets/full_ui/textures/1fb611be68abdf14abfff50f.png",
+      "asset": "res://assets/full_ui/textures/ce143f11ce4d5241a98aec78.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_valentine.dtx",
+      "sourceSha256": "37ff38d74b12ee1bb998373aa82d9fe6b4abe3bfb360de00806d90c48b829481",
       "model": "res://assets/library/characters/pair-model144-human.glb",
       "modelSha256": "7f712240e4c0c2b6d6634ef6fbd851b098aff3fa484db366d765192829f27e46",
-      "sourceTexture": "wt_interface/item/character/tomita_valentine.dtx",
-      "sourceSha256": "89f6c2bc8190c0f70b028ed456ade9146f0482d8b469495ada5a9b635aa25721"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model146": {
-      "asset": "res://assets/ui/character_portraits/pair-model146.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/91043b183897e70b005a3c14.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/matt_se.dtx",
+      "sourceSha256": "bb0ba9409c4d636d44ed349a048a926e013447d3d09046066ec6632450d09455",
       "model": "res://assets/library/characters/pair-model146-human.glb",
-      "modelSha256": "284a8615576bc675878f22501ad381f27f308c7f00755a9f8a86365d6242d7b0"
+      "modelSha256": "284a8615576bc675878f22501ad381f27f308c7f00755a9f8a86365d6242d7b0",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model148": {
-      "asset": "res://assets/ui/character_portraits/pair-model148.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/4925836c9bde27ee728246c5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate_se.dtx",
+      "sourceSha256": "de33f2c21a3026cfccae93ee047c61bf5b3320fea705eaae3d491f99c1e547cd",
       "model": "res://assets/library/characters/pair-model148-human.glb",
-      "modelSha256": "f940666e224407db623fc988a4ae04f9d740aac1895c5aff259ad87b30df5cdc"
+      "modelSha256": "f940666e224407db623fc988a4ae04f9d740aac1895c5aff259ad87b30df5cdc",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model150": {
-      "asset": "res://assets/ui/character_portraits/pair-model150.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/cc1a0cd60a70486fa137d931.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/riccardo_se.dtx",
+      "sourceSha256": "eff919735c5edd1f869e54abd81c6e859679e51f5a164ce20d9303324ce6fd50",
       "model": "res://assets/library/characters/pair-model150-human.glb",
-      "modelSha256": "552949b584fc15d4ea1ddead07466078394a9d0e8d8fab1edd0eeaaf81ec8ab3"
+      "modelSha256": "552949b584fc15d4ea1ddead07466078394a9d0e8d8fab1edd0eeaaf81ec8ab3",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model152": {
-      "asset": "res://assets/ui/character_portraits/pair-model152.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/f6bd0c1c4b63cc01feb92996.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/sarah_se.dtx",
+      "sourceSha256": "0b89bf25f3e3e7c3c30410c02175a6bbe21c2d7a126fc21efaf569827d2686c5",
       "model": "res://assets/library/characters/pair-model152-human.glb",
-      "modelSha256": "8f212ad37f84cd421a345b99f4ae02870db1b81cd602a126c50b25d1fb3b56b1"
+      "modelSha256": "8f212ad37f84cd421a345b99f4ae02870db1b81cd602a126c50b25d1fb3b56b1",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model154": {
-      "asset": "res://assets/full_ui/textures/56b936b0b3ea5b39d9ad9fad.png",
+      "asset": "res://assets/full_ui/textures/880ae9ad032b8c6fcd5b7583.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien_gi.dtx",
+      "sourceSha256": "135cd5920d7f67ac362935a6fa0eaafaae80863b3e24d046afde9b9c02a1dcee",
       "model": "res://assets/library/characters/pair-model154-human.glb",
       "modelSha256": "4a7c7fdcbd6f8048f9007ce82dcfa8d6948572adac70e7afc8fdae03231278a5",
-      "sourceTexture": "wt_interface/item/character/marien_gi.dtx",
-      "sourceSha256": "8d7ffe480660380ea286fdd3e3266f6d9346e3823a8abab82ed4cda7081c2fdc"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model156": {
-      "asset": "res://assets/full_ui/textures/804c3c860838f3ca6857710d.png",
+      "asset": "res://assets/full_ui/textures/998341f3512fe6774a432c0a.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard_gi.dtx",
+      "sourceSha256": "064f79752d8120d0b160bfea54a8637d60993c0d690fc40b0f1ad6137285a38e",
       "model": "res://assets/library/characters/pair-model156-human.glb",
       "modelSha256": "7fd064e10b1395ab7f919c10477c49f4eb0813d60ac2b1ab9fd0f517d374d591",
-      "sourceTexture": "wt_interface/item/character/reinhard_gi.dtx",
-      "sourceSha256": "2e8c03880594161d655ec88f4b16cbee4039fdf951128bb8fcfa7528c5096f44"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model158": {
-      "asset": "res://assets/full_ui/textures/2c438df486823edd8b1ce45c.png",
+      "asset": "res://assets/full_ui/textures/2bcd7eb1d9fc51c67b556be5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/lin_gi.dtx",
+      "sourceSha256": "64ae3a864e662f7d75fa823e6981f242add25073de9e8583b022b9cd723daafb",
       "model": "res://assets/library/characters/pair-model158-human.glb",
       "modelSha256": "cc4e52646b93a4559b864e41cb001bf5cd39e7b342189c2a6d72d84122cada4c",
-      "sourceTexture": "wt_interface/item/character/lin_gi.dtx",
-      "sourceSha256": "6626d5535f3e15325630094183340c5c49cc5736477c6a4a8d5765e2474fa42d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model160": {
-      "asset": "res://assets/full_ui/textures/9f4292e0fb27b790278fa498.png",
+      "asset": "res://assets/full_ui/textures/387680ea411ff01cee5fbe1e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/hamadah_gi.dtx",
+      "sourceSha256": "5e177b84c1add8fd818a4f56d1b0a0da50e1ed59dad7d367a9804c496c53b87b",
       "model": "res://assets/library/characters/pair-model160-human.glb",
       "modelSha256": "97d79b4f055e3acd8bc7c75bee7c618d99864f81a24ec0b994d0667316ebfe64",
-      "sourceTexture": "wt_interface/item/character/hamadah_gi.dtx",
-      "sourceSha256": "cf93d6d388fe02b239dd51cd67501f7ab93223a399011836c5770cc67ef329dd"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model162": {
-      "asset": "res://assets/ui/character_portraits/pair-model162.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/c65baef10c980873d55d5aaa.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov adult.dtx",
+      "sourceSha256": "c72a7e1560dae59fe297d7a3c751ebb128035d20dcc8cd3fbb7212272aa4446d",
       "model": "res://assets/library/characters/pair-model162-human.glb",
-      "modelSha256": "7542f9ee5a5de194b3976b24bd3b485ac73818fe79989b1d635d295836a627b9"
+      "modelSha256": "7542f9ee5a5de194b3976b24bd3b485ac73818fe79989b1d635d295836a627b9",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model164": {
-      "asset": "res://assets/ui/character_portraits/pair-model164.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/7e7d126a37e5027162240b7c.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita adult.dtx",
+      "sourceSha256": "fadb30a77e6e0ae1897ad949f3f4fa2c7e49bf811085042e567c8d809b1771c3",
       "model": "res://assets/library/characters/pair-model164-human.glb",
-      "modelSha256": "641abbbb93e79339667a26ce2385bed7e88e40996d309562bb8ef36874b6a0c9"
+      "modelSha256": "641abbbb93e79339667a26ce2385bed7e88e40996d309562bb8ef36874b6a0c9",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model166": {
-      "asset": "res://assets/ui/character_portraits/pair-model166.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/527cbd7680fb64c4298d8747.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate adult.dtx",
+      "sourceSha256": "0d95d7db8ea85b7898e4b5f5ae8c736403d8dfe16ad20a280effadd912e5e447",
       "model": "res://assets/library/characters/pair-model166-human.glb",
-      "modelSha256": "896ca9fd39093a78814c639cb79dcd8d46342b44bf11abf057eca54a0d8b7d23"
+      "modelSha256": "896ca9fd39093a78814c639cb79dcd8d46342b44bf11abf057eca54a0d8b7d23",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model168": {
-      "asset": "res://assets/ui/character_portraits/pair-model168.png",
-      "kind": "rendered_model_preview",
+      "asset": "res://assets/full_ui/textures/ebc4512f4f1f508deabfcc96.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/sarah adult.dtx",
+      "sourceSha256": "a07e1afca3c4ed01e330edb49a31c6539e96892c7795a0e3f744e8d3bc1adfe2",
       "model": "res://assets/library/characters/pair-model168-human.glb",
-      "modelSha256": "e69066ae7c718058e11a26a4e6ce260ec303cb9aed018140adc2799f151f46bb"
+      "modelSha256": "e69066ae7c718058e11a26a4e6ce260ec303cb9aed018140adc2799f151f46bb",
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model170": {
-      "asset": "res://assets/full_ui/textures/2f20c5dc4723c40febe5601c.png",
+      "asset": "res://assets/full_ui/textures/8e64a0de64d801cb1289df76.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/gm_red_man.dtx",
+      "sourceSha256": "8e110b8c23552dc5acf1191d9416f1453ffc4ccab438cdd20ab8d173f80229bf",
       "model": "res://assets/library/characters/pair-model170-human.glb",
       "modelSha256": "7f622264e4e58a7e1c2acfefb4851cbd903fffb0a67fbfd499bc4081241f7f53",
-      "sourceTexture": "wt_interface/item/character/gm_red_man.dtx",
-      "sourceSha256": "cd829c2ad7612eecfa1bd0306c47a4e2fb4d7db2683cafd65d08f4f89424c758"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model172": {
-      "asset": "res://assets/full_ui/textures/d3866cf5aa8a160aed19b624.png",
+      "asset": "res://assets/full_ui/textures/76cd18d438eb59636d47400e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/gm_red_woman.dtx",
+      "sourceSha256": "d60bc62c557da36f445f019dad21be73b5fb1a6536c2b99cb078d822f0f8761b",
       "model": "res://assets/library/characters/pair-model172-human.glb",
       "modelSha256": "e4f6bcf0276e992657930f12a641aed232bf3a43bfa816486d9ba6cfc5d40019",
-      "sourceTexture": "wt_interface/item/character/gm_red_woman.dtx",
-      "sourceSha256": "3fd6567e1f16f5f794034eec09b36a9d96ae18394fd682275c367c3cc996b375"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model174": {
-      "asset": "res://assets/full_ui/textures/7d2c67088d2874b65c084205.png",
+      "asset": "res://assets/full_ui/textures/2a3013c388d73985cc514dc8.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/gm_blue_man.dtx",
+      "sourceSha256": "75fea1693b740e415279b12c7360805185e6f283f74b7fddb7b4dc5f7bff108a",
       "model": "res://assets/library/characters/pair-model174-human.glb",
       "modelSha256": "7f622264e4e58a7e1c2acfefb4851cbd903fffb0a67fbfd499bc4081241f7f53",
-      "sourceTexture": "wt_interface/item/character/gm_blue_man.dtx",
-      "sourceSha256": "6a6ad9ca1fe6fc3d1143c1cc6e990a173bbb4083a98c27cd6dbeec1ffafdb1db"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model176": {
-      "asset": "res://assets/full_ui/textures/e4b445c01c3c20a2f535d6b9.png",
+      "asset": "res://assets/full_ui/textures/dfc5428c06eca7fca8b4c80d.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/gm_blue_woman.dtx",
+      "sourceSha256": "d5bee1992d7f148f00debe1f5d8b6e3ada9fe33e3c28f71ef118932ea90481c8",
       "model": "res://assets/library/characters/pair-model176-human.glb",
       "modelSha256": "e4f6bcf0276e992657930f12a641aed232bf3a43bfa816486d9ba6cfc5d40019",
-      "sourceTexture": "wt_interface/item/character/gm_blue_woman.dtx",
-      "sourceSha256": "fb701be9c7c4f7629e5974fcffd38f7da5aa1c2f33e586d29f5b8c7f044c3f48"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model178": {
-      "asset": "res://assets/full_ui/textures/e18c0b7e3ae18ced89e443d4.png",
+      "asset": "res://assets/full_ui/textures/ce852a59ecb31bdd1af9cda9.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/christopher_udf.dtx",
+      "sourceSha256": "91d3b01255a3190bb17e4b69269d605ad52e7673994c3dc23ace4d27417d9883",
       "model": "res://assets/library/characters/pair-model178-human.glb",
       "modelSha256": "fba4a31c2ec07908e70c378ba0de783c1293a62dd0ff896887121eede6dcba49",
-      "sourceTexture": "wt_interface/item/character/christopher_udf.dtx",
-      "sourceSha256": "d74f257cab1dd4e767f14d1fa46cc027b84b595cb39ef087d6a8e32d01832fd3"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model180": {
-      "asset": "res://assets/full_ui/textures/4cf02e8e6ce10739c41ce390.png",
+      "asset": "res://assets/full_ui/textures/07e1d13db9fc48becf1cb091.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela_udf.dtx",
+      "sourceSha256": "d9f7d1e2f724a5f803fe8f49a0c23a313f9df9183cdd5e6fcce9c976a7261a32",
       "model": "res://assets/library/characters/pair-model180-human.glb",
       "modelSha256": "0e8f5073ca89ceb8c32d4afd25c055ca9280587f4ce5c666892f1430ed88805b",
-      "sourceTexture": "wt_interface/item/character/angela_udf.dtx",
-      "sourceSha256": "8546a16f475bb1111533eb14e7a64e906614db4c25c6c02dc11636b34e579986"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model182": {
       "asset": "res://assets/ui/character_portraits/pair-model182.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model182-human.glb",
-      "modelSha256": "4823b7bf09302ea58521cb30851203ae7ecc2e113c430cb979968928f2f846d0"
+      "modelSha256": "4823b7bf09302ea58521cb30851203ae7ecc2e113c430cb979968928f2f846d0",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model184": {
-      "asset": "res://assets/full_ui/textures/17f544fea861eb2793006143.png",
+      "asset": "res://assets/full_ui/textures/b2ff969ae8bf345ba429b752.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/adriana_udf.dtx",
+      "sourceSha256": "98f541bfeb60626557323f7975ac8aea37bb4177639773f7a6b14d8486b766a1",
       "model": "res://assets/library/characters/pair-model184-human.glb",
       "modelSha256": "74c5a7947f066487808dc0503a00e7cc26dc9c8f4bccfec7bf063311a24d26d9",
-      "sourceTexture": "wt_interface/item/character/adriana_udf.dtx",
-      "sourceSha256": "a4fe0b4f2af77297d1a1ebbed02a38c5dfba3c4822cc02166e4bf4d15905906b"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model186": {
-      "asset": "res://assets/full_ui/textures/65fb8e925c619ff71e17d3ed.png",
+      "asset": "res://assets/full_ui/textures/cb65b695008d36b4d64bfc32.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_sfmovie.dtx",
+      "sourceSha256": "66d2b4bed06ce6bd36e06eb2f8c5f72d4532e4ac3d39c0dc38ee55e0d6ef177e",
       "model": "res://assets/library/characters/pair-model186-human.glb",
       "modelSha256": "e7e92701245016ec52276575175bbdb3e0acbc0918b63cc8a023f60d57104cf0",
-      "sourceTexture": "wt_interface/item/character/yigit_sfmovie.dtx",
-      "sourceSha256": "946ab93c9e6f054f65be9517adcce633a493a0f412064c5f446c0c6d19591346"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model188": {
-      "asset": "res://assets/full_ui/textures/fe02df398553d6fb0e3753b4.png",
+      "asset": "res://assets/full_ui/textures/4a4d1372752d801b4a322fcc.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_sfmovie.dtx",
+      "sourceSha256": "3d0b579351d7562516ca9af6c3ee4478d2cea35f167a116977c00d3b52a50d63",
       "model": "res://assets/library/characters/pair-model188-human.glb",
       "modelSha256": "90b07b57a915a7890fb50574bd4875d5862008d83cbdab25839e04912167daec",
-      "sourceTexture": "wt_interface/item/character/tomita_sfmovie.dtx",
-      "sourceSha256": "bc93ab9980f38b63a2853bc2a5ee16b79d09900f8b88ce982b0082488ff9ddb1"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model190": {
-      "asset": "res://assets/full_ui/textures/b531780c211a221baf1e61a4.png",
+      "asset": "res://assets/full_ui/textures/25e65510ab83e6801ec37343.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_sfmovie.dtx",
+      "sourceSha256": "8d39f3ee1c0553c7c9999a7cae6fd0443d9956e6e54ca9b3a79dcd9202474ade",
       "model": "res://assets/library/characters/pair-model190-human.glb",
       "modelSha256": "f9933dc244cbc71996705a08d3f671d738d9dcdcf0b4a288aba8d6bc851c1106",
-      "sourceTexture": "wt_interface/item/character/geremi_sfmovie.dtx",
-      "sourceSha256": "66db071fc606b67762124d11207d74f0c0f84c5de1d91edd1d5195901effeaca"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model192": {
-      "asset": "res://assets/full_ui/textures/c0769f90695b1b7a04fe1117.png",
+      "asset": "res://assets/full_ui/textures/0e824ea961da126f8fdc5d87.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_sfmovie.dtx",
+      "sourceSha256": "aa09e6e1573e38d1a807d0bf62de483192b66542dc9a60337f5b3e3c3c9a8ce7",
       "model": "res://assets/library/characters/pair-model192-human.glb",
       "modelSha256": "16eddd3b4acee73c5f98894ecb43268bb066bdee98f29362f7bad56db9c16195",
-      "sourceTexture": "wt_interface/item/character/ivanov_sfmovie.dtx",
-      "sourceSha256": "1784bfc8cd5bdf30199ef5d8393ed2ce6281a9be767f270b41dae6d103acf679"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model194": {
-      "asset": "res://assets/full_ui/textures/97376fa63e987cb40b87a937.png",
+      "asset": "res://assets/full_ui/textures/a67a1b730a17bca3729406f3.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/simon_bolivar.dtx",
+      "sourceSha256": "b1d599e6f88e1ff256821e8168d7f30553b5367e9a1f27515f3bbd8ac7eb6014",
       "model": "res://assets/library/characters/pair-model194-human.glb",
       "modelSha256": "9aebea17a74eef173b2ccf194bf1915f7a9eb714bbfe060a33cdc6fbb74baf23",
-      "sourceTexture": "wt_interface/item/character/simon_bolivar.dtx",
-      "sourceSha256": "673b0d901ad68e68a0a2b896465657e9b34d08b9766d3f1e745caddd3242658a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model196": {
-      "asset": "res://assets/full_ui/textures/8c72226fa3718e7a31962360.png",
+      "asset": "res://assets/full_ui/textures/73ae6ba299ecb02303fb78bf.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/christopher_actionmovie.dtx",
+      "sourceSha256": "2ab526acbf090e5d871eb5e2ec2badf1095f5704822cab7de13a0de394d9cd90",
       "model": "res://assets/library/characters/pair-model196-human.glb",
       "modelSha256": "2fd53f798d2da129407aa0a5ffd4efc0bb03fa3fdd635903180f2a2441ebd7f0",
-      "sourceTexture": "wt_interface/item/character/christopher_actionmovie.dtx",
-      "sourceSha256": "cd2f76e07380cd3c5569fbaa09517e52f74cf74e285a3b57c8d1e8ae0037de6d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model198": {
-      "asset": "res://assets/full_ui/textures/18998501b1d390a79ed066d4.png",
+      "asset": "res://assets/full_ui/textures/baae3c87da8fe3c5bc9ed115.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela_actionmovie.dtx",
+      "sourceSha256": "7ed838315ca62802028dc4812b5d2854808806f5d8acd4673b8fa2e7d03c2e66",
       "model": "res://assets/library/characters/pair-model198-human.glb",
       "modelSha256": "7d61a68d80841d371d054a304e729ec33c3b804b4cf6988c7201f4d4ec1244bb",
-      "sourceTexture": "wt_interface/item/character/angela_actionmovie.dtx",
-      "sourceSha256": "ccf7581a3a1ab09f02bca47c82d7bb41f73ddece9c250412ccca720289ddd0c9"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model200": {
-      "asset": "res://assets/full_ui/textures/1511d95b304cdc7325d2c349.png",
+      "asset": "res://assets/full_ui/textures/e54dbecd4723385e67484360.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/pedro_actionmovie.dtx",
+      "sourceSha256": "d14c72b1cae8fa25d430b8d762361b3f489728029b19f485de403eeddf3af244",
       "model": "res://assets/library/characters/pair-model200-human.glb",
       "modelSha256": "e4ce9977704242cc4b51c4fa9ebabac5aa716327420ae6efe5ce394b2c44609c",
-      "sourceTexture": "wt_interface/item/character/pedro_actionmovie.dtx",
-      "sourceSha256": "797299b56b2b0291d20612c2b4101b87baba971fd822c6166aedcc96762dde0a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model202": {
-      "asset": "res://assets/full_ui/textures/183f21d4357f381f3081cc71.png",
+      "asset": "res://assets/full_ui/textures/2d9374d6c3aee4f52b52b35e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/adriana_actionmovie.dtx",
+      "sourceSha256": "ed2d11c8f53b952ef923cadf1f71edaecfed42d4a86bece7c198a3963bb870cd",
       "model": "res://assets/library/characters/pair-model202-human.glb",
       "modelSha256": "06b7496982172f796bd23c3294ceef7a115cfbeeb3d541dbcb5dcb3d7d1dbc54",
-      "sourceTexture": "wt_interface/item/character/adriana_actionmovie.dtx",
-      "sourceSha256": "57004c363ff7131a7cae9cf155938d8eedb22a76bb98c74de3ad9caad8cc9460"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model204": {
-      "asset": "res://assets/full_ui/textures/040430d433a78be802aa7f24.png",
+      "asset": "res://assets/full_ui/textures/f148fb12575d2f5921093f0b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/riccardo_jungle.dtx",
+      "sourceSha256": "decf3784ead0e5eefdedee2c3fbdeddbd7d31aeb77131c49044bd4b86db457fd",
       "model": "res://assets/library/characters/pair-model204-human.glb",
       "modelSha256": "f0522571096df418b4666e60cc94645916d67e95794a0de2b495614a88599ba4",
-      "sourceTexture": "wt_interface/item/character/riccardo_jungle.dtx",
-      "sourceSha256": "a79f81dd85b1d9d245098034af5f76c4cb02c1b2f98dd3adcdcaa90af3251906"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model212": {
-      "asset": "res://assets/full_ui/textures/45600e6242afb786d42b6d76.png",
+      "asset": "res://assets/full_ui/textures/6d3305179a51cb5ce79a2c57.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/mvp_red_man.dtx",
+      "sourceSha256": "f8c5b18becd2d750bb1995abd1e937b242a8e939e12f93056480666906037f83",
       "model": "res://assets/library/characters/pair-model212-human.glb",
       "modelSha256": "2e26318e1da20e67dbd58c02151687c8f5e7d986fabf91ad4a40412502d09541",
-      "sourceTexture": "wt_interface/item/character/mvp_red_man.dtx",
-      "sourceSha256": "e25511108901c2030af203801abfe7b50487b1e8cde057fb1c90e88a84576043"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model214": {
-      "asset": "res://assets/full_ui/textures/0d6196b050bd9f5f2d07519a.png",
+      "asset": "res://assets/full_ui/textures/168650a461c8b66b04886160.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/mvp_red_woman.dtx",
+      "sourceSha256": "b55c4e94a337011017c63e5e8988b5a877a52e4af38f6c7bc46544ffe570ada6",
       "model": "res://assets/library/characters/pair-model214-human.glb",
       "modelSha256": "2162fe66595c6ae776a670e448d0708d3348e66d6996b9c646810ec54903f7c4",
-      "sourceTexture": "wt_interface/item/character/mvp_red_woman.dtx",
-      "sourceSha256": "52f37df0e7e6b50d4ca940816316cc8039ef13274a911536ed7c0f2e472fabbe"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model216": {
-      "asset": "res://assets/full_ui/textures/47c2506b496baa1322f9ba94.png",
+      "asset": "res://assets/full_ui/textures/5e3461b25be5eed24044a571.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/mvp_blue_man.dtx",
+      "sourceSha256": "f98e3e431a734e5356d1b146afe560e5e88372f481c6326ea6fc5c72b9556c12",
       "model": "res://assets/library/characters/pair-model216-human.glb",
       "modelSha256": "2e26318e1da20e67dbd58c02151687c8f5e7d986fabf91ad4a40412502d09541",
-      "sourceTexture": "wt_interface/item/character/mvp_blue_man.dtx",
-      "sourceSha256": "7e916ec24fe17dae9a28f95f3ca5a936862ecd184217208140b1c0faaad88575"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model218": {
-      "asset": "res://assets/full_ui/textures/c447dfe0e339136a96bfdaf5.png",
+      "asset": "res://assets/full_ui/textures/7243b016096d5ce0f761382f.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/mvp_blue_woman.dtx",
+      "sourceSha256": "9169fcc2e517134aea1ad840ed4de59d24f3f3fc27a5175fe820f6ac0bfbbbf7",
       "model": "res://assets/library/characters/pair-model218-human.glb",
       "modelSha256": "2162fe66595c6ae776a670e448d0708d3348e66d6996b9c646810ec54903f7c4",
-      "sourceTexture": "wt_interface/item/character/mvp_blue_woman.dtx",
-      "sourceSha256": "ef55cfb8011657b44ec131f6b733af99106f5a6e32263134ec772c3588fc2a5c"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model220": {
-      "asset": "res://assets/full_ui/textures/77c5cdd4d38d9b7b5e4a448b.png",
+      "asset": "res://assets/full_ui/textures/60e30c8aeb0c1f3b69b0dc50.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard_desert.dtx",
+      "sourceSha256": "2ae67af67309dbf429c553fcbbbb8d48605aad1b5ffb8e259c7f058ba402a5f9",
       "model": "res://assets/library/characters/pair-model220-human.glb",
       "modelSha256": "24f1695ec1dc11fc25f7a9dda160ee40ca1c12874d482e8fc815094f34dcef94",
-      "sourceTexture": "wt_interface/item/character/reinhard_desert.dtx",
-      "sourceSha256": "9eff6105152a8f76e8f4efb4c3e325c1f040d43490b546ac91c8dba75c780199"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model222": {
-      "asset": "res://assets/full_ui/textures/145c9b8772097c130e23adeb.png",
+      "asset": "res://assets/full_ui/textures/c8e4bf163105c0896b3cb0ec.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien_desert.dtx",
+      "sourceSha256": "03f928137fe1ef0eb3c2a6540997a9c02a456f68a5344cba42e6628630a6cd3f",
       "model": "res://assets/library/characters/pair-model222-human.glb",
       "modelSha256": "0daba658f5725c31bd61fcee322181c516702b8697d2e81ec47b25df580edcce",
-      "sourceTexture": "wt_interface/item/character/marien_desert.dtx",
-      "sourceSha256": "e1451a62e60351d7a646a344d4781a24c2855740f3095aabc714b69396901d70"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model224": {
-      "asset": "res://assets/full_ui/textures/843d490487fe81dfde34cc82.png",
+      "asset": "res://assets/full_ui/textures/3977697735bffcb63be73b8f.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/moshin_desert.dtx",
+      "sourceSha256": "3deac1adf2b71e857b1a313c450d60638a58e19fbb5e5ccc4dbbf39a84106a5e",
       "model": "res://assets/library/characters/pair-model224-human.glb",
       "modelSha256": "dc4b8d8c25743fa27b7e810d2402303ad3e3fa06f4fca780b1f78e164d818aec",
-      "sourceTexture": "wt_interface/item/character/moshin_desert.dtx",
-      "sourceSha256": "29a60f4bb1a05000a7ec7c8f1c6c9e981d5ddf1a2cc2ed374884808c0c7e8605"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model226": {
-      "asset": "res://assets/full_ui/textures/3ec31c226e902de3019a6b85.png",
+      "asset": "res://assets/full_ui/textures/06650f485fd6aab67a5b2a13.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/linmeiling_desert.dtx",
+      "sourceSha256": "c9928ebcf595caae2c915af4b0d275119a8a7b1a7452054797c3c67fddecb515",
       "model": "res://assets/library/characters/pair-model226-human.glb",
       "modelSha256": "8774c66baed3c47a2481b5e30f37845170991772a1527162806c53833b538987",
-      "sourceTexture": "wt_interface/item/character/linmeiling_desert.dtx",
-      "sourceSha256": "09e990facd8ca1e617fd0d9cb24a196b75f3e339426d61ea5d1baeb7f2ae8692"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model228": {
-      "asset": "res://assets/full_ui/textures/7dda1ed3b656e21af2f1a963.png",
+      "asset": "res://assets/full_ui/textures/cf5ae8cae70c68d2318320c2.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard_halloween.dtx",
+      "sourceSha256": "a39175807b6148c9a83d189517344e0f87aa062a953695c650195dad826e95f5",
       "model": "res://assets/library/characters/pair-model228-human.glb",
       "modelSha256": "32b5d92bab26ab17907944c13227f0eed1e1eaf5fd2259a37474a1bf1cfaa037",
-      "sourceTexture": "wt_interface/item/character/reinhard_halloween.dtx",
-      "sourceSha256": "92a0e58e3da11a5715057582a4d36b95f063c1ce550240b0033bcc1f88ae6671"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model230": {
-      "asset": "res://assets/full_ui/textures/2451a2ca5e9891e8b31c7140.png",
+      "asset": "res://assets/full_ui/textures/4e47f5375d258d6292b53bdd.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien_halloween.dtx",
+      "sourceSha256": "ec09cf6b87e10bb7546c4508d02f5ac8a53fe74502ec9d5c2fa1b1a708ccac13",
       "model": "res://assets/library/characters/pair-model230-human.glb",
       "modelSha256": "a7cfc84eb8f52f2a8e8cda77513099ddcd5032bd9e4dd57cf27e71ef7284064a",
-      "sourceTexture": "wt_interface/item/character/marien_halloween.dtx",
-      "sourceSha256": "c61ddf891fadf1579e583af77c38e3b8d46b5f1d4ffdf72533a28b935a6df4c6"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model232": {
-      "asset": "res://assets/full_ui/textures/0ce85f6e1ad991d264688356.png",
+      "asset": "res://assets/full_ui/textures/af7f5cb0fa3e4028f18518b2.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/moshin_halloween.dtx",
+      "sourceSha256": "877a0e4bf4c43c4151ce740ef39b15271f2d2f15f2137e3aeb58c94c82870ed1",
       "model": "res://assets/library/characters/pair-model232-human.glb",
       "modelSha256": "c6bf02046a6103656c2733842d82189c2483d9fe7ca89034c3be837799d13ef8",
-      "sourceTexture": "wt_interface/item/character/moshin_halloween.dtx",
-      "sourceSha256": "36cd8c8238f55d830bf5f46b7e15acc5e5b5e335534124093baa8de023ebe6a4"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model234": {
-      "asset": "res://assets/full_ui/textures/c51515ad672f661cfff4204d.png",
+      "asset": "res://assets/full_ui/textures/225628a7b70257390f91c14c.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/linmeiling_halloween.dtx",
+      "sourceSha256": "8b36c8aa997dbf9a16f4264e774d597e27c504f54152ad5ee7b0eadf0c9a706d",
       "model": "res://assets/library/characters/pair-model234-human.glb",
       "modelSha256": "d18186c4e10c90c951e8c5a04ca0d2fb3616a1a2d53fe8b72aed606a4624104d",
-      "sourceTexture": "wt_interface/item/character/linmeiling_halloween.dtx",
-      "sourceSha256": "2c8a671f429f851e5f6274db0556a4f29f2c1b5a85b33837bb76773b27191445"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model236": {
-      "asset": "res://assets/full_ui/textures/41917028a5251df484d4fdd2.png",
+      "asset": "res://assets/full_ui/textures/139188fe724d644826fdb848.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/reinhard_thanksgiving.dtx",
+      "sourceSha256": "d1f4630aff634f78a5d7d212c9430edcf424c8495309e9002ad836de300a5ed8",
       "model": "res://assets/library/characters/pair-model236-human.glb",
       "modelSha256": "c1497ec26efa420c8c4e7d03afabdb15ec140f91348c1379c80b9336bdbff3a8",
-      "sourceTexture": "wt_interface/item/character/reinhard_thanksgiving.dtx",
-      "sourceSha256": "93d30424f83fa7506c72febf1ce3b5ed5f5437bd2ad35b8e746f26fb1b4e3829"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model238": {
-      "asset": "res://assets/full_ui/textures/9124c95e7e55c853173a132b.png",
+      "asset": "res://assets/full_ui/textures/e58cad2c33c1f3fd0073899b.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/marien_thanksgiving.dtx",
+      "sourceSha256": "0ac5747abde7d570977dfea1a79184351f9a9147025d8f9865d1ee4845c5c4f4",
       "model": "res://assets/library/characters/pair-model238-human.glb",
       "modelSha256": "6f2ed405de3fecc6dfb3cdf4d19b3bdaae2005978016117693f82b4bd3d3c298",
-      "sourceTexture": "wt_interface/item/character/marien_thanksgiving.dtx",
-      "sourceSha256": "16fb55ee001d801b1aa70d06fa2766e76b455d0fcb5a2e9ebcd69c09b2191df6"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model240": {
-      "asset": "res://assets/full_ui/textures/99baee527bc835882559243a.png",
+      "asset": "res://assets/full_ui/textures/455eb0d57fbddb9b7b00de73.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/moshin_thanksgiving.dtx",
+      "sourceSha256": "e245d012683b9de14aee59b5f328a7b4e9d789b0f283e1f80b3e1cd8bcbddcb2",
       "model": "res://assets/library/characters/pair-model240-human.glb",
       "modelSha256": "95850f3094bf1b77d20e1221e4f7ae09e2c706e79b0f2258089dd00c3da6bdf6",
-      "sourceTexture": "wt_interface/item/character/moshin_thanksgiving.dtx",
-      "sourceSha256": "6a3e959f679d6266fd9c039708fc3accea7f90486577c4dd5bcee5f75e1b68ad"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model242": {
-      "asset": "res://assets/full_ui/textures/49de3f106cb5962a6e877840.png",
+      "asset": "res://assets/full_ui/textures/1f75200788073f149ffa6fcf.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/linmeiling_thanksgiving.dtx",
+      "sourceSha256": "81b6c85834b6f626ebe7e68cea7d0e1b1273a73e376c16d7b28214075b491e53",
       "model": "res://assets/library/characters/pair-model242-human.glb",
       "modelSha256": "037fc32fb5887eb33b6d3d422102e7573c8b8a4fab6391acf2f723f39c7b459c",
-      "sourceTexture": "wt_interface/item/character/linmeiling_thanksgiving.dtx",
-      "sourceSha256": "8a91d7efe1c0b296923218e5d370dca466098742b114bc25b78ba0449521ee0a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model244": {
-      "asset": "res://assets/full_ui/textures/b4e0acc41b596fceecbfd13e.png",
+      "asset": "res://assets/full_ui/textures/0dacca2ca472859c2f84d1c1.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/geremi_worldwar.dtx",
+      "sourceSha256": "e9cb37233980d86bdfa18c9d57018658813ff11a68e41e0a130376e8904692fa",
       "model": "res://assets/library/characters/pair-model244-human.glb",
       "modelSha256": "e3362b7413f77f02aa0a0cc7d6a09afc2672d907e2fee2311e3abf2179d938d9",
-      "sourceTexture": "wt_interface/item/character/geremi_worldwar.dtx",
-      "sourceSha256": "13feeffdf3bf0f9be4246ca253144501f577644cd5f0747284214b1d4fd41a44"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model246": {
-      "asset": "res://assets/full_ui/textures/0433bbe505c1a2d992295ad5.png",
+      "asset": "res://assets/full_ui/textures/f8b650e1a00e1633e56106fb.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/ivanov_worldwar.dtx",
+      "sourceSha256": "af21ae0be7df4e34395633ec96be76488f002a2aa2ef93e64e45275e398c5baf",
       "model": "res://assets/library/characters/pair-model246-human.glb",
       "modelSha256": "634bea4c7ceb0893dc88048d9116869d5e104a10c77ef84d00f92cf378f692a9",
-      "sourceTexture": "wt_interface/item/character/ivanov_worldwar.dtx",
-      "sourceSha256": "aa33c3a8a81654b834c70c74597501064de354c9be40e8815b4d7ba9b8702856"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model248": {
-      "asset": "res://assets/full_ui/textures/08bbbf48f98871e66d672e1a.png",
+      "asset": "res://assets/full_ui/textures/3e35b6a76f5c3971edf03e94.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/yigit_worldwar.dtx",
+      "sourceSha256": "518e3703071e6bd69ebd09f1da84d496e77076ff3971b3f3af9b43ce180984e6",
       "model": "res://assets/library/characters/pair-model248-human.glb",
       "modelSha256": "0765531566c596bf006c1af730a703522a7e048a3e9401b4ca11eb1d01c2d0b2",
-      "sourceTexture": "wt_interface/item/character/yigit_worldwar.dtx",
-      "sourceSha256": "bd80b47d380d5772cd22ce04d02ccb4f9e98170345bb5416af25381da9fb4993"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model250": {
-      "asset": "res://assets/full_ui/textures/dc50f49fcf4d4c698169301a.png",
+      "asset": "res://assets/full_ui/textures/e10e3ed08b5133cf8bf15423.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/tomita_worldwar.dtx",
+      "sourceSha256": "2e53161c049d5a6112789a3d2f391aa6d5f57a8191d5c03cb452a271162cb346",
       "model": "res://assets/library/characters/pair-model250-human.glb",
       "modelSha256": "be3e0f15833b4c8b6fce770d2e25cb430c17288ee50e98e76708c2a894979381",
-      "sourceTexture": "wt_interface/item/character/tomita_worldwar.dtx",
-      "sourceSha256": "609c1a797fc334100b6933cc570352c1a290e7b5427a18c04aaaac8310cedbd2"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model252": {
-      "asset": "res://assets/full_ui/textures/5c11807092d7530f1de3ebf6.png",
+      "asset": "res://assets/full_ui/textures/b48b494d3b309646287e6474.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/christopher_christmas.dtx",
+      "sourceSha256": "ef48294fd71fc59a252f691fb1d99978ec27221fb40dd8b09ad182cbde095c7b",
       "model": "res://assets/library/characters/pair-model252-human.glb",
       "modelSha256": "a4217e6567212f5eb7e636dbb1e9ff6bb1c5071b33770e0e6159ee7336c4a4e4",
-      "sourceTexture": "wt_interface/item/character/christopher_christmas.dtx",
-      "sourceSha256": "3494d2746ef49eafe6d2d71ec3b0c9470a3da6f68dc94b109390e63ab2942d94"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model254": {
-      "asset": "res://assets/full_ui/textures/20447d2c89a177a851a5a723.png",
+      "asset": "res://assets/full_ui/textures/c250c6bf93786ff88d5537b5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela_christmas.dtx",
+      "sourceSha256": "664aae0a1578c9eaafa0503e4732a98b676ffd57c40ca2519cd30e8d2d110482",
       "model": "res://assets/library/characters/pair-model254-human.glb",
       "modelSha256": "1a6f1ffbb6ead1339bfcf22dc0bad37812b3f58c4842bd649652c0097d585965",
-      "sourceTexture": "wt_interface/item/character/angela_christmas.dtx",
-      "sourceSha256": "8ee1610d7b86126153be39c62a0545a619e1dcb10a717110d7493936364a5bdb"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model31": {
-      "asset": "res://assets/full_ui/textures/6a934a9dc8c389631a5e840d.png",
+      "asset": "res://assets/full_ui/textures/caf20304397f9b7d329c144f.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/pedro_christmas.dtx",
+      "sourceSha256": "96772b4105c24dc6271741e172725123355fb9e1ffa85615f4f250594c897666",
       "model": "res://assets/library/characters/pair-model31-human.glb",
       "modelSha256": "b8ebbde1fa33f038bab1b19f7617c865f0f45bb16308972e675cf1fb6cf899ed",
-      "sourceTexture": "wt_interface/item/character/pedro_christmas.dtx",
-      "sourceSha256": "ef99c961377b863a5041cd75713d6fd5dc42a1f13b137f8de3cae384e420205a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model442": {
       "asset": "res://assets/ui/character_portraits/pair-model442.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model442-human.glb",
-      "modelSha256": "3ce78de4354b8ffee23e5178658901d74b394ec4b2df671ab8cb44242b11b4ba"
+      "modelSha256": "3ce78de4354b8ffee23e5178658901d74b394ec4b2df671ab8cb44242b11b4ba",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model444": {
       "asset": "res://assets/ui/character_portraits/pair-model444.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model444-human.glb",
-      "modelSha256": "ea362f4c4f31cbabec1085b9ee19c44bb48b73453f173d8c76da45dfab32cd7f"
+      "modelSha256": "ea362f4c4f31cbabec1085b9ee19c44bb48b73453f173d8c76da45dfab32cd7f",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model446": {
       "asset": "res://assets/full_ui/textures/72fb9ce221d8ab5e37cf0ecd.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/hanna_n.dtx",
+      "sourceSha256": "6498240a5d9df3e0039687c373997a3e04d65f7e1530b1ad2a88620ea19fffbf",
       "model": "res://assets/library/characters/pair-model446-human.glb",
       "modelSha256": "0c9f0d69e21a0b59d65385e934939aa82838d5b0087290d410620bfe0d670a5c",
-      "sourceTexture": "wt_interface/item/character/hanna_n.dtx",
-      "sourceSha256": "6498240a5d9df3e0039687c373997a3e04d65f7e1530b1ad2a88620ea19fffbf"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model448": {
       "asset": "res://assets/full_ui/textures/0622b393f2010f505b03846b.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/eliana_n.dtx",
+      "sourceSha256": "bb098741d2c0f312988ae7be6c6798f93b67eb651d690bc0f9d7c0fcf571d954",
       "model": "res://assets/library/characters/pair-model448-human.glb",
       "modelSha256": "485557ec5a9bdce40bd9eb2a45930b11431ad4f559e8f93ed0ef3f1abac585d4",
-      "sourceTexture": "wt_interface/item/character/eliana_n.dtx",
-      "sourceSha256": "bb098741d2c0f312988ae7be6c6798f93b67eb651d690bc0f9d7c0fcf571d954"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model458": {
       "asset": "res://assets/full_ui/textures/e53b3a378d9b6bd19c843ad1.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/hanna_xmas_n.dtx",
+      "sourceSha256": "048cee6b577a0e09ee9a629c7033d4169d06a1e0960a94003736d639a50c60be",
       "model": "res://assets/library/characters/pair-model458-human.glb",
       "modelSha256": "277b2978153a26c6c37f6bca3fc8b3c7386ba171bbeee4ac7c4d797098cb74ce",
-      "sourceTexture": "wt_interface/item/character/hanna_xmas_n.dtx",
-      "sourceSha256": "048cee6b577a0e09ee9a629c7033d4169d06a1e0960a94003736d639a50c60be"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model460": {
       "asset": "res://assets/full_ui/textures/c5e3fcc28533ec8fba443c9e.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/eliana_xmas_n.dtx",
+      "sourceSha256": "5f08b6fb6baee67504efb0b868b3dcc7970a0e0665ea170d782fe12106eefdf5",
       "model": "res://assets/library/characters/pair-model460-human.glb",
       "modelSha256": "66bdbafaef25a4ff8a1084c716c4dc5ef4e7417ee37ea4316e953e3ffa77373b",
-      "sourceTexture": "wt_interface/item/character/eliana_xmas_n.dtx",
-      "sourceSha256": "5f08b6fb6baee67504efb0b868b3dcc7970a0e0665ea170d782fe12106eefdf5"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model478": {
       "asset": "res://assets/full_ui/textures/2c1d4f7e60fedc8fadc4f5f8.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_tetra_n.dtx",
+      "sourceSha256": "23896d39de4041f2c390b3f3bdbab02cb2fb5b7641fe6ef86a0e53c2137af776",
       "model": "res://assets/library/characters/pair-model478-human.glb",
       "modelSha256": "f7103719032121a8520ee52662260ba330780d75a2a8aae04f9627c16f9163f1",
-      "sourceTexture": "wt_interface/item/character/3party_tetra_n.dtx",
-      "sourceSha256": "23896d39de4041f2c390b3f3bdbab02cb2fb5b7641fe6ef86a0e53c2137af776"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model480": {
       "asset": "res://assets/full_ui/textures/fbef5946fb8f2caedbd0f170.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_caracin_n.dtx",
+      "sourceSha256": "df7091f726cf52a320066487c976d745c5073d04a9003f4bbd8cf83849a321a0",
       "model": "res://assets/library/characters/pair-model480-human.glb",
       "modelSha256": "55cc4c21c0ea16dd28abfc26820bcdb79c32cb6019a64a3e7cc2c99f0e5169e8",
-      "sourceTexture": "wt_interface/item/character/3party_caracin_n.dtx",
-      "sourceSha256": "df7091f726cf52a320066487c976d745c5073d04a9003f4bbd8cf83849a321a0"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model482": {
       "asset": "res://assets/full_ui/textures/b468ddecf6ecb944107e891c.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
+      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d",
       "model": "res://assets/library/characters/pair-model482-human.glb",
       "modelSha256": "ab42518c0361fa11e101cbbe3f18e47bb4566407da2f4bc0cf52e38436104f2b",
-      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
-      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model484": {
       "asset": "res://assets/full_ui/textures/ad5e747accfcdf31d92939be.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
+      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e",
       "model": "res://assets/library/characters/pair-model484-human.glb",
       "modelSha256": "211f3844c0776ae2e00292a69835f26a659c5d6bbc16ea508915959a73e232c5",
-      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
-      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model494": {
-      "asset": "res://assets/full_ui/textures/7e355a73bf6139d10bbe74a4.png",
+      "asset": "res://assets/full_ui/textures/77ac0cd06d636a663e7f2e4e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/riccardo_christmas.dtx",
+      "sourceSha256": "3e2d5d89ee26efd8a58b49c0463a6082fa518339156ea31c48c0fb36201edadb",
       "model": "res://assets/library/characters/pair-model494-human.glb",
       "modelSha256": "d809947b5fd034293716a8045f1adb1762b37c85e55fe2a64e2d4ae24108a7b7",
-      "sourceTexture": "wt_interface/item/character/riccardo_christmas.dtx",
-      "sourceSha256": "83636411cc8bbc5e60975206de22e095c88e268cfd2aae1abaa2a17c9b9e7984"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model495": {
-      "asset": "res://assets/full_ui/textures/85da895535b0bd278fadf03b.png",
+      "asset": "res://assets/full_ui/textures/3a61d39c3e30b0f399f04420.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/matt_christmas.dtx",
+      "sourceSha256": "fb164269436895a02acc3379befb235f7b840d0a29660031c90db9f3b46f0a92",
       "model": "res://assets/library/characters/pair-model495-human.glb",
       "modelSha256": "9061499eef94ca7b700fe51423df07d58cd3ad300a2c7332ce2cd8cd649f0b35",
-      "sourceTexture": "wt_interface/item/character/matt_christmas.dtx",
-      "sourceSha256": "ece87da8a18a399d98d0449225227b483a2e021af443f3c9b2608e11a3ce1b2d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model496": {
-      "asset": "res://assets/full_ui/textures/20447d2c89a177a851a5a723.png",
+      "asset": "res://assets/full_ui/textures/c250c6bf93786ff88d5537b5.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/angela_christmas.dtx",
+      "sourceSha256": "664aae0a1578c9eaafa0503e4732a98b676ffd57c40ca2519cd30e8d2d110482",
       "model": "res://assets/library/characters/pair-model496-human.glb",
       "modelSha256": "1a6f1ffbb6ead1339bfcf22dc0bad37812b3f58c4842bd649652c0097d585965",
-      "sourceTexture": "wt_interface/item/character/angela_christmas.dtx",
-      "sourceSha256": "8ee1610d7b86126153be39c62a0545a619e1dcb10a717110d7493936364a5bdb"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model497": {
-      "asset": "res://assets/full_ui/textures/07484a3df32ac9f2cf37f6d5.png",
+      "asset": "res://assets/full_ui/textures/0a3242fcf6b29dc03a99031e.png",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/large/kate_christmas.dtx",
+      "sourceSha256": "ded6d39f503403042bd54afa215bc367817081b854d92e3904ad02d0b395b523",
       "model": "res://assets/library/characters/pair-model497-human.glb",
       "modelSha256": "c9f6df23a8e2895849d1e60a6fe6b35ac76fa0e25ce189e4acf99fe833a6adf2",
-      "sourceTexture": "wt_interface/item/character/kate_christmas.dtx",
-      "sourceSha256": "b5ffe811324cfede73e34121f12aee3d37ebdaaca8ff8317b41b3b5f26546648"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model544": {
       "asset": "res://assets/full_ui/textures/45f4e25ca69cfb14ed5f561a.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/ezel_n.dtx",
+      "sourceSha256": "dae47f554f0da56e6594285dea90d29e7dfe833097d078f48c8061a3e1cd0c06",
       "model": "res://assets/library/characters/pair-model544-human.glb",
       "modelSha256": "34280363666695529f3e2fdf4c1c985106ab39fe2eefec523c81cfd85c367c13",
-      "sourceTexture": "wt_interface/item/character/ezel_n.dtx",
-      "sourceSha256": "dae47f554f0da56e6594285dea90d29e7dfe833097d078f48c8061a3e1cd0c06"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model546": {
       "asset": "res://assets/full_ui/textures/6b60231a23392a4d660f09eb.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/azap_n.dtx",
+      "sourceSha256": "ebae98c3d5918498ba6ed761bc1018157233f8dbae3c3f78a6226341a31bbce6",
       "model": "res://assets/library/characters/pair-model546-human.glb",
       "modelSha256": "9f9c7064cd6c5d25abfa1f298b7013c35cacfa19f22738fda7afa6ba32319f73",
-      "sourceTexture": "wt_interface/item/character/azap_n.dtx",
-      "sourceSha256": "ebae98c3d5918498ba6ed761bc1018157233f8dbae3c3f78a6226341a31bbce6"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model556": {
       "asset": "res://assets/full_ui/textures/3119842c42f9773d3d504df9.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/muhammadramadan_n.dtx",
+      "sourceSha256": "e6593ac18f7bdebd55839743885e10cd15ffab940285535534a77311a6dbfc93",
       "model": "res://assets/library/characters/pair-model556-human.glb",
       "modelSha256": "7539623c9b56121081c765b2326a63b6cad66dbfccabb14cba264b2aeb6b6f4a",
-      "sourceTexture": "wt_interface/item/character/muhammadramadan_n.dtx",
-      "sourceSha256": "e6593ac18f7bdebd55839743885e10cd15ffab940285535534a77311a6dbfc93"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model558": {
       "asset": "res://assets/ui/character_portraits/pair-model558.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model558-human.glb",
-      "modelSha256": "8ebdabe16d322e16736372cc4831ed78a57fc52deda54afe24e8575b2414aa34"
+      "modelSha256": "8ebdabe16d322e16736372cc4831ed78a57fc52deda54afe24e8575b2414aa34",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model580": {
       "asset": "res://assets/full_ui/textures/5ac6072886c77ec94de9d47d.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/steven_gerrard_n.dtx",
+      "sourceSha256": "979c2b7ac31997e2e75445d849dd8c64d237965ff330a5ef5143f5e4fbfea3e3",
       "model": "res://assets/library/characters/pair-model580-human.glb",
       "modelSha256": "a414edfe36f7ce47c87928f8e2daebf226734eef461070c0453bc3cb3d5a57e8",
-      "sourceTexture": "wt_interface/item/character/steven_gerrard_n.dtx",
-      "sourceSha256": "979c2b7ac31997e2e75445d849dd8c64d237965ff330a5ef5143f5e4fbfea3e3"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model582": {
       "asset": "res://assets/full_ui/textures/17a842b6ee430b525c1efe1c.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
+      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f",
       "model": "res://assets/library/characters/pair-model582-human.glb",
       "modelSha256": "0072729abece626a7c62b177e3ba121d9ece9994b101a403e2bf5202e5724fb6",
-      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
-      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model584": {
       "asset": "res://assets/full_ui/textures/fb079ccf7622967f7f3ea491.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/steven_gerrard_camo_n.dtx",
+      "sourceSha256": "d595cae32aeabc6bff37e361a1f30aaa34c0a1ca237c8994735d2b27659aeff6",
       "model": "res://assets/library/characters/pair-model584-human.glb",
       "modelSha256": "d4153f21f51113a115fc0300748af408e35d691dd096423ac278cc4e891d51bf",
-      "sourceTexture": "wt_interface/item/character/steven_gerrard_camo_n.dtx",
-      "sourceSha256": "d595cae32aeabc6bff37e361a1f30aaa34c0a1ca237c8994735d2b27659aeff6"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model586": {
       "asset": "res://assets/full_ui/textures/17a842b6ee430b525c1efe1c.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
+      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f",
       "model": "res://assets/library/characters/pair-model586-human.glb",
       "modelSha256": "34b1ed7b8c37eaf551a4ade0e6860fcac9a6797ccb7c55bf6fff9e365ae20209",
-      "sourceTexture": "wt_interface/item/character/selma_n.dtx",
-      "sourceSha256": "a0b30d720353d6deab00b31cc380b14efbbe7ea0443a61562cdd6f578e42d09f"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model592": {
       "asset": "res://assets/full_ui/textures/acabb63019fd9fa6a17ed91f.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/ezel_villain_n.dtx",
+      "sourceSha256": "dce09940f744f14c605ffda1364142431f8fd98ffd5a21e776b48dc471c7861a",
       "model": "res://assets/library/characters/pair-model592-human.glb",
       "modelSha256": "d74b43c60a42dc74166a1b3e81f93e7c242edb779403799e005f7323853cea12",
-      "sourceTexture": "wt_interface/item/character/ezel_villain_n.dtx",
-      "sourceSha256": "dce09940f744f14c605ffda1364142431f8fd98ffd5a21e776b48dc471c7861a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model594": {
       "asset": "res://assets/full_ui/textures/a16cf2f16605e440d88c14e3.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/azap_villain_n.dtx",
+      "sourceSha256": "5f90baec1ba3eb609c4dd36f74cd04d6c90b7f64e4a271024f361b994ae0417d",
       "model": "res://assets/library/characters/pair-model594-human.glb",
       "modelSha256": "f839fd3ec991befbe1655a7a3d275c4ccf815383185238ffbbdf6d23e9f63bdc",
-      "sourceTexture": "wt_interface/item/character/azap_villain_n.dtx",
-      "sourceSha256": "5f90baec1ba3eb609c4dd36f74cd04d6c90b7f64e4a271024f361b994ae0417d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model596": {
       "asset": "res://assets/ui/character_portraits/pair-model596.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model596-human.glb",
-      "modelSha256": "e5c3e0426a7eb8bb0685cc314aea9b472e654ec657f6ac7da4acddac24e253f4"
+      "modelSha256": "e5c3e0426a7eb8bb0685cc314aea9b472e654ec657f6ac7da4acddac24e253f4",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "blue",
+      "originalArt": false
     },
     "pair-model598": {
       "asset": "res://assets/ui/character_portraits/pair-model598.png",
-      "kind": "rendered_model_preview",
+      "kind": "rendered_character_card",
       "model": "res://assets/library/characters/pair-model598-human.glb",
-      "modelSha256": "da2d6a89edc2f0454947ba90e846a5be784e56471ab1c80cfce5e7e89a4b06f7"
+      "modelSha256": "da2d6a89edc2f0454947ba90e846a5be784e56471ab1c80cfce5e7e89a4b06f7",
+      "region": [
+        0,
+        0,
+        420,
+        150
+      ],
+      "team": "red",
+      "originalArt": false
     },
     "pair-model616": {
       "asset": "res://assets/full_ui/textures/30a245fec9b8cea262cfdd46.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/tetra_camo_n.dtx",
+      "sourceSha256": "b5497f9dc784abe7ba8d40dcc8de38bb730d9186927420fc5a0e527c5247cd3a",
       "model": "res://assets/library/characters/pair-model616-human.glb",
       "modelSha256": "bf47b08d300714111f7ce501958b9b8414facec19f1ef1d952039226747572a3",
-      "sourceTexture": "wt_interface/item/character/tetra_camo_n.dtx",
-      "sourceSha256": "b5497f9dc784abe7ba8d40dcc8de38bb730d9186927420fc5a0e527c5247cd3a"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model618": {
       "asset": "res://assets/full_ui/textures/a1f240e486bce2ee6b0e34d1.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/caracin_camo_n.dtx",
+      "sourceSha256": "09330baaca66e6d1ae885c0301e8bc57306a4c34f794edd567c84f27311b8c29",
       "model": "res://assets/library/characters/pair-model618-human.glb",
       "modelSha256": "2baf805c17ae49d941bd0a014dd6900811af0fd8f4c79b958fdbedcfab18507d",
-      "sourceTexture": "wt_interface/item/character/caracin_camo_n.dtx",
-      "sourceSha256": "09330baaca66e6d1ae885c0301e8bc57306a4c34f794edd567c84f27311b8c29"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model620": {
       "asset": "res://assets/full_ui/textures/2cdffb7f96fdcc6e8c743b72.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/ezel_villain2_n.dtx",
+      "sourceSha256": "2780c4d760c1d5c2db429e6988783db331fa40d2bdc37418c208ed52cd5b0233",
       "model": "res://assets/library/characters/pair-model620-human.glb",
       "modelSha256": "7404caa9cf3d91defa3a8ae47b7a8b7aadf7e06598c6246016024410f4de7e44",
-      "sourceTexture": "wt_interface/item/character/ezel_villain2_n.dtx",
-      "sourceSha256": "2780c4d760c1d5c2db429e6988783db331fa40d2bdc37418c208ed52cd5b0233"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model622": {
       "asset": "res://assets/full_ui/textures/83907efd98eea0e02c36cf48.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/azap_villain2_n.dtx",
+      "sourceSha256": "91014d237ced28007759f0ba8ebe407013648d6b7067be756e215e1a80dacab6",
       "model": "res://assets/library/characters/pair-model622-human.glb",
       "modelSha256": "d7dc3817e04f4bfc62546099d759866f0023c7d847c75b80012f67fe2c1b7b61",
-      "sourceTexture": "wt_interface/item/character/azap_villain2_n.dtx",
-      "sourceSha256": "91014d237ced28007759f0ba8ebe407013648d6b7067be756e215e1a80dacab6"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model624": {
       "asset": "res://assets/full_ui/textures/b468ddecf6ecb944107e891c.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
+      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d",
       "model": "res://assets/library/characters/pair-model624-human.glb",
       "modelSha256": "a6bb584eff2e6442ab58bc6750f2bbe3c4f08505d7b21569765a68d98ea7ccc5",
-      "sourceTexture": "wt_interface/item/character/3party_ruslan_n.dtx",
-      "sourceSha256": "1d3f615b6a18f67a7d207d8cbfa945516528cab4d76cd047ab0c01a84803c05d"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     },
     "pair-model626": {
       "asset": "res://assets/full_ui/textures/ad5e747accfcdf31d92939be.png",
+      "region": [
+        0,
+        0,
+        210,
+        75
+      ],
       "kind": "source_icon",
+      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
+      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e",
       "model": "res://assets/library/characters/pair-model626-human.glb",
       "modelSha256": "20f67d76c2317cc9fff964057a98ce6df892739dda2c717905564dbbde6bb29e",
-      "sourceTexture": "wt_interface/item/character/3party_kyle_n.dtx",
-      "sourceSha256": "77c1f1bbc53916d634ae0ae3725502b4b4046dbb1d8c17b6a7962642e61c856e"
+      "identityBasis": "Exact normalized source model/name or explicit same-character variant alias; large and normal atlas duplicates ranked, not rejected."
     }
   },
-  "note": "Exact normalized model/name matches use original 2D icons; remaining previews are rendered from the actual imported human model. No inferred rarity, ownership or stats."
+  "note": "Original source cards where exact identities resolve. Remaining cards are real model renders over team-colour backgrounds, never another character."
 }

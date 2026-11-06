@@ -289,8 +289,10 @@ func apply_tattoos():
 		var name = str(mesh.name).to_lower()
 		if not name.begins_with("tattoo"): continue
 		var role = "body" if "body" in name else ("left" if name.ends_with("_l") else "right")
+		preload("res://scripts/tattoo_uv.gd").apply(mesh,game.book.tattoo_uv_transpose(role,game.book.selected_tattoos.get(role,"")))
 		if not game.book.selected_tattoos.has(role) or not game.book.tattoo_matches_role(role, game.book.selected_tattoos[role]): mesh.hide();continue
 		var material = StandardMaterial3D.new();material.albedo_texture = load(game.book.selected_tattoos[role]);material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA;material.cull_mode = BaseMaterial3D.CULL_DISABLED;material.roughness = 0.7
+		material.render_priority=game.book.tattoo_render_priority(game.book.selected_tattoos[role])
 		mesh.material_override = material;mesh.show()
 	game.health=mini(game.health,game.max_health())
 	if is_instance_valid(roar_effect): roar_effect.bind_tattoos()
@@ -342,7 +344,7 @@ func switch_form(force=false):
 	if viewmodel:
 		viewmodel.visible = not is_wolf
 	choose_animation_player()
-	action_time = 0.3
+	action_time = 0.3/maxf(1,1+float(game.gear_stats().get("transformPercent",0))/100.0)
 	game.announce("Kurt formu" if is_wolf else "İnsan formu")
 	game.update_hud()
 

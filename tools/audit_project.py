@@ -15,6 +15,7 @@ TEXT={'.gd','.tscn','.tres','.godot','.json'}
 # Exact negative fixtures and write-only reports in excluded QA scripts.
 # Keep them in the evidence instead of reporting them as missing game assets.
 TEST_REFERENCES={
+    ('godot/tests/presentation_018.gd','res://../docs/presentation-018-validation.json'):'test_report_output',
     ('godot/tests/combat_continuation.gd','res://missing-character.glb'):'negative_model_fixture',
     ('godot/tests/pc_reference_expansion.gd','res://not-a-reward.png'):'negative_reward_fixture',
     ('godot/tests/persistence.gd','res://__missing_unbound_tattoo__.png'):'negative_tattoo_fixture',

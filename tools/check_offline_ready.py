@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -105,9 +105,19 @@ def check(root=ROOT):
     for item in powers.get('items',[]):
         if not (root/'godot'/item.get('icon','__missing_icon__').removeprefix('res://')).is_file():blockers.append('Power item icon missing: '+str(item.get('id')))
         if item.get('trail'):verify_asset(item['trail'],'source claw trail '+item['id'])
-    for filename,minimum in [('shop-controls-017-validation.json',61),('clientfx-gameplay-017-validation.json',817),('mobile-016-validation.json',31),('mobile-015-validation.json',388),('bot-traversal-validation-015.json',100)]:
+    for filename,minimum in [('presentation-018-validation.json',297),('shop-controls-017-validation.json',61),('clientfx-gameplay-017-validation.json',817),('mobile-016-validation.json',31),('mobile-015-validation.json',0),('bot-traversal-validation-015.json',100)]:
         path=root/'docs'/filename
         proof=json.loads(path.read_text()) if path.is_file() else {}
+        if filename=='mobile-015-validation.json':
+            # Localized families remove redundant placeholder triplets. Require
+            # 46 fixed checks plus every actual family/variant row.
+            groups={}
+            tattoos=json.loads((root/'godot/assets/library/visuals.json').read_bytes())['tattoos']
+            visible=[row for row in tattoos if row.get('canonicalId',row['id'])==row['id']]
+            for tattoo in visible:
+                roles=groups.setdefault(tattoo['setKey'],{});roles[tattoo['role']]=roles.get(tattoo['role'],0)+1
+            rows=sum(max(roles.values()) for roles in groups.values());minimum=46+rows
+            if proof.get('tattooItemsChecked')!=len(tattoos) or proof.get('tattooRowsChecked')!=rows or proof.get('visibleTattooItemsChecked')!=len(visible):blockers.append('Tattoo grid verification does not cover every item and family row')
         if proof.get('passed') is not True or proof.get('checks',0)<minimum:blockers.append('Incomplete update verification: '+filename)
         if filename.startswith('bot-traversal') and proof.get('traversalsSha256')!=hashlib.sha256((root/'godot/assets/maps/traversals.json').read_bytes()).hexdigest():blockers.append('Traversal physics evidence differs from packaged routes')
     admission=json.loads((root/'docs/character-admission-015.json').read_text())
@@ -169,6 +179,33 @@ def check(root=ROOT):
             start=offer['sourceOffset']
             if struct.unpack_from('<I',shop_source,start+4)[0]!=item['sourceId'] or struct.unpack_from('<i',shop_source,start+shop['currencyOffsets'][offer['currency']]+offer['sourceOptionIndex']*4)[0]!=offer['price']:
                 blockers.append('Shop price differs from literal original table: '+item['id'])
+    sets=json.loads((root/'godot/assets/items/sets.json').read_bytes())
+    raw_sets=gzip.decompress((root/'docs/pc_sources_018/setitemdata.dat.gz').read_bytes())
+    if len(sets['items'])!=206 or sets['sourceSha256']!=hashlib.sha256(raw_sets).hexdigest():blockers.append('Source set catalogue provenance mismatch')
+    for package in sets['items']:
+        start=package['sourceOffset'];source_id=struct.unpack_from('<I',raw_sets,start)[0]
+        members=[struct.unpack_from('<II',raw_sets,start+4+i*8) for i in range(17)]
+        members=[pair for pair in members if pair[0]]
+        if source_id!=package['sourceId'] or members!=[(r['sourceItemId'],r['sourceTerm']) for r in package['members']]:blockers.append('Incomplete or changed package members: '+package['id'])
+        for offer in package['offers']:
+            pos=offer['sourceOffset']
+            if struct.unpack_from('<I',shop_source,pos+4)[0]!=source_id or struct.unpack_from('<i',shop_source,pos+shop['currencyOffsets'][offer['currency']]+offer['sourceOptionIndex']*4)[0]!=offer['price']:blockers.append('Source package price mismatch: '+package['id'])
+    portraits=json.loads((root/'godot/assets/ui/character-portraits.json').read_bytes())['portraits']
+    texture_catalog=json.loads((root/'godot/assets/ui/catalog.json').read_bytes())['textures']
+    for ident,portrait in portraits.items():
+        if portrait['kind']=='source_icon':
+            original=texture_catalog.get(portrait['sourceTexture'],{})
+            if original.get('asset')!=portrait['asset'] or original.get('sourceSha256')!=portrait['sourceSha256']:blockers.append('Character card source mismatch: '+ident)
+    menu=json.loads((root/'docs/menu-animation-source-018.json').read_bytes())
+    if hashlib.sha256((root/'godot/assets/presentation/menu-clips.json').read_bytes()).hexdigest()!=menu['assetSha256']:blockers.append('Menu animation extraction differs from verified source')
+    performance=gzip.decompress((root/'docs/pc_sources_018/character&tattoo.dat.gz').read_bytes())
+    stat_proof=json.loads(gzip.decompress((root/'docs/item-stat-fields-018.json.gz').read_bytes()))
+    if hashlib.sha256(performance).hexdigest()!=stat_proof['sourcePerformanceSha256']:blockers.append('Item performance source provenance changed')
+    presentation=json.loads((root/'godot/assets/presentation/catalog.json').read_bytes())
+    for ident,forms in presentation['characterStats'].items():
+        for form,stats in forms.items():
+            for pos in stats['sourceOffsets']:
+                if struct.unpack_from('<H',performance,pos)[0]!=shop['items'][ident]['sourceId'] or performance[pos+16]!=100 or performance[pos+4]!=(0 if form=='human' else 1) or list(performance[pos+9:pos+16])!=stats['values'] or performance[pos+5]!=stats['gpPercent'] or performance[pos+7]!=stats['goldPercent']:blockers.append('Character stat source mismatch: '+ident+'/'+form)
     return {'offlineBuildReady':not blockers, 'runtimeCodeSha256':fingerprint, 'blockers':blockers,
             'scope':'Local bot matches, imported collection and PC-source UI; real servers excluded.',
             'fullOriginalGamePort':False, 'physicalAndroidDeviceTested':False}

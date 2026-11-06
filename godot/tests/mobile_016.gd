@@ -81,7 +81,7 @@ func run():
  game.book.set_tattoo("body","");game.menu_open=false
  game.show_library("Karakterler");await frames();var ui=game.library_panel
  ensure(ui.preview_view.transparent_bg,"Preview has no separate black rectangle")
- ensure(ui.preview_container.size.y/ui.canvas.scale.y>=590,"Character uses full height of left inventory column")
+ ensure(ui.preview_container.size.y>=590 and ui.preview_view.size.y>=int(ui.preview_container.size.y*ui.canvas.scale.y*ui.content.scale.y)-1,"Character uses full height of left inventory column")
  ensure(ui.detail_helper.details.find_children("*","ProgressBar",true,false).is_empty(),"Added stats panel removed")
  ui.navigate("Dövmeler");await frames()
  ensure(ui.detail_helper.details.get_children().filter(func(c):return c is BaseButton and c.position.x<350 and c.position.y>=180).is_empty(),"No redundant tattoo equipment shelf in the left preview column")

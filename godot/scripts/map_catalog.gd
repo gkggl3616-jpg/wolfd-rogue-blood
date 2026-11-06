@@ -17,7 +17,9 @@ func _init(source = {}):
 	if not valid:
 		data = {"maps": [], "modes": []}
 
+	var names=JSON.parse_string(FileAccess.get_file_as_string("res://assets/presentation/catalog.json")).get("modes",{})
 	for mode in data.modes:
+		mode["displayName"]=names.get(str(int(mode.id)),{}).get("name","Oyun Modu")
 		mode.id = int(mode.id)
 		mode.mapNumbers = mode.mapNumbers.map( func(number): return int(number))
 	for entry in data.maps:
@@ -104,3 +106,5 @@ func unavailable_reason(mode_id, map_number):
 func random_ready_map(mode_id):
 	var available = maps_for_mode(mode_id, true)
 	return available.pick_random() if not available.is_empty() else {}
+
+func mode_name(mode_id):return mode_record(mode_id).get("displayName","Oyun Modu")

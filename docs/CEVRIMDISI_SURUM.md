@@ -1,47 +1,40 @@
-# 0.17.0 çevrimdışı Android sürümü
+# 0.18.0 çevrimdışı Android sürümü
 
-[**Tek APK indir — WolfRogueBlood-0.17.0-offline.apk**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.17.0-offline/WolfRogueBlood-0.17.0-offline.apk)
+[**Tek APK indir — WolfRogueBlood-0.18.0-offline.apk**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.18.0-offline/WolfRogueBlood-0.18.0-offline.apk)
 
-**1.562.434.631 bayt (1,56 GB)**. Android 7.0 / API 24 ve üzeri; ARM64, ARMv7, x86_64. Kimlik `com.wolfrogue.blood.offline`, sürüm kodu 17. Önceki çevrimdışı sürümlerle aynı sertifikayı kullanır; uygulama verisini silmeden üzerine güncellenebilir.
+**1,563,594,677 bayt (1.56 GB)**. Android 7.0 / API 24 ve üzeri; ARM64, ARMv7, x86_64. Kimlik `com.wolfrogue.blood.offline`, sürüm kodu 18. Önceki çevrimdışı APK ile aynı imza; uygulama verisini silmeden üzerine güncellenebilir.
 
-SHA-256: `dd1d782d0a0a4857a0357c82e730644d051a56749bd5d90bdd03a6393b651439`.
+SHA-256: `df28331df26f7788e1e14faeb0e7466f06cbf64afee61badba572c25c8e75497`.
 
-[APK denetimi](android-offline-build.json): **54.306 ZIP girdisi. 32 katalog. 23.416 çözümlenen kaynak**, CRC, v2/v3 imza ve 16 KiB ZIP hizalaması. ARM64/x86_64 ELF hizalaması 16 KiB, ARMv7 4 KiB. **İzin listesi boş**, INTERNET izni yok. Fiziksel cihaz/emülatör testi yapılmadı.
+[APK denetimi](android-offline-build.json): **54,317 ZIP girdisi, 35 katalog, 23,396 çözümlenen kaynak**, CRC, v2/v3 imza ve 16 KiB ZIP hizalaması. ARM64/x86_64 ELF hizalaması 16 KiB, ARMv7 4 KiB. İzin listesi boş; INTERNET izni yok. Fiziksel Android cihazı/emülatörü üzerinde test yapılmadı.
 
 ## Bu sürüm
 
-- Varsayılan dört yön düğmesi; takılı kurt yeteneğine bağlı görselli koşu düğmesi ve çift ileri basma.
-- Kullanıcının istediği sınırsız Nakit ve KP (∞); Altın/GP sınırlı kalır.
-- Mağaza/gerçek sahiplik ayrımı, sınırlı başlangıç eşyaları, 1.414 eşya için özgün fiyat sütunuyla eşleşme ve hediye onayıyla satın alma. Fiyatı doğrulanmayanlar ücretsiz sayılmaz.
-- Boyun kemiğiyle yana dönen kükreme ve elde hareketten geride kalan alt efekt konumları düzeltildi.
+- Güvenli alana ve gerçek telefon pikseline uyan üst menü; ayrı ve özgün sıradaki ALTIN/KP/NAKİT/JT sütunu; 44 piksel düğmeler ve Diğer menüsü. Klan Zinciri/Wolf Pass kaldırıldı.
+- 182 insanda özgün silahsız menü duruşu. 164 özgün karakter kartı; kalan 18 kart karakterin kendi modelinden üretildi.
+- OG'nin ayrı sol kol, sırt, sağ kol resimleri aynı sırada. İkinci sarı OG satırını oluşturan eski kimlikler tek görsel kartta birleştirildi; sahiplikleri korunur.
+- 819 kaynak dövmenin yerelleştirilmiş adı (816 ayrı kart), 161 karakterin kaynak istatistikleri, doğrulanmış dövme dönüşüm hızı.
+- 34 haritanın tamamında özgün seçim resmi. 67 kaynak modun Türkçe görünen adı; özgün sağ oda ayarlarında mod/harita/puan/süre/kapasite, kapasiteye uyan bot sayısı ve kaynak davet penceresi.
+- 206 eksiksiz kaynak setin özgün sayısal fiyatla satışı ve atomik hediye teslimi. 86 önceki fiyatı belirsiz eşyaya set üzerinden erişim.
+- Kullanıcının tercihiyle sınırsız Nakit ve KP (∞); Altın/GP sınırlı. Başlangıç envanteri sınırlı, satın alınan eşyalar hediye kutusunda kabul edilir.
 
-[Değişiklikler, kaynak kanıtları ve gerçek fotoğraflar](PC_REFERANS_017.md).
+[Kaynaklar, video analizi, değişiklikler ve gerçek fotoğraflar](PC_REFERANS_018.md).
 
-- 182 kullanılabilir insan/kurt çifti: 134 yeni çift, gerçek kırmızı/mavi takım modelleri ve ayrı kaydedilen takım seçimleri.
-- 34 kaynak harita: önceki 19 + 15 ek harita; doğru takım doğma grupları, radarlar ve seçim görselleri.
-- 819 dövme, sol kol–sırt–sağ kol set düzeni; eşya kimliğine bağlı doğrulanmış güçler. 11 kaynak pençenin ayrı oranları ve gerçek el kemiği/doku izleri.
-- Kaynak adındaki kalite etiketleriyle filtre ve kart renkleri; parmakla envanter kaydırma; ateşi tutarken nişanı sürükleme; telefon güvenli alanı ve tam model kadrajı.
-- Büyük, saydam karakter/kurt önizlemesi; kaynak kırmızı/mavi takım simgeleri. Ek STATS kutusu ve dövme rafı kaldırıldı.
-- Takla mesafesi en fazla 3 metre; kükremede renkli dövme korunur. 52 karakterin kaynak kükreme efekt bağları eklendi.
-- Kendi takımı ve rakipler için ayrı 0–4 bot seçimi; dost ateşi engeli, iki takım skoru ve dost botlu maçta yeniden doğuş.
-- 628 ClientFX grubu, dört native el efekti tanımı, 95 kaynak efekt modeli ve animasyon karelerinden gerçek tetikler.
-- 791 karakter/ses eşleştirmesi (134 ortak WAV); gerçek güçlü yer pençesi, dönüşüm ve maç duyuruları.
-- Beş kaynak Ölüm Oyunu varyantı: 40–160 puan, 10–40 dakika, biçim kısıtları ve skora göre sonuç.
-- Botlar uygun dar geçişte çömelir, fiziksel olarak doğrulanan 78 kısa geçişi kullanır.
+## Korunan oyun kapsamı
 
-Eski otomatik tam envanter, varsayılan eşyalara ve hediye defterinde onaylanmış alımlara geçirilir. Önceki bakiye ve kabul edilmiş hediyeler korunur. Kaynak resmi, sahiplik veya güç kimliği yerine kullanılmaz.
+34 kaynak haritada yerel bot maçları; beş kaynak Ölüm Oyunu varyantı, yerel Kurt Avı/Kurt Savaşı/öğretici; 903 kullanılabilir silah; 182 insan/kurt çifti; ayrı takım seçimleri; beş ekipman seti ve iki ana silah yuvası. Yuvarlak görselli eylem/yön düğmeleri, ateş sırasında nişan sürükleme, takılı yetenekle kurt koşusu ve çift ileri basma korunur. Dost/rakip için ayrı 0–4 bot seçimi, sonlu mühimmat/şarjör, sabit zorluk hasarı ve takım doğma alanları vardır.
 
-## Kullanım ve doğrulama
+0.17 kaynak efekt/ses bağları, en fazla 3 metre takla, kükremede renkli dövme, fiziksel geçiş kabulü, görev/hediye/kutu/rütbe ilerlemesi korunur. Önceden kabul edilen hediyeler ve ilerleme silinmez. Gerçek sunucu ve çevrimiçi hesap sahipliği kapsam dışıdır.
 
-**Oda oluştur → Çevrimdışı · Botlu Eğitim → harita seç → Başlat.** Ayrıca eğitim arenası, yerel Kurt Avı ve öğretici bulunur. İki ana silah, beş ekipman seti, 903 kullanılabilir silah, hediye kabulü, yerel görev/kutu/GP/rütbe akışları korunur. Gerçek sunucu veya çevrimiçi hesap sahipliği taklit edilmez.
+## Doğrulama ve sınırlar
 
-[23 regresyon aşaması](mobile-validation.json), 40 Python testi, [620 harita/iki takım/maç kontrolü](offline-match-validation.json), [62 bot kontrolü](bot-validation.json), [191 ekipman/hediye kontrolü](round-equipment-gift-validation.json), [yeni dokunma/kayıt kontrolleri](mobile-015-validation.json) geçti. 118 güncel arayüz/oyun ekranı ve 268 yeni model resmi dosya özetleriyle bağlıdır. Bunlar Godot 4.7.2 çalışma istasyonu kontrolleridir.
+[24 regresyon aşaması](mobile-validation.json), 40 Python testi, [297 yeni arayüz/kayıt/OG/duruş kontrolü](presentation-018-validation.json), [620 harita/iki takım/maç kontrolü](offline-match-validation.json) geçti. 132 güncel arayüz/oyun ekranı ve önceki 268 kaynak model kabul resmi dosya özetleriyle bağlıdır. Bunlar Godot 4.7.2 çalışma istasyonu kontrolleridir.
 
-**Tam PC eşitliği değildir.** Mağazada 512 kimlikte fiyat doğrulanamadı. Kaynak süre/paket/kampanya alanlarının hepsi çözülmedi; alışveriş açıkça bir adet kalıcı yerel kullanım verir. Bütün dövme/pençe değiştiricileri tamamlanmadı. #72 Ruins, #37 Bridge ve #106 UnderWorld'de bütün takım alanları arası bot rotaları bağlı değildir. Botlar erişilebilir yüzeylerde devriye gezer. Özgün etkileşimli dünya parçaları, diğer maç modları, bazı özel ses/efekt koşulları ve bazı eşya değiştiricileri bekliyor. Efekt kataloğunda 158 eksik/desteklenmeyen düğüm raporlanır; bütün PC efektleri tamamlandı denmez. OG/09 dövmesi ve varsayılan pençe izi doğrulanabilir kaynakta bulunamadı. Önceki alınamayan kaynak sesler/122 ek model ve erişilemeyen YouTube videoları 0.15 kaydında korunur; yeni üç TikTok görüntüsü ve kükreme kaynakları bu kez incelenebildi. [Güncel kapsam](PC_REFERANS_017.md). Hatasızlık veya fiziksel telefon uyumluluğu garanti edilmiş sayılmaz.
+**Tam PC eşitliği değildir.** 426 eşyanın kaynak satış fiyatı sıfır/kaydı eksiktir; tahmini fiyat eklenmedi. Satın alma her bileşenden bir kalıcı yerel kopyadır; kaynak süre/kampanya ve tüm paket adetleri uygulanmış değildir. Kaynak zırh puanlarının gösterilmesi, bütün bölgesel zırh/donma etkilerinin çalıştığı anlamına gelmez. Diğer maç modları, etkileşimli dünya parçaları ve bazı özel efekt/ses koşulları eksiktir. #72 Ruins, #37 Bridge, #106 UnderWorld haritalarında bütün takım alanları arasında bot rotası yoktur; botlar erişilebilir yüzeyde devriye gezer. Efekt kataloğunun 158 eksik/desteklenmeyen düğüm kaydı korunur. Hatasızlık veya fiziksel telefon uyumluluğu garanti edilmiş sayılmaz.
 
 ## Yeniden üretim
 
-Godot **4.7.2**, aynı sürüm Android export şablonu, SDK/JDK ve özel imza dosyaları gerekir. Anahtar/parola depoya eklenmez.
+Godot **4.7.2**, Android export şablonu, SDK/JDK ve özel imza gerekir. Anahtar/parola depoda değildir.
 
 ```sh
 python tools/configure_mobile_imports.py
@@ -51,7 +44,7 @@ DISPLAY=:0 python tools/capture_mobile.py --godot /path/to/godot
 python tools/check_offline_ready.py --report docs/offline-readiness.json
 python tools/build_offline_android.py --godot /path/to/godot --sdk /path/to/sdk \
   --keystore /private/offline.keystore --password-file /private/password \
-  --temp /large/temporary/volume --output /output/WolfRogueBlood-0.17.0-offline.apk
+  --temp /large/temporary/volume --output /output/WolfRogueBlood-0.18.0-offline.apk
 ```
 
-Mevcut harita yürüyüş ağları ve fiziksel kabulden geçmiş atlayışlar depoya dahildir. Ağı yeniden üretmek, `traversals.json` kaynak özetlerini ve fiziksel atlayış kabulünü de yeniden gerektirir. Tam-PC-teslim denetimi değiştirilmedi; çevrimdışı denetim onun yerine geçmez.
+Tam-PC-teslim denetimi çevrimdışı denetim yerine kullanılmaz.
