@@ -1,5 +1,6 @@
 extends Node2D
 const Art=preload("res://ui/source_theme.gd")
+const VideoLayout=preload("res://scripts/video_layout.gd")
 
 # A touch belongs to exactly one target until release. Visual targets deliberately
 # do not use TouchScreenButton's independent global input handling.
@@ -59,14 +60,11 @@ func resize():
 	last_size = get_viewport_rect().size
 	ui_scale = minf(last_size.y / 720.0, last_size.x / 1024.0)
 	stick_radius = 64.0 * ui_scale
-	center = last_size * Vector2(0.20, 0.76)
-	var locations = [Vector2(0.68,0.77), Vector2(0.79,0.62), Vector2(0.85,0.71), Vector2(0.75,0.86), Vector2(0.72,0.64), Vector2(0.61,0.62), Vector2(0.83,0.88)]
-	for i in range(7):
-		buttons[i].position = last_size * locations[i]
+	center = last_size * VideoLayout.MOVE
+	for button in buttons:
+		if VideoLayout.TOUCH.has(button.action):button.position=last_size*VideoLayout.TOUCH[button.action]
 	for i in range(4):
-		buttons[i+7].position = center + [Vector2(0,-70), Vector2(0,70), Vector2(-70,0), Vector2(70,0)][i] * ui_scale
-	buttons[12].position=last_size*Vector2(0.89,0.55)
-	buttons[11].position = last_size * Vector2(0.65, 0.91)
+		buttons[i+7].position=center+[Vector2(0,-70),Vector2(0,70),Vector2(-70,0),Vector2(70,0)][i]*ui_scale
 	for button in buttons:
 		var custom=preload("res://scripts/control_layout.gd");var factor=custom.scale_for(game.book.control_layout,button.action)
 		button.scale=Vector2.ONE*ui_scale*factor;button.position=custom.center(game.book.control_layout,button.action,button.position,last_size,38*ui_scale*factor)

@@ -57,7 +57,10 @@ var source_hud: Control
 var game_audio
 var clientfx
 var destruction=preload("res://scripts/destruction.gd").new()
-var match_sp=1000
+var economy=preload("res://scripts/match_economy.gd").new()
+var match_sp=0
+var match_slots={}
+var spectator
 var match_rules=preload("res://scripts/source_match_rules.gd").new()
 var announced_last_minute=false
 var first_kill_announced=false
@@ -154,6 +157,7 @@ func _ready():
 		if model:player.apply_mutation(model,book.wolf_mutation)
 	enemies = Node3D.new()
 	add_child(enemies)
+	spectator=Node3D.new();spectator.set_script(preload("res://scripts/spectator.gd"));spectator.game=self;add_child(spectator)
 	transient_effects = Node3D.new()
 	add_child(transient_effects)
 	build_ui()
@@ -271,6 +275,7 @@ func center_overlay(dimensions):
 	overlay.offset_bottom = dimensions.y / 2.0
 
 func clear_overlay():
+	if destruction.enabled:destruction.cancel_operation()
 	if is_instance_valid(player) and is_instance_valid(player.roar_effect): player.roar_effect.stop()
 	clear_pc_panel()
 	if is_instance_valid(library_panel): library_panel.get_parent().remove_child(library_panel);library_panel.queue_free();library_panel = null
@@ -330,13 +335,21 @@ func weapon_capacity():
 	return int(player.weapon_info.get("shotsPerClip", 30))
 
 func equip_slot(slot):
-	var item=book.weapon(book.slots.get(slot,""))
+	var item=book.weapon(equipped_slots().get(slot,""))
 	if item.is_empty() or not equip_library_weapon(item):return false
 	current_loadout_slot=slot;return true
 
 func cycle_primary():
-	if current_loadout_slot=="primary" and book.slots.get("secondary_primary","")!="":return equip_slot("secondary_primary")
+	if current_loadout_slot=="primary" and equipped_slots().get("secondary_primary","")!="":return equip_slot("secondary_primary")
 	return equip_slot("primary")
+
+func equipped_slots():return match_slots if running and round_selection_enabled and not match_slots.is_empty() else book.slots
+func reset_round_equipment():
+	if not round_selection_enabled:return
+	match_slots=book.starter_slots.duplicate();equip_slot("primary")
+	if player.mutation_id!="normal":
+		var model=player.prepare_mutation("normal")
+		if model:player.apply_mutation(model,"normal")
 
 func play_source_effect(entry, where):
 	var sprite = AnimatedSprite3D.new(); var frames = SpriteFrames.new();frames.set_animation_loop("default", false);frames.set_animation_speed("default", float(entry.fps))
@@ -363,6 +376,7 @@ func explode(where, amount, kind):
 		if get_world_3d().direct_space_state.intersect_ray(query).is_empty(): enemy.damage(int(amount * (1 - distance / 6)))
 
 func show_home():
+	spectator.stop()
 	destruction.enabled=false
 	running=false;close_round_selection()
 	open_interface("lobby")
@@ -454,6 +468,7 @@ func start_map_preview():
 	weapon_ammo.clear()
 	reloading = 0
 	exploring = true
+	destruction.enabled=false;spectator.stop()
 	preview_name = map_catalog.map_record(map_picker.get_selected_id()).displayName
 	running = true
 	resume()
@@ -505,8 +520,9 @@ func start_round(with_selection=false):
 		return false
 	if preload("res://scripts/source_match_rules.gd").supports(local_room.get("mode",0)) and not map_catalog.belongs_to_mode(int(local_room.mode),int(local_room.get("map",0))):
 		announce("Harita bu özgün moda bağlı değil.");return false
-	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=1000;announced_last_minute=false;first_kill_announced=false
-	close_round_selection();round_selection_enabled=with_selection
+	spectator.stop()
+	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=economy.begin();announced_last_minute=false;first_kill_announced=false
+	close_round_selection();round_selection_enabled=with_selection;match_slots.clear()
 	var team_character=book.character_for_team(local_room.get("team","blue"))
 	if not team_character.is_empty() and team_character.id!=character_info.id:
 		var models=player.prepare_character(team_character)
@@ -580,13 +596,15 @@ func start_round(with_selection=false):
 	player.position = preview_spawn
 	player.velocity = Vector3.ZERO
 	player.reset_combat()
-	var mutation_model=player.prepare_mutation(book.wolf_mutation)
-	if mutation_model:player.apply_mutation(mutation_model,book.wolf_mutation)
+	var initial_mutation="normal" if with_selection else book.wolf_mutation
+	var mutation_model=player.prepare_mutation(initial_mutation)
+	if mutation_model:player.apply_mutation(mutation_model,initial_mutation)
 	booster_remaining=0;booster_tuning={};healing_uses.clear()
 	player.yaw = spawn_yaw
 	player.rotation = Vector3(0, spawn_yaw, 0)
 	running = true
 	resume()
+	reset_round_equipment()
 	if hunt.active and player.is_wolf!=(hunt.player_form=="wolf"):player.switch_form(true)
 	if tutorial.active:
 		if player.is_wolf:player.switch_form(true)
@@ -607,19 +625,25 @@ func start_round(with_selection=false):
 	if destruction.enabled and is_instance_valid(active_map):
 		for site in destruction.sites:
 			var marker=Label3D.new();marker.text=site.name;marker.position=destruction.site_position(site)+Vector3.UP*2;marker.billboard=BaseMaterial3D.BILLBOARD_ENABLED;marker.font_size=80;marker.modulate=Color("e5b65c");active_map.add_child(marker)
-	game_audio.match_sound("round_start")
+	if destruction.enabled:destruction.prepare()
+	else:game_audio.match_sound("round_start")
 	if with_selection and not tutorial.active:open_round_selection()
 	announce((("%d Tur · %d:%02d" % [match_rules.goal,match_rules.seconds/60,match_rules.seconds%60]) if match_rules.round_based else ("%d Puan · %d dakika" % [match_rules.goal,match_rules.seconds/60])) if match_rules.enabled else ("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye"))
 	update_hud()
 	return true
 
 func restart_destruction_turn():
+	spectator.stop()
+	reset_round_equipment()
 	for bot in enemies.get_children():bot.collision_layer=0;bot.queue_free()
+	var record=map_catalog.offline_record(offline_map_number)
+	var anchors=team_start_points(record,local_room.get("team","blue"))
+	if not anchors.is_empty():
+		var anchor=anchors[0];preview_spawn=Vector3(anchor.position[0],anchor.position[1],anchor.position[2]);player.yaw=float(anchor.yaw);player.rotation.y=player.yaw
 	player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();reloading=0;time_left=match_rules.seconds
 	for team in ["red","blue"]:
 		for i in range(bot_limit(team)):spawn_enemy("human","",team)
 	if round_selection_enabled:open_round_selection()
-	game_audio.match_sound("round_start")
 
 func is_local_mode(value):return value in [0,LocalHunt.MODE,LocalTutorial.MODE,WOLF_BATTLE] or preload("res://scripts/source_match_rules.gd").supports(value)
 func announce_kill_sound(team,headshot):
@@ -648,19 +672,22 @@ func finish_round_selection():
 	close_round_selection()
 	if transform_after and running and not player.is_wolf:player.switch_form(true)
 func loadout_sp_cost(index):
-	if index<0 or index>=book.loadouts.size():return 1000000
-	if index==0:return 0
-	return 100*book.loadouts[index].values().filter(func(id):return id!="" and not book.default_owned.has(id)).size()
+	return economy.loadout_cost(book,index)
+
+func award_sp(event,label=""):
+	match_sp=economy.award(match_sp,event,label)
+	update_hud()
 
 func choose_round_loadout(index):
 	if not selection_active or selection_panel.kind!="human":return false
 	var cost=loadout_sp_cost(index)
 	if cost>match_sp:announce("Yetersiz SP · Standart ekipman ücretsizdir");return false
 	if not book.select_loadout(index):announce("Ekipman seçimi kaydedilemedi.");return false
+	match_slots=(book.starter_slots if index==0 else book.loadouts[index]).duplicate()
 	match_sp-=cost;equip_slot("primary");close_round_selection();return true
 func choose_round_mutation(id):
 	if not selection_active or selection_panel.kind!="wolf" or not mutations.TYPES.has(id):return false
-	var cost=0 if id=="normal" else 100
+	var cost=economy.mutation_cost(id)
 	if match_sp<cost:announce("Yetersiz SP");return false
 	var model=player.prepare_mutation(id)
 	if model==null:announce("Kurt modeli yüklenemedi.");return false
@@ -749,6 +776,7 @@ func _input(event):
 		if event.pressed and not menu_open:open_interface("scoreboard")
 		elif not event.pressed and is_instance_valid(pc_panel) and pc_panel.page=="scoreboard":resume()
 	if event is InputEventKey and event.pressed and not event.echo and not menu_open:
+		if spectator.active and event.physical_keycode in [KEY_LEFT,KEY_RIGHT]:spectator.cycle(-1 if event.physical_keycode==KEY_LEFT else 1)
 		var keys = {KEY_1: "primary", KEY_2: "pistol", KEY_4: "grenade", KEY_5: "knife"}
 		if event.physical_keycode==KEY_1:cycle_primary()
 		elif keys.has(event.physical_keycode):equip_slot(keys[event.physical_keycode])
@@ -816,7 +844,11 @@ func _process(delta):
 	crosshair.visible = running and not menu_open
 	if not running or menu_open:
 		return
-	if selection_active:return
+	if application_suspended:return
+	if selection_active:
+		if destruction.enabled:destruction.advance(delta)
+		return
+	economy.advance(delta)
 	booster_remaining=maxf(0,booster_remaining-delta)
 	if hunt.active and advance_hunt(delta):return
 	for entry in kill_feed:entry.remaining=maxf(0,entry.remaining-delta)
@@ -831,7 +863,7 @@ func _process(delta):
 			player.velocity = Vector3.ZERO
 		update_hud()
 		return
-	if offline_map_number != 0 and player.position.y < preview_spawn.y - 150:
+	if health>0 and offline_map_number != 0 and player.position.y < preview_spawn.y - 150:
 		player.position = preview_spawn;player.velocity = Vector3.ZERO;player.reset_locomotion()
 		take_damage(20)
 		announce("Güvenli noktaya dönüş · −20 can")
@@ -844,8 +876,10 @@ func _process(delta):
 	if respawn_remaining>0:
 		respawn_remaining=maxf(0,respawn_remaining-delta)
 		if respawn_remaining<=0:
+			reset_round_equipment()
 			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear()
 			announce("Takımına geri döndün")
+			if round_selection_enabled:open_round_selection()
 	time_left -= delta
 	if match_rules.enabled and time_left<=60 and not announced_last_minute:
 		announced_last_minute=true
@@ -926,6 +960,7 @@ func notify_bot_noise(point,radius):
 		if not enemy.is_queued_for_deletion():enemy.hear_noise(point,radius)
 
 func team_start_points(record,team):
+	if destruction.enabled:team=destruction.spawn_team(team)
 	var tag="Team1" if team=="red" else "Team0"
 	var points=record.get("startPoints",[]).filter(func(row):return row.get("team")==tag)
 	# Two source worlds label one side NoTeam. Keep that original tag and
@@ -1077,7 +1112,7 @@ func reload_weapon():
 
 func enemy_defeated(context={}):
 	if not is_combat_active():return
-	match_sp=mini(2000,match_sp+100)
+	match_sp=economy.elimination(match_sp,context.get("headshot",false))
 	kills += 1
 	announce_kill_sound(local_room.get("team","blue"),context.get("headshot",false))
 	kill_feed.push_front({"attacker":profile_name,"target":context.get("target","Bot"),"weapon":context.get("weapon","Pençe" if player.is_wolf else "Silah"),"headshot":context.get("headshot",false),"remaining":6.0,"weaponId":current_weapon_id if not player.is_wolf else "","attackerTeam":local_room.get("team","blue"),"targetTeam":"red" if local_room.get("team","blue")=="blue" else "blue"})
@@ -1104,17 +1139,19 @@ func take_damage(amount, source_position=null, attacker={}):
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		economy.death()
 		game_audio.voice(player,0)
 		deaths+=1
 		kill_feed.push_front({"attacker":attacker.get("name","Bot"),"target":profile_name,"headshot":false,"weaponId":"","weapon":attacker.get("weapon","Pençe"),"attackerTeam":"red" if local_room.get("team","blue")=="blue" else "blue","targetTeam":local_room.get("team","blue"),"remaining":6.0})
 		if kill_feed.size()>5:kill_feed.resize(5)
-		if destruction.enabled:destruction.actor_dead(local_room.get("team","blue"));announce("Tur sonunu bekliyorsun")
+		if destruction.enabled:destruction.actor_dead(local_room.get("team","blue"),player);spectator.begin();announce("Takımını izliyorsun")
 		elif hunt.active:finish_hunt_round(false)
 		elif (match_rules.enabled or int(local_room.get("allyBots",0))>0) and team_score("red" if local_room.get("team","blue")=="blue" else "blue")<target_score():
 			respawn_remaining=3.0;player.reset_combat();touch.reset();announce("Yeniden doğuş · 3 saniye")
 		else:end_round("Yenildin")
 
 func end_round(title):
+	spectator.stop()
 	if match_rules.enabled and match_rules.winner=="":match_rules.decide(team_score("red"),team_score("blue"))
 	if match_rules.enabled:game_audio.match_sound("round_draw" if match_rules.winner=="draw" else "round_"+match_rules.winner+"_win")
 	close_round_selection()
@@ -1206,6 +1243,7 @@ func power_bonus(slot,key,fallback):
 	var item=power_item(inbox.state.powerSlots.get(slot,""))
 	return item.get("mobileTuning",{}).get(key,fallback)
 func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else 100
+func max_extra_health():return economy.yp_capacity(character_info,player.mutation_id,gear_stats(),power_bonus("bag","extraYpPercent",0))
 func wolf_damage_multiplier():return float(booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
 func wolf_speed_multiplier():return (float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0)*(1.0+float(gear_stats().speedPercent)/100.0)
 func gear_stats():
@@ -1353,6 +1391,8 @@ func equip_item_from_ui(item,target_slot=""):
 	var prepared=player.prepare_library_weapon(item)
 	if prepared.is_empty():return false
 	if not book.equip(item.id,target_slot):prepared.model.free();return false
+	if running and round_selection_enabled:
+		prepared.model.free();announce("Set hazırlandı · Sonraki ekipman seçiminde kullanabilirsin");return true
 	activate_prepared_weapon(item,prepared)
 	current_loadout_slot=target_slot if target_slot!="" else book.slot_for(item.category)
 	return true

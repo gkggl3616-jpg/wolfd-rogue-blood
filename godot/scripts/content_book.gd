@@ -10,6 +10,7 @@ var stat_labels={}
 var models = {}
 var owned = {}
 var default_owned = {}
+var starter_slots = {}
 var inventory_revision = 3
 var slots = {}
 var loadouts = []
@@ -108,6 +109,7 @@ func _init(save_enabled = true, save_path = "user://collection.json", offline_mo
 		for entry in tattoos:
 			if entry.role==role:
 				owned[entry.id]=true;default_owned[entry.id]=true;break
+	starter_slots=defaults.duplicate()
 	if loadouts.is_empty(): loadouts.append(slots.duplicate())
 	while loadouts.size() < 5: loadouts.append(defaults.duplicate())
 	for preset in loadouts:

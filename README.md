@@ -4,6 +4,10 @@ Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.20.0 çe
 
 [Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
+[Kalıcı video yerleşim kuralı](docs/VIDEO_YERLESIM_KURALI.md)
+
+[Video devamı · 1. paket: SP/YP, roller, bomba ve izleme](docs/PC_REFERANS_021.md)
+
 [0.20 dövme resimleri, düzenlenebilir kontroller, YP/SP ve Yıkım turları](docs/PC_REFERANS_020.md)
 
 [0.19 kurt çizimi ve çift pençe](docs/PC_REFERANS_019.md)

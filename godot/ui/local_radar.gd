@@ -30,8 +30,16 @@ func _draw():
 	if image==null:return
 	draw_texture_rect(image,Rect2(Vector2.ZERO,size),false,Color(1,1,1,0.85))
 	draw_rect(Rect2(Vector2.ZERO,size),Color(0.65,0.69,0.68,0.8),false,1)
-	var point=projection(game.player.global_position).clamp(Vector2.ONE*4,size-Vector2.ONE*4)
+	var actor=game.spectator.target if game.spectator.active and game.actor_alive(game.spectator.target) else game.player
+	var point=projection(actor.global_position).clamp(Vector2.ONE*4,size-Vector2.ONE*4)
 	draw_arc(point,5,0,TAU,24,Color("e6c26b"),1.4,true)
-	var forward=Vector2(-sin(game.player.yaw),-cos(game.player.yaw))
+	var yaw=actor.rotation.y
+	var forward=Vector2(-sin(yaw),-cos(yaw))
 	var right=Vector2(-forward.y,forward.x)
 	draw_colored_polygon(PackedVector2Array([point+forward*7,point-forward*4+right*3.5,point-forward*4-right*3.5]),Color("eaf6f5"))
+	if game.destruction.enabled:
+		for site in game.destruction.sites:
+			var location=projection(game.destruction.site_position(site))
+			draw_circle(location,3,Color("e6c26b"))
+		if game.destruction.planted or game.destruction.dropped:
+			draw_arc(projection(game.destruction.bomb),6,0,TAU,16,Color("ff6d45"),2,true)

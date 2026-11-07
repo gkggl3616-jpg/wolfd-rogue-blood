@@ -46,7 +46,7 @@ func stop():
 func advance(delta):
 	if not player.game.menu_open: cooldown = maxf(0, cooldown - delta)
 	if not active: return
-	if not player.is_wolf or player.game.menu_open or not player.game.running: stop();return
+	if not player.is_wolf or not player.game.is_combat_active(): stop();return
 	player.advance_howl_health(minf(delta,maxf(0,duration-elapsed)));elapsed += delta
 	if elapsed >= duration:
 		player.restore_howl_health();stop();return

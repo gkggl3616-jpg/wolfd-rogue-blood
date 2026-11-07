@@ -15,7 +15,7 @@ func run():
  ui.navigate("Ayarlar");ui.settings_tab="Ses";ui.refresh();await capture("large-close-settings-020")
  ui.navigate("controls");await frames();var editor=ui.get_children().filter(func(node):return node.get_script()==preload("res://ui/control_editor.gd"))[0];editor.set_row("fire",Vector2(900,510),1.5);await capture("drag-resize-controls-020");editor.save()
  game.local_room={"mode":3000,"map":26,"team":"red","allyBots":0,"enemyBots":0,"roundGoal":3,"matchSeconds":105};game.start_round();await frames();await capture("destruction-bomb-controls-020")
- game.player.position=game.destruction.site_position(game.destruction.sites[0]);Input.action_press("interact");game.destruction.advance(3.1);Input.action_release("interact");await capture("destruction-bomb-planted-020")
+ game.destruction.advance(10);game.player.position=game.destruction.site_position(game.destruction.sites[0]);Input.action_press("interact");game.destruction.advance(5.1);Input.action_release("interact");await capture("destruction-bomb-planted-020")
  game.destruction.fuse=0.01;game.destruction.advance(0.02);await capture("destruction-round-score-020")
  game.destruction.advance(5);await capture("destruction-next-round-020")
  game.show_home();game.pc_panel.navigate("room_settings");await capture("destruction-room-round-options-020")

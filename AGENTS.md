@@ -10,3 +10,5 @@
 - Özel anahtarlar ve yetkilendirme bilgileri depoya veya araç çıktısına eklenmez.
 
 - Son PC referanslarının kaydı `docs/pc-reference-expansion.json` içindedir. Harita fotoğrafları gerçek PC tablosuna, rütbe ad/simgeleri kaynak class.txt dosyasına bağlıdır; yerel GP eşikleri özgün PC eşiği diye sunulmaz.
+
+- Kalıcı kullanıcı kuralı (2026-11-07): Dört referans videosunda bir öğe neredeyse arayüz, menü, can, YP, SP, süre, skor, radar, cephane, yetenek ve silah alanı aynı göreli konumda kalır. Yeni özellik veya güncelleme bu yerleşimi değiştiremez. Varsayılan geometri `godot/scripts/video_layout.gd` üzerinden gelir; yeni ekranlar önce kaynak kareyle karşılaştırılır. PC videosunda bulunmayan mobil tuşlar bilgi alanlarını ve merkezdeki karakteri kapatmadan kenarlara yerleştirilir; mobil uyarlama özgün PC tuş konumu diye sunulmaz. Kullanıcının açıkça yaptığı kontrol düzenlemesi ayrı tercihtir; yeni özellik eklerken varsayılan düzen keyfî değiştirilmez.

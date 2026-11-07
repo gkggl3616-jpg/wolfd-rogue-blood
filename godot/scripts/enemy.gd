@@ -9,6 +9,7 @@ var source_events
 var target_clock=0.0
 var kind="wolf"
 var display_name="Bot"
+var nameplate:Label3D
 var difficulty="normal"
 var profile={}
 var health=Rules.HEALTH
@@ -77,7 +78,7 @@ func _ready():
    if anim.has_animation(clip):anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
   play("idle");anim.advance(0)
  if kind=="human":prepare_weapon()
- var indicator=Label3D.new();indicator.text=("İNSAN" if kind=="human" else "KURT")+" · "+profile.name;indicator.position.y=2.25;indicator.font_size=26;indicator.modulate=Color("e2b2a7") if team=="red" else Color("92c9ed");indicator.billboard=BaseMaterial3D.BILLBOARD_ENABLED;add_child(indicator)
+ nameplate=Label3D.new();nameplate.text=display_name;nameplate.position.y=2.25;nameplate.font_size=18;nameplate.fixed_size=true;nameplate.modulate=Color("92c9ed");nameplate.billboard=BaseMaterial3D.BILLBOARD_ENABLED;nameplate.hide();add_child(nameplate)
  source_events=Node.new();source_events.set_script(preload("res://scripts/actor_source_events.gd"));source_events.actor=self;add_child(source_events)
  build_patrol()
  destination=patrol_points[0] if not patrol_points.is_empty() else global_position
@@ -97,6 +98,9 @@ func prepare_weapon():
  if weapon.get_parent()==null:weapon.position=Vector3(0.18,1.35,-0.4);add_child(weapon)
  fire_sound=AudioStreamPlayer3D.new();fire_sound.bus="WolfWeapons";fire_sound.max_distance=40;fire_sound.volume_db=-15;fire_sound.stream=load(weapon_data.fireSound);add_child(fire_sound)
  reload_sound=AudioStreamPlayer3D.new();reload_sound.bus="WolfWeapons";reload_sound.max_distance=20;reload_sound.volume_db=-18;reload_sound.stream=load(weapon_data.reloadSound);add_child(reload_sound)
+
+func _process(_delta):
+ if is_instance_valid(nameplate):nameplate.visible=game.running and not game.menu_open and not game.selection_active and health>0 and team==game.local_room.get("team","blue") and global_position.distance_to(game.player.global_position)>2
 
 func build_patrol():
  if game.navigation_graph==null or not game.offline_navigation_map.is_valid():return
@@ -242,7 +246,7 @@ func fire():
 
 func hit_opponent():
  if not game.hostile(opponent,team):return
- var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot"}
+ var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourcePosition":global_position}
  if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
  else:opponent.damage(Rules.DAMAGE,context)
 func melee_hit():
@@ -388,8 +392,9 @@ func damage(amount,context={}):
   game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
+ if game.spectator.active and game.spectator.target==self and is_instance_valid(game.source_hud):game.source_hud.feedback.show_damage(context.get("sourcePosition"))
  if health<=0:
-  if game.destruction.enabled:game.destruction.actor_dead(team)
+  if game.destruction.enabled:game.destruction.actor_dead(team,self)
   game.game_audio.voice(self,0)
   collision_layer=0;context=context.duplicate();context.target=display_name
   if context.get("actor","")=="bot":game.bot_defeated(self,context)

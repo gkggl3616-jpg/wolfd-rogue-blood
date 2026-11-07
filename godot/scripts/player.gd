@@ -315,13 +315,15 @@ func begin_roar():
 	reset_locomotion();pending_strong=false;current_clip="";play_clip("roar");anim.seek(0,true);action_time = seconds;return true
 
 func restore_howl_health():
-	extra_health=99;howl_fraction=0
+	extra_health=game.max_extra_health();howl_fraction=0;extra_decay=0
 func advance_howl_health(delta):
-	howl_fraction+=delta*99/maxf(0.1,roar_effect.duration)
-	var amount=int(howl_fraction);howl_fraction-=amount;extra_health=mini(99,extra_health+amount)
+	var capacity=game.max_extra_health()
+	howl_fraction+=delta*capacity/maxf(0.1,roar_effect.duration)
+	var amount=int(howl_fraction);howl_fraction-=amount;extra_health=mini(capacity,extra_health+amount)
 func decay_howl_health(delta):
 	if not game.is_combat_active() or not is_wolf or roar_effect.active:return
-	extra_decay+=delta/maxf(1,1+float(game.gear_stats().get("healthPercent",0))/100.0)
+	extra_health=mini(extra_health,game.max_extra_health())
+	extra_decay+=delta*game.economy.yp_decay()
 	if extra_decay>=1:extra_health=maxi(0,extra_health-int(extra_decay));extra_decay=fmod(extra_decay,1)
 
 func _exit_tree():
@@ -591,7 +593,7 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
-	extra_health=0;next_right_attack=false
+	extra_health=0;howl_fraction=0;extra_decay=0;next_right_attack=false
 	pending_strong=false
 	cancel_cloak();guard_remaining=0;mutation_energy=100
 	reset_locomotion();shot_cooldown=0;action_time=0;weapon_action_time=0;roll_cooldown=0;wall_hold_cooldown=0

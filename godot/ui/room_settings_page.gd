@@ -15,6 +15,7 @@ var maps
 var team
 var goal
 var clock
+var role_switch
 var draft={}
 func picker(name):
  var node=view.find_widget(name);node.disabled=false;node.fit_to_longest_item=false;node.clear();node.add_theme_font_size_override("font_size",10);return node
@@ -53,7 +54,9 @@ func build():
  goal=picker("MissionObjectComboBox");clock=picker("RoundTimeComboBox")
  goal.item_selected.connect(func(_i):draft.pointGoal=goal.get_selected_id();draft.roundGoal=goal.get_selected_id())
  clock.item_selected.connect(func(_i):draft.matchSeconds=clock.get_selected_id())
- for name in ["TeamChangeRoleOption","GamingEnter","Observe"]:
+ role_switch=view.find_widget("TeamChangeRoleOption");role_switch.disabled=false;role_switch.toggle_mode=true;role_switch.button_pressed=draft.get("swapRoles",true);role_switch.tooltip_text="Yıkım’da sekiz turdan sonra saldırı ve savunma değişir."
+ role_switch.toggled.connect(func(value):draft.swapRoles=value)
+ for name in ["GamingEnter","Observe"]:
   var button=view.find_widget(name);button.disabled=true;button.tooltip_text="Bu seçenek çevrimiçi oda hizmetinde kullanılır."
  for name in ["ClassLowerLimited","ClassLimited","WeaponOptionCombobox"]:
   var option=picker(name);option.add_item("Moda göre" if name=="WeaponOptionCombobox" else "Kapalı");option.disabled=true
@@ -79,6 +82,7 @@ func fill_variants():
  draft.mode=variant.get_selected_id();fill_rules()
 func fill_rules():
  maps.clear();var local=ui.game.is_local_mode(int(draft.mode))
+ role_switch.disabled=int(draft.mode) not in [3000,3001,3020,3021]
  if local and not Rules.supports(int(draft.mode)):maps.add_item("Eğitim Arenası",0)
  for row in (ui.game.map_catalog.offline_maps() if local and not Rules.supports(int(draft.mode)) else ui.game.map_catalog.maps_for_mode(int(draft.mode))):maps.add_item(row.displayName,int(row.number))
  for i in range(maps.item_count):
