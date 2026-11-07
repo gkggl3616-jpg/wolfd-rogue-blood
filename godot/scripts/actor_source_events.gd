@@ -68,7 +68,7 @@ func dispatch(key):
 		if name!="":system.play(name,actor)
 	elif operation=="fx" and tokens.size()>1:system.play(tokens[1],actor)
 	elif operation=="fire_key" and last_clip=="strong_attack" and actor==game.player and actor.pending_strong:
-		actor.pending_strong=false;game.wolf_melee_hit(roundi(float(game.mutations.profile(actor.mutation_id).damage)*1.4),2.8,"Güçlü pençe")
+		actor.pending_strong=false;game.wolf_melee_hit(roundi(float(game.mutations.profile(actor.mutation_id).damage)*1.4),2.8,"Güçlü pençe","strong")
 	elif operation=="fire_key" and actor==game.player:game.resolve_melee_event(last_clip)
 	elif operation=="wolfcrysnd":game.game_audio.voice(actor,2)
 	elif operation=="sound_key" and tokens.size()>2:game.game_audio.natural_sound(actor,int(tokens[1]),int(tokens[2]))

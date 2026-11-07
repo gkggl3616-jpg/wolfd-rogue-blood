@@ -17,7 +17,7 @@ func run():
  game.book.offline_edition=true;game.book.acquire_all();game.show_library("Karakterler");await capture("transparent-character-016")
  var ui=game.library_panel;ui.navigate("Dövmeler");await capture("large-wolf-inventory-016")
  ui.navigate("power");await capture("power-inventory-016")
- ui.navigate("create_room");ui.room_allies.select(3);ui.room_allies.item_selected.emit(3);await capture("ally-bot-selection-016")
+ ui.navigate("create_room");ui.room_allies.select(3);ui.room_allies.item_selected.emit(3);ui.links["Bot ve maç ayarları"].pressed.emit();await capture("ally-bot-selection-016")
  game.local_room={"title":"Yerel Takım Maçı","mode":0,"map":0,"team":"blue","allyBots":3,"enemyBots":4};ui.navigate("room");await capture("team-rosters-016")
  game.start_round();game.spawn_clock=0;game._process(0.01);await frames();game.spawn_clock=10000;await capture("allied-bot-match-016")
  game.set_process(false)

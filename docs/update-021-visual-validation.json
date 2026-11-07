@@ -6,7 +6,7 @@
       "path": "docs/review/update-021/video-aligned-equipment-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "870d36bb7444e7dccb72d734409e0a291293e263c4f64dc1fedfcb1212200369"
+      "sha256": "46539d1efde4bfdd9a558596ad6d13c7e50888b07cb3fdaf9dfe4f6e770a96a5"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-021/round-preparation-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8bb1ae050f315efef3bf8b8521543da4d23c5f5d7d3b9fc8143ba7042fac28c7"
+      "sha256": "469e0b079e16873b278244fe71ba0a78615d332922811e6306bc5338baafa74c"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-021/teammate-spectator-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "71544452397d30c949786022403f590202cdc2e86825e7abd59ff28e6f214c18"
+      "sha256": "4b41c3fd31c030b543364c9cb9525c0008eecc6c5d88a0def7d75dab1518cf62"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-021/round-result-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f3fd299a292c38c4f96628c06727dea7ec18e9026baf61a02ba227cb6b3a8a69"
+      "sha256": "2daa378da066590b0e03cb752df49a42b8efefced0d3c053d018b5712662d298"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-021/attack-defense-swap-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "35ba108e1aa2841603a285bdee19e0395b2f66e519caac7b6b42ba2546b61dbf"
+      "sha256": "32666b2b3f1d3053091444d11df69842e433061e07a75806b6819a568b8796af"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-021/role-spawn-and-carrier-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bec62e86822b892a1f017d4273a7fb06a96db690ce4579f9d8d98cf72d8b7118"
+      "sha256": "5531a8c880b52fb4b323969fd782913859eda85e77d693c6e45fc2f63db8ef20"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-021/character-yp-and-sp-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "772f1fc6c6dcdc64db1075a967092479b4b2149e833d576a5e45ce77ad6f09b5"
+      "sha256": "45372d46607db0d33a3abc2a6c9e06c747f5b16711c08fc3afeec9e976e0be7f"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-021/video-aligned-mutations-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fa2803da1e0b37239784a10a9cf8e286765961cd4c77d7f47a177d1a29b2b825"
+      "sha256": "64513d2b19961f73b424085f9b14089e854098fffcc36bf6c09909b9283d434e"
     },
     {
       "height": 992,
@@ -70,11 +70,11 @@
       "path": "docs/review/update-021/video-layout-wide-phone-021.png",
       "saved": true,
       "width": 2160,
-      "sha256": "d0f477c1abb90ae8ff6414d0f367b0d2add784fff81ba0c7c154d3c602c4ac3b"
+      "sha256": "0fffca31021467d493d8ea5261fdbbd81fce61dfd8ce18f7bb8a36e4fce10ff3"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
+  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
 }

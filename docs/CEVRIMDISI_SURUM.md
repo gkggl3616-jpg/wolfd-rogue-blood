@@ -1,3 +1,9 @@
+# Güncel teslim: 0.25.0 ayrı test APK’sı
+
+**Wolf Rogue Blood Test**, `com.wolfrogue.blood.offline.test`. Mevcut kurulumun yanında ayrı kayıtla çalışır. Dosya: `/workspace/artifacts/WolfRogueBlood-0.25.0-test.apk`, **1.573.199.303 bayt**. 34 harita ve mevcut içerik korunur; 0.21–0.25 değişiklikleri pakete dahildir. [FT düzeltmesi, video incelemesi ve açık kalan farklar](PC_REFERANS_025.md), [paket/imza raporu](android-offline-test-build-025.json). 33 regresyon aşaması ve 210 gerçek OpenGL görüntüsü geçti. Fiziksel telefon testi yapılmadı.
+
+Aşağıdaki 0.20 kaydı önceki üretim paketinin tarihsel belgesidir.
+
 # 0.20.0 çevrimdışı Android sürümü
 
 [**Tek APK indir — WolfRogueBlood-0.20.0-offline.apk**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk)

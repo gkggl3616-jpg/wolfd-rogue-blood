@@ -59,7 +59,19 @@ func entry():
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
 	ui.paragraph(ui.content,"WOLF ROGUE\nBLOOD",Vector2(385,459),Vector2(255,120),30).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	ui.button(ui.content,"Yerel oturuma devam",Vector2(362,635),Vector2(300,42),func():ui.navigate("servers" if ui.game.profile_lock.unlocked else "pin"))
-	ui.paragraph(ui.content,"Çevrimiçi hesap hizmeti bağlı değil.",Vector2(262,700),Vector2(500,35),15).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	ui.button(ui.content,ui.game.profile_name+" · Oyuncu adı",Vector2(362,590),Vector2(300,32),local_name_window)
+	ui.paragraph(ui.content,"Çevrimdışı oyun",Vector2(262,700),Vector2(500,35),15).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+
+func local_name_window():
+	ui.close_modal();ui.modal=Control.new();ui.modal.size=Vector2(1024,768);ui.modal.mouse_filter=Control.MOUSE_FILTER_STOP;ui.modal.z_index=100;ui.canvas.add_child(ui.modal)
+	var veil=ColorRect.new();veil.color=Color(0,0,0,.72);veil.size=ui.modal.size;ui.modal.add_child(veil)
+	var dialog=ui.native("interface/nicknamemessagebox",ui.modal,Vector2(276,241),Vector2(471,286))
+	dialog.set_value("MessageBoxTitle","OYUNCU ADI");dialog.set_value("Message1","Bu cihazdaki oyuncu adın");dialog.set_value("Message2","2–24 karakter")
+	var name=dialog.find_widget("NickNameEditBox");name.editable=true;name.max_length=24;name.text=ui.game.profile_name;name.grab_focus();name.caret_column=name.text.length()
+	var submit=func():
+		if not ui.game.book.set_local_name(name.text):ui.show_error("Oyuncu adı kaydedilemedi. 2–24 karakter kullan.");return
+		ui.game.profile_name=ui.game.book.local_name;ui.last_error="";ui.close_modal();ui.refresh()
+	dialog.bind_action("ConfirmButton",submit);dialog.bind_action("CancelButton",ui.close_modal);name.text_submitted.connect(func(_text):submit.call())
 
 func servers():
 	view=layout("section/serverlist")
@@ -73,16 +85,23 @@ func servers():
 		row.position=Vector2(462,132)
 		var caption=ui.text(row,"YEREL OTURUM · BU CİHAZ",Vector2(16,10),Vector2(490,28),17)
 		caption.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	ui.paragraph(ui.content,"Çevrimiçi sunucu listesi alınamadı.\nOyuncu sayısı ve ping üretilmez.",Vector2(24,150),Vector2(390,160),17)
+	ui.paragraph(ui.content,"ÇEVRİMDIŞI OYUN\nBu cihazdaki odalar",Vector2(24,150),Vector2(390,160),17)
 	enable("NormalServer",func():ui.show_error("Çevrimiçi sunucu hizmeti bağlı değil."))
 
 func lobby():
 	view=layout("section/battle")
 	only(["LobbyBackGround","CreateBattle","QuickStart","Refresh","ChannelButtonGroup","Channel1","Channel2","Channel3","Channel4","Channel5","ChatTypeGroup","ToAllChatButton","ToPrideChatButton","ToShoutingChatButton","ChatListBox","ChatEditBox","ChannelUserListBox","RoomNumberSort","RoomStatusSort","RoomTypeSort","RoomMapNameSort","ChannelName","PlayModeSelectComboBox"])
 	enable("CreateBattle",func():ui.navigate("create_room"))
-	enable("QuickStart",func():ui.navigate("room" if not ui.game.local_room.is_empty() else "maps"))
+	enable("QuickStart",func():ui.navigate("room" if not ui.game.local_room.is_empty() else "create_room"))
 	enable("Refresh",ui.refresh)
-	for i in range(1,6):enable("Channel%d" % i,func():ui.show_error("Yalnızca bu cihazdaki yerel kanal hazır."))
+	enable("Channel1",ui.refresh)
+	for i in range(2,6):
+		var channel=view.find_widget("Channel%d" % i);channel.disabled=true;channel.tooltip_text="Çevrimiçi kanal"
+	var filter=view.find_widget("PlayModeSelectComboBox");filter.disabled=false;filter.clear();filter.add_item("Tümü",99999)
+	for mode in [{"id":0,"displayName":"Botlu Eğitim"},{"id":ui.game.LocalHunt.MODE,"displayName":"Kurt Avı"},{"id":ui.game.WOLF_BATTLE,"displayName":"Kurt Savaşı"}]+ui.game.map_catalog.data.modes:
+		filter.add_item(mode.displayName,int(mode.id))
+		if int(mode.id)==ui.lobby_mode_filter:filter.select(filter.item_count-1)
+	filter.item_selected.connect(func(_i):ui.lobby_mode_filter=-1 if filter.get_selected_id()==99999 else filter.get_selected_id();ui.refresh())
 	for name in ["RoomNumberSort","RoomStatusSort","RoomTypeSort","RoomMapNameSort"]:enable(name,func():ui.show_error("Yerel oda listesi güncel."))
 	var users=view.find_widget("ChannelUserListBox")
 	if users is ItemList:users.add_item(ui.game.profile_name,Art.texture(ui.game.ranks.current(int(ui.game.wallet.gp)).asset));users.set_meta("data_origin","local_profile")
@@ -92,16 +111,26 @@ func lobby():
 	var duplicate=view.find_widget("ChannelName",-1)
 	if duplicate:duplicate.hide()
 	if ui.game.local_room.is_empty():ui.paragraph(ui.content,"Yerel oda yok.",Vector2(28,150),Vector2(550,70),17)
+	elif ui.lobby_mode_filter!=-1 and ui.lobby_mode_filter!=int(ui.game.local_room.mode):ui.paragraph(ui.content,"Bu modda oda yok.",Vector2(28,150),Vector2(550,70),17)
 	else:
-		var row=ui.button(ui.content,ui.game.local_room.get("title","Yerel Oda"),Vector2(6,122),Vector2(590,45),func():ui.navigate("room"))
-		row.set_meta("data_origin","local_room")
-		ui.paragraph(ui.content,"1 yerel oyuncu · ağ maçı değil",Vector2(615,140),Vector2(390,70),15)
+		build_room_row()
 		var room_data=ui.game.local_room
 		Art.sprite(ui.content,Art.map_photo(ui.game.map_catalog,int(room_data.map)),Vector2(612,130),Vector2(407,120))
 		var plate=ColorRect.new();plate.color=Color("20282c");plate.position=Vector2(612,255);plate.size=Vector2(407,212);ui.content.add_child(plate)
 		var mode_name="Kurt Avı · Yerel" if int(room_data.mode)==ui.game.LocalHunt.MODE else ("Öğretici Mod" if int(room_data.mode)==ui.game.LocalTutorial.MODE else "Botlu Eğitim")
 		if not ui.game.map_catalog.mode_record(int(room_data.mode)).is_empty():mode_name=ui.game.map_catalog.mode_name(int(room_data.mode))
 		ui.paragraph(ui.content,"%s\nMod: %s\nHarita: %s\nBotlar: %s\n1 yerel oyuncu" % [room_data.get("title","Yerel Oda"),mode_name,"Eğitim Arenası" if int(room_data.map)==0 else ui.game.map_catalog.map_record(int(room_data.map)).displayName,ui.game.BotRules.profile(room_data.get("botDifficulty","normal")).name],Vector2(624,268),Vector2(382,180),16)
+
+func build_room_row():
+	var list=layout("interface/fieldlistscreen");list.show_only(["FieldListButton"])
+	for control in list.controls:control.hide()
+	var row=list.find_widget("FieldListButton",0);row.show();row.disabled=false;list.bind_action("FieldListButton",func():ui.navigate("room"),0);row.set_meta("data_origin","local_room")
+	var fields=ui.native("interface/fieldbutton",row,Vector2.ZERO,Vector2(587,21));fields.show_only(["FieldID","FieldName","GameState","CurChars","MaxChars","GameMode","MapName"])
+	var data=ui.game.local_room;fields.set_value("FieldID","1");fields.set_value("FieldName",data.get("title","Yerel Oda"));fields.set_value("GameState","BEKLEME")
+	fields.set_value("CurChars",str(1+ui.game.bot_limit("red")+ui.game.bot_limit("blue")));fields.set_value("MaxChars","/ "+str(data.get("capacity",16)))
+	fields.set_value("GameMode",ui.game.map_catalog.mode_name(int(data.mode)) if int(data.mode)!=0 else "Eğitim")
+	fields.set_value("MapName","Eğitim Arenası" if int(data.map)==0 else ui.game.map_catalog.map_record(int(data.map)).displayName)
+	row.tooltip_text=data.get("title","Yerel Oda")+" · "+fields.find_widget("MapName").text
 
 func room():
 	if ui.game.local_room.is_empty():lobby();return
@@ -128,7 +157,6 @@ func room():
 		view.set_value("MissionObject",(("%d Tur" % rules.goal) if rules.round_based else ("%d Puan" % rules.goal)) if rules.enabled else ("3 raunt · 4 rakip" if hunting else "10 hedef"))
 		view.set_value("RoundTime",("%d:%02d" % [rules.seconds/60,rules.seconds%60]) if rules.enabled else "90 saniye")
 		if rules.enabled:view.set_value("GameMode",ui.game.map_catalog.mode_name(int(data.mode)))
-		ui.paragraph(ui.content,"Botlar: %s\nHasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
 		var opponent=view.find_widget("BlueTeam" if data.team=="red" else "RedTeam")
 		for i in range(ui.game.bot_limit("red" if data.team=="blue" else "blue")):opponent.add_item("%s %d" % ["Kırmızı" if data.team=="blue" else "Mavi",i+1])
 		for team in ["Red","Blue"]:
@@ -137,7 +165,7 @@ func room():
 			view.set_value(team+"CurChars","%d / %d" % [count,int(data.get("capacity",16)/2)]);view.find_widget(team+"CurChars").size.x=66;view.find_widget(team+"MaxChars").hide()
 		var allies=view.find_widget("RedTeam" if data.team=="red" else "BlueTeam")
 		for i in range(ui.game.bot_limit(data.team)):allies.add_item("%s %d" % ["Kırmızı" if data.team=="red" else "Mavi",i+1])
-		ui.text(ui.content,"Yerel rakip planı · çevrimiçi oyuncu değil",Vector2(18,485),Vector2(570,30),12)
+		var roster=preload("res://ui/room_roster_page.gd").new();roster.ui=ui;roster.build(view)
 	var map_image=view.find_widget("CurrentMap")
 	if int(data.map)!=0:
 		map_image.texture=Art.map_photo(ui.game.map_catalog,int(data.map))
@@ -155,6 +183,7 @@ func room():
 		mode_caption.size=Vector2(180,32);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
 		mode_caption.add_theme_font_size_override("font_size",10)
 		mode_caption.tooltip_text=mode_caption.text
+	var change=ui.button(ui.content,"Bot ve maç ayarları",Vector2(12,542),Vector2(190,27),func():ui.navigate("room_settings"));change.disabled=ui.game.match_flow.starting()
 	if ui.game.match_flow.phase=="countdown":
 		start.disabled=true
 		var counter=preload("res://ui/match_flow_page.gd").new();counter.ui=ui;counter.countdown()
@@ -169,69 +198,7 @@ func invite_window():
 	invite.bind_action("CancelButton",ui.close_modal);invite.bind_action("Exit",ui.close_modal)
 
 func create_room():
-	view=layout("interface/createfield",Vector2(303,202),Vector2(417,335))
-	only(["BackGround","FieldNameEditBox","SelectMap","Confirm","Cancel"])
-	var name=view.find_widget("FieldNameEditBox");name.editable=true;name.text=ui.room_draft.title;ui.room_title=name
-	name.set_meta("navigation_input","room_title");name.text_changed.connect(func(value):ui.room_draft.title=value)
-	ui.room_mode=ui.mode_picker(ui.content,Vector2(353,267),Vector2(163,30))
-	for i in range(ui.room_mode.item_count):
-		if ui.room_mode.get_item_id(i)==int(ui.room_draft.mode):ui.room_mode.select(i)
-	ui.room_difficulty=ui.map_picker(ui.content,Vector2(521,267),Vector2(92,30))
-	ui.room_difficulty.tooltip_text="Bot zorluğu"
-	for value in ["easy","normal","hard"]:
-		ui.room_difficulty.add_item(ui.game.BotRules.LEVELS[value].name);ui.room_difficulty.set_item_metadata(ui.room_difficulty.item_count-1,value)
-		if value==ui.room_draft.get("botDifficulty","normal"):ui.room_difficulty.select(ui.room_difficulty.item_count-1)
-	ui.room_difficulty.item_selected.connect(func(index):ui.room_draft.botDifficulty=ui.room_difficulty.get_item_metadata(index))
-	ui.room_allies=ui.map_picker(ui.content,Vector2(521,304),Vector2(92,30))
-	ui.room_enemies=ui.map_picker(ui.content,Vector2(619,304),Vector2(92,30))
-	for i in range(5):
-		ui.room_allies.add_item("Dost: %d" % i,i);ui.room_enemies.add_item("Rakip: %d" % i,i)
-	ui.room_allies.select(clampi(int(ui.room_draft.get("allyBots",0)),0,4));ui.room_enemies.select(clampi(int(ui.room_draft.get("enemyBots",4)),0,4))
-	ui.room_allies.item_selected.connect(func(i):ui.room_draft.allyBots=i)
-	ui.room_enemies.item_selected.connect(func(i):ui.room_draft.enemyBots=i)
-	ui.room_form=ui.map_picker(ui.content,Vector2(353,304),Vector2(163,30))
-	ui.room_map=ui.map_picker(ui.content,Vector2(308,461),Vector2(365,28))
-	var gallery=ui.button(ui.content,"▣",Vector2(677,461),Vector2(42,28),map_gallery);gallery.tooltip_text="Haritaları fotoğraflarıyla seç"
-	ui.room_goal=ui.map_picker(ui.content,Vector2(310,500),Vector2(95,26))
-	ui.room_time=ui.map_picker(ui.content,Vector2(410,500),Vector2(104,26))
-	ui.room_goal.item_selected.connect(func(i):ui.room_draft.pointGoal=ui.room_goal.get_item_id(i);ui.room_draft.roundGoal=ui.room_goal.get_item_id(i))
-	ui.room_time.item_selected.connect(func(i):ui.room_draft.matchSeconds=ui.room_time.get_item_id(i))
-	var refresh_photo=func():view.find_widget("SelectMap").texture=Art.map_photo(ui.game.map_catalog,ui.room_map.get_selected_id())
-	var fill=func():
-		ui.room_goal.clear();ui.room_time.clear()
-		var source=preload("res://scripts/source_match_rules.gd").supports(ui.room_mode.get_selected_id())
-		ui.room_goal.visible=source;ui.room_time.visible=source
-		if source:
-			var rules=preload("res://scripts/source_match_rules.gd").new();var draft=ui.room_draft.duplicate();draft.mode=ui.room_mode.get_selected_id();rules.configure(draft)
-			for row in rules.record.goals:
-				ui.room_goal.add_item(("%d Tur" % int(row.rounds)) if rules.round_based else ("%d Puan" % int(row.points)),int(row.rounds if rules.round_based else row.points))
-				if int(row.rounds if rules.round_based else row.points)==rules.goal:ui.room_goal.select(ui.room_goal.item_count-1)
-			for row in rules.record.times:
-				ui.room_time.add_item("%d:%02d" % [int(row.seconds)/60,int(row.seconds)%60],int(row.seconds))
-				if int(row.seconds)==rules.seconds:ui.room_time.select(ui.room_time.item_count-1)
-			ui.room_draft.pointGoal=rules.goal;ui.room_draft.matchSeconds=rules.seconds
-		ui.room_map.clear()
-		if ui.game.is_local_mode(ui.room_mode.get_selected_id()) and not source:
-			ui.room_map.add_item("Eğitim Arenası",0)
-			for map in ui.game.map_catalog.offline_maps():ui.room_map.add_item(map.displayName,int(map.number))
-		else:
-			for map in ui.game.map_catalog.maps_for_mode(ui.room_mode.get_selected_id()):ui.room_map.add_item(map.displayName,int(map.number))
-		for i in range(ui.room_map.item_count):
-			if ui.room_map.get_item_id(i)==int(ui.room_draft.map):ui.room_map.select(i)
-		if ui.room_map.item_count:ui.room_draft.map=ui.room_map.get_selected_id()
-		var hunting=ui.room_mode.get_selected_id()==ui.game.LocalHunt.MODE
-		ui.room_form.clear();ui.room_form.add_item("Mavi · İnsan" if hunting else "Mavi takım",0);ui.room_form.add_item("Kırmızı · Kurt" if hunting else "Kırmızı takım",1)
-		ui.room_form.select((1 if ui.room_draft.get("playerForm","human")=="wolf" else 0) if hunting else (1 if ui.room_draft.team=="red" else 0))
-		refresh_photo.call()
-	ui.room_mode.item_selected.connect(func(_index):ui.room_draft.mode=ui.room_mode.get_selected_id();fill.call())
-	ui.room_map.item_selected.connect(func(_index):ui.room_draft.map=ui.room_map.get_selected_id();refresh_photo.call())
-	ui.room_form.item_selected.connect(func(index):ui.room_draft.team="red" if index==1 else "blue";ui.room_draft.playerForm="wolf" if index==1 else "human")
-	fill.call()
-	enable("Cancel",ui.go_back);ui.links.PLCancel=ui.links.Cancel;ui.links.PLExit=ui.links.Cancel
-	enable("Confirm",func():
-		if name.text.strip_edges().length()<2 or ui.room_map.item_count==0:ui.show_error("Oda adı ve moda bağlı harita gerekli.");return
-		ui.game.local_room={"title":name.text.strip_edges(),"mode":ui.room_mode.get_selected_id(),"map":ui.room_map.get_selected_id(),"team":ui.room_draft.team,"botDifficulty":ui.room_difficulty.get_selected_metadata(),"playerForm":"wolf" if ui.room_form.selected==1 else "human","allyBots":ui.room_allies.selected,"enemyBots":ui.room_enemies.selected,"roundGoal":ui.room_goal.get_selected_id(),"pointGoal":ui.room_goal.get_selected_id(),"matchSeconds":ui.room_time.get_selected_id()};ui.navigate("room")
-	);ui.links.PLOK=ui.links.Confirm
+	ui.detail_helper=preload("res://ui/room_create_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 
 
 func maps():
@@ -331,7 +298,7 @@ func map_gallery():
 	var panel=Panel.new();panel.position=Vector2(173,130);panel.size=Vector2(678,508);ui.modal.add_child(panel)
 	var style=StyleBoxFlat.new();style.bg_color=Color("151b20");style.border_color=Color("616b6e");style.set_border_width_all(1);panel.add_theme_stylebox_override("panel",style)
 	ui.text(panel,"HARİTA GÖRSELLERİ",Vector2(20,14),Vector2(638,30),20,Art.GOLD)
-	var picker=ui.room_map if ui.page=="create_room" else ui.game.map_picker
+	var picker=ui.room_map if ui.page in ["create_room","room_settings"] else ui.game.map_picker
 	var indices=[]
 	for i in range(picker.item_count):
 		if not ui.game.map_catalog.photo(picker.get_item_id(i)).is_empty():indices.append(i)
@@ -340,7 +307,7 @@ func map_gallery():
 		var index=indices[i];var number=picker.get_item_id(index);var column=(i%6)%3;var row=int((i%6)/3)
 		var cell=SourceCard.create(panel,Vector2(20+column*214,60+row*174),Vector2(208,163),func():
 			picker.select(index);picker.item_selected.emit(index);ui.close_modal()
-			if ui.page=="create_room":ui.refresh()
+			if ui.page in ["create_room","room_settings"]:ui.refresh()
 		)
 		Art.sprite(cell,Art.map_photo(ui.game.map_catalog,number),Vector2(4,4),Vector2(200,112)).stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		ui.paragraph(cell,picker.get_item_text(index),Vector2(5,119),Vector2(198,38),13)

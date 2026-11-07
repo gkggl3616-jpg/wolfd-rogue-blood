@@ -11,6 +11,7 @@ var owner_ui
 var loading_path=""
 var loaded_resource
 var loading_frames=0
+var last_countdown=-1
 func starting():return phase in ["countdown","loading"]
 func preparing():return ready_left>0
 func request_start(ui):
@@ -18,9 +19,14 @@ func request_start(ui):
 	var number=int(game.local_room.get("map",0));var mode=int(game.local_room.get("mode",0))
 	if (number!=0 and game.map_catalog.offline_record(number).is_empty()) or (preload("res://scripts/source_match_rules.gd").supports(mode) and not game.map_catalog.belongs_to_mode(mode,number)):
 		ui.show_error("Seçilen harita bu maç için hazır değil.");return false
-	owner_ui=ui;room_snapshot=game.local_room.duplicate(true);phase="countdown";countdown=3.5;ui.refresh();return true
+	owner_ui=ui;room_snapshot=game.local_room.duplicate(true);phase="countdown";countdown=3.5;last_countdown=-1;play_countdown_step();ui.refresh();return true
+func play_countdown_step():
+	var number=clampi(ceili(maxf(0,countdown-.5)),0,3)
+	if number==last_countdown:return
+	last_countdown=number;game.game_audio.room_countdown(number)
 func cancel_start():
 	var panel=owner_ui
+	game.game_audio.stop_room_countdown();last_countdown=-1
 	phase="";countdown=0;loading_frames=0;loaded_resource=null;loading_path="";room_snapshot.clear();owner_ui=null
 	if is_instance_valid(panel) and not panel.is_queued_for_deletion():panel.page="room";panel.refresh()
 func reset_match():ready_left=0;start_flash=0
@@ -38,6 +44,7 @@ func advance_start(delta):
 		cancel_start();return
 	if phase=="countdown":
 		countdown=maxf(0,countdown-delta)
+		play_countdown_step()
 		if countdown>0:return
 		phase="loading";loading_frames=0
 		var number=int(room_snapshot.get("map",0))

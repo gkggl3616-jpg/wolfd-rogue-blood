@@ -38,6 +38,7 @@ var quality_id="all"
 var preview_team="blue"
 var target_primary_slot = "primary"
 var offset = 0
+var lobby_mode_filter=-1
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
@@ -206,7 +207,11 @@ func build_header():
 		links[entry[0]]=node
 		if entry[1]==page:node.modulate=Color("ffe36a")
 		if entry[1]=="gifts" and game.inbox.pending_count()>0:text(node,str(game.inbox.pending_count()),Vector2(25,0),Vector2(18,16),11,Art.GOLD)
-	links["Diğer"]=button(strip,"☰",Vector2(start_x+entries.size()*pitch,(height-icon_size)/2),Vector2.ONE*icon_size,choose_section)
+	links["Diğer"]=button(strip,"",Vector2(start_x+entries.size()*pitch,(height-icon_size)/2),Vector2.ONE*icon_size,choose_section)
+	links["Diğer"].tooltip_text="Diğer menüler"
+	for i in range(3):
+		var line=ColorRect.new();line.color=Color("283037");line.mouse_filter=Control.MOUSE_FILTER_IGNORE
+		line.position=Vector2(icon_size/2-9,icon_size/2-8+i*7);line.size=Vector2(18,2);links["Diğer"].add_child(line)
 	var power_link=Button.new();power_link.hide();strip.add_child(power_link);power_link.pressed.connect(func():navigate("power"));links["Güç"]=power_link
 
 func choose_section():
@@ -254,6 +259,7 @@ func navigate(next,remember=true,back_step=false):
 func go_back():
 	if game.match_flow.starting():game.match_flow.cancel_start();return
 	if modal != null: close_modal();return
+	if detail_helper!=null and detail_helper.has_method("dismiss_overlay") and detail_helper.dismiss_overlay():return
 	if not history.is_empty(): navigate(history.back(),false,true)
 	elif game.running: close_menu()
 	elif page != "lobby": navigate("lobby",false)
@@ -345,8 +351,13 @@ func replace_preview(entry):
 
 func raise_close_controls():
 	for node in find_children("*","TextureButton",true,false):
-		if node.has_method("close_control") and node.close_control() and not node.disabled and node.get_parent()!=self:
-			var transform=node.get_global_transform();node.reparent(self,true);node.scale=transform.get_scale();node.position=transform.origin
+		if not node.has_method("close_control") or not node.close_control() or node.disabled or not node.is_visible_in_tree():continue
+		var scope=self;var ancestor=node.get_parent()
+		while ancestor!=self:
+			if ancestor==modal or ancestor.has_meta("close_scope"):scope=ancestor;break
+			ancestor=ancestor.get_parent()
+		if node.get_parent()==scope:continue
+		var transform=scope.get_global_transform().affine_inverse()*node.get_global_transform();node.reparent(scope,true);node.scale=transform.get_scale();node.position=transform.origin
 
 func preview_input(event):
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:preview_drag=event.pressed;preview_container.accept_event()

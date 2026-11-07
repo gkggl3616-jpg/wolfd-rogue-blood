@@ -1,14 +1,18 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. Güncel **0.23.0 kaynak kodu**, dört video referansının iki aşamalı devamını içerir: kalıcı HUD yerleşimi, SP/YP, Yıkım rolleri ve izleme; özgün bomba cihazı/animasyonu, patlama, sonuç/oda akışı, oda sayımı ve yükleme, canlı/otomatik tur skor tablosu, yerel bot çıkarma ve animasyonla eşleşen pençe teması. Bu değişiklikler için yeni APK üretilmedi. Son imzalı **0.20.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle paket/imza denetiminden geçti. Projede 34 kaynak haritada botlu yerel maç, 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter bulunur. Bu depo henüz eksiksiz PC oyunu değildir. [Yayımlanan APK'nın kapsamı](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android’e taşınan, geliştirmesi süren çevrimdışı oyun. **0.26.0**: kaynak giriş/oda kurma/oyuncu satırları, gerçek mod ve harita seçimi, geri/iptal akışı ve özgün 3–2–1–başla sesleri. FT/ilk yardım düzeltmesi, kaynak kurt hareketleri, kamera, buz/ölüm, dürbün ve bomba akışları dahil önceki değişiklikler korunur. **34 harita ve 903 silahlık katalog** korunur. [Uzun kayıt incelemesi, değişiklikler ve açık farklar](docs/PC_REFERANS_026.md).
 
-[Son imzalı APK'yı indir · 0.20.0](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
+[**Güncel Android APK · 0.26.0 Test · 1.57 GB**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.26.0-offline-test/WolfRogueBlood-0.26.0-test.apk). **Wolf Rogue Blood Test** / `com.wolfrogue.blood.offline.test`, eski üretim kurulumunun yanında ayrı kayıtla çalışır. [Paket ve imza raporu](docs/android-offline-test-build-026.json): 1.573.207.809 bayt; 40 katalog, ZIP/kaynak bağlantıları, v2/v3 imza ve hizalama doğrulandı. **34 regresyon aşaması, 229 gerçek oyun görüntüsü** aynı çalışma zamanı için geçti. Fiziksel telefon testi ve bütün PC davranışlarının birebir eşitliği tamamlanmış değildir.
+
+[Önceki üretim APK'sı · 0.20.0](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
 [Kalıcı video yerleşim kuralı](docs/VIDEO_YERLESIM_KURALI.md)
 
 [Video devamı · 1. paket: SP/YP, roller, bomba ve izleme](docs/PC_REFERANS_021.md)
 
 [Video devamı · 2. paket: özgün cihaz, animasyon, efekt ve sonuç ekranları](docs/PC_REFERANS_022.md)
+
+[İki yeni kurt videosu · hareket, kamera ve buz (FT eşleştirmesi 0.25’te düzeltildi)](docs/PC_REFERANS_024.md)
 
 [İkinci aşamanın kalanları · sayım, canlı skor, bot çıkarma ve temas efektleri](docs/PC_REFERANS_023.md)
 
@@ -59,7 +63,7 @@ Windows'ta APK oluşturmadan doğrulama:
 ./tools/build_android.ps1 -Godot C:\path\godot.exe -ValidateOnly
 ```
 
-Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi, duvara tutunma ve kaynak arayüz/GUI akışı kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. Güncel çalışma zamanı için [birinci paket](docs/update-021-visual-validation.json), [ikinci paket](docs/update-022-visual-validation.json) ve [ikinci aşamanın kalan ekranları](docs/update-023-visual-validation.json) gerçek OpenGL ile alınır. Fiziksel telefon ve Android emülatörü testi yapılmadı.
+Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi, duvara tutunma ve kaynak arayüz/GUI akışı kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. Güncel çalışma zamanı için [birinci paket](docs/update-021-visual-validation.json), [ikinci paket](docs/update-022-visual-validation.json), [ikinci aşamanın kalan ekranları](docs/update-023-visual-validation.json) ve [yeni kurt kaydı karşılaştırmaları](docs/update-024-visual-validation.json) gerçek OpenGL ile alınır. Fiziksel telefon ve Android emülatörü testi yapılmadı.
 
 ## Gerçek PC kaynaklarına erişim
 

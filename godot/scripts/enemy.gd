@@ -247,7 +247,7 @@ func fire():
 
 func hit_opponent():
  if not game.hostile(opponent,team):return
- var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourcePosition":global_position,"rosterId":roster_id}
+ var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourceActor":self,"sourcePosition":global_position,"rosterId":roster_id}
  if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
  else:opponent.damage(Rules.DAMAGE,context)
 func melee_hit():
@@ -394,6 +394,8 @@ func damage(amount,context={}):
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
  game.clientfx.play("Impact_Flesh",null,context.get("hitPosition",global_position+Vector3.UP*1.1))
+ if context.get("headshot",false):game.clientfx.play("BloodHeadshot",null,context.get("hitPosition",global_position+Vector3.UP*1.6))
+ if health>0:game.clientfx.frost_hit(self,context.get("sourceActor") if context.get("actor","")=="bot" else game.player)
  if game.spectator.active and game.spectator.target==self and is_instance_valid(game.source_hud):game.source_hud.feedback.show_damage(context.get("sourcePosition"))
  if health<=0:
   game.record_elimination(roster_id,context.get("rosterId","") if context.get("actor","")=="bot" else "player")

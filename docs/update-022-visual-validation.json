@@ -22,7 +22,7 @@
       "path": "docs/review/update-022/cancel-restores-weapon-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4b59612d492925dc6062c23fcd8c411c19fd9fee4e144d7588eb4c80bb86bc0f"
+      "sha256": "5a40898aa08c17122b18553695b4d5a48fdd3bade9db83476c55eb3944cf9a06"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-022/world-bomb-and-fuse-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0d83f224ff4496ad9b58ab098c7b3d6c583382bbb82d8b5f2c3cc9a23f4894f3"
+      "sha256": "4ec33183fd66350396d82029def1744bd6fce31ee139909896905f89f868f13d"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "450d156778aaef16cd276abcb2543d6f8ac2fc6fcb6b0b746e0f378e55d9f503"
+      "sha256": "aff78e5029137f6af9cdf920804345a33c98d20d03da381d46ca23e34f161517"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-022/separate-defuse-progress-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f6888977adcffbb15d3870dd6684d4de943537dc12d3b2125884bed323425052"
+      "sha256": "fae9d3482058dd00850583ec885e291dfad07704291e56230fbc8c190a9efa2b"
     },
     {
       "height": 720,
@@ -78,11 +78,11 @@
       "path": "docs/review/update-022/return-to-configured-room-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "cdf0b094778377415474b8d789ea2459a30bd96f2ed6dd374151029c1a9cdaa9"
+      "sha256": "3bfe52bec04549e500718bb16a2f7bee65ae9c6a659da1c14db624691f0a2912"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
+  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
 }

@@ -30,6 +30,11 @@ var weapon_anim: AnimationPlayer
 var weapon_info = {}
 var weapon_clip = ""
 var weapon_action_time = 0.0
+var muzzle_data={}
+var muzzle_record={}
+var muzzle_skeleton:Skeleton3D
+var muzzle_bone=-1
+var muzzle_anchor:Node3D
 var auxiliary_magazines = []
 var mutation_id="normal"
 var claw_trail
@@ -66,6 +71,8 @@ var air_attack_elapsed = 0.0
 var air_attack_duration = 0.0
 var air_attack_direction = Vector3.ZERO
 var air_attack_hit = false
+var airborne_last_frame=false
+var landing_remaining=0.0
 
 func _ready():
 	collision_layer = 1
@@ -108,6 +115,8 @@ func _ready():
 	viewmodel.scale.z *= -1
 	camera.add_child(viewmodel)
 	weapon_anim = viewmodel.find_children("*", "AnimationPlayer", true, false)[0]
+	muzzle_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapons/muzzle-bindings.json"))
+	muzzle_anchor=Node3D.new();camera.add_child(muzzle_anchor);configure_muzzle()
 	for clip in ["idle", "walk"]:
 		weapon_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
 	for mesh in viewmodel.find_children("*", "MeshInstance3D", true, false):
@@ -143,8 +152,11 @@ func choose_animation_player():
 				anim.get_animation(name).loop_mode = Animation.LOOP_LINEAR
 
 func play_clip(clip):
+	if anim and anim.has_animation(clip):
+		var pace=CLAW_SPEED if clip in ["attack","attack_right"] and is_wolf else 1.0
+		if is_wolf and (clip in ["run","wolf_run","crouch_run"] or clip.begins_with("run_") or clip.begins_with("crouch_")) and game.booster_remaining>0:pace*=float(game.booster_tuning.get("speedMultiplier",1.0))
+		anim.speed_scale=pace
 	if anim and anim.has_animation(clip) and current_clip != clip:
-		anim.speed_scale=CLAW_SPEED if clip in ["attack","attack_right"] and is_wolf else 1.0
 		anim.play(clip, 0.12)
 		current_clip = clip
 
@@ -168,6 +180,32 @@ func play_weapon_sound(action):
 		fire_sound.play()
 	elif action == "reload" and reload_sound.stream:
 		reload_sound.play()
+
+func configure_muzzle():
+	muzzle_record={};muzzle_bone=-1;muzzle_skeleton=null
+	for effect in muzzle_anchor.get_children():effect.queue_free()
+	var source=str(weapon_info.get("sourceModel",weapon_info.get("source",""))).replace("\\","/").to_lower().trim_prefix("root/")
+	var record=muzzle_data.bindings.get("root/"+source,{})
+	if record.is_empty():return
+	var skeletons=viewmodel.find_children("*","Skeleton3D",true,false)
+	if skeletons.is_empty():return
+	muzzle_skeleton=skeletons[0];muzzle_bone=muzzle_skeleton.find_bone(record.socket.boneName)
+	if muzzle_bone>=0:muzzle_record=record
+
+func update_muzzle_anchor():
+	if muzzle_record.is_empty() or not is_instance_valid(muzzle_skeleton):return false
+	muzzle_anchor.global_transform=muzzle_socket_transform("Flash")
+	return true
+
+func muzzle_socket_transform(name):
+	var socket=muzzle_record.get("sockets",{}).get(name,muzzle_record.socket);var q=socket.rotation;var p=socket.position
+	var source=muzzle_skeleton.global_transform*muzzle_skeleton.get_bone_global_pose(muzzle_bone)*Transform3D(Basis(Quaternion(q[0],q[1],q[2],q[3]).normalized()),Vector3(p[0],p[1],p[2]))
+	# Strip converted model scale here; ClientFX applies its own source units.
+	return Transform3D(source.basis.orthonormalized(),source.origin)
+
+func play_muzzle():
+	if is_wolf or not update_muzzle_anchor():return false
+	return game.clientfx.play(muzzle_record.group,null,muzzle_anchor.global_position,false,0,muzzle_anchor)!=null
 
 func prepare_library_weapon(item):
 	var model_info=game.book.models.get(item.get("model",""),{})
@@ -202,7 +240,7 @@ func prepare_library_weapon(item):
 					var custom=material.duplicate();custom.albedo_texture=load(item.skins[slot]);material_changes.append({"mesh":mesh,"surface":surface,"material":custom})
 		var name=str(mesh.name);var dash=name.rfind("-")
 		if dash>0 and name.substr(dash+1).is_valid_int() and names.has(name.substr(0,dash)):mesh.hide()
-	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"name":item.name,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
+	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"name":item.name,"sourceModel":model_info.source,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
 
 func apply_prepared_weapon(prepared):
 	if is_instance_valid(viewmodel):camera.remove_child(viewmodel);viewmodel.queue_free()
@@ -214,7 +252,10 @@ func apply_prepared_weapon(prepared):
 		if weapon_anim.has_animation(clip):weapon_anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
 	weapon_info=prepared.info
 	fire_sound.stop();reload_sound.stop();fire_sound.stream=prepared.sounds.fire;reload_sound.stream=prepared.sounds.reload
-	weapon_clip="";weapon_action_time=0;viewmodel.visible=not is_wolf;play_weapon_clip("idle")
+	weapon_clip="";weapon_action_time=0;viewmodel.visible=not is_wolf
+	if weapon_anim.has_animation("select"):play_weapon_clip("select",weapon_anim.get_animation("select").length)
+	else:play_weapon_clip("idle")
+	configure_muzzle()
 
 func equip_library_weapon(item):
 	var prepared=prepare_library_weapon(item)
@@ -353,6 +394,7 @@ func switch_form(force=false):
 	pending_melee.clear()
 	extra_health=0
 	is_wolf = not is_wolf
+	if not is_wolf:game.clear_power_effects()
 	if is_instance_valid(source_events):source_events.reset()
 	game.game_audio.play_at("root/wt_snd/player/wolf_changetowolf.wav" if is_wolf else "root/wt_snd/player/wolf_changetohuman.wav",global_position,false)
 	game.clientfx.play("ChangeCharEffect",self)
@@ -375,7 +417,8 @@ func switch_form(force=false):
 
 func apply_camera_form():
 	third_person = is_wolf
-	camera_arm.spring_length = 3.4 if is_wolf else 0.0
+	camera_arm.spring_length = preload("res://scripts/video_layout.gd").WOLF_CAMERA_DISTANCE if is_wolf else 0.0
+	pivot.position.y=preload("res://scripts/video_layout.gd").WOLF_CAMERA_TARGET_HEIGHT if is_wolf else 1.55
 	# Match the reference's centered, lower-screen wolf. Raise the entire arm
 	# so its collision sweep follows the actual camera, including low ceilings.
 	camera_arm.position.y = 0.55 if is_wolf else 0.0
@@ -383,7 +426,7 @@ func apply_camera_form():
 	human.visible = false
 	wolf.visible = is_wolf
 
-func is_scoped():return not game.using_bomb() and not is_wolf and weapon_info.get("category","")=="sniper" and Input.is_action_pressed("aim")
+func is_scoped():return not game.using_bomb() and game.reloading<=0 and not is_wolf and weapon_info.get("category","")=="sniper" and Input.is_action_pressed("aim")
 
 func toggle_camera():
 	apply_camera_form()
@@ -398,6 +441,30 @@ func reset_locomotion():
 	forward_held = false
 	move_axis = Vector2.ZERO
 	normal_run_toggled = false
+	airborne_last_frame=false;landing_remaining=0
+
+func locomotion_clip(axis):
+	if not is_on_floor():return "jump_air" if game.clientfx.install_motion(self,"jump_air") else "jump"
+	if landing_remaining>0 and game.clientfx.install_motion(self,"jump_land"):return "jump_land"
+	if axis.length()<=0.15:return "crouch" if crouching else "idle"
+	if wolf_running:return "wolf_run"
+	var horizontal="left" if axis.x< -0.25 else ("right" if axis.x>0.25 else "")
+	var vertical="back" if axis.y>0.25 else ("forward" if axis.y< -0.25 else "")
+	var prefix="crouch_" if crouching else "run_"
+	var suffix=vertical+("_" if vertical!="" and horizontal!="" else "")+horizontal
+	if suffix=="forward":return "crouch_run" if crouching else "run"
+	var clip=prefix+suffix
+	return clip if game.clientfx.install_motion(self,clip) else ("crouch_run" if crouching else "run")
+
+func update_locomotion(axis,delta):
+	if not is_wolf:
+		if action_time<=0:play_clip(("crouch_run" if axis.length()>0.15 else "crouch") if crouching else ("run" if axis.length()>0.15 else "idle"))
+		return
+	landing_remaining=maxf(0,landing_remaining-delta)
+	if airborne_last_frame and is_on_floor() and game.clientfx.install_motion(self,"jump_land"):
+		landing_remaining=anim.get_animation("jump_land").length
+	airborne_last_frame=not is_on_floor()
+	if action_time<=0:play_clip(locomotion_clip(axis))
 
 func register_forward_press():
 	var gap = movement_clock - last_forward_press
@@ -463,13 +530,15 @@ func _physics_process(delta):
 		crouching = not get_world_3d().direct_space_state.intersect_shape(clearance, 1).is_empty()
 	capsule.height = 1.2 if crouching else 1.8
 	body_shape.position.y = capsule.height * 0.5
-	pivot.position.y = lerpf(pivot.position.y, 1.05 if crouching else 1.55, delta * 14)
+	var target_height=(0.7 if crouching else preload("res://scripts/video_layout.gd").WOLF_CAMERA_TARGET_HEIGHT) if is_wolf else (1.05 if crouching else 1.55)
+	pivot.position.y = lerpf(pivot.position.y, target_height, delta * 14)
 	if crouching and not rolling:
 		speed *= 0.5
 	movement_speed = speed if rolling or air_attacking or axis.length() > 0.1 else 0.0
 	if Input.is_action_just_pressed("jump") and is_on_floor() and ( not crouching or rolling):
 		velocity.y = 6.3
-		if not rolling: play_clip("jump");action_time = 0.55
+		if not rolling:
+			current_clip="";play_clip("jump");action_time=anim.get_animation("jump").length if is_wolf and anim.has_animation("jump") else 0.55
 	velocity.x = move_toward(velocity.x, direction.x * speed, delta * 28)
 	velocity.z = move_toward(velocity.z, direction.z * speed, delta * 28)
 	var before_roll=global_position
@@ -488,14 +557,13 @@ func _physics_process(delta):
 	if is_wolf and Input.is_action_just_pressed("aim"):game.strong_attack()
 	if Input.is_action_pressed("fire") and shot_cooldown <= 0:
 		game.attack()
-	if action_time <= 0:
-		play_clip("wolf_run" if wolf_running else (("crouch_run" if axis.length() > 0.15 else "crouch") if crouching else ("run" if axis.length() > 0.15 else "idle")))
+	update_locomotion(axis,delta)
 	if not is_wolf and weapon_action_time <= 0:
 		var next_weapon_clip = "walk" if axis.length() > 0.15 and weapon_anim.has_animation("walk") else "idle"
 		if weapon_clip != next_weapon_clip:
 			play_weapon_clip(next_weapon_clip)
 	if is_instance_valid(viewmodel):viewmodel.visible=not is_wolf and not is_scoped() and not game.using_bomb()
-	camera.fov = lerpf(camera.fov, 70.0 if is_wolf else (18.0 if is_scoped() else (53.0 if Input.is_action_pressed("aim") and not game.using_bomb() else 74.0)), minf(1,delta * 10))
+	camera.fov = lerpf(camera.fov, 70.0 if is_wolf else (18.0 if is_scoped() else (53.0 if Input.is_action_pressed("aim") and game.reloading<=0 and not game.using_bomb() else 74.0)), minf(1,delta * 10))
 
 func begin_roll():
 	if wall_holding or rolling or air_attacking or roll_cooldown > 0 or not is_wolf or not is_on_floor() or game.menu_open or not game.running or action_time > 0: return false
@@ -587,7 +655,7 @@ func advance_air_attack(delta):
 	air_attack_elapsed+=delta
 	if not air_attack_hit and air_attack_elapsed>=air_attack_duration*float(game.equipment.rules.mobileAdaptation.airAttackHitFraction):
 		air_attack_hit=true
-		game.wolf_melee_hit(int(game.equipment.rules.mobileAdaptation.airAttackDamage),float(game.equipment.rules.mobileAdaptation.airAttackRange),"Havada güçlü saldırı")
+		game.wolf_melee_hit(int(game.equipment.rules.mobileAdaptation.airAttackDamage),float(game.equipment.rules.mobileAdaptation.airAttackRange),"Havada güçlü saldırı","strong")
 	if air_attack_elapsed>=air_attack_duration or is_on_floor():end_air_attack()
 
 func end_air_attack():
@@ -595,6 +663,7 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
+	game.clear_power_effects()
 	pending_melee.clear()
 	extra_health=0;howl_fraction=0;extra_decay=0;next_right_attack=false
 	pending_strong=false
@@ -609,4 +678,5 @@ func begin_ground_strong():
 	reset_locomotion();roar_effect.stop();pending_strong=true;current_clip="";play_clip("strong_attack");action_time=anim.get_animation("strong_attack").length;shot_cooldown=action_time;return true
 
 func _process(delta):
+	update_muzzle_anchor()
 	if is_instance_valid(roar_effect):decay_howl_health(delta)

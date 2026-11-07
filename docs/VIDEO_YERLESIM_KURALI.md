@@ -15,3 +15,7 @@ Referanslar: [kurt kaydı](https://drive.google.com/file/d/1aLtBA24fugZ04CYmRADJ
 - PC kayıtlarında dokunmatik tuş yoktur. Mobil düğmeler solda hareket, sağda iki eylem satırı olarak boş kenarlardadır; can/YP, SP/cephane, radar, bildirim ve merkezdeki karakter alanını kapatmaz. Yuvarlak şekilleri ekran oranıyla ovalleşmez. Kullanıcının açıkça sürükleyip kaydettiği düzen korunur.
 
 Varsayılan konumlar `godot/scripts/video_layout.gd` dosyasındadır. Yeni ekran veya özellik bu yerleşimi değiştiremez; kaynakta karşılığı varsa aynı alan kullanılır. Bir konumun özgün PC karşılığı yoksa mobil uyarlama olduğu belirtilir. `video_layout_021.gd` üç ekran boyutunda ölçülen bilgi alanlarını, dairesel düğmeleri, açık kalan görüş alanını ve ekipman satırını sınar. Yeni/değişen ekranların gerçek motor görüntüsü alınmadan yerleşim tamamlandı sayılmaz.
+
+## Yeni kurt kayıtları · 0.24
+
+Yeni iki Drive kaydı aynı kalıcı kuralın parçasıdır. [İnceleme ve kareler](PC_REFERANS_024.md). Ayakta kurt için ölçülen görünür boy ve merkez, `VideoLayout.WOLF_CAMERA_DISTANCE` ve `WOLF_CAMERA_TARGET_HEIGHT` ile varsayılan kameraya bağlandı. Duvar çarpışması kamerayı doğal olarak yaklaştırabilir. Yeni tam ekran buz/ölüm dokuları HUD altında kalır; can/YP, SP, skor, radar ve tuş geometrisini taşımaz.

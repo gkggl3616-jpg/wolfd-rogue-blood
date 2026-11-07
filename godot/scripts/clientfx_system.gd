@@ -7,9 +7,37 @@ var names={}
 var active=[]
 var missing=[]
 var camera_shake=Vector2.ZERO
+var motion_index={}
+var motion_donor=""
+var motion_clips={}
+var frost=[]
+func clear_frost(entry):
+	for row in entry.meshes:
+		var mesh=row.mesh.get_ref()
+		if is_instance_valid(mesh):mesh.material_overlay=row.previous
+func frost_hit(victim,attacker):
+	if not is_instance_valid(attacker) or not game.actor_alive(victim) or game.game_audio.actor_form(attacker)!="wolf":return
+	# The ice form association is source data; this hit presentation does not
+	# infer an unverified PC stun, movement penalty or damage modifier.
+	var effects=model_record(attacker).get("effects",{}).values()
+	if not effects.any(func(name):return str(name).to_lower() in ["howling_ice_1","cryicewolf"]):return
+	for entry in frost:
+		if entry.actor.get_ref()==victim:clear_frost(entry)
+	frost=frost.filter(func(entry):return entry.actor.get_ref()!=victim)
+	var node=catalog.groups.lockedinice.nodes[0];var seconds=float(node.end)
+	var model=victim.wolf if victim==game.player and victim.is_wolf else (victim.human if victim==game.player else victim.body)
+	var material=StandardMaterial3D.new();material.albedo_texture=load(node.frames[0]);material.albedo_color=Color(.85,.95,1,.48);material.transparency=BaseMaterial3D.TRANSPARENCY_ALPHA;material.roughness=.2
+	var meshes=[]
+	for mesh in model.find_children("*","MeshInstance3D",true,false):
+		if str(mesh.name).to_lower().begins_with("tattoo"):continue
+		meshes.append({"mesh":weakref(mesh),"previous":mesh.material_overlay});mesh.material_overlay=material
+	frost.append({"actor":weakref(victim),"remaining":seconds,"meshes":meshes})
+	for effect in group_instances(victim,"lockedinice"):effect.queue_free()
+	play("lockedinice",victim)
 func _ready():
 	catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/clientfx/catalog.json"))
 	animations=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/animation-events.json"))
+	motion_index=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/locomotion/index.json"))
 	for name in catalog.groups:names[name.to_lower()]=name
 func canonical(name):return names.get(str(name).to_lower(),"")
 func play(name,actor=null,where=null,loop=false,depth=0,parent=null,round_effect=false):
@@ -30,7 +58,13 @@ func clear():
 	for node in active:
 		if is_instance_valid(node):node.queue_free()
 	active=[];camera_shake=Vector2.ZERO
-func _process(_delta):
+	for entry in frost:clear_frost(entry)
+	frost=[]
+func _process(delta):
+	for entry in frost:
+		entry.remaining-=delta
+		if entry.remaining<=0 or not game.actor_alive(entry.actor.get_ref()):clear_frost(entry);entry.remaining=0
+	frost=frost.filter(func(entry):return entry.remaining>0)
 	if not game.running or game.menu_open or game.application_suspended:clear()
 	elif not game.is_match_active():
 		for node in active:
@@ -49,6 +83,7 @@ func animation_record(actor,clip):
 	var form=game.game_audio.actor_form(actor)
 	var aliases={"idle":"LSt","run":"LRF","jump":"LJJ","attack":"UMFi1" if form=="wolf" else "URi1Fi","reload":"URi1Re","crouch":"LC","crouch_run":"LCWF","roar":"T_CRY","wolf_run":"T_WallDash","body_attack":"T_Bodyatk","special_attack":"T_Specialatk","wall_hold":"T_WallHold_L","airborne_attack":"T_WallDashAtk","strong_attack":"UMFi3","attack_right":"UMFi2"}
 	var source=aliases.get(clip,clip)
+	if form=="wolf":source=motion_index.aliases.get(clip,source)
 	var action=actor.character_info.get(form,{}).get("sourceActions",{}).get(clip,{})
 	if actor!=game.player or actor.mutation_id=="normal":
 		if action.has("clip"):source=action.clip
@@ -82,6 +117,20 @@ func install_strong(actor):
 func install_right_attack(actor):
 	if right_data.is_empty():right_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/right-clips.json")).donors
 	return install_action(actor,"attack_right",right_data)
+func install_motion(actor,clip):
+	if not is_instance_valid(actor.anim):return false
+	if actor.anim.has_animation(clip):return true
+	var donor=model_record(actor).get("donor","")
+	var record=motion_index.donors.get(donor,{})
+	if not clip in record.get("clips",[]):return false
+	if donor!=motion_donor:
+		var bytes=FileAccess.get_file_as_bytes(record.asset).decompress_dynamic(32*1024*1024,FileAccess.COMPRESSION_GZIP)
+		if bytes.is_empty():return false
+		motion_clips=JSON.parse_string(bytes.get_string_from_utf8()).clips;motion_donor=donor
+	if not motion_clips.has(clip):return false
+	var installed=install_action(actor,clip,{donor:motion_clips[clip]})
+	if installed:actor.anim.get_animation(clip).loop_mode=Animation.LOOP_NONE if clip=="jump_land" else Animation.LOOP_LINEAR
+	return installed
 func install_action(actor,clip,data):
 	if not is_instance_valid(actor.anim):return false
 	if actor.anim.has_animation(clip):return true

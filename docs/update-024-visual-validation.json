@@ -1,0 +1,120 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "purple-claw-passive-024",
+      "path": "docs/review/update-024/purple-claw-passive-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "563948d503bc3e8b7b8504deff89cbc9de79077a9edf2d7ab0166eba1cabc09a"
+    },
+    {
+      "height": 720,
+      "name": "original-diagonal-run-024",
+      "path": "docs/review/update-024/original-diagonal-run-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3229f0d11f75e157d7f6eb93bd83817b71d7a9b8a95ead4cf9971fd673b8b48f"
+    },
+    {
+      "height": 720,
+      "name": "original-crouch-back-024",
+      "path": "docs/review/update-024/original-crouch-back-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f03f081679ee73d3326084332ea0378ca76a28be273bd4ccca8b6a4be21c227f"
+    },
+    {
+      "height": 720,
+      "name": "original-airborne-pose-024",
+      "path": "docs/review/update-024/original-airborne-pose-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "93ec59ed1213121ddbbe4a6ac7f4aa93c81f9371f199c731e9c3c33e69882608"
+    },
+    {
+      "height": 720,
+      "name": "original-landing-pose-024",
+      "path": "docs/review/update-024/original-landing-pose-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "61d61dd69b0c667ad17460cf1f360c87f21ecda576b8776bfb062cdfe41b1ad7"
+    },
+    {
+      "height": 720,
+      "name": "equipped-purple-claw-swing-024",
+      "path": "docs/review/update-024/equipped-purple-claw-swing-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4486d61f08ab232c5d27238f76ea1c1ea385e713b2fd34b673c2c59adb5100f6"
+    },
+    {
+      "height": 720,
+      "name": "source-ice-screen-and-body-024",
+      "path": "docs/review/update-024/source-ice-screen-and-body-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2faa3e7b8df568d4e9c728da1f8a579455d2b2ab9e9eb6b8fddc01534e043d4c"
+    },
+    {
+      "height": 720,
+      "name": "source-death-screen-024",
+      "path": "docs/review/update-024/source-death-screen-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "696e60cd4f92bc62885041ec97050b0c1f8b73dcd2ed9eeb1160cd548d8d3708"
+    },
+    {
+      "height": 720,
+      "name": "native-taksim-purple-claw-024",
+      "path": "docs/review/update-024/native-taksim-purple-claw-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b98d27703f9fa62f714819a839d1ae6516ae6423ce49c64275afeb316ae8b5a6"
+    },
+    {
+      "height": 720,
+      "name": "native-taksim-ice-hit-024",
+      "path": "docs/review/update-024/native-taksim-ice-hit-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ef13a20e8028e5ebf69ab19e5c87055fbbe46b0e9064a542968e30c2efd641af"
+    },
+    {
+      "height": 720,
+      "name": "original-weapon-select-024",
+      "path": "docs/review/update-024/original-weapon-select-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d2d24e9dc52a37e97026d659920e17bc355070703d6741833e70fa0b933733a1"
+    },
+    {
+      "height": 720,
+      "name": "sniper-scope-open-024",
+      "path": "docs/review/update-024/sniper-scope-open-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "268f461db42fe1d4eb5e4ca88a55e94f3ced5acab76fdff1c77425474a5e3610"
+    },
+    {
+      "height": 720,
+      "name": "reload-closes-scope-024",
+      "path": "docs/review/update-024/reload-closes-scope-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5d9078cc6bc0b1978eadf34a1d59f188fa9aa9071cb9576ea5caab90cfc9294a"
+    },
+    {
+      "height": 720,
+      "name": "sniper-scope-closed-024",
+      "path": "docs/review/update-024/sniper-scope-closed-024.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "315e25b46580ebf2f920d929557df6afe50e54e4fc36ed78c46749ca6e47b290"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+}

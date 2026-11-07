@@ -150,7 +150,18 @@ func footstep(actor):
 	var suffix="a" if randi()%2==0 else "b"
 	return play_at("root/wt_snd/player/footstep/%s/%s_%s_footstep%s.wav" % [form,form,surface,suffix],actor.global_position,actor!=game.player,"WolfEffects",-20)
 func match_sound(event):return play_at("root/wt_snd/interface/msg_"+event+".wav",Vector3.ZERO,false,"WolfEffects",-12,true)
+func stop_room_countdown():
+	for node in active_voices:
+		if is_instance_valid(node) and node.has_meta("room_countdown"):node.stop();node.queue_free()
+	active_voices=active_voices.filter(func(node):return is_instance_valid(node) and not node.is_queued_for_deletion())
+func room_countdown(number):
+	stop_room_countdown()
+	var played=play_at("root/wt_snd/interface/count_%d.wav" % clampi(number,0,3),Vector3.ZERO,false,"WolfEffects",-12,true)
+	if played and not game.test_mode:active_voices[-1].set_meta("room_countdown",number)
+	return played
 func clear_match_voices():
 	for node in active_voices:
-		if is_instance_valid(node):node.stop();node.queue_free()
-	active_voices=[]
+		# The source GO clip is 1.32 seconds: loading/round setup may complete
+		# sooner. Preserve its ending; cancellation stops it explicitly.
+		if is_instance_valid(node) and node.get_meta("room_countdown",-1)!=0:node.stop();node.queue_free()
+	active_voices=active_voices.filter(func(node):return is_instance_valid(node) and not node.is_queued_for_deletion())

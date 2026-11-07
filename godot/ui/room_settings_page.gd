@@ -114,4 +114,4 @@ func apply():
  var title=view.find_widget("FieldNameEditBox").text.strip_edges()
  if title.length()<2 or maps.item_count==0:ui.show_error("Oda adı ve moda uygun harita gerekli.");return
  draft.title=title;draft.capacity=capacity.get_selected_id();draft.playerForm="wolf" if int(draft.mode)==ui.game.LocalHunt.MODE and draft.team=="red" else "human"
- ui.game.local_room=draft.duplicate(true);ui.navigate("room")
+ ui.game.local_room=draft.duplicate(true);ui.history=ui.history.filter(func(entry):return entry not in ["room","room_settings","create_room"]);ui.navigate("room",false)

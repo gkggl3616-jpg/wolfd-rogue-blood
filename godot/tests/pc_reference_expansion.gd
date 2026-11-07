@@ -93,7 +93,7 @@ func run():
 	ensure("interface/createfield" in ui.source_layouts and not "section/prideladder/prideladdercreateroomdialog" in ui.source_layouts,"detailed PC reference uses the ordinary room creator rather than the clan-ladder dialog")
 	ui.room_mode.select(mode_index);ui.room_mode.item_selected.emit(mode_index)
 	ensure(ui.room_map.item_count==35 and ui.room_form.visible,"local hunt retains all 34 selected maps and an actual form selector")
-	ui.links["▣"].pressed.emit()
+	ui.links["Harita görselleri"].pressed.emit()
 	ensure(ui.modal!=null and ui.modal.find_children("*","TextureRect",true,false).any(func(node):return node.texture!=null),"map gallery renders source photos as selectable map buttons")
 	ui.close_modal();game.local_room={"title":"QA Av","mode":game.LocalHunt.MODE,"map":84,"playerForm":"wolf","botDifficulty":"hard","team":"blue"}
 	ensure(game.start_round(),"hunt starts on the selected real source map")

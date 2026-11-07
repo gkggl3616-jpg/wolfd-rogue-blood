@@ -219,6 +219,13 @@ func refresh_from_game():
 		var button=power_buttons[i];var id=game.inbox.state.powerSlots.get(button.get_meta("power_slot"),"");var count=int(game.inbox.state.powerCounts.get(id,0))
 		button.visible=not game.spectator.active and game.player.is_wolf and id!="";button.disabled=count<=0 or not game.is_combat_active();power_counts[i].text=str(count)
 		var item=game.power_item(id);button.tooltip_text=item.get("name","")
+		var slot=button.get_meta("power_slot")
+		if slot=="support" and not item.is_empty():
+			var remaining=maxi(0,int(item.mobileTuning.usesPerRound)-int(game.healing_uses.get(id,0)))
+			power_counts[i].text=str(remaining);button.disabled=button.disabled or remaining<=0 or game.health>=game.max_health();button.tooltip_text+=" · F"
+		elif slot=="energy":
+			power_counts[i].text=(str(ceili(game.booster_remaining))+"s") if game.booster_remaining>0 else ("∞" if count>0 else "0")
+			button.disabled=button.disabled or game.booster_remaining>0 or game.health<=1;button.tooltip_text+=" · T"
 		if power_icons[i].get_meta("power_id","unset")!=id:
 			var region=item.get("iconRegion",[0,0,210,75]);power_icons[i].texture=Art.atlas(item.get("icon",""),Rect2(region[0],region[1],region[2],region[3]));power_icons[i].set_meta("power_id",id)
 	weapon_view.set_value("WeaponPoint",game.match_sp)

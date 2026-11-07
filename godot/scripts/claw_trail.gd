@@ -10,6 +10,20 @@ var skeleton
 var samples=[]
 var meshes=[]
 var material
+var glow=[]
+func refresh_glow():
+	# The reference glow belongs to active FT/energy, independently of the
+	# equipped claw. Item ownership alone cannot start a combat effect.
+	var active=player.is_wolf and player.game.is_combat_active() and player.game.booster_remaining>0
+	if not active:
+		for effect in glow:
+			if is_instance_valid(effect):effect.queue_free()
+		glow=[];return
+	glow=glow.filter(func(effect):return is_instance_valid(effect) and not effect.is_queued_for_deletion())
+	for group in ["wolf_Hand_glowL","wolf_Hand_glowR"]:
+		if not glow.any(func(effect):return effect.group==group):
+			var effect=player.game.clientfx.play(group,player,null,true)
+			if effect!=null:glow.append(effect)
 func clear():
 	remaining=0;samples=[];bindings=[];source_control=false;enabled_sides=[true,true]
 	for node in meshes:
@@ -40,6 +54,7 @@ func source_window(side,enabled):
 	enabled_sides[side]=enabled
 	if not enabled_sides.any(func(v):return v):clear()
 func _process(delta):
+	refresh_glow()
 	if remaining<=0:return
 	if not player.game.is_combat_active() or not player.is_wolf or not is_instance_valid(skeleton):clear();return
 	remaining=0.18 if source_control else remaining-delta

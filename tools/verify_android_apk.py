@@ -11,7 +11,7 @@ import subprocess
 import zipfile
 
 CATALOGUES = [
-    'assets/presentation/catalog.json','assets/presentation/menu-clips.json','assets/items/sets.json',
+    'assets/weapons/muzzle-bindings.json','assets/gameplay/locomotion/index.json','assets/presentation/catalog.json','assets/presentation/menu-clips.json','assets/items/sets.json',
     'assets/library/weapons.json', 'assets/library/characters.json', 'assets/library/visuals.json',
     'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/maps/offline.json', 'assets/maps/radar.json', 'assets/shared_media/catalog.json',
     'assets/pc_ui/catalog.json', 'assets/full_ui/catalog.json', 'assets/ui/catalog.json',
@@ -117,7 +117,7 @@ def inspect(path, sdk, expected_package):
     minimum = re.search(r"sdkVersion:'(\d+)'", badging)
     target = re.search(r"targetSdkVersion:'(\d+)'", badging)
     permissions = re.findall(r"uses-permission(?:-sdk-23)?: name='([^']+)'", badging)
-    if expected_package.endswith('.offline') and 'android.permission.INTERNET' in permissions:
+    if expected_package.startswith('com.wolfrogue.blood.offline') and 'android.permission.INTERNET' in permissions:
         raise InvalidApk('Offline build must not request INTERNET permission')
     result.update({'package':package[1], 'versionCode':int(package[2]), 'versionName':package[3],
                    'bytes':path.stat().st_size, 'sha256':digest, 'signerCertificateSha256':certificate[1],

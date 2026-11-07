@@ -1,5 +1,7 @@
 # Wolf Rogue Blood çalışma kuralları
 
+- Kalıcı FT düzeltmesi (0.25): mor el parlaması Mor Pençe sahipliğine bağlı değildir; yalnızca başarıyla etkinleştirilen enerji/FT paketi süresince görünür. FT hareketi hızlandırır ve ana candan bedel alır. İlk yardım ayrı yaşam başına kullanım sınırına sahiptir; tekrar kullanılabilen paket sahipliği her basışta tüketilmez. Kaynakta çözülemeyen hız birimi ve video/sürüm zaman farkı kesin PC değeri diye sunulmaz.
+
 - Geçerli kapsam çevrimdışı Android sürümüdür; gerçek sunucu kapsam dışındadır. Tam PC aktarımı veya fiziksel Android testi yapılmış gibi işaretleme.
 - Kullanıcının son isteği: mevcut 19 haritayı koruyup rastgele 15 yeni kaynak harita ekle (toplam 34). Önceki Giriş/İki Tapınak hariç tutması korunur. Yeni haritalar geometri, takım doğma noktaları ve navigasyonla doğrulanmadan hazır sayılmaz.
 - Her oyun güncellemesinde yeni/değişen özelliklerin gerçek oyun içi ekran görüntülerini al ve kullanıcıya fotoğraflarla göster. Doğrulanmış tek APK'yı GitHub sürüm dosyası olarak paylaşmak kullanıcı tarafından yetkilendirildi.
@@ -11,4 +13,9 @@
 
 - Son PC referanslarının kaydı `docs/pc-reference-expansion.json` içindedir. Harita fotoğrafları gerçek PC tablosuna, rütbe ad/simgeleri kaynak class.txt dosyasına bağlıdır; yerel GP eşikleri özgün PC eşiği diye sunulmaz.
 
-- Kalıcı kullanıcı kuralı (2026-11-07): Dört referans videosunda bir öğe neredeyse arayüz, menü, can, YP, SP, süre, skor, radar, cephane, yetenek ve silah alanı aynı göreli konumda kalır. Yeni özellik veya güncelleme bu yerleşimi değiştiremez. Varsayılan geometri `godot/scripts/video_layout.gd` üzerinden gelir; yeni ekranlar önce kaynak kareyle karşılaştırılır. PC videosunda bulunmayan mobil tuşlar bilgi alanlarını ve merkezdeki karakteri kapatmadan kenarlara yerleştirilir; mobil uyarlama özgün PC tuş konumu diye sunulmaz. Kullanıcının açıkça yaptığı kontrol düzenlemesi ayrı tercihtir; yeni özellik eklerken varsayılan düzen keyfî değiştirilmez.
+- Kalıcı kullanıcı kuralı (2026-11-07): Kullanıcının tüm referans videolarında bir öğe neredeyse arayüz, menü, can, YP, SP, süre, skor, radar, cephane, yetenek ve silah alanı aynı göreli konumda kalır. Yeni özellik veya güncelleme bu yerleşimi değiştiremez. Varsayılan geometri `godot/scripts/video_layout.gd` üzerinden gelir; yeni ekranlar önce kaynak kareyle karşılaştırılır. PC videosunda bulunmayan mobil tuşlar bilgi alanlarını ve merkezdeki karakteri kapatmadan kenarlara yerleştirilir; mobil uyarlama özgün PC tuş konumu diye sunulmaz. Kullanıcının açıkça yaptığı kontrol düzenlemesi ayrı tercihtir; yeni özellik eklerken varsayılan düzen keyfî değiştirilmez.
+
+- İki yeni kurt kaydının gerçek dosya/kare incelemesi ve açık eşitlik sınırları `docs/PC_REFERANS_024.md` ile `docs/video-wolf-review-024.json` içindedir. Yeni bir otomatik video özeti doğrudan görüntü kanıtı yerine geçmez.
+- Altı oyun kaydının yeniden taraması, FT'nin can/YP kanıtı ve 0.24'teki yanlış eşya/efekt bağının düzeltmesi `docs/PC_REFERANS_025.md` ve `docs/video-audit-025.json` içindedir. 0.24 belgesindeki Mor Pençe bağlantısını yeniden uygulama.
+
+- Kalıcı inceleme kuralı (0.26): Seyrek kare/temas paftası incelemesini videonun tamamını kesintisiz izlemek diye sunma. Uzun kayıtları ses ve hareket içeren ardışık parçalarla incele; otomatik çözümleme eksik aralıklarını ve başarısız işleri açıkça kaydet. Modelin "enerji mermisi", "zemin patlaması", "hız rampası", "final kararması" gibi tahminlerini gerçek kare ve kaynak doğrulaması olmadan oyun kuralına dönüştürme. 0.26 inceleme yöntemi ve sınırları `docs/PC_REFERANS_026.md` içindedir.

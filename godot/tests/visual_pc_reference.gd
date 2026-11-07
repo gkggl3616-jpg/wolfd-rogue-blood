@@ -23,7 +23,7 @@ func run():
 	game.pc_panel.navigate("create_room");var ui=game.pc_panel
 	for i in range(ui.room_map.item_count):
 		if ui.room_map.get_item_id(i)==84:ui.room_map.select(i);ui.room_map.item_selected.emit(i)
-	ui.links["▣"].pressed.emit();await capture("map-photo-gallery-012")
+	ui.links["Harita görselleri"].pressed.emit();await capture("map-photo-gallery-012")
 	ui.close_modal();ui.links.PLOK.pressed.emit();await capture("room-map-photo-rank-012")
 	game.show_library("Dövmeler");ui=game.library_panel
 	for role in ["body","left","right"]:
@@ -38,7 +38,7 @@ func run():
 	game.local_room={"title":"Öğretici","mode":game.LocalTutorial.MODE,"map":84};game.start_round();await frames(20);await capture("tutorial-012")
 	game.tutorial.active=false;var sniper=game.book.weapons.filter(func(row):return row.category=="sniper" and row.get("available",false))[0];game.book.acquire(sniper.id);game.equip_library_weapon(sniper)
 	Input.action_press("aim");await frames(20);await capture("sniper-scope-012");Input.action_release("aim")
-	root.size=Vector2i(1024,768);game.show_home();game.pc_panel.navigate("create_room");game.pc_panel.links["▣"].pressed.emit();await capture("map-photo-gallery-native-012")
+	root.size=Vector2i(1024,768);game.show_home();game.pc_panel.navigate("create_room");game.pc_panel.links["Harita görselleri"].pressed.emit();await capture("map-photo-gallery-native-012")
 	var report={"failures":failures,"captures":captures,"rendering":RenderingServer.get_current_rendering_method(),"adapter":RenderingServer.get_video_adapter_name(),"physicalAndroidDeviceTested":false,"testFixtureLocalCash":1000}
 	var file=FileAccess.open(output.path_join("report.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
 	game.queue_free();await frames();print("REFERENCE_VISUAL_QA ",captures.size()," captures; failures=",failures);quit(0 if failures==0 else 1)

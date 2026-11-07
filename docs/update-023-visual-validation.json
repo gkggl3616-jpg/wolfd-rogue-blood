@@ -6,7 +6,7 @@
       "path": "docs/review/update-023/room-countdown-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6dbea961cd1e7b72e8ba66f8d1cc79012ee9c74a3f93e48a896c06160cbe3e03"
+      "sha256": "e54697a4ca018cf25af1f07d8c678759ce2e13f95c769bc9e9953bbaaa1c2d64"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-023/room-go-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "01b51d092e6c49eee14b65b70a032141666014a2184b065efc2156133cb84963"
+      "sha256": "55cd7a4ca1cc990051d563f5231af78a019b91457ae77da24613704aa629e19f"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-023/separate-preparation-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b41e33eaba613c63d6cd2c5f938b986d65c5818c26fbc42f0287a34dc67a3cd9"
+      "sha256": "965e91b3bcb8374eecb7f18fe71d79449e85d2f329caf6f99d4b76e5f8cc6632"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-023/early-choice-still-ready-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0a0a00e8061a825083c8ba9728c611662aa0020ba60bfce53ca86355f16e7602"
+      "sha256": "3e8ef0d148d0c395e1bed1f459a407221b4ebe0de47c2f4bcea37c25c3e0d9a2"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-023/source-start-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3a6078f95289acac9f07097ef0a641e00acb1648ac74bffa2a390bedc9cc2ed0"
+      "sha256": "b8b89ad8c054ed23e45d1dbaac4e4a5014f6d32bafeaba6ee7555b6a48eaa321"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-023/live-scoreboard-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "29e4bf5227eb2d45fcba6013929fd2a417cbf64b9daefc40da94e760dfa35278"
+      "sha256": "df6358c9592fed46b8d3ca68d63155310670439a5a0f7f5c12ac8fc12a4f7ed6"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-023/scoreboard-keeps-dead-player-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8b9f9fd8e63224f936f036004f6c878e0c0b34bf61f7b8362bf532b6f1328284"
+      "sha256": "e7917324ba7170e10d1bf39c9a77bca69e664e00bfbf8fc153fc1082d259f16a"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-023/automatic-round-scoreboard-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f97a7bb3da9a8e6564e6ecdf0b571b0681eaac5619371d11945502cdb6f84dc6"
+      "sha256": "a5f97789c29673a77ac94c619c6811726c77a58885ad7955258420cb41fe6560"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-023/source-local-kick-menu-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "94a94b77902ba333566e6c6e2cfe9c704318c910e7aa4bae5baad6c7c451522e"
+      "sha256": "a6fbd786290aa22483347dd96d9c526e3cdeee72c4bbd7dcaa333faf8df8943a"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-023/source-claw-contact-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "74d7bc2a82d00c076c00c2d11e3dd1e744a331885ca660e1c01faa8ad1020b2b"
+      "sha256": "56e3fb6d5f9838d575b6d307f044fa520bbb9bef22dd6dbe615196203b88bca9"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-023/single-death-feedback-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bfdf5e9162f0b371039bf2d3eb962cb013b0e8b6730be9145391ffa133f21e93"
+      "sha256": "166e2f266d9b66b56dc79678bbe0cd1456547a2760418a4aee55ef7ed5fd6450"
     },
     {
       "height": 720,
@@ -102,11 +102,11 @@
       "path": "docs/review/update-023/return-room-settings-preserved-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "233bca0a473e39746f6cd3f1191b1c956670dedf665fb95f17e8b1708e8841ae"
+      "sha256": "f13b1f6c6238ee034069fcff5db28d0cc8453516236974009e4947a2b548df76"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
+  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
 }

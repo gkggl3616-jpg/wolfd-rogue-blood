@@ -21,7 +21,9 @@ func _ready():
 	hit.hide();arrow.hide()
 
 func show_hit():hit_time=0.16
-func show_death():death_time=0.9
+func show_death():
+	death_time=0.9
+	game.clientfx.play("Deathdirecting",game.player,null,false,0,null,true)
 
 func show_damage(source_position=null):
 	hurt_time=0.65
@@ -35,6 +37,7 @@ func show_damage(source_position=null):
 func reset():
 	hit_time=0;hurt_time=0;death_time=0
 	if is_instance_valid(hit):hit.hide();arrow.hide();vignette.material.set_shader_parameter("strength",0.0)
+	for effect in game.clientfx.group_instances(game.player,"Deathdirecting"):effect.queue_free()
 
 func _process(delta):
 	visible=game.running and not game.menu_open
@@ -48,4 +51,4 @@ func _process(delta):
 	var watched=game.spectator.target if game.spectator.active and game.actor_alive(game.spectator.target) else null
 	var health=watched.health if watched!=null else game.health
 	var low_health=clampf((25.0-health)/25.0,0,1)*0.25 if health>0 else 0.0
-	vignette.material.set_shader_parameter("strength",maxf(death_time*.95,maxf(low_health,hurt_time*0.7)))
+	vignette.material.set_shader_parameter("strength",maxf(low_health,hurt_time*0.7))

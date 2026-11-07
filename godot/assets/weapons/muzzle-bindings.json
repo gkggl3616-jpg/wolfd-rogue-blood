@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "bindings": {
+    "root/wt_guns/models_pv/wt_pv_akei47.ltb": {
+      "sourceSha256": "db9f7572c063482eba267a32741da0dbd5d1a429d083b3c476d40d5ef7fdb51d",
+      "group": "AK-47_PV_Muzz",
+      "socket": {
+        "name": "Flash",
+        "bone": 20,
+        "boneName": "Bone_Gun_0",
+        "rotation": [
+          -3.000000106112566e-06,
+          0.7071070075035095,
+          3.000000106112566e-06,
+          0.7071070075035095
+        ],
+        "position": [
+          1.7932599782943726,
+          0.1781270056962967,
+          -0.0011050000321120024
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "sockets": {
+        "breach": {
+          "name": "breach",
+          "bone": 20,
+          "boneName": "Bone_Gun_0",
+          "rotation": [
+            -3.000000106112566e-06,
+            0.7071070075035095,
+            3.000000106112566e-06,
+            0.7071070075035095
+          ],
+          "position": [
+            0.4717090129852295,
+            0.2223699986934662,
+            -0.0637499988079071
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Flash": {
+          "name": "Flash",
+          "bone": 20,
+          "boneName": "Bone_Gun_0",
+          "rotation": [
+            -3.000000106112566e-06,
+            0.7071070075035095,
+            3.000000106112566e-06,
+            0.7071070075035095
+          ],
+          "position": [
+            1.7932599782943726,
+            0.1781270056962967,
+            -0.0011050000321120024
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "particleScaleAdapter": 1.0
+    }
+  },
+  "scope": "Verified AK-47 original Flash/breach socket positions and source FX group; particle size uses an explicit mobile viewmodel adapter. Other weapon models remain unmapped."
+}

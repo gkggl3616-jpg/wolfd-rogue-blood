@@ -110,3 +110,13 @@ func nearest_in_component(origin,target):
   var d=centers[i].distance_squared_to(target)
   if d<distance:distance=d;best=centers[i]
  return best
+
+func has_patrol_extent(origin):
+ # A collision-clear spawn can still sit on an isolated navigation sliver.
+ # Use the same two-metre destinations as the bot patrol, without inventing
+ # a connection to another floor or moving it outside its source team zone.
+ var group=component(origin)
+ if group<0:return false
+ for i in range(centers.size()):
+  if components[i]==group and centers[i].distance_to(origin)>2.0:return true
+ return false

@@ -1,0 +1,160 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "entry-and-local-profile-026",
+      "path": "docs/review/update-026/entry-and-local-profile-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e1421a192d17391798791d15067a40df1702b9238c95c13309610c93fafb6b1e"
+    },
+    {
+      "height": 720,
+      "name": "source-player-name-dialog-026",
+      "path": "docs/review/update-026/source-player-name-dialog-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fe2f56e1f54a1b556c85be00d192d994e3e80b3bc0e9e15d634866f9f3d21abb"
+    },
+    {
+      "height": 720,
+      "name": "source-local-server-selection-026",
+      "path": "docs/review/update-026/source-local-server-selection-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "59100b8aadca11e26cf09c8d0a5a9386640d1a057428661fa8c94447a1add3ea"
+    },
+    {
+      "height": 720,
+      "name": "source-lobby-empty-026",
+      "path": "docs/review/update-026/source-lobby-empty-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "aec004193bf44ca81bf01eb6cf782aeb9289704a2dfccdb2e2510f7338b4677e"
+    },
+    {
+      "height": 720,
+      "name": "source-compact-room-creator-026",
+      "path": "docs/review/update-026/source-compact-room-creator-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1d18ea5d8bb2771db9f66f25364712f4b6962dbbbf2366ded8f504b3b8bed8b1"
+    },
+    {
+      "height": 720,
+      "name": "source-mode-variant-and-map-026",
+      "path": "docs/review/update-026/source-mode-variant-and-map-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "57a67e436309548855b8e990a457c2f597a24d694696c2444a22d491b6b230ca"
+    },
+    {
+      "height": 720,
+      "name": "separate-bot-and-match-settings-026",
+      "path": "docs/review/update-026/separate-bot-and-match-settings-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "979af29c7e63aea7b096326c6a0f39d9887ce7b714ef34bcb86592864192cc18"
+    },
+    {
+      "height": 720,
+      "name": "source-map-gallery-create-026",
+      "path": "docs/review/update-026/source-map-gallery-create-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "898b0f986bd66b6d5e509afccdd22860776400aa2f0de5ddd3fb165712f48d34"
+    },
+    {
+      "height": 720,
+      "name": "source-team-rosters-owner-and-bots-026",
+      "path": "docs/review/update-026/source-team-rosters-owner-and-bots-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "46aa6f6b145ca9203bde06d0e318a02b3dc10fd388c7b4d846b8bb51b6f7deac"
+    },
+    {
+      "height": 720,
+      "name": "source-team-change-026",
+      "path": "docs/review/update-026/source-team-change-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a3109a2bd970b3149e37e5c2f46f1b99f86777b98528b3ba140c8584830773d4"
+    },
+    {
+      "height": 720,
+      "name": "source-room-rule-dialog-026",
+      "path": "docs/review/update-026/source-room-rule-dialog-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a6f280770c2adfb65828182a27fdd27f4bbfaaf07bd1702467d1aabe3550d9e5"
+    },
+    {
+      "height": 720,
+      "name": "source-map-gallery-room-settings-026",
+      "path": "docs/review/update-026/source-map-gallery-room-settings-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f30b1c420ab81d5267f90cf76473dee95376a21be6776e5dd97a5e14934ad3d6"
+    },
+    {
+      "height": 720,
+      "name": "source-lobby-room-columns-026",
+      "path": "docs/review/update-026/source-lobby-room-columns-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c44a4ea194a1b86f1ab5bcd9be15f73bb53a4bcc7e1c7a3b38caef9d3530e2f1"
+    },
+    {
+      "height": 720,
+      "name": "source-room-start-countdown-026",
+      "path": "docs/review/update-026/source-room-start-countdown-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0b43ce0d3d0ff7d5703ce7bbdcf94de7ba78d58815dd188b02abe3e3cd0e3b9e"
+    },
+    {
+      "height": 720,
+      "name": "source-map-loading-026",
+      "path": "docs/review/update-026/source-map-loading-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "033a368041971506eb882ec27ee33986f68402a34513056d7123ebb7b2c2074a"
+    },
+    {
+      "height": 720,
+      "name": "source-preparation-after-loading-026",
+      "path": "docs/review/update-026/source-preparation-after-loading-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "abc246001f51195dfbf6d3982ef3c98ab49815c14037d81c96b12bc84e10edd5"
+    },
+    {
+      "height": 720,
+      "name": "source-match-start-026",
+      "path": "docs/review/update-026/source-match-start-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d53bcaac0b88da578eb978343c216d9d887c55cbb4ec57b4d6b86c6ebea4bedb"
+    },
+    {
+      "height": 720,
+      "name": "source-result-and-return-026",
+      "path": "docs/review/update-026/source-result-and-return-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "52f89629113a8c36e2fed4561b1d1260cc3ab54ec52d4fa6a7ab8506a7629fb1"
+    },
+    {
+      "height": 720,
+      "name": "source-return-to-same-room-026",
+      "path": "docs/review/update-026/source-return-to-same-room-026.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "71ace93dbee32bdf5dc3089ff9b66a19f38351c8c0639311b5432a0fa2a83e75"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+}

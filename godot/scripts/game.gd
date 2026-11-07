@@ -37,6 +37,10 @@ var selection_panel
 var booster_remaining=0.0
 var booster_tuning={}
 var healing_uses={}
+var healing_remaining=0.0
+var healing_regen_per_minute=0.0
+var healing_fraction=0.0
+var energy_drain_fraction=0.0
 var career=LocalCareer.new()
 var match_id=""
 var profile_lock
@@ -355,6 +359,7 @@ func cycle_primary():
 
 func equipped_slots():return match_slots if running and round_selection_enabled and not match_slots.is_empty() else book.slots
 func reset_round_equipment():
+	clear_power_effects();healing_uses.clear()
 	if not round_selection_enabled:return
 	match_slots=book.starter_slots.duplicate();equip_slot("primary")
 	if player.mutation_id!="normal":
@@ -795,7 +800,9 @@ func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo and not menu_open:
 		if spectator.active and event.physical_keycode in [KEY_LEFT,KEY_RIGHT]:spectator.cycle(-1 if event.physical_keycode==KEY_LEFT else 1)
 		var keys = {KEY_1: "primary", KEY_2: "pistol", KEY_4: "grenade", KEY_5: "knife"}
-		if event.physical_keycode==KEY_1:cycle_primary()
+		if event.physical_keycode==KEY_F:use_power("support")
+		elif event.physical_keycode==KEY_T:use_power("energy")
+		elif event.physical_keycode==KEY_1:cycle_primary()
 		elif keys.has(event.physical_keycode):equip_slot(keys[event.physical_keycode])
 	if event is InputEventMouseButton and menu_open:
 		Input.action_release("fire")
@@ -866,7 +873,7 @@ func _process(delta):
 	match_flow.advance_match(delta)
 	if match_flow.preparing():return
 	economy.advance(delta)
-	booster_remaining=maxf(0,booster_remaining-delta)
+	advance_power_effects(delta)
 	if hunt.active and advance_hunt(delta):return
 	for entry in kill_feed:entry.remaining=maxf(0,entry.remaining-delta)
 	kill_feed=kill_feed.filter(func(entry):return entry.remaining>0)
@@ -1041,6 +1048,7 @@ func offline_spawn_points(team=""):
 			pos=floor_hit.position+Vector3.UP*0.12
 			var supported=NavigationServer3D.map_get_closest_point(nav_map,pos)
 			if absf(supported.y-floor_hit.position.y)>0.5 or Vector2(supported.x-pos.x,supported.z-pos.z).length()>0.35:continue
+			if not navigation_graph.has_patrol_extent(supported):continue
 			clearance.transform=Transform3D(Basis.IDENTITY,pos+Vector3.UP*0.95)
 			if not get_world_3d().direct_space_state.intersect_shape(clearance,1).is_empty():continue
 			var occupied=pos.distance_to(player.position)<(1.3 if team==local_room.get("team","blue") else 3.5)
@@ -1096,6 +1104,7 @@ func attack():
 	if player.fire_sound.stream: player.play_weapon_sound("fire")
 	if kind in ["grenade", "rocket", "launcher"]:
 		var grenade = CharacterBody3D.new();grenade.set_script(GrenadeScript);grenade.game = self;grenade.position = player.camera.global_position - player.camera.global_basis.z * 0.7;grenade.velocity = - player.camera.global_basis.z * 13 + Vector3.UP * 3;grenade.damage_amount = int(player.weapon_info.get("damage", 90));grenade.kind = "smoke" if str(player.weapon_info.get("name", "")).to_lower().contains("smoke") else "grenade";grenade.fuse = 2 if kind == "grenade" else 0.7;add_child(grenade);return
+	var source_muzzle=kind!="knife" and player.play_muzzle()
 	var camera = player.camera
 	var origin = camera.global_position
 	var end = origin - camera.global_basis.z * (2.6 if kind == "knife" else 100)
@@ -1111,20 +1120,16 @@ func attack():
 			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head,"hitPosition":hit.position})
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 			announce(("Kafadan isabet +%d" if head else "İsabet +%d") % actual)
-	var flash = OmniLight3D.new()
-	flash.position = player.global_position + Vector3(0, 1.4, 0)
-	flash.light_color = Color("ffc77f")
-	flash.light_energy = 2
-	flash.omni_range = 3
-	transient_effects.add_child(flash)
-	get_tree().create_timer(0.06).timeout.connect(flash.queue_free)
+	if kind!="knife" and not source_muzzle:
+		var flash = OmniLight3D.new();flash.position = player.global_position + Vector3(0, 1.4, 0);flash.light_color = Color("ffc77f");flash.light_energy = 2;flash.omni_range = 3
+		transient_effects.add_child(flash);get_tree().create_timer(0.06).timeout.connect(flash.queue_free)
 
-func wolf_melee_hit(amount,reach,caption):
+func wolf_melee_hit(amount,reach,caption,kind="normal"):
 	if not is_combat_active():return
 	player.cancel_cloak()
 	reach=reach*(1.0+float(gear_stats().rangePercent)/100.0)+float(power_bonus("claw","rangeBonus",0))
 	if is_instance_valid(player.claw_trail) and (not is_instance_valid(player.source_events) or not player.source_events.has_spline()):player.claw_trail.begin()
-	amount=roundi(amount*wolf_damage_multiplier()*(1.0+float(gear_stats().damagePercent)/100.0))+int(power_bonus("claw","damageBonus",0))
+	amount=roundi(amount*wolf_damage_multiplier(kind)*(1.0+float(gear_stats().damagePercent)/100.0))+int(power_bonus("claw","damageBonus",0))
 	for enemy in enemies.get_children():
 		if not running:break
 		if not hostile(enemy,local_room.get("team","blue")):continue
@@ -1193,8 +1198,10 @@ func take_damage(amount, source_position=null, attacker={}):
 	if player.is_wolf and player.extra_health>0:
 		var absorbed=mini(player.extra_health,amount);player.extra_health-=absorbed;amount-=absorbed
 	health = maxi(0, health - amount)
+	if health>0:clientfx.frost_hit(player,attacker.get("sourceActor"))
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		clear_power_effects()
 		player.pending_melee.clear()
 		economy.death();record_elimination("player",attacker.get("rosterId",""))
 		game_audio.voice(player,0)
@@ -1209,6 +1216,7 @@ func take_damage(amount, source_position=null, attacker={}):
 		if is_instance_valid(source_hud):source_hud.feedback.show_death()
 
 func end_round(title):
+	clear_power_effects()
 	spectator.stop()
 	if match_rules.enabled and match_rules.winner=="":match_rules.decide(team_score("red"),team_score("blue"))
 	if match_rules.enabled:game_audio.match_sound("round_draw" if match_rules.winner=="draw" else "round_"+match_rules.winner+"_win")
@@ -1309,7 +1317,7 @@ func power_bonus(slot,key,fallback):
 	return item.get("mobileTuning",{}).get(key,fallback)
 func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else 100
 func max_extra_health():return economy.yp_capacity(character_info,player.mutation_id,gear_stats(),power_bonus("bag","extraYpPercent",0))
-func wolf_damage_multiplier():return float(booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
+func wolf_damage_multiplier(kind="normal"):return float(booster_tuning.get("strongDamageMultiplier",booster_tuning.get("damageMultiplier",1.0)) if kind=="strong" else booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
 func wolf_speed_multiplier():return (float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0)*(1.0+float(gear_stats().speedPercent)/100.0)
 func gear_stats():
 	var stats=book.tattoo_bonuses() if book!=null else {"rangePercent":0,"damagePercent":0,"healthPercent":0,"speedPercent":0,"gpPercent":0,"goldPercent":0}
@@ -1381,7 +1389,7 @@ func equip_power_item(id):
 func use_power(slot):
 	if not is_combat_active() or not player.is_wolf:return false
 	var item=power_item(inbox.state.powerSlots.get(slot,""))
-	if item.is_empty() or not item.consumable or int(inbox.state.powerCounts.get(item.id,0))<1:return false
+	if item.is_empty() or slot not in ["support","energy"] or int(inbox.state.powerCounts.get(item.id,0))<1:return false
 	var cost=0
 	if slot=="support":
 		if health>=max_health() or int(healing_uses.get(item.id,0))>=int(item.mobileTuning.usesPerRound):return false
@@ -1390,12 +1398,37 @@ func use_power(slot):
 		cost=maxi(1,ceili(health*float(item.mobileTuning.healthCostFraction)))
 		if health<=cost:return false
 	else:return false
-	var pending=inbox.state.duplicate(true);pending.powerCounts[item.id]=int(pending.powerCounts[item.id])-1
-	if not save_wallet(null,null,null,pending):return false
-	inbox.state=pending
-	if slot=="support":health=mini(max_health(),health+int(item.mobileTuning.heal));healing_uses[item.id]=int(healing_uses.get(item.id,0))+1
-	else:health-=cost;booster_tuning=item.mobileTuning;booster_remaining=float(item.mobileTuning.seconds)
+	# The local shop owns a reusable pack; per-life uses are a separate counter.
+	# The source says unlimited energy uses, not one purchased unit per keypress.
+	if slot=="support":
+		health=mini(max_health(),health+int(item.mobileTuning.heal));healing_uses[item.id]=int(healing_uses.get(item.id,0))+1
+		healing_remaining=float(item.mobileTuning.get("seconds",15));healing_regen_per_minute=float(item.mobileTuning.get("regenerationPerMinute",0));healing_fraction=0
+		clientfx.play("TakingHealth",player)
+	else:
+		health-=cost;booster_tuning=item.mobileTuning.duplicate(true);booster_remaining=float(item.mobileTuning.seconds);energy_drain_fraction=0
 	update_hud();return true
+
+func clear_power_effects():
+	booster_remaining=0;booster_tuning={};energy_drain_fraction=0
+	healing_remaining=0;healing_regen_per_minute=0;healing_fraction=0
+	if is_instance_valid(clientfx):
+		for effect in clientfx.group_instances(player,"TakingHealth"):effect.queue_free()
+	if is_instance_valid(player) and is_instance_valid(player.claw_trail):player.claw_trail.refresh_glow()
+
+func advance_power_effects(delta):
+	if not is_combat_active() or not player.is_wolf:return
+	var energy_delta=minf(delta,booster_remaining)
+	if energy_delta>0:
+		energy_drain_fraction+=energy_delta*float(booster_tuning.get("healthDrainPerMinute",0))/60.0
+		var loss=int(energy_drain_fraction);energy_drain_fraction-=loss
+		if loss>0:health=maxi(1,health-loss)
+	booster_remaining=maxf(0,booster_remaining-delta)
+	var healing_delta=minf(delta,healing_remaining)
+	if healing_delta>0:
+		healing_fraction+=healing_delta*healing_regen_per_minute/60.0
+		var restored=int(healing_fraction);healing_fraction-=restored
+		if restored>0:health=mini(max_health(),health+restored)
+	healing_remaining=maxf(0,healing_remaining-delta)
 
 func grant_money(currency, amount, reason):
 	if not wallet.has(currency) or not valid_balance(amount) or amount < 1 or amount > 1000000:

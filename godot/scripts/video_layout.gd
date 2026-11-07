@@ -2,6 +2,10 @@ extends RefCounted
 # Permanent reference: supplied PC recordings at 640x360. HUD coordinates are
 # measured from video 1 (06:42) and video 4 (02:00), not ergonomic guesses.
 const SIZE=Vector2(640,360)
+# New wolf references: a standing wolf occupies roughly 17–28% of screen
+# height in an unobstructed view. The collision arm may retract near walls.
+const WOLF_CAMERA_DISTANCE=6.2
+const WOLF_CAMERA_TARGET_HEIGHT=1.0
 const SCOREBOARD=Vector2(124,149)
 const KICK_WINDOW=Vector2(312,128)
 const ROOM_COUNTDOWN=Vector2(512,342)

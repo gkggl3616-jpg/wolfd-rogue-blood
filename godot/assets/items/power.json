@@ -12,10 +12,12 @@
       "category": "other",
       "slot": "support",
       "localPrice": 20,
-      "consumable": true,
+      "consumable": false,
       "mobileTuning": {
         "heal": 50,
-        "usesPerRound": 1
+        "usesPerRound": 1,
+        "seconds": 15,
+        "regenerationPerMinute": 2
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "reused_source_art",
@@ -25,7 +27,9 @@
         0,
         120,
         75
-      ]
+      ],
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": []
     },
     {
       "id": "19002",
@@ -36,10 +40,12 @@
       "category": "other",
       "slot": "support",
       "localPrice": 40,
-      "consumable": true,
+      "consumable": false,
       "mobileTuning": {
         "heal": 100,
-        "usesPerRound": 2
+        "usesPerRound": 2,
+        "seconds": 15,
+        "regenerationPerMinute": 5
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "reused_source_art",
@@ -49,7 +55,9 @@
         0,
         120,
         75
-      ]
+      ],
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": []
     },
     {
       "id": "19501",
@@ -60,16 +68,22 @@
       "category": "other",
       "slot": "energy",
       "localPrice": 30,
-      "consumable": true,
+      "consumable": false,
       "mobileTuning": {
         "seconds": 10,
         "damageMultiplier": 1.1,
         "speedMultiplier": 1.1,
-        "healthCostFraction": 0.5
+        "healthCostFraction": 0.5,
+        "healthDrainPerMinute": 5,
+        "strongDamageMultiplier": 1.25
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "native_syringe_symbol",
-      "sourceIcon": ""
+      "sourceIcon": "",
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [
+        "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
+      ]
     },
     {
       "id": "19502",
@@ -80,16 +94,22 @@
       "category": "other",
       "slot": "energy",
       "localPrice": 50,
-      "consumable": true,
+      "consumable": false,
       "mobileTuning": {
         "seconds": 10,
         "damageMultiplier": 1.2,
         "speedMultiplier": 1.15,
-        "healthCostFraction": 0.25
+        "healthCostFraction": 0.25,
+        "healthDrainPerMinute": 2,
+        "strongDamageMultiplier": 1.5
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "native_syringe_symbol",
-      "sourceIcon": ""
+      "sourceIcon": "",
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [
+        "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
+      ]
     },
     {
       "id": "13006",
@@ -884,5 +904,13 @@
   "sourcePerformanceSha256": "038775262727a0910cb12e05975f5ab06a41b7d8d481bb8a9b355e779d03d384",
   "sourceTrailSha256": "a61891ffef8e631bfef5ef342eccaebb99de6ca790ea643896dba96dc9aab983",
   "defaultClawTrail": {},
-  "missingDefaultTrailSource": "WT_FX/swingtrail/swingTrail_default.dtx"
+  "missingDefaultTrailSource": "WT_FX/swingtrail/swingTrail_default.dtx",
+  "energyPresentation": {
+    "groups": [
+      "wolf_Hand_glowL",
+      "wolf_Hand_glowR"
+    ],
+    "condition": "Successfully activated FT/energy; never claw ownership",
+    "evidence": "User correction and old video 1 02:48–02:50: HP 200→150→147, same held claw."
+  }
 }

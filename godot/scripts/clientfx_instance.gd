@@ -11,6 +11,11 @@ var elapsed=0.0
 var duration=0.0
 var tail=0.0
 var parts=[]
+var screen_canvas:CanvasLayer
+const SCREEN_GROUPS=["TakingArmor","TakingHealth-test","Deathdirecting","TakingHealth","lockedinice","lockedinPsycho","LockedSnowBucket"]
+const HAND_GROUPS=["wolf_Hand_glowL","wolf_Hand_glowR"]
+# Measured visual gain for the converted wolf hands; not a decoded PC unit.
+const HAND_VISUAL_GAIN=10.0/3.0
 func val(spec,key,fallback=null):return spec.properties.get(key,[fallback])[0]
 func choice(spec,key,fallback=0):return int(str(val(spec,key,str(fallback))).get_slice(",",0))
 func vector(values):return Vector3(values[0],values[1],-values[2])
@@ -47,6 +52,12 @@ func _ready():
 			for anim in node.find_children("*","AnimationPlayer",true,false):
 				if spec.get("animation","")!="" and anim.has_animation(spec.animation):anim.play(spec.animation)
 		elif kind in ["Sprite","FlareSpriteFX"]:
+			if kind=="Sprite" and choice(spec,"UpdatePos")==2 and group in SCREEN_GROUPS:
+				if screen_canvas==null:
+					screen_canvas=CanvasLayer.new();screen_canvas.layer=0;add_child(screen_canvas)
+				node=TextureRect.new();node.mouse_filter=Control.MOUSE_FILTER_IGNORE;node.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;node.stretch_mode=TextureRect.STRETCH_SCALE
+				screen_canvas.add_child(node);node.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+				node.hide();parts.append({"node":node,"spec":spec,"materials":[],"baseScale":Vector3.ONE,"started":false,"samples":[],"nextSample":0.0,"child":null,"fixed":Transform3D.IDENTITY});continue
 			node=MeshInstance3D.new();var quad=QuadMesh.new();quad.size=Vector2.ONE
 			if not spec.get("frames",[]).is_empty():quad.size=load(spec.frames[0]).get_size()
 			node.mesh=quad;mat.billboard_mode=BaseMaterial3D.BILLBOARD_ENABLED if choice(spec,"Facing")==0 else BaseMaterial3D.BILLBOARD_DISABLED;node.material_override=mat;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
@@ -70,10 +81,23 @@ func _ready():
 			var colors=spec.properties.get("Ck",[])
 			if not colors.is_empty():
 				var gradient=Gradient.new();gradient.offsets=PackedFloat32Array();gradient.colors=PackedColorArray()
-				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],ck[4]))
+				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if group in ["BloodHeadshot","AK-47_PV_Muzz"] else ck[4]))
 				node.color_ramp=gradient;mat.vertex_color_use_as_albedo=true
 			var initial_scale=maxf(.001,float(curve(spec,"Sk",0,[0,1])[1]))*.016;node.scale_amount_min=initial_scale;node.scale_amount_max=initial_scale
+			if group in HAND_GROUPS or group=="AK-47_PV_Muzz":
+				# This looping emitter keeps emitting new hand particles. Sk is
+				# their individual lifetime curve, not the age of the whole group.
+				var size_curve=Curve.new();size_curve.min_value=0;size_curve.max_value=1
+				var keys=spec.properties.get("Sk",[]);var maximum=1.0
+				for key in keys:maximum=maxf(maximum,float(key[1]))
+				for key in keys:size_curve.add_point(Vector2(clampf(key[0],0,1),clampf(float(key[1])/maximum,0,1)),0,0,Curve.TANGENT_LINEAR,Curve.TANGENT_LINEAR)
+				# Viewmodel flash scales are metre-sized in the converted weapon
+				# view. This explicit visual adapter avoids a subpixel flash;
+				# it is not a verified PC renderer unit conversion.
+				var gain=HAND_VISUAL_GAIN if group in HAND_GROUPS else 1.0/.016
+				node.scale_amount_curve=size_curve;node.scale_amount_min=maximum*.016*gain;node.scale_amount_max=maximum*.016*gain
 			var quad=QuadMesh.new();quad.size=Vector2.ONE;mat.billboard_mode=BaseMaterial3D.BILLBOARD_PARTICLES;mat.billboard_keep_scale=true;quad.material=mat;node.mesh=quad;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
+			if group in HAND_GROUPS or group=="AK-47_PV_Muzz":quad.size=Vector2(2,2)
 		elif kind=="DynaLight":node=OmniLight3D.new();node.shadow_enabled=false;add_child(node)
 		elif kind=="PlaySound":
 			node=AudioStreamPlayer3D.new();node.bus="WolfEffects";node.stream=load(spec.sound).duplicate();node.max_distance=maxf(1,float(val(spec,"OuterRadius",2400))*0.016);node.pitch_scale=clampf(float(val(spec,"PitchShift",1)),0.1,4);node.volume_db=linear_to_db(maxf(0.001,float(val(spec,"Volume",100))/100.0))-10
@@ -102,12 +126,24 @@ func _process(delta):
 			if node is AudioStreamPlayer3D:node.stop()
 			continue
 		var life=age-float(spec.start);var phase=clampf(life/maxf(0.001,float(spec.end)-float(spec.start)),0,1);var ck=curve(spec,"Ck",phase,[0,1,1,1,1]);var color=Color(ck[1],ck[2],ck[3],ck[4]);var scale_key=curve(spec,"Sk",phase,[0,1]);var scale_value=maxf(0.001,float(scale_key[1]));node.show()
+		if node is TextureRect:
+			var camera=get_viewport().get_camera_3d()
+			var watched=system.game.spectator.target if system.game.spectator.active else system.game.player
+			if actor!=null and actor!=watched and group!="Deathdirecting":node.hide();continue
+			if camera==null:node.hide();continue
+			# These full-screen source curves store transparency: ice/death fade
+			# out as their fourth Ck component approaches one. Other FX retain
+			# their existing material interpretation until separately verified.
+			node.modulate=Color(color.r,color.g,color.b,1.0-color.a)
+			if not spec.get("frames",[]).is_empty():node.texture=load(spec.frames[int(life*float(spec.get("fps",1)))%spec.frames.size()])
+			continue
 		if is_instance_valid(actor):
 			var socket=str(val(spec,"AttachName",""))
 			node.global_transform=system.socket_transform(actor,socket) if socket!="" else global_transform
 			# SocketAttach chooses a position. ClientFX ParentAlign uses the
 			# reference object's orientation, not the animated neck/hand basis.
 			node.global_basis=actor.global_basis.orthonormalized()
+		elif group=="AK-47_PV_Muzz" and is_instance_valid(system.game.player.muzzle_skeleton):node.global_transform=system.game.player.muzzle_socket_transform(str(val(spec,"AttachName","Flash")))
 		else:node.global_transform=global_transform
 		var offset=vector(val(spec,"Offset",[0,0,0]))*0.016;node.global_position+=global_basis.orthonormalized()*offset
 		if choice(spec,"UpdatePos")==0:
@@ -124,7 +160,8 @@ func _process(delta):
 			if node is AudioStreamPlayer3D and not system.game.test_mode:node.play()
 			if kind=="CreateFX":part.child=system.play(spec.group,null if system.catalog.groups[group].get("sourceType","")=="ProjectileFX" else actor,node.global_position,choice(spec,"Loop")==1,depth+1,node,round_effect)
 		if node is OmniLight3D:node.light_color=color;node.light_energy=color.a*0.6;node.omni_range=maxf(0.1,scale_value*0.016)
-		elif node is CPUParticles3D:node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
+		elif node is CPUParticles3D:
+			if not group in HAND_GROUPS and group!="AK-47_PV_Muzz":node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
 		elif kind=="LTBModel":node.scale=part.baseScale*scale_value*vector(val(spec,"ModelScale",[1,1,-1])).abs()
 		elif kind in ["Sprite","FlareSpriteFX"]:node.scale=Vector3.ONE*scale_value*0.016
 		elif kind=="CamJitter":

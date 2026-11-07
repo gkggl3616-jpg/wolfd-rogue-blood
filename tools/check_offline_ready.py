@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
