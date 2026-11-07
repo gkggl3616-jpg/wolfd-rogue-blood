@@ -45,6 +45,7 @@ var hunt=LocalHunt.new()
 var tutorial=LocalTutorial.new()
 var ranks=RankBook.new()
 var map_photo:TextureRect
+var match_roster={}
 var match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0}
 var kill_feed=[]
 var match_serial=0
@@ -59,6 +60,8 @@ var clientfx
 var destruction=preload("res://scripts/destruction.gd").new()
 var economy=preload("res://scripts/match_economy.gd").new()
 var match_sp=0
+var bomb_presentation
+var match_wallet_start={}
 var match_slots={}
 var spectator
 var match_rules=preload("res://scripts/source_match_rules.gd").new()
@@ -160,6 +163,7 @@ func _ready():
 	spectator=Node3D.new();spectator.set_script(preload("res://scripts/spectator.gd"));spectator.game=self;add_child(spectator)
 	transient_effects = Node3D.new()
 	add_child(transient_effects)
+	bomb_presentation=Node3D.new();bomb_presentation.set_script(preload("res://scripts/bomb_presentation.gd"));bomb_presentation.game=self;add_child(bomb_presentation)
 	build_ui()
 	equip_slot("primary")
 	apply_settings()
@@ -521,7 +525,7 @@ func start_round(with_selection=false):
 	if preload("res://scripts/source_match_rules.gd").supports(local_room.get("mode",0)) and not map_catalog.belongs_to_mode(int(local_room.mode),int(local_room.get("map",0))):
 		announce("Harita bu özgün moda bağlı değil.");return false
 	spectator.stop()
-	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=economy.begin();announced_last_minute=false;first_kill_announced=false
+	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=economy.begin();match_wallet_start=wallet.duplicate();bomb_presentation.reset();announced_last_minute=false;first_kill_announced=false
 	close_round_selection();round_selection_enabled=with_selection;match_slots.clear()
 	var team_character=book.character_for_team(local_room.get("team","blue"))
 	if not team_character.is_empty() and team_character.id!=character_info.id:
@@ -587,6 +591,7 @@ func start_round(with_selection=false):
 	weapon_ammo.clear()
 	kills = 0;deaths=0;team_frags={"red":0,"blue":0};respawn_remaining=0
 	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear()
+	match_roster={"player":{"id":"player","name":profile_name,"team":local_room.get("team","blue"),"kills":0,"deaths":0,"gp":0,"gold":0}}
 	match_id=Crypto.new().generate_random_bytes(16).hex_encode()
 	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
 	if hunt.active:hunt.begin(local_room.get("playerForm","human"))
@@ -684,7 +689,7 @@ func choose_round_loadout(index):
 	if cost>match_sp:announce("Yetersiz SP · Standart ekipman ücretsizdir");return false
 	if not book.select_loadout(index):announce("Ekipman seçimi kaydedilemedi.");return false
 	match_slots=(book.starter_slots if index==0 else book.loadouts[index]).duplicate()
-	match_sp-=cost;equip_slot("primary");close_round_selection();return true
+	match_sp-=cost;economy.spent+=cost;equip_slot("primary");close_round_selection();return true
 func choose_round_mutation(id):
 	if not selection_active or selection_panel.kind!="wolf" or not mutations.TYPES.has(id):return false
 	var cost=economy.mutation_cost(id)
@@ -693,7 +698,7 @@ func choose_round_mutation(id):
 	if model==null:announce("Kurt modeli yüklenemedi.");return false
 	if not book.select_mutation(id):model.free();announce("Kurt seçimi kaydedilemedi.");return false
 	var transform_after=selection_transform
-	player.apply_mutation(model,id);match_sp-=cost
+	player.apply_mutation(model,id);match_sp-=cost;economy.spent+=cost
 	close_round_selection()
 	if transform_after and not player.is_wolf:player.switch_form(true)
 	update_hud();return true
@@ -908,6 +913,10 @@ func bot_limit(team):
 
 func actor_alive(actor):
 	return is_instance_valid(actor) and not actor.is_queued_for_deletion() and (health>0 if actor==player else actor.health>0)
+func record_elimination(victim,attacker):
+	if match_roster.has(victim):match_roster[victim].deaths+=1
+	if attacker!=victim and match_roster.has(attacker):match_roster[attacker].kills+=1
+
 func actor_team(actor):return local_room.get("team","blue") if actor==player else actor.team
 func hostile(actor,team):return actor_alive(actor) and actor_team(actor)!=team
 func combat_targets(team):
@@ -948,7 +957,10 @@ func spawn_enemy(kind="",difficulty="",team=""):
 	enemy.team=team
 	enemy.rotation.y=PI if team=="red" else 0.0
 	enemy.kind=match_rules.form_lock if match_rules.enabled and match_rules.form_lock!="mixed" else (kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))))
-	enemy.display_name=("İnsan" if enemy.kind=="human" else "Kurt")+" %02d" % (bot_spawn_count+1)
+	var slot=0
+	while enemies.get_children().any(func(bot):return actor_alive(bot) and bot.roster_id==team+"-"+str(slot)):slot+=1
+	enemy.roster_id=team+"-"+str(slot);enemy.display_name=("Kırmızı" if team=="red" else "Mavi")+" "+str(slot+1)
+	if not match_roster.has(enemy.roster_id):match_roster[enemy.roster_id]={"id":enemy.roster_id,"name":enemy.display_name,"team":team,"kills":0,"deaths":0,"gp":0,"gold":0}
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
 	enemies.add_child(enemy)
@@ -1096,7 +1108,10 @@ func strong_attack():
 	if player.begin_air_attack():match_stats.attacks+=1;announce("Havada güçlü saldırı");return true
 	return false
 
+func using_bomb():return destruction.enabled and destruction.phase=="combat" and destruction.operator_id==player.get_instance_id() and destruction.progress>0
+
 func reload_weapon():
+	if using_bomb():return
 	if not is_combat_active():
 		return
 	if player.is_wolf:
@@ -1139,7 +1154,7 @@ func take_damage(amount, source_position=null, attacker={}):
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
-		economy.death()
+		economy.death();record_elimination("player",attacker.get("rosterId",""))
 		game_audio.voice(player,0)
 		deaths+=1
 		kill_feed.push_front({"attacker":attacker.get("name","Bot"),"target":profile_name,"headshot":false,"weaponId":"","weapon":attacker.get("weapon","Pençe"),"attackerTeam":"red" if local_room.get("team","blue")=="blue" else "blue","targetTeam":local_room.get("team","blue"),"remaining":6.0})
@@ -1163,6 +1178,13 @@ func end_round(title):
 				if not inbox.enqueue(pending,"cash","cash",mission.name,int(mission.cash),"mission-"+mission.id,"Sistem · Görevler").is_empty():next.claimed[mission.id]=true
 		if save_wallet(null,null,next,pending):career.state=next;inbox.state=pending
 	running=false;last_result={"title":title,"kills":kills,"health":health,"stats":match_stats.duplicate(),"hunt":hunt.active,"wins":hunt.wins,"losses":hunt.losses,"winner":match_rules.winner,"victory":match_rules.winner==local_room.get("team","blue") if match_rules.enabled else team_score(local_room.get("team","blue"))>=target_score()}
+	last_result.deaths=deaths;last_result.roundScores=destruction.wins.duplicate() if destruction.enabled else {};last_result.matchSp=match_sp;last_result.earnedSp=economy.earned;last_result.spentSp=economy.spent
+	last_result.walletRewards={}
+	for key in ["gp","gold","cash"]:last_result.walletRewards[key]=maxi(0,int(wallet[key])-int(match_wallet_start.get(key,wallet[key])))
+	if match_roster.has("player"):
+		match_roster.player.kills=kills;match_roster.player.deaths=deaths;match_roster.player.gp=last_result.walletRewards.gp;match_roster.player.gold=last_result.walletRewards.gold
+	last_result.roster=match_roster.values().map(func(row):return row.duplicate(true))
+	bomb_presentation.reset()
 	open_interface("result")
 
 func announce(text):

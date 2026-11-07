@@ -14,6 +14,6 @@
       "fact": "Historic basic wolf shield of 99 HP, rechargeable by roaring."
     }
   ],
-  "implementation": "Progressive refill uses the current mutation base plus decoded character wolf.values[3], equipped tattoo healthPercent and bag extraYpPercent. These affect YP capacity, not undecoded main HP. Decay is explicit mobile tuning. The former common 99 YP and 2000 SP caps are superseded by the four supplied video files. Exact PC stacking, mutation bases, HP bonuses, SP prices and kill/streak rewards remain incompletely decoded.",
+  "implementation": "Progressive refill uses the current mutation base plus decoded character wolf.values[3], equipped tattoo healthPercent and bag extraYpPercent. These affect YP capacity, not undecoded main HP. Decay is explicit mobile tuning. The former common 99 YP and 2000 SP caps are superseded by the four supplied video files. Exact PC stacking, mutation bases, HP bonuses, weapon SP prices and kill/streak rewards remain incompletely decoded. The four explicit mutation selection prices are observed in the supplied video and recorded in mobile-match.json; automatic normal spawn remains free.",
   "ruleFile": "res://assets/gameplay/mobile-match.json"
 }

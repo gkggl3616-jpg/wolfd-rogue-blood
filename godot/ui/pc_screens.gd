@@ -260,16 +260,49 @@ func pause_page():
 
 func result_page():
 	view=layout("section/result")
-	only(["BackGround","Confirm","RedResult","ChannelName"])
-	view.find_widget("RedResult").visible=(ui.game.hunt.wins>ui.game.hunt.losses) if ui.game.hunt.active else (ui.game.last_result.get("victory",false))
-	view.set_value("ChannelName","ÇEVRİMDIŞI MAÇ SONUCU",1)
-	ui.text(ui.content,ui.game.last_result.get("title","Tur bitti"),Vector2(24,182),Vector2(740,40),22,Art.GOLD)
-	var result="%s · %s\nÖldürme: %d\nCan: %d\nKalan süre: %d saniye" % [ui.game.profile_name,ui.game.preview_name,ui.game.kills,ui.game.health,maxi(0,int(ui.game.time_left))]
-	if ui.game.hunt.active:result+="\nKazanılan raunt: %d · Kaybedilen: %d" % [ui.game.hunt.wins,ui.game.hunt.losses]
-	result+="\n\nBu sonuç bu cihazdaki yerel maça aittir."
-	ui.paragraph(ui.content,result,Vector2(35,250),Vector2(740,300),20)
-	enable("Confirm",func():ui.navigate("lobby"))
-	ui.button(ui.content,"Yeniden oyna",Vector2(590,701),Vector2(200,30),func():ui.game.start_round(true))
+	only(["BackGround","Confirm","ChannelName"])
+	var result=ui.game.last_result
+	var detailed=ui.result_tab=="details"
+	var background=view.find_widget("BackGround")
+	background.texture=Art.atlas("wt_interface/gameresult/gr_bg.dtx" if detailed else "wt_interface/gameresult/gr_cc_bg.dtx",Rect2(0,0,1024,768))
+	view.set_value("ChannelName","" if not detailed else ui.game.preview_name+" · "+result.get("title","Maç sonucu"),1)
+	var scores=result.get("roundScores",{})
+	var rewards=result.get("walletRewards",{})
+	var stats=result.get("stats",{})
+	if not detailed:
+		# The four upper cards, fifth lower-left card and footer are the actual
+		# PC gr_cc_bg layout. Only recorded local values are filled in.
+		Art.sprite(ui.content,"wt_interface/gameresult/gr_result.dtx",Vector2(425,0),Vector2(175,59),Rect2(0,0 if result.get("victory",false) else 60,175,59))
+		var cards=[["ÖLDÜRME",int(result.get("kills",0)),"ÖLDÜRME"],["TAM KAFADAN",int(stats.get("headshots",0)),"TAM KAFADAN"],["KAZANILAN GP",int(rewards.get("gp",0)),"GP"],["KAZANILAN ALTIN",int(rewards.get("gold",0)),"ALTIN"]]
+		for i in range(cards.size()):
+			var x=10+i*255
+			ui.text(ui.content,cards[i][0],Vector2(x+12,52),Vector2(225,24),17,Art.GOLD)
+			ui.text(ui.content,ui.game.profile_name,Vector2(x+12,77),Vector2(220,18),12)
+			var number=ui.text(ui.content,str(cards[i][1]),Vector2(x+20,233),Vector2(197,60),36);number.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+			var count=ui.text(ui.content,"%d %s" % [cards[i][1],cards[i][2]],Vector2(x+12,415),Vector2(225,24),15);count.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		var sp=ui.text(ui.content,"SP\n%d" % int(result.get("earnedSp",0)),Vector2(34,510),Vector2(167,120),26,Art.GOLD);sp.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(ui.content,ui.game.profile_name,Vector2(330,543),Vector2(600,24),15).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(ui.content,"%d / %d" % [int(result.get("kills",0)),int(result.get("deaths",0))],Vector2(270,650),Vector2(130,30),22).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(ui.content,str(int(rewards.get("gold",0))),Vector2(415,650),Vector2(130,30),22).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		for x in [562,710,858]:ui.text(ui.content,"—",Vector2(x,650),Vector2(130,30),20).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	else:
+		for team in ["red","blue"]:
+			var y=172 if team=="red" else 493
+			var winner=result.get("winner","")
+			if winner in ["red","blue"]:
+				Art.sprite(ui.content,"wt_interface/gameresult/gr_result.dtx",Vector2(601,85 if team=="red" else 406),Vector2(175,59),Rect2(0,(0 if team=="red" else 120)+(0 if winner==team else 60),175,59))
+			var rows=result.get("roster",[]).filter(func(row):return row.team==team)
+			for i in range(rows.size()):
+				var row=rows[i];var native=ui.native("interface/resultuserinfo",ui.content,Vector2(4,y+i*30),Vector2(774,30));native.show_only(["GameRanking","NickName","Point","Dead","GetGamePoint","GetGold"])
+				native.set_value("GameRanking",str(i+1));native.set_value("NickName",row.name);native.set_value("Point",str(row.kills)+"/");native.set_value("Dead",row.deaths);native.set_value("GetGamePoint",row.get("gp",0));native.set_value("GetGold",row.get("gold",0))
+		var summary=ui.native("interface/mybattleresult",ui.content);summary.show_only(["NickName","GetGamePoint","GetGold","Point_Dead"])
+		summary.set_value("NickName",ui.game.profile_name);summary.set_value("GetGamePoint",rewards.get("gp",0));summary.set_value("GetGold",rewards.get("gold",0));summary.set_value("Point_Dead","%d / %d" % [int(result.get("kills",0)),int(result.get("deaths",0))])
+		if not scores.is_empty():ui.text(ui.content,"%d : %d" % [int(scores.red),int(scores.blue)],Vector2(350,75),Vector2(170,48),30,Art.GOLD).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		ui.text(ui.content,"SP  %d\nKazanılan  %d\nHarcanan  %d" % [int(result.get("matchSp",0)),int(result.get("earnedSp",0)),int(result.get("spentSp",0))],Vector2(790,390),Vector2(220,135),16)
+	var left=Art.atlas_button(ui.content,"wt_interface/gameresult/gr_button_back.dtx" if detailed else "wt_interface/gameresult/gr_button_detail.dtx",[Rect2(0,0,200,30),Rect2(0,31,200,30),Rect2(0,62,200,30)],Vector2(13,701 if detailed else 727),Vector2(200,30),func():ui.result_tab="awards" if detailed else "details";ui.refresh())
+	if detailed:ui.links.ResultSummary=left;ui.links.ResultAwards=left
+	else:ui.links.ResultDetails=left
+	enable("Confirm",func():ui.navigate("room"));view.find_widget("Confirm").position=Vector2(811,701 if detailed else 727);view.find_widget("Confirm").tooltip_text="Odaya dön"
 
 func profile():
 	view=layout("interface/userrecord",Vector2(299,112),Vector2(425,522))

@@ -12,13 +12,13 @@ func _ready():
 	animations=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/animation-events.json"))
 	for name in catalog.groups:names[name.to_lower()]=name
 func canonical(name):return names.get(str(name).to_lower(),"")
-func play(name,actor=null,where=null,loop=false,depth=0,parent=null):
+func play(name,actor=null,where=null,loop=false,depth=0,parent=null,round_effect=false):
 	var key=canonical(name)
 	active=active.filter(func(n):return is_instance_valid(n) and not n.is_queued_for_deletion())
 	if key=="" or depth>3 or active.size()>=64:
 		if key=="" and not str(name) in missing:missing.append(str(name))
 		return null
-	var instance=Instance.new();instance.system=self;instance.actor=actor;instance.group=key;instance.looping=loop;instance.depth=depth
+	var instance=Instance.new();instance.system=self;instance.actor=actor;instance.group=key;instance.looping=loop;instance.depth=depth;instance.round_effect=round_effect
 	(parent if is_instance_valid(parent) else game.transient_effects).add_child(instance)
 	instance.global_position=where if where is Vector3 else (actor.global_position if is_instance_valid(actor) else Vector3.ZERO)
 	active.append(instance);return instance
@@ -31,9 +31,13 @@ func clear():
 		if is_instance_valid(node):node.queue_free()
 	active=[];camera_shake=Vector2.ZERO
 func _process(_delta):
-	if not game.is_match_active():clear()
+	if not game.running or game.menu_open or game.application_suspended:clear()
+	elif not game.is_match_active():
+		for node in active:
+			if is_instance_valid(node) and not node.round_effect:node.queue_free()
 	if is_instance_valid(game.player) and is_instance_valid(game.player.camera):
-		game.player.camera.h_offset=clampf(camera_shake.x,-0.08,0.08);game.player.camera.v_offset=clampf(camera_shake.y,-0.08,0.08)
+		var camera=get_viewport().get_camera_3d()
+		if camera!=null:camera.h_offset=clampf(camera_shake.x,-0.08,0.08);camera.v_offset=clampf(camera_shake.y,-0.08,0.08)
 	camera_shake=Vector2.ZERO
 func model_record(actor):
 	var form=game.game_audio.actor_form(actor)

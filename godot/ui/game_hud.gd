@@ -4,6 +4,17 @@ const Layout=preload("res://ui/source_layout.gd")
 const Radar=preload("res://ui/local_radar.gd")
 const Feedback=preload("res://ui/combat_feedback.gd")
 const VideoLayout=preload("res://scripts/video_layout.gd")
+class BombClock extends Control:
+	var digits:Texture2D
+	var bomb_icon:Texture2D
+	var remaining=40.0
+	func _draw():
+		if digits==null:return
+		var seconds="%02d" % maxi(0,floori(remaining));var fraction="%02d" % clampi(floori(fmod(maxf(0,remaining),1)*100),0,99)
+		for i in range(2):draw_texture_rect_region(digits,Rect2(i*28,0,28,40),Rect2(0,int(seconds[i])*40,28,40))
+		draw_circle(Vector2(58,30),1.8,Color("ffe680"))
+		for i in range(2):draw_texture_rect_region(digits,Rect2(63+i*14,18,14,20),Rect2(0,int(fraction[i])*40,28,40))
+		if bomb_icon!=null:draw_texture_rect(bomb_icon,Rect2(-33,2,32,32),false)
 class AimReticle extends Control:
 	func _draw():
 		var center=Vector2(16,16)
@@ -62,6 +73,8 @@ var scope:ColorRect
 var spectator_label:Label
 var spectator_buttons=[]
 var award_label:Label
+var bomb_progress:ProgressBar
+var bomb_clock:BombClock
 
 func part(key,dimensions,keep):
 	var view=Layout.new();pc_layer.add_child(view);view.configure(key,dimensions)
@@ -145,6 +158,9 @@ func _ready():
 	round_title=Art.label("",Vector2(312,36),28,Color.WHITE);round_title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(round_title)
 	ready_view=Art.sprite(pc_layer,"wt_interface/play/pl_round_ready.dtx",Vector2.ZERO,Vector2(256,64))
 	turn_result=Art.label("",Vector2(440,52),36,Art.GOLD);turn_result.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(turn_result)
+	bomb_progress=ProgressBar.new();bomb_progress.min_value=0;bomb_progress.max_value=1;bomb_progress.show_percentage=false;bomb_progress.mouse_filter=Control.MOUSE_FILTER_IGNORE;pc_layer.add_child(bomb_progress)
+	var fill=StyleBoxFlat.new();fill.bg_color=Art.GOLD;fill.set_corner_radius_all(3);bomb_progress.add_theme_stylebox_override("fill",fill)
+	bomb_clock=BombClock.new();bomb_clock.digits=Art.texture("wt_interface/bomb/bomb_timer.dtx");bomb_clock.bomb_icon=Art.texture("wt_interface/bomb/bomb_bomb.dtx");bomb_clock.mouse_filter=Control.MOUSE_FILTER_IGNORE;pc_layer.add_child(bomb_clock)
 	resized.connect(arrange);arrange();refresh_from_game()
 
 func arrange():
@@ -154,6 +170,8 @@ func arrange():
 	var factor=dimensions/Vector2(1024,768)
 	pc_layer.scale=factor;pc_layer.size=Vector2(1024,768)
 	var native=pc_layer.size
+	bomb_progress.position=VideoLayout.point("bomb_progress",native);bomb_progress.size=VideoLayout.measure(Vector2(190,3),native)
+	bomb_clock.position=Vector2(native.x*.5-45,VideoLayout.measure(Vector2(0,34),native).y);bomb_clock.size=Vector2(90,42)
 	health_view.position=VideoLayout.point("health",native)
 	weapon_view.position=VideoLayout.point("weapon",native);weapon_name.position=weapon_view.position+Vector2(-25,59)
 	score_view.position=VideoLayout.point("score",native)
@@ -198,6 +216,11 @@ func refresh_from_game():
 		if power_icons[i].get_meta("power_id","unset")!=id:
 			var region=item.get("iconRegion",[0,0,210,75]);power_icons[i].texture=Art.atlas(item.get("icon",""),Rect2(region[0],region[1],region[2],region[3]));power_icons[i].set_meta("power_id",id)
 	weapon_view.set_value("WeaponPoint",game.match_sp)
+	var bomb_state=game.destruction
+	bomb_progress.visible=game.using_bomb() and not game.spectator.active
+	if bomb_progress.visible:bomb_progress.value=bomb_state.progress/float(bomb_state.tuning.defuseSeconds if bomb_state.planted else bomb_state.tuning.plantSeconds)
+	bomb_clock.visible=bomb_state.enabled and bomb_state.planted and bomb_state.phase=="combat"
+	if bomb_clock.visible:bomb_clock.remaining=bomb_state.fuse;bomb_clock.queue_redraw()
 	swap_view.visible=game.destruction.enabled and game.destruction.phase=="swap"
 	var turn_state=game.destruction.phase if game.destruction.enabled else ""
 	round_title.visible=turn_state in ["prepare","between"];ready_view.visible=turn_state=="prepare" or (game.selection_active and not game.selection_transform);turn_result.visible=turn_state=="between"
@@ -250,7 +273,7 @@ func refresh_from_game():
 	if game.tutorial.active:score_view.set_value("Mode","Öğretici Mod")
 	class_icon.texture=Art.texture("res://assets/ui/form-icons/wolf.png" if game.player.is_wolf else "res://assets/ui/form-icons/human.png")
 	opposition_icon.texture=class_icon.texture
-	timer_view.visible=not game.exploring and not game.tutorial.active and (not game.destruction.enabled or game.destruction.phase=="combat");score_view.visible=not game.exploring
+	timer_view.visible=not game.exploring and not game.tutorial.active and (not game.destruction.enabled or game.destruction.phase=="combat" and not game.destruction.planted);score_view.visible=not game.exploring
 	preview_name.visible=game.exploring;preview_name.text=game.preview_name+" · GEZİNTİ"
 	map_name.text=game.preview_name
 	for i in range(slots.size()):

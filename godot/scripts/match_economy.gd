@@ -4,8 +4,10 @@ var rules=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay
 var streak=0
 var streak_clock=0.0
 var awards=[]
+var earned=0
+var spent=0
 func begin():
- streak=0;streak_clock=0;awards.clear()
+ streak=0;streak_clock=0;awards.clear();earned=0;spent=0
  return int(rules.sp.start)
 func advance(delta):
  streak_clock=maxf(0,streak_clock-delta)
@@ -19,6 +21,7 @@ func award(balance,event,label=""):
  if cap>0:next=mini(cap,next)
  var credited=maxi(0,next-balance)
  if credited>0:
+  earned+=credited
   awards.push_front({"event":event,"label":label,"amount":credited,"remaining":3.0})
   if awards.size()>4:awards.resize(4)
  return next

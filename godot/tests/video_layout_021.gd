@@ -26,6 +26,10 @@ func run():
   for button in game.touch.buttons:
    var radius=(38 if button.action=="fire" else 34)*button.scale.x;var rect=Rect2(button.position-Vector2.ONE*radius,Vector2.ONE*radius*2)
    check(not rect.intersects(hp) and not rect.intersects(ammo) and not rect.intersects(body),"Default touch target leaves source information and central body clear: "+button.action)
+  for i in range(game.touch.buttons.size()):
+   for j in range(i+1,game.touch.buttons.size()):
+    var a=game.touch.buttons[i];var b=game.touch.buttons[j];var ra=(38 if a.action=="fire" else 34)*a.scale.x;var rb=(38 if b.action=="fire" else 34)*b.scale.x
+    check(a.position.distance_to(b.position)>=ra+rb,"Default touch targets cannot overlap: "+a.action+" / "+b.action)
  root.size=Vector2i(1280,720);await frames();game.open_round_selection("human");await frames()
  var panel=game.selection_panel
  check(panel.card_buttons.size()==5 and panel.card_buttons[0].position.x==0,"Five sets remain accessible with source Standard first")

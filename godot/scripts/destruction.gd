@@ -83,7 +83,11 @@ func advance(delta):
  if planted:
   fuse=maxf(0,fuse-delta)
   # Expiry wins this frame. An earlier defuse has already left combat.
-  if fuse<=0:finish(attacker_team,"Bomba patladı");return
+  if fuse<=0:
+   game.game_audio.play_at("root/wt_snd/specialweapon/timebomb/explosion_bomb.wav",bomb,false)
+   finish(attacker_team,"Bomba patladı")
+   if game.running:game.clientfx.play("Exp_Basictimebomb",null,bomb,false,0,null,true)
+   return
  elif game.time_left<=0:finish(defender_team(),"Tur süresi doldu");return
  for team in ["red","blue"]:
   var population=game.bot_limit(team)+(1 if game.local_room.get("team","blue")==team else 0)
@@ -108,9 +112,10 @@ func advance(delta):
  if progress>=float(tuning.defuseSeconds if planted else tuning.plantSeconds):
   if planted:
    if worker==game.player:game.award_sp("defuse","Bomba imha edildi")
-   finish(defender_team(),"Bomba etkisiz hale getirildi")
+   game.game_audio.play_ui("root/wt_snd/interface/msg_bomb_defuse.wav");finish(defender_team(),"Bomba etkisiz hale getirildi")
   else:
    planted=true;bomb=worker.global_position;carrier=null;dropped=false;fuse=float(tuning.fuseSeconds);cancel_operation()
+   game.bomb_presentation.complete_plant(worker);game.game_audio.play_ui("root/wt_snd/interface/msg_bomb_plant.wav")
    if worker==game.player:game.award_sp("plant","Bombaman")
    game.announce("Bomba kuruldu · Savunma bombayı çözmeli")
 func objective(actor):

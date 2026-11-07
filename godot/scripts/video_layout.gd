@@ -11,13 +11,13 @@ const HUD={
  "support":["left",74,335],"energy":["left",99,335],
  "awards":["right",225,230],"spectator":["center",-125,306],
  "own_name":["center",-172,2],"own_kills":["center",-143,18],
- "other_name":["center",105,2],"own_deaths":["center",134,18]
+ "other_name":["center",105,2],"own_deaths":["center",134,18],"bomb_progress":["center",-95,335]
 }
 # PC recordings have no touch buttons. These mobile-only rows occupy the free
 # margins between the measured HUD/feed/award regions; they never move the HUD.
 const TOUCH={
  "fire":Vector2(.945,.824),"jump":Vector2(.875,.5556),"crouch":Vector2(.945,.5556),
- "reload":Vector2(.875,.824),"transform":Vector2(.805,.824),"sprint":Vector2(.105,.60),
+ "reload":Vector2(.875,.824),"transform":Vector2(.805,.824),"sprint":Vector2(.105,.53),
  "aim":Vector2(.805,.5556),"roll":Vector2(.735,.824),"interact":Vector2(.735,.5556)
 }
 const MOVE=Vector2(.105,.75)

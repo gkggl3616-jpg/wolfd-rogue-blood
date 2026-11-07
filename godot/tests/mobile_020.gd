@@ -49,7 +49,7 @@ func run():
  game.local_room={"mode":3000,"map":26,"team":"blue","allyBots":1,"enemyBots":1,"roundGoal":3,"matchSeconds":105};game.start_round();await frames(8)
  var friend=game.enemies.get_children().filter(func(actor):return not actor.is_queued_for_deletion() and actor.team=="blue")[0];var enemy=game.enemies.get_children().filter(func(actor):return not actor.is_queued_for_deletion() and actor.team=="red")[0]
  friend.opponent=null;friend.think();check(friend.opponent==enemy,"Objective navigation still selects hostile bots instead of bypassing combat perception")
- game.destruction.advance(10);enemy.position=game.destruction.site_position(game.destruction.sites[0]);enemy.velocity=Vector3.ZERO;enemy.sees_player=false;game.destruction.advance(5.1);check(game.destruction.planted,"Red bot performs actual timed planting at original source site")
+ game.destruction.advance(10);enemy.position=game.destruction.site_position(game.destruction.sites[0]);enemy.velocity=Vector3.ZERO;enemy.sees_player=false;game.destruction.advance(float(game.destruction.tuning.plantSeconds)+0.1);check(game.destruction.planted,"Red bot performs actual timed planting at original source site")
  enemy.damage(1000,{"actor":"bot","attackerTeam":"blue"});check(game.running,"Red elimination after planting does not instantly end bomb turn")
  friend.position=game.destruction.bomb;friend.velocity=Vector3.ZERO;friend.sees_player=false;game.destruction.advance(5.1);check(game.destruction.wins.blue==1,"Blue bot performs timed defuse")
  for i in range(2):game.destruction.advance(5);game.destruction.advance(10);game.destruction.advance(106)

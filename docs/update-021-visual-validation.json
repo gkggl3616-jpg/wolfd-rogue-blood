@@ -6,7 +6,7 @@
       "path": "docs/review/update-021/video-aligned-equipment-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f1ce8befde077ec62c71d49b5110b00213e7e10cdf828852ac8b6d3a7325c162"
+      "sha256": "196a3a86eaec281850ce79b5e86f2abcbe15fb87f0d9c209ee7d43c8b3aa0c5a"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-021/round-preparation-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6bf7db3458b0ec2223092d283b2ac9fb6cc1d03dd900036c413dd5f9522fc64e"
+      "sha256": "fa1269a5a8ccc52550399979c42933b8be525a36935c7f1991a67108361e91e1"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-021/teammate-spectator-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a6a847de7c973e17bbec978825d964abf6e57484c4b3deaac24ae839c54a0cc0"
+      "sha256": "9e08de680a6563636580cf2e28f75f203951260a097273bfb32662bd9c470b2c"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-021/round-result-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "5022184c08125f855043ade9fbb451ddd7d9e927d80f0acb97e65365a56ba343"
+      "sha256": "06fc1b6d42ad7531f4f06020e93eb932977a6c63100085171e2affc5145504c4"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-021/attack-defense-swap-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "79ccac675ccbe62ca662f3cd7e57ee104d85f55396dc13dead0a288916c22a04"
+      "sha256": "3fae6946ed49ea9bba50faad0a3a698dcb8fbd0c88058210e2d0fcb8aad786ee"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-021/role-spawn-and-carrier-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9de8cf74a8aa34173d345bda3d039d291c7d119ab7cd10a854a86f7e2e2f3b20"
+      "sha256": "732993d8c787cee97cf08df4d11fbe50773b622f8e110d83c503acb5a815461d"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-021/video-aligned-mutations-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4019b09f81cd8a0dc1745ac38995302d5cbdf66810bb588839b44ab6c37285df"
+      "sha256": "fa2803da1e0b37239784a10a9cf8e286765961cd4c77d7f47a177d1a29b2b825"
     },
     {
       "height": 992,
@@ -76,5 +76,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "1d8f9583f9a5f054be0867d7bac490e61e7a6ce7ca2b4698a25e37c23c920205"
+  "runtimeCodeSha256": "2a60247e01e368f6e6bedc5780937d9ac9115dbc4322001e4072508bc7fde4a8"
 }

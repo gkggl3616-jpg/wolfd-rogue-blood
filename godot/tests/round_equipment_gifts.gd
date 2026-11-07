@@ -65,7 +65,7 @@ func run():
 	game.application_suspended=false;ensure(game.choose_round_loadout(2) and game.book.active_loadout==2 and not game.selection_active,"equipment card really selects the saved set")
 	ensure(game.book.loadout_names==["Standart","SLH 1","SLH 2","SLH 3","SLH 4"],"five loadout tabs match the supplied reference")
 	game.health=60;game.player.switch_form();ensure(game.selection_active and not game.player.is_wolf,"transform requests a mutation choice")
-	game.match_sp=1000 # Fund the paid-mutation fixture; fresh-match zero SP is covered by mobile_021.
+	game.match_sp=10000 # Fund the paid-mutation fixture; fresh-match zero SP is covered by mobile_021.
 	for id in ["power","guardian","ghost","normal"]:
 		if not game.selection_active:game.open_round_selection("wolf")
 		ensure(game.choose_round_mutation(id) and game.player.mutation_id==id,"choice installs source mutation body: "+id)

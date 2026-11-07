@@ -10,6 +10,7 @@ const PcScreens = preload("res://ui/pc_screens.gd")
 const NAMES = {"entry":"Giriş", "servers":"Sunucular", "lobby":"Lobi", "room":"Oda", "create_room":"Oda Oluştur", "maps":"Mod ve Haritalar", "pause":"Duraklatıldı", "result":"Maç Sonucu", "admin":"Yerel Yönetim", "power":"Güç Slotu", "events":"Etkinlikler", "missions":"Görevler", "gifts":"Hediyeler", "friends":"Arkadaşlar", "clan":"Klan", "ranking":"Sıralama"}
 const SERVICE_LAYOUTS = {"events":"interface/wolfeventdialog", "missions":"interface/mission/missionsheet", "gifts":"interface/giftbox", "friends":"interface/gamebuddy", "clan":"section/pride", "ranking":"section/rankingsection"}
 var game
+var result_tab="summary"
 var page = "lobby"
 var collection_shop = false
 var set_filter_item=""
@@ -110,9 +111,9 @@ func refresh():
 	if page=="controls":
 		var editor=preload("res://ui/control_editor.gd").new();editor.ui=self;add_child(editor);building=false;return
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
-	if page not in ["entry","pause"] and not (page=="Ayarlar" and overlay):build_header()
-	text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
-	text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	if page not in ["entry","pause","result"] and not (page=="Ayarlar" and overlay):build_header()
+	if page!="result":text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
+	if page!="result":text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	building = false
 	if input_id!="":
 		for node in content.find_children("*","LineEdit",true,false):

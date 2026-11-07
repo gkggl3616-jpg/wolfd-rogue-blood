@@ -40,7 +40,7 @@ func run():
  Input.action_release("interact");d.advance(0.1);check(d.progress==0 and d.operator_id==0,"Releasing cancels progress")
  Input.action_press("interact");d.advance(2);game.player.position+=Vector3(40,0,0);d.advance(0.1)
  check(d.progress==0 and game.match_sp==0,"Leaving the site cancels without reward")
- game.player.position=d.site_position(d.sites[0]);d.advance(5.0);Input.action_release("interact")
+ game.player.position=d.site_position(d.sites[0]);d.advance(float(d.tuning.plantSeconds));Input.action_release("interact")
  check(d.planted and d.carrier==null and d.fuse==40,"Completing one plant leaves one timed bomb")
  check(game.match_sp==50,"Plant credits the planter exactly once")
  d.advance(0.1);check(game.match_sp==50,"Planted state cannot repeat plant reward")

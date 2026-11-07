@@ -5,11 +5,13 @@
   "windowsBinaryPath": "legacy/WolfRogue.dat",
   "androidPackage": "com.wolfrogue.blood",
   "androidGameProject": "godot",
-  "apkProduced": true,
+  "apkProduced": false,
   "binaryContentsModified": false,
   "note": "The renamed Windows binary is a byte-identical reference copy. Embedded resources, original service references and signatures are preserved.",
-  "androidBuildType": "signed-offline-release",
+  "androidBuildType": "offline-source-update",
   "physicalAndroidDeviceTested": false,
   "offlineAndroidPackage": "com.wolfrogue.blood.offline",
-  "offlineVersion": "0.17.0-offline"
+  "offlineVersion": "0.22.0-offline",
+  "lastVerifiedApkVersion": "0.20.0-offline",
+  "lastVerifiedApkReport": "docs/android-offline-build.json"
 }

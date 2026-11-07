@@ -26,14 +26,15 @@ func run():
 	game.library_panel.navigate("Dövmeler");await capture("wolf-tattoo-inventory-013")
 	game.library_panel.navigate("Envanter");game.library_panel.filter_id="primary";game.library_panel.refresh();await capture("human-loadout-slots-013")
 	game.library_panel.detail_helper.info_tab="properties";game.library_panel.detail_helper.show_details();await capture("human-weapon-properties-013")
-	game.local_room={"title":"Ekipman seçimi","mode":0,"map":84,"team":"blue"};game.start_round(true);game.spawn_clock=1000;game.set_process(false);await capture("round-weapon-selection-013")
+	game.local_room={"title":"Ekipman seçimi","mode":0,"map":84,"team":"blue"};game.start_round(true);game.match_sp=10000;game.spawn_clock=1000;game.set_process(false);await capture("round-weapon-selection-013")
 	game.choose_round_loadout(1);game.player.switch_form();await capture("round-wolf-selection-013")
 	for team in ["blue","red"]:
 		game.local_room.team=team
 		for id in ["power","guardian","ghost"]:
 			if not game.selection_active:game.open_round_selection("wolf")
-			game.choose_round_mutation(id);game.player.position=game.preview_spawn;game.health=game.max_health();await capture("wolf-"+id+"-"+team+"-013")
+			if not game.choose_round_mutation(id):failures+=1
+			game.player.position=game.preview_spawn;game.health=game.max_health();await capture("wolf-"+id+"-"+team+"-013")
 	root.size=Vector2i(1024,768);game.open_round_selection("wolf");await capture("round-wolf-selection-native-013")
 	game.close_round_selection();game.show_home();game.pc_panel.navigate("gifts");game.pc_panel.detail_helper.tab="history";game.pc_panel.detail_helper.render();await capture("gift-history-native-013")
-	var report={"captures":captures,"failures":failures,"rendering":RenderingServer.get_current_rendering_method(),"adapter":RenderingServer.get_video_adapter_name(),"physicalAndroidDeviceTested":false,"testFixtureGifts":true,"testFixtureLocalCash":2000};var file=FileAccess.open(output.path_join("report.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
+	var report={"captures":captures,"failures":failures,"rendering":RenderingServer.get_current_rendering_method(),"adapter":RenderingServer.get_video_adapter_name(),"physicalAndroidDeviceTested":false,"testFixtureGifts":true,"testFixtureLocalCash":2000,"testFixtureMatchSp":10000};var file=FileAccess.open(output.path_join("report.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"  ")+"\n");file.close()
 	game.queue_free();await frames();print("EQUIPMENT_VISUAL_QA ",captures.size()," captures; ",failures," failures");quit(0 if failures==0 else 1)

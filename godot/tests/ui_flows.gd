@@ -177,7 +177,9 @@ func run():
 	game.spawn_clock=1000;game.end_round("QA tamamlandı");await frames();ui=game.pc_panel
 	var results=ui.content.get_children().filter(func(node):return node is Layout)[0]
 	ensure(not results.find_widget("RedResult").visible,"unfinished or lost rounds cannot display the source victory badge")
-	await click(ui.links["Yeniden oyna"])
+	await click(ui.links["Confirm"]);await frames();ui=game.pc_panel
+	ensure(ui.page=="room","source result confirmation returns to its room")
+	await click(ui.links["StartGame"])
 	ensure(game.running and game.offline_map_number==84 and game.kills==0,"result retry keeps the selected real map")
 	game.queue_free();await frames()
 	print("UI_FLOWS_QA checks=%d failures=%d" % [checks,failures]);quit(0 if failures==0 else 1)

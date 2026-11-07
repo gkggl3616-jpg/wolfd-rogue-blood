@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "asset": "res://assets/weapons/timebomb/viewmodel.glb",
+  "sha256": "9c0db39ad70dd9677faebc995d8ba65a8f1c4a0c9fed2eedf85273eb79de1676",
+  "source": "root/wt_guns/models_pv/wt_pv_timebomb.ltb",
+  "sourceSha256": "657071db715ce3af214c7b7d0c7af26da5764328ba12ec23a20b81416339fee6",
+  "sourceWeaponTableSha256": "2d66831198c297d37ddb55de79c8f0de73868bdedee0343d1b81630c532e007a",
+  "sourceModelNameOffset": 6312,
+  "textureSlots": [
+    {
+      "slot": 0,
+      "path": "root/wt_guns/skins_pv/wt_pv_hand.dtx",
+      "sha256": "21900356578bd2648e132114064337a5d7bfe00415c140455fc9779e0cd9de65"
+    },
+    {
+      "slot": 1,
+      "path": "root/wt_guns/skins_pv/wt_pv_timebomb.dtx",
+      "sha256": "aeb73730eb4f91e212ee537959458a80c55ec531799c4436bb0756af2d1767ab"
+    },
+    {
+      "slot": 2,
+      "path": "root/wt_guns/skins_pv/wt_pv_timebomb_1.dtx",
+      "sha256": "06ab766369de9cc5d4062edcd1bc5cc842cc118bdbb1a32e0df5037a9458a26b"
+    },
+    {
+      "slot": 3,
+      "path": "root/wt_guns/skins_pv/wt_pv_timebomb_2.dtx",
+      "sha256": "c989411cb991237e3861407850c9fd18c6bb809882e850ff2d162bf050bd70b4"
+    }
+  ],
+  "handsResolution": "HumanHands -> existing default WT_PV_HAND; per-character hand replacement remains local equipment presentation.",
+  "clips": {
+    "idle": "idle0",
+    "select": "Select",
+    "plant": "Fire",
+    "walk": "Walk"
+  },
+  "sourcePlantEvents": [
+    {
+      "timeMs": 400,
+      "key": "sound_key 10"
+    },
+    {
+      "timeMs": 2800,
+      "key": "sound_key 11"
+    },
+    {
+      "timeMs": 3767,
+      "key": "sound_key 11"
+    },
+    {
+      "timeMs": 4667,
+      "key": "INSTALL_TIMEBOMB; sound_key 12"
+    }
+  ],
+  "selectSeconds": 0.666,
+  "installEventSeconds": 4.667,
+  "plantSeconds": 5.333,
+  "world": {
+    "asset": "res://assets/weapons/timebomb/world.glb",
+    "sha256": "596924ac9ef13458346e5fcb891ac0871c7767194d0da60f506d1b45f5da2cb5",
+    "source": "root/wt_props/models/groundtimebomb.ltb",
+    "sourceSha256": "fcd5cf25a673616595fa6fbc171f4c9855b02eacfd81e59f1d38f66e605dcbc2",
+    "texture": "root/wt_guns/skins_hh/wt_hh_timebomb.dtx",
+    "textureSha256": "f14086da8cde7091b71f90f6519bc8dba5ca092a03315eb7e765a104efecaed7"
+  },
+  "soundKeys": {
+    "10": "root/wt_snd/specialweapon/timebomb/bomb_combine.wav",
+    "11": "root/wt_snd/specialweapon/timebomb/bomb_button.wav",
+    "12": "root/wt_snd/specialweapon/timebomb/bomb_activate.wav"
+  },
+  "scope": "Original device, hands, textures and Select/Fire/INSTALL_TIMEBOMB events. Camera placement and defuse display are mobile adaptation; no original defuse hand clip has been established."
+}

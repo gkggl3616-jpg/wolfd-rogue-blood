@@ -9,6 +9,7 @@ var source_events
 var target_clock=0.0
 var kind="wolf"
 var display_name="Bot"
+var roster_id=""
 var nameplate:Label3D
 var difficulty="normal"
 var profile={}
@@ -246,7 +247,7 @@ func fire():
 
 func hit_opponent():
  if not game.hostile(opponent,team):return
- var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourcePosition":global_position}
+ var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourcePosition":global_position,"rosterId":roster_id}
  if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
  else:opponent.damage(Rules.DAMAGE,context)
 func melee_hit():
@@ -394,6 +395,7 @@ func damage(amount,context={}):
  health-=amount
  if game.spectator.active and game.spectator.target==self and is_instance_valid(game.source_hud):game.source_hud.feedback.show_damage(context.get("sourcePosition"))
  if health<=0:
+  game.record_elimination(roster_id,context.get("rosterId","") if context.get("actor","")=="bot" else "player")
   if game.destruction.enabled:game.destruction.actor_dead(team,self)
   game.game_audio.voice(self,0)
   collision_layer=0;context=context.duplicate();context.target=display_name

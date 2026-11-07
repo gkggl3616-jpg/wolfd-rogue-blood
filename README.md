@@ -1,12 +1,14 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. **0.20.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle üretildi ve paket/imza denetiminden geçti. 34 kaynak haritada botlu yerel maç ve 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter içerir. Bu depo henüz eksiksiz PC oyunu değildir. [Sürümün kapsamı ve kullanım](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
+Godot **4.7.2** ile Android'e taşınan, geliştirmesi süren oyun. Güncel **0.22.0 kaynak kodu**, dört video referansının iki aşamalı devamını içerir: kalıcı HUD yerleşimi, SP/YP, Yıkım rolleri ve izleme; özgün bomba cihazı/animasyonu, patlama ve sonuç/oda akışı. Bu değişiklikler için yeni APK üretilmedi. Son imzalı **0.20.0 çevrimdışı APK** ayrı `com.wolfrogue.blood.offline` kimliğiyle paket/imza denetiminden geçti. Projede 34 kaynak haritada botlu yerel maç, 903 silahlık mağaza kataloğu ve sahip olunan eşyalardan oluşan envanter bulunur. Bu depo henüz eksiksiz PC oyunu değildir. [Yayımlanan APK'nın kapsamı](docs/CEVRIMDISI_SURUM.md), [APK doğrulaması](docs/android-offline-build.json).
 
-[Tek APK indir](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
+[Son imzalı APK'yı indir · 0.20.0](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 
 [Kalıcı video yerleşim kuralı](docs/VIDEO_YERLESIM_KURALI.md)
 
 [Video devamı · 1. paket: SP/YP, roller, bomba ve izleme](docs/PC_REFERANS_021.md)
+
+[Video devamı · 2. paket: özgün cihaz, animasyon, efekt ve sonuç ekranları](docs/PC_REFERANS_022.md)
 
 [0.20 dövme resimleri, düzenlenebilir kontroller, YP/SP ve Yıkım turları](docs/PC_REFERANS_020.md)
 
@@ -55,7 +57,7 @@ Windows'ta APK oluşturmadan doğrulama:
 ./tools/build_android.ps1 -Godot C:\path\godot.exe -ValidateOnly
 ```
 
-Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi, duvara tutunma ve kaynak arayüz/GUI akışı kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. [Görüntü kontrolü](docs/mobile-visual-validation.json) ayrı OpenGL örnekleridir. Fiziksel telefon ve Android emülatörü testi yapılmadı.
+Bu denetim veri/yerel yönetici testleri, Godot içe aktarımı, kayıt, dokunma, oyun, odak, cephane, harita sesi, duvara tutunma ve kaynak arayüz/GUI akışı kontrollerini çalıştırır. [Son mantık kontrolü](docs/mobile-validation.json) penceresiz testtir. Güncel çalışma zamanı için [birinci paket](docs/update-021-visual-validation.json) ve [ikinci paket](docs/update-022-visual-validation.json) görüntüleri gerçek OpenGL ile alınır. Fiziksel telefon ve Android emülatörü testi yapılmadı.
 
 ## Gerçek PC kaynaklarına erişim
 

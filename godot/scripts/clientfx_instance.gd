@@ -5,6 +5,7 @@ var system
 var actor
 var group=""
 var looping=false
+var round_effect=false
 var depth=0
 var elapsed=0.0
 var duration=0.0
@@ -71,7 +72,8 @@ func _ready():
 				var gradient=Gradient.new();gradient.offsets=PackedFloat32Array();gradient.colors=PackedColorArray()
 				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],ck[4]))
 				node.color_ramp=gradient;mat.vertex_color_use_as_albedo=true
-			var quad=QuadMesh.new();quad.size=Vector2.ONE;mat.billboard_mode=BaseMaterial3D.BILLBOARD_ENABLED;quad.material=mat;node.mesh=quad;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
+			var initial_scale=maxf(.001,float(curve(spec,"Sk",0,[0,1])[1]))*.016;node.scale_amount_min=initial_scale;node.scale_amount_max=initial_scale
+			var quad=QuadMesh.new();quad.size=Vector2.ONE;mat.billboard_mode=BaseMaterial3D.BILLBOARD_PARTICLES;mat.billboard_keep_scale=true;quad.material=mat;node.mesh=quad;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
 		elif kind=="DynaLight":node=OmniLight3D.new();node.shadow_enabled=false;add_child(node)
 		elif kind=="PlaySound":
 			node=AudioStreamPlayer3D.new();node.bus="WolfEffects";node.stream=load(spec.sound).duplicate();node.max_distance=maxf(1,float(val(spec,"OuterRadius",2400))*0.016);node.pitch_scale=clampf(float(val(spec,"PitchShift",1)),0.1,4);node.volume_db=linear_to_db(maxf(0.001,float(val(spec,"Volume",100))/100.0))-10
@@ -87,7 +89,7 @@ func _ready():
 		node.hide();parts.append({"node":node,"spec":spec,"materials":materials,"baseScale":node.scale,"started":false,"samples":[],"nextSample":0.0,"child":null,"fixed":Transform3D.IDENTITY})
 	duration=maxf(0.05,duration)
 func _process(delta):
-	if not system.game.is_match_active() or (actor!=null and (not is_instance_valid(actor) or actor.is_queued_for_deletion())):queue_free();return
+	if (not system.game.is_match_active() and not (round_effect and system.game.running and not system.game.menu_open and not system.game.application_suspended)) or (actor!=null and (not is_instance_valid(actor) or actor.is_queued_for_deletion())):queue_free();return
 	elapsed+=delta
 	if is_instance_valid(actor) and get_parent()==system.game.transient_effects:global_transform=Transform3D(actor.global_basis,actor.global_position)
 	if not looping and elapsed>duration+tail:queue_free();return
@@ -120,13 +122,13 @@ func _process(delta):
 			part.started=true
 			if node is CPUParticles3D:node.emitting=true;node.restart()
 			if node is AudioStreamPlayer3D and not system.game.test_mode:node.play()
-			if kind=="CreateFX":part.child=system.play(spec.group,null if system.catalog.groups[group].get("sourceType","")=="ProjectileFX" else actor,node.global_position,choice(spec,"Loop")==1,depth+1,node)
+			if kind=="CreateFX":part.child=system.play(spec.group,null if system.catalog.groups[group].get("sourceType","")=="ProjectileFX" else actor,node.global_position,choice(spec,"Loop")==1,depth+1,node,round_effect)
 		if node is OmniLight3D:node.light_color=color;node.light_energy=color.a*0.6;node.omni_range=maxf(0.1,scale_value*0.016)
 		elif node is CPUParticles3D:node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
 		elif kind=="LTBModel":node.scale=part.baseScale*scale_value*vector(val(spec,"ModelScale",[1,1,-1])).abs()
 		elif kind in ["Sprite","FlareSpriteFX"]:node.scale=Vector3.ONE*scale_value*0.016
 		elif kind=="CamJitter":
-			var distance=node.global_position.distance_to(system.game.player.camera.global_position);var outer=maxf(0.1,float(val(spec,"OuterRadius",600))*.016);var inner=float(val(spec,"InnerRadius",0))*.016
+			var camera=get_viewport().get_camera_3d();var distance=node.global_position.distance_to(camera.global_position if camera!=null else system.game.player.camera.global_position);var outer=maxf(0.1,float(val(spec,"OuterRadius",600))*.016);var inner=float(val(spec,"InnerRadius",0))*.016
 			var strength=clampf((outer-distance)/maxf(.01,outer-inner),0,1)*minf(.08,scale_value*.001)
 			system.camera_shake+=Vector2(sin(elapsed*97),cos(elapsed*89))*strength
 		elif kind=="LightningFX":lightning(part,color)

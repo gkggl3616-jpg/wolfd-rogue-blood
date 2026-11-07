@@ -3,6 +3,7 @@ import argparse, hashlib, json, os, pathlib, re, subprocess
 from validate_mobile import code_fingerprint
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SUITES={
+ 'update022':('visual_022','update-022','update-022-visual-validation.json',10),
  'update021':('visual_021','update-021','update-021-visual-validation.json',9),
  'update020':('visual_020','update-020','update-020-visual-validation.json',9),
  'update019':('visual_019','update-019','update-019-visual-validation.json',12),
