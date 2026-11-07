@@ -46,6 +46,9 @@ var tutorial=LocalTutorial.new()
 var ranks=RankBook.new()
 var map_photo:TextureRect
 var match_roster={}
+var removed_bot_ids=[]
+var match_scoreboard
+var match_flow=preload("res://scripts/match_flow.gd").new()
 var match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0}
 var kill_feed=[]
 var match_serial=0
@@ -129,6 +132,7 @@ var menu_backdrop: ColorRect
 var transient_effects: Node3D
 
 func _ready():
+	match_flow.game=self
 	profile_lock=ProfileLock.new(not test_mode)
 	book = ContentBook.new(not test_mode, "user://collection.json", OS.has_feature("offline_release"))
 	profile_name = book.local_name
@@ -266,6 +270,7 @@ func build_ui():
 	message = SourceArt.label("",Vector2(900,60),16);message.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;message.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	message.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP);message.position=Vector2(-450,140);message.size=Vector2(900,60);root.add_child(message)
 	source_hud=GameHud.new();source_hud.game=self;root.add_child(source_hud)
+	match_scoreboard=Control.new();match_scoreboard.set_script(preload("res://ui/match_scoreboard.gd"));match_scoreboard.game=self;root.add_child(match_scoreboard)
 	touch=Node2D.new();touch.set_script(TouchScript);touch.game=self;layer.add_child(touch)
 	menu_backdrop=ColorRect.new();menu_backdrop.color=Color("050709");menu_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);root.add_child(menu_backdrop)
 	# Kept only for backwards-compatible QA/accessors; no old panel is displayed.
@@ -279,6 +284,7 @@ func center_overlay(dimensions):
 	overlay.offset_bottom = dimensions.y / 2.0
 
 func clear_overlay():
+	player.pending_melee.clear()
 	if destruction.enabled:destruction.cancel_operation()
 	if is_instance_valid(player) and is_instance_valid(player.roar_effect): player.roar_effect.stop()
 	clear_pc_panel()
@@ -393,6 +399,8 @@ func show_launcher():
 	running=false;open_interface("entry")
 
 func open_interface(page, library=false):
+	if page=="scoreboard":match_scoreboard.manual=not match_scoreboard.manual;return
+	if match_flow.starting() and page!="loading":match_flow.cancel_start()
 	if profile_lock!=null and not profile_lock.unlocked:page="entry";library=false
 	clear_overlay();overlay.hide()
 	var panel=Frontend.new();panel.game=self;panel.page=page
@@ -504,6 +512,7 @@ func resume():
 	if is_instance_valid(library_panel):
 		library_panel.get_parent().remove_child(library_panel);library_panel.queue_free();library_panel=null
 	menu_open=false;overlay.hide()
+	match_scoreboard.manual=false
 	if is_instance_valid(menu_backdrop):menu_backdrop.hide()
 	if not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_VISIBLE if selection_active else Input.MOUSE_MODE_CAPTURED
 
@@ -524,6 +533,7 @@ func start_round(with_selection=false):
 		return false
 	if preload("res://scripts/source_match_rules.gd").supports(local_room.get("mode",0)) and not map_catalog.belongs_to_mode(int(local_room.mode),int(local_room.get("map",0))):
 		announce("Harita bu özgün moda bağlı değil.");return false
+	match_flow.reset_match();removed_bot_ids.clear();source_hud.feedback.reset()
 	spectator.stop()
 	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=economy.begin();match_wallet_start=wallet.duplicate();bomb_presentation.reset();announced_last_minute=false;first_kill_announced=false
 	close_round_selection();round_selection_enabled=with_selection;match_slots.clear()
@@ -631,13 +641,15 @@ func start_round(with_selection=false):
 		for site in destruction.sites:
 			var marker=Label3D.new();marker.text=site.name;marker.position=destruction.site_position(site)+Vector3.UP*2;marker.billboard=BaseMaterial3D.BILLBOARD_ENABLED;marker.font_size=80;marker.modulate=Color("e5b65c");active_map.add_child(marker)
 	if destruction.enabled:destruction.prepare()
-	else:game_audio.match_sound("round_start")
+	elif with_selection and not tutorial.active and not hunt.active:match_flow.prepare()
+	else:match_flow.signal_start()
 	if with_selection and not tutorial.active:open_round_selection()
 	announce((("%d Tur · %d:%02d" % [match_rules.goal,match_rules.seconds/60,match_rules.seconds%60]) if match_rules.round_based else ("%d Puan · %d dakika" % [match_rules.goal,match_rules.seconds/60])) if match_rules.enabled else ("Kurt Avı · Raunt 1/3" if hunt.active else "10 hedef · 90 saniye"))
 	update_hud()
 	return true
 
 func restart_destruction_turn():
+	source_hud.feedback.reset()
 	spectator.stop()
 	reset_round_equipment()
 	for bot in enemies.get_children():bot.collision_layer=0;bot.queue_free()
@@ -702,8 +714,8 @@ func choose_round_mutation(id):
 	close_round_selection()
 	if transform_after and not player.is_wolf:player.switch_form(true)
 	update_hud();return true
-func is_match_active():return (not destruction.enabled or destruction.phase=="combat") and running and not menu_open and not application_suspended and not selection_active and (not hunt.active or hunt.phase=="combat")
-func is_combat_active():return is_match_active() and health>0
+func is_match_active():return not match_flow.preparing() and (not destruction.enabled or destruction.phase=="combat") and running and not menu_open and not application_suspended and (not hunt.active or hunt.phase=="combat")
+func is_combat_active():return is_match_active() and health>0 and not selection_active
 func finish_hunt_round(won):
 	if not hunt.finish_round(won):return
 	for enemy in enemies.get_children():enemy.collision_layer=0;enemy.queue_free()
@@ -760,6 +772,7 @@ func _exit_tree():
 	clear_offline_navigation()
 
 func pause_game():
+	if match_scoreboard.manual:match_scoreboard.manual=false;return
 	if is_instance_valid(library_panel):library_panel.go_back();return
 	if is_instance_valid(pc_panel):pc_panel.go_back();return
 	if not running:return
@@ -778,8 +791,7 @@ func _input(event):
 	if event.is_action_pressed("inventory"):
 		show_library("Envanter")
 	if event is InputEventKey and event.physical_keycode==KEY_TAB and not event.echo and running:
-		if event.pressed and not menu_open:open_interface("scoreboard")
-		elif not event.pressed and is_instance_valid(pc_panel) and pc_panel.page=="scoreboard":resume()
+		if not menu_open:match_scoreboard.manual=event.pressed
 	if event is InputEventKey and event.pressed and not event.echo and not menu_open:
 		if spectator.active and event.physical_keycode in [KEY_LEFT,KEY_RIGHT]:spectator.cycle(-1 if event.physical_keycode==KEY_LEFT else 1)
 		var keys = {KEY_1: "primary", KEY_2: "pistol", KEY_4: "grenade", KEY_5: "knife"}
@@ -829,6 +841,7 @@ func restore_application():
 	# Returning to Android never resumes combat until the player chooses Continue.
 
 func _process(delta):
+	match_flow.advance_start(delta)
 	if is_instance_valid(menu_backdrop): menu_backdrop.visible = menu_open and not running
 	if is_instance_valid(message):message.visible=running and not menu_open
 	poll_clock -= delta
@@ -850,9 +863,8 @@ func _process(delta):
 	if not running or menu_open:
 		return
 	if application_suspended:return
-	if selection_active:
-		if destruction.enabled:destruction.advance(delta)
-		return
+	match_flow.advance_match(delta)
+	if match_flow.preparing():return
 	economy.advance(delta)
 	booster_remaining=maxf(0,booster_remaining-delta)
 	if hunt.active and advance_hunt(delta):return
@@ -881,6 +893,7 @@ func _process(delta):
 	if respawn_remaining>0:
 		respawn_remaining=maxf(0,respawn_remaining-delta)
 		if respawn_remaining<=0:
+			source_hud.feedback.reset()
 			reset_round_equipment()
 			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear()
 			announce("Takımına geri döndün")
@@ -916,6 +929,24 @@ func actor_alive(actor):
 func record_elimination(victim,attacker):
 	if match_roster.has(victim):match_roster[victim].deaths+=1
 	if attacker!=victim and match_roster.has(attacker):match_roster[attacker].kills+=1
+
+func remove_local_bot(id,reason="etc"):
+	if not running or id=="player" or not match_roster.has(id) or id in removed_bot_ids:return false
+	var row=match_roster[id]
+	if row.team!=local_room.get("team","blue"):return false
+	var actor=null
+	for bot in enemies.get_children():
+		if actor_alive(bot) and bot.roster_id==id:actor=bot;break
+	if destruction.enabled and actor==null:destruction.dead[row.team]=maxi(0,int(destruction.dead[row.team])-1)
+	removed_bot_ids.append(id);row.removed=true;row.removalReason=reason
+	local_room.allyBots=maxi(0,bot_limit(row.team)-1)
+	if actor!=null:
+		clientfx.stop_actor(actor)
+		if destruction.enabled and actor==destruction.carrier:
+			destruction.bomb=actor.global_position;destruction.carrier=null;destruction.dropped=not destruction.planted;destruction.cancel_operation()
+		actor.collision_layer=0;actor.queue_free()
+	if spectator.active:spectator.cycle(1)
+	return true
 
 func actor_team(actor):return local_room.get("team","blue") if actor==player else actor.team
 func hostile(actor,team):return actor_alive(actor) and actor_team(actor)!=team
@@ -958,7 +989,7 @@ func spawn_enemy(kind="",difficulty="",team=""):
 	enemy.rotation.y=PI if team=="red" else 0.0
 	enemy.kind=match_rules.form_lock if match_rules.enabled and match_rules.form_lock!="mixed" else (kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))))
 	var slot=0
-	while enemies.get_children().any(func(bot):return actor_alive(bot) and bot.roster_id==team+"-"+str(slot)):slot+=1
+	while team+"-"+str(slot) in removed_bot_ids or enemies.get_children().any(func(bot):return actor_alive(bot) and bot.roster_id==team+"-"+str(slot)):slot+=1
 	enemy.roster_id=team+"-"+str(slot);enemy.display_name=("Kırmızı" if team=="red" else "Mavi")+" "+str(slot+1)
 	if not match_roster.has(enemy.roster_id):match_roster[enemy.roster_id]={"id":enemy.roster_id,"name":enemy.display_name,"team":team,"kills":0,"deaths":0,"gp":0,"gold":0}
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
@@ -1051,7 +1082,13 @@ func attack():
 			player.play_clip("body_attack")
 			player.wolf_running = false
 		var base=int(mutations.profile(player.mutation_id).damage)
-		wolf_melee_hit((65 if player.mutation_id=="normal" else roundi(base*1.4)) if body_attack else base,2.8,"Vücut saldırısı" if body_attack else "Pençe isabeti")
+		var clip="body_attack" if body_attack else attack_clip
+		player.source_events.restart_melee()
+		var damage=(65 if player.mutation_id=="normal" else roundi(base*1.4)) if body_attack else base
+		var record=clientfx.animation_record(player,clip)
+		if record.get("events",[]).any(func(e):return str(e.key).to_lower().contains("fire_key")):
+			player.pending_melee={"clip":clip,"damage":damage,"reach":2.8,"caption":"Vücut saldırısı" if body_attack else "Pençe isabeti"}
+		else:wolf_melee_hit(damage,2.8,"Pençe isabeti") # Undecoded clips retain the explicit local fallback.
 		return
 	if kind != "knife": ammo -= 1
 	notify_bot_noise(player.global_position,6 if kind=="knife" else 26)
@@ -1071,8 +1108,7 @@ func attack():
 			var damage = int(player.weapon_info.get("damage", 25))*(2 if head else 1)
 			var actual=mini(hit.collider.health,damage)
 			if head:match_stats.headshots+=1
-			clientfx.play("Impact_Flesh",null,hit.position)
-			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head})
+			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head,"hitPosition":hit.position})
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 			announce(("Kafadan isabet +%d" if head else "İsabet +%d") % actual)
 	var flash = OmniLight3D.new()
@@ -1097,8 +1133,13 @@ func wolf_melee_hit(amount,reach,caption):
 		var query=PhysicsRayQueryParameters3D.create(player.global_position+Vector3.UP,enemy.global_position+Vector3.UP,3,[player.get_rid()])
 		var hit=get_world_3d().direct_space_state.intersect_ray(query)
 		if hit and hit.collider==enemy:
-			enemy.damage(amount);announce(caption)
+			enemy.damage(amount,{"hitPosition":hit.position});announce(caption)
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
+
+func resolve_melee_event(clip):
+	if player.pending_melee.is_empty() or player.pending_melee.clip!=clip:return
+	var attack=player.pending_melee.duplicate();player.pending_melee.clear()
+	if is_combat_active() and player.is_wolf:wolf_melee_hit(attack.damage,attack.reach,attack.caption)
 
 func strong_attack():
 	if not is_combat_active() or not player.is_wolf:return false
@@ -1154,6 +1195,7 @@ func take_damage(amount, source_position=null, attacker={}):
 	health = maxi(0, health - amount)
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		player.pending_melee.clear()
 		economy.death();record_elimination("player",attacker.get("rosterId",""))
 		game_audio.voice(player,0)
 		deaths+=1
@@ -1164,6 +1206,7 @@ func take_damage(amount, source_position=null, attacker={}):
 		elif (match_rules.enabled or int(local_room.get("allyBots",0))>0) and team_score("red" if local_room.get("team","blue")=="blue" else "blue")<target_score():
 			respawn_remaining=3.0;player.reset_combat();touch.reset();announce("Yeniden doğuş · 3 saniye")
 		else:end_round("Yenildin")
+		if is_instance_valid(source_hud):source_hud.feedback.show_death()
 
 func end_round(title):
 	spectator.stop()

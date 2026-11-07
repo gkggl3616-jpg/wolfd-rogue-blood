@@ -97,23 +97,23 @@ func refresh():
 	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null;currency_values.clear();gp_header_label=null;gp_header_bar=null;profile_label=null
 	var dimensions = get_viewport_rect().size
 	virtual_width = 1024.0
-	var overlay=game.running and page in ["pause","Ayarlar","maps","scoreboard"]
+	var overlay=game.running and page in ["pause","Ayarlar","maps","scoreboard","kick"]
 	var shade = ColorRect.new();shade.color = Color(0,0,0,0.45) if overlay else Color("050709");shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(shade)
 	# The supplied PC recordings fill both 4:3 and 16:9 displays. Legacy 2D
 	# coordinates stretch on each axis; a centered 4:3 canvas adds false gutters.
 	var safe=usable_rect()
 	canvas = Control.new();canvas.clip_contents=true;canvas.size = Vector2(virtual_width,768);canvas.position=safe.position;canvas.scale = safe.size/Vector2(1024,768);add_child(canvas)
 	var lobby_background=page in ["lobby","room","room_settings","create_room","maps","pin","profile","rankbook"]
-	if not overlay:background("wt_interface/lobby/lb_bg.dtx" if lobby_background else "wt_interface/inven_shop/is_bg.dtx",607 if lobby_background else 352)
-	if not overlay and page!="entry":
+	if not overlay and page!="loading":background("wt_interface/lobby/lb_bg.dtx" if lobby_background else "wt_interface/inven_shop/is_bg.dtx",607 if lobby_background else 352)
+	if not overlay and page not in ["entry","loading"]:
 		var clean_top=ColorRect.new();clean_top.size=Vector2(1024,94);clean_top.color=Color.BLACK;clean_top.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(clean_top)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
 	if page=="controls":
 		var editor=preload("res://ui/control_editor.gd").new();editor.ui=self;add_child(editor);building=false;return
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
-	if page not in ["entry","pause","result"] and not (page=="Ayarlar" and overlay):build_header()
-	if page!="result":text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
-	if page!="result":text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	if page not in ["entry","pause","result","loading","kick"] and not (page=="Ayarlar" and overlay):build_header()
+	if page not in ["result","loading","kick"]:text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
+	if page not in ["result","loading","kick"]:text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	building = false
 	if input_id!="":
 		for node in content.find_children("*","LineEdit",true,false):
@@ -228,6 +228,8 @@ func _process(_delta):
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 
 func navigate(next,remember=true,back_step=false):
+	if next=="scoreboard":game.open_interface("scoreboard");return
+	if game.match_flow.starting() and next!="loading":game.match_flow.cancel_start()
 	if next=="wolfpass":next="missions"
 	if next!="Setler":set_filter_item=""
 	if modal != null: return
@@ -250,6 +252,7 @@ func navigate(next,remember=true,back_step=false):
 	refresh()
 
 func go_back():
+	if game.match_flow.starting():game.match_flow.cancel_start();return
 	if modal != null: close_modal();return
 	if not history.is_empty(): navigate(history.back(),false,true)
 	elif game.running: close_menu()

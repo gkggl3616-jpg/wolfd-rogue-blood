@@ -30,6 +30,7 @@ func run():
  check(d.progress==0 and game.match_sp==0,"Cancelled device cannot commit objective or reward")
  Input.action_press("interact");d.advance(float(d.tuning.plantSeconds));Input.action_release("interact");await frames()
  check(d.planted and presentation.world.visible and presentation.history.count("INSTALL_TIMEBOMB")==1,"Install commits one actual world bomb and one event")
+ check(presentation.game.source_hud.bomb_clock.visible and not presentation.game.source_hud.timer_view.visible,"Plant replaces the round clock immediately without overlapping countdowns")
  check(game.match_sp==50 and game.economy.earned==50,"Plant reward is credited once in the result ledger")
  d.fuse=0.01;d.advance(0.02);await frames(2)
  check(d.phase=="between" and not presentation.world.visible,"Explosion removes physical bomb during round result")
@@ -39,6 +40,7 @@ func run():
  await room("blue");d=game.destruction;d.planted=true;d.bomb=game.player.position;d.fuse=40
  Input.action_press("interact");d.advance(2);await frames()
  check(not presentation.held.visible and game.source_hud.bomb_progress.visible,"Defuse has its own progress without replaying plant hands")
+ check(game.source_hud.defuse_label.visible and (game.source_hud.bomb_progress.global_position/game.source_hud.get_viewport_rect().size).distance_to(Vector2(170.0/640,227.0/360))<.003,"Defuse progress and label use the measured source video area while the firearm stays visible")
  d.advance(3.1);Input.action_release("interact");await frames()
  check(d.wins.blue==1 and game.match_sp==50,"Defuse event and reward resolve once")
  await room("blue");d=game.destruction;game.enemy_defeated();game.match_stats.headshots=2;d.wins.blue=8;d.finish("blue","Maç kazanıldı");await frames()

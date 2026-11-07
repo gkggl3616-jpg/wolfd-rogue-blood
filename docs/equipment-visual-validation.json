@@ -63,7 +63,7 @@
       "path": "docs/review/equipment-013/round-weapon-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7455c6692ac2609e982e43de9e353c6750e34ab299b012ef63198a65852f6c22"
+      "sha256": "d5956c46121c49b9836c598996c9ae6d19305635bbe1878c632dced498924d2c"
     },
     {
       "height": 720,
@@ -71,7 +71,7 @@
       "path": "docs/review/equipment-013/round-wolf-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bcddc00fe95f7ca10e36fcc5db11c46e385bdf0998f0b3c1e89e68872444e9c7"
+      "sha256": "48f2b166067e360bdbddee9fdaa67e8666b9b3ed3d0949363f7ed32b95ef00b2"
     },
     {
       "height": 720,
@@ -79,7 +79,7 @@
       "path": "docs/review/equipment-013/wolf-power-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ec8e9db915c9bcf430379a138a7430422082cddf74c631283d6be482c01f3fb2"
+      "sha256": "ca424521606fca2caf8a0d9a5554be7ab90ee915cd133963cee8c755646de7db"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "160a1c53c7adbe4a4f83285d1b3209a284243e6b7a1849bce4b7fd1b41d12cd1"
+      "sha256": "4538adcd73f48d0d27020ed56fc78a72e3247d207fa709bc2e2d9770eba494e9"
     },
     {
       "height": 720,
@@ -95,7 +95,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "93cc86e5dd3c459c707ca15cc4e96f877d78d4ec231ac03dc2acb73da4fbad59"
+      "sha256": "6849389e88ff1a5a66744948a4ca77d4550989d1b6e0243ae533e5b74054230f"
     },
     {
       "height": 720,
@@ -103,7 +103,7 @@
       "path": "docs/review/equipment-013/wolf-power-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1af0bd0c6bd862d58a4e3671609079c64b9061948a91acfb7c5dd19acb735df2"
+      "sha256": "b6fe3cc36ccd9036d4705779bce3ce2c0d2a1b320889607c9ccb323722f79719"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8a4304e8f96d78ade5fffe701efa7d9ae9f9bff64fc75cd286be220e21cdc427"
+      "sha256": "e8b8314f6952b9f54e2c2893bebdc8557ee661e0c24d4df30ade10b35b4a0449"
     },
     {
       "height": 720,
@@ -119,7 +119,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b81b94d3a462dac3917f2ab174eafdc0d8740dd8a9b379a7b12c0f61d57867c5"
+      "sha256": "2ff5ee6360ce3b691716e8bf8322f782cf3703bf57600213184966661b59a0e5"
     },
     {
       "height": 768,
@@ -127,7 +127,7 @@
       "path": "docs/review/equipment-013/round-wolf-selection-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "5fb7b670a8260850cd126b8ed462366cb71dc164883630d6a58c7f61b16fd7d1"
+      "sha256": "153f181ec77c5d10fd1069eb2084031eca05e8ee38d71f75cb226f0a9bdadbd3"
     },
     {
       "height": 768,
@@ -144,5 +144,5 @@
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
   "testFixtureMatchSp": 10000,
-  "runtimeCodeSha256": "2a60247e01e368f6e6bedc5780937d9ac9115dbc4322001e4072508bc7fde4a8"
+  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
 }

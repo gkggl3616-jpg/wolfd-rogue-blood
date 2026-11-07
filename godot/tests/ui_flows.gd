@@ -25,6 +25,11 @@ func native_button(ui,name):
 			if candidate is BaseButton:return candidate
 	return null
 
+func await_match_start():
+	var deadline=Time.get_ticks_msec()+20000
+	while game.match_flow.starting() and Time.get_ticks_msec()<deadline:
+		game.match_flow.advance_start(1);await frames(1);OS.delay_msec(5)
+
 func run():
 	root.size=Vector2i(1280,720)
 	game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames()
@@ -61,6 +66,7 @@ func run():
 	await click(ui.links["ChangeRule"]);await click(ui.links["PLOK"])
 	ensure(game.local_room.team=="red" and game.local_room.title=="QA Yerel Oda","editing room rules preserves the actual title and selected team")
 	await click(ui.links["StartGame"])
+	await await_match_start()
 	ensure(game.running and not game.menu_open,"training starts through native room action")
 	ensure(game.bot_difficulty=="hard","StartGame applies the selected difficulty to this match")
 	ensure(game.source_hud.health_view.find_widget("HealthPoint").is_visible_in_tree(),"source health digits remain visible through their background parent")
@@ -173,6 +179,7 @@ func run():
 	ensure(game.local_room.map==84 and ui.links.has("StartGame") and not ui.links["StartGame"].disabled,"native room retains and enables the selected offline map")
 	if not ui.links.has("StartGame"):game.queue_free();await frames();quit(1);return
 	await click(ui.links["StartGame"])
+	await await_match_start()
 	ensure(game.running and game.offline_map_number==84 and is_instance_valid(game.active_map),"native StartGame opens the actual source map with local rules")
 	game.spawn_clock=1000;game.end_round("QA tamamlandı");await frames();ui=game.pc_panel
 	var results=ui.content.get_children().filter(func(node):return node is Layout)[0]
@@ -180,6 +187,7 @@ func run():
 	await click(ui.links["Confirm"]);await frames();ui=game.pc_panel
 	ensure(ui.page=="room","source result confirmation returns to its room")
 	await click(ui.links["StartGame"])
+	await await_match_start()
 	ensure(game.running and game.offline_map_number==84 and game.kills==0,"result retry keeps the selected real map")
 	game.queue_free();await frames()
 	print("UI_FLOWS_QA checks=%d failures=%d" % [checks,failures]);quit(0 if failures==0 else 1)

@@ -203,12 +203,14 @@ func run():
 	game.player.switch_form()
 	game.player.shot_cooldown = 0
 	game.attack()
+	await frames(15)
 	if not ensure(enemy.health == 55,"wolf claw damages a visible nearby target"):return
 	var before = game.wallet.cash
 	game.player.wolf_running = true
 	game.player.shot_cooldown = 0
 	game.attack()
-	if not ensure(enemy.health == -10 and not game.player.wolf_running,"running body attack requires the equipped ability and uses its own animation"):return
+	await frames(15)
+	if not ensure(game.kills==1 and not game.player.wolf_running,"running body attack requires the equipped ability and uses its own contact animation"):return
 	# The body attack already defeated this target.
 	if not ensure(game.kills == 1 and game.wallet.cash == before+25,"defeating a target grants the configured local reward"):return
 	game.take_damage(100)

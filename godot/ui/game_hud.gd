@@ -75,6 +75,8 @@ var spectator_buttons=[]
 var award_label:Label
 var bomb_progress:ProgressBar
 var bomb_clock:BombClock
+var start_view:TextureRect
+var defuse_label:Label
 
 func part(key,dimensions,keep):
 	var view=Layout.new();pc_layer.add_child(view);view.configure(key,dimensions)
@@ -157,8 +159,10 @@ func _ready():
 	swap_view=Art.sprite(pc_layer,"wt_interface/play/pl_change.dtx",Vector2.ZERO,Vector2.ONE,Rect2(0,0,804,604));swap_view.hide()
 	round_title=Art.label("",Vector2(312,36),28,Color.WHITE);round_title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(round_title)
 	ready_view=Art.sprite(pc_layer,"wt_interface/play/pl_round_ready.dtx",Vector2.ZERO,Vector2(256,64))
+	start_view=Art.sprite(pc_layer,"wt_interface/play/pl_round_start.dtx",Vector2.ZERO,Vector2(256,64));start_view.hide()
 	turn_result=Art.label("",Vector2(440,52),36,Art.GOLD);turn_result.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(turn_result)
 	bomb_progress=ProgressBar.new();bomb_progress.min_value=0;bomb_progress.max_value=1;bomb_progress.show_percentage=false;bomb_progress.mouse_filter=Control.MOUSE_FILTER_IGNORE;pc_layer.add_child(bomb_progress)
+	defuse_label=Art.label("BOMBA İMHA EDİLİYOR",Vector2(400,36),18,Art.GOLD);defuse_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;pc_layer.add_child(defuse_label)
 	var fill=StyleBoxFlat.new();fill.bg_color=Art.GOLD;fill.set_corner_radius_all(3);bomb_progress.add_theme_stylebox_override("fill",fill)
 	bomb_clock=BombClock.new();bomb_clock.digits=Art.texture("wt_interface/bomb/bomb_timer.dtx");bomb_clock.bomb_icon=Art.texture("wt_interface/bomb/bomb_bomb.dtx");bomb_clock.mouse_filter=Control.MOUSE_FILTER_IGNORE;pc_layer.add_child(bomb_clock)
 	resized.connect(arrange);arrange();refresh_from_game()
@@ -171,6 +175,7 @@ func arrange():
 	pc_layer.scale=factor;pc_layer.size=Vector2(1024,768)
 	var native=pc_layer.size
 	bomb_progress.position=VideoLayout.point("bomb_progress",native);bomb_progress.size=VideoLayout.measure(Vector2(190,3),native)
+	defuse_label.position=VideoLayout.point("defuse_label",native);defuse_label.size=VideoLayout.measure(Vector2(250,18),native)
 	bomb_clock.position=Vector2(native.x*.5-45,VideoLayout.measure(Vector2(0,34),native).y);bomb_clock.size=Vector2(90,42)
 	health_view.position=VideoLayout.point("health",native)
 	weapon_view.position=VideoLayout.point("weapon",native);weapon_name.position=weapon_view.position+Vector2(-25,59)
@@ -193,6 +198,7 @@ func arrange():
 	swap_view.position=VideoLayout.measure(Vector2(70,40),native);swap_view.size=VideoLayout.measure(Vector2(500,280),native)
 	round_title.position=Vector2(native.x*.5-156,VideoLayout.measure(Vector2(0,36),native).y)
 	ready_view.position=Vector2(native.x*.5-128,VideoLayout.measure(Vector2(0,60),native).y)
+	start_view.position=ready_view.position
 	turn_result.position=Vector2(native.x*.5-220,VideoLayout.measure(Vector2(0,60),native).y)
 	for row in layout_targets():
 		var key=row[0];var button=row[1];var custom=preload("res://scripts/control_layout.gd");var standard=Vector2.ONE*float(button.get_meta("source_scale",1.0))*(dimensions.y/720.0)/factor;var weight=standard*custom.scale_for(game.book.control_layout,key)
@@ -218,12 +224,17 @@ func refresh_from_game():
 	weapon_view.set_value("WeaponPoint",game.match_sp)
 	var bomb_state=game.destruction
 	bomb_progress.visible=game.using_bomb() and not game.spectator.active
-	if bomb_progress.visible:bomb_progress.value=bomb_state.progress/float(bomb_state.tuning.defuseSeconds if bomb_state.planted else bomb_state.tuning.plantSeconds)
+	defuse_label.visible=bomb_progress.visible and bomb_state.planted
+	if bomb_progress.visible:
+		bomb_progress.value=bomb_state.progress/float(bomb_state.tuning.defuseSeconds if bomb_state.planted else bomb_state.tuning.plantSeconds)
+		bomb_progress.position=VideoLayout.point("defuse_progress" if bomb_state.planted else "bomb_progress",pc_layer.size)
+		bomb_progress.size=VideoLayout.measure(Vector2(300,4) if bomb_state.planted else Vector2(190,3),pc_layer.size)
 	bomb_clock.visible=bomb_state.enabled and bomb_state.planted and bomb_state.phase=="combat"
 	if bomb_clock.visible:bomb_clock.remaining=bomb_state.fuse;bomb_clock.queue_redraw()
 	swap_view.visible=game.destruction.enabled and game.destruction.phase=="swap"
 	var turn_state=game.destruction.phase if game.destruction.enabled else ""
-	round_title.visible=turn_state in ["prepare","between"];ready_view.visible=turn_state=="prepare" or (game.selection_active and not game.selection_transform);turn_result.visible=turn_state=="between"
+	round_title.visible=turn_state in ["prepare","between"];ready_view.visible=turn_state=="prepare" or game.match_flow.preparing() or (game.selection_active and not game.selection_transform);turn_result.visible=turn_state=="between" and not game.match_scoreboard.auto_showing()
+	start_view.visible=game.match_flow.start_flash>0 and not ready_view.visible
 	round_title.text="Raunt %d" % game.destruction.number
 	turn_result.text="KAZANDIK" if game.destruction.last_winner==game.local_room.get("team","blue") else "KAYBETTİK"
 	if game.destruction.enabled and turn_state!="combat":game.message.visible=false
@@ -249,7 +260,7 @@ func refresh_from_game():
 	refresh_feed()
 	guide.visible=(game.destruction.enabled and game.destruction.phase!="swap") or game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
 	if not game.destruction.enabled:guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.equipped_slots().duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled,game.destruction.wins.duplicate(),game.destruction.number]
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.equipped_slots().duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled,game.destruction.wins.duplicate(),game.destruction.number,game.destruction.enabled,game.destruction.phase,game.destruction.planted,game.match_flow.preparing()]
 	state.append(watched.get_instance_id() if watched!=null else 0)
 	if watched!=null:state.append_array([watched.health,watched.ammo,watched.reserve,watched.reload_remaining>0])
 	state.append(watching)
@@ -273,7 +284,7 @@ func refresh_from_game():
 	if game.tutorial.active:score_view.set_value("Mode","Öğretici Mod")
 	class_icon.texture=Art.texture("res://assets/ui/form-icons/wolf.png" if game.player.is_wolf else "res://assets/ui/form-icons/human.png")
 	opposition_icon.texture=class_icon.texture
-	timer_view.visible=not game.exploring and not game.tutorial.active and (not game.destruction.enabled or game.destruction.phase=="combat" and not game.destruction.planted);score_view.visible=not game.exploring
+	timer_view.visible=not game.match_flow.preparing() and not game.exploring and not game.tutorial.active and (not game.destruction.enabled or game.destruction.phase=="combat" and not game.destruction.planted);score_view.visible=not game.exploring
 	preview_name.visible=game.exploring;preview_name.text=game.preview_name+" · GEZİNTİ"
 	map_name.text=game.preview_name
 	for i in range(slots.size()):

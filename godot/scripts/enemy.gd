@@ -393,6 +393,7 @@ func damage(amount,context={}):
   game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
+ game.clientfx.play("Impact_Flesh",null,context.get("hitPosition",global_position+Vector3.UP*1.1))
  if game.spectator.active and game.spectator.target==self and is_instance_valid(game.source_hud):game.source_hud.feedback.show_damage(context.get("sourcePosition"))
  if health<=0:
   game.record_elimination(roster_id,context.get("rosterId","") if context.get("actor","")=="bot" else "player")

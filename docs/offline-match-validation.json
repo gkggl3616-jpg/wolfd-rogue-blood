@@ -2,21 +2,21 @@
   "checks": 620,
   "maps": [
     {
-      "botTravelMetres": 2.4529128074646,
+      "botTravelMetres": 2.45290970802307,
       "crossTeamRoute": true,
       "number": 1,
       "safeBotSpawns": 36,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45289587974548,
+      "botTravelMetres": 2.15505933761597,
       "crossTeamRoute": true,
       "number": 2,
       "safeBotSpawns": 68,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.62780594825745,
+      "botTravelMetres": 2.45297884941101,
       "crossTeamRoute": true,
       "number": 26,
       "safeBotSpawns": 26,
@@ -30,21 +30,21 @@
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45297503471375,
+      "botTravelMetres": 1.70671570301056,
       "crossTeamRoute": true,
       "number": 44,
       "safeBotSpawns": 23,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45290446281433,
+      "botTravelMetres": 2.45288872718811,
       "crossTeamRoute": true,
       "number": 46,
       "safeBotSpawns": 22,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.53973686695099,
+      "botTravelMetres": 1.44579339027405,
       "crossTeamRoute": true,
       "number": 50,
       "safeBotSpawns": 20,
@@ -58,63 +58,63 @@
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.40352761745453,
+      "botTravelMetres": 1.50670063495636,
       "crossTeamRoute": true,
       "number": 58,
       "safeBotSpawns": 24,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.68366813659668,
+      "botTravelMetres": 2.23149371147156,
       "crossTeamRoute": true,
       "number": 59,
       "safeBotSpawns": 16,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.83211278915405,
+      "botTravelMetres": 1.82065844535828,
       "crossTeamRoute": true,
       "number": 65,
       "safeBotSpawns": 30,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.46785151958466,
+      "botTravelMetres": 1.75571846961975,
       "crossTeamRoute": false,
       "number": 72,
       "safeBotSpawns": 98,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45276761054993,
+      "botTravelMetres": 1.65758991241455,
       "crossTeamRoute": true,
       "number": 82,
       "safeBotSpawns": 58,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.87632238864899,
+      "botTravelMetres": 1.80842113494873,
       "crossTeamRoute": true,
       "number": 83,
       "safeBotSpawns": 58,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.73997581005096,
+      "botTravelMetres": 2.23944115638733,
       "crossTeamRoute": true,
       "number": 84,
       "safeBotSpawns": 28,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.80025863647461,
+      "botTravelMetres": 2.62321138381958,
       "crossTeamRoute": true,
       "number": 92,
       "safeBotSpawns": 30,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.12719798088074,
+      "botTravelMetres": 1.23779129981995,
       "crossTeamRoute": true,
       "number": 97,
       "safeBotSpawns": 30,
@@ -128,105 +128,105 @@
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.9542989730835,
+      "botTravelMetres": 2.45289897918701,
       "crossTeamRoute": true,
       "number": 110,
       "safeBotSpawns": 20,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.80177390575409,
+      "botTravelMetres": 2.02365350723267,
       "crossTeamRoute": true,
       "number": 36,
       "safeBotSpawns": 10,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45287156105042,
+      "botTravelMetres": 2.45292925834656,
       "crossTeamRoute": true,
       "number": 69,
       "safeBotSpawns": 26,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.06922435760498,
+      "botTravelMetres": 1.50734710693359,
       "crossTeamRoute": true,
       "number": 87,
       "safeBotSpawns": 34,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.8659633398056,
+      "botTravelMetres": 2.45287704467773,
       "crossTeamRoute": true,
       "number": 17,
       "safeBotSpawns": 26,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.45297265052795,
+      "botTravelMetres": 1.3273993730545,
       "crossTeamRoute": true,
       "number": 51,
       "safeBotSpawns": 58,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.93256318569183,
+      "botTravelMetres": 1.94375991821289,
       "crossTeamRoute": true,
       "number": 89,
       "safeBotSpawns": 30,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.35624158382416,
+      "botTravelMetres": 1.62483036518097,
       "crossTeamRoute": false,
       "number": 37,
       "safeBotSpawns": 24,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.02236151695251,
+      "botTravelMetres": 1.98322951793671,
       "crossTeamRoute": true,
       "number": 42,
       "safeBotSpawns": 30,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.27410733699799,
+      "botTravelMetres": 1.66825819015503,
       "crossTeamRoute": true,
       "number": 20,
       "safeBotSpawns": 40,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.60575222969055,
+      "botTravelMetres": 1.64165699481964,
       "crossTeamRoute": true,
       "number": 24,
       "safeBotSpawns": 65,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 4.090895652771,
+      "botTravelMetres": 3.50581693649292,
       "crossTeamRoute": true,
       "number": 68,
       "safeBotSpawns": 87,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.60261619091034,
+      "botTravelMetres": 1.4691379070282,
       "crossTeamRoute": true,
       "number": 41,
       "safeBotSpawns": 30,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 1.7511693239212,
+      "botTravelMetres": 1.86616849899292,
       "crossTeamRoute": true,
       "number": 56,
       "safeBotSpawns": 25,
       "spawnBasis": "Original source team anchors; separate NoTeam group only when one team tag is missing"
     },
     {
-      "botTravelMetres": 2.13122940063477,
+      "botTravelMetres": 2.45288038253784,
       "crossTeamRoute": true,
       "number": 61,
       "safeBotSpawns": 16,

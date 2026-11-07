@@ -1,0 +1,112 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "room-countdown-023",
+      "path": "docs/review/update-023/room-countdown-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6dbea961cd1e7b72e8ba66f8d1cc79012ee9c74a3f93e48a896c06160cbe3e03"
+    },
+    {
+      "height": 720,
+      "name": "room-go-023",
+      "path": "docs/review/update-023/room-go-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "01b51d092e6c49eee14b65b70a032141666014a2184b065efc2156133cb84963"
+    },
+    {
+      "height": 720,
+      "name": "source-map-loading-023",
+      "path": "docs/review/update-023/source-map-loading-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b743563b4c26eacf2c9cc2794d5869b75e4d5f282fbcbbf65b9c88e072106525"
+    },
+    {
+      "height": 720,
+      "name": "separate-preparation-023",
+      "path": "docs/review/update-023/separate-preparation-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b41e33eaba613c63d6cd2c5f938b986d65c5818c26fbc42f0287a34dc67a3cd9"
+    },
+    {
+      "height": 720,
+      "name": "early-choice-still-ready-023",
+      "path": "docs/review/update-023/early-choice-still-ready-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0a0a00e8061a825083c8ba9728c611662aa0020ba60bfce53ca86355f16e7602"
+    },
+    {
+      "height": 720,
+      "name": "source-start-023",
+      "path": "docs/review/update-023/source-start-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3a6078f95289acac9f07097ef0a641e00acb1648ac74bffa2a390bedc9cc2ed0"
+    },
+    {
+      "height": 720,
+      "name": "live-scoreboard-023",
+      "path": "docs/review/update-023/live-scoreboard-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "29e4bf5227eb2d45fcba6013929fd2a417cbf64b9daefc40da94e760dfa35278"
+    },
+    {
+      "height": 720,
+      "name": "scoreboard-keeps-dead-player-023",
+      "path": "docs/review/update-023/scoreboard-keeps-dead-player-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8b9f9fd8e63224f936f036004f6c878e0c0b34bf61f7b8362bf532b6f1328284"
+    },
+    {
+      "height": 720,
+      "name": "automatic-round-scoreboard-023",
+      "path": "docs/review/update-023/automatic-round-scoreboard-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f97a7bb3da9a8e6564e6ecdf0b571b0681eaac5619371d11945502cdb6f84dc6"
+    },
+    {
+      "height": 720,
+      "name": "source-local-kick-menu-023",
+      "path": "docs/review/update-023/source-local-kick-menu-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "94a94b77902ba333566e6c6e2cfe9c704318c910e7aa4bae5baad6c7c451522e"
+    },
+    {
+      "height": 720,
+      "name": "source-claw-contact-023",
+      "path": "docs/review/update-023/source-claw-contact-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "74d7bc2a82d00c076c00c2d11e3dd1e744a331885ca660e1c01faa8ad1020b2b"
+    },
+    {
+      "height": 720,
+      "name": "single-death-feedback-023",
+      "path": "docs/review/update-023/single-death-feedback-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bfdf5e9162f0b371039bf2d3eb962cb013b0e8b6730be9145391ffa133f21e93"
+    },
+    {
+      "height": 720,
+      "name": "return-room-settings-preserved-023",
+      "path": "docs/review/update-023/return-room-settings-preserved-023.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "233bca0a473e39746f6cd3f1191b1c956670dedf665fb95f17e8b1708e8841ae"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
+}

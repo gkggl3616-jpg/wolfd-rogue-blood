@@ -12,7 +12,10 @@ func target_rect():
 func _has_point(point):return not disabled and target_rect().has_point(point)
 func _draw():
  if not close_control() or disabled:return
- var area=target_rect();draw_style_box(close_style(),area)
+ var area=target_rect()
+ if has_meta("close_art_size"):
+  var art_size=get_meta("close_art_size");area.size=area.size.min(art_size);area.position=Vector2(size.x-area.size.x,0)
+ draw_style_box(close_style(),area)
  var a=area.position+area.size*0.35;var b=area.end-area.size*0.35
  draw_line(a,b,Color.WHITE,2.2,true);draw_line(Vector2(a.x,b.y),Vector2(b.x,a.y),Color.WHITE,2.2,true)
 func close_style():

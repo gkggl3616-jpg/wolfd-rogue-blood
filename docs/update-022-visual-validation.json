@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "acbd1cda6ca2931c88eb642598a416489bc89e04d26e85ba790c418d7c78d33d"
+      "sha256": "450d156778aaef16cd276abcb2543d6f8ac2fc6fcb6b0b746e0f378e55d9f503"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-022/separate-defuse-progress-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "63966f3ff6d35eb8521b3af2a1c713f5666329d466c0492f563e701bd03636d8"
+      "sha256": "f6888977adcffbb15d3870dd6684d4de943537dc12d3b2125884bed323425052"
     },
     {
       "height": 720,
@@ -78,11 +78,11 @@
       "path": "docs/review/update-022/return-to-configured-room-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "42f8339306579c4de38749e9fa83ef7fe30bdd78a3d126aebc8542df47cd0d84"
+      "sha256": "cdf0b094778377415474b8d789ea2459a30bd96f2ed6dd374151029c1a9cdaa9"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "2a60247e01e368f6e6bedc5780937d9ac9115dbc4322001e4072508bc7fde4a8"
+  "runtimeCodeSha256": "b429b2f61374491cafe9de9fca354765d36ec32d3147fa55ac27d0c4f1105a69"
 }

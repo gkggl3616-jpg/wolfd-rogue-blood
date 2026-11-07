@@ -2,6 +2,9 @@ extends RefCounted
 # Permanent reference: supplied PC recordings at 640x360. HUD coordinates are
 # measured from video 1 (06:42) and video 4 (02:00), not ergonomic guesses.
 const SIZE=Vector2(640,360)
+const SCOREBOARD=Vector2(124,149)
+const KICK_WINDOW=Vector2(312,128)
+const ROOM_COUNTDOWN=Vector2(512,342)
 const HUD={
  "health":["left",8,324],"sp_title":["right",72,319],"sp_value":["right",59,317],
  "weapon":["right",77,316],"weapon_name":["right",167.5,345.5],
@@ -11,7 +14,8 @@ const HUD={
  "support":["left",74,335],"energy":["left",99,335],
  "awards":["right",225,230],"spectator":["center",-125,306],
  "own_name":["center",-172,2],"own_kills":["center",-143,18],
- "other_name":["center",105,2],"own_deaths":["center",134,18],"bomb_progress":["center",-95,335]
+ "other_name":["center",105,2],"own_deaths":["center",134,18],"bomb_progress":["center",-95,335],
+ "defuse_progress":["center",-150,227],"defuse_label":["center",-125,174]
 }
 # PC recordings have no touch buttons. These mobile-only rows occupy the free
 # margins between the measured HUD/feed/award regions; they never move the HUD.

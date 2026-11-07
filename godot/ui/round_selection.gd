@@ -48,6 +48,6 @@ func _process(delta):
 	visible=game.running and not game.menu_open
 	if not game.running:game.close_round_selection();return
 	if game.menu_open or game.application_suspended:return
-	remaining=game.destruction.wait if game.destruction.enabled and game.destruction.phase=="prepare" else maxf(0,remaining-delta)
+	remaining=game.destruction.wait if game.destruction.enabled and game.destruction.phase=="prepare" else (game.match_flow.ready_left if game.match_flow.preparing() else maxf(0,remaining-delta))
 	caption.text=("Mutasyon Seçimi: Bu rauntta kullanacağınız kurt türünü seçin. " if kind=="wolf" else "Ekipman Seçimi: Bu rauntta kullanacağınız ekipman setini seçin. ")+str(ceili(remaining))
 	if remaining<=0:game.finish_round_selection()

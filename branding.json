@@ -11,7 +11,7 @@
   "androidBuildType": "offline-source-update",
   "physicalAndroidDeviceTested": false,
   "offlineAndroidPackage": "com.wolfrogue.blood.offline",
-  "offlineVersion": "0.22.0-offline",
+  "offlineVersion": "0.23.0-offline",
   "lastVerifiedApkVersion": "0.20.0-offline",
   "lastVerifiedApkReport": "docs/android-offline-build.json"
 }

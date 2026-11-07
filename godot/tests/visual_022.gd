@@ -8,7 +8,7 @@ func frames(n=6):
 func capture(name):
  await frames();await RenderingServer.frame_post_draw;var img=root.get_texture().get_image();var path=output.path_join(name+".png");var error=img.save_png(path);captures.append({"name":name,"path":path,"width":img.get_width(),"height":img.get_height(),"saved":error==OK})
 func room(team):
- game.local_room={"mode":3000,"map":26,"team":team,"allyBots":0,"enemyBots":0,"roundGoal":9,"matchSeconds":180};game.start_round();await frames();game.player.set_physics_process(false);game.player.velocity=Vector3.ZERO;game.destruction.advance(10)
+ game.local_room={"mode":3000,"map":26,"team":team,"allyBots":0,"enemyBots":0,"roundGoal":9,"matchSeconds":180};game.start_round();await frames();game.player.set_physics_process(false);game.player.velocity=Vector3.ZERO;game.destruction.advance(10);game.match_flow.advance_match(2)
 func run():
  root.size=Vector2i(1280,720);game=load("res://main.tscn").instantiate();game.test_mode=true;root.add_child(game);await frames();game.set_process(false)
  await room("red");var d=game.destruction

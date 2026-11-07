@@ -23,13 +23,14 @@ func build():
 			room();ui.detail_helper=preload("res://ui/room_settings_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.room_view=view;ui.detail_helper.build()
 		"maps":maps()
 		"pause":pause_page()
+		"kick":ui.detail_helper=preload("res://ui/local_kick_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.build()
+		"loading":ui.detail_helper=preload("res://ui/match_flow_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.loading()
 		"result":result_page()
 		"profile":profile()
 		"pin":ui.detail_helper=ProfileLockPage.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"gifts":ui.detail_helper=Gifts.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"Setler":ui.detail_helper=preload("res://ui/source_sets_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"Kutular":ui.detail_helper=Boxes.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
-		"scoreboard":scoreboard()
 		"rankbook":rankbook()
 		"missions","wolfpass":ui.detail_helper=CareerPage.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
 		"Kartlar":ui.detail_helper=Cards.new();ui.detail_helper.ui=ui;ui.detail_helper.build()
@@ -52,7 +53,7 @@ func only(names):
 
 func entry():
 	view=layout("section/title")
-	view.set_value("Version","Wolf Rogue Blood · 0.20 çevrimdışı" if OS.has_feature("offline_release") else "Wolf Rogue Blood · 0.20 geliştirme")
+	view.set_value("Version","Wolf Rogue Blood · "+str(ProjectSettings.get_setting("application/config/version"))+(" çevrimdışı" if OS.has_feature("offline_release") else " geliştirme"))
 	# The sole rebrand region is the original title/logo area. No source paths
 	# are renamed and the original backdrop is left intact.
 	var strip=ColorRect.new();strip.color=Color("151b20");strip.position=Vector2(375,444);strip.size=Vector2(275,150);ui.content.add_child(strip)
@@ -127,20 +128,20 @@ func room():
 		view.set_value("MissionObject",(("%d Tur" % rules.goal) if rules.round_based else ("%d Puan" % rules.goal)) if rules.enabled else ("3 raunt · 4 rakip" if hunting else "10 hedef"))
 		view.set_value("RoundTime",("%d:%02d" % [rules.seconds/60,rules.seconds%60]) if rules.enabled else "90 saniye")
 		if rules.enabled:view.set_value("GameMode",ui.game.map_catalog.mode_name(int(data.mode)))
-		ui.paragraph(ui.content,"Botlar: %s\nİnsan ve kurt · Hasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
+		ui.paragraph(ui.content,"Botlar: %s\nHasar her seviyede aynı" % ui.game.BotRules.profile(data.get("botDifficulty","normal")).name,Vector2(617,432),Vector2(385,78),15)
 		var opponent=view.find_widget("BlueTeam" if data.team=="red" else "RedTeam")
-		for i in range(ui.game.bot_limit("red" if data.team=="blue" else "blue")):opponent.add_item("BOT · %s %02d" % [("İnsan" if data.get("playerForm","human")=="wolf" else "Kurt") if hunting else ("Kurt" if int(data.mode)==ui.game.WOLF_BATTLE or i%2==0 else "İnsan"),i+1])
+		for i in range(ui.game.bot_limit("red" if data.team=="blue" else "blue")):opponent.add_item("%s %d" % ["Kırmızı" if data.team=="blue" else "Mavi",i+1])
 		for team in ["Red","Blue"]:
 			var own=(team=="Red")== (data.team=="red")
 			var count=1+ui.game.bot_limit(data.team) if own else ui.game.bot_limit("red" if data.team=="blue" else "blue")
 			view.set_value(team+"CurChars","%d / %d" % [count,int(data.get("capacity",16)/2)]);view.find_widget(team+"CurChars").size.x=66;view.find_widget(team+"MaxChars").hide()
 		var allies=view.find_widget("RedTeam" if data.team=="red" else "BlueTeam")
-		for i in range(ui.game.bot_limit(data.team)):allies.add_item("DOST BOT %02d" % (i+1))
+		for i in range(ui.game.bot_limit(data.team)):allies.add_item("%s %d" % ["Kırmızı" if data.team=="red" else "Mavi",i+1])
 		ui.text(ui.content,"Yerel rakip planı · çevrimiçi oyuncu değil",Vector2(18,485),Vector2(570,30),12)
 	var map_image=view.find_widget("CurrentMap")
 	if int(data.map)!=0:
 		map_image.texture=Art.map_photo(ui.game.map_catalog,int(data.map))
-	var start=enable("StartGame",func():ui.game.start_round(true))
+	var start=enable("StartGame",func():ui.game.match_flow.request_start(ui))
 	if start:start.disabled=not training
 	if not training:
 		ui.paragraph(ui.content,"Özgün maç kuralları tamamlanmadı. Yalnızca geometri gezintisi açılabilir.",Vector2(617,440),Vector2(385,90),16)
@@ -154,6 +155,9 @@ func room():
 		mode_caption.size=Vector2(180,32);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
 		mode_caption.add_theme_font_size_override("font_size",10)
 		mode_caption.tooltip_text=mode_caption.text
+	if ui.game.match_flow.phase=="countdown":
+		start.disabled=true
+		var counter=preload("res://ui/match_flow_page.gd").new();counter.ui=ui;counter.countdown()
 
 func invite_window():
 	ui.close_modal();ui.modal=Control.new();ui.modal.size=ui.canvas.size;ui.modal.mouse_filter=Control.MOUSE_FILTER_STOP;ui.modal.z_index=100;ui.canvas.add_child(ui.modal)
@@ -253,9 +257,10 @@ func maps():
 
 func pause_page():
 	view=layout("interface/gamemenu",Vector2(312,195),Vector2(400,377))
-	only(["GameMenuBack","ExitButton","GameComeBack","Option","GameExit"])
+	only(["GameMenuBack","ExitButton","GameComeBack","Option","GameExit","UserKickVote"])
 	enable("ExitButton",ui.game.resume);enable("GameComeBack",ui.game.resume)
 	enable("Option",func():ui.navigate("Ayarlar"))
+	enable("UserKickVote",func():ui.navigate("kick"))
 	enable("GameExit",func():ui.game.running=false;ui.game.clear_projectiles();ui.navigate("lobby"))
 
 func result_page():
@@ -360,28 +365,6 @@ func rankbook():
 	ui.button(ui.content,"Önceki",Vector2(38,675),Vector2(200,32),func():ui.rank_page-=1;ui.refresh(),ui.rank_page>0)
 	ui.button(ui.content,"Sonraki",Vector2(256,675),Vector2(200,32),func():ui.rank_page+=1;ui.refresh(),(ui.rank_page+1)*15<rows.size())
 	ui.paragraph(ui.content,"Kaynak rütbe adları ve simgeleri. GP eşikleri bu cihazdaki yerel ilerleme içindir.",Vector2(480,675),Vector2(500,50),13)
-
-func scoreboard():
-	view=layout("interface/gamestatewindow",Vector2(124,145),Vector2(776,470))
-	for node in view.controls:node.hide()
-	Art.sprite(ui.content,"wt_interface/gamestatewindow/pl_tab_red_back.dtx",Vector2(124,180),Vector2(381,56))
-	Art.sprite(ui.content,"wt_interface/gamestatewindow/pl_tab_blue_back.dtx",Vector2(513,180),Vector2(381,56))
-	var panel=Panel.new();panel.position=Vector2(124,236);panel.size=Vector2(770,300);ui.content.add_child(panel)
-	var style=StyleBoxFlat.new();style.bg_color=Color("151b20");style.border_color=Color("616b6e");style.set_border_width_all(1);panel.add_theme_stylebox_override("panel",style)
-	ui.text(ui.content,"MAÇ DURUMU · YEREL",Vector2(144,150),Vector2(720,26),20,Art.GOLD)
-	for team in ["red","blue"]:
-		var x=144 if team=="red" else 533
-		ui.text(ui.content,"%s · %d" % ["KIRMIZI TAKIM" if team=="red" else "MAVİ TAKIM",ui.game.team_score(team)],Vector2(x,196),Vector2(340,28),18)
-		var row=0
-		if team==ui.game.local_room.get("team","blue"):
-			ui.text(ui.content,"%s · %d öldürme · %d can" % [ui.game.profile_name,ui.game.kills,maxi(0,ui.game.health)],Vector2(x,258),Vector2(340,32),15);row+=1
-		for bot in ui.game.enemies.get_children():
-			if bot.is_queued_for_deletion() or bot.team!=team:continue
-			var label=ui.text(ui.content,"%s · %s · %d can" % [bot.display_name,bot.profile.name,maxi(0,bot.health)],Vector2(x,258+row*37),Vector2(340,32),15)
-			label.set_meta("scoreboard_team",team);row+=1
-	var stats=ui.game.match_stats
-	ui.text(ui.content,"İsabet: %d / %d · Kafadan: %d · Verilen hasar: %d" % [stats.hits,stats.attacks,stats.headshots,stats.damage],Vector2(144,490),Vector2(720,30),15)
-	ui.button(ui.content,"Devam et",Vector2(382,565),Vector2(260,34),ui.game.resume)
 
 func friends():
 	var at=Vector2(297,197)

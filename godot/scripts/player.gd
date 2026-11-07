@@ -35,6 +35,7 @@ var mutation_id="normal"
 var claw_trail
 var source_events
 var pending_strong=false
+var pending_melee={}
 var next_right_attack=false
 var extra_health=0
 var howl_fraction=0.0
@@ -349,6 +350,7 @@ func switch_form(force=false):
 	if not is_wolf and not force and not game.tutorial.active and game.round_selection_enabled:
 		game.open_round_selection("wolf",true);return
 	var fraction=float(game.health)/maxi(1,game.max_health())
+	pending_melee.clear()
 	extra_health=0
 	is_wolf = not is_wolf
 	if is_instance_valid(source_events):source_events.reset()
@@ -593,6 +595,7 @@ func end_air_attack():
 	air_attacking=false;air_attack_elapsed=0;air_attack_hit=false;air_attack_direction=Vector3.ZERO;action_time=0
 
 func reset_combat():
+	pending_melee.clear()
 	extra_health=0;howl_fraction=0;extra_decay=0;next_right_attack=false
 	pending_strong=false
 	cancel_cloak();guard_remaining=0;mutation_energy=100

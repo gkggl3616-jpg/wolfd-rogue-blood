@@ -13,7 +13,7 @@ func run():
  for bot in game.enemies.get_children():bot.set_physics_process(false)
  game.player.set_physics_process(false)
  await capture("video-aligned-equipment-021");game.finish_round_selection();await capture("round-preparation-021")
- game.destruction.advance(10);game.match_sp=2940;game.take_damage(10000);await frames();game.source_hud.refresh_from_game();await capture("teammate-spectator-021")
+ game.destruction.advance(10);game.match_flow.advance_match(2);game.match_sp=2940;game.take_damage(10000);await frames();game.source_hud.refresh_from_game();await capture("teammate-spectator-021")
  game.destruction.phase="combat";game.destruction.number=8;game.destruction.wins={"red":7,"blue":0};game.destruction.finish("blue","Sekizinci tur");await capture("round-result-021")
  game.destruction.advance(5);await capture("attack-defense-swap-021")
  game.destruction.advance(5);await capture("role-spawn-and-carrier-021")

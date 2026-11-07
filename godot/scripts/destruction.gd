@@ -38,7 +38,7 @@ func prepare():
  assign_carrier();game.announce("RAUNT %d · HAZIR · %s" % [number,role(game.local_room.get("team","blue"))])
 func start_combat():
  if phase!="prepare":return
- phase="combat";game.close_round_selection();game.game_audio.match_sound("round_start");game.announce("RAUNT %d · BAŞLA" % number)
+ phase="combat";game.close_round_selection();game.match_flow.signal_start();game.announce("RAUNT %d · BAŞLA" % number)
 func assign_carrier():
  carrier=null;dropped=false
  if game.health>0 and game.local_room.get("team","blue")==attacker_team:carrier=game.player
