@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "e1421a192d17391798791d15067a40df1702b9238c95c13309610c93fafb6b1e"
+      "sha256": "f22505311eac4e9d9f044fef9208bb8bdd3a62d8e190188e7eec284327c7942b"
     },
     {
       "height": 720,
@@ -716,7 +716,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "47bd42b481311bb0991b9e722a260a9581e90dbbfdfb55af661f94c9500f0fed"
+      "sha256": "0d6f501fff1a149efcd6ebb677db842be321fc42153f706c33ac488c0aea9e52"
     },
     {
       "height": 992,
@@ -800,5 +800,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
 }

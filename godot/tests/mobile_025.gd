@@ -35,7 +35,7 @@ func run():
 	game.health=20;check(not game.use_power("support") and game.inbox.state.powerCounts["19002"]==1,"Exhausted per-life first aid does not consume the owned pack")
 	game.advance_power_effects(15);p._physics_process(.1);p.claw_trail.refresh_glow();await frames()
 	check(game.booster_remaining==0 and p.claw_trail.glow.is_empty() and is_equal_approx(p.movement_speed,base_speed),"Expiration removes speed and hand effects together")
-	check(game.healing_remaining==0 and game.health==21,"Separate first-aid regeneration respects the source per-minute unit and 15-second window")
+	check(game.healing_remaining==0 and game.health==87,"Independent native healing ticks and proportional FT drain preserve fractional HP through their full windows")
 	game.inbox.state.powerSlots.claw="16018";p.claw_trail.refresh_glow();check(p.claw_trail.glow.is_empty(),"Purple claw remains visually ordinary after FT expires")
 	check(game.use_power("energy") and game.inbox.state.powerCounts["19502"]==1,"Expired energy can be activated again from the same owned pack")
 	p.reset_combat();check(game.booster_remaining==0 and game.healing_remaining==0,"Resetting combat clears all temporary power effects")

@@ -1,0 +1,62 @@
+{
+  "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+  "records": {
+    "19001": {
+      "offset": 104865,
+      "headerHex": "394a0000ffffffffffffffff000000000000000000000000000000000000000000010000003200000002000000010000000f00000000000000",
+      "useLimit": 1,
+      "instant": 50,
+      "periodic": 2,
+      "tickSeconds": 1,
+      "seconds": 15,
+      "cooldownSeconds": 0
+    },
+    "19002": {
+      "offset": 105106,
+      "headerHex": "3a4a0000ffffffffffffffff000000000000000000000000000000000000000000020000006400000005000000010000000f00000000000000",
+      "useLimit": 2,
+      "instant": 100,
+      "periodic": 5,
+      "tickSeconds": 1,
+      "seconds": 15,
+      "cooldownSeconds": 0
+    },
+    "19501": {
+      "offset": 105347,
+      "headerHex": "2d4c0000ffffffffffffffff000000000000000000000000003200000064000000630000003200000005000000010000000700000000000000",
+      "useLimit": 99,
+      "instant": 50,
+      "periodic": 5,
+      "tickSeconds": 1,
+      "seconds": 7,
+      "cooldownSeconds": 0
+    },
+    "19502": {
+      "offset": 105584,
+      "headerHex": "2e4c0000ffffffffffffffff000000000000000000000000001900000065000000630000001900000002000000010000000a00000000000000",
+      "useLimit": 99,
+      "instant": 25,
+      "periodic": 2,
+      "tickSeconds": 1,
+      "seconds": 10,
+      "cooldownSeconds": 0
+    }
+  },
+  "fields": {
+    "33": "use limit (99: unlimited pack)",
+    "37": "instant heal or current-HP cost percent",
+    "41": "periodic heal amount or current-HP drain percent",
+    "45": "tick seconds",
+    "49": "effect duration seconds",
+    "53": "reuse delay seconds"
+  },
+  "crossChecks": [
+    "Medical instant50/100, use1/2 and duration15 agree with independent source item descriptions.",
+    "Old 13-minute recording at169.2..177.2 seconds:150,147,144,141,138,135,132,130,127=floor(150*.98^n). Game timer advances at real-time speed.",
+    "New33-minute recording: after support reaches320, cash energy and medical ticks give318,317,315=floor(h*.98+5), preserving fractional HP."
+  ],
+  "textConflict": "The translated per-minute wording conflicts with native tick fields and both recordings. Gold duration is7 in the binary, not the text10.",
+  "unresolved": [
+    "Speed +50/+100 unit and unrelated header fields remain unverified; existing speed adapters remain explicitly identified."
+  ]
+}

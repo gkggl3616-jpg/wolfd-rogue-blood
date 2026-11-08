@@ -7,7 +7,7 @@
       "path": "docs/review/equipment-013/gift-inbox-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8b47dc734028887f6b052305b70731ac0a2458e5d5a43fe265d859550c92478f"
+      "sha256": "97484546b1879b939d560373e9ffd5ec930545185e1fef535fbe3a551ab3110b"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/equipment-013/gift-confirmation-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a96969177688a0976f6d554a368353e4ceb0eec7ca3c708e3c1a6f0c662b4ead"
+      "sha256": "5266b0d0bfd5ec318a41607cf6390496af04784ec38db3181b45ea1c9d63ae21"
     },
     {
       "height": 720,
@@ -135,7 +135,7 @@
       "path": "docs/review/equipment-013/gift-history-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "67fac823682fcb885ff0d2e0c8a83653f48bb1a21b0496104cdc4e855da8d191"
+      "sha256": "6e5e93e4a79f5a5ffbd50e4b860128fbaed1f6d5d7a3bd74c01be519736de61e"
     }
   ],
   "failures": 0,
@@ -144,5 +144,5 @@
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
   "testFixtureMatchSp": 10000,
-  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
 }

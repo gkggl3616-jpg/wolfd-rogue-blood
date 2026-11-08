@@ -6,7 +6,7 @@
       "path": "docs/review/update-021/video-aligned-equipment-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "46539d1efde4bfdd9a558596ad6d13c7e50888b07cb3fdaf9dfe4f6e770a96a5"
+      "sha256": "2113baa95845462753e7114d375470383cfc5bf26d3ef0873ca24410d6183d2e"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-021/round-preparation-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "469e0b079e16873b278244fe71ba0a78615d332922811e6306bc5338baafa74c"
+      "sha256": "a326ceea4ef42d11ac14341dbe2d9469c42474631eb21509f83e3cf1e984977b"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-021/teammate-spectator-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4b41c3fd31c030b543364c9cb9525c0008eecc6c5d88a0def7d75dab1518cf62"
+      "sha256": "f43df8bc3b256d0329130fec3290b662820082d86aae9fe95674ab98ed4bf637"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-021/round-result-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2daa378da066590b0e03cb752df49a42b8efefced0d3c053d018b5712662d298"
+      "sha256": "62522b86fa09fcb5e43ebff0b3543685b25e3d08b90e8fec12c1c3fca4fee7dc"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-021/attack-defense-swap-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "32666b2b3f1d3053091444d11df69842e433061e07a75806b6819a568b8796af"
+      "sha256": "27b086e8a6763cd02241652c1f98155b823abb0632a1e40641b217ae5c05d3c0"
     },
     {
       "height": 720,
@@ -76,5 +76,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
 }

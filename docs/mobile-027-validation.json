@@ -1,0 +1,8 @@
+{
+  "checks": 1431,
+  "failures": [],
+  "nativeHpTimelineMatched": true,
+  "nativeMuzzleGroupsExercised": 44,
+  "nativeMuzzleModelsEquipped": 162,
+  "passed": true
+}

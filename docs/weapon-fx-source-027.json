@@ -1,0 +1,46 @@
+{
+  "weaponTableSha256": "2d66831198c297d37ddb55de79c8f0de73868bdedee0343d1b81630c532e007a",
+  "records": 903,
+  "verifiedModels": 162,
+  "boundItems": 641,
+  "noSourceMuzzle": 255,
+  "unresolved": [
+    {
+      "item": "weapon-e85134a6c171e0dce50a",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-3a87067663c63d37a16b",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-6333ef000d0a3a361423",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-a0ed76e7109fd1419338",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-02e6fd4365b185bb03eb",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-6f2d3687f0d42a510c84",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    },
+    {
+      "item": "weapon-bc7bb0052abf457aae0d",
+      "group": "WT-RL2_PV_Muzz",
+      "reason": "Missing source group"
+    }
+  ],
+  "modelIssues": [],
+  "recordLayout": "28 UTF-16LE strings (PV/UI model, 7 skins, 6 render styles), 6 float32 placement values, PV FX string, HH model string; exact sourceModelOffset and model identity checked for every item."
+}

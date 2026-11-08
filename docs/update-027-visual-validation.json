@@ -1,0 +1,474 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "source-og-pair-model170-front-027",
+      "path": "docs/review/update-027/source-og-pair-model170-front-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b7a06449abdd649b1e38fe67af0fbeb4963421f391f63ab9914932f076d2aae5"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model170-back-027",
+      "path": "docs/review/update-027/source-og-pair-model170-back-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b011f43ee3dd241664994486761de5ae0db27a5c78eec50c210b5a6b4b75ab7e"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model172-front-027",
+      "path": "docs/review/update-027/source-og-pair-model172-front-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f16d720737fb7c504f891c412abf397e7f61b917d27cda21a364a215006aa9a3"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model172-back-027",
+      "path": "docs/review/update-027/source-og-pair-model172-back-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "28db7c07127d19355470f4b7827b053896758980aa365101a2d94979796b58c2"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model174-front-027",
+      "path": "docs/review/update-027/source-og-pair-model174-front-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "50a38db308d8bf2be1bb27b65cf4c76b5b0f0da870a4683c45422f62dfb7eb17"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model174-back-027",
+      "path": "docs/review/update-027/source-og-pair-model174-back-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "59cf1ef13d21c5ab6aab2d7f9fa45f35cb2957d4ef8079bd82ac3c0b035b1b2e"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model176-front-027",
+      "path": "docs/review/update-027/source-og-pair-model176-front-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6aa11a1c821b373d81889add994fc08be570cdb6f07e915ced1a2263a2667853"
+    },
+    {
+      "height": 720,
+      "name": "source-og-pair-model176-back-027",
+      "path": "docs/review/update-027/source-og-pair-model176-back-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1ffc16e879d15686f8c0e04720a5fba1a420c39f40384e0e318d623483e7864e"
+    },
+    {
+      "height": 720,
+      "name": "ft-before-activation-027",
+      "path": "docs/review/update-027/ft-before-activation-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9eec8b0ff0860b77e5c2b48f791227802ee5deb40f94f3318520855269b75258"
+    },
+    {
+      "height": 720,
+      "name": "ft-current-health-cost-027",
+      "path": "docs/review/update-027/ft-current-health-cost-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e7e312938a9f9381bd6793d7cf47be67d7d49270de380b8670b558c6c67ff2e9"
+    },
+    {
+      "height": 720,
+      "name": "ft-first-percent-tick-027",
+      "path": "docs/review/update-027/ft-first-percent-tick-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c84273fa7ecc80efd0b45de525ab4ad5d36cb928edf52c40b08be27c552130b3"
+    },
+    {
+      "height": 720,
+      "name": "ft-eighth-percent-tick-027",
+      "path": "docs/review/update-027/ft-eighth-percent-tick-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "44b7c58cf2eb29a78e1ddc4e1acd4738ee9c8ed5a7d36582d5ebd76826e32b50"
+    },
+    {
+      "height": 720,
+      "name": "ft-ten-seconds-expired-027",
+      "path": "docs/review/update-027/ft-ten-seconds-expired-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a1c99fc2782a2f37bbb8e0556346519fae250a1c61dee1299ada8973b92ffce0"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-M_92FS_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-M_92FS_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1f47fb4d6ad1deaecb05a3a45a9fc34518aa22a1fa8398c293d130793cbe5be7"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-45pisol_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-45pisol_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3a711845f43824c1e071932f7ea0912d78af33897437a592c1759fefa532489f"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-D_EAGLE_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-D_EAGLE_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "410dfa7213b570860b97c868cd0b1e573057a30150547b6d08e282184ac85cd4"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-CRISS_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-CRISS_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9c3a7ccd053bc65b380c3ff5e2d6499cc2bdbdf9b0e8a14b3a21b76210fb3e95"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-PI226R_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-PI226R_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "26a4e3d14ec6410f32f840e11804d68f17f3451b269e3414a4fdecfe87bfff41"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EM500_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EM500_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0bee588926d5b604efe8591912c65446881362bc1ed494a07c88cbd785c46578"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-P90_Silencer_Muzz-027",
+      "path": "docs/review/update-027/muzzle-P90_Silencer_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "dbb005123bfd18e6632dab228d084804b276de74a57130adf9d6a454185768dd"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-AK-47_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-AK-47_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8c1087f31704ae42e55cb805cb1948875b29079e64f004ce00eb899112fdd612"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-ESA-80_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-ESA-80_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8cdd26b7282e3d692718b7fa722f121fd2d5f244d352bc95b74b3b7957f8a7aa"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-AUZ_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-AUZ_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "95488ef16bc63e2f13d247544d088487153f5f08fa152f72ff8e63612d2c5a23"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-M4A1_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-M4A1_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b55e0253973af4ae991f54b3447619409a5d1497f197b40892bfed7a09641eb6"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Scal_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-Scal_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "872edf4be665934155f095fa0bc06ed92de58a36fbe398619818a46fcbb4dfe0"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Z3_C_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-Z3_C_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "44bc72cc4eae0b5a0e8323469d6721af045a51e04a4c12c662fa311c6a898547"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Z3_FB_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-Z3_FB_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2b5fd35b1f0bd4f1672ed02f843058fefbe70f280a2ac39e32b39f422cc6e503"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-FANAS_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-FANAS_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "06a026a9967c488b84f35a6f6304b7d8d28df6899a8adb734e5feab15c1ac41f"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-AK-47_FH_Muzz-027",
+      "path": "docs/review/update-027/muzzle-AK-47_FH_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e818538c105c97d1b5651001cc62cb61af7aecbbe01651262c6af275bfa863ad"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EM14WT_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EM14WT_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "804e5e68cdc8d30aa63dc4323e82217cb88b769ceb7567b83a7baec2af9eb956"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-XEM-8_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-XEM-8_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "753f0a370344d1ea0c7f13416854b4fa2c6e7d203cc8736668d3a2a80ea244a0"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EF-2000_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EF-2000_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d24b236d1eb5295cd1cb144ea1ce328422b02c67c2e588c654e20186e7a4dcd4"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-SZ552N_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-SZ552N_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "40b3323e113848b46f409248358cc97c3e7baa2a85785916dad8d3b3d0bfa7ac"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-KEI-2_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-KEI-2_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ede4ca0d9d366f5b333a4b7d5ac0d2051dbaac6cda2c423606a4c6a25bc4cf80"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Z-36C_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-Z-36C_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "aaaedd2045a5a561c1407598cf074664c8fbe73b909b3eb08129d8370d6b6232"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-J89_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-J89_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7c67f86f944ca795ee3e0df0b8082f2853d4a08136be2d84d15e37694e941fad"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EMP-5_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EMP-5_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6ae4d0aae8a909312c8cd68378c28d3fc364b412813aa6ab12d5fa444d800131"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-UMF45_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-UMF45_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c44f0cb1eca130aa9141265f2904f6647c955f167ae3be56fc48406ab71b7559"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-NMP-40_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-NMP-40_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2d44d1590d25b9e35292d9c3153aca05455cf4f1f7fe36c4d1745875a89d0b75"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-P90_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-P90_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "cf6f3bc0b634f728a313ed405d931afdf8bcf4f4e07ea9335ac206c758e138d8"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Tommy45_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-Tommy45_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0835d0e388ea30f0d15672481d81cb0e75c84afa6e10f487e146bcb4866ffd42"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-A1_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-A1_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0cd0dd186d09e7b7034c959f33357233f30ed27236a86a65513232ba99d6552d"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EM40A3_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EM40A3_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "25f429aa0fabad85b2833fd73b37775fd654daf101bdbcec43226b3f88573c5b"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-SVDR_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-SVDR_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "99ba2b582555ef459a3647c53a78319d1fcff3b9a637d10d14d98488b27a70a4"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-SUPAS_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-SUPAS_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "19066dccd4ea99174920baad10b5ce07154d861bc967f8a678d4112fee934d43"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EM3_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EM3_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "918f1732fb59862ae0af3ab0f4accfdc396cbc7a4b7262f3a45204e76546171f"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EXM26CS_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EXM26CS_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b7afbff59bf2ab445c31fd7998845cb9a4f67d4e02880549049ad71b27a9c040"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-M60_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-M60_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "94d5cd95868c45ccda1aa39b51370fe83c17c63faa3957b804ff11510a39dc75"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-EM-2HB_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-EM-2HB_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "178be92d758e692374c79eba0c0cb4f18d17514e503f0dd39ce5b461ad85262d"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-M-Gun_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-M-Gun_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4addffb292f00611dcd0727c1f5672fd54bc4a69e618de7d16b1703a5f4fdcba"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Impact_EM-32-027",
+      "path": "docs/review/update-027/muzzle-Impact_EM-32-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "65aeda6aa94e71ea54f628f88a9745c56e3a4556c9f4e6301db4e3ae76503d3d"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-FullMoon_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-FullMoon_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "beb229045eb0eae3f5b0e284a7c4cb4b054cf7df1faa395e7c3b7c377d2a05bf"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-PlasmaRifle_PV_Muzz-027",
+      "path": "docs/review/update-027/muzzle-PlasmaRifle_PV_Muzz-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "90564a085e31e27e55a09fffe96586cedf8695bd55f23e001159e9974ac72ddf"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-M6A2_PIX_PV_MUZZ-027",
+      "path": "docs/review/update-027/muzzle-M6A2_PIX_PV_MUZZ-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4864309b95b543c7a4c58b8bb2de0580d6befcad6a0a27ccc64f47cee813dc0c"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Muzz_AR_PV_X-027",
+      "path": "docs/review/update-027/muzzle-Muzz_AR_PV_X-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "efcf8911bec25844bccd17dff7448321315630546051e258d1c5993a323c880c"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Muzz_Shtg_PV_2-027",
+      "path": "docs/review/update-027/muzzle-Muzz_Shtg_PV_2-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0c048fd98787e2504509cb6cb3ec917e4caddb720695bc7215083c34877378d0"
+    },
+    {
+      "height": 720,
+      "name": "muzzle-Muzz_SMG_PV_1-027",
+      "path": "docs/review/update-027/muzzle-Muzz_SMG_PV_1-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c5bb848c2e157d6ef8df74ddf2d0f3f3604e36647de9e44758d3086ac1a7a3cc"
+    },
+    {
+      "height": 720,
+      "name": "underworld-source-map-and-bot-route-027",
+      "path": "docs/review/update-027/underworld-source-map-and-bot-route-027.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7a784455accfa38b4f8096e32ca623bcd0bd97b4ab19401fdfc5811f71a832da"
+    }
+  ],
+  "failures": 0,
+  "nativeMuzzleGroupsRendered": 44,
+  "ogCatalogInspection": true,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+}

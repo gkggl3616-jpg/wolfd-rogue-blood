@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-027-visual-validation.json':58,'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -28,6 +28,8 @@ def check(root=ROOT):
                 image = root/capture.get('path', '__missing_capture__')
                 if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest() != capture.get('sha256'):
                     blockers.append('Visual evidence missing or changed: '+capture.get('name', '?'))
+    proof27=json.loads((root/'docs/mobile-027-validation.json').read_text()) if (root/'docs/mobile-027-validation.json').is_file() else {}
+    if not proof27.get('passed') or proof27.get('nativeMuzzleModelsEquipped')!=162 or proof27.get('nativeMuzzleGroupsExercised')!=44 or proof27.get('checks',0)<1431:blockers.append('Native FT, all muzzle models/groups and layered surface regressions are incomplete')
     update=json.loads((root/'docs/mobile-019-validation.json').read_text()) if (root/'docs/mobile-019-validation.json').is_file() else {}
     if not update.get('passed') or update.get('checks',0)<30:blockers.append('Current model, gift, header, claw, repeated howl and audio regressions are incomplete')
     update20=json.loads((root/'docs/mobile-020-validation.json').read_text()) if (root/'docs/mobile-020-validation.json').is_file() else {}

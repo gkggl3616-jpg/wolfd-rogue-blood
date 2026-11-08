@@ -1,5 +1,5 @@
 {
-  "checks": 233,
+  "checks": 249,
   "failures": [],
   "landings": [
     {
@@ -417,6 +417,24 @@
       "reversed": false
     },
     {
+      "landingError": 0.13842099905014,
+      "link": 45,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.150444239377975,
+      "link": 46,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.151728883385658,
+      "link": 47,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
       "landingError": 0.134279802441597,
       "link": 0,
       "map": 37.0,
@@ -633,6 +651,18 @@
       "reversed": false
     },
     {
+      "landingError": 0.155613765120506,
+      "link": 27,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.132409304380417,
+      "link": 28,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
       "landingError": 0.137830168008804,
       "link": 0,
       "map": 106.0,
@@ -691,8 +721,26 @@
       "link": 5,
       "map": 106.0,
       "reversed": false
+    },
+    {
+      "landingError": 0.11952393501997,
+      "link": 6,
+      "map": 106.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.11949910223484,
+      "link": 6,
+      "map": 106.0,
+      "reversed": true
+    },
+    {
+      "landingError": 0.123641021549702,
+      "link": 7,
+      "map": 106.0,
+      "reversed": false
     }
   ],
   "passed": true,
-  "traversalsSha256": "e7106eaf96d5b9533a5f809099ca8abe473869345ab369913866834dc1f6ebd1"
+  "traversalsSha256": "6da2e3e930499cce35522d39d0bd3a7ef3851a4660c8304823ab2a849990f8a1"
 }

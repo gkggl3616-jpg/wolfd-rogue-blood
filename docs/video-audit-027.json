@@ -1,0 +1,149 @@
+{
+  "method": "Original-frame-rate motion and audio clips; independent native HP crops and source binary fields override uncertain automated descriptions.",
+  "priorFullReview": "docs/video-audit-026.json",
+  "clips": [
+    {
+      "source": "drive-videos/video-1/original.mp4",
+      "startSeconds": 168,
+      "endSeconds": 180
+    },
+    {
+      "source": "new-wolf-videos/video-2/original.mp4",
+      "startSeconds": 39,
+      "endSeconds": 45
+    }
+  ],
+  "automatedResults": [
+    {
+      "id": "337e59f5-6ae3-41b1-8bad-c268bdb33767",
+      "status": "completed",
+      "fail_reason": null,
+      "scenes": [
+        {
+          "audio": "Upbeat, high-tempo electronic dance music begins with a heavy bass kick and sharp synth hits. There are no spoken words.",
+          "label": "Opening Hook",
+          "visual": "A static screen showing a video game menu interface. The background is a blurry desert environment. In the center, there is a selection window showing several identical character models: a humanoid creature with gray skin, muscular build, and a snarling facial expression. The lighting is artificial and flat within the menu. The color palette is dominated by gold, black, and gray.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "The electronic dance music continues at a steady tempo. Soft footstep sound effects are heard beneath the music.",
+          "label": "Usage Scenarios",
+          "visual": "A third-person perspective inside a beige stone building. A male character, approximately 20-30 years old with light skin and short dark hair, is seen from behind. He wears a red and gray tactical vest over a blue shirt and dark pants. He is surrounded by a glowing purple and white energy aura. He runs toward a doorway. The lighting is bright and natural coming from the doorway.",
+          "shot_type": "Medium Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "The music continues with a repetitive synth melody. Whooshing sound effects accompany the character's jumps and fast movements.",
+          "label": "Usage Scenarios",
+          "visual": "The camera follows the character as he jumps onto a rooftop made of reflective blue hexagonal tiles. The sky is a clear, bright blue. The character moves quickly, his body glowing with purple sparks. The camera shake simulates fast movement. Lighting is harsh, direct sunlight with high contrast. The character's hands are visible in the lower corners, holding a weapon that is not fully in focus.",
+          "shot_type": "POV Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "The electronic music maintains its energy. A sharp clink sound effect occurs as the character's feet hit the surface.",
+          "label": "Usage Scenarios",
+          "visual": "A quick cut to the character jumping from one building ledge to another. He is in mid-air, oriented horizontally. The blue tiled roof is below him. The environment is bright and saturated with cool blue and warm beige tones. The camera pans quickly to track his flight path.",
+          "shot_type": "Medium Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        },
+        {
+          "audio": "The music continues. A low-frequency hum accompanies the energy pulses emitted by the character.",
+          "label": "Usage Scenarios",
+          "visual": "The character, now seen from a slightly lower angle, sprints across the blue roof. Other humanoid figures are visible in the distance on different levels of the architecture. The character emits pulses of white and purple light from his body. The camera moves with a handheld, shaky style to emphasize speed. The lighting remains bright and natural.",
+          "shot_type": "Medium Shot",
+          "scene_number": 5,
+          "timestamp_end": "0:07",
+          "timestamp_start": "0:05"
+        },
+        {
+          "audio": "The electronic track continues. Wind-like rushing sounds are added to the mix as the character moves through the air.",
+          "label": "Usage Scenarios",
+          "visual": "The camera tracks closely behind the character as he maneuvers around a stone corner on the rooftop. He jumps over a gap. The blue hexagonal tiles glisten under the sun. The depth of field is shallow, keeping the character in focus while the distant city buildings are slightly blurred. The character's movements are fluid and fast.",
+          "shot_type": "POV Shot",
+          "scene_number": 6,
+          "timestamp_end": "0:09",
+          "timestamp_start": "0:07"
+        },
+        {
+          "audio": "The music reaches a brief crescendo with a snare roll. The sound of energy crackling is prominent.",
+          "label": "Usage Scenarios",
+          "visual": "A cut to a different section of the rooftop. The character is sliding down a slanted blue surface. He then leaps upwards toward a stone wall. The purple energy effect around him intensifies, creating bright trails in the air. The camera tilts up to follow his ascent. The environment is dominated by the bright blue sky and the sand-colored stone walls.",
+          "shot_type": "Medium Shot",
+          "scene_number": 7,
+          "timestamp_end": "0:11",
+          "timestamp_start": "0:09"
+        },
+        {
+          "audio": "The electronic music continues as the scene fades to black. A final heavy bass beat coincides with the end of the clip.",
+          "label": "Usage Scenarios",
+          "visual": "The character lands on a flat stone platform. He is crouched in a landing posture, then immediately starts running again toward the edge of the frame. The camera is positioned at a medium distance, capturing his full body. The lighting is slightly warmer, suggesting a late afternoon sun angle.",
+          "shot_type": "Medium Shot",
+          "scene_number": 8,
+          "timestamp_end": "0:12",
+          "timestamp_start": "0:11"
+        }
+      ]
+    },
+    {
+      "id": "058fa896-d0bf-40c6-a7cd-24ca0b3a4231",
+      "status": "completed",
+      "fail_reason": null,
+      "scenes": [
+        {
+          "audio": "Ambient electronic hum, low-pitched growling from the creatures, and the sound of a digital countdown ticking.",
+          "label": "Opening Hook",
+          "visual": "A first-person perspective in a futuristic indoor lobby. Three monstrous humanoid wolf creatures with brown fur and glowing red eyes are seen from behind, crouching in a row. The lighting is sterile and artificial. The camera is static at the start before the character moves.",
+          "shot_type": "Wide Shot",
+          "scene_number": 1,
+          "timestamp_end": "0:01",
+          "timestamp_start": "0:00"
+        },
+        {
+          "audio": "Fast-paced, heavy thumping of footsteps on metallic flooring, wind rushing sound effects, and a brief metallic sliding door sound.",
+          "label": "Usage Scenarios",
+          "visual": "The camera follows a character with dark, spiked fur and purple glowing energy around their feet as they sprint through a metallic doorway into an outdoor industrial setting. The movement is fast-paced with a slight handheld shake to simulate running. Bright daylight illuminates the concrete and metal structures.",
+          "shot_type": "POV Shot",
+          "scene_number": 2,
+          "timestamp_end": "0:02",
+          "timestamp_start": "0:01"
+        },
+        {
+          "audio": "Sound of a powerful jump, energy surging sound (electronic whoosh), and the character letting out a short, aggressive grunt.",
+          "label": "Product Selling Points",
+          "visual": "The character, a wolf-like humanoid in black armor with purple highlights, jumps against a metallic wall. The camera tracks the character's upward movement. The lighting is high-contrast with cool blue tones in the shadows. The background features a large logo on a wall.",
+          "shot_type": "Medium Shot",
+          "scene_number": 3,
+          "timestamp_end": "0:03",
+          "timestamp_start": "0:02"
+        },
+        {
+          "audio": "Wind whistle sound effect and the clatter of feet hitting metal roof plating.",
+          "label": "Problem Solving",
+          "visual": "The character performs an acrobatic leap from the top of a metallic wall onto a sloped rooftop. The camera follows the jump from a low angle looking up at the sky, which is bright blue. The character's posture is crouched mid-air, displaying agility.",
+          "shot_type": "Wide Shot",
+          "scene_number": 4,
+          "timestamp_end": "0:04",
+          "timestamp_start": "0:03"
+        },
+        {
+          "audio": "Heavy visceral slashing sound, a wet impact noise, and a sharp, high-tempo electronic beat drop.",
+          "label": "Real Experience",
+          "visual": "The character lands on the rooftop and immediately strikes an enemy off-camera. Red liquid splatters across the screen in a stylized fashion. The lighting is bright and direct. The camera shakes violently to emphasize the impact of the blow.",
+          "shot_type": "Close-Up",
+          "scene_number": 5,
+          "timestamp_end": "0:05",
+          "timestamp_start": "0:04"
+        }
+      ]
+    }
+  ]
+}

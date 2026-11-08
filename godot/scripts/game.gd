@@ -38,9 +38,10 @@ var booster_remaining=0.0
 var booster_tuning={}
 var healing_uses={}
 var healing_remaining=0.0
-var healing_regen_per_minute=0.0
-var healing_fraction=0.0
-var energy_drain_fraction=0.0
+var healing_regen_per_tick=0.0
+var healing_tick_seconds=1.0
+var power_clock=preload("res://scripts/power_clock.gd").new()
+var world_surfaces=preload("res://scripts/world_surfaces.gd").new()
 var career=LocalCareer.new()
 var match_id=""
 var profile_lock
@@ -579,6 +580,7 @@ func start_round(with_selection=false):
 		add_child(active_map)
 		for mesh in active_map.find_children("*", "MeshInstance3D", true, false):
 			mesh.create_trimesh_collision()
+			world_surfaces.bind_mesh(mesh)
 		install_navigation(record.navigation,active_map)
 		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
 		ambient.map_number = map_number;active_map.add_child(ambient)
@@ -1102,19 +1104,23 @@ func attack():
 	notify_bot_noise(player.global_position,6 if kind=="knife" else 26)
 	player.play_weapon_clip("fire", float(player.weapon_info.fireIntervalMs) / 1000.0)
 	if player.fire_sound.stream: player.play_weapon_sound("fire")
+	var source_muzzle=kind!="knife" and player.play_muzzle()
 	if kind in ["grenade", "rocket", "launcher"]:
 		var grenade = CharacterBody3D.new();grenade.set_script(GrenadeScript);grenade.game = self;grenade.position = player.camera.global_position - player.camera.global_basis.z * 0.7;grenade.velocity = - player.camera.global_basis.z * 13 + Vector3.UP * 3;grenade.damage_amount = int(player.weapon_info.get("damage", 90));grenade.kind = "smoke" if str(player.weapon_info.get("name", "")).to_lower().contains("smoke") else "grenade";grenade.fuse = 2 if kind == "grenade" else 0.7;add_child(grenade);return
-	var source_muzzle=kind!="knife" and player.play_muzzle()
 	var camera = player.camera
 	var origin = camera.global_position
 	var end = origin - camera.global_basis.z * (2.6 if kind == "knife" else 100)
-	var query = PhysicsRayQueryParameters3D.create(origin, end, 3, [player.get_rid()])
-	var hit = get_world_3d().direct_space_state.intersect_ray(query)
+	var hit={}
+	var damage_scale=1.0
+	if kind=="knife":
+		hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,end,3,[player.get_rid()]))
+	else:
+		var trace=world_surfaces.trace(get_world_3d().direct_space_state,origin,end,[player.get_rid()]);hit=trace.hit;damage_scale=trace.damageScale;world_surfaces.present_impacts(self,trace.impacts)
 	if hit:
 		end = hit.position
 		if hit.collider.has_meta("enemy") and hostile(hit.collider,local_room.get("team","blue")):
 			var head=kind!="knife" and hit.collider.is_head_hit(hit.position,origin,(end-origin).normalized())
-			var damage = int(player.weapon_info.get("damage", 25))*(2 if head else 1)
+			var damage = roundi(float(player.weapon_info.get("damage",25))*(2 if head else 1)*damage_scale)
 			var actual=mini(hit.collider.health,damage)
 			if head:match_stats.headshots+=1
 			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head,"hitPosition":hit.position})
@@ -1401,34 +1407,22 @@ func use_power(slot):
 	# The local shop owns a reusable pack; per-life uses are a separate counter.
 	# The source says unlimited energy uses, not one purchased unit per keypress.
 	if slot=="support":
-		health=mini(max_health(),health+int(item.mobileTuning.heal));healing_uses[item.id]=int(healing_uses.get(item.id,0))+1
-		healing_remaining=float(item.mobileTuning.get("seconds",15));healing_regen_per_minute=float(item.mobileTuning.get("regenerationPerMinute",0));healing_fraction=0
+		power_clock.heal(self,int(item.mobileTuning.heal));healing_uses[item.id]=int(healing_uses.get(item.id,0))+1
+		healing_remaining=float(item.mobileTuning.get("seconds",15));healing_regen_per_tick=float(item.mobileTuning.get("regenerationPerTick",0));healing_tick_seconds=float(item.mobileTuning.get("tickSeconds",1));power_clock.healing_clock=0
 		clientfx.play("TakingHealth",player)
 	else:
-		health-=cost;booster_tuning=item.mobileTuning.duplicate(true);booster_remaining=float(item.mobileTuning.seconds);energy_drain_fraction=0
+		power_clock.spend(self,float(item.mobileTuning.healthCostFraction));booster_tuning=item.mobileTuning.duplicate(true);booster_remaining=float(item.mobileTuning.seconds);power_clock.energy_clock=0
 	update_hud();return true
 
 func clear_power_effects():
-	booster_remaining=0;booster_tuning={};energy_drain_fraction=0
-	healing_remaining=0;healing_regen_per_minute=0;healing_fraction=0
+	booster_remaining=0;booster_tuning={};healing_remaining=0;healing_regen_per_tick=0;power_clock.clear()
 	if is_instance_valid(clientfx):
 		for effect in clientfx.group_instances(player,"TakingHealth"):effect.queue_free()
 	if is_instance_valid(player) and is_instance_valid(player.claw_trail):player.claw_trail.refresh_glow()
 
 func advance_power_effects(delta):
 	if not is_combat_active() or not player.is_wolf:return
-	var energy_delta=minf(delta,booster_remaining)
-	if energy_delta>0:
-		energy_drain_fraction+=energy_delta*float(booster_tuning.get("healthDrainPerMinute",0))/60.0
-		var loss=int(energy_drain_fraction);energy_drain_fraction-=loss
-		if loss>0:health=maxi(1,health-loss)
-	booster_remaining=maxf(0,booster_remaining-delta)
-	var healing_delta=minf(delta,healing_remaining)
-	if healing_delta>0:
-		healing_fraction+=healing_delta*healing_regen_per_minute/60.0
-		var restored=int(healing_fraction);healing_fraction-=restored
-		if restored>0:health=mini(max_health(),health+restored)
-	healing_remaining=maxf(0,healing_remaining-delta)
+	power_clock.advance(self,delta)
 
 func grant_money(currency, amount, reason):
 	if not wallet.has(currency) or not valid_balance(amount) or amount < 1 or amount > 1000000:

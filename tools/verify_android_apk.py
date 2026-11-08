@@ -11,6 +11,7 @@ import subprocess
 import zipfile
 
 CATALOGUES = [
+    'assets/gameplay/surfaces.json',
     'assets/weapons/muzzle-bindings.json','assets/gameplay/locomotion/index.json','assets/presentation/catalog.json','assets/presentation/menu-clips.json','assets/items/sets.json',
     'assets/library/weapons.json', 'assets/library/characters.json', 'assets/library/visuals.json',
     'assets/maps/catalog.json', 'assets/maps/previews.json', 'assets/maps/offline.json', 'assets/maps/radar.json', 'assets/shared_media/catalog.json',

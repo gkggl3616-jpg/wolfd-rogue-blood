@@ -30,7 +30,7 @@
       "path": "docs/review/update-023/separate-preparation-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "965e91b3bcb8374eecb7f18fe71d79449e85d2f329caf6f99d4b76e5f8cc6632"
+      "sha256": "eafd73baea7480c32a50ded0a1f8c579a0df3fbe617a6fde3aabd8a88280b349"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-023/early-choice-still-ready-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3e8ef0d148d0c395e1bed1f459a407221b4ebe0de47c2f4bcea37c25c3e0d9a2"
+      "sha256": "31c7e9f8c0217b1fd7d7b721577df6aa106e7ccd381fc534518be780ada99d34"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-023/source-start-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b8b89ad8c054ed23e45d1dbaac4e4a5014f6d32bafeaba6ee7555b6a48eaa321"
+      "sha256": "e9434bbde66be2bcdd46543aee2500d99af3c0c9c9f496473d222c41dd7cb62a"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-023/live-scoreboard-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "df6358c9592fed46b8d3ca68d63155310670439a5a0f7f5c12ac8fc12a4f7ed6"
+      "sha256": "d288b91f03cfde9f924974d377ec23bd61443203a71abc9557b8023cae792d1f"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-023/scoreboard-keeps-dead-player-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e7917324ba7170e10d1bf39c9a77bca69e664e00bfbf8fc153fc1082d259f16a"
+      "sha256": "061980d0cb3e6d28def029cbf2374efcb76fcad8e8dd0a2bf8fdf7b3b8ff7932"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-023/automatic-round-scoreboard-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a5f97789c29673a77ac94c619c6811726c77a58885ad7955258420cb41fe6560"
+      "sha256": "0d56b670f7d90d392e20b06369d9c42d9ed9b541266f122da3097ddd9761ca41"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-023/source-local-kick-menu-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a6fbd786290aa22483347dd96d9c526e3cdeee72c4bbd7dcaa333faf8df8943a"
+      "sha256": "8e918dee7ee3374cf309031e74c7e99a022ac6a6b2d9766a1a591580ce5bbf1a"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-023/source-claw-contact-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "56e3fb6d5f9838d575b6d307f044fa520bbb9bef22dd6dbe615196203b88bca9"
+      "sha256": "0f786402752011dcaa7182b3454222148d752c141d2007b86e84a16d419283cf"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-023/single-death-feedback-023.png",
       "saved": true,
       "width": 1280,
-      "sha256": "166e2f266d9b66b56dc79678bbe0cd1456547a2760418a4aee55ef7ed5fd6450"
+      "sha256": "8b042b42660d585376ea9cb0f23537fbdcce634dd6cd33eb9d7c776eb186baa4"
     },
     {
       "height": 720,
@@ -108,5 +108,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c38c9ddb0871e75e3221e721a59623e5212fbd73a026cc67fe12b31efc73a0e2"
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
 }

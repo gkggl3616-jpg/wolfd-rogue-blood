@@ -1,0 +1,66 @@
+{
+  "sourceSha256": "aa8ffc2081d49718190d471e8812ac165f4eae5814960731647133ceb6937c6d",
+  "materials": 1841,
+  "surfaceDefinitions": 40,
+  "knownFlags": 1836,
+  "shootThroughMaterials": 168,
+  "unavailable": [
+    {
+      "material": "fx/particles/light01.spr",
+      "unavailable": "Original DTX material absent"
+    },
+    {
+      "material": "fx/particles/light.spr",
+      "unavailable": "Original DTX material absent"
+    },
+    {
+      "material": "wt_tex/common_object/01_common_druma01.dtx",
+      "unavailable": "Unrecognized original DTX surface flag",
+      "userFlags": 25
+    },
+    {
+      "material": "wt_tex/common_object/02_common_garbagebina01.dtx",
+      "unavailable": "Unrecognized original DTX surface flag",
+      "userFlags": 90
+    },
+    {
+      "material": "wt_tex/frozen/fz_in_sign.spr",
+      "unavailable": "Original DTX material absent"
+    }
+  ],
+  "usedSurfaceIds": [
+    0,
+    8,
+    10,
+    11,
+    20,
+    21,
+    23,
+    24,
+    30,
+    40,
+    41,
+    52,
+    53,
+    69,
+    70,
+    71,
+    76,
+    80,
+    81,
+    91,
+    100,
+    102,
+    200,
+    202,
+    204
+  ],
+  "usedImpactSounds": 34,
+  "usedImpactSoundsAvailable": 31,
+  "missingUsedImpactSounds": [
+    "root/guns/snd/impacts/cloth/impact1.wav",
+    "root/guns/snd/impacts/cloth/impact2.wav",
+    "root/wt_snd/fxsnd/mpact_rubbera.wav"
+  ],
+  "missingUsedImpactEffects": []
+}

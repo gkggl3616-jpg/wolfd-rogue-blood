@@ -34,6 +34,7 @@ var muzzle_data={}
 var muzzle_record={}
 var muzzle_skeleton:Skeleton3D
 var muzzle_bone=-1
+var muzzle_socket_bones={}
 var muzzle_anchor:Node3D
 var auxiliary_magazines = []
 var mutation_id="normal"
@@ -116,7 +117,7 @@ func _ready():
 	camera.add_child(viewmodel)
 	weapon_anim = viewmodel.find_children("*", "AnimationPlayer", true, false)[0]
 	muzzle_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapons/muzzle-bindings.json"))
-	muzzle_anchor=Node3D.new();camera.add_child(muzzle_anchor);configure_muzzle()
+	muzzle_anchor=Node3D.new();muzzle_anchor.set_meta("source_weapon_muzzle",true);camera.add_child(muzzle_anchor);configure_muzzle()
 	for clip in ["idle", "walk"]:
 		weapon_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
 	for mesh in viewmodel.find_children("*", "MeshInstance3D", true, false):
@@ -182,29 +183,39 @@ func play_weapon_sound(action):
 		reload_sound.play()
 
 func configure_muzzle():
-	muzzle_record={};muzzle_bone=-1;muzzle_skeleton=null
+	muzzle_record={};muzzle_bone=-1;muzzle_skeleton=null;muzzle_socket_bones.clear()
 	for effect in muzzle_anchor.get_children():effect.queue_free()
 	var source=str(weapon_info.get("sourceModel",weapon_info.get("source",""))).replace("\\","/").to_lower().trim_prefix("root/")
-	var record=muzzle_data.bindings.get("root/"+source,{})
+	var record=muzzle_data.get("items",{}).get(weapon_info.get("itemId",""),muzzle_data.bindings.get("root/"+source,{}))
 	if record.is_empty():return
+	if record.get("noSourceMuzzle",false):muzzle_record=record;return
+	if not record.has("socket"):return
 	var skeletons=viewmodel.find_children("*","Skeleton3D",true,false)
 	if skeletons.is_empty():return
-	muzzle_skeleton=skeletons[0];muzzle_bone=muzzle_skeleton.find_bone(record.socket.boneName)
+	muzzle_skeleton=skeletons[0]
+	var bones=muzzle_data.get("models",{}).get("root/"+source,{}).get("bones",[])
+	for name in record.get("sockets",{}):muzzle_socket_bones[name]=preload("res://scripts/native_socket_bone.gd").find(muzzle_skeleton,record.sockets[name],bones)
+	muzzle_bone=preload("res://scripts/native_socket_bone.gd").find(muzzle_skeleton,record.socket,bones)
 	if muzzle_bone>=0:muzzle_record=record
 
 func update_muzzle_anchor():
-	if muzzle_record.is_empty() or not is_instance_valid(muzzle_skeleton):return false
+	if muzzle_record.is_empty() or muzzle_record.get("noSourceMuzzle",false) or not is_instance_valid(muzzle_skeleton):return false
 	muzzle_anchor.global_transform=muzzle_socket_transform("Flash")
 	return true
 
 func muzzle_socket_transform(name):
 	var socket=muzzle_record.get("sockets",{}).get(name,muzzle_record.socket);var q=socket.rotation;var p=socket.position
-	var source=muzzle_skeleton.global_transform*muzzle_skeleton.get_bone_global_pose(muzzle_bone)*Transform3D(Basis(Quaternion(q[0],q[1],q[2],q[3]).normalized()),Vector3(p[0],p[1],p[2]))
+	var bone=muzzle_socket_bones.get(socket.name,muzzle_bone)
+	if bone<0:return Transform3D.IDENTITY
+	var source=muzzle_skeleton.global_transform*muzzle_skeleton.get_bone_global_pose(bone)*Transform3D(Basis(Quaternion(q[0],q[1],q[2],q[3]).normalized()),Vector3(p[0],p[1],p[2]))
 	# Strip converted model scale here; ClientFX applies its own source units.
 	return Transform3D(source.basis.orthonormalized(),source.origin)
 
 func play_muzzle():
-	if is_wolf or not update_muzzle_anchor():return false
+	if is_wolf:return false
+	# Empty/placeholder source fields deliberately suppress the generic flash.
+	if muzzle_record.get("noSourceMuzzle",false):return true
+	if not update_muzzle_anchor():return false
 	return game.clientfx.play(muzzle_record.group,null,muzzle_anchor.global_position,false,0,muzzle_anchor)!=null
 
 func prepare_library_weapon(item):
@@ -240,7 +251,7 @@ func prepare_library_weapon(item):
 					var custom=material.duplicate();custom.albedo_texture=load(item.skins[slot]);material_changes.append({"mesh":mesh,"surface":surface,"material":custom})
 		var name=str(mesh.name);var dash=name.rfind("-")
 		if dash>0 and name.substr(dash+1).is_valid_int() and names.has(name.substr(0,dash)):mesh.hide()
-	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"name":item.name,"sourceModel":model_info.source,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
+	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"itemId":item.id,"name":item.name,"sourceModel":model_info.source,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
 
 func apply_prepared_weapon(prepared):
 	if is_instance_valid(viewmodel):camera.remove_child(viewmodel);viewmodel.queue_free()

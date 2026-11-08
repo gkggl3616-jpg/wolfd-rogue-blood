@@ -16,6 +16,12 @@ const SCREEN_GROUPS=["TakingArmor","TakingHealth-test","Deathdirecting","TakingH
 const HAND_GROUPS=["wolf_Hand_glowL","wolf_Hand_glowR"]
 # Measured visual gain for the converted wolf hands; not a decoded PC unit.
 const HAND_VISUAL_GAIN=10.0/3.0
+func is_viewmodel_muzzle():
+	var parent=get_parent()
+	while is_instance_valid(parent):
+		if parent.has_meta("source_weapon_muzzle"):return true
+		parent=parent.get_parent()
+	return false
 func val(spec,key,fallback=null):return spec.properties.get(key,[fallback])[0]
 func choice(spec,key,fallback=0):return int(str(val(spec,key,str(fallback))).get_slice(",",0))
 func vector(values):return Vector3(values[0],values[1],-values[2])
@@ -81,10 +87,10 @@ func _ready():
 			var colors=spec.properties.get("Ck",[])
 			if not colors.is_empty():
 				var gradient=Gradient.new();gradient.offsets=PackedFloat32Array();gradient.colors=PackedColorArray()
-				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if group in ["BloodHeadshot","AK-47_PV_Muzz"] else ck[4]))
+				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if (group=="BloodHeadshot" or is_viewmodel_muzzle()) else ck[4]))
 				node.color_ramp=gradient;mat.vertex_color_use_as_albedo=true
 			var initial_scale=maxf(.001,float(curve(spec,"Sk",0,[0,1])[1]))*.016;node.scale_amount_min=initial_scale;node.scale_amount_max=initial_scale
-			if group in HAND_GROUPS or group=="AK-47_PV_Muzz":
+			if group in HAND_GROUPS or is_viewmodel_muzzle():
 				# This looping emitter keeps emitting new hand particles. Sk is
 				# their individual lifetime curve, not the age of the whole group.
 				var size_curve=Curve.new();size_curve.min_value=0;size_curve.max_value=1
@@ -97,7 +103,7 @@ func _ready():
 				var gain=HAND_VISUAL_GAIN if group in HAND_GROUPS else 1.0/.016
 				node.scale_amount_curve=size_curve;node.scale_amount_min=maximum*.016*gain;node.scale_amount_max=maximum*.016*gain
 			var quad=QuadMesh.new();quad.size=Vector2.ONE;mat.billboard_mode=BaseMaterial3D.BILLBOARD_PARTICLES;mat.billboard_keep_scale=true;quad.material=mat;node.mesh=quad;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
-			if group in HAND_GROUPS or group=="AK-47_PV_Muzz":quad.size=Vector2(2,2)
+			if group in HAND_GROUPS or is_viewmodel_muzzle():quad.size=Vector2(2,2)
 		elif kind=="DynaLight":node=OmniLight3D.new();node.shadow_enabled=false;add_child(node)
 		elif kind=="PlaySound":
 			node=AudioStreamPlayer3D.new();node.bus="WolfEffects";node.stream=load(spec.sound).duplicate();node.max_distance=maxf(1,float(val(spec,"OuterRadius",2400))*0.016);node.pitch_scale=clampf(float(val(spec,"PitchShift",1)),0.1,4);node.volume_db=linear_to_db(maxf(0.001,float(val(spec,"Volume",100))/100.0))-10
@@ -143,7 +149,7 @@ func _process(delta):
 			# SocketAttach chooses a position. ClientFX ParentAlign uses the
 			# reference object's orientation, not the animated neck/hand basis.
 			node.global_basis=actor.global_basis.orthonormalized()
-		elif group=="AK-47_PV_Muzz" and is_instance_valid(system.game.player.muzzle_skeleton):node.global_transform=system.game.player.muzzle_socket_transform(str(val(spec,"AttachName","Flash")))
+		elif is_viewmodel_muzzle() and is_instance_valid(system.game.player.muzzle_skeleton):node.global_transform=system.game.player.muzzle_socket_transform(str(val(spec,"AttachName","Flash")))
 		else:node.global_transform=global_transform
 		var offset=vector(val(spec,"Offset",[0,0,0]))*0.016;node.global_position+=global_basis.orthonormalized()*offset
 		if choice(spec,"UpdatePos")==0:
@@ -161,7 +167,7 @@ func _process(delta):
 			if kind=="CreateFX":part.child=system.play(spec.group,null if system.catalog.groups[group].get("sourceType","")=="ProjectileFX" else actor,node.global_position,choice(spec,"Loop")==1,depth+1,node,round_effect)
 		if node is OmniLight3D:node.light_color=color;node.light_energy=color.a*0.6;node.omni_range=maxf(0.1,scale_value*0.016)
 		elif node is CPUParticles3D:
-			if not group in HAND_GROUPS and group!="AK-47_PV_Muzz":node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
+			if not group in HAND_GROUPS and not is_viewmodel_muzzle():node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
 		elif kind=="LTBModel":node.scale=part.baseScale*scale_value*vector(val(spec,"ModelScale",[1,1,-1])).abs()
 		elif kind in ["Sprite","FlareSpriteFX"]:node.scale=Vector3.ONE*scale_value*0.016
 		elif kind=="CamJitter":

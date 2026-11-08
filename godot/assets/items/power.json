@@ -17,7 +17,8 @@
         "heal": 50,
         "usesPerRound": 1,
         "seconds": 15,
-        "regenerationPerMinute": 2
+        "tickSeconds": 1,
+        "regenerationPerTick": 2
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "reused_source_art",
@@ -29,7 +30,19 @@
         75
       ],
       "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
-      "unverifiedSourceParameters": []
+      "unverifiedSourceParameters": [],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 104865,
+        "headerHex": "394a0000ffffffffffffffff000000000000000000000000000000000000000000010000003200000002000000010000000f00000000000000",
+        "useLimit": 1,
+        "instant": 50,
+        "periodic": 2,
+        "tickSeconds": 1,
+        "seconds": 15,
+        "cooldownSeconds": 0
+      }
     },
     {
       "id": "19002",
@@ -45,7 +58,8 @@
         "heal": 100,
         "usesPerRound": 2,
         "seconds": 15,
-        "regenerationPerMinute": 5
+        "tickSeconds": 1,
+        "regenerationPerTick": 5
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "reused_source_art",
@@ -57,7 +71,19 @@
         75
       ],
       "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
-      "unverifiedSourceParameters": []
+      "unverifiedSourceParameters": [],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105106,
+        "headerHex": "3a4a0000ffffffffffffffff000000000000000000000000000000000000000000020000006400000005000000010000000f00000000000000",
+        "useLimit": 2,
+        "instant": 100,
+        "periodic": 5,
+        "tickSeconds": 1,
+        "seconds": 15,
+        "cooldownSeconds": 0
+      }
     },
     {
       "id": "19501",
@@ -70,12 +96,13 @@
       "localPrice": 30,
       "consumable": false,
       "mobileTuning": {
-        "seconds": 10,
+        "seconds": 7,
         "damageMultiplier": 1.1,
         "speedMultiplier": 1.1,
         "healthCostFraction": 0.5,
-        "healthDrainPerMinute": 5,
-        "strongDamageMultiplier": 1.25
+        "strongDamageMultiplier": 1.25,
+        "tickSeconds": 1,
+        "healthDrainPercentPerTick": 5
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "native_syringe_symbol",
@@ -83,7 +110,19 @@
       "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
       "unverifiedSourceParameters": [
         "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
-      ]
+      ],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105347,
+        "headerHex": "2d4c0000ffffffffffffffff000000000000000000000000003200000064000000630000003200000005000000010000000700000000000000",
+        "useLimit": 99,
+        "instant": 50,
+        "periodic": 5,
+        "tickSeconds": 1,
+        "seconds": 7,
+        "cooldownSeconds": 0
+      }
     },
     {
       "id": "19502",
@@ -100,8 +139,9 @@
         "damageMultiplier": 1.2,
         "speedMultiplier": 1.15,
         "healthCostFraction": 0.25,
-        "healthDrainPerMinute": 2,
-        "strongDamageMultiplier": 1.5
+        "strongDamageMultiplier": 1.5,
+        "tickSeconds": 1,
+        "healthDrainPercentPerTick": 2
       },
       "sourceStatsFullyImplemented": false,
       "iconBasis": "native_syringe_symbol",
@@ -109,7 +149,19 @@
       "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
       "unverifiedSourceParameters": [
         "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
-      ]
+      ],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105584,
+        "headerHex": "2e4c0000ffffffffffffffff000000000000000000000000001900000065000000630000001900000002000000010000000a00000000000000",
+        "useLimit": 99,
+        "instant": 25,
+        "periodic": 2,
+        "tickSeconds": 1,
+        "seconds": 10,
+        "cooldownSeconds": 0
+      }
     },
     {
       "id": "13006",
@@ -912,5 +964,6 @@
     ],
     "condition": "Successfully activated FT/energy; never claw ownership",
     "evidence": "User correction and old video 1 02:48–02:50: HP 200→150→147, same held claw."
-  }
+  },
+  "powerTimingEvidence": "docs/power-timing-source-027.json"
 }
