@@ -28,6 +28,8 @@ var normal_run_toggled = false
 var viewmodel: Node3D
 var weapon_anim: AnimationPlayer
 var weapon_info = {}
+var native_weapon_rules={}
+var weapon_motion=preload("res://scripts/weapon_motion.gd").new()
 var weapon_clip = ""
 var weapon_action_time = 0.0
 var muzzle_data={}
@@ -117,6 +119,7 @@ func _ready():
 	camera.add_child(viewmodel)
 	weapon_anim = viewmodel.find_children("*", "AnimationPlayer", true, false)[0]
 	muzzle_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapons/muzzle-bindings.json"))
+	native_weapon_rules=JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapons/native-rules.json")).items
 	muzzle_anchor=Node3D.new();muzzle_anchor.set_meta("source_weapon_muzzle",true);camera.add_child(muzzle_anchor);configure_muzzle()
 	for clip in ["idle", "walk"]:
 		weapon_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
@@ -168,6 +171,7 @@ func play_weapon_clip(clip, duration = 0.0):
 		weapon_anim.play(clip, 0.06)
 		weapon_clip = clip
 		weapon_action_time = duration
+		weapon_motion.start(clip)
 
 func collect_auxiliary_magazines(model):
 	var meshes=model.find_children("*","MeshInstance3D",true,false)
@@ -251,18 +255,31 @@ func prepare_library_weapon(item):
 					var custom=material.duplicate();custom.albedo_texture=load(item.skins[slot]);material_changes.append({"mesh":mesh,"surface":surface,"material":custom})
 		var name=str(mesh.name);var dash=name.rfind("-")
 		if dash>0 and name.substr(dash+1).is_valid_int() and names.has(name.substr(0,dash)):mesh.hide()
-	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":{"itemId":item.id,"name":item.name,"sourceModel":model_info.source,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":int(tuning.damage),"sourceStatsVerified":false}}
+	var info={"itemId":item.id,"name":item.name,"sourceModel":model_info.source,"category":item.category,"shotsPerClip":int(tuning.capacity),"fireIntervalMs":float(tuning.fireInterval)*1000,"reloadSeconds":float(tuning.reloadSeconds),"damage":float(tuning.damage),"sourceStatsVerified":false}
+	var native=native_weapon_rules.get(item.id,{})
+	if not native.is_empty() and int(native.sourceId)==int(item.get("sourceId",-1)):
+		info.merge({"shotsPerClip":int(native.capacity),"fireIntervalMs":float(native.fireIntervalMs),"damage":float(native.baseDamage if native.baseDamage>0 else native.splashDamage),"pellets":int(native.pellets),"godotPosition":native.godotPosition,"modelScale":float(native.modelScale),"native":native,"nativeBaseFieldsVerified":true},true)
+		if players[0].has_animation("reload") and players[0].get_animation("reload").length>0:info.reloadSeconds=players[0].get_animation("reload").length
+	return {"model":next_viewmodel,"animation":players[0],"sounds":sounds,"materials":material_changes,"info":info}
 
 func apply_prepared_weapon(prepared):
+	game.cancel_pending_throw()
 	if is_instance_valid(viewmodel):camera.remove_child(viewmodel);viewmodel.queue_free()
-	viewmodel=prepared.model;viewmodel.position=Vector3(0.19,-0.37,-0.72);viewmodel.scale.z*=-1;camera.add_child(viewmodel)
+	viewmodel=prepared.model;var at=prepared.info.get("godotPosition",[.19,-.37,-.72]);viewmodel.position=Vector3(at[0],at[1],at[2]);viewmodel.scale*=float(prepared.info.get("modelScale",1));viewmodel.scale.z*=-1;camera.add_child(viewmodel)
 	auxiliary_magazines=collect_auxiliary_magazines(viewmodel)
 	for change in prepared.materials:change.mesh.set_surface_override_material(change.surface,change.material)
 	weapon_anim=prepared.animation
 	for clip in ["idle","walk"]:
 		if weapon_anim.has_animation(clip):weapon_anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
 	weapon_info=prepared.info
+	weapon_motion.bind(self,game.book.weapon(weapon_info.itemId))
+	weapon_info.reloadPerShell=weapon_info.get("native",{}).get("ammoName","").to_lower()=="supas" and weapon_anim.has_animation("reload2")
+	if weapon_info.reloadPerShell:weapon_info.reloadFinishSeconds=weapon_anim.get_animation("reload2").length
 	fire_sound.stop();reload_sound.stop();fire_sound.stream=prepared.sounds.fire;reload_sound.stream=prepared.sounds.reload
+	if weapon_info.get("nativeBaseFieldsVerified",false):
+		var fire=game.game_audio.sounds.get(weapon_motion.bank.get("10",""),{}).get("asset","")
+		var reload=game.game_audio.sounds.get(weapon_motion.bank.get("1",""),{}).get("asset","")
+		fire_sound.stream=load(fire) if fire!="" else null;reload_sound.stream=load(reload) if reload!="" else null
 	weapon_clip="";weapon_action_time=0;viewmodel.visible=not is_wolf
 	if weapon_anim.has_animation("select"):play_weapon_clip("select",weapon_anim.get_animation("select").length)
 	else:play_weapon_clip("idle")
@@ -494,6 +511,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.z = 0
 		return
+	weapon_motion.advance(delta)
 	wall_hold_cooldown = maxf(0, wall_hold_cooldown - delta)
 	if wall_holding and advance_wall_hold(delta):
 		return
@@ -689,5 +707,6 @@ func begin_ground_strong():
 	reset_locomotion();roar_effect.stop();pending_strong=true;current_clip="";play_clip("strong_attack");action_time=anim.get_animation("strong_attack").length;shot_cooldown=action_time;return true
 
 func _process(delta):
+	if is_instance_valid(weapon_anim):weapon_anim.active=game.is_combat_active()
 	update_muzzle_anchor()
 	if is_instance_valid(roar_effect):decay_howl_health(delta)

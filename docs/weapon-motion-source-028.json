@@ -1,0 +1,7 @@
+{
+  "models": 216,
+  "grenadeModels": 31,
+  "grenadeModelsWithThrowClips": 31,
+  "issues": [],
+  "scope": "Literal original animation durations/events; grenade prefire/postfire TRS tracks. Bone hierarchy must match before runtime installation."
+}

@@ -267,7 +267,7 @@ func refresh_from_game():
 	refresh_feed()
 	guide.visible=(game.destruction.enabled and game.destruction.phase!="swap") or game.tutorial.active or (game.hunt.active and game.hunt.phase=="intermission")
 	if not game.destruction.enabled:guide.text=game.tutorial.hint() if game.tutorial.active else ("Yeni raunt: %d" % ceili(game.hunt.intermission))
-	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.equipped_slots().duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled,game.destruction.wins.duplicate(),game.destruction.number,game.destruction.enabled,game.destruction.phase,game.destruction.planted,game.match_flow.preparing()]
+	var state=[game.health,game.ammo,game.reserve,int(game.time_left),game.kills,game.current_weapon_id,game.reloading>0,game.exploring,game.player.is_wolf,game.preview_name,game.equipped_slots().duplicate(),game.hunt.active,game.hunt.round_number,game.hunt.round_kills,game.tutorial.active,game.deaths,game.team_frags.duplicate(),game.target_score(),game.match_rules.enabled,game.destruction.wins.duplicate(),game.destruction.number,game.destruction.enabled,game.destruction.phase,game.destruction.planted,game.match_flow.preparing(),int(game.local_room.get("mode",0)),game.match_serial,int(game.match_rules.record.get("id",0))]
 	state.append(watched.get_instance_id() if watched!=null else 0)
 	if watched!=null:state.append_array([watched.health,watched.ammo,watched.reserve,watched.reload_remaining>0])
 	state.append(watching)
@@ -282,7 +282,7 @@ func refresh_from_game():
 	if watched!=null:weapon_name.text=watched.weapon_data.get("name","Tüfek") if watched.kind=="human" else "KURT"
 	var seconds=maxi(0,int(game.time_left));timer_view.set_value("Minute","%02d" % int(seconds/60));timer_view.set_value("Second","%02d" % (seconds%60))
 	var blue=game.local_room.get("team","blue")=="blue"
-	score_view.set_value("RedTeamScore",game.team_score("red"));score_view.set_value("BlueTeamScore",game.team_score("blue"));score_view.set_value("Mode",("Ölüm Oyunu   %d Puan" % game.target_score()) if game.match_rules.enabled else "Yerel Eğitim   10 Puan")
+	score_view.set_value("RedTeamScore",game.team_score("red"));score_view.set_value("BlueTeamScore",game.team_score("blue"));score_view.set_value("Mode",("%s   %d Puan" % [game.match_rules.title() if int(game.local_room.get("mode",0)) in [1022,1023,1024,1025,1026] else "Ölüm Oyunu",game.target_score()]) if game.match_rules.enabled else "Yerel Eğitim   10 Puan")
 	if game.destruction.enabled:
 		score_view.set_value("Mode","Yıkım · %d Tur" % game.destruction.limit);score_view.set_value("RedTeamScore",game.destruction.wins.red);score_view.set_value("BlueTeamScore",game.destruction.wins.blue)
 	if game.hunt.active:

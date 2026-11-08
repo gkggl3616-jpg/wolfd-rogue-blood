@@ -6,7 +6,7 @@
       "path": "docs/review/update-025/owned-pack-ft-inactive-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "37a7b2b98ca74f12d969056357ffb3912917ebc2757a8d717142e09fd42bf743"
+      "sha256": "ec2b117ea9e853e613f99a04f6781ed5f52f7693f24c20cfd309d80b387269f9"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-025/ft-active-health-cost-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "32c04911dd7af8afeb02cd3635a8a0d4f16f2edf7733f0321b89ee3b4f35c142"
+      "sha256": "01bb4abd9fc39c6cc0db30eba8c8c65b49c9be1d142691aeda39bd3f877dc8af"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-025/ft-running-original-clip-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e7ef30ec96d95d8d0843b39cca2cd0b28b68e2853702c09f6a451b70bec30fc4"
+      "sha256": "36f87e7bd39956e92bbd0375a6a710aece7244cc16fd4654eabdf233c5628fd4"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-025/first-aid-and-ft-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "198a0833c6c84f287025af77c625248524f560b293a64d64d6847d0e9d632cd4"
+      "sha256": "fcb8a2b43f76f55d1536286117999377a9e0130e61581f1a0459f215ede1aca3"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-025/ft-expired-no-hand-glow-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9b7e5d58f98d79722680c85b2cff708fca3f5c9dd1f5487ecdc8b5f8fc92b109"
+      "sha256": "da49355f97258cf3f37c46ece0334627979617e370637170c531ea00d75f8e39"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-025/first-aid-per-life-limit-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9a4ef31ccce9583ce83b192ec588c4af91a1e89f1f842a3664b2e0f65e0c123d"
+      "sha256": "1e35423c8ac482064003d64a207e8b7afbade805d6bce72d755dbfbe05507209"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-025/same-energy-pack-reused-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a208ee83d386d6b4567d539c487b2f0e0c009acd417e9a593f8b9ae62e15847f"
+      "sha256": "67b7b5429cc1672eefa964eff0e64b3843c1b5cb4d662b6fd17203612f42249d"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-025/ak-original-flash-socket-before-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2bf9790a37cd6339942032949280d811eb7b71761bef263e23e0a7c1cce5c33f"
+      "sha256": "3d4d710047f7a3b5df0e1104f33e69e37304a1dd87e0f2700fc0ea324d14e62a"
     },
     {
       "height": 720,
@@ -70,11 +70,11 @@
       "path": "docs/review/update-025/ak-original-muzzle-flash-025.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9387586effe777257047e9373d1b9987693d74e9bd661309e679c8dcde2aea91"
+      "sha256": "bb2e2de78d0c0098609b88981b21b488effcb7eba5d85e482149d9867436724c"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

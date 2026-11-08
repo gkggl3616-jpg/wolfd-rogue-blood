@@ -46,7 +46,7 @@
       "path": "docs/review/update-016/allied-bot-match-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b37bb959f432b8332372910eebf971810e13ae76045d743ddc4105d9936b69ad"
+      "sha256": "9ecae20de4a0bdade28b0c3d266a020d676a861e1d8531b36e42fdfba29b37dd"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-016/howling_ice_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a3eda598fa999ddb132c66bb0d02fb484bc7e826f9f2b1451f61775c9685c9d4"
+      "sha256": "bf9b1de099bb3c23ed3d70813a849f135802a045e187205f3cf54d5101d1a207"
     },
     {
       "height": 720,
@@ -85,5 +85,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureActors": true,
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

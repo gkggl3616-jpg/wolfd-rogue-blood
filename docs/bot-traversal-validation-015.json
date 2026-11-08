@@ -1,5 +1,5 @@
 {
-  "checks": 249,
+  "checks": 329,
   "failures": [],
   "landings": [
     {
@@ -435,6 +435,174 @@
       "reversed": false
     },
     {
+      "landingError": 0.15817628800869,
+      "link": 48,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.177568405866623,
+      "link": 49,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0283185038715601,
+      "link": 50,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.73455011844635,
+      "link": 51,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0987833961844444,
+      "link": 52,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.168534904718399,
+      "link": 53,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.151920422911644,
+      "link": 54,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0499580428004265,
+      "link": 55,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.151145070791245,
+      "link": 56,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.13842099905014,
+      "link": 57,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.151728883385658,
+      "link": 58,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.137615382671356,
+      "link": 59,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0732477083802223,
+      "link": 60,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.752230644226074,
+      "link": 61,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0815030559897423,
+      "link": 62,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.110942497849464,
+      "link": 63,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.159302577376366,
+      "link": 64,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0920849442481995,
+      "link": 65,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.163632661104202,
+      "link": 66,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0134280575439334,
+      "link": 67,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.16269838809967,
+      "link": 68,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.164216503500938,
+      "link": 68,
+      "map": 72.0,
+      "reversed": true
+    },
+    {
+      "landingError": 0.179449513554573,
+      "link": 69,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.09938845038414,
+      "link": 70,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0434525720775127,
+      "link": 71,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.103668071329594,
+      "link": 72,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0230028349906206,
+      "link": 73,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.156924456357956,
+      "link": 74,
+      "map": 72.0,
+      "reversed": false
+    },
+    {
       "landingError": 0.134279802441597,
       "link": 0,
       "map": 37.0,
@@ -663,6 +831,78 @@
       "reversed": false
     },
     {
+      "landingError": 0.137622475624084,
+      "link": 29,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.154106572270393,
+      "link": 30,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.155897945165634,
+      "link": 31,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.141638234257698,
+      "link": 32,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.180350184440613,
+      "link": 33,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.15418852865696,
+      "link": 34,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.127969786524773,
+      "link": 35,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0859574750065804,
+      "link": 35,
+      "map": 37.0,
+      "reversed": true
+    },
+    {
+      "landingError": 0.137983560562134,
+      "link": 36,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.0855309888720512,
+      "link": 36,
+      "map": 37.0,
+      "reversed": true
+    },
+    {
+      "landingError": 0.159621760249138,
+      "link": 37,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
+      "landingError": 0.151519998908043,
+      "link": 38,
+      "map": 37.0,
+      "reversed": false
+    },
+    {
       "landingError": 0.137830168008804,
       "link": 0,
       "map": 106.0,
@@ -742,5 +982,5 @@
     }
   ],
   "passed": true,
-  "traversalsSha256": "6da2e3e930499cce35522d39d0bd3a7ef3851a4660c8304823ab2a849990f8a1"
+  "traversalsSha256": "3006aa245e2610b5fdc9c23506aa666e14799c19ddc3666d1d380bf973889545"
 }

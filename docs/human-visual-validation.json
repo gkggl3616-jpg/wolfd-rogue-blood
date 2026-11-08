@@ -23,12 +23,12 @@
       "path": "docs/review/human-014/human-hud-kill-feed-014.png",
       "saved": true,
       "width": 1280,
-      "sha256": "5640d73c9ea6f7e58ff15c2131e150beeff5e064e713d0b81ae0625ba8b9cd00"
+      "sha256": "89f8c5e4b41ce3036434707562a6b222c43d8a127270c4d08acbd2204d3252a8"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureCombatEvents": true,
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

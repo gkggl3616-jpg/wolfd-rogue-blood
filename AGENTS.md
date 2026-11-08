@@ -1,5 +1,7 @@
 # Wolf Rogue Blood çalışma kuralları
 
+- Son kullanıcı talimatı (0.28 çalışması): kalan farkları mümkün olduğunca çöz; bu aşamada APK hazırlama/yayımlama. Son yanıtta yeni gerçek oyun fotoğraflarının klasör bağlantısını ver. Çevrimdışı kapsam ve video yerleşimi korunur.
+
 - Kalıcı FT düzeltmesi (0.25): mor el parlaması Mor Pençe sahipliğine bağlı değildir; yalnızca başarıyla etkinleştirilen enerji/FT paketi süresince görünür. FT hareketi hızlandırır ve ana candan bedel alır. İlk yardım ayrı yaşam başına kullanım sınırına sahiptir; tekrar kullanılabilen paket sahipliği her basışta tüketilmez. Kaynakta çözülemeyen hız birimi ve video/sürüm zaman farkı kesin PC değeri diye sunulmaz.
 
 - Geçerli kapsam çevrimdışı Android sürümüdür; gerçek sunucu kapsam dışındadır. Tam PC aktarımı veya fiziksel Android testi yapılmış gibi işaretleme.

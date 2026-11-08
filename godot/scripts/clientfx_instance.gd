@@ -16,6 +16,12 @@ const SCREEN_GROUPS=["TakingArmor","TakingHealth-test","Deathdirecting","TakingH
 const HAND_GROUPS=["wolf_Hand_glowL","wolf_Hand_glowR"]
 # Measured visual gain for the converted wolf hands; not a decoded PC unit.
 const HAND_VISUAL_GAIN=10.0/3.0
+func source_projectile():
+	var parent=get_parent()
+	while is_instance_valid(parent):
+		if parent.has_meta("source_projectile") and parent.has_method("native_socket_transform"):return parent
+		parent=parent.get_parent()
+	return null
 func is_viewmodel_muzzle():
 	var parent=get_parent()
 	while is_instance_valid(parent):
@@ -69,6 +75,7 @@ func _ready():
 			node.mesh=quad;mat.billboard_mode=BaseMaterial3D.BILLBOARD_ENABLED if choice(spec,"Facing")==0 else BaseMaterial3D.BILLBOARD_DISABLED;node.material_override=mat;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
 		elif kind in ["ParticleSystem","SpriteSystem"]:
 			node=CPUParticles3D.new();node.emitting=false;node.one_shot=not looping
+			if source_projectile()!=null:node.local_coords=false
 			var interval=maxf(0.02,float(val(spec,"EmissionInterval",0.1)));var emission=maxf(1,float(val(spec,"ParticlesPerEmission",val(spec,"SpritesPerEmission",5))))
 			var lifetime=clampf(float(val(spec,"MaxParticleLifeSpan",val(spec,"MaxSpriteLifespan",0.5))),0.05,60)
 			node.preprocess=minf(6,lifetime*.3) if looping and actor==null else 0
@@ -83,11 +90,11 @@ func _ready():
 			node.gravity=Vector3.DOWN*float(val(spec,"GravityAcceleration",0))*0.016+vector(val(spec,"AdditionalAcceleration",[0,0,0]))*0.016
 			var bounds=minf(256,maxf(2,radius+node.initial_velocity_max*lifetime+float(curve(spec,"Sk",0,[0,10])[1])*.016))
 			node.visibility_aabb=AABB(Vector3.ONE*-bounds,Vector3.ONE*bounds*2)
-			node.local_coords=choice(spec,"MoveParticlesWithSystem")==1;node.angular_velocity_min=float(val(spec,"MinAngularVelocity",0));node.angular_velocity_max=float(val(spec,"MaxAngularVelocity",0))
+			node.local_coords=choice(spec,"MoveParticlesWithSystem")==1 and source_projectile()==null;node.angular_velocity_min=float(val(spec,"MinAngularVelocity",0));node.angular_velocity_max=float(val(spec,"MaxAngularVelocity",0))
 			var colors=spec.properties.get("Ck",[])
 			if not colors.is_empty():
 				var gradient=Gradient.new();gradient.offsets=PackedFloat32Array();gradient.colors=PackedColorArray()
-				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if (group=="BloodHeadshot" or is_viewmodel_muzzle()) else ck[4]))
+				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if (group=="BloodHeadshot" or is_viewmodel_muzzle() or source_projectile()!=null) else ck[4]))
 				node.color_ramp=gradient;mat.vertex_color_use_as_albedo=true
 			var initial_scale=maxf(.001,float(curve(spec,"Sk",0,[0,1])[1]))*.016;node.scale_amount_min=initial_scale;node.scale_amount_max=initial_scale
 			if group in HAND_GROUPS or is_viewmodel_muzzle():
@@ -132,6 +139,9 @@ func _process(delta):
 			if node is AudioStreamPlayer3D:node.stop()
 			continue
 		var life=age-float(spec.start);var phase=clampf(life/maxf(0.001,float(spec.end)-float(spec.start)),0,1);var ck=curve(spec,"Ck",phase,[0,1,1,1,1]);var color=Color(ck[1],ck[2],ck[3],ck[4]);var scale_key=curve(spec,"Sk",phase,[0,1]);var scale_value=maxf(0.001,float(scale_key[1]));node.show()
+		# Projectile Ck uses the same transparency convention as the native
+		# viewmodel emitter; zero is opaque, not an invisible energy bullet.
+		if source_projectile()!=null:color.a=1.0-color.a
 		if node is TextureRect:
 			var camera=get_viewport().get_camera_3d()
 			var watched=system.game.spectator.target if system.game.spectator.active else system.game.player
@@ -150,13 +160,14 @@ func _process(delta):
 			# reference object's orientation, not the animated neck/hand basis.
 			node.global_basis=actor.global_basis.orthonormalized()
 		elif is_viewmodel_muzzle() and is_instance_valid(system.game.player.muzzle_skeleton):node.global_transform=system.game.player.muzzle_socket_transform(str(val(spec,"AttachName","Flash")))
+		elif source_projectile()!=null:node.global_transform=source_projectile().native_socket_transform(str(val(spec,"AttachName","")))
 		else:node.global_transform=global_transform
 		var offset=vector(val(spec,"Offset",[0,0,0]))*0.016;node.global_position+=global_basis.orthonormalized()*offset
 		if choice(spec,"UpdatePos")==0:
 			# A nested fly effect is fixed in its moving projectile reference
 			# frame. Freezing that child in world space leaves it behind the hand.
-			if not part.started:part.fixed=node.transform if depth>0 else node.global_transform
-			elif depth>0:node.transform=part.fixed
+			if not part.started:part.fixed=node.transform if depth>0 or source_projectile()!=null else node.global_transform
+			elif depth>0 or source_projectile()!=null:node.transform=part.fixed
 			else:node.global_transform=part.fixed
 		var rotation=vector(val(spec,"RotateAdd",[0,0,0]))+vector(val(spec,"Rotate",[0,0,0]))*life
 		node.rotate_object_local(Vector3.RIGHT,deg_to_rad(rotation.x));node.rotate_object_local(Vector3.UP,deg_to_rad(rotation.y));node.rotate_object_local(Vector3.BACK,deg_to_rad(rotation.z))

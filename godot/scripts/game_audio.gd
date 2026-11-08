@@ -21,6 +21,8 @@ func _ready():
 	if FileAccess.file_exists("res://assets/shared_media/catalog.json"):
 		var data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/shared_media/catalog.json"))
 		sounds = data.get("sounds", {}) if data is Dictionary else {}
+	for path in ["res://assets/weapons/audio.json","res://assets/gameplay/projectiles.json"]:
+		if FileAccess.file_exists(path):sounds.merge(JSON.parse_string(FileAccess.get_file_as_string(path)).get("sounds",{}),true)
 	ui = AudioStreamPlayer.new()
 	ui.bus = "WolfUI"
 	ui.max_polyphony = 4

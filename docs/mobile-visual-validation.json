@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "f22505311eac4e9d9f044fef9208bb8bdd3a62d8e190188e7eec284327c7942b"
+      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
     },
     {
       "height": 720,
@@ -104,7 +104,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "e7cab36213b913ce357ef247e9094268b9db9d0d0b4fd14c6dc0e0b42636811a"
+      "sha256": "5f8440dc2ff63b1c102c04909feeb5a7397b615ab05d0a61887d406925c86356"
     },
     {
       "height": 720,
@@ -602,7 +602,7 @@
       "path": "docs/review/pc-native/human-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e82f0fca1cf4bf3fee1b96e01787765c07fafd2046f3a54d0468ddc48a071c4a"
+      "sha256": "c6f1759964a72c0e0cbe435b4fb1e5858424241eae7afa5b7a5b312292a866ea"
     },
     {
       "height": 720,
@@ -621,7 +621,7 @@
         "interface/gamemenu"
       ],
       "width": 1280,
-      "sha256": "1f1d5f06dff17ea7c41868c28adbad1c00b985caa5856af89253d4aa05cb1745"
+      "sha256": "7c9c539ec05775232aa2e9b22c457f22354587c0255d30e2bf7cdd2e118ad430"
     },
     {
       "height": 720,
@@ -653,7 +653,7 @@
       "path": "docs/review/pc-native/container-ship-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7d429a79a76525e277c671a2b8c6234a56dad1985c97d11f6db189cab6bc95a7"
+      "sha256": "77f0e7ad4ac802d262c3be26edb99b8725863c5a20fa4aa6e290666a914e7542"
     },
     {
       "height": 720,
@@ -681,7 +681,7 @@
       "path": "docs/review/pc-native/offline-container-bots-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "badef4da7d0f20062d57bc5eb92c3b1ac4b989bc5d69ff3a6ae23f799c6f80bc"
+      "sha256": "4d214e7ce32f7f3455d96245c38843c28d3789a0ff7e0147177181b131a4f9b8"
     },
     {
       "height": 720,
@@ -708,7 +708,7 @@
       "path": "docs/review/pc-native/human-bot-hard-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e025e768571ea2159a2cfd270ddc38f72208e083d6995c08b5166ebb6be07c9d"
+      "sha256": "93e03bf91338ba2a5bf6bd51d7a51f7e9051c233baa34a2320cb414cc42f3127"
     },
     {
       "height": 720,
@@ -716,7 +716,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0d6f501fff1a149efcd6ebb677db842be321fc42153f706c33ac488c0aea9e52"
+      "sha256": "a534bc492233623973174674f62daad3263ece8212e83aab63e058104195f975"
     },
     {
       "height": 992,
@@ -732,7 +732,7 @@
       "path": "docs/review/pc-native/human-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "011ac8e9a6f8517d0ef525d54bb9bcea7c5731536435982cacfd7586c2b8da43"
+      "sha256": "3d2fc1d93e34e6d8be20d97ee8dea0cca8abd2fd25ab318fe8cc498ba4a3271c"
     },
     {
       "height": 1080,
@@ -800,5 +800,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

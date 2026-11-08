@@ -135,8 +135,18 @@ var local_room = {}
 var last_result = {}
 var menu_backdrop: ColorRect
 var transient_effects: Node3D
+var projectile_catalog={}
+var bot_weapon_profiles={}
+var pending_throw={}
+var shell_reload={}
+var weapon_cooldowns={}
+var counted_attacks={}
+var damage_batch_depth=0
+var pending_end_round=""
 
 func _ready():
+	projectile_catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/projectiles.json"))
+	bot_weapon_profiles=JSON.parse_string(FileAccess.get_file_as_string("res://assets/bots/weapons.json")).profiles
 	match_flow.game=self
 	profile_lock=ProfileLock.new(not test_mode)
 	book = ContentBook.new(not test_mode, "user://collection.json", OS.has_feature("offline_release"))
@@ -321,15 +331,16 @@ func apply_settings():
 	if not test_mode: Engine.max_fps = int(book.settings.fps)
 
 func activate_prepared_weapon(item,prepared):
+	cancel_pending_throw();weapon_cooldowns[current_weapon_id]=player.shot_cooldown
 	weapon_ammo[current_weapon_id]={"ammo":ammo,"reserve":reserve}
 	player.apply_prepared_weapon(prepared)
-	current_weapon_id=item.id
+	current_weapon_id=item.id;player.shot_cooldown=float(weapon_cooldowns.get(item.id,0))
 	var stored=weapon_ammo.get(item.id,{"ammo":weapon_capacity(),"reserve":weapon_capacity()*4})
-	ammo=int(stored.ammo);reserve=int(stored.reserve);reloading=0;update_hud()
+	ammo=int(stored.ammo);reserve=int(stored.reserve);reloading=0;shell_reload={};update_hud()
 
 func equip_library_weapon(item):
 	if not book.owned.get(item.id,false):return false
-	if running and match_rules.enabled and not match_rules.weapon_allowed(item.get("category","")):return false
+	if running and match_rules.enabled and not weapon_allowed_item(item):return false
 	var prepared=player.prepare_library_weapon(item)
 	if prepared.is_empty():return false
 	activate_prepared_weapon(item,prepared);return true
@@ -348,6 +359,11 @@ func select_library_character(entry):
 
 func weapon_capacity():
 	return int(player.weapon_info.get("shotsPerClip", 30))
+
+func weapon_allowed_item(item):return match_rules.weapon_allowed(item.get("category",""),player.native_weapon_rules.get(item.get("id",""),{}).get("sourceKind",0))
+func bot_weapon_profile():
+	if int(local_room.get("mode",0)) in [1022,1023,1024,1025,1026]:return bot_weapon_profiles[match_rules.preferred_categories()[0]]
+	return JSON.parse_string(FileAccess.get_file_as_string("res://assets/bots/catalog.json"))
 
 func equip_slot(slot):
 	var item=book.weapon(equipped_slots().get(slot,""))
@@ -483,7 +499,7 @@ func start_map_preview():
 	health = 100
 	ammo = weapon_capacity()
 	reserve = ammo * 4
-	weapon_ammo.clear()
+	weapon_ammo.clear();weapon_cooldowns.clear()
 	reloading = 0
 	exploring = true
 	destruction.enabled=false;spectator.stop()
@@ -523,6 +539,7 @@ func resume():
 	if not OS.has_feature("android") and DisplayServer.get_name()!="headless":Input.mouse_mode=Input.MOUSE_MODE_VISIBLE if selection_active else Input.MOUSE_MODE_CAPTURED
 
 func clear_projectiles():
+	cancel_pending_throw();shell_reload={};reloading=0
 	if is_instance_valid(transient_effects):
 		for effect in transient_effects.get_children():
 			transient_effects.remove_child(effect)
@@ -605,9 +622,9 @@ func start_round(with_selection=false):
 	health = 100
 	ammo = weapon_capacity()
 	reserve = ammo * 4
-	weapon_ammo.clear()
+	weapon_ammo.clear();weapon_cooldowns.clear()
 	kills = 0;deaths=0;team_frags={"red":0,"blue":0};respawn_remaining=0
-	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear()
+	match_serial+=1;match_stats={"attacks":0,"hits":0,"damage":0,"headshots":0};kill_feed.clear();counted_attacks.clear();damage_batch_depth=0;pending_end_round=""
 	match_roster={"player":{"id":"player","name":profile_name,"team":local_room.get("team","blue"),"kills":0,"deaths":0,"gp":0,"gold":0}}
 	match_id=Crypto.new().generate_random_bytes(16).hex_encode()
 	hunt.active=int(local_room.get("mode",0))==LocalHunt.MODE
@@ -641,8 +658,10 @@ func start_round(with_selection=false):
 	health=max_health()
 	if match_rules.enabled:
 		if match_rules.form_lock!="mixed" and player.is_wolf!=(match_rules.form_lock=="wolf"):player.switch_form(true)
-		if not player.is_wolf and not match_rules.weapon_allowed(player.weapon_info.get("category","")):
-			var candidates=book.weapons.filter(func(w):return w.get("available",false) and book.owned.get(w.id,false) and match_rules.weapon_allowed(w.category) and w.category=="rifle")
+		if not player.is_wolf and not weapon_allowed_item(book.weapon(current_weapon_id)):
+			var preferred=match_rules.preferred_categories()
+			var candidates=book.weapons.filter(func(w):return w.get("available",false) and book.owned.get(w.id,false) and weapon_allowed_item(w))
+			candidates.sort_custom(func(a,b):return preferred.find(a.category)<preferred.find(b.category))
 			if not candidates.is_empty():equip_library_weapon(candidates[0])
 	if destruction.enabled and is_instance_valid(active_map):
 		for site in destruction.sites:
@@ -664,7 +683,7 @@ func restart_destruction_turn():
 	var anchors=team_start_points(record,local_room.get("team","blue"))
 	if not anchors.is_empty():
 		var anchor=anchors[0];preview_spawn=Vector3(anchor.position[0],anchor.position[1],anchor.position[2]);player.yaw=float(anchor.yaw);player.rotation.y=player.yaw
-	player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();reloading=0;time_left=match_rules.seconds
+	player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();weapon_cooldowns.clear();reloading=0;time_left=match_rules.seconds
 	for team in ["red","blue"]:
 		for i in range(bot_limit(team)):spawn_enemy("human","",team)
 	if round_selection_enabled:open_round_selection()
@@ -733,7 +752,7 @@ func advance_hunt(delta):
 	if hunt.phase!="intermission":return false
 	hunt.intermission=maxf(0,hunt.intermission-delta)
 	if hunt.intermission<=0 and hunt.next_round():
-		health=max_health();booster_remaining=0;booster_tuning={};healing_uses.clear();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();time_left=LocalHunt.SECONDS
+		health=max_health();booster_remaining=0;booster_tuning={};healing_uses.clear();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();weapon_cooldowns.clear();time_left=LocalHunt.SECONDS
 		player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();spawn_clock=0
 		announce("Kurt Avı · Raunt %d/3" % hunt.round_number)
 		if round_selection_enabled:open_round_selection()
@@ -876,13 +895,13 @@ func _process(delta):
 	if match_flow.preparing():return
 	economy.advance(delta)
 	advance_power_effects(delta)
+	if is_combat_active():
+		for key in weapon_cooldowns:weapon_cooldowns[key]=maxf(0,float(weapon_cooldowns[key])-delta)
+	advance_pending_throw(delta)
 	if hunt.active and advance_hunt(delta):return
 	for entry in kill_feed:entry.remaining=maxf(0,entry.remaining-delta)
 	kill_feed=kill_feed.filter(func(entry):return entry.remaining>0)
-	if reloading > 0:
-		reloading -= delta
-		if reloading <= 0:
-			var refill = mini(weapon_capacity() - ammo, reserve);ammo += refill;reserve -= refill
+	advance_reload(delta)
 	if exploring:
 		if player.position.y < preview_spawn.y - 150:
 			player.position = preview_spawn
@@ -904,7 +923,7 @@ func _process(delta):
 		if respawn_remaining<=0:
 			source_hud.feedback.reset()
 			reset_round_equipment()
-			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear()
+			player.position=preview_spawn;player.velocity=Vector3.ZERO;player.reset_combat();health=max_health();ammo=weapon_capacity();reserve=ammo*4;weapon_ammo.clear();weapon_cooldowns.clear()
 			announce("Takımına geri döndün")
 			if round_selection_enabled:open_round_selection()
 	time_left -= delta
@@ -1061,10 +1080,64 @@ func offline_spawn_points(team=""):
 				if navigation_graph.connected(supported,origin):reachable_points.append(pos)
 	return reachable_points if not reachable_points.is_empty() else points
 
+func record_player_hit(amount,context={}):
+	var id=str(context.get("attackId",""))
+	if id=="":match_stats.hits+=1
+	else:
+		if not counted_attacks.has(id):counted_attacks[id]={"head":false};match_stats.hits+=1
+		if context.get("headshot",false) and not counted_attacks[id].head:counted_attacks[id].head=true;match_stats.headshots+=1
+		if counted_attacks.size()>256:counted_attacks.erase(counted_attacks.keys()[0])
+	match_stats.damage+=amount
+func begin_damage_batch():damage_batch_depth+=1
+func finish_damage_batch():
+	damage_batch_depth=maxi(0,damage_batch_depth-1)
+	if damage_batch_depth==0 and pending_end_round!="":
+		var title=pending_end_round;pending_end_round="";end_round(title)
+func cancel_pending_throw():
+	if pending_throw.is_empty():return
+	var released=pending_throw.get("released",false);pending_throw={}
+	if is_instance_valid(player):
+		player.weapon_action_time=0
+		if not released:player.shot_cooldown=0
+func begin_grenade_throw():
+	if not pending_throw.is_empty():return true
+	if not player.weapon_anim.has_animation("prefire") or not player.weapon_anim.has_animation("postfire"):return false
+	var release=player.weapon_motion.throw_release_time()
+	if release<0:return false
+	pending_throw={"weapon":current_weapon_id,"native":player.weapon_info.get("native",{}).duplicate(true),"name":player.weapon_info.name,"phase":"prefire","elapsed":0.0,"released":false,"releaseAt":release,"preSeconds":player.weapon_anim.get_animation("prefire").length,"postSeconds":player.weapon_anim.get_animation("postfire").length}
+	player.shot_cooldown=float(player.weapon_info.fireIntervalMs)/1000.0;player.play_weapon_clip("prefire",pending_throw.preSeconds);return true
+func advance_pending_throw(delta):
+	if pending_throw.is_empty() or not is_combat_active():return
+	if current_weapon_id!=pending_throw.weapon or player.is_wolf:cancel_pending_throw();return
+	pending_throw.elapsed+=maxf(0,delta)
+	if pending_throw.phase=="prefire" and pending_throw.elapsed>=pending_throw.preSeconds:
+		pending_throw.elapsed-=pending_throw.preSeconds;pending_throw.phase="postfire";player.play_weapon_clip("postfire",pending_throw.postSeconds)
+	if pending_throw.phase!="postfire":return
+	if not pending_throw.released and pending_throw.elapsed>=pending_throw.releaseAt:
+		pending_throw.released=true
+		if ammo>0:
+			ammo-=1;match_stats.attacks+=1;player.play_clip("attack");launch_projectile(pending_throw.native,pending_throw.name);player.play_weapon_sound("fire");update_hud()
+	if pending_throw.elapsed>=pending_throw.postSeconds:pending_throw={}
+func launch_projectile(native,weapon_name,owner=null,direction=null):
+	if not is_instance_valid(owner):owner=player
+	var projectile=CharacterBody3D.new();projectile.set_script(GrenadeScript);projectile.game=self;projectile.owner_actor=owner
+	projectile.native=native.duplicate(true);projectile.native.weaponName=weapon_name;projectile.attack_id=str(match_serial)+":"+(str(match_stats.attacks) if owner==player else str(owner.roster_id)+":"+str(owner.shots_fired))
+	projectile.definition=projectile_catalog.get("projectiles",{}).get(native.get("projectile",""),{})
+	var origin=player.camera.global_position if owner==player else owner.global_position+Vector3.UP*1.4
+	var forward=direction if direction is Vector3 else (-player.camera.global_basis.z if owner==player else -owner.global_basis.z);var position=origin+forward*.7
+	var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,position,3,[owner.get_rid()]))
+	if not hit.is_empty():position=hit.position+hit.normal*.09
+	projectile.position=position;var speed=float(projectile.definition.get("properties",{}).get("Velocity",812.5))*.016
+	projectile.velocity=forward*speed;projectile.damage_amount=roundi(float(native.get("splashDamage",player.weapon_info.get("damage",90))));add_child(projectile)
+	notify_bot_noise(owner.global_position,26)
+	if not hit.is_empty():projectile.contact(hit.collider,hit.position,hit.normal)
+	return projectile
+
 func attack():
 	if destruction.enabled and destruction.operator_id==player.get_instance_id() and destruction.progress>0:return
 	if not is_combat_active():return
 	if player.rolling or player.wall_holding or player.air_attacking or player.roar_effect.active: return
+	if reloading>0 and not shell_reload.is_empty() and ammo>0:shell_reload.cancel=true
 	if not running or menu_open or reloading > 0 or player.shot_cooldown > 0:
 		return
 	if player.is_wolf and player.begin_wall_hold():
@@ -1075,6 +1148,7 @@ func attack():
 		if kind == "grenade": announce("Bomba kalmadı");return
 		reload_weapon()
 		return
+	if not player.is_wolf and kind=="grenade" and begin_grenade_throw():return
 	player.shot_cooldown = 0.55/player.CLAW_SPEED if player.is_wolf else float(player.weapon_info.fireIntervalMs) / 1000.0
 	player.action_time = 0.45/player.CLAW_SPEED if player.is_wolf else 0.45
 	player.current_clip = ""
@@ -1102,30 +1176,26 @@ func attack():
 		return
 	if kind != "knife": ammo -= 1
 	notify_bot_noise(player.global_position,6 if kind=="knife" else 26)
-	player.play_weapon_clip("fire", float(player.weapon_info.fireIntervalMs) / 1000.0)
-	if player.fire_sound.stream: player.play_weapon_sound("fire")
+	player.play_weapon_clip("fire", player.weapon_anim.get_animation("fire").length if player.weapon_anim.has_animation("fire") else float(player.weapon_info.fireIntervalMs)/1000.0)
+	if player.fire_sound.stream and not player.weapon_motion.has_sound_events("fire"):player.play_weapon_sound("fire")
 	var source_muzzle=kind!="knife" and player.play_muzzle()
-	if kind in ["grenade", "rocket", "launcher"]:
-		var grenade = CharacterBody3D.new();grenade.set_script(GrenadeScript);grenade.game = self;grenade.position = player.camera.global_position - player.camera.global_basis.z * 0.7;grenade.velocity = - player.camera.global_basis.z * 13 + Vector3.UP * 3;grenade.damage_amount = int(player.weapon_info.get("damage", 90));grenade.kind = "smoke" if str(player.weapon_info.get("name", "")).to_lower().contains("smoke") else "grenade";grenade.fuse = 2 if kind == "grenade" else 0.7;add_child(grenade);return
-	var camera = player.camera
-	var origin = camera.global_position
-	var end = origin - camera.global_basis.z * (2.6 if kind == "knife" else 100)
-	var hit={}
-	var damage_scale=1.0
-	if kind=="knife":
-		hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,end,3,[player.get_rid()]))
-	else:
-		var trace=world_surfaces.trace(get_world_3d().direct_space_state,origin,end,[player.get_rid()]);hit=trace.hit;damage_scale=trace.damageScale;world_surfaces.present_impacts(self,trace.impacts)
-	if hit:
-		end = hit.position
-		if hit.collider.has_meta("enemy") and hostile(hit.collider,local_room.get("team","blue")):
-			var head=kind!="knife" and hit.collider.is_head_hit(hit.position,origin,(end-origin).normalized())
-			var damage = roundi(float(player.weapon_info.get("damage",25))*(2 if head else 1)*damage_scale)
-			var actual=mini(hit.collider.health,damage)
-			if head:match_stats.headshots+=1
-			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head,"hitPosition":hit.position})
+	var native=player.weapon_info.get("native",{})
+	if native.get("projectile","")!="":launch_projectile(native,player.weapon_info.name);return
+	var origin=player.camera.global_position;var forward=-player.camera.global_basis.z
+	var directions=preload("res://scripts/shot_pattern.gd").directions(forward,1 if kind=="knife" else int(player.weapon_info.get("pellets",1)))
+	var attack_id=str(match_serial)+":"+str(match_stats.attacks);begin_damage_batch()
+	for direction in directions:
+		var end=origin+direction*(2.6 if kind=="knife" else 100);var hit={};var damage_scale=1.0
+		if kind=="knife":hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin,end,3,[player.get_rid()]))
+		else:
+			var trace=world_surfaces.trace(get_world_3d().direct_space_state,origin,end,[player.get_rid()]);hit=trace.hit;damage_scale=trace.damageScale;world_surfaces.present_impacts(self,trace.impacts)
+		if hit and hit.collider.has_meta("enemy") and hostile(hit.collider,local_room.get("team","blue")):
+			var head=kind!="knife" and hit.collider.is_head_hit(hit.position,origin,direction)
+			var damage=roundi(float(player.weapon_info.get("damage",25))*(2 if head else 1)*damage_scale);var actual=mini(hit.collider.health,damage)
+			hit.collider.damage(damage,{"weapon":player.weapon_info.get("name","Silah"),"headshot":head,"hitPosition":hit.position,"attackId":attack_id})
 			if is_instance_valid(source_hud):source_hud.feedback.show_hit()
 			announce(("Kafadan isabet +%d" if head else "İsabet +%d") % actual)
+	finish_damage_batch()
 	if kind!="knife" and not source_muzzle:
 		var flash = OmniLight3D.new();flash.position = player.global_position + Vector3(0, 1.4, 0);flash.light_color = Color("ffc77f");flash.light_energy = 2;flash.omni_range = 3
 		transient_effects.add_child(flash);get_tree().create_timer(0.06).timeout.connect(flash.queue_free)
@@ -1162,6 +1232,22 @@ func strong_attack():
 
 func using_bomb():return destruction.enabled and destruction.phase=="combat" and destruction.operator_id==player.get_instance_id() and destruction.progress>0
 
+func advance_reload(delta):
+	if reloading<=0 or delta<=0 or not is_combat_active():return
+	var remaining=delta
+	while reloading>0 and remaining>0:
+		var step=minf(reloading,remaining);reloading-=step;remaining-=step
+		if reloading>.000001:break
+		reloading=0
+		if shell_reload.is_empty():
+			var amount=mini(weapon_capacity()-ammo,reserve);ammo+=amount;reserve-=amount;break
+		if shell_reload.phase=="finish":shell_reload={};break
+		var amount=mini(1,mini(weapon_capacity()-ammo,reserve));ammo+=amount;reserve-=amount
+		if ammo>=weapon_capacity() or reserve<=0 or shell_reload.cancel:
+			shell_reload.phase="finish";reloading=float(player.weapon_info.reloadFinishSeconds);player.play_weapon_clip("reload2",reloading)
+		else:reloading=float(player.weapon_info.reloadSeconds);player.play_weapon_clip("reload",reloading)
+	update_hud()
+
 func reload_weapon():
 	if using_bomb():return
 	if not is_combat_active():
@@ -1171,14 +1257,15 @@ func reload_weapon():
 			announce("Kükreme")
 	elif player.weapon_info.get("category", "") not in ["knife", "grenade"] and ammo < weapon_capacity() and reserve > 0 and reloading <= 0:
 		reloading = float(player.weapon_info.reloadSeconds)
+		if player.weapon_info.get("reloadPerShell",false):shell_reload={"phase":"insert","cancel":false}
 		player.play_weapon_clip("reload", reloading)
-		player.play_weapon_sound("reload")
+		if not player.weapon_motion.has_sound_events("reload"):player.play_weapon_sound("reload")
 		player.play_clip("reload")
 		player.action_time = reloading
 		announce("Şarjör değiştiriliyor…")
 
 func enemy_defeated(context={}):
-	if not is_combat_active():return
+	if not is_combat_active() and not (context.get("posthumous",false) and is_match_active()):return
 	match_sp=economy.elimination(match_sp,context.get("headshot",false))
 	kills += 1
 	announce_kill_sound(local_room.get("team","blue"),context.get("headshot",false))
@@ -1207,6 +1294,7 @@ func take_damage(amount, source_position=null, attacker={}):
 	if health>0:clientfx.frost_hit(player,attacker.get("sourceActor"))
 	if is_instance_valid(source_hud):source_hud.feedback.show_damage(source_position)
 	if health == 0:
+		cancel_pending_throw();shell_reload={};reloading=0
 		clear_power_effects()
 		player.pending_melee.clear()
 		economy.death();record_elimination("player",attacker.get("rosterId",""))
@@ -1222,6 +1310,8 @@ func take_damage(amount, source_position=null, attacker={}):
 		if is_instance_valid(source_hud):source_hud.feedback.show_death()
 
 func end_round(title):
+	if damage_batch_depth>0:pending_end_round=title;return
+	cancel_pending_throw()
 	clear_power_effects()
 	spectator.stop()
 	if match_rules.enabled and match_rules.winner=="":match_rules.decide(team_score("red"),team_score("blue"))

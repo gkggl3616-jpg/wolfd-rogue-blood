@@ -55,7 +55,7 @@
       "path": "docs/review/equipment-013/human-weapon-properties-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "cca39a793f11ace2e4cb0c9ae5cc4a17de877b969ea2dbaf2a0af19f5bd5d988"
+      "sha256": "61ea2acc0d08cfcae4d3b17c285ccad678950f885fcf8ab48d307337a78ffef6"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/equipment-013/round-weapon-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "48cff84f8a2ab309d359165757aa40c1394c8102c83af1c914efd8f04e2bbd33"
+      "sha256": "7faa7b8b599d2437ef0eb564c4ef55d3e86ff9d8463a94b58e5a2535cd6cfe35"
     },
     {
       "height": 720,
@@ -71,7 +71,7 @@
       "path": "docs/review/equipment-013/round-wolf-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "36ef6122f2a89daa68a2bd5bb723f0d71b31b553d08e9008e0cd290712c202f9"
+      "sha256": "358267d597bdb2123c5d25bfbd5efd96d4794dc424811ac3be046cefc0d3ebe4"
     },
     {
       "height": 720,
@@ -144,5 +144,5 @@
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
   "testFixtureMatchSp": 10000,
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

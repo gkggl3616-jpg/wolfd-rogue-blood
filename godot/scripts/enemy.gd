@@ -85,7 +85,7 @@ func _ready():
  destination=patrol_points[0] if not patrol_points.is_empty() else global_position
 
 func prepare_weapon():
- weapon_data=JSON.parse_string(FileAccess.get_file_as_string("res://assets/bots/catalog.json"))
+ weapon_data=game.bot_weapon_profile()
  capacity=int(weapon_data.capacity);ammo=capacity;reserve=capacity*3;fire_interval=float(weapon_data.fireInterval);reload_seconds=float(weapon_data.reloadSeconds)
  weapon=load(weapon_data.asset).instantiate()
  var skeletons=body.find_children("*","Skeleton3D",true,false)
@@ -97,8 +97,10 @@ func prepare_weapon():
    var intended=Transform3D(global_basis,hand.origin-global_basis.z*0.24+Vector3.DOWN*0.02)
    attachment.add_child(weapon);weapon.transform=hand.affine_inverse()*intended
  if weapon.get_parent()==null:weapon.position=Vector3(0.18,1.35,-0.4);add_child(weapon)
- fire_sound=AudioStreamPlayer3D.new();fire_sound.bus="WolfWeapons";fire_sound.max_distance=40;fire_sound.volume_db=-15;fire_sound.stream=load(weapon_data.fireSound);add_child(fire_sound)
- reload_sound=AudioStreamPlayer3D.new();reload_sound.bus="WolfWeapons";reload_sound.max_distance=20;reload_sound.volume_db=-18;reload_sound.stream=load(weapon_data.reloadSound);add_child(reload_sound)
+ fire_sound=AudioStreamPlayer3D.new();fire_sound.bus="WolfWeapons";fire_sound.max_distance=40;fire_sound.volume_db=-15;fire_sound.stream=load(weapon_data.fireSound) if weapon_data.fireSound!="" else null;add_child(fire_sound)
+ reload_sound=AudioStreamPlayer3D.new();reload_sound.bus="WolfWeapons";reload_sound.max_distance=20;reload_sound.volume_db=-18;reload_sound.stream=load(weapon_data.reloadSound) if weapon_data.reloadSound!="" else null;add_child(reload_sound)
+
+func uses_firearm():return kind=="human" and weapon_data.get("category","")!="knife"
 
 func _process(_delta):
  if is_instance_valid(nameplate):nameplate.visible=game.running and not game.menu_open and not game.selection_active and health>0 and team==game.local_room.get("team","blue") and global_position.distance_to(game.player.global_position)>2
@@ -183,7 +185,7 @@ func think():
   destination=last_known;state="chase" if sees_player else "investigate"
   var distance=global_position.distance_to(last_known)
   if sees_player and reaction<=0:
-   if distance<(22 if kind=="human" and ammo>0 else 1.8):state="attack"
+   if distance<(22 if uses_firearm() and ammo>0 else 1.8):state="attack"
    if opponent==game.player and game.player.is_wolf and distance<4 and game.player.action_time>0 and randf()<float(profile.dodgeChance):begin_dodge()
  else:
   state="patrol"
@@ -233,21 +235,26 @@ func begin_dodge(direction=Vector3.ZERO):
 func fire():
  if not game.running or game.menu_open or health<=0 or attack_clock>0:return false
  if not game.actor_alive(opponent):return false
- if kind!="human" or ammo<=0 or reload_remaining>0 or rolling or reaction>0 or not sees_player or not line_to_player():return false
+ if not uses_firearm() or ammo<=0 or reload_remaining>0 or rolling or reaction>0 or not sees_player or not line_to_player():return false
  ammo-=1;shots_fired+=1;attack_clock=fire_interval;play("attack")
  var eye=global_position+Vector3.UP*1.4
  var target=opponent.global_position+Vector3.UP*opponent.capsule.height*0.58
  var direction=(target-eye).normalized()
  var spread=float(profile.spread)
  direction=(direction+global_basis.x*randf_range(-spread,spread)+Vector3.UP*randf_range(-spread,spread)).normalized()
- var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(eye,eye+direction*45,3,[get_rid()]))
- if hit and hit.collider==opponent:hit_opponent()
+ var native=weapon_data.get("native",{})
+ if native.get("projectile","")!="":
+  native=native.duplicate(true);native.baseDamage=Rules.DAMAGE if native.baseDamage>0 else 0;native.splashDamage=Rules.DAMAGE if native.splashDamage>0 else 0
+  game.launch_projectile(native,weapon_data.name,self,direction)
+ else:
+  var hit=get_world_3d().direct_space_state.intersect_ray(PhysicsRayQueryParameters3D.create(eye,eye+direction*45,3,[get_rid()]))
+  if hit and hit.collider==opponent:hit_opponent()
  if not game.test_mode:fire_sound.play()
  return true
 
 func hit_opponent():
  if not game.hostile(opponent,team):return
- var context={"name":display_name,"weapon":"Tüfek" if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourceActor":self,"sourcePosition":global_position,"rosterId":roster_id}
+ var context={"name":display_name,"weapon":weapon_data.get("name","Tüfek") if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourceActor":self,"sourcePosition":global_position,"rosterId":roster_id}
  if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
  else:opponent.damage(Rules.DAMAGE,context)
 func melee_hit():
@@ -290,7 +297,7 @@ func _physics_process(delta):
    var offset=opponent.global_position-global_position;offset.y=0
    if offset.length()>0.1:rotation.y=lerp_angle(rotation.y,atan2(-offset.x,-offset.z),delta*7)
    if attack_clock<=0 and reaction<=0:
-    if kind=="human" and ammo>0:fire()
+    if uses_firearm() and ammo>0:fire()
     elif melee_windup<=0:melee_windup=0.28;attack_clock=1.1;play("attack")
    elif attack_clock<0.3 and melee_windup<=0:play("idle")
   else:
@@ -390,7 +397,7 @@ func damage(amount,context={}):
  if health<=0 or amount<=0:return false
  if context.get("actor","")!="bot":
   if team==game.local_room.get("team","blue"):return false
-  game.match_stats.hits+=1;game.match_stats.damage+=mini(health,amount)
+  game.record_player_hit(mini(health,amount),context)
  elif context.get("attackerTeam",team)==team:return false
  health-=amount
  game.clientfx.play("Impact_Flesh",null,context.get("hitPosition",global_position+Vector3.UP*1.1))

@@ -1,0 +1,329 @@
+{
+  "apkProduced": false,
+  "captures": [
+    {
+      "height": 720,
+      "name": "login-source-interface-028",
+      "path": "docs/review/update-028/login-source-interface-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
+    },
+    {
+      "height": 720,
+      "name": "home-source-interface-028",
+      "path": "docs/review/update-028/home-source-interface-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "aec004193bf44ca81bf01eb6cf782aeb9289704a2dfccdb2e2510f7338b4677e"
+    },
+    {
+      "height": 720,
+      "name": "native-properties-DE-50-028",
+      "path": "docs/review/update-028/native-properties-DE-50-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4b79188c4e5de850f79a93440c7482e60463a598dc9e99946bdb409abd993954"
+    },
+    {
+      "height": 720,
+      "name": "native-properties-AKEI-47 CLASSIC-028",
+      "path": "docs/review/update-028/native-properties-AKEI-47 CLASSIC-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a0cc16e4397fcf04442ed6810f2491737d18197583f30e0a8c3cabf33675804d"
+    },
+    {
+      "height": 720,
+      "name": "native-properties-SUPAS PT-028",
+      "path": "docs/review/update-028/native-properties-SUPAS PT-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "76a1bb51d1d16140136f7c979305060063cfe783481179b8744a70ab9e590091"
+    },
+    {
+      "height": 720,
+      "name": "native-properties-FullMoon-028",
+      "path": "docs/review/update-028/native-properties-FullMoon-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5bd290cb06243983692b9d35ec0ce6acba1af46765845b7e67b5470be1b1d65c"
+    },
+    {
+      "height": 720,
+      "name": "native-viewmodel-DE-50-028",
+      "path": "docs/review/update-028/native-viewmodel-DE-50-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "901e577bd736028f37a48dfc9fdd4ddbcd0c080263ac094fa2e88ea89c217bc8"
+    },
+    {
+      "height": 720,
+      "name": "native-viewmodel-AKEI-47 CLASSIC-028",
+      "path": "docs/review/update-028/native-viewmodel-AKEI-47 CLASSIC-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3497e8b9e2848564f0ec2a6e248981cefd82943aab4b76e010628aa82ef9ea93"
+    },
+    {
+      "height": 720,
+      "name": "native-viewmodel-SUPAS PT-028",
+      "path": "docs/review/update-028/native-viewmodel-SUPAS PT-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3ef8948f19fafb68b4a1496a06b0554b5899245b4957bcb52839e1b772edb0da"
+    },
+    {
+      "height": 720,
+      "name": "native-viewmodel-FullMoon-028",
+      "path": "docs/review/update-028/native-viewmodel-FullMoon-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fcb1bd0ff2870d73dc8b88abe5080c6a7b08bde46a7c3fd1915caee8a5df8267"
+    },
+    {
+      "height": 720,
+      "name": "supas-original-shell-insertion-028",
+      "path": "docs/review/update-028/supas-original-shell-insertion-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0cf849568866bf1a1f32dd413f1cef93831700f3653f48c53717a8e7d2ec0f54"
+    },
+    {
+      "height": 720,
+      "name": "supas-one-shell-added-028",
+      "path": "docs/review/update-028/supas-one-shell-added-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6931e2f807ccd5e804932802f0278e96929e763318b0d05fe022afcf7c501d72"
+    },
+    {
+      "height": 720,
+      "name": "supas-original-finishing-rack-028",
+      "path": "docs/review/update-028/supas-original-finishing-rack-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4a28db309086eed6cb8f956489666ac0e98340e74935f7072b07dd5c20d23de6"
+    },
+    {
+      "height": 720,
+      "name": "HGrenadeTimed-held-native-028",
+      "path": "docs/review/update-028/HGrenadeTimed-held-native-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "341bb9310f21550efb42cdfacc594c002317d432f568a12ce63f912b521b6e6f"
+    },
+    {
+      "height": 720,
+      "name": "HGrenadeTimed-native-prefire-028",
+      "path": "docs/review/update-028/HGrenadeTimed-native-prefire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1fb813f19beccc4b8c513833397d10b127c9e1487941c4d51852535cb952acdc"
+    },
+    {
+      "height": 720,
+      "name": "HGrenadeTimed-native-postfire-028",
+      "path": "docs/review/update-028/HGrenadeTimed-native-postfire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f2bb8fe131cfc47fc187953a948deeb805dc7a234ac2d90480663bb55482f821"
+    },
+    {
+      "height": 720,
+      "name": "ATGrenadeTimed2-held-native-028",
+      "path": "docs/review/update-028/ATGrenadeTimed2-held-native-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "68da4ffb70d07a292f079996138d1aac4af01f9aeb1438c8ee242c08cf85a0c2"
+    },
+    {
+      "height": 720,
+      "name": "ATGrenadeTimed2-native-prefire-028",
+      "path": "docs/review/update-028/ATGrenadeTimed2-native-prefire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "dd4f477ca5fcf39d1a38f1b803e8a81b3d5e8c7421aedb43565edaf0f5545959"
+    },
+    {
+      "height": 720,
+      "name": "ATGrenadeTimed2-native-postfire-028",
+      "path": "docs/review/update-028/ATGrenadeTimed2-native-postfire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e8f7903f46d8e6ddb8385abdf3f11cdb58433dd2346454a7dcc42fd30d72b4c1"
+    },
+    {
+      "height": 720,
+      "name": "Mine-held-native-028",
+      "path": "docs/review/update-028/Mine-held-native-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1b104dd1b6e2639b3cab281688f45bba6c45fc9eccb94fef441ff40f9fea2d99"
+    },
+    {
+      "height": 720,
+      "name": "Mine-native-prefire-028",
+      "path": "docs/review/update-028/Mine-native-prefire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1c860a313ff0486be332d4b78df572fe2cb5e697a08a389b4b4d2f11687b9a18"
+    },
+    {
+      "height": 720,
+      "name": "Mine-native-postfire-028",
+      "path": "docs/review/update-028/Mine-native-postfire-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "66a2bb209504351dd104a2aadcac4945a652edde10fff64ca74f06c1079ec32a"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-Missile-028",
+      "path": "docs/review/update-028/source-flight-model-Missile-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c738de4a84bff9982d9267e032c474618fa3ef4375a20a67a4859d2f0890d436"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-Arrow-028",
+      "path": "docs/review/update-028/source-flight-model-Arrow-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a08aace258ed92a14676b72464d846080572760c2c52b53685991266d1630e47"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-FullMoon-028",
+      "path": "docs/review/update-028/source-flight-model-FullMoon-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c2de2e7feea4fe54a3f55657d9277c2ca5cfa503a57782cfc9ca61737fc145f9"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-HGrenadeTimed-028",
+      "path": "docs/review/update-028/source-flight-model-HGrenadeTimed-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "88260b9d0710c586b5331abcfd69192265abf394163493d1a040e44e1c4befc6"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-ATGrenadeTimed2-028",
+      "path": "docs/review/update-028/source-flight-model-ATGrenadeTimed2-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "97ebf9e52896f883e32ee1d81793ec885295ec880a0056d0f1f960f20098affe"
+    },
+    {
+      "height": 720,
+      "name": "source-flight-model-Mine-028",
+      "path": "docs/review/update-028/source-flight-model-Mine-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "91c731ceb849ed6c14b3f26528720ff65704ad535946906ff818ef81c0ef2c75"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-room-1022-028",
+      "path": "docs/review/update-028/source-weapon-mode-room-1022-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "05e20eb39f77b93306717e957cd874f0f5327d08c737452b812c682fed4d07f7"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-bot-1022-028",
+      "path": "docs/review/update-028/source-weapon-mode-bot-1022-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0879d5cc74d323e1ff1d3837a358f0ec4dfedd3b404ed17ae8214be5f2e12d74"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-room-1023-028",
+      "path": "docs/review/update-028/source-weapon-mode-room-1023-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d0d2ada02aadfd3b0ca1ee35819978a9c5ccf545c8ed1ff1ef4ea8e635387920"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-bot-1023-028",
+      "path": "docs/review/update-028/source-weapon-mode-bot-1023-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c82b79c29748e585c0e66083d88d688f145568747f53c8af3da3a8285b9bd454"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-room-1024-028",
+      "path": "docs/review/update-028/source-weapon-mode-room-1024-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "97f05de5e3a052183e6a77eabc79de188287af8fae44abd2572ea52821e7e628"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-bot-1024-028",
+      "path": "docs/review/update-028/source-weapon-mode-bot-1024-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "898a246df70ea127ea1b1f29a102c78413509749ab9ae9f3d5de8621ca4cf657"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-room-1025-028",
+      "path": "docs/review/update-028/source-weapon-mode-room-1025-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8c02f5f9e84dc9bda92c0dc8609a36604342d7a18c08698b779930bab76171fd"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-bot-1025-028",
+      "path": "docs/review/update-028/source-weapon-mode-bot-1025-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "372a789590e20e14a4d037b4ea78a1bc967ebbed07d73fbb95755a9f06cd34c9"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-room-1026-028",
+      "path": "docs/review/update-028/source-weapon-mode-room-1026-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "23f37e3b88d854f58b9824020a314682a2ce6a2963f16a4148916b0a89aa8ee7"
+    },
+    {
+      "height": 720,
+      "name": "source-weapon-mode-bot-1026-028",
+      "path": "docs/review/update-028/source-weapon-mode-bot-1026-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "af311e87e81766dde2ccc903abe439fe1d68775ce0b1b3c0f71303b46cff85f9"
+    },
+    {
+      "height": 720,
+      "name": "ft-before-activation-028",
+      "path": "docs/review/update-028/ft-before-activation-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f1486438518f48571af21b1d544b4bd8fa4af73ee795870b468d07da911fb0bc"
+    },
+    {
+      "height": 720,
+      "name": "ft-active-health-cost-and-hand-effect-028",
+      "path": "docs/review/update-028/ft-active-health-cost-and-hand-effect-028.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "619baec71212251884e114f6c5b77c1c2d913a82a2d9b3dcac8cb9206e75d7b2"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+}

@@ -1,0 +1,30 @@
+{
+  "source": "root/attributes/fx.txt",
+  "sourceSha256": "b853751262c4313293a6ef60d8dd4374de07acea9075420dcab3e7bd72465b97",
+  "issues": [
+    {
+      "type": "sound",
+      "source": "root/guns/projectiles/snd/rocket.wav",
+      "reason": "Not provided in the PC archive"
+    }
+  ],
+  "scope": "Exact supplied source models, skins, class names, velocity/gravity/lifetime and impact associations. Collision shape, bounce and area-damage falloff remain explicit local simulation adapters.",
+  "projectiles": 72,
+  "models": 66,
+  "availableModels": 72,
+  "impacts": 26,
+  "addedOriginalSounds": 0,
+  "classes": [
+    "CArrow",
+    "CAttachGrenade",
+    "CDetectEnemyGrenade",
+    "CGrenade",
+    "CGrenadeLauncher",
+    "CHologramGrenade",
+    "CLaserTypeBullet",
+    "CMine",
+    "CProjectile",
+    "CTimedGrenadeLauncher"
+  ],
+  "missingImpactDefinitions": []
+}

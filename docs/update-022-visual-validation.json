@@ -6,7 +6,7 @@
       "path": "docs/review/update-022/original-device-equip-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "accf0e244ba1571b70fe89b444ce81352c39ce2b4ae50ed9d7e5ca7f57f77d4e"
+      "sha256": "c42d9e59425dce7839e9202bfe9f096563dfdac0b6668b3059fe8054e0ac0820"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-022/original-hands-and-assembly-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0e8079b2d338e0e6b23d11891d5fed967d0a1d7b26114fcf51a2ed2f3dfa7c08"
+      "sha256": "7d8528f284b882ca79a370060e333cf967d429fc6a16af5615f1fb8f33bc3135"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-022/cancel-restores-weapon-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "5a40898aa08c17122b18553695b4d5a48fdd3bade9db83476c55eb3944cf9a06"
+      "sha256": "73e822a6ba94cbe08dceb743b934f109202b229f464bd2063031df2908f372d7"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-022/world-bomb-and-fuse-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4ec33183fd66350396d82029def1744bd6fce31ee139909896905f89f868f13d"
+      "sha256": "f6e598d22beb418bf33f93ad18b7405071de8c18997979b448fcf0a5345cefb8"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b9fce75a15bada8d8939f0939aa4a583e8631f0d73f53ce03224aae484b4ec23"
+      "sha256": "ab474f473e46d25ed249e45d559bbf7f00444eda0ae15b7886a62ba5e92a432a"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-022/separate-defuse-progress-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fae9d3482058dd00850583ec885e291dfad07704291e56230fbc8c190a9efa2b"
+      "sha256": "9cb23076f1e3c34c6a697f485cacf1c9b6859540e8d3045260f7e78a348043df"
     },
     {
       "height": 720,
@@ -84,5 +84,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

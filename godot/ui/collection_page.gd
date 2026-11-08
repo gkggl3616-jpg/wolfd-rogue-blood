@@ -289,7 +289,7 @@ func show_native_details():
 	if ui.page in ["Envanter","Mağaza"]:
 		var copy=entry.get("description","")
 		if info_tab=="properties":
-			var tuning=entry.gameplayTuning
+			var tuning=weapon_tuning(entry)
 			copy="YEREL OYUN\nHasar: %d\nŞarjör: %d\nAtış aralığı: %.3f sn\nŞarjör değiştirme: %.2f sn" % [int(tuning.damage),int(tuning.capacity),float(tuning.fireInterval),float(tuning.reloadSeconds)]
 			if entry.has("sourceDetails"):
 				var original=entry.sourceDetails
@@ -434,10 +434,21 @@ func body(copy):
 	var node=RichTextLabel.new();node.text=copy;node.position=Vector2(674,577);node.size=Vector2(328,149);node.fit_content=false;node.scroll_active=true
 	node.add_theme_font_override("normal_font",Art.font());node.add_theme_font_size_override("normal_font_size",12);details.add_child(node)
 
+func weapon_tuning(entry):
+	var tuning=entry.gameplayTuning.duplicate(true)
+	var native=ui.game.player.native_weapon_rules.get(entry.id,{})
+	if native.is_empty():return tuning
+	tuning.capacity=native.capacity;tuning.fireInterval=native.fireIntervalMs/1000.0;tuning.damage=native.baseDamage if native.baseDamage>0 else native.splashDamage
+	var motion=ui.game.player.weapon_motion.catalog.get(entry.model,{});var alias=ui.game.book.models.get(entry.model,{}).get("clips",{}).get("reload","Reload")
+	var clip=motion.get("animations",{}).get(alias,{})
+	if clip.has("durationMs"):tuning.reloadSeconds=clip.durationMs/1000.0
+	tuning.perShell=str(native.ammoName).to_lower()=="supas" and motion.get("animations",{}).has("Reload2");tuning.native=true
+	return tuning
+
 func weapon_properties(entry):
-	var tuning=entry.gameplayTuning
-	ui.text(details,"YEREL ÖZELLİKLER",Vector2(674,571),Vector2(328,20),11,Art.GOLD)
-	var rows=[["HASAR",float(tuning.damage),150.0],["ŞARJÖR",float(tuning.capacity),100.0],["ATIŞ / SN",1.0/float(tuning.fireInterval),20.0],["DOLUM / SN",float(tuning.reloadSeconds),6.0]]
+	var tuning=weapon_tuning(entry)
+	ui.text(details,"TEMEL ÖZELLİKLER" if tuning.get("native",false) else "YEREL ÖZELLİKLER",Vector2(674,571),Vector2(328,20),11,Art.GOLD)
+	var rows=[["TEMEL HASAR" if tuning.get("native",false) else "HASAR",float(tuning.damage),250.0],["ŞARJÖR",float(tuning.capacity),100.0],["ATIŞ / SN",1.0/float(tuning.fireInterval),20.0],["TEK MERMİ (SN)" if tuning.get("perShell",false) else "DOLUM (SN)",float(tuning.reloadSeconds),6.0]]
 	for i in range(rows.size()):
 		var row=rows[i];var y=601+i*29
 		ui.text(details,row[0],Vector2(674,y),Vector2(115,21),11)

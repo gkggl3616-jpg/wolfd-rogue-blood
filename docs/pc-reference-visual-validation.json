@@ -7,7 +7,7 @@
       "path": "docs/review/pc-reference/entry-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f22505311eac4e9d9f044fef9208bb8bdd3a62d8e190188e7eec284327c7942b"
+      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/pc-reference/second-password-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "54e21ae82fd751e5ca3c317700eb6f51ced68c5508e90458a3eb3e1c982d6bcb"
+      "sha256": "08ee3ce267c6b837a919587f7cf971103eaef21e59584d36cdf327405ec26096"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/pc-reference/tutorial-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ddc8ba84493178ddcb050d512e7fbde3d4fda3b26a2264034dfeb302f0df4e1b"
+      "sha256": "f6ffdbd0cda184980731792e549362751b23e631cd95ba274e96e35d9d50e40b"
     },
     {
       "height": 720,
@@ -134,5 +134,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureLocalCash": 1000,
-  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8"
+  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
 }

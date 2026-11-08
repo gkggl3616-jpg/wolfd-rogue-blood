@@ -1,0 +1,10 @@
+{
+  "apkProduced": false,
+  "checks": 3126,
+  "failures": [],
+  "grenadeViewmodels": 31,
+  "nativeWeaponsEquipped": 903,
+  "passed": true,
+  "projectileClassesExercised": 10,
+  "projectileDefinitionsExercised": 72
+}
