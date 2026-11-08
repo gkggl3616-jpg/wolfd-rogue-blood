@@ -5,6 +5,10 @@ var game
 var team="red"
 var opponent
 var character_info={}
+var roster_identity={}
+var tactics
+var attack_goal=Vector3.ZERO
+var attack_moving=false
 var source_events
 var target_clock=0.0
 var kind="wolf"
@@ -34,18 +38,26 @@ var state="patrol"
 var patrol_points=[]
 var patrol_index=0
 var reload_remaining=0.0
+var reload_phase=""
+var requested_motion=Vector3.ZERO
 var ammo=30
 var reserve=90
 var capacity=30
 var fire_interval=0.15
 var reload_seconds=2.5
 var melee_windup=0.0
+var pending_melee={}
+var next_right_attack=false
+var claw_trail
 var rolling=false
 var roll_time=0.0
 var roll_cooldown=0.0
 var roll_direction=Vector3.ZERO
 var crouched=false
 var weapon:Node3D
+var weapon_attachment
+var weapon_inventory={}
+var native_hand_socket_verified=false
 var fire_sound:AudioStreamPlayer3D
 var reload_sound:AudioStreamPlayer3D
 var weapon_data={}
@@ -59,6 +71,7 @@ var jumps_completed=0
 
 func _ready():
  profile=Rules.profile(difficulty)
+ tactics=preload("res://scripts/bot_tactics.gd").new();tactics.actor=self;tactics.progress_origin=global_position
  opponent=game.player if team!=game.local_room.get("team","blue") else null
  collision_layer=2;collision_mask=3;floor_snap_length=0.35;floor_max_angle=deg_to_rad(48)
  set_meta("enemy",true)
@@ -66,7 +79,7 @@ func _ready():
  navigator=NavigationAgent3D.new();navigator.path_desired_distance=0.55;navigator.target_desired_distance=0.8;navigator.radius=0.42;navigator.height=1.9;add_child(navigator)
  navigator.link_reached.connect(begin_link_traversal)
  if game.offline_navigation_map.is_valid():navigator.set_navigation_map(game.offline_navigation_map)
- var character=game.book.character_for_team(team)
+ var character=character_info if not character_info.is_empty() else game.book.character_for_team(team)
  if character.is_empty():character=game.character_info
  character_info=character
  body=load(character[kind].asset).instantiate()
@@ -79,23 +92,49 @@ func _ready():
    if anim.has_animation(clip):anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
   play("idle");anim.advance(0)
  if kind=="human":prepare_weapon()
- nameplate=Label3D.new();nameplate.text=display_name;nameplate.position.y=2.25;nameplate.font_size=18;nameplate.fixed_size=true;nameplate.modulate=Color("92c9ed");nameplate.billboard=BaseMaterial3D.BILLBOARD_ENABLED;nameplate.hide();add_child(nameplate)
+ else:
+  game.clientfx.install_right_attack(self);claw_trail=Node3D.new();claw_trail.set_script(preload("res://scripts/claw_trail.gd"));claw_trail.player=self;add_child(claw_trail)
+ nameplate=Label3D.new();nameplate.text=display_name;nameplate.position.y=2.25;nameplate.font_size=20;nameplate.pixel_size=.0015;nameplate.outline_size=3;nameplate.fixed_size=true;nameplate.modulate=Color("92c9ed");nameplate.billboard=BaseMaterial3D.BILLBOARD_ENABLED;nameplate.hide();add_child(nameplate)
  source_events=Node.new();source_events.set_script(preload("res://scripts/actor_source_events.gd"));source_events.actor=self;add_child(source_events)
  build_patrol()
- destination=patrol_points[0] if not patrol_points.is_empty() else global_position
+ patrol_index=int(roster_identity.get("slot",0))*3%maxi(1,patrol_points.size())
+ destination=patrol_points[patrol_index] if not patrol_points.is_empty() else global_position
+ # Enemy spawn anchors are static map knowledge, never hidden live actor positions.
+ if not game.destruction.enabled:
+  var opposite="red" if team=="blue" else "blue";var objectives=[]
+  if game.offline_map_number==0:
+   for x in [-9,-3,3,9]:objectives.append(Vector3(x,0,12 if opposite=="blue" else -12))
+  else:
+   for anchor in game.team_start_points(game.map_catalog.offline_record(game.offline_map_number),opposite):
+    var p=anchor.position;objectives.append(Vector3(p[0],p[1],p[2]))
+  var connected=objectives.filter(func(point):return reachable(point))
+  if not connected.is_empty():destination=NavigationServer3D.map_get_closest_point(game.offline_navigation_map,connected[int(roster_identity.get("slot",0))%connected.size()])
 
-func prepare_weapon():
- weapon_data=game.bot_weapon_profile()
- capacity=int(weapon_data.capacity);ammo=capacity;reserve=capacity*3;fire_interval=float(weapon_data.fireInterval);reload_seconds=float(weapon_data.reloadSeconds)
+func prepare_weapon(next_profile={}):
+ if not weapon_data.is_empty():weapon_inventory[weapon_data.get("itemId","legacy")]={"ammo":ammo,"reserve":reserve}
+ if is_instance_valid(weapon_attachment):weapon_attachment.get_parent().remove_child(weapon_attachment);weapon_attachment.queue_free()
+ elif is_instance_valid(weapon):weapon.get_parent().remove_child(weapon);weapon.queue_free()
+ for sound in [fire_sound,reload_sound]:
+  if is_instance_valid(sound):remove_child(sound);sound.queue_free()
+ weapon_attachment=null;native_hand_socket_verified=false
+ weapon_data=next_profile if not next_profile.is_empty() else game.bot_weapon_profile(self)
+ capacity=int(weapon_data.capacity);var stored=weapon_inventory.get(weapon_data.get("itemId","legacy"),{"ammo":capacity,"reserve":capacity*3});ammo=int(stored.ammo);reserve=int(stored.reserve);fire_interval=float(weapon_data.fireInterval);reload_seconds=float(weapon_data.reloadSeconds);reload_remaining=0
  weapon=load(weapon_data.asset).instantiate()
  var skeletons=body.find_children("*","Skeleton3D",true,false)
  if not skeletons.is_empty():
   var skeleton=skeletons[0];var bone=skeleton.find_bone("Bip01 R Hand")
   if bone>=0:
-   var attachment=BoneAttachment3D.new();attachment.bone_name="Bip01 R Hand";skeleton.add_child(attachment)
+   var attachment=BoneAttachment3D.new();attachment.bone_name="Bip01 R Hand";skeleton.add_child(attachment);weapon_attachment=attachment
    var hand=skeleton.global_transform*skeleton.get_bone_global_pose(bone)
    var intended=Transform3D(global_basis,hand.origin-global_basis.z*0.24+Vector3.DOWN*0.02)
    attachment.add_child(weapon);weapon.transform=hand.affine_inverse()*intended
+   var info=game.clientfx.model_record(self);var sockets=game.clientfx.animations.models.get(info.get("donor",""),{}).get("sockets",[])
+   for socket in sockets:
+    if socket.name!="RightHand" or socket.boneName!=attachment.bone_name:continue
+    var q=socket.rotation;var p=socket.position;var scale=socket.scale
+    # Both the body skeleton and HH source vertices use .016 world units.
+    # The native hand socket supplies rotation/offset; remove a second root scale.
+    weapon.transform=Transform3D(Basis(Quaternion(q[0],q[1],q[2],q[3]).normalized()).scaled(Vector3(scale[0],scale[1],scale[2])),Vector3(p[0],p[1],p[2]));native_hand_socket_verified=true;break
  if weapon.get_parent()==null:weapon.position=Vector3(0.18,1.35,-0.4);add_child(weapon)
  fire_sound=AudioStreamPlayer3D.new();fire_sound.bus="WolfWeapons";fire_sound.max_distance=40;fire_sound.volume_db=-15;fire_sound.stream=load(weapon_data.fireSound) if weapon_data.fireSound!="" else null;add_child(fire_sound)
  reload_sound=AudioStreamPlayer3D.new();reload_sound.bus="WolfWeapons";reload_sound.max_distance=20;reload_sound.volume_db=-18;reload_sound.stream=load(weapon_data.reloadSound) if weapon_data.reloadSound!="" else null;add_child(reload_sound)
@@ -103,6 +142,7 @@ func prepare_weapon():
 func uses_firearm():return kind=="human" and weapon_data.get("category","")!="knife"
 
 func _process(_delta):
+ if is_instance_valid(anim):anim.active=game.is_match_active() and health>0
  if is_instance_valid(nameplate):nameplate.visible=game.running and not game.menu_open and not game.selection_active and health>0 and team==game.local_room.get("team","blue") and global_position.distance_to(game.player.global_position)>2
 
 func build_patrol():
@@ -155,7 +195,6 @@ func line_to_player():
  return not hit.is_empty() and hit.collider==opponent
 
 func hear_noise(point,radius):
- if not game.actor_alive(opponent):return
  if health<=0 or not game.running or game.menu_open:return
  var distance=point.distance_to(global_position)
  var query=PhysicsRayQueryParameters3D.create(global_position+Vector3.UP,point+Vector3.UP,1,[get_rid(),game.player.get_rid()])
@@ -173,10 +212,15 @@ func think():
  sees_player=visible_now
  if not sees_player and memory<=0:has_target=false
  if rolling or reload_remaining>0:return
+ if tactics.recovery>0:destination=tactics.goal;state="reposition";return
  if state=="cover":
   if global_position.distance_to(destination)<1.3 or cover_clock<=0:begin_reload()
   return
- if kind=="human" and ammo<=0 and reserve>0:
+ if uses_firearm() and ammo<=0 and reserve<=0:
+  for key in ["secondaryId","knifeId"]:
+   var id=roster_identity.get(key,"");var profile=game.bot_roster.arsenal.get(id,{})
+   if not profile.is_empty() and id!=weapon_data.get("itemId","") and (not weapon_inventory.has(id) or int(weapon_inventory[id].ammo)+int(weapon_inventory[id].reserve)>0):prepare_weapon(profile);break
+ if uses_firearm() and reserve>0 and (ammo<=0 or (not sees_player and has_target and ammo<maxi(1,int(capacity*.25)))):
   var cover=find_cover()
   if cover is Vector3 and global_position.distance_to(cover)>1.2:destination=cover;state="cover";cover_clock=4.0
   else:begin_reload()
@@ -185,7 +229,17 @@ func think():
   destination=last_known;state="chase" if sees_player else "investigate"
   var distance=global_position.distance_to(last_known)
   if sees_player and reaction<=0:
-   if distance<(22 if uses_firearm() and ammo>0 else 1.8):state="attack"
+   attack_moving=false
+   var range=tactics.ranges()
+   if distance<range.y and (not uses_firearm() or ammo>0):
+    state="attack"
+    if uses_firearm() and brain_enabled:
+     var role=roster_identity.get("role","assault")
+     if tactics.cooldown<=0 and (distance<range.x or role in ["assault","flanker"]):tactics.plan(last_known,distance<range.x)
+     if tactics.goal_valid and global_position.distance_to(tactics.goal)>.8:attack_goal=tactics.goal;attack_moving=true
+   elif uses_firearm() and brain_enabled and tactics.cooldown<=0:
+    var point=tactics.plan(last_known)
+    if point is Vector3:destination=point
    if opponent==game.player and game.player.is_wolf and distance<4 and game.player.action_time>0 and randf()<float(profile.dodgeChance):begin_dodge()
  else:
   state="patrol"
@@ -214,6 +268,7 @@ func find_cover():
 func begin_reload():
  if not game.running or game.menu_open or health<=0:return false
  if kind!="human" or ammo>=capacity or reserve<=0 or reload_remaining>0 or rolling:return false
+ reload_phase="insert" if weapon_data.get("reloadPerShell",false) else "magazine"
  reload_remaining=reload_seconds;state="reload";velocity.x=0;velocity.z=0;play("reload")
  if not game.test_mode:reload_sound.play()
  return true
@@ -257,7 +312,19 @@ func hit_opponent():
  var context={"name":display_name,"weapon":weapon_data.get("name","Tüfek") if kind=="human" else "Pençe","attackerTeam":team,"actor":"bot","sourceActor":self,"sourcePosition":global_position,"rosterId":roster_id}
  if opponent==game.player:game.take_damage(Rules.DAMAGE,global_position,context)
  else:opponent.damage(Rules.DAMAGE,context)
+func begin_melee():
+ var clip="attack_right" if kind=="wolf" and next_right_attack and anim.has_animation("attack_right") else "attack"
+ next_right_attack=not next_right_attack;source_events.restart_melee();play(clip)
+ attack_clock=maxf(.65,anim.get_animation(clip).length if anim.has_animation(clip) else 1.1)
+ var record=game.clientfx.animation_record(self,clip)
+ if kind=="wolf" and record.get("events",[]).any(func(e):return str(e.key).to_lower().contains("fire_key")):pending_melee={"clip":clip}
+ else:melee_windup=.28
+func resolve_melee_event(clip):
+ if pending_melee.is_empty() or pending_melee.clip!=clip:return
+ pending_melee={}
+ if game.is_match_active() and health>0:melee_hit()
 func melee_hit():
+ if kind=="wolf" and is_instance_valid(claw_trail) and not source_events.has_spline():claw_trail.begin()
  if game.actor_alive(opponent) and global_position.distance_to(opponent.global_position)<2.1 and line_to_player():hit_opponent()
 
 func _physics_process(delta):
@@ -268,6 +335,7 @@ func _physics_process(delta):
   move_and_slide();play("jump")
   if link_flight.elapsed>=link_flight.seconds or (link_flight.elapsed>0.1 and is_on_floor()):link_flight={};jumps_completed+=1;path_clock=0
   return
+ tactics.advance(delta)
  attack_clock=maxf(0,attack_clock-delta);reaction=maxf(0,reaction-delta);memory=maxf(0,memory-delta);roll_cooldown=maxf(0,roll_cooldown-delta);cover_clock=maxf(0,cover_clock-delta)
  if position.y<game.preview_spawn.y-150:queue_free();return
  if not is_on_floor():velocity.y-=20*delta
@@ -282,9 +350,7 @@ func _physics_process(delta):
   if roll_time>=0.6:
    rolling=false;rolls_completed+=1;body.transform=body_base;active_clip=""
  elif reload_remaining>0:
-  velocity.x=0;velocity.z=0;reload_remaining-=delta
-  if reload_remaining<=0:
-   var refill=mini(capacity-ammo,reserve);ammo+=refill;reserve-=refill;reloads_completed+=1;state="investigate";active_clip=""
+  velocity.x=0;velocity.z=0;advance_reload(delta)
  else:
   if capsule.height<1.5:
    var query=PhysicsShapeQueryParameters3D.new();var shape=CapsuleShape3D.new();shape.radius=0.42;shape.height=1.9;query.shape=shape;query.transform=Transform3D(Basis.IDENTITY,global_position+Vector3.UP*0.95);query.collision_mask=1;query.exclude=[get_rid()]
@@ -294,12 +360,14 @@ func _physics_process(delta):
    if think_clock<=0:think_clock=float(profile.think);think()
   if state=="attack" and sees_player and game.actor_alive(opponent):
    velocity.x=0;velocity.z=0
+   if brain_enabled and attack_moving:
+    var movement=nav_direction(attack_goal);velocity.x=movement.x*3.4;velocity.z=movement.z*3.4
    var offset=opponent.global_position-global_position;offset.y=0
    if offset.length()>0.1:rotation.y=lerp_angle(rotation.y,atan2(-offset.x,-offset.z),delta*7)
    if attack_clock<=0 and reaction<=0:
     if uses_firearm() and ammo>0:fire()
-    elif melee_windup<=0:melee_windup=0.28;attack_clock=1.1;play("attack")
-   elif attack_clock<0.3 and melee_windup<=0:play("idle")
+    elif not uses_firearm() and melee_windup<=0 and pending_melee.is_empty():begin_melee()
+   elif attack_clock<0.3 and melee_windup<=0 and pending_melee.is_empty():play("idle")
   else:
    path_clock-=delta
    if path_clock<=0:
@@ -310,7 +378,7 @@ func _physics_process(delta):
     navigator.target_position=reachable_goal if reachable_goal is Vector3 else origin
     path_clock=0.35
    var next=navigator.get_next_path_position()-global_position;next.y=0
-   var direction=next.normalized() if not navigator.is_navigation_finished() else Vector3.ZERO
+   var direction=tactics.separation(next.normalized()) if not navigator.is_navigation_finished() else Vector3.ZERO
    var speed=5.2 if has_target or state=="cover" else 3.0
    velocity.x=direction.x*speed;velocity.z=direction.z*speed
    if direction.length()>0.1:
@@ -322,7 +390,31 @@ func _physics_process(delta):
   var motion=Vector3(velocity.x,0,velocity.z)*delta
   if not try_step(motion):try_jump(motion)
  if not link_flight.is_empty():velocity=link_flight.velocity
+ requested_motion=Vector3(velocity.x,0,velocity.z)
  move_and_slide()
+
+func advance_reload(delta):
+ if reload_remaining<=0 or delta<=0 or not game.is_match_active() or health<=0:return
+ var remaining=delta
+ while reload_remaining>0 and remaining>0:
+  var step=minf(remaining,reload_remaining);remaining-=step;reload_remaining-=step
+  if reload_remaining>.000001:break
+  reload_remaining=0
+  if reload_phase=="finish":reload_phase="";reloads_completed+=1;state="investigate";active_clip="";break
+  var per_shell=weapon_data.get("reloadPerShell",false)
+  var refill=mini(1 if per_shell else capacity-ammo,reserve);ammo+=refill;reserve-=refill
+  if per_shell:
+   if ammo<capacity and reserve>0 and not (sees_player and ammo>=mini(2,capacity)):
+    reload_remaining=reload_seconds;active_clip="";play("reload")
+   else:reload_phase="finish";reload_remaining=float(weapon_data.get("reloadFinishSeconds",.5))
+  else:reload_phase="";reloads_completed+=1;state="investigate";active_clip=""
+
+func nav_direction(goal):
+ if path_clock<=0 or navigator.target_position.distance_to(goal)>1:
+  navigator.target_position=goal;path_clock=.35
+ path_clock-=get_physics_process_delta_time()
+ var next=navigator.get_next_path_position()-global_position;next.y=0
+ return tactics.separation(next.normalized()) if not navigator.is_navigation_finished() else Vector3.ZERO
 
 func begin_link_traversal(details):
  if not link_flight.is_empty() or not details.has("rid") or not is_on_floor():return

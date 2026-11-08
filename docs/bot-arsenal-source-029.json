@@ -1,0 +1,5383 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "weapon-8b439507c000e14ab2c5": {
+      "itemId": "weapon-8b439507c000e14ab2c5",
+      "name": "AKEI-47 CLASSIC",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-8b439507c000e14ab2c5.glb",
+      "sha256": "e19c0eff04555156387a44c4c1f9b325df896c9529f0e89eb5fdf4a63bf068ef",
+      "source": "root/wt_guns/models_hh/wt_hh_akei47.ltb",
+      "sourceSha256": "e8c60fc4961cfd4620a53dce9ab1d60e139b56d35b7c6e01b11e040659872f2a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_akei47.dtx",
+      "skinSourceSha256": "8173d09deeae0952f10f2db6fca156e86bde7202534fc35e7e2d088d5d18a73d",
+      "native": {
+        "sourceId": 3002,
+        "sourceKind": 8,
+        "sourceOffset": 240766,
+        "prefixOffset": 240859,
+        "commonOffset": 241005,
+        "normalDamageOffset": 240999,
+        "modelOffset": 241202,
+        "fireIntervalMs": 106,
+        "capacity": 30,
+        "baseDamage": 66.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.33000001311302185,
+          -0.4000000059604645,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.33000001311302185,
+          -0.4000000059604645,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "7.62*39mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_akei47.ltb"
+      },
+      "capacity": 30,
+      "fireInterval": 0.106,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/0d2fa1151d316903cbc4ce67.wav",
+      "reloadSound": "res://assets/library/audio/cec187065f4c754d492d1409.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "bone_AK_47_0",
+          "rotation": [
+            -0.026302000507712364,
+            0.7180100083351135,
+            0.00430699996650219,
+            0.6955230236053467
+          ],
+          "position": [
+            48.47679901123047,
+            7.098289966583252,
+            0.5109760165214539
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "bone_AK_47_0",
+          "rotation": [
+            -0.003570999950170517,
+            -0.6892729997634888,
+            0.02796199917793274,
+            0.7239530086517334
+          ],
+          "position": [
+            17.514999389648438,
+            7.8125200271606445,
+            2.593669891357422
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-5a488f65c747499952b3": {
+      "itemId": "weapon-5a488f65c747499952b3",
+      "name": "ESA-80 BT",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-5a488f65c747499952b3.glb",
+      "sha256": "242f33fea2b03070a72fd3905113deff7112534b14b32d60a4c2b1977c0ea4a7",
+      "source": "root/wt_guns/models_hh/wt_hh_sa-80.ltb",
+      "sourceSha256": "64f8e43646f19b5ec5230445ed378022e4505636c1dfe477d9d53f0a4eae4799",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_sa-80.dtx",
+      "skinSourceSha256": "717b77e06be3bb8e4906e6e077778a8d4f11141dd0633b7047c63dbdbcdd92be",
+      "native": {
+        "sourceId": 3003,
+        "sourceKind": 8,
+        "sourceOffset": 244826,
+        "prefixOffset": 244923,
+        "commonOffset": 245069,
+        "normalDamageOffset": 245063,
+        "modelOffset": 245266,
+        "fireIntervalMs": 105,
+        "capacity": 35,
+        "baseDamage": 58.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.4000000059604645,
+          -1.399999976158142
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.4000000059604645,
+          1.399999976158142
+        ],
+        "projectile": "",
+        "ammoName": "5.56*45mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 13,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_sa-80_body.ltb"
+      },
+      "capacity": 35,
+      "fireInterval": 0.105,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/9d62becf4df1c850269c12fd.wav",
+      "reloadSound": "res://assets/library/audio/c1ff12fe743b73b316f4c564.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.011083999648690224,
+            -0.7138760089874268,
+            -0.011301999911665916,
+            -0.7000929713249207
+          ],
+          "position": [
+            34.769901275634766,
+            5.95658016204834,
+            0.9914019703865051
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.004989999812096357,
+            0.7070890069007874,
+            0.004989999812096357,
+            0.7070890069007874
+          ],
+          "position": [
+            -1.1810799837112427,
+            5.858230113983154,
+            0.44970399141311646
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-36533ca892573cd83ef9": {
+      "itemId": "weapon-36533ca892573cd83ef9",
+      "name": "AKEI-47 PT",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-36533ca892573cd83ef9.glb",
+      "sha256": "de3a220770db41611e0e7775e4ab6b223fed5590e5a099bf0b4aabe2f6d45c3a",
+      "source": "root/wt_guns/models_hh/wp_hh_akei47wt.ltb",
+      "sourceSha256": "c2bfc3d0006567ed7fbf159bba241d8e01399f662518c4b359853511835a2076",
+      "skinSource": "root/wt_guns/skins_hh/wp_hh_akei47wt.dtx",
+      "skinSourceSha256": "a7a6e7cc247174baf22323f2183f8905cf92551553e49fb03bed29144dfb6886",
+      "native": {
+        "sourceId": 3005,
+        "sourceKind": 8,
+        "sourceOffset": 256038,
+        "prefixOffset": 256139,
+        "commonOffset": 256285,
+        "normalDamageOffset": 256279,
+        "modelOffset": 256482,
+        "fireIntervalMs": 102,
+        "capacity": 30,
+        "baseDamage": 63.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.33000001311302185,
+          -0.4000000059604645,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.33000001311302185,
+          -0.4000000059604645,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "7.62*39mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_akei47wt.ltb"
+      },
+      "capacity": 30,
+      "fireInterval": 0.102,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/44df6d58a96fde9c914b6aee.wav",
+      "reloadSound": "res://assets/library/audio/592b1782462267690335c301.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.020217999815940857,
+            -0.7195169925689697,
+            -0.020965000614523888,
+            -0.6938639879226685
+          ],
+          "position": [
+            45.64310073852539,
+            6.321760177612305,
+            0.5634080171585083
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0028019999153912067,
+            0.7071009874343872,
+            0.0028019999153912067,
+            0.7071009874343872
+          ],
+          "position": [
+            15.619999885559082,
+            6.386340141296387,
+            0.5320450067520142
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-d9a5af28e3717ae6ed43": {
+      "itemId": "weapon-d9a5af28e3717ae6ed43",
+      "name": "AUZ A2 PT",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-d9a5af28e3717ae6ed43.glb",
+      "sha256": "477359c88e2977101fe2a1478116d0a4b52f812ad7096a169380bbefc16ff96f",
+      "source": "root/wt_guns/models_hh/wp_hh_auza2.ltb",
+      "sourceSha256": "0511a5c1690e28446d9d2dda9899607dacb57d6ae8068fbb6587c26661fb0ace",
+      "skinSource": "root/wt_guns/skins_hh/wp_hh_auza2.dtx",
+      "skinSourceSha256": "c3399ba09c5d14e64fac02e1dd4938fa1d079b3b0ce1d285462fbc9b6f4eba85",
+      "native": {
+        "sourceId": 3007,
+        "sourceKind": 8,
+        "sourceOffset": 265666,
+        "prefixOffset": 265763,
+        "commonOffset": 265909,
+        "normalDamageOffset": 265903,
+        "modelOffset": 266106,
+        "fireIntervalMs": 101,
+        "capacity": 30,
+        "baseDamage": 58.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.30000001192092896,
+          -0.3799999952316284,
+          -1.25
+        ],
+        "sourcePosition": [
+          0.30000001192092896,
+          -0.3799999952316284,
+          1.25
+        ],
+        "projectile": "",
+        "ammoName": "5.56*45mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 17,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_auz-a2.ltb"
+      },
+      "capacity": 30,
+      "fireInterval": 0.101,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/20fa65c6cfee370470469680.wav",
+      "reloadSound": "res://assets/library/audio/85f6c39bd0071b7346647d14.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.020217999815940857,
+            0.7195169925689697,
+            0.020965000614523888,
+            0.6938639879226685
+          ],
+          "position": [
+            38.87743377685547,
+            6.176478862762451,
+            1.3378740549087524
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            -1.725229024887085,
+            7.009609222412109,
+            -0.6815729737281799
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-0a16a139597f41011f75": {
+      "itemId": "weapon-0a16a139597f41011f75",
+      "name": "EM-4 N",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-0a16a139597f41011f75.glb",
+      "sha256": "e26c6e72a7c06da28f2022763c33902d28c5ab1ff41fa52f17c0ed0bfbb2fe29",
+      "source": "root/wt_guns/models_hh/wt_hh_n4a1.ltb",
+      "sourceSha256": "2aa38f9ad0d3da563e78172663935be3fcd6e3fcac00176722377fa4c4a8feaf",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_n4a1.dtx",
+      "skinSourceSha256": "583b26d98dc7d88a91ef3d18be45f5e5b4898bc8089419243bce836150ada007",
+      "native": {
+        "sourceId": 3008,
+        "sourceKind": 8,
+        "sourceOffset": 272104,
+        "prefixOffset": 272195,
+        "commonOffset": 272341,
+        "normalDamageOffset": 272335,
+        "modelOffset": 272538,
+        "fireIntervalMs": 95,
+        "capacity": 30,
+        "baseDamage": 54.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "5.56*45mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_n4a1.ltb"
+      },
+      "capacity": 30,
+      "fireInterval": 0.095,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/e2901309ce5e08b555662745.wav",
+      "reloadSound": "res://assets/library/audio/43c104c4812266bef1401563.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.020217999815940857,
+            -0.7195169925689697,
+            -0.020965000614523888,
+            -0.6938639879226685
+          ],
+          "position": [
+            41.6072998046875,
+            6.983099937438965,
+            0.32014200091362
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            9.463350296020508,
+            7.009610176086426,
+            -0.4368380010128021
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-99e629ebf8a98aa967f8": {
+      "itemId": "weapon-99e629ebf8a98aa967f8",
+      "name": "SCAL SF",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-99e629ebf8a98aa967f8.glb",
+      "sha256": "c1acb38866d830ca1fd913012779ef641d319aa5a129f3077ca0881faf9a7e8c",
+      "source": "root/wt_guns/models_hh/wt_hh_scal_h.ltb",
+      "sourceSha256": "25ed3106c0afa742a4fc5301a0d9540527170867a7abb19c8ef282fd8ccd3848",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_scar-h.dtx",
+      "skinSourceSha256": "036c232cf02fff1b771c3d9e728f3b275ba8e9f85594f585b318b042091594bd",
+      "native": {
+        "sourceId": 3010,
+        "sourceKind": 8,
+        "sourceOffset": 284284,
+        "prefixOffset": 284377,
+        "commonOffset": 284523,
+        "normalDamageOffset": 284517,
+        "modelOffset": 284720,
+        "fireIntervalMs": 106,
+        "capacity": 20,
+        "baseDamage": 75.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.10000000149011612,
+          -0.4000000059604645,
+          -1.0
+        ],
+        "sourcePosition": [
+          0.10000000149011612,
+          -0.4000000059604645,
+          1.0
+        ],
+        "projectile": "",
+        "ammoName": "7.62*39mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 17,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_scal-h_body.ltb"
+      },
+      "capacity": 20,
+      "fireInterval": 0.106,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/a790f244f241ca6330c0a0aa.wav",
+      "reloadSound": "res://assets/library/audio/3cdb40aa8bdbf5cfde4dd28f.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0005450000171549618,
+            0.7061439752578735,
+            0.0009350000182166696,
+            0.7080680131912231
+          ],
+          "position": [
+            33.33932113647461,
+            6.274607181549072,
+            1.5003730058670044
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            12.373392105102539,
+            5.2778849601745605,
+            -0.4368380010128021
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-65eca59fc461320735fd": {
+      "itemId": "weapon-65eca59fc461320735fd",
+      "name": "Z-3 C",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-65eca59fc461320735fd.glb",
+      "sha256": "5856a380aaf40b76ab0897feba3dbeb736cfdde46b3f1b5a699199c1de355aa8",
+      "source": "root/wt_guns/models_hh/wt_hh_z3.ltb",
+      "sourceSha256": "0ec2f39b1fc2d07662538ec4ad9474689f77ceaac8b0f9d784662f579799e75f",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_z3.dtx",
+      "skinSourceSha256": "5238e50a9530ff816759f7d46abcae384184079a9d97326fee17b74c945858cc",
+      "native": {
+        "sourceId": 3012,
+        "sourceKind": 8,
+        "sourceOffset": 295748,
+        "prefixOffset": 295837,
+        "commonOffset": 295983,
+        "normalDamageOffset": 295977,
+        "modelOffset": 296180,
+        "fireIntervalMs": 106,
+        "capacity": 25,
+        "baseDamage": 56.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.30000001192092896,
+          -0.4399999976158142,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.30000001192092896,
+          -0.4399999976158142,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "7.62*39mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_z3_body.ltb"
+      },
+      "capacity": 25,
+      "fireInterval": 0.106,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/8179c108aa039927fce4b119.wav",
+      "reloadSound": "res://assets/library/audio/e6aedee2ba00ee59f3670f63.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.00025599999935366213,
+            0.7110099792480469,
+            -0.00037200000951997936,
+            0.7031819820404053
+          ],
+          "position": [
+            48.58147048950195,
+            7.815752983093262,
+            0.32014200091362
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0013640000252053142,
+            0.7071059942245483,
+            0.0013640000252053142,
+            0.7071049809455872
+          ],
+          "position": [
+            14.539118766784668,
+            7.4282379150390625,
+            -0.4368380010128021
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-537e6d49aa155159dd8b": {
+      "itemId": "weapon-537e6d49aa155159dd8b",
+      "name": "FANAS FFW",
+      "category": "rifle",
+      "asset": "res://assets/bots/arsenal/weapon-537e6d49aa155159dd8b.glb",
+      "sha256": "aa5210a4c604f205fab02421832ae165c98753557214db8c83bcf48d0c27bd97",
+      "source": "root/wt_guns/models_hh/wt_hh_fanas.ltb",
+      "sourceSha256": "b54f88dc040e4f0299d2e75a53352222ec1c85a743c6718405edf192be3c1fa0",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_fanas.dtx",
+      "skinSourceSha256": "8dfbb590277202305893db9629457d5ec9545d7342a21a594231123f57d60dcf",
+      "native": {
+        "sourceId": 3013,
+        "sourceKind": 8,
+        "sourceOffset": 301824,
+        "prefixOffset": 301921,
+        "commonOffset": 302067,
+        "normalDamageOffset": 302061,
+        "modelOffset": 302264,
+        "fireIntervalMs": 93,
+        "capacity": 25,
+        "baseDamage": 59.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3199999928474426,
+          -0.44999998807907104,
+          -1.2999999523162842
+        ],
+        "sourcePosition": [
+          0.3199999928474426,
+          -0.44999998807907104,
+          1.2999999523162842
+        ],
+        "projectile": "",
+        "ammoName": "5.56*45mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_fanas.ltb"
+      },
+      "capacity": 25,
+      "fireInterval": 0.093,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/40f6309841a87ce691fe2b94.wav",
+      "reloadSound": "res://assets/library/audio/b54c2b9bdb8c7db21494ba88.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.008310000412166119,
+            0.7032290101051331,
+            0.00822100043296814,
+            0.7108680009841919
+          ],
+          "position": [
+            31.532800674438477,
+            6.822659969329834,
+            2.8578100204467773
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            -8.996520042419434,
+            -0.18832600116729736,
+            1.909980058670044
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-692fe92303ae49b38fdc": {
+      "itemId": "weapon-692fe92303ae49b38fdc",
+      "name": "CRISS WT",
+      "category": "smg",
+      "asset": "res://assets/bots/arsenal/weapon-692fe92303ae49b38fdc.glb",
+      "sha256": "722b6d2746f5ca146d07ee7669a90090ad78e7030fc0c4ca16b7dd4e66593df1",
+      "source": "root/wt_guns/models_hh/wt_hh_crissv.ltb",
+      "sourceSha256": "1f1b9a5594d5747e3a357be4d8e56d9a2dafdfca007431fba4d481383e974107",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_crissv.dtx",
+      "skinSourceSha256": "84ea44f545b4af42860aa8ca186298ddcabf1e02840f3b3577a47cbd522b7478",
+      "native": {
+        "sourceId": 1005,
+        "sourceKind": 16,
+        "sourceOffset": 186864,
+        "prefixOffset": 186959,
+        "commonOffset": 187105,
+        "normalDamageOffset": 187099,
+        "modelOffset": 187296,
+        "fireIntervalMs": 120,
+        "capacity": 13,
+        "baseDamage": 75.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.27000001072883606,
+          -1.2999999523162842
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.27000001072883606,
+          1.2999999523162842
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 18,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_crissv.ltb"
+      },
+      "capacity": 13,
+      "fireInterval": 0.12,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/7b7d5aaef640cef37924e045.wav",
+      "reloadSound": "res://assets/library/audio/35011d08f6fc96893a56dc0b.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0005569999921135604,
+            0.7149040102958679,
+            0.0009280000231228769,
+            0.6992220282554626
+          ],
+          "position": [
+            26.76219940185547,
+            2.1116700172424316,
+            1.5003700256347656
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            16.41080093383789,
+            3.3933300971984863,
+            -0.1373700052499771
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3c8aec072d7625ddb70c": {
+      "itemId": "weapon-3c8aec072d7625ddb70c",
+      "name": "CRISS OPS BSG Body",
+      "category": "smg",
+      "asset": "res://assets/bots/arsenal/weapon-3c8aec072d7625ddb70c.glb",
+      "sha256": "ef7bd1a75f8f962f18b915d0cf69fd725e9becf1a79daf0a2ab83bbd72f30b3d",
+      "source": "root/wt_guns/models_hh/wt_hh_criss_ops.ltb",
+      "sourceSha256": "eec2fbcb3809c98a2a4b3b504513eecaa4af37123ba06804261990eec5489249",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_criss_ops_bsg.dtx",
+      "skinSourceSha256": "7f4f6450a941aed344a4392f7a3c3591587eb065b563fab3501e5bfca8adf959",
+      "native": {
+        "sourceId": 5041,
+        "sourceKind": 16,
+        "sourceOffset": 4754944,
+        "prefixOffset": 4755053,
+        "commonOffset": 4755199,
+        "normalDamageOffset": 4755193,
+        "modelOffset": 4755390,
+        "fireIntervalMs": 90,
+        "capacity": 28,
+        "baseDamage": 80.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.27000001072883606,
+          -1.2999999523162842
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.27000001072883606,
+          1.2999999523162842
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 2,
+        "animationType": 18,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_criss_ops.ltb"
+      },
+      "capacity": 28,
+      "fireInterval": 0.09,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/shared_media/audio/c73ebc1177c0078ba6234c85.wav",
+      "reloadSound": "res://assets/library/audio/35011d08f6fc96893a56dc0b.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0005569999921135604,
+            0.7149040102958679,
+            0.0009280000231228769,
+            0.6992220282554626
+          ],
+          "position": [
+            43.32408142089844,
+            2.112791061401367,
+            1.5003730058670044
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            16.41077995300293,
+            3.393332004547119,
+            -0.1373700052499771
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-2539adf97a42fec68b80": {
+      "itemId": "weapon-2539adf97a42fec68b80",
+      "name": "CRISS WT(P)",
+      "category": "smg",
+      "asset": "res://assets/bots/arsenal/weapon-2539adf97a42fec68b80.glb",
+      "sha256": "31d341ff7f4fd2be577b4f485bddd2f08ac50f09c47c9d1609b96b7ff180cd56",
+      "source": "root/wt_guns/models_hh/wt_hh_criss_wt.ltb",
+      "sourceSha256": "5e2ec1611e1f6983d93c19b333f89cdf0d0c284bb7d02da4f35e0358ac2e8a1c",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_criss_wt.dtx",
+      "skinSourceSha256": "d3987a2c8942b309a9145afa7b8dc0f0450fa1eca7757ebc5254506ecbc98ae1",
+      "native": {
+        "sourceId": 1015,
+        "sourceKind": 16,
+        "sourceOffset": 231504,
+        "prefixOffset": 231599,
+        "commonOffset": 231745,
+        "normalDamageOffset": 231739,
+        "modelOffset": 231936,
+        "fireIntervalMs": 105,
+        "capacity": 28,
+        "baseDamage": 75.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.27000001072883606,
+          -1.2999999523162842
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.27000001072883606,
+          1.2999999523162842
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 18,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_criss_wt.ltb"
+      },
+      "capacity": 28,
+      "fireInterval": 0.105,
+      "reloadSeconds": 2.666,
+      "fireSound": "res://assets/library/audio/7b7d5aaef640cef37924e045.wav",
+      "reloadSound": "res://assets/library/audio/35011d08f6fc96893a56dc0b.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0005569999921135604,
+            0.7149040102958679,
+            0.0009280000231228769,
+            0.6992220282554626
+          ],
+          "position": [
+            26.76219940185547,
+            2.1116700172424316,
+            1.5003700256347656
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            16.41080093383789,
+            3.3933300971984863,
+            -0.1373700052499771
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-57cc6c8a7878d8b839e5": {
+      "itemId": "weapon-57cc6c8a7878d8b839e5",
+      "name": "EMP-5 CS",
+      "category": "smg",
+      "asset": "res://assets/bots/arsenal/weapon-57cc6c8a7878d8b839e5.glb",
+      "sha256": "da7938768f03be3ef87913c118eb749deee2087ce739ee7b2234db54b535091c",
+      "source": "root/wt_guns/models_hh/wt_hh_emp5a4.ltb",
+      "sourceSha256": "cd9722cb62c9d4a64c77589d201c878474f98a8c9e7ba66f92027580382031a1",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_emp5a4.dtx",
+      "skinSourceSha256": "cab355450b792b6a5d4a744f53c9b69ef727603ad23407205489b746fed576e7",
+      "native": {
+        "sourceId": 5001,
+        "sourceKind": 16,
+        "sourceOffset": 519662,
+        "prefixOffset": 519757,
+        "commonOffset": 519903,
+        "normalDamageOffset": 519897,
+        "modelOffset": 520094,
+        "fireIntervalMs": 90,
+        "capacity": 25,
+        "baseDamage": 47.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.41999998688697815,
+          -0.6000000238418579,
+          -1.600000023841858
+        ],
+        "sourcePosition": [
+          0.41999998688697815,
+          -0.6000000238418579,
+          1.600000023841858
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 2,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_emp5a4.ltb"
+      },
+      "capacity": 25,
+      "fireInterval": 0.09,
+      "reloadSeconds": 1.666,
+      "fireSound": "res://assets/library/audio/d736cdb951658de18e62f1d6.wav",
+      "reloadSound": "res://assets/library/audio/38e2e90f12937fcbae8738ad.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.020217999815940857,
+            -0.7195169925689697,
+            -0.020965000614523888,
+            -0.6938639879226685
+          ],
+          "position": [
+            30.23889923095703,
+            7.199749946594238,
+            0.32014200091362
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            9.463350296020508,
+            7.009610176086426,
+            -0.4368380010128021
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-140b0054748d763050e5": {
+      "itemId": "weapon-140b0054748d763050e5",
+      "name": "SUPAS PT",
+      "category": "shotgun",
+      "asset": "res://assets/bots/arsenal/weapon-140b0054748d763050e5.glb",
+      "sha256": "bb4dc8b4db57b3a8d8ebd934d5247fcc698f54262f131d219ff3595ce4c931a7",
+      "source": "root/wt_guns/models_hh/wt_hh_supas12.ltb",
+      "sourceSha256": "4691627413427b68341110574d80adcaca4264ec0fca577ee9485b6744292b32",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_supas-12.dtx",
+      "skinSourceSha256": "038c9b071592a03663504d6a1b1f9634284bdafc5060c17fddbf1c358ca0c66f",
+      "native": {
+        "sourceId": 7001,
+        "sourceKind": 64,
+        "sourceOffset": 657808,
+        "prefixOffset": 657903,
+        "commonOffset": 658049,
+        "normalDamageOffset": 658043,
+        "modelOffset": 658222,
+        "fireIntervalMs": 1200,
+        "capacity": 8,
+        "baseDamage": 44.0,
+        "splashDamage": 0.0,
+        "pellets": 6,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25999999046325684,
+          -0.3799999952316284,
+          -0.4000000059604645
+        ],
+        "sourcePosition": [
+          0.25999999046325684,
+          -0.3799999952316284,
+          0.4000000059604645
+        ],
+        "projectile": "",
+        "ammoName": "supas",
+        "tracerFx": "",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 21,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_supas12_body.ltb"
+      },
+      "capacity": 8,
+      "fireInterval": 1.2,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/15ad047725cc40e3a8b1a4c8.wav",
+      "reloadSound": "res://assets/library/audio/f6e525dab28319ceaa4d4239.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            45.61289978027344,
+            -9.999999974752427e-07,
+            6.220769882202148
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            14.81820011138916,
+            1.7919199466705322,
+            5.740920066833496
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": true,
+      "reloadFinishSeconds": 0.933
+    },
+    "weapon-056723b78b610c1ae023": {
+      "itemId": "weapon-056723b78b610c1ae023",
+      "name": "EM-3 P",
+      "category": "shotgun",
+      "asset": "res://assets/bots/arsenal/weapon-056723b78b610c1ae023.glb",
+      "sha256": "92d9fa4c46158e20d5d26feb7837fbf8d1e37e0e241d5ab72ab43d67d1c64721",
+      "source": "root/wt_guns/models_hh/wt_hh_m3super90.ltb",
+      "sourceSha256": "9febcf02b8ad2c4d94b6578ef1d8d5f198fa4e5905d8bae51784c1de3df16d71",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_m3super90.dtx",
+      "skinSourceSha256": "6f17f28148bece545fe580b2f04ba7426671b8ef03189fc5b714546fc7803d84",
+      "native": {
+        "sourceId": 7002,
+        "sourceKind": 64,
+        "sourceOffset": 663456,
+        "prefixOffset": 663547,
+        "commonOffset": 663693,
+        "normalDamageOffset": 663687,
+        "modelOffset": 663870,
+        "fireIntervalMs": 1000,
+        "capacity": 8,
+        "baseDamage": 65.0,
+        "splashDamage": 0.0,
+        "pellets": 8,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.27000001072883606,
+          -0.3499999940395355,
+          -0.5
+        ],
+        "sourcePosition": [
+          0.27000001072883606,
+          -0.3499999940395355,
+          0.5
+        ],
+        "projectile": "",
+        "ammoName": "shotgun",
+        "tracerFx": "",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 21,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em3super90_body.ltb"
+      },
+      "capacity": 8,
+      "fireInterval": 1.0,
+      "reloadSeconds": 0.5,
+      "fireSound": "res://assets/library/audio/f4fe5bd261189b41972ad283.wav",
+      "reloadSound": "res://assets/library/audio/6223345b15b08647e6a528b6.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "position": [
+            43.79719924926758,
+            0.14570699632167816,
+            2.7305400371551514
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "position": [
+            8.804840087890625,
+            1.2753700017929077,
+            2.5936899185180664
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 1.0
+    },
+    "weapon-88964c6c14d0096126f2": {
+      "itemId": "weapon-88964c6c14d0096126f2",
+      "name": "EXM-26 CS",
+      "category": "shotgun",
+      "asset": "res://assets/bots/arsenal/weapon-88964c6c14d0096126f2.glb",
+      "sha256": "eaa54dc2f7223592b47814c24f7072844592394854e338d8b61483c555a68242",
+      "source": "root/wt_guns/models_hh/wt_hh_exm-26.ltb",
+      "sourceSha256": "b87d23ef95e94416f6aa42617b17fe34d7ac32ce40d32733e804a8c685ea711b",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_exm-26.dtx",
+      "skinSourceSha256": "23906d6ac9af1786b2c012915c8bf6b44bfd24a8cfede244019e76bfe71b370e",
+      "native": {
+        "sourceId": 7005,
+        "sourceKind": 64,
+        "sourceOffset": 676760,
+        "prefixOffset": 676857,
+        "commonOffset": 677003,
+        "normalDamageOffset": 676997,
+        "modelOffset": 677180,
+        "fireIntervalMs": 250,
+        "capacity": 5,
+        "baseDamage": 38.0,
+        "splashDamage": 0.0,
+        "pellets": 6,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.33000001311302185,
+          -0.8299999833106995
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.33000001311302185,
+          0.8299999833106995
+        ],
+        "projectile": "",
+        "ammoName": "shotgun",
+        "tracerFx": "",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 1,
+        "animationType": 0,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_exm-26_body.ltb"
+      },
+      "capacity": 5,
+      "fireInterval": 0.25,
+      "reloadSeconds": 2.433,
+      "fireSound": "res://assets/library/audio/b5d73ba3243d439622fc6ef3.wav",
+      "reloadSound": "res://assets/library/audio/ce4f216bd2899d9884bc1469.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.03291900083422661,
+            0.7211670279502869,
+            0.03435000032186508,
+            0.6911249756813049
+          ],
+          "position": [
+            38.90449905395508,
+            8.545280456542969,
+            0.3846069872379303
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            15.303500175476074,
+            5.858230113983154,
+            0.44970399141311646
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-405f41cdea79ff68d3c7": {
+      "itemId": "weapon-405f41cdea79ff68d3c7",
+      "name": "SODB Shotgun",
+      "category": "shotgun",
+      "asset": "res://assets/bots/arsenal/weapon-405f41cdea79ff68d3c7.glb",
+      "sha256": "34ca75b3a256adf209d7df14cc803581ba52af1310edb020dbb537e97b4cda63",
+      "source": "root/wt_guns/models_hh/wt_hh_sodb_shotgun.ltb",
+      "sourceSha256": "ee8d503cb524f11e327f3d5971881f29c951c7a6fad75f78ea37512ed3c728ce",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_sodb_shotgun.dtx",
+      "skinSourceSha256": "c3c21deb4a5f281ea72d8010919e9839c1002103b13370ca5f5fb121e97f334a",
+      "native": {
+        "sourceId": 1017,
+        "sourceKind": 8256,
+        "sourceOffset": 1146062,
+        "prefixOffset": 1146165,
+        "commonOffset": 1146311,
+        "normalDamageOffset": 1146305,
+        "modelOffset": 1146502,
+        "fireIntervalMs": 1000,
+        "capacity": 2,
+        "baseDamage": 30.0,
+        "splashDamage": 0.0,
+        "pellets": 6,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.0
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.0
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 2,
+        "animationType": 4,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_sodb_shotgun.ltb"
+      },
+      "capacity": 2,
+      "fireInterval": 1.0,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/15ad047725cc40e3a8b1a4c8.wav",
+      "reloadSound": "res://assets/library/audio/f6e525dab28319ceaa4d4239.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0005569999921135604,
+            0.7149040102958679,
+            0.0009280000231228769,
+            0.6992220282554626
+          ],
+          "position": [
+            31.212799072265625,
+            2.112791061401367,
+            1.6371920108795166
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.003449999960139394,
+            0.7070980072021484,
+            -0.003449999960139394,
+            0.7070980072021484
+          ],
+          "position": [
+            16.41077995300293,
+            3.393332004547119,
+            1.6243879795074463
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-47e5f891e177533cda7c": {
+      "itemId": "weapon-47e5f891e177533cda7c",
+      "name": "EM-60 PT",
+      "category": "machinegun",
+      "asset": "res://assets/bots/arsenal/weapon-47e5f891e177533cda7c.glb",
+      "sha256": "35b665c22b0391ff07058a155644473c021ce3aed8490578f1630d027c286754",
+      "source": "root/wt_guns/models_hh/wt_hh_em60.ltb",
+      "sourceSha256": "2105819208c6a09514389f9ffa646c067bf549f045afc3268a44c018cdd79a8a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em60.dtx",
+      "skinSourceSha256": "6a03ebc6cf54e3fe7fbb431fddc6b3b7a0c6409fe373ac4027a895f0a0ad4976",
+      "native": {
+        "sourceId": 7501,
+        "sourceKind": 128,
+        "sourceOffset": 693486,
+        "prefixOffset": 693581,
+        "commonOffset": 693727,
+        "normalDamageOffset": 693721,
+        "modelOffset": 693918,
+        "fireIntervalMs": 120,
+        "capacity": 50,
+        "baseDamage": 80.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.44999998807907104,
+          -1.350000023841858
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 1,
+        "animationType": 100,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em60.ltb"
+      },
+      "capacity": 50,
+      "fireInterval": 0.12,
+      "reloadSeconds": 6.0,
+      "fireSound": "res://assets/library/audio/9e1694756002169aa00abc58.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            56.93709945678711,
+            -2.8306100368499756,
+            4.37598991394043
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5024340152740479,
+            0.5024340152740479,
+            0.4975540041923523,
+            0.4975549876689911
+          ],
+          "position": [
+            9.167739868164062,
+            2.2222800254821777,
+            5.572140216827393
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-26b6ec6be986fe150647": {
+      "itemId": "weapon-26b6ec6be986fe150647",
+      "name": "EM249 Minimi",
+      "category": "machinegun",
+      "asset": "res://assets/bots/arsenal/weapon-26b6ec6be986fe150647.glb",
+      "sha256": "361bb159bd06fea222bc3c2fa8d08f98618e6cdf614b9795b8072509bc000766",
+      "source": "root/wt_guns/models_hh/wt_hh_em-249 minimi.ltb",
+      "sourceSha256": "1d244b68a0ae3d06cb653cd98a56f80a7dc01dcd94d1fea6a5f0cf54b253a831",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-249 minimi.dtx",
+      "skinSourceSha256": "d44044fa4eb75e1524677affc7773369935bef98e3b6e768ddcd69a4481c7213",
+      "native": {
+        "sourceId": 7507,
+        "sourceKind": 128,
+        "sourceOffset": 1187358,
+        "prefixOffset": 1187463,
+        "commonOffset": 1187609,
+        "normalDamageOffset": 1187603,
+        "modelOffset": 1187800,
+        "fireIntervalMs": 80,
+        "capacity": 150,
+        "baseDamage": 53.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.800000011920929,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.800000011920929,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 1,
+        "animationType": 100,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-249 minimi.ltb"
+      },
+      "capacity": 150,
+      "fireInterval": 0.08,
+      "reloadSeconds": 5.933,
+      "fireSound": "res://assets/library/audio/9e1694756002169aa00abc58.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            58.10517120361328,
+            -0.15693800151348114,
+            4.431274890899658
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5024340152740479,
+            0.5024340152740479,
+            0.4975540041923523,
+            0.4975549876689911
+          ],
+          "position": [
+            9.167738914489746,
+            2.222280979156494,
+            5.572140216827393
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-70b8dd82808c59a51ca6": {
+      "itemId": "weapon-70b8dd82808c59a51ca6",
+      "name": "EMG-42",
+      "category": "machinegun",
+      "asset": "res://assets/bots/arsenal/weapon-70b8dd82808c59a51ca6.glb",
+      "sha256": "ee66d13a796ab7f34307e26f4a1c1f7ef570ced05a189c0f082e2f9d041c48f9",
+      "source": "root/wt_guns/models_hh/wt_hh_emg_42.ltb",
+      "sourceSha256": "3564ea156a80f57ddd64e94820a61b4dcedd1752e4a9f8347b700a063681661e",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_emg_42.dtx",
+      "skinSourceSha256": "a26a3dabd21fdecc844f9be63f8fe0ef31ce349b3f4dddd6a0709c20acf5fd9e",
+      "native": {
+        "sourceId": 7509,
+        "sourceKind": 128,
+        "sourceOffset": 1195326,
+        "prefixOffset": 1195417,
+        "commonOffset": 1195563,
+        "normalDamageOffset": 1195557,
+        "modelOffset": 1195754,
+        "fireIntervalMs": 85,
+        "capacity": 200,
+        "baseDamage": 55.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.8799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.8799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 1,
+        "animationType": 100,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_emg_42.ltb"
+      },
+      "capacity": 200,
+      "fireInterval": 0.085,
+      "reloadSeconds": 5.333,
+      "fireSound": "res://assets/library/audio/9e1694756002169aa00abc58.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            71.34041595458984,
+            -0.3975439965724945,
+            4.2335920333862305
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5024340152740479,
+            0.5024340152740479,
+            0.4975540041923523,
+            0.4975549876689911
+          ],
+          "position": [
+            9.167738914489746,
+            2.222280979156494,
+            5.572140216827393
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3c673d704c72ef9166da": {
+      "itemId": "weapon-3c673d704c72ef9166da",
+      "name": "EM-60 SL",
+      "category": "machinegun",
+      "asset": "res://assets/bots/arsenal/weapon-3c673d704c72ef9166da.glb",
+      "sha256": "cfdac1a53d89f32da389df011fdd6f6f3e45b9862803f158a50c71c7ba6460f4",
+      "source": "root/wt_guns/models_hh/wt_hh_em60.ltb",
+      "sourceSha256": "2105819208c6a09514389f9ffa646c067bf549f045afc3268a44c018cdd79a8a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em60_silver_body.dtx",
+      "skinSourceSha256": "f0fc1682483e815eaec64630ff38bc89767b7af5b3ae7c5c36912ec64222d7dd",
+      "native": {
+        "sourceId": 7502,
+        "sourceKind": 128,
+        "sourceOffset": 697700,
+        "prefixOffset": 697801,
+        "commonOffset": 697947,
+        "normalDamageOffset": 697941,
+        "modelOffset": 698138,
+        "fireIntervalMs": 120,
+        "capacity": 75,
+        "baseDamage": 65.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.44999998807907104,
+          -1.350000023841858
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.44999998807907104,
+          1.350000023841858
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 100,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em60.ltb"
+      },
+      "capacity": 75,
+      "fireInterval": 0.12,
+      "reloadSeconds": 6.0,
+      "fireSound": "res://assets/library/audio/9e1694756002169aa00abc58.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "position": [
+            56.93709945678711,
+            -2.8306100368499756,
+            4.37598991394043
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.5024340152740479,
+            0.5024340152740479,
+            0.4975540041923523,
+            0.4975549876689911
+          ],
+          "position": [
+            9.167739868164062,
+            2.2222800254821777,
+            5.572140216827393
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-aceeacdfbd6393776065": {
+      "itemId": "weapon-aceeacdfbd6393776065",
+      "name": "EM-92 FS",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-aceeacdfbd6393776065.glb",
+      "sha256": "8df5346806af8bba03d273aff9cf6e3b7bf56034ae569e61068b638d0b383e1d",
+      "source": "root/wt_guns/models_hh/wt_hh_em-92fs.ltb",
+      "sourceSha256": "a5482e13428bf506aa101befd85e1c4e26199d070af16c6aad4381c41798ad6e",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-92fs.dtx",
+      "skinSourceSha256": "d57a207404ce3ea1a1d899dbe2a36ab579842e118a71d24249c32d7f6fdf8d06",
+      "native": {
+        "sourceId": 1001,
+        "sourceKind": 2,
+        "sourceOffset": 172068,
+        "prefixOffset": 172161,
+        "commonOffset": 172307,
+        "normalDamageOffset": 172301,
+        "modelOffset": 172498,
+        "fireIntervalMs": 200,
+        "capacity": 15,
+        "baseDamage": 41.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-92fs.ltb"
+      },
+      "capacity": 15,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/3ef2fa1e01bbd8037fe1e5d6.wav",
+      "reloadSound": "res://assets/library/audio/e058e46f86e90288aa716c58.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.008310000412166119,
+            0.7032290101051331,
+            0.00822100043296814,
+            0.7108680009841919
+          ],
+          "position": [
+            19.428300857543945,
+            5.622620105743408,
+            1.9246400594711304
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            8.765939712524414,
+            5.496349811553955,
+            0.379038006067276
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-a653e8635c68c470ca01": {
+      "itemId": "weapon-a653e8635c68c470ca01",
+      "name": "GLOC-17",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-a653e8635c68c470ca01.glb",
+      "sha256": "337952b6806b465ec9d4112c2d42768cc7471c488a47b853250a9bcaa25d21b2",
+      "source": "root/wt_guns/models_hh/wt_hh_gloc-17.ltb",
+      "sourceSha256": "49c29ad01fe400efa47683210c6763e2cde45055212cd01980d0b3a5bad7a1d2",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_gloc-17.dtx",
+      "skinSourceSha256": "b0630ca599c22f7629765c09513786657e1219f87ecd529be5a18349ce0bdf11",
+      "native": {
+        "sourceId": 1002,
+        "sourceKind": 2,
+        "sourceOffset": 175726,
+        "prefixOffset": 175819,
+        "commonOffset": 175965,
+        "normalDamageOffset": 175959,
+        "modelOffset": 176156,
+        "fireIntervalMs": 200,
+        "capacity": 17,
+        "baseDamage": 49.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_gloc-17.ltb"
+      },
+      "capacity": 17,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/e8cd83637cb809c175384edc.wav",
+      "reloadSound": "res://assets/library/audio/bb1662c1121b316d4b1f2118.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.017917999997735023,
+            0.7030529975891113,
+            0.017726000398397446,
+            0.7106900215148926
+          ],
+          "position": [
+            18.11989974975586,
+            6.174600124359131,
+            1.9246400594711304
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            8.765939712524414,
+            5.496349811553955,
+            0.379038006067276
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-8e73df48c10f16f638d1": {
+      "itemId": "weapon-8e73df48c10f16f638d1",
+      "name": "EM-1911A1",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-8e73df48c10f16f638d1.glb",
+      "sha256": "dd85ff70af0196f9b1aba77e57c6a8e78ad2d082328a318d34025caeddd8c32f",
+      "source": "root/wt_guns/models_hh/wt_hh_m1911.ltb",
+      "sourceSha256": "602e57e849f86a9dc9be992706c0e4e8d89b64bdb4e8b8be8cacb46613d2b76b",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_m1911.dtx",
+      "skinSourceSha256": "b4a5e8bb718984bc05e91f7697de15e4de124a6f7ea9d36a02e0a13c068b7bad",
+      "native": {
+        "sourceId": 1003,
+        "sourceKind": 2,
+        "sourceOffset": 179446,
+        "prefixOffset": 179545,
+        "commonOffset": 179691,
+        "normalDamageOffset": 179685,
+        "modelOffset": 179882,
+        "fireIntervalMs": 200,
+        "capacity": 7,
+        "baseDamage": 76.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-1911 a1.ltb"
+      },
+      "capacity": 7,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/e8cd83637cb809c175384edc.wav",
+      "reloadSound": "res://assets/library/audio/1c4d19a07a383505aecc5d24.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.016081999987363815,
+            0.7030969858169556,
+            0.015908999368548393,
+            0.7107340097427368
+          ],
+          "position": [
+            19.269899368286133,
+            5.968259811401367,
+            2.216559886932373
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            8.971150398254395,
+            7.009610176086426,
+            0.44970399141311646
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3665a9a0bfca27906bc8": {
+      "itemId": "weapon-3665a9a0bfca27906bc8",
+      "name": "USF-40",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-3665a9a0bfca27906bc8.glb",
+      "sha256": "6dd5a226df3d81e083bde88b39df238e3064945cb13dca0ddf6539e308b5d463",
+      "source": "root/wt_guns/models_hh/wt_hh_usf.ltb",
+      "sourceSha256": "688b9d5928116a024b8109f1ca2a69628d86e69e6bb3ed59d17d607485c4727a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_usf.dtx",
+      "skinSourceSha256": "e8645aaf1029cf9fe477a6998386b6657ffa8a4662db76b8747dc74d5c7eb9f4",
+      "native": {
+        "sourceId": 1004,
+        "sourceKind": 2,
+        "sourceOffset": 183250,
+        "prefixOffset": 183341,
+        "commonOffset": 183487,
+        "normalDamageOffset": 183481,
+        "modelOffset": 183676,
+        "fireIntervalMs": 200,
+        "capacity": 13,
+        "baseDamage": 65.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "40s&w",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_usf.ltb"
+      },
+      "capacity": 13,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/e8cd83637cb809c175384edc.wav",
+      "reloadSound": "res://assets/library/audio/c20742cad922399830f6763f.wav",
+      "sockets": [
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "bone_D_EGLE_0",
+          "rotation": [
+            0.0,
+            -0.7071070075035095,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            10.740400314331055,
+            6.5885701179504395,
+            0.8581330180168152
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "bone_D_EGLE_0",
+          "rotation": [
+            0.0,
+            0.7071070075035095,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            18.27720069885254,
+            6.335060119628906,
+            1.803920030593872
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-028bda30f4993554b44c": {
+      "itemId": "weapon-028bda30f4993554b44c",
+      "name": "DE-50",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-028bda30f4993554b44c.glb",
+      "sha256": "348be8fd771d8e72eed3795c59c8a509f497bed19d6cb2037ac169740435fa89",
+      "source": "root/wt_guns/models_hh/wt_hh_de.ltb",
+      "sourceSha256": "b6031aa5332ecd761d32ca7cb2aae59068194963b4bde5415f6f52e8cd90e38a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_de.dtx",
+      "skinSourceSha256": "fff0173b0b595adc6730ac4c4b6fe440de2d197762e32f4a4b7cad3cf3911d80",
+      "native": {
+        "sourceId": 1006,
+        "sourceKind": 2,
+        "sourceOffset": 192492,
+        "prefixOffset": 192581,
+        "commonOffset": 192727,
+        "normalDamageOffset": 192721,
+        "modelOffset": 192918,
+        "fireIntervalMs": 200,
+        "capacity": 7,
+        "baseDamage": 82.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_de.ltb"
+      },
+      "capacity": 7,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/9f77f449df982a4dfe52832c.wav",
+      "reloadSound": "res://assets/library/audio/b602ab7f2608f48ae585e18e.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "bone_D_EGLE_0",
+          "rotation": [
+            0.0,
+            0.7071070075035095,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            21.109899520874023,
+            6.335060119628906,
+            1.803920030593872
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "bone_D_EGLE_0",
+          "rotation": [
+            0.0,
+            -0.7071070075035095,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            10.740400314331055,
+            6.5885701179504395,
+            0.8581330180168152
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-035a292c2d2c744b7560": {
+      "itemId": "weapon-035a292c2d2c744b7560",
+      "name": "PI-226 R",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-035a292c2d2c744b7560.glb",
+      "sha256": "84ecc0e8c4b7133f306e81c541f11fce4cf95cf7059e619ede69ce08f70eac63",
+      "source": "root/wt_guns/models_hh/wt_hh_pi226r.ltb",
+      "sourceSha256": "a752da8106fbc37b648f5394dfdf1a1574c2e5df23000f742b7df64db7e4f6b1",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_pi226r.dtx",
+      "skinSourceSha256": "554179b3fe96dec32c70d410217d223e34767fb139bad5068dcf7d7109531814",
+      "native": {
+        "sourceId": 1008,
+        "sourceKind": 2,
+        "sourceOffset": 201822,
+        "prefixOffset": 201915,
+        "commonOffset": 202061,
+        "normalDamageOffset": 202055,
+        "modelOffset": 202250,
+        "fireIntervalMs": 230,
+        "capacity": 12,
+        "baseDamage": 72.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "40s&w",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_pi226r.ltb"
+      },
+      "capacity": 12,
+      "fireInterval": 0.23,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/68991f2de22a282e310dc705.wav",
+      "reloadSound": "res://assets/library/audio/0d69e03f0c240b2ded7c53ec.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.008310000412166119,
+            0.7032290101051331,
+            0.00822100043296814,
+            0.7108680009841919
+          ],
+          "position": [
+            18.52790069580078,
+            5.601560115814209,
+            1.9149099588394165
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            8.765939712524414,
+            5.496349811553955,
+            0.379038006067276
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-784117bde2dd27028734": {
+      "itemId": "weapon-784117bde2dd27028734",
+      "name": "RUGER",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-784117bde2dd27028734.glb",
+      "sha256": "39bcdd35bc15f0cb49a208c67dd2a9b9c9150bda6a677623be2beae218e1e757",
+      "source": "root/wt_guns/models_hh/wt_hh_pi08.ltb",
+      "sourceSha256": "ddb100fd2e4505c82a737b2d68a8d7064622b51869c7ec49a63deadb301a2b35",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_pi08 .dtx",
+      "skinSourceSha256": "e60650a4ee9622d09e89f9a20c0843b5d34fdace13bb79509fe3976d64d1c259",
+      "native": {
+        "sourceId": 1010,
+        "sourceKind": 2,
+        "sourceOffset": 209752,
+        "prefixOffset": 209841,
+        "commonOffset": 209987,
+        "normalDamageOffset": 209981,
+        "modelOffset": 210178,
+        "fireIntervalMs": 200,
+        "capacity": 7,
+        "baseDamage": 69.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_pi08.ltb"
+      },
+      "capacity": 7,
+      "fireInterval": 0.2,
+      "reloadSeconds": 2.333,
+      "fireSound": "res://assets/library/audio/bb96d490b0f5942e72f77527.wav",
+      "reloadSound": "res://assets/library/audio/56518afc448d5e1ffb20581b.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.008310000412166119,
+            0.7032290101051331,
+            0.00822100043296814,
+            0.7108680009841919
+          ],
+          "position": [
+            18.30120086669922,
+            4.608920097351074,
+            1.9149099588394165
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.0031190000008791685,
+            0.707099974155426,
+            -0.0031190000008791685,
+            0.707099974155426
+          ],
+          "position": [
+            10.266400337219238,
+            6.246469974517822,
+            1.8013499975204468
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3a3af129788aa3658d53": {
+      "itemId": "weapon-3a3af129788aa3658d53",
+      "name": "EM-500 C",
+      "category": "pistol",
+      "asset": "res://assets/bots/arsenal/weapon-3a3af129788aa3658d53.glb",
+      "sha256": "3253692d9bef072796a7706d7a6f504e6a85d1135b286b758e3f81efcd122ba4",
+      "source": "root/wt_guns/models_hh/wt_hh_em500.ltb",
+      "sourceSha256": "d452f21f926f67b592ec4bf8da37ebf939f3dfc548fa5142477f64c9d4156020",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em500_body.dtx",
+      "skinSourceSha256": "d4e77b005e951b4e57f16b91976efc832c5c5165b34d5bf0db1a82627422b931",
+      "native": {
+        "sourceId": 1011,
+        "sourceKind": 2,
+        "sourceOffset": 213356,
+        "prefixOffset": 213447,
+        "commonOffset": 213593,
+        "normalDamageOffset": 213587,
+        "modelOffset": 213784,
+        "fireIntervalMs": 1000,
+        "capacity": 5,
+        "baseDamage": 89.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.25,
+          -0.30000001192092896,
+          -1.5
+        ],
+        "sourcePosition": [
+          0.25,
+          -0.30000001192092896,
+          1.5
+        ],
+        "projectile": "",
+        "ammoName": "9*19mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 1,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em500.ltb"
+      },
+      "capacity": 5,
+      "fireInterval": 1.0,
+      "reloadSeconds": 3.0,
+      "fireSound": "res://assets/library/audio/c770788972c952b65c00b0e2.wav",
+      "reloadSound": "res://assets/library/audio/13b2c976f6cb561924333990.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.017917999997735023,
+            0.7030529975891113,
+            0.017726000398397446,
+            0.7106900215148926
+          ],
+          "position": [
+            33.11119842529297,
+            8.318479537963867,
+            1.9246400594711304
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-057290c1a14e0b4d8e3a": {
+      "itemId": "weapon-057290c1a14e0b4d8e3a",
+      "name": "Temel Bıçak",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-057290c1a14e0b4d8e3a.glb",
+      "sha256": "428a9c1a3318ecce44273868187e41dc8d1db428799ea913c684fc15f4057649",
+      "source": "root/wt_guns/models_hh/wt_hh_hapoon.ltb",
+      "sourceSha256": "d52a1b02e3bb483c9b3b8f6569345f62a2951f5decc425bc385a9bf5f21bd143",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_hapoon.dtx",
+      "skinSourceSha256": "1fe9235181f1dfc5bbd63ec89ba81177dc7bacda7d0429dab8768531165a19cf",
+      "native": {
+        "sourceId": 2001,
+        "sourceKind": 4,
+        "sourceOffset": 21632,
+        "prefixOffset": 21733,
+        "commonOffset": 21877,
+        "normalDamageOffset": 21871,
+        "modelOffset": 22056,
+        "fireIntervalMs": 1334,
+        "capacity": 1,
+        "baseDamage": 70.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_hapoon.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.334,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-8c796a25874c139e3d64": {
+      "itemId": "weapon-8c796a25874c139e3d64",
+      "name": "C5-TFK",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-8c796a25874c139e3d64.glb",
+      "sha256": "5b17d71c59a0c2d1e228343ee2c28b5d06db6fb25d39e24aae6d74d452d622c3",
+      "source": "root/wt_guns/models_hh/wt_hh_c5_tkf.ltb",
+      "sourceSha256": "5374facc15e8a090a7f87ea39ddfd8611094d386d0d771e5feba2a27f99c6d57",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_c5_tkf.dtx",
+      "skinSourceSha256": "1d48682d5142a44dc8c94577eac632020d4adccccce62d802ff776c618a5c47b",
+      "native": {
+        "sourceId": 2003,
+        "sourceKind": 4,
+        "sourceOffset": 791850,
+        "prefixOffset": 791953,
+        "commonOffset": 792097,
+        "normalDamageOffset": 792091,
+        "modelOffset": 792276,
+        "fireIntervalMs": 1334,
+        "capacity": 1,
+        "baseDamage": 100.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_c5_tkf.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.334,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-4a928f2384e9a8cb491b": {
+      "itemId": "weapon-4a928f2384e9a8cb491b",
+      "name": "K3-TK ",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-4a928f2384e9a8cb491b.glb",
+      "sha256": "91fdac73a33eb23542c8b6a68fe0a0f89d085df13d4c1287fce0ec9e0a93bf11",
+      "source": "root/wt_guns/models_hh/wt_hh_cqc_knife_2.ltb",
+      "sourceSha256": "2e61dc9e40ddbad41ae6707b5689049f2789864feda9ba17d261ed340cdcd29c",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_cqc_knife_2.dtx",
+      "skinSourceSha256": "7fea95e9d92da9b229288f6420366ac8e32fb3b77aadeeb1b3b38aa4267d8141",
+      "native": {
+        "sourceId": 2005,
+        "sourceKind": 4,
+        "sourceOffset": 943390,
+        "prefixOffset": 943491,
+        "commonOffset": 943635,
+        "normalDamageOffset": 943629,
+        "modelOffset": 943814,
+        "fireIntervalMs": 1334,
+        "capacity": 1,
+        "baseDamage": 150.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_cqc_knife_2.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.334,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-f1b3a0433fb017916bb5": {
+      "itemId": "weapon-f1b3a0433fb017916bb5",
+      "name": "T1 Balta",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-f1b3a0433fb017916bb5.glb",
+      "sha256": "a3eb350045fa4629365ca4d3b8255ed7247afe8fce092dc4f090cb94ee1aa910",
+      "source": "root/wt_guns/models_hh/wt_hh_t1_axe.ltb",
+      "sourceSha256": "d8bc448048a46e7daf7643b653a1a3ad2884c54fd47233e01885b1b93452c248",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_t1_axe.dtx",
+      "skinSourceSha256": "12013bde9d18e9a9f3e19916ce49ae55712cd500911a9362551d44744f708e60",
+      "native": {
+        "sourceId": 2007,
+        "sourceKind": 4,
+        "sourceOffset": 1012020,
+        "prefixOffset": 1012111,
+        "commonOffset": 1012255,
+        "normalDamageOffset": 1012249,
+        "modelOffset": 1012434,
+        "fireIntervalMs": 1300,
+        "capacity": 1,
+        "baseDamage": 100.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_t1_axe.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.3,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-f19eb9358c581f238711": {
+      "itemId": "weapon-f19eb9358c581f238711",
+      "name": "RMK4",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-f19eb9358c581f238711.glb",
+      "sha256": "25b85ef7c3bd72df0eef0fceb946f547286c78494b979efee2cb816f7027e26a",
+      "source": "root/wt_guns/models_hh/wt_hh_rmk4.ltb",
+      "sourceSha256": "7adf11d63b6f5227d2f76c0739efdb396ba0fcdf5661b3bb81142aed6a7e15d2",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_rmk4.dtx",
+      "skinSourceSha256": "ea50213109b520b9e3c440ed74a5f7d220b3d66b605c566cf0d86df54d1581a0",
+      "native": {
+        "sourceId": 2009,
+        "sourceKind": 4,
+        "sourceOffset": 1505062,
+        "prefixOffset": 1505149,
+        "commonOffset": 1505293,
+        "normalDamageOffset": 1505287,
+        "modelOffset": 1505472,
+        "fireIntervalMs": 1320,
+        "capacity": 1,
+        "baseDamage": 150.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_rmk4.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.32,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-f95b206757b4909c06e2": {
+      "itemId": "weapon-f95b206757b4909c06e2",
+      "name": "C-Nadea",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-f95b206757b4909c06e2.glb",
+      "sha256": "607df37843c8d913a9c71dd0f863765cb057d534f3414b8a81cd169f0474f570",
+      "source": "root/wt_guns/models_hh/wt_hh_c-nadea.ltb",
+      "sourceSha256": "31e3051271f5ee675c2a20988372985af49e2e9255fd1420497ee6f4068e3675",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_c-nadea.dtx",
+      "skinSourceSha256": "0d7fb3d14e66c11e0c813b1d35e7ff30bfaf4a94b5378d4c83269ee8e08bd59e",
+      "native": {
+        "sourceId": 2011,
+        "sourceKind": 4,
+        "sourceOffset": 1551452,
+        "prefixOffset": 1551545,
+        "commonOffset": 1551689,
+        "normalDamageOffset": 1551683,
+        "modelOffset": 1551868,
+        "fireIntervalMs": 1320,
+        "capacity": 1,
+        "baseDamage": 140.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_c-nadea.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.32,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-ac90df0f3793702b2ea5": {
+      "itemId": "weapon-ac90df0f3793702b2ea5",
+      "name": "SPY-W",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-ac90df0f3793702b2ea5.glb",
+      "sha256": "b0e0fd3ca9184a0860fb120d813d75f9524dd59be9b3ee4566adbbb682f5b975",
+      "source": "root/wt_guns/models_hh/wt_hh_spy-w.ltb",
+      "sourceSha256": "ee71d9d132520b43711a1449f2ee445dedc94752be0246eff9e7cdb96756dc22",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_spy-w.dtx",
+      "skinSourceSha256": "79b04a3765e8442b1e4151731d8ed1a09f6a7ce84c23f3cf158ca30beb3311d5",
+      "native": {
+        "sourceId": 2013,
+        "sourceKind": 4,
+        "sourceOffset": 1646448,
+        "prefixOffset": 1646537,
+        "commonOffset": 1646681,
+        "normalDamageOffset": 1646675,
+        "modelOffset": 1646860,
+        "fireIntervalMs": 1300,
+        "capacity": 1,
+        "baseDamage": 120.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_spy-w.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.3,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-c0fa4123e2008cf2fbdc": {
+      "itemId": "weapon-c0fa4123e2008cf2fbdc",
+      "name": "WSW",
+      "category": "knife",
+      "asset": "res://assets/bots/arsenal/weapon-c0fa4123e2008cf2fbdc.glb",
+      "sha256": "352e18f90b400e42d0622fe1a67a2e35355dc45931b621149f12584379baa141",
+      "source": "root/wt_guns/models_hh/wt_hh_wsw.ltb",
+      "sourceSha256": "5a1e3d2941b205fe8f979666f5a9be20e5af06b1ff69824b707588fdea1ef22e",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_wsw.dtx",
+      "skinSourceSha256": "a7cd18bc60c67726ff5985afc474c3785a775de1c807ffab7b99e920f293bead",
+      "native": {
+        "sourceId": 2015,
+        "sourceKind": 4,
+        "sourceOffset": 1656668,
+        "prefixOffset": 1656753,
+        "commonOffset": 1656897,
+        "normalDamageOffset": 1656891,
+        "modelOffset": 1657076,
+        "fireIntervalMs": 1300,
+        "capacity": 1,
+        "baseDamage": 130.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.550000011920929,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "",
+        "ammoName": "melee",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "Dirk",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Melee",
+        "splashType": "",
+        "nativeCounter37": 1,
+        "nativeCounter39": 0,
+        "animationType": 20,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_wsw.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.3,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/67641e0a2869cfc80eeb6b1b.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-8cd5b51c47df65759db0": {
+      "itemId": "weapon-8cd5b51c47df65759db0",
+      "name": "I-115 GL",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-8cd5b51c47df65759db0.glb",
+      "sha256": "e19647f4f6a855a6b694c2a92187fd7ddc51d493452804f23f6744af8967be21",
+      "source": "root/wt_guns/models_hh/wt_hh_i-115a1.ltb",
+      "sourceSha256": "223f6b82c1ce2bad4d4274d1593ef531d71d32b7a1c645b976ff24e60318f396",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_i-115a1gold.dtx",
+      "skinSourceSha256": "3a71983f10a0a9933c29f1f752c95c6864b038728fea0d7ebfa6d46ccdd6f9dc",
+      "native": {
+        "sourceId": 6003,
+        "sourceKind": 32,
+        "sourceOffset": 608556,
+        "prefixOffset": 608655,
+        "commonOffset": 608801,
+        "normalDamageOffset": 608795,
+        "modelOffset": 609010,
+        "fireIntervalMs": 1750,
+        "capacity": 5,
+        "baseDamage": 212.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_i-115a1.ltb"
+      },
+      "capacity": 5,
+      "fireInterval": 1.75,
+      "reloadSeconds": 2.167,
+      "fireSound": "res://assets/library/audio/c037165413a16d0f789eb795.wav",
+      "reloadSound": "res://assets/library/audio/a9e74c826ad68ee539a52698.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.020217999815940857,
+            -0.7195169925689697,
+            -0.020965000614523888,
+            -0.6938639879226685
+          ],
+          "position": [
+            56.07389831542969,
+            7.6679301261901855,
+            0.32014200091362
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.0336420014500618,
+            0.706305980682373,
+            0.0336420014500618,
+            0.706305980682373
+          ],
+          "position": [
+            13.498900413513184,
+            7.009610176086426,
+            -0.8586080074310303
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-94f99f28c9e606b57377": {
+      "itemId": "weapon-94f99f28c9e606b57377",
+      "name": "EM-40 PT",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-94f99f28c9e606b57377.glb",
+      "sha256": "14b26df8cab751231d69c0182b5f786dba9197a6893e94c482144ddce21fe73b",
+      "source": "root/wt_guns/models_hh/wt_hh_em40a3.ltb",
+      "sourceSha256": "adde9cd07596cfbf5a6ffeee745055afb7c74b80db9b9fc393b1771e311b2688",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em40a3.dtx",
+      "skinSourceSha256": "524f220d604c5448ee6e786f5a2a78bf598f3651df2cd1e77a3da840022a4ba3",
+      "native": {
+        "sourceId": 6006,
+        "sourceKind": 32,
+        "sourceOffset": 624132,
+        "prefixOffset": 624227,
+        "commonOffset": 624373,
+        "normalDamageOffset": 624367,
+        "modelOffset": 624582,
+        "fireIntervalMs": 1750,
+        "capacity": 6,
+        "baseDamage": 165.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em40a3_body.ltb"
+      },
+      "capacity": 6,
+      "fireInterval": 1.75,
+      "reloadSeconds": 2.334,
+      "fireSound": "res://assets/library/audio/3075377a9d40ec43315b2b71.wav",
+      "reloadSound": "res://assets/library/audio/64a82a1802aa2353737e0870.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.009484999813139439,
+            0.7197390198707581,
+            0.010614999569952488,
+            0.6940990090370178
+          ],
+          "position": [
+            55.211299896240234,
+            7.410920143127441,
+            0.32014200091362
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.014159999787807465,
+            0.7069650292396545,
+            0.014159999787807465,
+            0.7069650292396545
+          ],
+          "position": [
+            13.498900413513184,
+            7.009610176086426,
+            -0.8586080074310303
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-e8c0aea9dfc11dc0286b": {
+      "itemId": "weapon-e8c0aea9dfc11dc0286b",
+      "name": "I-115A1 AW",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-e8c0aea9dfc11dc0286b.glb",
+      "sha256": "8bfb2cbc43c4652142a37e16645238c0446ddc791bdadc9f64b56840b9725e0a",
+      "source": "root/wt_guns/models_hh/wt_hh_i-115a1aw.ltb",
+      "sourceSha256": "a944745df0a589b996282d41b4d1a6c6dd559c239f0adf9546a0ba0e9a4cda63",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_l-115 aw.dtx",
+      "skinSourceSha256": "aea6974a7951d98d6726b3fcef9e804705d702ad437548d36eb43b520a167814",
+      "native": {
+        "sourceId": 6008,
+        "sourceKind": 32,
+        "sourceOffset": 634920,
+        "prefixOffset": 635015,
+        "commonOffset": 635161,
+        "normalDamageOffset": 635155,
+        "modelOffset": 635370,
+        "fireIntervalMs": 1750,
+        "capacity": 5,
+        "baseDamage": 210.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 3,
+        "nativeCounter39": 2,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_i-115a1aw.ltb"
+      },
+      "capacity": 5,
+      "fireInterval": 1.75,
+      "reloadSeconds": 2.167,
+      "fireSound": "res://assets/library/audio/c037165413a16d0f789eb795.wav",
+      "reloadSound": "res://assets/library/audio/a9e74c826ad68ee539a52698.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.47633999586105347,
+            0.4939509928226471,
+            0.5235999822616577,
+            0.5049319863319397
+          ],
+          "position": [
+            59.23379898071289,
+            -0.31622499227523804,
+            7.779119968414307
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.4756450057029724,
+            0.4756450057029724,
+            0.523222029209137,
+            0.523222029209137
+          ],
+          "position": [
+            13.498900413513184,
+            0.8586080074310303,
+            7.009610176086426
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-f958fbdadf06a88424e2": {
+      "itemId": "weapon-f958fbdadf06a88424e2",
+      "name": "SVDR CLASSIC",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-f958fbdadf06a88424e2.glb",
+      "sha256": "76b04016afc06eaa0b7185615cf684f77fc800f722d24b763d7daa1bd06bb7e0",
+      "source": "root/wt_guns/models_hh/wt_hh_svdr.ltb",
+      "sourceSha256": "a7abc2926e7461f64b89ea7a20614d4cb7546589de7ec8d5acfe0480d5ac8671",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_svdrclassic.dtx",
+      "skinSourceSha256": "f9a6e1ccf7fad209af74dc246c5f1dbc3c849766e9f636ca09c0b1b41082da74",
+      "native": {
+        "sourceId": 6010,
+        "sourceKind": 32,
+        "sourceOffset": 645540,
+        "prefixOffset": 645643,
+        "commonOffset": 645789,
+        "normalDamageOffset": 645783,
+        "modelOffset": 645998,
+        "fireIntervalMs": 420,
+        "capacity": 10,
+        "baseDamage": 95.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.30000001192092896,
+          -0.41999998688697815,
+          -1.25
+        ],
+        "sourcePosition": [
+          0.30000001192092896,
+          -0.41999998688697815,
+          1.25
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_svdr.ltb"
+      },
+      "capacity": 10,
+      "fireInterval": 0.42,
+      "reloadSeconds": 3.166,
+      "fireSound": "res://assets/library/audio/c037165413a16d0f789eb795.wav",
+      "reloadSound": "res://assets/library/audio/a9e74c826ad68ee539a52698.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.47633999586105347,
+            0.4939509928226471,
+            0.5235999822616577,
+            0.5049319863319397
+          ],
+          "position": [
+            65.36609649658203,
+            0.1422789990901947,
+            7.067530155181885
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.4756450057029724,
+            0.4756450057029724,
+            0.523222029209137,
+            0.523222029209137
+          ],
+          "position": [
+            18.93090057373047,
+            0.8586080074310303,
+            7.009610176086426
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-593dbe3d98210fb5c63e": {
+      "itemId": "weapon-593dbe3d98210fb5c63e",
+      "name": "MSD-90 PX",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-593dbe3d98210fb5c63e.glb",
+      "sha256": "26ae535725b8fe39e88fd5bf3d4f1e014c8bb04a21837c4158af42de1c477beb",
+      "source": "root/wt_guns/models_hh/mg_all.ltb",
+      "sourceSha256": "135045d1a82c0ee14b7ee2c667aa3a5835d4650476a39b7d1c24008c40b995bf",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mg1_multicam.dtx",
+      "skinSourceSha256": "db716ecf2784a218616d78eada58f632266f4a2b36dc0ba7aabbf56c45cd1ab3",
+      "native": {
+        "sourceId": 6020,
+        "sourceKind": 32,
+        "sourceOffset": 1345742,
+        "prefixOffset": 1350031,
+        "commonOffset": 1350177,
+        "normalDamageOffset": 1350171,
+        "modelOffset": 1350374,
+        "fireIntervalMs": 100,
+        "capacity": 100,
+        "baseDamage": 125.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.2800000011920929,
+          -0.30000001192092896,
+          -2.5
+        ],
+        "sourcePosition": [
+          0.2800000011920929,
+          -0.30000001192092896,
+          2.5
+        ],
+        "projectile": "",
+        "ammoName": "12.7*99mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 4,
+        "nativeCounter39": 2,
+        "animationType": 10,
+        "alternatePrefix": true,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mg1.ltb"
+      },
+      "capacity": 100,
+      "fireInterval": 0.1,
+      "reloadSeconds": 1.8,
+      "fireSound": "res://assets/shared_media/audio/8fd83314264c0e91446c33ce.wav",
+      "reloadSound": "res://assets/shared_media/audio/bf8fc82d9f5fbf13e155a3d1.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-e2559431e8903b245f11": {
+      "itemId": "weapon-e2559431e8903b245f11",
+      "name": "Zaitsev",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-e2559431e8903b245f11.glb",
+      "sha256": "58b0282102da070ea94eb315a10ecfc109202f48992a831d5dbe5ca4dc94d492",
+      "source": "root/wt_guns/models_hh/wt_hh_zaitsevrifle.ltb",
+      "sourceSha256": "97c1d9e42102c646ab11a1758fa84b3c4f7bc145b940a9fd6939cbcf47ac4f67",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_zaitsevrifle.dtx",
+      "skinSourceSha256": "edd561a218fe900c4328540732ff2f3503e6bc8b7d8f74b03569242f2c6dfa7a",
+      "native": {
+        "sourceId": 7506,
+        "sourceKind": 32,
+        "sourceOffset": 811610,
+        "prefixOffset": 811713,
+        "commonOffset": 811859,
+        "normalDamageOffset": 811853,
+        "modelOffset": 812068,
+        "fireIntervalMs": 3000,
+        "capacity": 15,
+        "baseDamage": 220.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_zaitsevrifle.ltb"
+      },
+      "capacity": 15,
+      "fireInterval": 3.0,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/9af9bebf62e655059f066ae9.wav",
+      "reloadSound": "res://assets/library/audio/28021fd3e9abb9df3e614e8c.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.009479999542236328,
+            0.7197390198707581,
+            0.010610000230371952,
+            0.6940990090370178
+          ],
+          "position": [
+            74.4243392944336,
+            7.957776069641113,
+            -0.37663599848747253
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.014159999787807465,
+            0.7069650292396545,
+            0.014159999787807465,
+            0.7069650292396545
+          ],
+          "position": [
+            16.09334373474121,
+            7.113578796386719,
+            -0.8586080074310303
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-6d6b48bb78acc0be87bc": {
+      "itemId": "weapon-6d6b48bb78acc0be87bc",
+      "name": "Zaitsev CF",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-6d6b48bb78acc0be87bc.glb",
+      "sha256": "5669577a2ef2ffd92b860bbf1229eb9688db336878123c5dfb3f63c24e0af2f3",
+      "source": "root/wt_guns/models_hh/wt_hh_zaitsevrifle_cf.ltb",
+      "sourceSha256": "b12cab0fc6b28aeedfc52288ebbcd50209e6e843ccf2022ee84dec24e9a46fe0",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_zaitsevrifle_cf.dtx",
+      "skinSourceSha256": "dc725304a0e65e8d7519cfe73091fa6c27462390aa2729f860b918d6c6851aae",
+      "native": {
+        "sourceId": 6014,
+        "sourceKind": 32,
+        "sourceOffset": 989024,
+        "prefixOffset": 989135,
+        "commonOffset": 989281,
+        "normalDamageOffset": 989275,
+        "modelOffset": 989490,
+        "fireIntervalMs": 3000,
+        "capacity": 15,
+        "baseDamage": 220.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.2000000476837158
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_zaitsev rifle_cf.ltb"
+      },
+      "capacity": 15,
+      "fireInterval": 3.0,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/9af9bebf62e655059f066ae9.wav",
+      "reloadSound": "res://assets/library/audio/28021fd3e9abb9df3e614e8c.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.009484999813139439,
+            0.7197390198707581,
+            0.010614999569952488,
+            0.6940990090370178
+          ],
+          "position": [
+            74.42430114746094,
+            6.13778018951416,
+            -0.37663599848747253
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            -0.014159999787807465,
+            0.7069650292396545,
+            0.014159999787807465,
+            0.7069650292396545
+          ],
+          "position": [
+            16.093299865722656,
+            7.113580226898193,
+            -0.8586080074310303
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-4c8e07ff6511cadadb25": {
+      "itemId": "weapon-4c8e07ff6511cadadb25",
+      "name": "MSD-90",
+      "category": "sniper",
+      "asset": "res://assets/bots/arsenal/weapon-4c8e07ff6511cadadb25.glb",
+      "sha256": "d6c9bbd2dca4e72be8706b9042013e78ebe3b94da7db764c261116cc692e6349",
+      "source": "root/wt_guns/models_hh/wt_hh_msd-90.ltb",
+      "sourceSha256": "a50ab12b72240bf2d620c45f69aa1249ffeef022c1faf91929a0ac0c91662d83",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_msg-90.dtx",
+      "skinSourceSha256": "e35525820f5125ae4ba844ad02e140b489c65183bfc01e9b05da2a6df1518577",
+      "native": {
+        "sourceId": 6015,
+        "sourceKind": 32,
+        "sourceOffset": 1141914,
+        "prefixOffset": 1142005,
+        "commonOffset": 1142151,
+        "normalDamageOffset": 1142145,
+        "modelOffset": 1142360,
+        "fireIntervalMs": 4000,
+        "capacity": 20,
+        "baseDamage": 210.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.20000000298023224,
+          -0.5,
+          -0.8999999761581421
+        ],
+        "sourcePosition": [
+          0.20000000298023224,
+          -0.5,
+          0.8999999761581421
+        ],
+        "projectile": "",
+        "ammoName": "8.5mm/0.388inch",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 14,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_msd-90.ltb"
+      },
+      "capacity": 20,
+      "fireInterval": 4.0,
+      "reloadSeconds": 3.1,
+      "fireSound": "res://assets/library/audio/c037165413a16d0f789eb795.wav",
+      "reloadSound": "res://assets/library/audio/f2d92ee950974c3abdbfb623.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.47633999586105347,
+            0.4939509928226471,
+            0.5235999822616577,
+            0.5049319863319397
+          ],
+          "position": [
+            60.6437873840332,
+            -0.5325700044631958,
+            7.73223876953125
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.4756450057029724,
+            0.4756450057029724,
+            0.523222029209137,
+            0.523222029209137
+          ],
+          "position": [
+            18.93088150024414,
+            0.8586080074310303,
+            7.009609222412109
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-e7dbb77bc02b26337999": {
+      "itemId": "weapon-e7dbb77bc02b26337999",
+      "name": "MK-5 G",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-e7dbb77bc02b26337999.glb",
+      "sha256": "47c85f90293216fa247df002bf7e51bc82f80a0ddbc83389331b215e1507953a",
+      "source": "root/wt_guns/models_hh/wt_hh_mk-5g.ltb",
+      "sourceSha256": "9bce5e43d109c87751b0b8491c282eca8b2c19e231cea638e8617586b6d55433",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mk-5g.dtx",
+      "skinSourceSha256": "b550e52f1267a76ca03d1ffe83b7d80e6dca0fa24db6c78d5fa3902bf04b57d9",
+      "native": {
+        "sourceId": 9001,
+        "sourceKind": 4096,
+        "sourceOffset": 729478,
+        "prefixOffset": 729567,
+        "commonOffset": 729715,
+        "normalDamageOffset": 729695,
+        "modelOffset": 729908,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 210.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "HGrenadeTimed",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "handgrenade",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mk-5g.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/34717c27946dc7c36f2064b8.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-4e714d474bc09137117e": {
+      "itemId": "weapon-4e714d474bc09137117e",
+      "name": "MK-6EG",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-4e714d474bc09137117e.glb",
+      "sha256": "6e060f580e7094c59fe73765f6f95cdb6f6cac64de0deb307aaac2e4a509345d",
+      "source": "root/wt_guns/models_hh/bomb.ltb",
+      "sourceSha256": "5e17781149d6b6b0113efb39d4864d3a5e362cbaf7edb4b3fb3a083197b94401",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mk-6eg.dtx",
+      "skinSourceSha256": "90cf3d713f72644d2ca34795d8a3a88760e5e34933916b1701aadae12579a9ea",
+      "native": {
+        "sourceId": 9011,
+        "sourceKind": 4096,
+        "sourceOffset": 766108,
+        "prefixOffset": 766199,
+        "commonOffset": 766347,
+        "normalDamageOffset": 766327,
+        "modelOffset": 766544,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 150.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "ProjFX_MK6EG",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "ImpactFx_MK6EG",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_bomb.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/6f4463d22c9266d4fb221d34.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-8552e78d00e6f359b72f": {
+      "itemId": "weapon-8552e78d00e6f359b72f",
+      "name": "Mass Grenade",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-8552e78d00e6f359b72f.glb",
+      "sha256": "0720c1c8ecd57b5eaf9e00d75a551e76a55c675a7bc97c09d14a4477d438e711",
+      "source": "root/wt_guns/models_hh/wt_hh_mass_grenade.ltb",
+      "sourceSha256": "c6f46036a0fb7943d4db607184a55704d9e639462e0baa56fa3cb2b0bca178ca",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mass_grenade.dtx",
+      "skinSourceSha256": "3df6406b0ecdac8549b1b65ae02c19d429e1c84b23d44b59046d9d76dd4de464",
+      "native": {
+        "sourceId": 9003,
+        "sourceKind": 4096,
+        "sourceOffset": 736620,
+        "prefixOffset": 736723,
+        "commonOffset": 736871,
+        "normalDamageOffset": 736851,
+        "modelOffset": 737062,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 40.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "MASS_GRENADE",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "Massgrenade",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mass_grenade.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/34717c27946dc7c36f2064b8.wav",
+      "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-98d286ff537d39ae7773": {
+      "itemId": "weapon-98d286ff537d39ae7773",
+      "name": "MK-5 EG",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-98d286ff537d39ae7773.glb",
+      "sha256": "d48ae445ad9d4229ebdb2387e25363648751ba387ac90c83560f3ab418959e8f",
+      "source": "root/wt_guns/models_hh/wt_hh_mk-5eg.ltb",
+      "sourceSha256": "9bce5e43d109c87751b0b8491c282eca8b2c19e231cea638e8617586b6d55433",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mk-5eg.dtx",
+      "skinSourceSha256": "e59ce8a3083cbdb44d6f1a02c1c9d52dc01a98708e82d75d3cd1f5d59446d178",
+      "native": {
+        "sourceId": 9004,
+        "sourceKind": 4096,
+        "sourceOffset": 740568,
+        "prefixOffset": 740659,
+        "commonOffset": 740807,
+        "normalDamageOffset": 740787,
+        "modelOffset": 741000,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 230.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "HGrenadeTimed",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "handgrenade",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mk-5eg.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/34717c27946dc7c36f2064b8.wav",
+      "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-e91dece4c2a692d1b4e8": {
+      "itemId": "weapon-e91dece4c2a692d1b4e8",
+      "name": "RED Grenade",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-e91dece4c2a692d1b4e8.glb",
+      "sha256": "491ce19fa0fa7f6cb71e4e5d49817df7eefd83cf3de4da1da0ac037805e15a6a",
+      "source": "root/wt_guns/models_hh/wt_hh_mass_grenade02.ltb",
+      "sourceSha256": "3665bcd01e2326ba9e58965f5ceda9f7eed9e5959c37617f3cc4fbe90d55c1c3",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mass_grenade02.dtx",
+      "skinSourceSha256": "6aa52f65b9cd0126f5a314e03541df21aa876330a0ed6b8517de368b448754e2",
+      "native": {
+        "sourceId": 9006,
+        "sourceKind": 4096,
+        "sourceOffset": 747992,
+        "prefixOffset": 748103,
+        "commonOffset": 748251,
+        "normalDamageOffset": 748231,
+        "modelOffset": 748448,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 30.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "MASS_GRENADE_R",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "MassgrenadeR",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mass_grenade02.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/34717c27946dc7c36f2064b8.wav",
+      "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-0bf6543d1b0241bc51f4": {
+      "itemId": "weapon-0bf6543d1b0241bc51f4",
+      "name": "STICK GRENADE",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-0bf6543d1b0241bc51f4.glb",
+      "sha256": "240bf44bec6156170436e57a5b3642ff49499705935c0886e9715dbd3a1fa2f4",
+      "source": "root/wt_guns/models_hh/wt_hh_stickgrenade.ltb",
+      "sourceSha256": "9e41395c9ba5c0bcac9a550d25f66e4862a923f8ba083b19419b7ff77cadcda0",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_stickgrenade.dtx",
+      "skinSourceSha256": "0954ffc6a5bb6d77bce3812eba7b9c9f71864149e6c9fe7d7538ffc3b1411f04",
+      "native": {
+        "sourceId": 9007,
+        "sourceKind": 4096,
+        "sourceOffset": 751980,
+        "prefixOffset": 752085,
+        "commonOffset": 752233,
+        "normalDamageOffset": 752213,
+        "modelOffset": 752428,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 230.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "Stick Grenade",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "StickGrenade",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_stickgrenade.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/53db34427e2543c93ca1598e.wav",
+      "reloadSound": "res://assets/shared_media/audio/4da2f384f4159cb7147918e7.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-22ac84e22ddd27bcb64c": {
+      "itemId": "weapon-22ac84e22ddd27bcb64c",
+      "name": "MK-6G",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-22ac84e22ddd27bcb64c.glb",
+      "sha256": "69c540356076511d5a058c56859de8dba50ddd06b9472d4b6765135491bf630d",
+      "source": "root/wt_guns/models_hh/wt_hh_mk-6g.ltb",
+      "sourceSha256": "b02cd0ef2e1a914f37efad09de39eac27e7a725e015b839260a8c06ab948b029",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_mk-6g.dtx",
+      "skinSourceSha256": "01c9db5d0f521bb7ec39b2a23081b8fe5adec155285204eb2ee80ea5237a23e0",
+      "native": {
+        "sourceId": 9008,
+        "sourceKind": 4096,
+        "sourceOffset": 755660,
+        "prefixOffset": 755749,
+        "commonOffset": 755897,
+        "normalDamageOffset": 755877,
+        "modelOffset": 756090,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 30.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "ProjFX_MK6G",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "ImpactFx_MK6G",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_mk-6g.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/53db34427e2543c93ca1598e.wav",
+      "reloadSound": "res://assets/shared_media/audio/4da2f384f4159cb7147918e7.wav",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-a204e0e21223a7405c1c": {
+      "itemId": "weapon-a204e0e21223a7405c1c",
+      "name": "SNOW GRENADE",
+      "category": "grenade",
+      "asset": "res://assets/bots/arsenal/weapon-a204e0e21223a7405c1c.glb",
+      "sha256": "c02a783b7d658f4f6f9387b174dd09facfae4d7cbf62e5306ec11ee04f759c5a",
+      "source": "root/wt_guns/models_hh/wt_hh_snow_grenade.ltb",
+      "sourceSha256": "ff89c5fd219ae3d8867ec39644ab196085bb1a4305e63726b80d2bbe152ca10e",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_snow_grenade.dtx",
+      "skinSourceSha256": "f1842ac26115bae28e527648b626af911ebe946769fdf0398f49542098a2a1ca",
+      "native": {
+        "sourceId": 9015,
+        "sourceKind": 4096,
+        "sourceOffset": 778022,
+        "prefixOffset": 778125,
+        "commonOffset": 778273,
+        "normalDamageOffset": 778253,
+        "modelOffset": 778468,
+        "fireIntervalMs": 5000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 210.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          -0.8820000290870667
+        ],
+        "sourcePosition": [
+          0.4699999988079071,
+          -0.5550000071525574,
+          0.8820000290870667
+        ],
+        "projectile": "SBGrenade",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "",
+        "impactFx": "Snowhead_Grenade",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 1,
+        "nativeCounter39": 1,
+        "animationType": 3,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_snow_grenade.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 5.0,
+      "reloadSeconds": 0.667,
+      "fireSound": "res://assets/library/audio/34717c27946dc7c36f2064b8.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-41d6a8c37f9bb5894008": {
+      "itemId": "weapon-41d6a8c37f9bb5894008",
+      "name": "EM-134Minigun",
+      "category": "heavy",
+      "asset": "res://assets/bots/arsenal/weapon-41d6a8c37f9bb5894008.glb",
+      "sha256": "3b99ede6db98bbe79aca164f60c4a986ddc5e15c9e40701d5edc176618ddcd8b",
+      "source": "root/wt_guns/models_hh/wt_hh_em-134minigun.ltb",
+      "sourceSha256": "f6d1d6c4c4c6b0db7545763dd6b9345b718dec8f54432c157c41d00dd1f59a1d",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-134minigun.dtx",
+      "skinSourceSha256": "9518df132396db1e6f21f92db631804dd632970581ddac3ae295ace94c03694f",
+      "native": {
+        "sourceId": 8507,
+        "sourceKind": 256,
+        "sourceOffset": 2883902,
+        "prefixOffset": 2884009,
+        "commonOffset": 2884155,
+        "normalDamageOffset": 2884149,
+        "modelOffset": 2884346,
+        "fireIntervalMs": 78,
+        "capacity": 200,
+        "baseDamage": 62.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.699999988079071,
+          -0.44999998807907104,
+          -1.4500000476837158
+        ],
+        "sourcePosition": [
+          0.699999988079071,
+          -0.44999998807907104,
+          1.4500000476837158
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 33,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-134minigun.ltb"
+      },
+      "capacity": 200,
+      "fireInterval": 0.078,
+      "reloadSeconds": 3.166,
+      "fireSound": "res://assets/library/audio/9e1694756002169aa00abc58.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.7071070075035095,
+            0.0,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            73.2761001586914,
+            -1.9398000240325928,
+            -7.223690032958984
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.7071070075035095,
+            0.0,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            18.717500686645508,
+            5.551839828491211,
+            -8.160149574279785
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-f2837abf475b4c58109c": {
+      "itemId": "weapon-f2837abf475b4c58109c",
+      "name": "EM-134Minigun wolfrush",
+      "category": "heavy",
+      "asset": "res://assets/bots/arsenal/weapon-f2837abf475b4c58109c.glb",
+      "sha256": "4ba3b14efc42262e842e63ef4fc45788d1f2e1c03509987213d698625aa53f88",
+      "source": "root/wt_guns/models_hh/wt_hh_em-134minigun_wolfrush.ltb",
+      "sourceSha256": "f6d1d6c4c4c6b0db7545763dd6b9345b718dec8f54432c157c41d00dd1f59a1d",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-134minigun_wolfrush.dtx",
+      "skinSourceSha256": "46e6041910b995338d363bb184af8dba8c8311d071ef33cc40d7a3de016006ed",
+      "native": {
+        "sourceId": 8508,
+        "sourceKind": 16640,
+        "sourceOffset": 3125440,
+        "prefixOffset": 3125569,
+        "commonOffset": 3125715,
+        "normalDamageOffset": 3125709,
+        "modelOffset": 3125906,
+        "fireIntervalMs": 76,
+        "capacity": 200,
+        "baseDamage": 62.0,
+        "splashDamage": 0.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.699999988079071,
+          -0.44999998807907104,
+          -1.4500000476837158
+        ],
+        "sourcePosition": [
+          0.699999988079071,
+          -0.44999998807907104,
+          1.4500000476837158
+        ],
+        "projectile": "",
+        "ammoName": "7.62mm",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWBullet",
+        "impactFx": "BulletFmj",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Bullet",
+        "splashType": "",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 33,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-134minigun_wolfrush.ltb"
+      },
+      "capacity": 200,
+      "fireInterval": 0.076,
+      "reloadSeconds": 3.166,
+      "fireSound": "res://assets/library/audio/71bd01b0b83ab9d11108c177.wav",
+      "reloadSound": "res://assets/library/audio/71a9066eeb2c20983fdd0708.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.7071070075035095,
+            0.0,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            73.2761001586914,
+            -1.9398000240325928,
+            -7.223690032958984
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.7071070075035095,
+            0.0,
+            0.0,
+            0.7071070075035095
+          ],
+          "position": [
+            18.717500686645508,
+            5.551839828491211,
+            -8.160149574279785
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-e85134a6c171e0dce50a": {
+      "itemId": "weapon-e85134a6c171e0dce50a",
+      "name": "EM-72A5 LAW",
+      "category": "rocket",
+      "asset": "res://assets/bots/arsenal/weapon-e85134a6c171e0dce50a.glb",
+      "sha256": "b59726994019ae196e1a0098630bf5f325c9d527ec2fb0d325dd568e4fcf7d31",
+      "source": "root/wt_guns/models_hh/wt_hh_m72a3.ltb",
+      "sourceSha256": "85f5e7703a04773c1f9ce20c16f2e438f256357a3b63db7157b220c7024d3667",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_m72a3.dtx",
+      "skinSourceSha256": "b4b57b47e1249c9de9eea8df1b6ba3ee2e5fd5255235335412e185cae2f7b303",
+      "native": {
+        "sourceId": 8501,
+        "sourceKind": 512,
+        "sourceOffset": 713376,
+        "prefixOffset": 713479,
+        "commonOffset": 713641,
+        "normalDamageOffset": 713621,
+        "modelOffset": 713860,
+        "fireIntervalMs": 1500,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 200.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.23000000417232513,
+          -0.25,
+          -0.699999988079071
+        ],
+        "sourcePosition": [
+          0.23000000417232513,
+          -0.25,
+          0.699999988079071
+        ],
+        "projectile": "Missile_Low",
+        "ammoName": "Rocket",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWRocket",
+        "impactFx": "Explosionlow",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Explode",
+        "splashType": "Explode",
+        "nativeCounter37": 4,
+        "nativeCounter39": 1,
+        "animationType": 16,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_m73a3.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.5,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/c8d625c3d3ea1088e6e525aa.wav",
+      "reloadSound": "",
+      "sockets": [],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3a87067663c63d37a16b": {
+      "itemId": "weapon-3a87067663c63d37a16b",
+      "name": "WT RL-2",
+      "category": "rocket",
+      "asset": "res://assets/bots/arsenal/weapon-3a87067663c63d37a16b.glb",
+      "sha256": "c067da90e4d9f990aa6beebde30d99680fe9f55a0b46672a9d4d5151a6894ecd",
+      "source": "root/wt_guns/models_hh/wt_hh_rl2.ltb",
+      "sourceSha256": "caf2e003a26bcbcec8cba341e46064dd128d0821c75922b76b2edbc40b154b2f",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_rl2.dtx",
+      "skinSourceSha256": "7bf808a24d8cfc2567a880c7033bba9da18e8ca2bb05200f52a3a83caebaf978",
+      "native": {
+        "sourceId": 8503,
+        "sourceKind": 512,
+        "sourceOffset": 716848,
+        "prefixOffset": 716935,
+        "commonOffset": 717097,
+        "normalDamageOffset": 717077,
+        "modelOffset": 717304,
+        "fireIntervalMs": 2000,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 260.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          -1.0
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.3700000047683716,
+          1.0
+        ],
+        "projectile": "Missile",
+        "ammoName": "Rocket",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWRocket",
+        "impactFx": "Explosion1",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Explode",
+        "splashType": "Explode",
+        "nativeCounter37": 3,
+        "nativeCounter39": 1,
+        "animationType": 16,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_rl2.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 2.0,
+      "reloadSeconds": 2.5,
+      "fireSound": "res://assets/library/audio/e63af7df4ded58c8b787dca7.wav",
+      "reloadSound": "",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.43587198853492737,
+            0.5375059843063354,
+            -0.45849600434303284,
+            0.5575699806213379
+          ],
+          "position": [
+            11.3385009765625,
+            -41.23573303222656,
+            7.428506851196289
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "breach",
+          "bone": 0,
+          "boneName": "Scene Root",
+          "rotation": [
+            0.43860700726509094,
+            0.5402730107307434,
+            -0.4558590054512024,
+            0.5549070239067078
+          ],
+          "position": [
+            1.314592957496643,
+            2.6824018955230713,
+            1.7247339487075806
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-6333ef000d0a3a361423": {
+      "itemId": "weapon-6333ef000d0a3a361423",
+      "name": "RPZ-7",
+      "category": "rocket",
+      "asset": "res://assets/bots/arsenal/weapon-6333ef000d0a3a361423.glb",
+      "sha256": "b6f100716875d50130191afd29eb046ac521b059760b24371253384290dbebf1",
+      "source": "root/wt_guns/models_hh/wt_hh_rpz-7.ltb",
+      "sourceSha256": "e45ed7689f4a21ab5e95914ec4383ba4b41967916f23b468adf2bfc9b82b645c",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_rpz-7.dtx",
+      "skinSourceSha256": "4d514e93341ac43361bb0c021aa0b6982047bc75338807a6dd05751c291dfbb9",
+      "native": {
+        "sourceId": 8502,
+        "sourceKind": 512,
+        "sourceOffset": 2426906,
+        "prefixOffset": 2426995,
+        "commonOffset": 2427157,
+        "normalDamageOffset": 2427137,
+        "modelOffset": 2427362,
+        "fireIntervalMs": 1500,
+        "capacity": 1,
+        "baseDamage": 0.0,
+        "splashDamage": 280.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3499999940395355,
+          -0.30000001192092896,
+          -1.2000000476837158
+        ],
+        "sourcePosition": [
+          0.3499999940395355,
+          -0.30000001192092896,
+          1.2000000476837158
+        ],
+        "projectile": "RPZ7",
+        "ammoName": "Rocket",
+        "tracerFx": "Standard",
+        "underwaterFx": "UWRocket",
+        "impactFx": "Explosionlow",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "Explode",
+        "splashType": "Explode",
+        "nativeCounter37": 5,
+        "nativeCounter39": 1,
+        "animationType": 27,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_rpz-7.ltb"
+      },
+      "capacity": 1,
+      "fireInterval": 1.5,
+      "reloadSeconds": 3.5,
+      "fireSound": "res://assets/library/audio/c8d625c3d3ea1088e6e525aa.wav",
+      "reloadSound": "",
+      "sockets": [
+        {
+          "name": "rear blast",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            0.2426380068063736,
+            -2.0061800479888916,
+            6.746779918670654
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Flash ",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            69.68109893798828,
+            -1.9585299491882324,
+            6.911910057067871
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-d30038e9d9d225cab574": {
+      "itemId": "weapon-d30038e9d9d225cab574",
+      "name": "EM-32",
+      "category": "launcher",
+      "asset": "res://assets/bots/arsenal/weapon-d30038e9d9d225cab574.glb",
+      "sha256": "6f1e07fe2e17a4453119074ca243968f2d474c2e79d8ef03286fe8ca9daa489f",
+      "source": "root/wt_guns/models_hh/wt_hh_em32.ltb",
+      "sourceSha256": "af579cf14719670586c7379e87bbfd1e9286697cffdc44248962998c7ab85a5a",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-32_body.dtx",
+      "skinSourceSha256": "990bc360a568e0be38e1da2f13e992789253520a31ebfb36e822c5876e53115b",
+      "native": {
+        "sourceId": 8601,
+        "sourceKind": 1024,
+        "sourceOffset": 720392,
+        "prefixOffset": 720487,
+        "commonOffset": 720635,
+        "normalDamageOffset": 720615,
+        "modelOffset": 720848,
+        "fireIntervalMs": 700,
+        "capacity": 6,
+        "baseDamage": 0.0,
+        "splashDamage": 130.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3799999952316284,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.3799999952316284,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "straybullet",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "handgrenade",
+        "impactFx": "Explosionlow",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 23,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em32.ltb"
+      },
+      "capacity": 6,
+      "fireInterval": 0.7,
+      "reloadSeconds": 4.0,
+      "fireSound": "res://assets/library/audio/3414b88d5ec1afbb534ad40c.wav",
+      "reloadSound": "res://assets/library/audio/22dc820092c41c70b8726f75.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone01",
+          "rotation": [
+            0.03215600177645683,
+            0.0004020000051241368,
+            0.01131999958306551,
+            0.9994189739227295
+          ],
+          "position": [
+            29.527000427246094,
+            -0.5034170150756836,
+            2.2122199535369873
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    },
+    "weapon-3f6750605afe185e5163": {
+      "itemId": "weapon-3f6750605afe185e5163",
+      "name": "EM-32 wolfrush",
+      "category": "launcher",
+      "asset": "res://assets/bots/arsenal/weapon-3f6750605afe185e5163.glb",
+      "sha256": "ea10f961cf182d319bd426dbd209cabc96ba5a64b617f1be580056711bd7f331",
+      "source": "root/wt_guns/models_hh/wt_hh_em-32_wolfrush.ltb",
+      "sourceSha256": "440cfd2c5fc96beda86f243235255d75bd8cfeacac8ee1aec53597c0d29c58df",
+      "skinSource": "root/wt_guns/skins_hh/wt_hh_em-32_wolfrush.dtx",
+      "skinSourceSha256": "463d44c515a8f7f1b84185196334a3f8ca508635a97a3a7150d931d85434628f",
+      "native": {
+        "sourceId": 8509,
+        "sourceKind": 17408,
+        "sourceOffset": 3129450,
+        "prefixOffset": 3129561,
+        "commonOffset": 3129709,
+        "normalDamageOffset": 3129689,
+        "modelOffset": 3129922,
+        "fireIntervalMs": 600,
+        "capacity": 8,
+        "baseDamage": 0.0,
+        "splashDamage": 300.0,
+        "pellets": 1,
+        "modelScale": 1.0,
+        "godotPosition": [
+          0.3799999952316284,
+          -0.3799999952316284,
+          -1.100000023841858
+        ],
+        "sourcePosition": [
+          0.3799999952316284,
+          -0.3799999952316284,
+          1.100000023841858
+        ],
+        "projectile": "straybullet",
+        "ammoName": "",
+        "tracerFx": "Standard",
+        "underwaterFx": "handgrenade",
+        "impactFx": "Explosionlow",
+        "pvSideFx": "",
+        "hhSideFx": "",
+        "damageType": "",
+        "splashType": "Explode",
+        "nativeCounter37": 2,
+        "nativeCounter39": 1,
+        "animationType": 23,
+        "alternatePrefix": false,
+        "sourceModel": "root/wt_guns/models_pv/wt_pv_em-32_wolfrush.ltb"
+      },
+      "capacity": 8,
+      "fireInterval": 0.6,
+      "reloadSeconds": 4.0,
+      "fireSound": "res://assets/library/audio/3414b88d5ec1afbb534ad40c.wav",
+      "reloadSound": "res://assets/library/audio/22dc820092c41c70b8726f75.wav",
+      "sockets": [
+        {
+          "name": "Flash",
+          "bone": 1,
+          "boneName": "Bone001",
+          "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "position": [
+            56.68450164794922,
+            -1.1926599740982056,
+            7.303140163421631
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "reloadPerShell": false,
+      "reloadFinishSeconds": 0
+    }
+  },
+  "textures": {
+    "67f64f6feb3f4e9c1880aadf5d0a67291ac452e1393d0f5ba70272f58b8d3023.png": {
+      "asset": "res://assets/bots/arsenal/67f64f6feb3f4e9c1880aadf5d0a67291ac452e1393d0f5ba70272f58b8d3023.png",
+      "sha256": "67f64f6feb3f4e9c1880aadf5d0a67291ac452e1393d0f5ba70272f58b8d3023"
+    },
+    "0c683e4dfc7eb202fea303992557951c43673f0395b6fea88a9872c545761b30.png": {
+      "asset": "res://assets/bots/arsenal/0c683e4dfc7eb202fea303992557951c43673f0395b6fea88a9872c545761b30.png",
+      "sha256": "0c683e4dfc7eb202fea303992557951c43673f0395b6fea88a9872c545761b30"
+    },
+    "80db1360607c0d8f7a6b149b3b1ba066283e55a8cc941b03ea31e072f3cbd984.png": {
+      "asset": "res://assets/bots/arsenal/80db1360607c0d8f7a6b149b3b1ba066283e55a8cc941b03ea31e072f3cbd984.png",
+      "sha256": "80db1360607c0d8f7a6b149b3b1ba066283e55a8cc941b03ea31e072f3cbd984"
+    },
+    "df308b48667a90c3cd9893a945504446509d9837b9c5611f989ee57923f6c5c3.png": {
+      "asset": "res://assets/bots/arsenal/df308b48667a90c3cd9893a945504446509d9837b9c5611f989ee57923f6c5c3.png",
+      "sha256": "df308b48667a90c3cd9893a945504446509d9837b9c5611f989ee57923f6c5c3"
+    },
+    "78ff37b13229ec9b94b67b029c4c5c634a5e9263ee92e5ab9aceb90836e2f1a4.png": {
+      "asset": "res://assets/bots/arsenal/78ff37b13229ec9b94b67b029c4c5c634a5e9263ee92e5ab9aceb90836e2f1a4.png",
+      "sha256": "78ff37b13229ec9b94b67b029c4c5c634a5e9263ee92e5ab9aceb90836e2f1a4"
+    },
+    "fc7e5566b43911d56d6b90be20948148b451db58411f76b32767e274745cd8b4.png": {
+      "asset": "res://assets/bots/arsenal/fc7e5566b43911d56d6b90be20948148b451db58411f76b32767e274745cd8b4.png",
+      "sha256": "fc7e5566b43911d56d6b90be20948148b451db58411f76b32767e274745cd8b4"
+    },
+    "40a242d0e8b0f8e4b0111ae7242595b70a2528425aeca161468f3097184a4a80.png": {
+      "asset": "res://assets/bots/arsenal/40a242d0e8b0f8e4b0111ae7242595b70a2528425aeca161468f3097184a4a80.png",
+      "sha256": "40a242d0e8b0f8e4b0111ae7242595b70a2528425aeca161468f3097184a4a80"
+    },
+    "5d7bf7421d09a394e361e7eb3d3cc91e13d0b19ec959904875b8f9e749c13a8d.png": {
+      "asset": "res://assets/bots/arsenal/5d7bf7421d09a394e361e7eb3d3cc91e13d0b19ec959904875b8f9e749c13a8d.png",
+      "sha256": "5d7bf7421d09a394e361e7eb3d3cc91e13d0b19ec959904875b8f9e749c13a8d"
+    },
+    "10ca962bb6f05934a24e378758671c8e113f57aaa224c948a2ec538815ec89c7.png": {
+      "asset": "res://assets/bots/arsenal/10ca962bb6f05934a24e378758671c8e113f57aaa224c948a2ec538815ec89c7.png",
+      "sha256": "10ca962bb6f05934a24e378758671c8e113f57aaa224c948a2ec538815ec89c7"
+    },
+    "b8ec0db272198c62694242403c23a3e10545210434251f010d85ab2ccdd88e86.png": {
+      "asset": "res://assets/bots/arsenal/b8ec0db272198c62694242403c23a3e10545210434251f010d85ab2ccdd88e86.png",
+      "sha256": "b8ec0db272198c62694242403c23a3e10545210434251f010d85ab2ccdd88e86"
+    },
+    "a00dcf52232e035a97dddf730765c9799cc0d2e6cc2e68a10c9307951e85bbb8.png": {
+      "asset": "res://assets/bots/arsenal/a00dcf52232e035a97dddf730765c9799cc0d2e6cc2e68a10c9307951e85bbb8.png",
+      "sha256": "a00dcf52232e035a97dddf730765c9799cc0d2e6cc2e68a10c9307951e85bbb8"
+    },
+    "2077823152a687f86b196e8fea62a169dccacd98965c5368cde66e05c90bb8c1.png": {
+      "asset": "res://assets/bots/arsenal/2077823152a687f86b196e8fea62a169dccacd98965c5368cde66e05c90bb8c1.png",
+      "sha256": "2077823152a687f86b196e8fea62a169dccacd98965c5368cde66e05c90bb8c1"
+    },
+    "4624490486a54797d8db50799be46cbb1ab1d52b863a88d70a3d63179e1699ae.png": {
+      "asset": "res://assets/bots/arsenal/4624490486a54797d8db50799be46cbb1ab1d52b863a88d70a3d63179e1699ae.png",
+      "sha256": "4624490486a54797d8db50799be46cbb1ab1d52b863a88d70a3d63179e1699ae"
+    },
+    "a251b427bfb4b6d1c8598b4d33c37d830335ce4878e615cb67c98ec368e20ec8.png": {
+      "asset": "res://assets/bots/arsenal/a251b427bfb4b6d1c8598b4d33c37d830335ce4878e615cb67c98ec368e20ec8.png",
+      "sha256": "a251b427bfb4b6d1c8598b4d33c37d830335ce4878e615cb67c98ec368e20ec8"
+    },
+    "a2687c4d0b6406593cc1dd772b7d0f60293fb93fc1278fab09661bc7beaf1f52.png": {
+      "asset": "res://assets/bots/arsenal/a2687c4d0b6406593cc1dd772b7d0f60293fb93fc1278fab09661bc7beaf1f52.png",
+      "sha256": "a2687c4d0b6406593cc1dd772b7d0f60293fb93fc1278fab09661bc7beaf1f52"
+    },
+    "4d7ff71317d1a0b33d11c5b93ae66a8e5887cfbd5b064d09409e6ac759e472c8.png": {
+      "asset": "res://assets/bots/arsenal/4d7ff71317d1a0b33d11c5b93ae66a8e5887cfbd5b064d09409e6ac759e472c8.png",
+      "sha256": "4d7ff71317d1a0b33d11c5b93ae66a8e5887cfbd5b064d09409e6ac759e472c8"
+    },
+    "76e94f22ea28b9f5671c3075fd8e67d6148f186533f88327c5bf303170704b39.png": {
+      "asset": "res://assets/bots/arsenal/76e94f22ea28b9f5671c3075fd8e67d6148f186533f88327c5bf303170704b39.png",
+      "sha256": "76e94f22ea28b9f5671c3075fd8e67d6148f186533f88327c5bf303170704b39"
+    },
+    "156f513464faa74b50752a8b027f9763afd1a71021eacdbc0d40c055a3925d47.png": {
+      "asset": "res://assets/bots/arsenal/156f513464faa74b50752a8b027f9763afd1a71021eacdbc0d40c055a3925d47.png",
+      "sha256": "156f513464faa74b50752a8b027f9763afd1a71021eacdbc0d40c055a3925d47"
+    },
+    "04bade9eec8a4e99c65b49e178628fefebb55a53e141f8e538f1bba8acf5b1e7.png": {
+      "asset": "res://assets/bots/arsenal/04bade9eec8a4e99c65b49e178628fefebb55a53e141f8e538f1bba8acf5b1e7.png",
+      "sha256": "04bade9eec8a4e99c65b49e178628fefebb55a53e141f8e538f1bba8acf5b1e7"
+    },
+    "931b8ab7b8f6a7eaef811c99aa0d2683775f27861021bbdd217a04dc7f10ff49.png": {
+      "asset": "res://assets/bots/arsenal/931b8ab7b8f6a7eaef811c99aa0d2683775f27861021bbdd217a04dc7f10ff49.png",
+      "sha256": "931b8ab7b8f6a7eaef811c99aa0d2683775f27861021bbdd217a04dc7f10ff49"
+    },
+    "7dd5305ff8b9c4b9e8d4dc5f7e7b3e323262da8155141af6620e160e4c9890c4.png": {
+      "asset": "res://assets/bots/arsenal/7dd5305ff8b9c4b9e8d4dc5f7e7b3e323262da8155141af6620e160e4c9890c4.png",
+      "sha256": "7dd5305ff8b9c4b9e8d4dc5f7e7b3e323262da8155141af6620e160e4c9890c4"
+    },
+    "246eee32c8d0b58a931a4df882b0b1605e52a1f874d0d2149b26a0728b9ead31.png": {
+      "asset": "res://assets/bots/arsenal/246eee32c8d0b58a931a4df882b0b1605e52a1f874d0d2149b26a0728b9ead31.png",
+      "sha256": "246eee32c8d0b58a931a4df882b0b1605e52a1f874d0d2149b26a0728b9ead31"
+    },
+    "b0c6e7fb89e20c85dbd96ab32ea8296736166d9a8f714d34efb40b115fae5caf.png": {
+      "asset": "res://assets/bots/arsenal/b0c6e7fb89e20c85dbd96ab32ea8296736166d9a8f714d34efb40b115fae5caf.png",
+      "sha256": "b0c6e7fb89e20c85dbd96ab32ea8296736166d9a8f714d34efb40b115fae5caf"
+    },
+    "ff28202d1906befd9a7112b21e59b98049296c49cb11b517d500af0abc5d24af.png": {
+      "asset": "res://assets/bots/arsenal/ff28202d1906befd9a7112b21e59b98049296c49cb11b517d500af0abc5d24af.png",
+      "sha256": "ff28202d1906befd9a7112b21e59b98049296c49cb11b517d500af0abc5d24af"
+    },
+    "e0ea9e9624675576f5f5c6df1a5fa8719a92dfa0c971e794389ad3990cb8140d.png": {
+      "asset": "res://assets/bots/arsenal/e0ea9e9624675576f5f5c6df1a5fa8719a92dfa0c971e794389ad3990cb8140d.png",
+      "sha256": "e0ea9e9624675576f5f5c6df1a5fa8719a92dfa0c971e794389ad3990cb8140d"
+    },
+    "dd485ea1c42d832d12e93668855814b654b7f4ba561990cd44036eff08a0ac13.png": {
+      "asset": "res://assets/bots/arsenal/dd485ea1c42d832d12e93668855814b654b7f4ba561990cd44036eff08a0ac13.png",
+      "sha256": "dd485ea1c42d832d12e93668855814b654b7f4ba561990cd44036eff08a0ac13"
+    },
+    "dd3608da96452d08c48858986bbbecb3f3b81d6b03600b3c8f00c38e5ab46e09.png": {
+      "asset": "res://assets/bots/arsenal/dd3608da96452d08c48858986bbbecb3f3b81d6b03600b3c8f00c38e5ab46e09.png",
+      "sha256": "dd3608da96452d08c48858986bbbecb3f3b81d6b03600b3c8f00c38e5ab46e09"
+    },
+    "cf2186f566a90ce7174bd2fc612d37ef299f26bd8ec93833dcb44c4d5ddb7a7d.png": {
+      "asset": "res://assets/bots/arsenal/cf2186f566a90ce7174bd2fc612d37ef299f26bd8ec93833dcb44c4d5ddb7a7d.png",
+      "sha256": "cf2186f566a90ce7174bd2fc612d37ef299f26bd8ec93833dcb44c4d5ddb7a7d"
+    },
+    "e2435403ff5c5878da5edfe0231a040618c9f34808eea50db18ddadc6c35923a.png": {
+      "asset": "res://assets/bots/arsenal/e2435403ff5c5878da5edfe0231a040618c9f34808eea50db18ddadc6c35923a.png",
+      "sha256": "e2435403ff5c5878da5edfe0231a040618c9f34808eea50db18ddadc6c35923a"
+    },
+    "8113947302bfaf2ef14fe42d46463733d2be40306db8825685209ff30ad5ce10.png": {
+      "asset": "res://assets/bots/arsenal/8113947302bfaf2ef14fe42d46463733d2be40306db8825685209ff30ad5ce10.png",
+      "sha256": "8113947302bfaf2ef14fe42d46463733d2be40306db8825685209ff30ad5ce10"
+    },
+    "cbab9f13e0905edb77c8dc34fa01e111f65add4b7804a03b3466317e3f920836.png": {
+      "asset": "res://assets/bots/arsenal/cbab9f13e0905edb77c8dc34fa01e111f65add4b7804a03b3466317e3f920836.png",
+      "sha256": "cbab9f13e0905edb77c8dc34fa01e111f65add4b7804a03b3466317e3f920836"
+    },
+    "f935fcf0a1e5d6b7fb96365cab3fb31268dff4adc4723dcfe059576aea5550c1.png": {
+      "asset": "res://assets/bots/arsenal/f935fcf0a1e5d6b7fb96365cab3fb31268dff4adc4723dcfe059576aea5550c1.png",
+      "sha256": "f935fcf0a1e5d6b7fb96365cab3fb31268dff4adc4723dcfe059576aea5550c1"
+    },
+    "d92cba3677b624972df85fc828579b29e865feb3538e64473435fdaf8ee95b6c.png": {
+      "asset": "res://assets/bots/arsenal/d92cba3677b624972df85fc828579b29e865feb3538e64473435fdaf8ee95b6c.png",
+      "sha256": "d92cba3677b624972df85fc828579b29e865feb3538e64473435fdaf8ee95b6c"
+    },
+    "5f922ceafde9007cf5ba93c728a14e29633baf8bfd16685ee33ce7a32eba0d54.png": {
+      "asset": "res://assets/bots/arsenal/5f922ceafde9007cf5ba93c728a14e29633baf8bfd16685ee33ce7a32eba0d54.png",
+      "sha256": "5f922ceafde9007cf5ba93c728a14e29633baf8bfd16685ee33ce7a32eba0d54"
+    },
+    "dcae725748a6db6cd085e86285836f87bbf46bd7f29b2372fbb6179c845ccd30.png": {
+      "asset": "res://assets/bots/arsenal/dcae725748a6db6cd085e86285836f87bbf46bd7f29b2372fbb6179c845ccd30.png",
+      "sha256": "dcae725748a6db6cd085e86285836f87bbf46bd7f29b2372fbb6179c845ccd30"
+    },
+    "bc2b808ed2e7912fed1da09c6a0441209f3ef3c2f9a2feb42ce39c9fdaa41ae5.png": {
+      "asset": "res://assets/bots/arsenal/bc2b808ed2e7912fed1da09c6a0441209f3ef3c2f9a2feb42ce39c9fdaa41ae5.png",
+      "sha256": "bc2b808ed2e7912fed1da09c6a0441209f3ef3c2f9a2feb42ce39c9fdaa41ae5"
+    },
+    "259850b0fd07dc0eff5c6d8dd852ead109a7f2c9dd37fa906adc5fdae3f98465.png": {
+      "asset": "res://assets/bots/arsenal/259850b0fd07dc0eff5c6d8dd852ead109a7f2c9dd37fa906adc5fdae3f98465.png",
+      "sha256": "259850b0fd07dc0eff5c6d8dd852ead109a7f2c9dd37fa906adc5fdae3f98465"
+    },
+    "c8c035d11e44fc85b030d73c7f42dff57e28c7ef2648694950b1322bea21a8dc.png": {
+      "asset": "res://assets/bots/arsenal/c8c035d11e44fc85b030d73c7f42dff57e28c7ef2648694950b1322bea21a8dc.png",
+      "sha256": "c8c035d11e44fc85b030d73c7f42dff57e28c7ef2648694950b1322bea21a8dc"
+    },
+    "bf4a43c42553e3e8b9e75c2be1bbff0d8e59163dc6978477677081ff28ba9dbc.png": {
+      "asset": "res://assets/bots/arsenal/bf4a43c42553e3e8b9e75c2be1bbff0d8e59163dc6978477677081ff28ba9dbc.png",
+      "sha256": "bf4a43c42553e3e8b9e75c2be1bbff0d8e59163dc6978477677081ff28ba9dbc"
+    },
+    "cd4319178e2ec796cb017eb0176f734822c2639f32f2ffe048bebaf848804d26.png": {
+      "asset": "res://assets/bots/arsenal/cd4319178e2ec796cb017eb0176f734822c2639f32f2ffe048bebaf848804d26.png",
+      "sha256": "cd4319178e2ec796cb017eb0176f734822c2639f32f2ffe048bebaf848804d26"
+    },
+    "7b88abc9b7440075b181e1c6fa261f04c022d5a5eadd83cbf55ac1c75f25166e.png": {
+      "asset": "res://assets/bots/arsenal/7b88abc9b7440075b181e1c6fa261f04c022d5a5eadd83cbf55ac1c75f25166e.png",
+      "sha256": "7b88abc9b7440075b181e1c6fa261f04c022d5a5eadd83cbf55ac1c75f25166e"
+    },
+    "fd947053280d3985839b6ee78733618dc06aefe81190c2ebd024fb1d4aa0a697.png": {
+      "asset": "res://assets/bots/arsenal/fd947053280d3985839b6ee78733618dc06aefe81190c2ebd024fb1d4aa0a697.png",
+      "sha256": "fd947053280d3985839b6ee78733618dc06aefe81190c2ebd024fb1d4aa0a697"
+    },
+    "671322ba24441cdad3969b3ae664ed5f3d4dbae96c51c07eb26283ef9735e7b2.png": {
+      "asset": "res://assets/bots/arsenal/671322ba24441cdad3969b3ae664ed5f3d4dbae96c51c07eb26283ef9735e7b2.png",
+      "sha256": "671322ba24441cdad3969b3ae664ed5f3d4dbae96c51c07eb26283ef9735e7b2"
+    },
+    "9fda79b81d3d133f62f6cced6ecab3cfffa27ef675257e29e7de17a6aeb5fcf8.png": {
+      "asset": "res://assets/bots/arsenal/9fda79b81d3d133f62f6cced6ecab3cfffa27ef675257e29e7de17a6aeb5fcf8.png",
+      "sha256": "9fda79b81d3d133f62f6cced6ecab3cfffa27ef675257e29e7de17a6aeb5fcf8"
+    },
+    "dd64451c0eb4420e4d8ed636aa82f1a6d31fe8d7c484fdeed5a6f3ca61a1bcb9.png": {
+      "asset": "res://assets/bots/arsenal/dd64451c0eb4420e4d8ed636aa82f1a6d31fe8d7c484fdeed5a6f3ca61a1bcb9.png",
+      "sha256": "dd64451c0eb4420e4d8ed636aa82f1a6d31fe8d7c484fdeed5a6f3ca61a1bcb9"
+    },
+    "9189da79b5a621cf51100a2ee97fc52c76f2ec298df9e0c5e6f35c7f5d74cd85.png": {
+      "asset": "res://assets/bots/arsenal/9189da79b5a621cf51100a2ee97fc52c76f2ec298df9e0c5e6f35c7f5d74cd85.png",
+      "sha256": "9189da79b5a621cf51100a2ee97fc52c76f2ec298df9e0c5e6f35c7f5d74cd85"
+    },
+    "0eccd7346984f62e68b0fd8db452864b3fd0977a7bf2c21cb76aeb743e6345fd.png": {
+      "asset": "res://assets/bots/arsenal/0eccd7346984f62e68b0fd8db452864b3fd0977a7bf2c21cb76aeb743e6345fd.png",
+      "sha256": "0eccd7346984f62e68b0fd8db452864b3fd0977a7bf2c21cb76aeb743e6345fd"
+    },
+    "70748f49e9192cfd0af79b6efe64884f19131e2e98622c614418400b2a1b853f.png": {
+      "asset": "res://assets/bots/arsenal/70748f49e9192cfd0af79b6efe64884f19131e2e98622c614418400b2a1b853f.png",
+      "sha256": "70748f49e9192cfd0af79b6efe64884f19131e2e98622c614418400b2a1b853f"
+    },
+    "ef8764aaee25e80135f767e01985c329704b9a7f02813c1aeada5a1fd793216f.png": {
+      "asset": "res://assets/bots/arsenal/ef8764aaee25e80135f767e01985c329704b9a7f02813c1aeada5a1fd793216f.png",
+      "sha256": "ef8764aaee25e80135f767e01985c329704b9a7f02813c1aeada5a1fd793216f"
+    },
+    "2496d24b01a3f69a24cdc176df8dca5ffce5a271b3ba7307e41823738f08d85f.png": {
+      "asset": "res://assets/bots/arsenal/2496d24b01a3f69a24cdc176df8dca5ffce5a271b3ba7307e41823738f08d85f.png",
+      "sha256": "2496d24b01a3f69a24cdc176df8dca5ffce5a271b3ba7307e41823738f08d85f"
+    },
+    "6e6eb946a8ca9fbd92f4deb42b537dd7bef16114b5ebe83c8a4a21c04013c1d1.png": {
+      "asset": "res://assets/bots/arsenal/6e6eb946a8ca9fbd92f4deb42b537dd7bef16114b5ebe83c8a4a21c04013c1d1.png",
+      "sha256": "6e6eb946a8ca9fbd92f4deb42b537dd7bef16114b5ebe83c8a4a21c04013c1d1"
+    },
+    "c862d5c37cd7632a55b48b233c1c7ee16cef64f00a165cd75c25b0742ac517ca.png": {
+      "asset": "res://assets/bots/arsenal/c862d5c37cd7632a55b48b233c1c7ee16cef64f00a165cd75c25b0742ac517ca.png",
+      "sha256": "c862d5c37cd7632a55b48b233c1c7ee16cef64f00a165cd75c25b0742ac517ca"
+    },
+    "11c086539f1cd68cdbe2c1a243c1ea2a40e5bbb8c9660bce322f1a293b03ed6c.png": {
+      "asset": "res://assets/bots/arsenal/11c086539f1cd68cdbe2c1a243c1ea2a40e5bbb8c9660bce322f1a293b03ed6c.png",
+      "sha256": "11c086539f1cd68cdbe2c1a243c1ea2a40e5bbb8c9660bce322f1a293b03ed6c"
+    },
+    "c444d2a0bbfb585d5e307740c11671c1446c0df51f64b44b285f90cc883dbc73.png": {
+      "asset": "res://assets/bots/arsenal/c444d2a0bbfb585d5e307740c11671c1446c0df51f64b44b285f90cc883dbc73.png",
+      "sha256": "c444d2a0bbfb585d5e307740c11671c1446c0df51f64b44b285f90cc883dbc73"
+    },
+    "06c6a1a4e576ff3474ede3f449a35fc88012e3cf1b5f12b46dc9ff9d8c317f51.png": {
+      "asset": "res://assets/bots/arsenal/06c6a1a4e576ff3474ede3f449a35fc88012e3cf1b5f12b46dc9ff9d8c317f51.png",
+      "sha256": "06c6a1a4e576ff3474ede3f449a35fc88012e3cf1b5f12b46dc9ff9d8c317f51"
+    },
+    "85e6f3e415252b0c63238b08a8aa815ee17d217d2e994d6667d4c6caaabb40f7.png": {
+      "asset": "res://assets/bots/arsenal/85e6f3e415252b0c63238b08a8aa815ee17d217d2e994d6667d4c6caaabb40f7.png",
+      "sha256": "85e6f3e415252b0c63238b08a8aa815ee17d217d2e994d6667d4c6caaabb40f7"
+    },
+    "d097735c16ccc7e220b4b6d91ea993b9ffcb9bc5a8121731a3ded1ba58dfe0ba.png": {
+      "asset": "res://assets/bots/arsenal/d097735c16ccc7e220b4b6d91ea993b9ffcb9bc5a8121731a3ded1ba58dfe0ba.png",
+      "sha256": "d097735c16ccc7e220b4b6d91ea993b9ffcb9bc5a8121731a3ded1ba58dfe0ba"
+    },
+    "37aa01a30aea227a2d0a66f731e26d6e903c7b0474622420e14d1f3f3beb2989.png": {
+      "asset": "res://assets/bots/arsenal/37aa01a30aea227a2d0a66f731e26d6e903c7b0474622420e14d1f3f3beb2989.png",
+      "sha256": "37aa01a30aea227a2d0a66f731e26d6e903c7b0474622420e14d1f3f3beb2989"
+    },
+    "abc3e52ffad0f43bcecc9724966299ebfc47a4e2d4f97a9efe93f23808596d45.png": {
+      "asset": "res://assets/bots/arsenal/abc3e52ffad0f43bcecc9724966299ebfc47a4e2d4f97a9efe93f23808596d45.png",
+      "sha256": "abc3e52ffad0f43bcecc9724966299ebfc47a4e2d4f97a9efe93f23808596d45"
+    },
+    "c87eefb3ca1a31a372e57cc469942f3dff21c607758de363b85a2b7e7e598dc8.png": {
+      "asset": "res://assets/bots/arsenal/c87eefb3ca1a31a372e57cc469942f3dff21c607758de363b85a2b7e7e598dc8.png",
+      "sha256": "c87eefb3ca1a31a372e57cc469942f3dff21c607758de363b85a2b7e7e598dc8"
+    }
+  },
+  "scope": "Native supplied model/skin, capacity/cadence and reload clip duration. NPC hit damage remains8 for every difficulty. Roster choices/tactics are local simulation; no account ownership or PC bot implementation is claimed.",
+  "categories": {
+    "rifle": 8,
+    "smg": 4,
+    "shotgun": 4,
+    "machinegun": 4,
+    "pistol": 8,
+    "knife": 8,
+    "sniper": 8,
+    "grenade": 8,
+    "heavy": 2,
+    "rocket": 3,
+    "launcher": 2
+  }
+}

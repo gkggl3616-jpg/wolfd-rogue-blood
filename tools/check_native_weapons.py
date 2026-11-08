@@ -24,6 +24,8 @@ def check(root=ROOT):
   for key,row in flight[kind].items():asset(row,'projectile '+key)
  if set(bots['profiles'])!={'knife','pistol','sniper','grenade','heavy'}:blockers.append('Native HH weapons for the five newly admitted modes are missing')
  for key,row in bots['profiles'].items():asset(row,'bot '+key)
+ from check_bot_arsenal import check as bot_check
+ blockers.extend(bot_check(root)['blockers'])
  return {'passed':not blockers,'blockers':blockers,'weaponRecords':len(rules['items']),'projectileModels':len(flight['models']),'apkProduced':False}
 if __name__=='__main__':
  result=check();print(json.dumps(result,indent=2));raise SystemExit(0 if result['passed'] else 1)

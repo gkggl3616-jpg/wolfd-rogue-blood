@@ -49,7 +49,9 @@ func run():
 	wall.get_parent().remove_child(wall);wall.queue_free();await frames(2)
 	enemy.brain_enabled=false;enemy.profile.dodgeChance=0;enemy.state="attack";enemy.sees_player=true;enemy.reaction=0;enemy.attack_clock=0;enemy._physics_process(0)
 	ensure(game.health==health,"enemy melee waits for its actual windup before damage")
-	enemy._physics_process(0.3)
+	var attack_record=game.clientfx.animation_record(enemy,enemy.active_clip)
+	enemy.source_events.last_clip=enemy.active_clip;enemy.source_events.last_record=attack_record
+	enemy.source_events.dispatch_range(-.001,float(attack_record.durationMs)/1000)
 	ensure(game.health==health-8,"enemy melee still hits an unobstructed nearby player")
 	game.player.switch_form();game.player.action_time=0
 	game.player.begin_roar();game.player.shot_cooldown=0;game.attack()

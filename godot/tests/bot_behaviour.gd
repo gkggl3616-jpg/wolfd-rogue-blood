@@ -58,8 +58,13 @@ func run():
 		game.player.position=Vector3(0,0.1,-1.5);game.health=100
 		game.spawn_enemy("wolf",level);var wolf=game.enemies.get_child(0)
 		wolf.brain_enabled=false;wolf.position=Vector3(0,0.1,0);wolf.state="attack";wolf.sees_player=true;wolf.reaction=0
-		await frames(12);check(game.health==100,"Wolf melee waits for its windup: "+level)
-		await frames(10);check(game.health==92,"Wolf melee has the same damage at every level: "+level)
+		wolf.set_physics_process(false);wolf.anim.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL;wolf.source_events.set_process(false);await frames(3);wolf.begin_melee()
+		var clip=wolf.active_clip;var record=game.clientfx.animation_record(wolf,clip);var keys=record.events.filter(func(e):return str(e.key).to_lower().contains("fire_key"))
+		check(not keys.is_empty(),"Wolf melee resolves its source animation fire key: "+level)
+		wolf.source_events.last_clip=clip;wolf.source_events.last_record=record
+		var time=float(keys[0].timeMs)/1000
+		wolf.source_events.dispatch_range(-.001,time-.001);check(game.health==100,"Wolf melee cannot hit before source fire key: "+level)
+		wolf.source_events.dispatch_range(time-.001,time);check(game.health==92,"Wolf melee has the same damage at every level: "+level)
 		game.enemies.remove_child(wolf);wolf.queue_free();await frames()
 	game.player.position=Vector3(5,0.1,-9);game.health=100
 	game.spawn_enemy("human","hard");var bot=game.enemies.get_child(0);bot.brain_enabled=false;bot.position=Vector3(5,0.1,-1.3);bot.last_known=game.player.position

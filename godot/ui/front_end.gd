@@ -181,7 +181,7 @@ func build_header():
 	var pitch=(strip.size.x-8-start_x)/(entries.size()+1)
 	var icon_size=minf(height-8,pitch-4)
 	var rank=game.ranks.current(int(game.wallet.gp))
-	rank_background=Art.sprite(strip,rank.background,Vector2(8,(height-32)/2),Vector2(32,32));rank_image=Art.sprite(strip,rank.asset,Vector2(8,(height-32)/2),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Yerel rütbe"
+	rank_background=Art.sprite(strip,rank.background,Vector2(8,(height-32)/2),Vector2(32,32));rank_image=Art.sprite(strip,rank.asset,Vector2(8,(height-32)/2),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Seviye %d" % game.ranks.progress(int(game.wallet.gp)).level
 	last_rank_gp=-1
 	var profile_width=wallet_x-54
 	profile_label=text(strip,game.profile_name,Vector2(46,6),Vector2(profile_width,19),12);profile_label.tooltip_text=game.profile_name
@@ -223,13 +223,14 @@ func choose_section():
 
 func _process(_delta):
 	if is_instance_valid(rank_image) and last_rank_gp!=int(game.wallet.gp):
-		var rank=game.ranks.current(int(game.wallet.gp));rank_image.texture=Art.texture(rank.asset);rank_background.texture=Art.texture(rank.background);rank_image.tooltip_text=rank.name+" · Yerel rütbe";last_rank_gp=int(game.wallet.gp)
+		var rank=game.ranks.current(int(game.wallet.gp));rank_image.texture=Art.texture(rank.asset);rank_background.texture=Art.texture(rank.background);rank_image.tooltip_text=rank.name+" · Seviye %d" % game.ranks.progress(int(game.wallet.gp)).level;last_rank_gp=int(game.wallet.gp)
 	if is_instance_valid(profile_label):profile_label.text=game.profile_name
 	if is_instance_valid(wallet_label):
 		currency_values.gold.text="%d A" % game.wallet.gold;currency_values.kp.text=game.wallet_text("kp")+" KP";currency_values.cash.text=game.wallet_text("cash")+" N";currency_values.jt.text="— JT"
-		gp_header_label.text="GP: %d" % game.wallet.gp
+		gp_header_label.text="Sv. %d · GP: %d" % [game.ranks.progress(int(game.wallet.gp)).level,int(game.wallet.gp)]
 		var current=game.ranks.current(int(game.wallet.gp));var next=game.ranks.next(int(game.wallet.gp));var start=int(current.localMinimumGp);var finish=int(next.get("localMinimumGp",start+100))
-		gp_header_bar.value=100.0*(int(game.wallet.gp)-start)/maxi(1,finish-start)
+		gp_header_bar.value=game.ranks.progress(int(game.wallet.gp)).fraction*100
+		gp_header_bar.tooltip_text="Sonraki seviye: %d GP" % game.ranks.progress(int(game.wallet.gp)).remainingGp if not game.ranks.progress(int(game.wallet.gp)).maxed else "En yüksek yerel seviye"
 	if detail_helper != null and detail_helper.has_method("update"): detail_helper.update(_delta)
 
 func navigate(next,remember=true,back_step=false):

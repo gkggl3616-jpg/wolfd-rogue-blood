@@ -14,7 +14,7 @@ var last_vertical=0.0
 func _ready():game=actor.game;system=game.clientfx
 func reset():
 	system.stop_actor(actor);passives={};last_clip="";last_time=-0.001;marker=""
-	if actor==game.player and is_instance_valid(actor.claw_trail):actor.claw_trail.clear()
+	if is_instance_valid(actor.claw_trail):actor.claw_trail.clear()
 func stop_roar():
 	var info=system.model_record(actor);var name=info.get("effects",{}).get("ClientFXOnce3","")
 	for node in system.group_instances(actor,name):node.queue_free()
@@ -25,7 +25,7 @@ func has_spline():return str(system.animation_record(actor,str(actor.anim.curren
 func restart_melee():last_clip="";last_time=-0.001;last_record={}
 func _process(_delta):
 	if not game.is_match_active() or not game.actor_alive(actor) or (actor==game.player and game.selection_active):
-		if actor==game.player:actor.pending_melee.clear()
+		actor.pending_melee.clear()
 		if marker!="":reset()
 		return
 	var floor_now=actor.is_on_floor()
@@ -39,9 +39,9 @@ func _process(_delta):
 		if game.game_audio.actor_form(actor)=="wolf":system.install_strong(actor)
 	var clip=str(actor.anim.current_animation);var time=actor.anim.current_animation_position
 	if clip!=last_clip:
-		if actor==game.player and not actor.pending_melee.is_empty() and actor.pending_melee.clip!=clip:actor.pending_melee.clear()
+		if not actor.pending_melee.is_empty() and actor.pending_melee.clip!=clip:actor.pending_melee.clear()
 		if last_clip=="roar":stop_roar()
-		if actor==game.player and is_instance_valid(actor.claw_trail):actor.claw_trail.clear()
+		if is_instance_valid(actor.claw_trail) and actor.claw_trail.source_control:actor.claw_trail.finish()
 		last_clip=clip;last_time=-0.001;last_record=system.animation_record(actor,clip)
 	elif time+0.001<last_time:
 		dispatch_range(last_time,float(last_record.get("durationMs",0))/1000.0);last_time=-0.001
@@ -69,8 +69,10 @@ func dispatch(key):
 	elif operation=="fx" and tokens.size()>1:system.play(tokens[1],actor)
 	elif operation=="fire_key" and last_clip=="strong_attack" and actor==game.player and actor.pending_strong:
 		actor.pending_strong=false;game.wolf_melee_hit(roundi(float(game.mutations.profile(actor.mutation_id).damage)*1.4),2.8,"Güçlü pençe","strong")
-	elif operation=="fire_key" and actor==game.player:game.resolve_melee_event(last_clip)
+	elif operation=="fire_key":
+		if actor==game.player:game.resolve_melee_event(last_clip)
+		elif actor.has_method("resolve_melee_event"):actor.resolve_melee_event(last_clip)
 	elif operation=="wolfcrysnd":game.game_audio.voice(actor,2)
 	elif operation=="sound_key" and tokens.size()>2:game.game_audio.natural_sound(actor,int(tokens[1]),int(tokens[2]))
 	elif operation=="footstep_key" and Vector2(actor.velocity.x,actor.velocity.z).length()>0.1:game.game_audio.footstep(actor)
-	elif operation=="spline" and tokens.size()>2 and actor==game.player and actor.is_wolf:actor.claw_trail.source_window(int(tokens[1]),int(tokens[2])!=0)
+	elif operation=="spline" and tokens.size()>2 and is_instance_valid(actor.claw_trail):actor.claw_trail.source_window(int(tokens[1]),int(tokens[2])!=0)

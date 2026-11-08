@@ -253,7 +253,15 @@ func result_page():
 			var number=ui.text(ui.content,str(cards[i][1]),Vector2(x+20,233),Vector2(197,60),36);number.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 			var count=ui.text(ui.content,"%d %s" % [cards[i][1],cards[i][2]],Vector2(x+12,415),Vector2(225,24),15);count.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		var sp=ui.text(ui.content,"SP\n%d" % int(result.get("earnedSp",0)),Vector2(34,510),Vector2(167,120),26,Art.GOLD);sp.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-		ui.text(ui.content,ui.game.profile_name,Vector2(330,543),Vector2(600,24),15).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		var progress=result.get("progression",{});var after=progress.get("after",ui.game.ranks.progress(int(ui.game.wallet.gp)));var before=progress.get("before",after)
+		var rank=ui.game.ranks.current(int(after.gp));Art.sprite(ui.content,rank.asset,Vector2(328,496),Vector2(28,32))
+		var next_rank=ui.game.ranks.next(int(after.gp))
+		if not next_rank.is_empty():Art.sprite(ui.content,next_rank.asset,Vector2(898,496),Vector2(28,32))
+		var bar=Control.new();bar.name="AccountRankProgress";bar.position=Vector2(376,495);bar.size=Vector2(512*float(after.fraction),36);bar.clip_contents=true;ui.content.add_child(bar)
+		Art.sprite(bar,"wt_interface/gameresult/gr_cc_bg.dtx",Vector2.ZERO,Vector2(512,36),Rect2(376,495,512,36)).modulate=Art.GOLD
+		bar.tooltip_text="%s · %d GP kaldı" % [after.rankName,int(after.remainingGp)] if not after.maxed else "En yüksek yerel seviye"
+		var level_text="Seviye %d → %d · %s" % [int(before.level),int(after.level),after.rankName] if int(after.level)>int(before.level) else "Seviye %d · %s" % [int(after.level),after.rankName]
+		ui.text(ui.content,ui.game.profile_name+" · "+level_text,Vector2(330,543),Vector2(600,24),15,Art.GOLD if int(after.level)>int(before.level) else Color.WHITE).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		ui.text(ui.content,"%d / %d" % [int(result.get("kills",0)),int(result.get("deaths",0))],Vector2(270,650),Vector2(130,30),22).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		ui.text(ui.content,str(int(rewards.get("gold",0))),Vector2(415,650),Vector2(130,30),22).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		for x in [562,710,858]:ui.text(ui.content,"—",Vector2(x,650),Vector2(130,30),20).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
@@ -287,7 +295,8 @@ func profile():
 	# page. Bind the values to the actual baked Turkish row labels.
 	var values=[ui.game.ranks.current(int(ui.game.wallet.gp)).name,ui.game.profile_name,"—","—","—","—","—","—","—",str(ui.game.wallet.gold),ui.game.wallet_text("cash"),"—"]
 	for i in range(values.size()):ui.text(ui.content,values[i],Vector2(478,183+i*24),Vector2(228,22),12)
-	ui.text(ui.content,"Yerel profil · çevrimiçi kayıt alınmadı",Vector2(312,478),Vector2(390,22),11)
+	var progress=ui.game.ranks.progress(int(ui.game.wallet.gp))
+	ui.text(ui.content,"Seviye %d / %d · %d GP · Yerel profil" % [progress.level,progress.maxLevel,progress.gp],Vector2(312,478),Vector2(390,22),11)
 	ui.button(ui.content,"İkinci şifre · Yerel profil",Vector2(318,640),Vector2(385,30),func():ui.navigate("pin"))
 	ui.button(ui.content,"Rütbeler · Yerel GP",Vector2(318,678),Vector2(385,30),func():ui.navigate("rankbook"))
 
@@ -321,14 +330,14 @@ func rankbook():
 	var rank=ui.game.ranks.current(int(ui.game.wallet.gp));var next=ui.game.ranks.next(int(ui.game.wallet.gp))
 	ui.text(ui.content,"RÜTBELER · YEREL İLERLEME",Vector2(30,85),Vector2(950,35),24,Art.GOLD)
 	Art.sprite(ui.content,rank.background,Vector2(36,138),Vector2(64,64));Art.sprite(ui.content,rank.asset,Vector2(36,138),Vector2(64,64))
-	ui.text(ui.content,rank.name,Vector2(116,142),Vector2(850,30),22)
+	ui.text(ui.content,"Seviye %d · %s" % [ui.game.ranks.progress(int(ui.game.wallet.gp)).level,rank.name],Vector2(116,142),Vector2(850,30),22)
 	ui.text(ui.content,"%d GP · Sonraki rütbe: %s" % [int(ui.game.wallet.gp),str(next.get("localMinimumGp","Tamamlandı"))],Vector2(116,180),Vector2(850,30),16)
 	var rows=ui.game.ranks.catalog.ranks;ui.rank_page=clampi(ui.rank_page,0,int((rows.size()-1)/15))
 	for i in range(ui.rank_page*15,mini(rows.size(),ui.rank_page*15+15)):
 		var row=rows[i];var at=Vector2(38+(i%15)%3*322,248+int((i%15)/3)*80)
 		Art.sprite(ui.content,row.background,at,Vector2(40,40));Art.sprite(ui.content,row.asset,at,Vector2(40,40))
 		ui.text(ui.content,row.name,at+Vector2(49,0),Vector2(267,22),15)
-		ui.text(ui.content,"%d GP" % int(row.localMinimumGp),at+Vector2(49,25),Vector2(267,22),12)
+		ui.text(ui.content,"Sv. %d · %d GP" % [i+1,int(row.localMinimumGp)],at+Vector2(49,25),Vector2(267,22),12)
 	ui.button(ui.content,"Önceki",Vector2(38,675),Vector2(200,32),func():ui.rank_page-=1;ui.refresh(),ui.rank_page>0)
 	ui.button(ui.content,"Sonraki",Vector2(256,675),Vector2(200,32),func():ui.rank_page+=1;ui.refresh(),(ui.rank_page+1)*15<rows.size())
 	ui.paragraph(ui.content,"Kaynak rütbe adları ve simgeleri. GP eşikleri bu cihazdaki yerel ilerleme içindir.",Vector2(480,675),Vector2(500,50),13)

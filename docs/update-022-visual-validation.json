@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ab474f473e46d25ed249e45d559bbf7f00444eda0ae15b7886a62ba5e92a432a"
+      "sha256": "91337004f73b2d739d25c27a15da71ba284df6becedbbecbf7d73405d77cb9d9"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-022/match-summary-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c563c299fecedd20624b0c9a16fde755d412cd9df48d7b8c5b6e59c62baf6c7a"
+      "sha256": "25bf876a5a1d099ed7a5740ce1d7b60fe279bf0705a169d930ea02d7e5b82c62"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-022/credited-award-cards-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c563c299fecedd20624b0c9a16fde755d412cd9df48d7b8c5b6e59c62baf6c7a"
+      "sha256": "25bf876a5a1d099ed7a5740ce1d7b60fe279bf0705a169d930ea02d7e5b82c62"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-022/detailed-match-result-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b1321d3889bf19c1fadc44fa7ac7a02f888b3f323e7a7709daa213cf63efd4e3"
+      "sha256": "42dcbd6c357fee5c1d25f51ef48fb6ab5f6f05686181c572c0a2dc3c8fdc4ab6"
     },
     {
       "height": 720,
@@ -78,11 +78,11 @@
       "path": "docs/review/update-022/return-to-configured-room-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3bfe52bec04549e500718bb16a2f7bee65ae9c6a659da1c14db624691f0a2912"
+      "sha256": "2c7d19b9abf62ddc3c68f4e33f3feb298595267c76a7566951d1e1bac4746f4b"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

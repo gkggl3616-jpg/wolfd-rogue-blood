@@ -6,7 +6,7 @@
       "path": "docs/review/update-020/original-tattoo-shop-cards-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3652f849e3ca39f0938e5bbc28bcc43de248e1bea86103c2a6c9546ca30ed4e5"
+      "sha256": "8b72c29528e70d8170f8ad5ba09670207b91a99045cd503e9e8fd3a5a78a432a"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-020/og-family-preserved-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "68e7b5deaef5fc7c06fe1080fe71a4b026ecd0fc561d3bac70d503d2add04d40"
+      "sha256": "5c06de96b31809222a80d1b3ccbe77cccddcbc71532257f204fc81271f0edefc"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-020/large-close-settings-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "cdbfbe4bcaa6143a5d8549058e359fc88587d4675f46d28bd4c8cd1dd783e97e"
+      "sha256": "5357f20bc1e31be191d2c553b344fba263fc05c57fb42c4183e3333c9a832a11"
     },
     {
       "height": 720,
@@ -70,11 +70,11 @@
       "path": "docs/review/update-020/destruction-room-round-options-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "db55acb8ead36919321c8a11ac63324046d4d0ff79cedc6c6a8aef5814c9097d"
+      "sha256": "e4254bac8658e61c40b2be3afad642908b06836ea376329f22232e28a825d642"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

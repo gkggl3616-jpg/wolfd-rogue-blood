@@ -1,8 +1,8 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android’e taşınan, geliştirmesi süren çevrimdışı oyun. **0.28 geliştirme**: 903 silahın kaynak temel ayarları/kamera konumu, 31 bomba modelinin özgün atış hareketi, 72 uçan mühimmat tanımı, SUPAS mermi mermi dolumu, beş kaynak silah modu ve bot fizik düzeltmeleri. **34 harita ve 903 silahlık katalog** korunur. Giriş/oda akışı ve video yerleşim kuralı sürer. [Ayrıntılı inceleme ve açık farklar](docs/PC_REFERANS_028.md) · [**Yeni oyun fotoğraflarının klasörü**](docs/review/update-028).
+Godot **4.7.2** ile Android’e taşınan, geliştirmesi süren çevrimdışı oyun. **0.29 geliştirme**: altı videonun 5 saniyelik 902 kareyle yeniden incelemesi; özgün animasyon anında vuran kurt botları ve sönerek biten dünya pençe izleri; farklı ad/karakter/silah kullanan sekiz bot; fizik ve görüşe bağlı taktikler; mevcut 62 rütbe ve kaydedilen GP’ye bağlı hesap seviyesi. **34 harita ve 903 silahlık katalog** korunur. Video arayüz yerleşim kuralı sürer. [Ayrıntılı inceleme ve açık farklar](docs/PC_REFERANS_029.md) · [**Yeni oyun fotoğraflarının klasörü**](docs/review/update-029).
 
-**Kullanıcının isteğiyle 0.28 için APK hazırlanmadı/yayımlanmadı.** Aşağıdaki 0.27 paketi önceki sürümdür; yeni kaynak değişikliklerini içermez. **0.28 kaynak hali 36/36 regresyon aşaması ve 3.126 hedefli kontrolden geçti.** Yeni klasörde 40 gerçek oyun fotoğrafı vardır; fiziksel Android cihaz testi yapılmadı.
+**Kullanıcının isteğiyle 0.29 için APK hazırlanmadı/yayımlanmadı.** Aşağıdaki 0.27 paketi önceki sürümdür; yeni kaynak değişikliklerini içermez. **37/37 regresyon aşaması ve 1.002 yeni hedefli/karşılaşma kontrolü geçti.** Yeni klasörde 29 gerçek Godot/OpenGL oyun fotoğrafı ve 902 referans karesini içeren 59 inceleme sayfası vardır. Fiziksel Android cihaz testi yapılmadı; tam PC eşitliği iddia edilmez.
 
 [**Son yayımlanmış Android APK · 0.27.0 Test · 1.57 GB**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.27.0-offline-test/WolfRogueBlood-0.27.0-test.apk). **Wolf Rogue Blood Test** / `com.wolfrogue.blood.offline.test`, aynı test anahtarıyla 0.25/0.26 Test üzerine güncellenebilir; eski üretim kurulumu ayrı kalır. [Paket ve imza raporu](docs/android-offline-test-build-027.json): **1.573.507.390 bayt**, 41 katalog; ZIP/kaynak bağlantıları, üç ABI, v2/v3 imza ve 16 KiB hizalama doğrulandı. **35 regresyon aşaması, 1.431 hedefli kontrol ve 287 gerçek oyun görüntüsü** aynı çalışma zamanı için geçti. Fiziksel telefon testi ve bütün PC davranışlarının birebir eşitliği tamamlanmış değildir.
 
@@ -111,3 +111,5 @@ Kesilen tarama `--resume` ile tam ve doğrulanmış kayıtlarından sürer. İnd
 Yerel yönetici paneli korunur: `python server.py`, ardından `http://127.0.0.1:8765`. Bu yerel geliştirme sistemi, üretim hesabı veya çevrimiçi sunucu değildir; yinelenen işlem kimliği tekrar ödeme yapmaz.
 
 Son devam: [havada güçlü saldırı, kayıt geçişleri ve arayüz doğrulaması](docs/DEVAM_KONTROLU.md).
+
+Sekiz botun bağımsız karşılaşma kontrolü: `python tools/validate_bot_squad.py --godot godot`. Sonuç [bot-squad-029-validation.json](docs/bot-squad-029-validation.json) içindedir.

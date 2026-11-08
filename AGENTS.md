@@ -1,6 +1,6 @@
 # Wolf Rogue Blood çalışma kuralları
 
-- Son kullanıcı talimatı (0.28 çalışması): kalan farkları mümkün olduğunca çöz; bu aşamada APK hazırlama/yayımlama. Son yanıtta yeni gerçek oyun fotoğraflarının klasör bağlantısını ver. Çevrimdışı kapsam ve video yerleşimi korunur.
+- Son kullanıcı talimatı (0.29 çalışması): kalan farkları mümkün olduğunca çöz; bu aşamada APK hazırlama/yayımlama. Son yanıtta yeni gerçek oyun fotoğraflarının klasör bağlantısını ver. Çevrimdışı kapsam ve video yerleşimi korunur.
 
 - Kalıcı FT düzeltmesi (0.25): mor el parlaması Mor Pençe sahipliğine bağlı değildir; yalnızca başarıyla etkinleştirilen enerji/FT paketi süresince görünür. FT hareketi hızlandırır ve ana candan bedel alır. İlk yardım ayrı yaşam başına kullanım sınırına sahiptir; tekrar kullanılabilen paket sahipliği her basışta tüketilmez. Kaynakta çözülemeyen hız birimi ve video/sürüm zaman farkı kesin PC değeri diye sunulmaz.
 
@@ -23,3 +23,5 @@
 - Kalıcı inceleme kuralı (0.26): Seyrek kare/temas paftası incelemesini videonun tamamını kesintisiz izlemek diye sunma. Uzun kayıtları ses ve hareket içeren ardışık parçalarla incele; otomatik çözümleme eksik aralıklarını ve başarısız işleri açıkça kaydet. Modelin "enerji mermisi", "zemin patlaması", "hız rampası", "final kararması" gibi tahminlerini gerçek kare ve kaynak doğrulaması olmadan oyun kuralına dönüştürme. 0.26 inceleme yöntemi ve sınırları `docs/PC_REFERANS_026.md` içindedir.
 
 - FT zaman/can kuralı (0.27): `docs/power-timing-source-027.json` ve iki kaydın özgün HP dizisi, her saniye mevcut kesirli ana HP üzerinden yüzde kaybını doğrular. Nakit FT: ilk %25, sonra saniyede %2, 10 saniye; altın FT: ilk %50, sonra saniyede %5, kaynak ikili süre 7 saniye. Ekran değeri aşağı yuvarlanır, iç kesir korunur. İlk yardımın +2/+5 HP tikleri ayrıdır; yanlış dakika başına düz eksiltmeyi geri getirme. Hız +50/+100 biriminin PC dönüşümü hâlâ doğrulanmamıştır.
+
+- 0.29: altı oyun kaydından 5 saniyede bir alınan 902 kare yeniden incelendi; kesintisiz insan izlemesi diye sunulmaz. Botlar sekiz canlı yuvada farklı ve yeniden doğuşta sabit ad/karakter/izinli silah kullanır. Pençe ekipmanı açık yerel bot yüklemesidir; eksik varsayılan kaynak dokusu yerine özgünmüş gibi doku uydurulmaz. Seviye mevcut GP ve 62 kaynak rütbeye bağlıdır; GP eşikleri yereldir, ikinci XP cüzdanı tutulmaz. APK hazırlama/yayımlama.

@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-028-visual-validation.json':40,'update-027-visual-validation.json':58,'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-029-source-visual-validation.json':3,'update-029-visual-validation.json':26,'update-028-visual-validation.json':40,'update-027-visual-validation.json':58,'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -30,6 +30,16 @@ def check(root=ROOT):
                     blockers.append('Visual evidence missing or changed: '+capture.get('name', '?'))
     from check_native_weapons import check as native_check
     blockers.extend(native_check(root)['blockers'])
+    proof29=json.loads((root/'docs/mobile-029-validation.json').read_text()) if (root/'docs/mobile-029-validation.json').is_file() else {}
+    if not proof29.get('passed') or proof29.get('checks',0)<989 or proof29.get('arsenalProfiles')!=59 or proof29.get('rankLevels')!=62:blockers.append('Distinct NPC identities, native claws, physical tactics and saved GP/rank levels have not passed')
+    squad29=json.loads((root/'docs/bot-squad-029-validation.json').read_text()) if (root/'docs/bot-squad-029-validation.json').is_file() else {}
+    if not squad29.get('passed') or squad29.get('checks')!=13 or len(squad29.get('traces',{}))!=8 or squad29.get('runtimeCodeSha256')!=fingerprint:blockers.append('Eight-actor autonomous squad encounter has not passed on this runtime')
+    audit29=json.loads((root/'docs/video-audit-029.json').read_text()) if (root/'docs/video-audit-029.json').is_file() else {}
+    if audit29.get('totalFiveSecondCaptures')!=902 or not audit29.get('all59ContactPagesManuallyInspected') or len(audit29.get('sources',[]))!=6:blockers.append('Six-video five-second screenshot review is incomplete')
+    for source in audit29.get('sources',[]):
+        for page in source.get('pages',[]):
+            path=root/page.get('path','__missing__')
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=page.get('sha256'):blockers.append('Video review contact page missing/changed: '+page.get('path','?'))
     proof28=json.loads((root/'docs/mobile-028-validation.json').read_text()) if (root/'docs/mobile-028-validation.json').is_file() else {}
     if not proof28.get('passed') or proof28.get('checks',0)<3126 or proof28.get('nativeWeaponsEquipped')!=903 or proof28.get('grenadeViewmodels')!=31 or proof28.get('projectileDefinitionsExercised')!=72:blockers.append('Native weapons, throw/reload motion, all projectile classes and five source weapon modes have not passed')
     proof27=json.loads((root/'docs/mobile-027-validation.json').read_text()) if (root/'docs/mobile-027-validation.json').is_file() else {}

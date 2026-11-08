@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
+      "sha256": "fd447dbef9546d6c582d20765540f7755b9c24c110f693d69680cb00b19ab913"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
         "section/battle"
       ],
       "width": 1280,
-      "sha256": "aec004193bf44ca81bf01eb6cf782aeb9289704a2dfccdb2e2510f7338b4677e"
+      "sha256": "fa3068077fffad8471ff51f406bff5017b63c0c8dc5a19872e2a1eb11e27d7a6"
     },
     {
       "height": 720,
@@ -58,7 +58,7 @@
         "interface/messagebox"
       ],
       "width": 1280,
-      "sha256": "24533d2e8cff511717592bab4ea34a2a41613d0018c8e0db64bccadb01c7080a"
+      "sha256": "63b02509454c509d3c372ec613a68169a0af4ea1733d5ade7a3680774e53adc9"
     },
     {
       "height": 720,
@@ -81,7 +81,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "fed27cb9194b48630cb741a2f338e3eaec41c2c3f4f88a67a7c2673b47bee49d"
+      "sha256": "c9a8ebcda6d3c387d5b72652d04e6ca90a309eb24cfe915f7a2c33c9cc86f876"
     },
     {
       "height": 720,
@@ -104,7 +104,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "5f8440dc2ff63b1c102c04909feeb5a7397b615ab05d0a61887d406925c86356"
+      "sha256": "8aadae38293957005f3a0f4b237a473995da9778638e73c11f1ffc49d946ed1a"
     },
     {
       "height": 720,
@@ -127,7 +127,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "a26348883a35900047f7cf983550c46f0f37d700bd3702c7c0a533014027c62d"
+      "sha256": "0293b422e976f2d13a944c97ea08524d9a614e770745ee79eed7843bbe805aa6"
     },
     {
       "height": 768,
@@ -150,7 +150,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1024,
-      "sha256": "1cbff9b439fa91aa7b8f972db7e88d6f4fc8e70b1f1c6a339599031e0f02a996"
+      "sha256": "0ebefa12bda099665203cd9a17353dff71034ca25c91ef376dfcfc60d8da3df0"
     },
     {
       "height": 1080,
@@ -173,7 +173,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1920,
-      "sha256": "709c229052a96c78381992db2ab34a4f2154466c89095f0888e17fb17cbfa03d"
+      "sha256": "b043ace167494b4b3db0cea395630ce90ae5bedc9ba03e2cc611227e167c67d3"
     },
     {
       "height": 720,
@@ -196,7 +196,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "1b5ca069c0a8da405cb91748a6b3a7d149e466d3d360b4c7922f2337e8d1d50e"
+      "sha256": "da31b04e7714b817ea2c0d941a9bc0a6d1a6df3264f364e1bcdfcbcbecb298be"
     },
     {
       "height": 720,
@@ -220,7 +220,7 @@
         "interface/charequipmentpage"
       ],
       "width": 1280,
-      "sha256": "8cb29288c3c4c044f64f12bc0c61808fab63a6785a37b5246b1fc956b69a937c"
+      "sha256": "ced7e81dcc0c90f066c5fdf4482b91223111f2b53f35c1fd0bc7f99a019a91d3"
     },
     {
       "height": 720,
@@ -243,7 +243,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "49256ef56665fdcdb8f199b2eda6850039de8d025e3475066afa337c68b375d9"
+      "sha256": "3234aa56b0674fb5dc48ecc83cdf8f6020663c6772cc8eeb044aa7a6ae5ef8ca"
     },
     {
       "height": 720,
@@ -266,7 +266,7 @@
         "interface/iteminfopropertysheet"
       ],
       "width": 1280,
-      "sha256": "dfd22b5fd63eecc189dc924815574557e4aec6d2be92c2cca5e1ac10985b88d9"
+      "sha256": "8331753eb12dca6ee88445dc14439e401dce85e71074e7e96b14083cf06ed980"
     },
     {
       "height": 720,
@@ -290,7 +290,7 @@
         "interface/abilityequipmentpage"
       ],
       "width": 1280,
-      "sha256": "faccf530c7423cf3b54242c13e25d584885de7105e5bc6eed7d6dbbdf905aea4"
+      "sha256": "26ab64fe8debc00d966a03c4d08c1c948f2bf13393378ad8373e01588c61a292"
     },
     {
       "height": 720,
@@ -311,7 +311,7 @@
         "interface/card/cardpropertysheet"
       ],
       "width": 1280,
-      "sha256": "9a267d16d55c81c406009ad29a0b825ad693c5dcf7bdb84f1700d45b506cf31c"
+      "sha256": "1717d623542c6c5c3e374b21505e2945a0b9ed068f3b2bafb9e6e8677929825f"
     },
     {
       "height": 720,
@@ -332,7 +332,7 @@
         "interface/soundpropertypage"
       ],
       "width": 1280,
-      "sha256": "1021c6eb6b7b52b2b1ef35ff251f26f18ee49ff861813d2233a0edb3bf691522"
+      "sha256": "5ce1f01e70df7de703c65e726d111f8186c297886029af03c7ebb18c8ebf7937"
     },
     {
       "height": 720,
@@ -353,7 +353,7 @@
         "interface/controlpropertypage1"
       ],
       "width": 1280,
-      "sha256": "6b00e055bb98f5948d4636224be3b737cf4091a06685d1fe56cf84e71a7c5244"
+      "sha256": "f1013f5039eb79868f642499fe27e72e9d48c525c060590810b5630c19b38807"
     },
     {
       "height": 720,
@@ -374,7 +374,7 @@
         "interface/graphicpropertypage"
       ],
       "width": 1280,
-      "sha256": "670475841d177ee0fa6caba9ce72d58f76778f964e0be230d151769edb11b692"
+      "sha256": "349ab2516fe3e6b2ec6ef082fb9312f2761ec7d877623e0f6006cecd26d84d7c"
     },
     {
       "height": 720,
@@ -395,7 +395,7 @@
         "interface/theotherspropertypage"
       ],
       "width": 1280,
-      "sha256": "4f46e1a80d8b189333954e542f1ce0059bfa6bfbb3627bb9d30856801fa757b3"
+      "sha256": "0795be051a779a8cad3c21ec02522aaa45ee0b4bc84cfd8f93baef37aeafe4f1"
     },
     {
       "height": 720,
@@ -417,7 +417,7 @@
         "interface/messagebox"
       ],
       "width": 1280,
-      "sha256": "58c90380fb7cc6222c5df1daae9b8e1164878e804994d65edc0e263be1e0004d"
+      "sha256": "8a4a04e41b7eb1dc50dbd2c840644adb1dce608c594cfc10bf85cf65e3ffb391"
     },
     {
       "height": 720,
@@ -437,7 +437,7 @@
         "interface/userinfopropertypage"
       ],
       "width": 1280,
-      "sha256": "7fd495d11e00fd6ca066d665c4bfc9b9c823dd88ef631bb011eb054e5e3d0579"
+      "sha256": "2bb994be4210cbe2882077da28c5cc643897e4c5063f61f3f6cddedd91e2dfaf"
     },
     {
       "height": 720,
@@ -457,7 +457,7 @@
         "interface/giftbox"
       ],
       "width": 1280,
-      "sha256": "02cbb02bffdda4a92e7440778c55508dc9caf759b44d2784f33ba8e8628f5400"
+      "sha256": "8b0694aff8e6dd72cfa8ba5666a653511bd7b55f72dcab771a5cce7478e1773b"
     },
     {
       "height": 720,
@@ -476,7 +476,7 @@
         "interface/wolfeventdialog"
       ],
       "width": 1280,
-      "sha256": "4a84cef2fcf0a9360c73940fe7d4cf8ea5a2e7e7329a85ae644607650f532658"
+      "sha256": "fe37e097bf5a8f8bcdd21646890e7c51dd9b7ea45e5f59988a9e27028b23cf96"
     },
     {
       "height": 720,
@@ -495,7 +495,7 @@
         "interface/wolfpass/wolfpassmissiondlg"
       ],
       "width": 1280,
-      "sha256": "84a65920dd47d2f7446859ea51d7e9fb733d6bacbecd9527ecc660b0661b8b5f"
+      "sha256": "46480af620e7a1a31a7acbe00327cf075898ca0993373c1af60c76adef21da9b"
     },
     {
       "height": 720,
@@ -515,7 +515,7 @@
         "interface/userrecord"
       ],
       "width": 1280,
-      "sha256": "78e86932671164a45fec14bdfe08445d3f45aa2dc5e960664f326603238ead7c"
+      "sha256": "459795f0051247c5be88052c68276ab59ccbcccfd91491e0721a84809b86c1f9"
     },
     {
       "height": 720,
@@ -535,7 +535,7 @@
         "interface/messagebox"
       ],
       "width": 1280,
-      "sha256": "5304bf4af0bacd7087602884d4bd0c9642685c8fb9b43262cf8bcdf502c1dd90"
+      "sha256": "eafcc6b64e3c905f24087f8db1d5a2a83e47af77bae36a6d6387c7d3866c906a"
     },
     {
       "height": 720,
@@ -554,7 +554,7 @@
         "section/rankingsection"
       ],
       "width": 1280,
-      "sha256": "4c65429c4010bae7a9a269cbde282a998601bab3b9917da9015c0a6b12a4cc23"
+      "sha256": "af8fb2bcd89c5e6550f22b4bdc2a8aa4db713a3e8be8af260fb85094ccc54965"
     },
     {
       "height": 720,
@@ -574,7 +574,7 @@
         "interface/gameoption"
       ],
       "width": 1280,
-      "sha256": "1d18ea5d8bb2771db9f66f25364712f4b6962dbbbf2366ded8f504b3b8bed8b1"
+      "sha256": "f612b09b4e35b25abd84eefa354e4fa1cfe7f7175aacdca066534dbed686d3e8"
     },
     {
       "height": 720,
@@ -594,7 +594,7 @@
         "interface/fielduserbutton"
       ],
       "width": 1280,
-      "sha256": "b51ebed9c55f9895cdce09f2e9c5c3bf4ad0cde26f20fb48fc6624cfe6810d9b"
+      "sha256": "cd2b6d89a386c3ae1053453b3e6cdffd5d55c3ff8d779b1aa42aba136e1ab653"
     },
     {
       "height": 720,
@@ -673,7 +673,7 @@
         "interface/fielduserbutton"
       ],
       "width": 1280,
-      "sha256": "e30582ce560b2cd11f6384c03b5edd7123aa8eca2833a3f5928b00da827b6167"
+      "sha256": "8a31271ab9f8af70ee3a2e23cf03b1bddb11a0f7d2b31779b6a6d1535dde3308"
     },
     {
       "height": 720,
@@ -700,7 +700,7 @@
         "section/result"
       ],
       "width": 1280,
-      "sha256": "52f89629113a8c36e2fed4561b1d1260cc3ab54ec52d4fa6a7ab8506a7629fb1"
+      "sha256": "aae35533129304850dd81e043600f455a565f490d5b086f2cfc1af637e639a11"
     },
     {
       "height": 720,
@@ -708,7 +708,7 @@
       "path": "docs/review/pc-native/human-bot-hard-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "93e03bf91338ba2a5bf6bd51d7a51f7e9051c233baa34a2320cb414cc42f3127"
+      "sha256": "45eff92d7aaae24d366df016e09ffb1ebf78f5ce974d4b1835ac63679ae49f68"
     },
     {
       "height": 720,
@@ -716,7 +716,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a534bc492233623973174674f62daad3263ece8212e83aab63e058104195f975"
+      "sha256": "8b0f8d4ab4c977e78dc307afccae914a652dfd298cc6144c812fd210fd1dda0c"
     },
     {
       "height": 992,
@@ -753,7 +753,7 @@
         "interface/fieldbutton"
       ],
       "width": 1920,
-      "sha256": "633085f79908e345015344bb440d2538095455c7629e53c5c57999ff501c8b59"
+      "sha256": "0cf21f4015544467055277edb4bb8a4f4747430d13d840bf86c484a0469a70c8"
     },
     {
       "height": 1080,
@@ -772,7 +772,7 @@
         "section/serverlist"
       ],
       "width": 1920,
-      "sha256": "f1f406fafae974ae56674cf2a6cf236813897df0252eeb13f94655b212bf8a89"
+      "sha256": "8c34510e638e1a19b4d4899c9573f194262515aeaa2f9ba95a8e2bac4d465710"
     },
     {
       "height": 768,
@@ -793,12 +793,12 @@
         "interface/fieldbutton"
       ],
       "width": 1024,
-      "sha256": "e6b0c981eeb6bb9f590dbc02f1f96ea0af0105ccd89cb558d7bab46e23979497"
+      "sha256": "4a677db27ffcf6e438ef96f4e14f6d200fa32755aa00b8e890629e5ea575f3b4"
     }
   ],
   "display": "X11",
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

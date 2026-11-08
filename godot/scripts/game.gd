@@ -49,6 +49,7 @@ var boxes=BoxCollection.new()
 var hunt=LocalHunt.new()
 var tutorial=LocalTutorial.new()
 var ranks=RankBook.new()
+var level_events=[]
 var map_photo:TextureRect
 var match_roster={}
 var removed_bot_ids=[]
@@ -137,6 +138,7 @@ var menu_backdrop: ColorRect
 var transient_effects: Node3D
 var projectile_catalog={}
 var bot_weapon_profiles={}
+var bot_roster=preload("res://scripts/bot_roster.gd").new()
 var pending_throw={}
 var shell_reload={}
 var weapon_cooldowns={}
@@ -361,7 +363,10 @@ func weapon_capacity():
 	return int(player.weapon_info.get("shotsPerClip", 30))
 
 func weapon_allowed_item(item):return match_rules.weapon_allowed(item.get("category",""),player.native_weapon_rules.get(item.get("id",""),{}).get("sourceKind",0))
-func bot_weapon_profile():
+func bot_weapon_profile(actor=null):
+	if is_instance_valid(actor):
+		var profile=bot_roster.arsenal.get(actor.roster_identity.get("weaponId",""),{})
+		if not profile.is_empty():return profile
 	if int(local_room.get("mode",0)) in [1022,1023,1024,1025,1026]:return bot_weapon_profiles[match_rules.preferred_categories()[0]]
 	return JSON.parse_string(FileAccess.get_file_as_string("res://assets/bots/catalog.json"))
 
@@ -1018,7 +1023,8 @@ func spawn_enemy(kind="",difficulty="",team=""):
 	enemy.kind=match_rules.form_lock if match_rules.enabled and match_rules.form_lock!="mixed" else (kind if kind in ["human","wolf"] else ("wolf" if int(local_room.get("mode",0))==WOLF_BATTLE else ((hunt.enemy_kind() if team!=local_room.get("team","blue") else hunt.player_form) if hunt.active else ("wolf" if bot_spawn_count%2==0 else "human"))))
 	var slot=0
 	while team+"-"+str(slot) in removed_bot_ids or enemies.get_children().any(func(bot):return actor_alive(bot) and bot.roster_id==team+"-"+str(slot)):slot+=1
-	enemy.roster_id=team+"-"+str(slot);enemy.display_name=("Kırmızı" if team=="red" else "Mavi")+" "+str(slot+1)
+	enemy.roster_id=team+"-"+str(slot);enemy.roster_identity=bot_roster.identity(self,team,slot);enemy.display_name=enemy.roster_identity.name
+	enemy.character_info=book.characters.filter(func(r):return r.id==enemy.roster_identity.characterId)[0]
 	if not match_roster.has(enemy.roster_id):match_roster[enemy.roster_id]={"id":enemy.roster_id,"name":enemy.display_name,"team":team,"kills":0,"deaths":0,"gp":0,"gold":0}
 	enemy.difficulty=difficulty if BotRules.LEVELS.has(difficulty) else bot_difficulty
 	enemy.position = points.pick_random()
@@ -1331,6 +1337,7 @@ func end_round(title):
 	if match_roster.has("player"):
 		match_roster.player.kills=kills;match_roster.player.deaths=deaths;match_roster.player.gp=last_result.walletRewards.gp;match_roster.player.gold=last_result.walletRewards.gold
 	last_result.roster=match_roster.values().map(func(row):return row.duplicate(true))
+	last_result.progression={"before":ranks.progress(int(match_wallet_start.get("gp",wallet.gp))),"after":ranks.progress(int(wallet.gp)),"earnedGp":last_result.walletRewards.gp}
 	bomb_presentation.reset()
 	open_interface("result")
 
@@ -1521,12 +1528,18 @@ func grant_money(currency, amount, reason):
 	if remote_player != "" and not OS.has_feature("android"):
 		grant_queue.append({"playerId": remote_player, "currency": currency, "amount": amount, "reason": reason, "requestId": "godot-%s-%s" % [Time.get_ticks_usec(), randi()]})
 	else:
+		var previous_level=ranks.progress(int(wallet.gp))
 		var candidate = wallet.duplicate()
 		candidate[currency] = mini(1000000000, int(wallet[currency]) + amount)
 		if not save_wallet(candidate):
 			announce("Bakiye kaydedilemedi; işlem uygulanmadı.")
 			return false
 		wallet.merge(candidate, true)
+		if currency=="gp":
+			var after=ranks.progress(int(wallet.gp))
+			if after.level>previous_level.level:
+				level_events.append({"from":previous_level.level,"to":after.level,"rank":after.rankName,"gp":after.gp})
+				if level_events.size()>8:level_events.pop_front()
 	update_hud()
 	return true
 

@@ -39,7 +39,7 @@ func run():
 	p.claw_trail.clear();p.claw_trail.refresh_glow();check(p.claw_trail.glow.size()==2,"Changing a claw ribbon cannot duplicate the energy effect")
 	game.inbox.state.powerSlots.claw="";p.claw_trail.refresh_glow();check(p.claw_trail.glow.size()==2,"Changing the claw cannot cancel an active FT effect")
 	game.clear_power_effects();await frames();check(p.claw_trail.glow.is_empty(),"Ending FT removes both glows independently of claw ownership")
-	game.spawn_enemy("wolf","normal","red");await frames();var bot=game.enemies.get_child(0);bot.set_physics_process(false)
+	game.bot_roster.identity(game,"red",0).characterId="pair-model170";game.spawn_enemy("wolf","normal","red");await frames();var bot=game.enemies.get_child(0);bot.set_physics_process(false)
 	check("icewolf" in fx.model_record(bot).get("donor",""),"Ice response uses the actual attacking character donor")
 	var hp=game.health;game.take_damage(1,bot.position,{"attackerTeam":"red","sourceActor":bot})
 	check(game.health==hp-1 and fx.frost.size()==1,"Confirmed ice hit adds presentation without extra damage")

@@ -2,7 +2,7 @@ config_version=5
 
 [application]
 config/name="Wolf Rogue Blood"
-config/version="0.28.0-dev"
+config/version="0.29.0-dev"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"

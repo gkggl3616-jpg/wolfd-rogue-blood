@@ -7,7 +7,7 @@
       "path": "docs/review/human-014/human-character-inventory-014.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9819f33256fc38b0fe48a97f7231f3452b19faef06f56b199812925335e08b96"
+      "sha256": "ba40e1070e2d907b48271b90c260149867bb7afc40788afd81f6640acc3c0532"
     },
     {
       "height": 768,
@@ -15,7 +15,7 @@
       "path": "docs/review/human-014/human-character-inventory-native-014.png",
       "saved": true,
       "width": 1024,
-      "sha256": "2ea4cb3a6efc567aadc2531893b1e765e77199d0d2adbbdc1f5f916d6d15f23b"
+      "sha256": "5ddec2428890f9eaff47e253c0cec500089e65b026c94c5624954ca09d814f48"
     },
     {
       "height": 720,
@@ -30,5 +30,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureCombatEvents": true,
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

@@ -21,7 +21,7 @@
       "reversed": false
     },
     {
-      "landingError": 0.13166780769825,
+      "landingError": 0.13166818022728,
       "link": 1,
       "map": 72.0,
       "reversed": true
@@ -111,7 +111,7 @@
       "reversed": true
     },
     {
-      "landingError": 0.135584115982056,
+      "landingError": 0.144573405385017,
       "link": 10,
       "map": 72.0,
       "reversed": false
@@ -123,7 +123,7 @@
       "reversed": true
     },
     {
-      "landingError": 0.332970261573792,
+      "landingError": 0.410436660051346,
       "link": 11,
       "map": 72.0,
       "reversed": false
@@ -195,13 +195,13 @@
       "reversed": false
     },
     {
-      "landingError": 0.0976408272981644,
+      "landingError": 0.134413570165634,
       "link": 18,
       "map": 72.0,
       "reversed": false
     },
     {
-      "landingError": 0.144735127687454,
+      "landingError": 0.116681985557079,
       "link": 18,
       "map": 72.0,
       "reversed": true
@@ -213,7 +213,7 @@
       "reversed": false
     },
     {
-      "landingError": 0.109663337469101,
+      "landingError": 0.0988608300685883,
       "link": 20,
       "map": 72.0,
       "reversed": false
@@ -417,19 +417,19 @@
       "reversed": false
     },
     {
-      "landingError": 0.13842099905014,
+      "landingError": 0.177993506193161,
       "link": 45,
       "map": 72.0,
       "reversed": false
     },
     {
-      "landingError": 0.150444239377975,
+      "landingError": 0.144280672073364,
       "link": 46,
       "map": 72.0,
       "reversed": false
     },
     {
-      "landingError": 0.151728883385658,
+      "landingError": 0.155810758471489,
       "link": 47,
       "map": 72.0,
       "reversed": false
@@ -489,13 +489,13 @@
       "reversed": false
     },
     {
-      "landingError": 0.13842099905014,
+      "landingError": 0.177993506193161,
       "link": 57,
       "map": 72.0,
       "reversed": false
     },
     {
-      "landingError": 0.151728883385658,
+      "landingError": 0.155810758471489,
       "link": 58,
       "map": 72.0,
       "reversed": false
@@ -879,7 +879,7 @@
       "reversed": true
     },
     {
-      "landingError": 0.137983560562134,
+      "landingError": 0.137983545660973,
       "link": 36,
       "map": 37.0,
       "reversed": false
@@ -903,7 +903,7 @@
       "reversed": false
     },
     {
-      "landingError": 0.137830168008804,
+      "landingError": 0.133398175239563,
       "link": 0,
       "map": 106.0,
       "reversed": false
@@ -915,7 +915,7 @@
       "reversed": true
     },
     {
-      "landingError": 0.143397465348244,
+      "landingError": 0.165603145956993,
       "link": 1,
       "map": 106.0,
       "reversed": false
@@ -963,7 +963,7 @@
       "reversed": false
     },
     {
-      "landingError": 0.11952393501997,
+      "landingError": 0.135838866233826,
       "link": 6,
       "map": 106.0,
       "reversed": false
@@ -975,7 +975,7 @@
       "reversed": true
     },
     {
-      "landingError": 0.123641021549702,
+      "landingError": 0.12257307767868,
       "link": 7,
       "map": 106.0,
       "reversed": false

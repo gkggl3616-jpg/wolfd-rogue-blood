@@ -7,7 +7,7 @@
       "path": "docs/review/update-028/login-source-interface-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
+      "sha256": "fd447dbef9546d6c582d20765540f7755b9c24c110f693d69680cb00b19ab913"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/update-028/home-source-interface-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "aec004193bf44ca81bf01eb6cf782aeb9289704a2dfccdb2e2510f7338b4677e"
+      "sha256": "fa3068077fffad8471ff51f406bff5017b63c0c8dc5a19872e2a1eb11e27d7a6"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/update-028/native-properties-DE-50-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4b79188c4e5de850f79a93440c7482e60463a598dc9e99946bdb409abd993954"
+      "sha256": "7e5809ef78a21a9254040b9eea82efa668c6e4c5863724b2e094697af0bc9628"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/update-028/native-properties-AKEI-47 CLASSIC-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a0cc16e4397fcf04442ed6810f2491737d18197583f30e0a8c3cabf33675804d"
+      "sha256": "3d7b14dbb829dd4a4169b3f82f7b558c5fe3af7868857af5b532d5cac11d3280"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/update-028/native-properties-SUPAS PT-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "76a1bb51d1d16140136f7c979305060063cfe783481179b8744a70ab9e590091"
+      "sha256": "f438e958c6a46b17a88e46092bf1734999029cb92697a6cc72c80ced3ef4bc6a"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/update-028/native-properties-FullMoon-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "5bd290cb06243983692b9d35ec0ce6acba1af46765845b7e67b5470be1b1d65c"
+      "sha256": "282710ce36169e9be0dda722f81d45282777572cb9721397159d0b53a347a756"
     },
     {
       "height": 720,
@@ -183,7 +183,7 @@
       "path": "docs/review/update-028/source-flight-model-Missile-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c738de4a84bff9982d9267e032c474618fa3ef4375a20a67a4859d2f0890d436"
+      "sha256": "7cee43ad05cdcb44ca74cc2ecf65d3604da6ab7f766e90121e17196192b20fd2"
     },
     {
       "height": 720,
@@ -199,7 +199,7 @@
       "path": "docs/review/update-028/source-flight-model-FullMoon-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c2de2e7feea4fe54a3f55657d9277c2ca5cfa503a57782cfc9ca61737fc145f9"
+      "sha256": "351f434f954a27c7b53387d3009132d453d60af9658cc49ac39b0035b5153c32"
     },
     {
       "height": 720,
@@ -231,7 +231,7 @@
       "path": "docs/review/update-028/source-weapon-mode-room-1022-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "05e20eb39f77b93306717e957cd874f0f5327d08c737452b812c682fed4d07f7"
+      "sha256": "c1a0d90b5f7bd70ae3a67bdbd9890bd3a3cfb1d8b40b3576b1671a87b0515945"
     },
     {
       "height": 720,
@@ -239,7 +239,7 @@
       "path": "docs/review/update-028/source-weapon-mode-bot-1022-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0879d5cc74d323e1ff1d3837a358f0ec4dfedd3b404ed17ae8214be5f2e12d74"
+      "sha256": "64a3f1dc5ff5a630c30707e19ebbcd4fd03bd8c9dc967747a082dbf275f17f0a"
     },
     {
       "height": 720,
@@ -247,7 +247,7 @@
       "path": "docs/review/update-028/source-weapon-mode-room-1023-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d0d2ada02aadfd3b0ca1ee35819978a9c5ccf545c8ed1ff1ef4ea8e635387920"
+      "sha256": "e11df1b7b16b6a7c78fca5fbfb645d7889a1b1cd2207c1d4fda4859359836581"
     },
     {
       "height": 720,
@@ -255,7 +255,7 @@
       "path": "docs/review/update-028/source-weapon-mode-bot-1023-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c82b79c29748e585c0e66083d88d688f145568747f53c8af3da3a8285b9bd454"
+      "sha256": "3b1ba51876ed0660939f1aaf8ab3e0cc87bf1a14a84cc7804bb6b58aa916831e"
     },
     {
       "height": 720,
@@ -263,7 +263,7 @@
       "path": "docs/review/update-028/source-weapon-mode-room-1024-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "97f05de5e3a052183e6a77eabc79de188287af8fae44abd2572ea52821e7e628"
+      "sha256": "146986c462f822e979e0fe6331d3eb2b99945340685caec806ce66fef22bd3b1"
     },
     {
       "height": 720,
@@ -271,7 +271,7 @@
       "path": "docs/review/update-028/source-weapon-mode-bot-1024-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "898a246df70ea127ea1b1f29a102c78413509749ab9ae9f3d5de8621ca4cf657"
+      "sha256": "9ab91b58c8ef875543b8eb46a43bdcf7e56683202a192d938473badd6982341b"
     },
     {
       "height": 720,
@@ -279,7 +279,7 @@
       "path": "docs/review/update-028/source-weapon-mode-room-1025-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8c02f5f9e84dc9bda92c0dc8609a36604342d7a18c08698b779930bab76171fd"
+      "sha256": "b1017ec6961228708aa1a905c04533a4fb14161a3a92e45ff02baf023ab915c6"
     },
     {
       "height": 720,
@@ -287,7 +287,7 @@
       "path": "docs/review/update-028/source-weapon-mode-bot-1025-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "372a789590e20e14a4d037b4ea78a1bc967ebbed07d73fbb95755a9f06cd34c9"
+      "sha256": "579b45bcc2c614901cd82c459dc403248097e624d8c9756e85f51d42e42ea0f2"
     },
     {
       "height": 720,
@@ -295,7 +295,7 @@
       "path": "docs/review/update-028/source-weapon-mode-room-1026-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "23f37e3b88d854f58b9824020a314682a2ce6a2963f16a4148916b0a89aa8ee7"
+      "sha256": "236d88816b1d7bfa6f68db6bc3b2a0d7ae6e08017c514413823ba8d3f32e4beb"
     },
     {
       "height": 720,
@@ -303,7 +303,7 @@
       "path": "docs/review/update-028/source-weapon-mode-bot-1026-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "af311e87e81766dde2ccc903abe439fe1d68775ce0b1b3c0f71303b46cff85f9"
+      "sha256": "7e5ceafd630d268c013ab51a0ef7ca46a267fa68034f823ea5d5c9cd01829902"
     },
     {
       "height": 720,
@@ -319,11 +319,11 @@
       "path": "docs/review/update-028/ft-active-health-cost-and-hand-effect-028.png",
       "saved": true,
       "width": 1280,
-      "sha256": "619baec71212251884e114f6c5b77c1c2d913a82a2d9b3dcac8cb9206e75d7b2"
+      "sha256": "88e06e757dd593175f0777e924a64c5d875442b5b9ec557274c515f3ef4708eb"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

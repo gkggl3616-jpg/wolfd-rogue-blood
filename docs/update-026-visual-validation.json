@@ -6,7 +6,7 @@
       "path": "docs/review/update-026/entry-and-local-profile-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3b61f2f29eb4c966fc8ccfd45049c3d0098a5b816b056068a3b7a424901e4a6a"
+      "sha256": "fd447dbef9546d6c582d20765540f7755b9c24c110f693d69680cb00b19ab913"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-026/source-player-name-dialog-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a2813772c7b54ca47b0084bd8b60ed304a5eb63f45783cc55bb0739d901ff0ee"
+      "sha256": "b6661077380aa0855eb3f79071b8db5a3c44d68350fb35bfc7bccb6dce04488a"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-026/source-local-server-selection-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "59100b8aadca11e26cf09c8d0a5a9386640d1a057428661fa8c94447a1add3ea"
+      "sha256": "6ef4fe5797f86dd6b70b4df0c82d1967656bd7badd241d68a738e5c4d677874c"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-026/source-lobby-empty-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "aec004193bf44ca81bf01eb6cf782aeb9289704a2dfccdb2e2510f7338b4677e"
+      "sha256": "fa3068077fffad8471ff51f406bff5017b63c0c8dc5a19872e2a1eb11e27d7a6"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-026/source-compact-room-creator-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1d18ea5d8bb2771db9f66f25364712f4b6962dbbbf2366ded8f504b3b8bed8b1"
+      "sha256": "f612b09b4e35b25abd84eefa354e4fa1cfe7f7175aacdca066534dbed686d3e8"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-026/source-mode-variant-and-map-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "57a67e436309548855b8e990a457c2f597a24d694696c2444a22d491b6b230ca"
+      "sha256": "6802633d7bfb3a2f5e6c0994e7f413520e5a26ac260f05b0397d012d7ed7afff"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-026/separate-bot-and-match-settings-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "979af29c7e63aea7b096326c6a0f39d9887ce7b714ef34bcb86592864192cc18"
+      "sha256": "ceb40a6482aeb8c8f78204f3e7c99933548400c8122c7369bffacf17dc065024"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-026/source-map-gallery-create-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "898b0f986bd66b6d5e509afccdd22860776400aa2f0de5ddd3fb165712f48d34"
+      "sha256": "18cd683a53fd85c50fb7c60bb2d8f665eac9f4970bb213140ab17966a8f31628"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-026/source-team-rosters-owner-and-bots-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "46aa6f6b145ca9203bde06d0e318a02b3dc10fd388c7b4d846b8bb51b6f7deac"
+      "sha256": "3c23fe3b7d2a0247553979835d735debfe6a08a963ac1ed397cdea93fd150915"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-026/source-team-change-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a3109a2bd970b3149e37e5c2f46f1b99f86777b98528b3ba140c8584830773d4"
+      "sha256": "98a494d597cd982b641d136a1db8c0936d4b90b1ae416194769e8e0b8aa55229"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-026/source-room-rule-dialog-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a6f280770c2adfb65828182a27fdd27f4bbfaaf07bd1702467d1aabe3550d9e5"
+      "sha256": "94d1e0bccc5d9c36af6b04edb1fc5f34150e7f470a4d9e70c0b50b1a54312ecc"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-026/source-map-gallery-room-settings-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f30b1c420ab81d5267f90cf76473dee95376a21be6776e5dd97a5e14934ad3d6"
+      "sha256": "de5da968854322f4ea7150ed9dfb7b69e6baf31116f7fa12a2278e08cdc97756"
     },
     {
       "height": 720,
@@ -102,7 +102,7 @@
       "path": "docs/review/update-026/source-lobby-room-columns-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c44a4ea194a1b86f1ab5bcd9be15f73bb53a4bcc7e1c7a3b38caef9d3530e2f1"
+      "sha256": "879bce5f3ca75a53f93ae9f35106107d94bc36a784d9bc4aace545d89dc1da74"
     },
     {
       "height": 720,
@@ -110,7 +110,7 @@
       "path": "docs/review/update-026/source-room-start-countdown-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0b43ce0d3d0ff7d5703ce7bbdcf94de7ba78d58815dd188b02abe3e3cd0e3b9e"
+      "sha256": "de62fd20ac875d17277f9653f6f8a634ae492826679c22754e6f620d60980f49"
     },
     {
       "height": 720,
@@ -142,7 +142,7 @@
       "path": "docs/review/update-026/source-result-and-return-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "52f89629113a8c36e2fed4561b1d1260cc3ab54ec52d4fa6a7ab8506a7629fb1"
+      "sha256": "aae35533129304850dd81e043600f455a565f490d5b086f2cfc1af637e639a11"
     },
     {
       "height": 720,
@@ -150,11 +150,11 @@
       "path": "docs/review/update-026/source-return-to-same-room-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "71ace93dbee32bdf5dc3089ff9b66a19f38351c8c0639311b5432a0fa2a83e75"
+      "sha256": "56239dc5ea7d85b1280468da6bfad9b42f2cb949e8a4440b05c69110c53a29d0"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

@@ -6,7 +6,7 @@
       "path": "docs/review/update-019/pair-model0-wolf-idle-10-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b9b8edb602b40e5e4ab57a05210c3ba0ad86b1b554f00cf92e5440304ef79979"
+      "sha256": "b3575368d51ab8530882d17647687beaeb1a133dec6dba534c7298c5ada4b505"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-019/pair-model0-wolf-idle-90-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2b835b9e8a2a4d7b3a4623871a96d6e6fdbd2a479dc63104f8a3cc58712cbdc9"
+      "sha256": "0257a4e0e1dfb6c293703fd83a1b700560df3d82a95cc00a5a0ecb70aaafaf86"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-019/pair-model1-wolf-idle-10-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b09bcc0d6aa9c0a48bbd7fee569fcde43e3d5b0eff19d45f5feec2e97e7f3495"
+      "sha256": "45bcc5a652d4dac129be3ee75d4ecd4d7eda3e61db6decd87fca1209c518127f"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-019/pair-model1-wolf-idle-90-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "20d5bad8592fc167c20c0b4db42bf8158cdbaa36ba9fe4a0e0595d8a8525d3e7"
+      "sha256": "9cf73c31d1f8a29adfca7c06c37bf741de3258ad0c9eeb2e8b0dde2325460008"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-019/solid-wolf-og-overlay-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "25dc4f9a70e42af9053b805d1d4e6b76f19b81779550f185e420a726943bb73d"
+      "sha256": "bfd17d79b14e70a168923e5e614b8759cfb54357b412768cc45bda634a3ea63d"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-019/solid-wolf-front-no-showthrough-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "363ee01a9f426716364342c0642ec8edb7a37027234e80f2d4883ab56b39b405"
+      "sha256": "f44ec2eb848d5f793b092f80c0c2537ba3f93bbbec5306ee8642c4efd2df0707"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-019/full-card-character-gifts-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9c9fe793fc62e29d51b5836f2a473d8b08b5aa045684c664925dda053dec7601"
+      "sha256": "3061e447674308775d2afb7a5d6eab7095a3fbdbbc292877c31c2405374bdfe8"
     },
     {
       "height": 450,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-019/expanded-small-phone-header-019.png",
       "saved": true,
       "width": 800,
-      "sha256": "b88f0442c876f989dafa47e71e8e64c076f1b3677ba7f74a05a89e7943c24e10"
+      "sha256": "df02f9d0425959ce3dadd9f0ed432403e881bf640ab2cd4757c90ce9015ed869"
     },
     {
       "height": 1220,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-019/x7-pro-resolution-header-019.png",
       "saved": true,
       "width": 2712,
-      "sha256": "77ef4f068f9eaad1e0988a473c8ce2cf45f086772b9e58a2002ea37381e355ed"
+      "sha256": "a4f7f609fb560d02637632fbf9e256670658fe94d8af928f06de412aff7b4207"
     },
     {
       "height": 720,
@@ -118,5 +118,5 @@
   "rendering": "gl_compatibility",
   "testFixtureCatalogueUnlocked": true,
   "testFixtureGifts": true,
-  "runtimeCodeSha256": "c99cea6a250bb9bc89f39815634c087e67bb79496dc6f32f264e89efb5beb4fe"
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
 }

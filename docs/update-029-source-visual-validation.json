@@ -1,0 +1,34 @@
+{
+  "apkProduced": false,
+  "captures": [
+    {
+      "height": 720,
+      "name": "native-taksim-wolf-without-ft-029",
+      "path": "docs/review/update-029/source-worlds/native-taksim-wolf-without-ft-029.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0193f337278695731fc898b9f458fba09717531c4b26b10a10b0c36e25c9fda1"
+    },
+    {
+      "height": 720,
+      "name": "native-taksim-ft-and-npc-source-claw-029",
+      "path": "docs/review/update-029/source-worlds/native-taksim-ft-and-npc-source-claw-029.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b1d81c8faeb9365d46a709813342a4b31d34255d60d26d7ee27ea8ed51f03cbe"
+    },
+    {
+      "height": 720,
+      "name": "native-taksim-distinct-ice-hit-and-ft-029",
+      "path": "docs/review/update-029/source-worlds/native-taksim-distinct-ice-hit-and-ft-029.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "13495241445a3c88aae3d726cea0ca0c89e2337bf6eb9a27f23c8b81e0a1f7f8"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Actual supplied Taksim geometry with controlled local wolf poses; no native renderer or Android-device claim",
+  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+}

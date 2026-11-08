@@ -9,7 +9,8 @@ func build(view):
 		var column=VBoxContainer.new();column.add_theme_constant_override("separation",0);column.custom_minimum_size.x=294;scroll.add_child(column)
 		var members=[]
 		if team==data.team:members.append({"name":ui.game.profile_name,"owner":true,"bot":false})
-		for i in range(ui.game.bot_limit(team)):members.append({"name":"BOT %d" % (i+1),"owner":false,"bot":true})
+		for i in range(ui.game.bot_limit(team)):
+			var identity=ui.game.bot_roster.identity(ui.game,team,i);members.append({"name":identity.name,"owner":false,"bot":true,"id":identity.id,"characterId":identity.characterId,"weaponId":identity.weaponId})
 		for i in range(8):
 			var host=Button.new();host.flat=true;host.disabled=true;host.custom_minimum_size=Vector2(294,44);column.add_child(host)
 			var row=ui.native("interface/fielduserbutton",host,Vector2.ZERO,Vector2(294,44));row.show_only(["NickName","UserState"])
