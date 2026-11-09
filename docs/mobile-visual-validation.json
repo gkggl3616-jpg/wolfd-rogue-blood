@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "ac2c15936c74ab105cece78e0294175fec1518e6675aeca82243978b68a18f53"
+      "sha256": "c31cb857de298500da4c6ae288700742119ebc922c3ca93c2cf65fd508820871"
     },
     {
       "height": 720,
@@ -629,7 +629,7 @@
       "path": "docs/review/pc-native/wolf-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "578335f46665b0f6f33808dab9b8f44f6cb07607812066c4d968a25d9939bd01"
+      "sha256": "571ee4ba3f9f5b14bb6c4e362f3996cc014a4400b26af4c5690cd35f1c9cbe2a"
     },
     {
       "height": 720,
@@ -637,7 +637,7 @@
       "path": "docs/review/pc-native/wolf-wall-hold-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2af25c2de9aacf28218289ea85f8e34949014b143a65625120152249b592a74e"
+      "sha256": "d61b3b5c148c3a8c8face0d9cb2806a8cf77a1eafc525099aaf9273bb7d85370"
     },
     {
       "height": 720,
@@ -645,7 +645,7 @@
       "path": "docs/review/pc-native/airborne-attack-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6756ad912590aa265787312d6b9d9602b776cd72120652e6c396c5bbf1ed1750"
+      "sha256": "a9d5bb3ae69dbfc2f4daac3bb22a1a4410999a6d6cc837aca5e68ebb46fa79fc"
     },
     {
       "height": 720,
@@ -681,7 +681,7 @@
       "path": "docs/review/pc-native/offline-container-bots-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "faec5e74c8c34dcce0ceece1108a283414ab705a3b8987bba762ffb76aaa0747"
+      "sha256": "99c3af1e8c7e557924b5840a537affb462a1bc2bc40bf923c449ce6d631f7ef0"
     },
     {
       "height": 720,
@@ -708,7 +708,7 @@
       "path": "docs/review/pc-native/human-bot-hard-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "45eff92d7aaae24d366df016e09ffb1ebf78f5ce974d4b1835ac63679ae49f68"
+      "sha256": "df10629d27a8a6213323fc3ebab47b85266e307bb5447ab91dd81976df5975fc"
     },
     {
       "height": 720,
@@ -716,7 +716,7 @@
       "path": "docs/review/pc-native/bot-reload-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8b0f8d4ab4c977e78dc307afccae914a652dfd298cc6144c812fd210fd1dda0c"
+      "sha256": "060be44d52ea479aa95fe75ee15e7da6dcac7a7ff57e6a50b899987747fd56b8"
     },
     {
       "height": 992,
@@ -724,7 +724,7 @@
       "path": "docs/review/pc-native/wolf-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "02cab5ff91b4283da54af8595f440621c120bd9ce445eee01bcaccbf4895c948"
+      "sha256": "59bcaac1b3e2767ca38f53472c06e06bf2aa1fbe44fd0cce3d5bf8dd861d74e3"
     },
     {
       "height": 992,
@@ -732,7 +732,7 @@
       "path": "docs/review/pc-native/human-reference-aspect-2160.png",
       "saved": true,
       "width": 2160,
-      "sha256": "3d2fc1d93e34e6d8be20d97ee8dea0cca8abd2fd25ab318fe8cc498ba4a3271c"
+      "sha256": "4a07246c77f5e30081dccc4eb56910392f63149bddaa030fd0f756437c406392"
     },
     {
       "height": 1080,
@@ -800,5 +800,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

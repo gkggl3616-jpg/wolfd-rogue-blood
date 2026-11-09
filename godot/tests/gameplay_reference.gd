@@ -35,7 +35,7 @@ func run():
 	game.spawn_enemy();var enemy=game.enemies.get_child(0);enemy.set_physics_process(false);enemy.position=Vector3(0,0.1,-1.6)
 	await frames()
 	game.player.action_time=0;game.player.shot_cooldown=0;game.attack()
-	check(enemy.health<100 and game.source_hud.feedback.hit_time>0,"A real weapon hit triggers the source hit marker")
+	check(enemy.health<enemy.max_health() and game.source_hud.feedback.hit_time>0,"A real weapon hit triggers the source hit marker")
 	var previous_health=enemy.health
 	wall=game.block(Vector3(0,1.5,-0.8),Vector3(3,3,0.2),"576371");await frames()
 	game.source_hud.feedback.reset();game.player.shot_cooldown=0;game.attack()

@@ -10,7 +10,7 @@
   "traces": {
     "blue-0": {
       "character": "pair-model1",
-      "maximumTravel": 16.2542152404785,
+      "maximumTravel": 12.1473684310913,
       "minimumHealth": 44,
       "name": "Kuzgun",
       "origin": [
@@ -19,47 +19,47 @@
         12.0
       ],
       "recoveries": 0,
-      "shots": 25,
+      "shots": 20,
       "weapon": "weapon-36533ca892573cd83ef9",
       "weaponName": "AKEI-47 PT"
     },
     "blue-1": {
       "character": "pair-model104",
-      "maximumTravel": 12.9388465881348,
-      "minimumHealth": 4,
+      "maximumTravel": 13.475790977478,
+      "minimumHealth": 68,
       "name": "Ayaz",
       "origin": [
-        6.0,
+        -3.0,
         0.100000001490116,
         12.0
       ],
       "recoveries": 0,
-      "shots": 13,
+      "shots": 22,
       "weapon": "weapon-692fe92303ae49b38fdc",
       "weaponName": "CRISS WT"
     },
     "blue-2": {
       "character": "pair-model452",
-      "maximumTravel": 8.57042503356934,
-      "minimumHealth": 84,
+      "maximumTravel": 11.0573873519897,
+      "minimumHealth": 28,
       "name": "Poyraz",
       "origin": [
-        3.0,
+        9.0,
         0.100000001490116,
         12.0
       ],
-      "recoveries": 1,
-      "shots": 38,
+      "recoveries": 0,
+      "shots": 20,
       "weapon": "weapon-26b6ec6be986fe150647",
       "weaponName": "EM249 Minimi"
     },
     "blue-3": {
       "character": "pair-model498",
-      "maximumTravel": 8.53847694396973,
-      "minimumHealth": 44,
+      "maximumTravel": 10.9093837738037,
+      "minimumHealth": 100,
       "name": "Kıvılcım",
       "origin": [
-        9.0,
+        -6.0,
         0.100000001490116,
         12.0
       ],
@@ -70,22 +70,22 @@
     },
     "red-0": {
       "character": "pair-model0",
-      "maximumTravel": 6.87059688568115,
-      "minimumHealth": 4,
+      "maximumTravel": 9.87647151947021,
+      "minimumHealth": 52,
       "name": "Kutup",
       "origin": [
-        3.0,
+        -3.0,
         0.100000001490116,
         -12.0
       ],
       "recoveries": 0,
-      "shots": 0,
+      "shots": 5,
       "weapon": "weapon-88964c6c14d0096126f2",
       "weaponName": "EXM-26 CS"
     },
     "red-1": {
       "character": "pair-model72",
-      "maximumTravel": 15.1293277740479,
+      "maximumTravel": 11.1269559860229,
       "minimumHealth": 4,
       "name": "Gölgeİz",
       "origin": [
@@ -93,41 +93,41 @@
         0.100000001490116,
         -12.0
       ],
-      "recoveries": 0,
-      "shots": 19,
+      "recoveries": 1,
+      "shots": 14,
       "weapon": "weapon-2539adf97a42fec68b80",
       "weaponName": "CRISS WT(P)"
     },
     "red-2": {
       "character": "pair-model110",
-      "maximumTravel": 5.00026273727417,
-      "minimumHealth": 4,
+      "maximumTravel": 4.33568954467773,
+      "minimumHealth": 12,
       "name": "Çelik",
+      "origin": [
+        3.0,
+        0.100000001490116,
+        -12.0
+      ],
+      "recoveries": 0,
+      "shots": 15,
+      "weapon": "weapon-47e5f891e177533cda7c",
+      "weaponName": "EM-60 PT"
+    },
+    "red-3": {
+      "character": "pair-model476",
+      "maximumTravel": 9.70616626739502,
+      "minimumHealth": 44,
+      "name": "Yıldırım",
       "origin": [
         -9.0,
         0.100000001490116,
         -12.0
       ],
       "recoveries": 0,
-      "shots": 12,
-      "weapon": "weapon-47e5f891e177533cda7c",
-      "weaponName": "EM-60 PT"
-    },
-    "red-3": {
-      "character": "pair-model476",
-      "maximumTravel": 12.7252588272095,
-      "minimumHealth": 4,
-      "name": "Yıldırım",
-      "origin": [
-        6.0,
-        0.100000001490116,
-        -12.0
-      ],
-      "recoveries": 0,
-      "shots": 8,
+      "shots": 10,
       "weapon": "weapon-a653e8635c68c470ca01",
       "weaponName": "GLOC-17"
     }
   },
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

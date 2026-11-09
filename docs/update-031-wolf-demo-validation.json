@@ -1,0 +1,1103 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "wolf-running-240hp-031",
+      "path": "docs/review/update-031/wolf-gameplay/wolf-running-240hp-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1bc167dc4bdb8c395264c438e145de4a6f76701eaba9d256acd60068c70f4edc"
+    },
+    {
+      "height": 720,
+      "name": "wolf-running-after-crouch-release-031",
+      "path": "docs/review/update-031/wolf-gameplay/wolf-running-after-crouch-release-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7f950a0935073193358f13ea4bb3312ef7fde62fdea85f533ed5c17c8ff85c9c"
+    },
+    {
+      "height": 720,
+      "name": "wolf-standing-after-roll-031",
+      "path": "docs/review/update-031/wolf-gameplay/wolf-standing-after-roll-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "38b3c5637d79347ee9c6b41b1495fce7672b714198238af03957e64ce919e5f0"
+    },
+    {
+      "height": 720,
+      "name": "wolf-native-claw-swing-031",
+      "path": "docs/review/update-031/wolf-gameplay/wolf-native-claw-swing-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "74ad1ba29b8c60d93fd9de31c27301a546d912ccdda6344bbc85f4749cdffa83"
+    },
+    {
+      "height": 720,
+      "name": "wolf-native-airborne-pose-031",
+      "path": "docs/review/update-031/wolf-gameplay/wolf-native-airborne-pose-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c10421f57f9959ae877c19def10036c3a122c9b1dd3579c7792cbdfd273cf1b8"
+    }
+  ],
+  "failures": 0,
+  "movieFrameRate": 10,
+  "movieFrames": 80,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Actual default-camera controlled input sequence: run, explicit crouch/release, stationary native roll, native claws and jump. Normal240HP; original claw16018 equipped for demonstration; no FT. Silent render capture.",
+  "trace": [
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        11.8366661071777
+      ],
+      "rolling": false,
+      "sampleSecond": 0.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        11.3933324813843
+      ],
+      "rolling": false,
+      "sampleSecond": 0.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        10.7933301925659
+      ],
+      "rolling": false,
+      "sampleSecond": 0.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        10.1933279037476
+      ],
+      "rolling": false,
+      "sampleSecond": 0.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        9.5933256149292
+      ],
+      "rolling": false,
+      "sampleSecond": 0.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        8.99332332611084
+      ],
+      "rolling": false,
+      "sampleSecond": 0.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        8.39332103729248
+      ],
+      "rolling": false,
+      "sampleSecond": 0.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        7.7933201789856
+      ],
+      "rolling": false,
+      "sampleSecond": 0.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        7.19332075119019
+      ],
+      "rolling": false,
+      "sampleSecond": 0.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        6.59332132339478
+      ],
+      "rolling": false,
+      "sampleSecond": 0.9
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        5.99332189559937
+      ],
+      "rolling": false,
+      "sampleSecond": 1.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        5.39332246780396
+      ],
+      "rolling": false,
+      "sampleSecond": 1.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        4.79332304000854
+      ],
+      "rolling": false,
+      "sampleSecond": 1.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        4.19332361221313
+      ],
+      "rolling": false,
+      "sampleSecond": 1.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        3.59332418441772
+      ],
+      "rolling": false,
+      "sampleSecond": 1.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        2.99332475662231
+      ],
+      "rolling": false,
+      "sampleSecond": 1.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        2.3933253288269
+      ],
+      "rolling": false,
+      "sampleSecond": 1.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        1.79332554340363
+      ],
+      "rolling": false,
+      "sampleSecond": 1.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        1.19332540035248
+      ],
+      "rolling": false,
+      "sampleSecond": 1.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        0.593325257301331
+      ],
+      "rolling": false,
+      "sampleSecond": 1.9
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        0.156658589839935
+      ],
+      "rolling": false,
+      "sampleSecond": 2.0
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -0.143341436982155
+      ],
+      "rolling": false,
+      "sampleSecond": 2.1
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -0.443341493606567
+      ],
+      "rolling": false,
+      "sampleSecond": 2.2
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -0.743341565132141
+      ],
+      "rolling": false,
+      "sampleSecond": 2.3
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -1.04334163665771
+      ],
+      "rolling": false,
+      "sampleSecond": 2.4
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -1.34334135055542
+      ],
+      "rolling": false,
+      "sampleSecond": 2.5
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -1.64334106445312
+      ],
+      "rolling": false,
+      "sampleSecond": 2.6
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -1.94334077835083
+      ],
+      "rolling": false,
+      "sampleSecond": 2.7
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -2.24334049224854
+      ],
+      "rolling": false,
+      "sampleSecond": 2.8
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch_run",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -2.54334020614624
+      ],
+      "rolling": false,
+      "sampleSecond": 2.9
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -3.00667357444763
+      ],
+      "rolling": false,
+      "sampleSecond": 3.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -3.60667300224304
+      ],
+      "rolling": false,
+      "sampleSecond": 3.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -4.20667266845703
+      ],
+      "rolling": false,
+      "sampleSecond": 3.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -4.80667209625244
+      ],
+      "rolling": false,
+      "sampleSecond": 3.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -5.40667152404785
+      ],
+      "rolling": false,
+      "sampleSecond": 3.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -6.00667095184326
+      ],
+      "rolling": false,
+      "sampleSecond": 3.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -6.60667037963867
+      ],
+      "rolling": false,
+      "sampleSecond": 3.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -7.20666980743408
+      ],
+      "rolling": false,
+      "sampleSecond": 3.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -7.80666923522949
+      ],
+      "rolling": false,
+      "sampleSecond": 3.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "run",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 3.9
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.0
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.1
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.2
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.3
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.4
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.5
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.6
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.7
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "special_attack",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": true,
+      "sampleSecond": 4.8
+    },
+    {
+      "capsuleHeight": 1.20000004768372,
+      "clip": "crouch",
+      "crouching": true,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 4.9
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack_right",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack_right",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack_right",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "attack_right",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.000149735249578953,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 5.9
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.547512948513031,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_air",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.894179582595825,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_air",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        1.04084622859955,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_air",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.987512826919556,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_air",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.734179437160492,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_air",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.280845999717712,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_land",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_land",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "jump_land",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 6.9
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.0
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.1
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.2
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.3
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.4
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.5
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.6
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.7
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.8
+    },
+    {
+      "capsuleHeight": 1.79999995231628,
+      "clip": "idle",
+      "crouching": false,
+      "hp": 240,
+      "position": [
+        0.0,
+        0.00011134147644043,
+        -8.40667057037354
+      ],
+      "rolling": false,
+      "sampleSecond": 7.9
+    }
+  ],
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc",
+  "movie": {
+    "path": "docs/review/update-031/wolf-gameplay/wolf-gameplay-031.mp4",
+    "sha256": "74efce5206c91b664a5a31cc954c39eaea2cd9595f657457fce735f1aac298e7",
+    "bytes": 609958,
+    "frames": 80,
+    "frameRate": 10,
+    "durationSeconds": 8.0,
+    "audio": false,
+    "source": "Real Godot viewport frames; normal simulation inputs/autonomous bots; fixed fps60 sampled every6physics ticks"
+  }
+}

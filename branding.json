@@ -11,9 +11,9 @@
   "androidBuildType": "signed-offline-test-release",
   "physicalAndroidDeviceTested": false,
   "offlineAndroidPackage": "com.wolfrogue.blood.offline",
-  "offlineVersion": "0.30.0-offline",
-  "lastVerifiedApkVersion": "0.30.0-offline",
-  "lastVerifiedApkReport": "docs/android-offline-test-build-030.json",
+  "offlineVersion": "0.31.0-offline",
+  "lastVerifiedApkVersion": "0.31.0-offline",
+  "lastVerifiedApkReport": "docs/android-offline-test-build-031.json",
   "offlineTestAndroidPackage": "com.wolfrogue.blood.offline.test",
   "lastVerifiedProductionApkVersion": "0.20.0-offline",
   "lastVerifiedProductionApkReport": "docs/android-offline-build.json"

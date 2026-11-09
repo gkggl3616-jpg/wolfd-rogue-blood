@@ -1,0 +1,1766 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "zero-sp-normal-wolf-enabled-031",
+      "path": "docs/review/update-031/zero-sp-normal-wolf-enabled-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ad93e1e768db2ec0d98a4b6d873971d4c5354eed548ac58b4ec4fb05dcb64738"
+    },
+    {
+      "height": 720,
+      "name": "normal-wolf-240hp-touch-confirmed-031",
+      "path": "docs/review/update-031/normal-wolf-240hp-touch-confirmed-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4913ed84340de057ece0d1cfc6687f4d23179e1cecb211e6fb0cbbe9be4d6e6b"
+    },
+    {
+      "height": 720,
+      "name": "wolf-selection-paid-variants-and-current-confirm-031",
+      "path": "docs/review/update-031/wolf-selection-paid-variants-and-current-confirm-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "81bdbb4cac95533130463aeae7f2513e8c146ddd92c640e1d76b07f343533956"
+    },
+    {
+      "height": 720,
+      "name": "guardian-320hp-local-delta-031",
+      "path": "docs/review/update-031/guardian-320hp-local-delta-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7989cad34526f31b0a35ad76e08d78e8f25bd29fbdd8201f595c3be9a6f40b9c"
+    },
+    {
+      "height": 720,
+      "name": "ghost-source-body-225hp-031",
+      "path": "docs/review/update-031/ghost-source-body-225hp-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "38ed6f4556817409a0e1d6ca59a987e324512bc50f24dd31511f9761495b03c0"
+    },
+    {
+      "height": 720,
+      "name": "ghost-stationary-source-cloak-031",
+      "path": "docs/review/update-031/ghost-stationary-source-cloak-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2210b1b880c303523908fbc5d59d29f0e4d7eb58cd4948f2d17c04d961736ba5"
+    },
+    {
+      "height": 720,
+      "name": "ghost-native-howl-031",
+      "path": "docs/review/update-031/ghost-native-howl-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b78ea896fccb3390472a934da8d0fe728aedec596643ae580d2603b3f68ebba6"
+    },
+    {
+      "height": 720,
+      "name": "human-base-100hp-031",
+      "path": "docs/review/update-031/human-base-100hp-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "88ec7b5df1a2cb109a7666bad1e759e48ff89b58706f080d827d9007dfebe918"
+    },
+    {
+      "height": 720,
+      "name": "actual-run-native-upper-lower-upright-031",
+      "path": "docs/review/update-031/actual-run-native-upper-lower-upright-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "873c68a7a18db3c26018d27d5df809e58008c3c0eea0816e1bca5c7e8798a116"
+    },
+    {
+      "height": 720,
+      "name": "deliberate-crouch-distinct-from-run-031",
+      "path": "docs/review/update-031/deliberate-crouch-distinct-from-run-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ddb69e71bc70d4216d03d756412a14fa1b93912da0b66efe5737a49426e92d11"
+    },
+    {
+      "height": 720,
+      "name": "released-crouch-restores-standing-031",
+      "path": "docs/review/update-031/released-crouch-restores-standing-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "41f8eca234ee47876b74170f86dfd2bb4380a4aaa071a908df4f6368f430bb23"
+    },
+    {
+      "height": 720,
+      "name": "source-roll-start-031",
+      "path": "docs/review/update-031/source-roll-start-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0b488ec66f871fc354928709e9f9ca00c8a388ddd1b0546b29c90ceaa8ca75d0"
+    },
+    {
+      "height": 720,
+      "name": "source-roll-moving-031",
+      "path": "docs/review/update-031/source-roll-moving-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "79c9469b78567eca332c34b87f719a93f71f0efa76052c59e04521c0a3e8ada3"
+    },
+    {
+      "height": 720,
+      "name": "roll-completed-upright-031",
+      "path": "docs/review/update-031/roll-completed-upright-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "cf57b5fd90f0ae5f8099b191e2133fcba20ac54239d4191516aca6694624e85f"
+    },
+    {
+      "height": 720,
+      "name": "native-layered-idle-031",
+      "path": "docs/review/update-031/native-layered-idle-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fb57ca6c190229d0474d6a943466e397b7b45444765413c6e93febd65fa52015"
+    },
+    {
+      "height": 720,
+      "name": "native-layered-run-031",
+      "path": "docs/review/update-031/native-layered-run-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3d2a15b17c28560f977414510a2467485cfb527fd42ccec7659493b7ab41ac48"
+    },
+    {
+      "height": 720,
+      "name": "native-layered-crouch_run-031",
+      "path": "docs/review/update-031/native-layered-crouch_run-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d4a30c5481a29dc5526a4d7a80888fbabeb27687927acde7d5715e695c248dc1"
+    },
+    {
+      "height": 720,
+      "name": "crouched-native-attack-claw-031",
+      "path": "docs/review/update-031/crouched-native-attack-claw-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e944f019c41a5140fa3134b60c4617053b29476ca2b6365a13a3e053d51efa43"
+    },
+    {
+      "height": 720,
+      "name": "crouched-native-attack_right-claw-031",
+      "path": "docs/review/update-031/crouched-native-attack_right-claw-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b3318408b91b89c368d4623816fc1a38954f803832395e68217886d6c2dc630e"
+    },
+    {
+      "height": 720,
+      "name": "physical-step-approach-031",
+      "path": "docs/review/update-031/physical-step-approach-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8bd05b95eb574622a90c89e7cd59cce4e45a817d86c9d5afe3f5790940b0f757"
+    },
+    {
+      "height": 720,
+      "name": "physical-step-capsule-rises-031",
+      "path": "docs/review/update-031/physical-step-capsule-rises-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1e33c37f2a8110c46621f9baf85868375a28b5b9962c5a6a5532cfff6376d835"
+    },
+    {
+      "height": 720,
+      "name": "physical-step-cleared-standing-031",
+      "path": "docs/review/update-031/physical-step-cleared-standing-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "869a075c3731604c3dee05382d373f71c970d949e3040668270df8741db5d6ad"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-00-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-00-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9503983dada666b6a3a73275d0783cf29c025f5b1dd9aabfd82c6877ffab7d91"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-01-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-01-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0c3033676615774ed5c1f35a8d90c21eec95ef3ef2d7c614eb06b17a33459f22"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-02-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-02-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a9df2b92a225f5a2a471a115228a24ee4776e09d5fefa80ba3aa22a5d5ead299"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-03-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-03-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "69b94491c419488452711877f42c6a2606171b92ffcfb522b730b0adbadf2cd2"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-04-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-04-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a36b40efce3c552f5f917eb6195e163bbd9fc703f4a4f764bac004a709c3cebb"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-05-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-05-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ef81e9eaac344922806280c0f3c87b22e8c140f7aba5f13a3f6906e6503240d2"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-06-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-06-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b5f06a6802152b2d627d6775e46f3f21d713c27587595b10d37f08fec7c4b12f"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-07-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-07-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3a099ca6834b030ccebee13989a04867a8ed79bd0ddfc98840e6ddc9bf8568c4"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-08-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-08-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ee82ec18224e85797f82490cde1eb6b7916abe9de5c6ff9561fef54c7a7e6385"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-09-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-09-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "986faaf568985bf94f1f2cf5671f959418e604a7253377adcc78795bbb001e54"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-10-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-10-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e31c0de6129689ddb6f000c9321fe9b032e2e30c73b39338f33a3bffe63e7770"
+    },
+    {
+      "height": 720,
+      "name": "autonomous-squads-11-sec-031",
+      "path": "docs/review/update-031/autonomous-squads-11-sec-031.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f6879063b411d9693322c3dc968d81ac70caf22bae45d10cabfee524c69a1298"
+    }
+  ],
+  "failures": 0,
+  "movieFrameRate": 10,
+  "movieFrames": 120,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Real native-touch selection, wolf poses/physical movement and autonomous eight-NPC encounter. Observer camera and HP fixtures documented; no Android-device claim.",
+  "simulatedSquadSeconds": 12,
+  "squadTrace": [
+    {
+      "actors": [
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-0",
+          "peeks": 0,
+          "position": [
+            -9.09651947021484,
+            0.000838375533930957,
+            -11.7159509658813
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "patrol",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            6.27444124221802,
+            0.000838388397824019,
+            -11.5583209991455
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            -2.96756315231323,
+            0.000838391948491335,
+            -11.4810104370117
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            9.16299915313721,
+            0.000838397478219122,
+            -11.5062055587769
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -2.9881854057312,
+            0.000838379317428917,
+            11.4801340103149
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-1",
+          "peeks": 0,
+          "position": [
+            2.87355971336365,
+            0.000838390085846186,
+            11.4956073760986
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -5.76745080947876,
+            0.000838397478219122,
+            11.5348949432373
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-3",
+          "peeks": 0,
+          "position": [
+            9.1658992767334,
+            0.000831991608720273,
+            11.5071773529053
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "blue"
+        }
+      ],
+      "second": 0
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-0",
+          "peeks": 0,
+          "position": [
+            -6.40122890472412,
+            0.000838375533930957,
+            -8.27685070037842
+          ],
+          "sharedReports": 8,
+          "shots": 0,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            6.26981401443481,
+            0.000838388397824019,
+            -7.21736764907837
+          ],
+          "sharedReports": 0,
+          "shots": 0,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            -4.89170169830322,
+            0.000838391948491335,
+            -9.07976627349854
+          ],
+          "sharedReports": 0,
+          "shots": 1,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            6.42514991760254,
+            0.000941269798204303,
+            -8.14041233062744
+          ],
+          "sharedReports": 3,
+          "shots": 0,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -6.34975671768188,
+            0.000838379317428917,
+            9.33961391448975
+          ],
+          "sharedReports": 4,
+          "shots": 3,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-1",
+          "peeks": 0,
+          "position": [
+            3.31146883964539,
+            0.000838390085846186,
+            6.41682004928589
+          ],
+          "sharedReports": 3,
+          "shots": 0,
+          "state": "chase",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -7.14196920394897,
+            0.000838397478219122,
+            7.75673723220825
+          ],
+          "sharedReports": 4,
+          "shots": 1,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-3",
+          "peeks": 0,
+          "position": [
+            9.4423999786377,
+            0.000831991608720273,
+            10.6858062744141
+          ],
+          "sharedReports": 0,
+          "shots": 1,
+          "state": "attack",
+          "team": "blue"
+        }
+      ],
+      "second": 1
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 0,
+          "position": [
+            -2.03405165672302,
+            0.000838375533930957,
+            -5.47959566116333
+          ],
+          "sharedReports": 10,
+          "shots": 0,
+          "state": "cover_move",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            7.16321086883545,
+            0.000941260776016861,
+            -3.07358503341675
+          ],
+          "sharedReports": 0,
+          "shots": 5,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            -4.89170169830322,
+            0.000838391948491335,
+            -9.07976627349854
+          ],
+          "sharedReports": 2,
+          "shots": 1,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            5.69304656982422,
+            0.000941269798204303,
+            -6.07137203216553
+          ],
+          "sharedReports": 10,
+          "shots": 0,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -9.19901561737061,
+            0.000838379317428917,
+            6.24091815948486
+          ],
+          "sharedReports": 11,
+          "shots": 3,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-1",
+          "peeks": 0,
+          "position": [
+            4.19375038146973,
+            0.000838390085846186,
+            3.18486714363098
+          ],
+          "sharedReports": 3,
+          "shots": 6,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -8.07405853271484,
+            0.000838397478219122,
+            8.42181777954102
+          ],
+          "sharedReports": 11,
+          "shots": 1,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 76,
+          "id": "blue-3",
+          "peeks": 0,
+          "position": [
+            13.3951091766357,
+            0.000831991608720273,
+            11.024242401123
+          ],
+          "sharedReports": 0,
+          "shots": 1,
+          "state": "dodge",
+          "team": "blue"
+        }
+      ],
+      "second": 2
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 0,
+          "position": [
+            -5.28328609466553,
+            0.000838375533930957,
+            -5.88360929489136
+          ],
+          "sharedReports": 15,
+          "shots": 0,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            5.43767356872559,
+            0.000941260776016861,
+            0.147606253623962
+          ],
+          "sharedReports": 0,
+          "shots": 6,
+          "state": "dodge",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            -1.11796605587006,
+            0.000838391948491335,
+            -8.00015449523926
+          ],
+          "sharedReports": 4,
+          "shots": 5,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            4.92768955230713,
+            0.000941269798204303,
+            -6.47799015045166
+          ],
+          "sharedReports": 18,
+          "shots": 0,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -8.69821643829346,
+            0.000838379317428917,
+            2.1166136264801
+          ],
+          "sharedReports": 12,
+          "shots": 7,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "blue-1",
+          "peeks": 0,
+          "position": [
+            4.00796413421631,
+            0.000838390085846186,
+            3.95034337043762
+          ],
+          "sharedReports": 5,
+          "shots": 7,
+          "state": "cover_move",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -10.2719068527222,
+            0.000838397478219122,
+            10.2518711090088
+          ],
+          "sharedReports": 19,
+          "shots": 1,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "blue-3",
+          "peeks": 0,
+          "position": [
+            16.6116504669189,
+            0.000831991608720273,
+            9.99113082885742
+          ],
+          "sharedReports": 2,
+          "shots": 1,
+          "state": "cover_move",
+          "team": "blue"
+        }
+      ],
+      "second": 3
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 1,
+          "position": [
+            -6.11513900756836,
+            0.000838375533930957,
+            -5.89926338195801
+          ],
+          "sharedReports": 21,
+          "shots": 0,
+          "state": "cover_peek",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            3.3003146648407,
+            0.000941260776016861,
+            -2.23890900611877
+          ],
+          "sharedReports": 1,
+          "shots": 6,
+          "state": "cover_move",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            2.16621160507202,
+            0.000941264326684177,
+            -7.62053966522217
+          ],
+          "sharedReports": 4,
+          "shots": 12,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            2.89013838768005,
+            0.000941269798204303,
+            -7.16613006591797
+          ],
+          "sharedReports": 22,
+          "shots": 1,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -10.0613527297974,
+            0.000838379317428917,
+            1.65525996685028
+          ],
+          "sharedReports": 12,
+          "shots": 10,
+          "state": "cover_move",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 28,
+          "id": "blue-1",
+          "peeks": 0,
+          "position": [
+            4.86298704147339,
+            0.000941262464039028,
+            6.5275707244873
+          ],
+          "sharedReports": 12,
+          "shots": 7,
+          "state": "cover_hold",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -11.1813669204712,
+            0.000838397478219122,
+            8.47692012786865
+          ],
+          "sharedReports": 23,
+          "shots": 1,
+          "state": "cover_move",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "blue-3",
+          "peeks": 0,
+          "position": [
+            18.005407333374,
+            0.000831991608720273,
+            8.22053337097168
+          ],
+          "sharedReports": 2,
+          "shots": 1,
+          "state": "cover_hold",
+          "team": "blue"
+        }
+      ],
+      "second": 4
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 1,
+          "position": [
+            -6.11513900756836,
+            0.000838375533930957,
+            -5.89926338195801
+          ],
+          "sharedReports": 28,
+          "shots": 0,
+          "state": "cover_peek",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 0,
+          "position": [
+            4.16718912124634,
+            0.000561490887776017,
+            -6.84691953659058
+          ],
+          "sharedReports": 1,
+          "shots": 6,
+          "state": "cover_move",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            5.57664918899536,
+            0.000941264326684177,
+            -6.7096004486084
+          ],
+          "sharedReports": 12,
+          "shots": 12,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 100,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            0.132522493600845,
+            0.000941269798204303,
+            -6.42716646194458
+          ],
+          "sharedReports": 30,
+          "shots": 1,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -14.2043266296387,
+            0.000838379317428917,
+            0.953369200229645
+          ],
+          "sharedReports": 20,
+          "shots": 10,
+          "state": "cover_hold",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 28,
+          "id": "blue-1",
+          "peeks": 1,
+          "position": [
+            4.90891742706299,
+            0.000941262464039028,
+            7.08800172805786
+          ],
+          "sharedReports": 20,
+          "shots": 7,
+          "state": "cover_peek",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 0,
+          "position": [
+            -10.4850473403931,
+            0.000838397478219122,
+            10.6199731826782
+          ],
+          "sharedReports": 31,
+          "shots": 1,
+          "state": "cover_hold",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "blue-3",
+          "peeks": 1,
+          "position": [
+            18.4375267028809,
+            0.000831991608720273,
+            6.44567108154297
+          ],
+          "sharedReports": 2,
+          "shots": 1,
+          "state": "cover_peek",
+          "team": "blue"
+        }
+      ],
+      "second": 5
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -6.11513900756836,
+            0.000838375533930957,
+            -5.89926338195801
+          ],
+          "sharedReports": 33,
+          "shots": 0,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            4.76331186294556,
+            0.000561490887776017,
+            -7.47600603103638
+          ],
+          "sharedReports": 7,
+          "shots": 6,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            8.63015365600586,
+            0.000941264326684177,
+            -6.03382110595703
+          ],
+          "sharedReports": 17,
+          "shots": 12,
+          "state": "chase",
+          "team": "red"
+        },
+        {
+          "coverEntries": 0,
+          "health": 92,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            -0.877035200595856,
+            0.000941269798204303,
+            -3.25829744338989
+          ],
+          "sharedReports": 31,
+          "shots": 2,
+          "state": "dodge",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -15.836051940918,
+            0.000838379317428917,
+            0.732007384300232
+          ],
+          "sharedReports": 27,
+          "shots": 10,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 20,
+          "id": "blue-1",
+          "peeks": 1,
+          "position": [
+            5.28267097473145,
+            0.000941262464039028,
+            6.86867666244507
+          ],
+          "sharedReports": 21,
+          "shots": 8,
+          "state": "cover_move",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 1,
+          "position": [
+            -11.2040128707886,
+            0.000838397478219122,
+            10.7220134735107
+          ],
+          "sharedReports": 38,
+          "shots": 1,
+          "state": "cover_peek",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "blue-3",
+          "peeks": 1,
+          "position": [
+            18.4375267028809,
+            0.000831991608720273,
+            6.44567108154297
+          ],
+          "sharedReports": 2,
+          "shots": 2,
+          "state": "attack",
+          "team": "blue"
+        }
+      ],
+      "second": 6
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 76,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -5.62980604171753,
+            0.000838375533930957,
+            -5.89990329742432
+          ],
+          "sharedReports": 33,
+          "shots": 4,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            5.17081928253174,
+            0.000561490887776017,
+            -9.03938961029053
+          ],
+          "sharedReports": 14,
+          "shots": 6,
+          "state": "cover_peek",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            10.1862592697144,
+            0.000941264326684177,
+            -8.85631465911865
+          ],
+          "sharedReports": 17,
+          "shots": 20,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "red-3",
+          "peeks": 0,
+          "position": [
+            0.403917282819748,
+            0.000941269798204303,
+            -3.3388888835907
+          ],
+          "sharedReports": 32,
+          "shots": 2,
+          "state": "cover_move",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -17.8112983703613,
+            0.000838379317428917,
+            0.464042633771896
+          ],
+          "sharedReports": 35,
+          "shots": 10,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 20,
+          "id": "blue-1",
+          "peeks": 1,
+          "position": [
+            5.35770225524902,
+            0.000941262464039028,
+            6.82530164718628
+          ],
+          "sharedReports": 28,
+          "shots": 8,
+          "state": "reload",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 1,
+          "position": [
+            -11.3500576019287,
+            0.000838397478219122,
+            10.6286573410034
+          ],
+          "sharedReports": 46,
+          "shots": 1,
+          "state": "cover_peek",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 36,
+          "id": "blue-3",
+          "peeks": 1,
+          "position": [
+            16.7067680358887,
+            0.000831991608720273,
+            8.08905220031738
+          ],
+          "sharedReports": 2,
+          "shots": 2,
+          "state": "cover_move",
+          "team": "blue"
+        }
+      ],
+      "second": 7
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 36,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -6.96904182434082,
+            0.000838375533930957,
+            -7.96420574188232
+          ],
+          "sharedReports": 33,
+          "shots": 5,
+          "state": "dodge",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            5.17081928253174,
+            0.000561490887776017,
+            -9.03938961029053
+          ],
+          "sharedReports": 22,
+          "shots": 6,
+          "state": "cover_peek",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            10.5095434188843,
+            0.000941264326684177,
+            -9.51825618743896
+          ],
+          "sharedReports": 17,
+          "shots": 27,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "red-3",
+          "peeks": 1,
+          "position": [
+            0.491956681013107,
+            0.000941269798204303,
+            -4.89640522003174
+          ],
+          "sharedReports": 40,
+          "shots": 2,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 52,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -14.5628995895386,
+            0.000838379317428917,
+            -1.42940902709961
+          ],
+          "sharedReports": 37,
+          "shots": 14,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 20,
+          "id": "blue-1",
+          "peeks": 1,
+          "position": [
+            5.35770225524902,
+            0.000941262464039028,
+            6.82530164718628
+          ],
+          "sharedReports": 28,
+          "shots": 8,
+          "state": "reload",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 1,
+          "position": [
+            -11.3500576019287,
+            0.000838397478219122,
+            10.6286573410034
+          ],
+          "sharedReports": 50,
+          "shots": 3,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 28,
+          "id": "blue-3",
+          "peeks": 2,
+          "position": [
+            17.7568321228027,
+            0.000831991608720273,
+            7.67574119567871
+          ],
+          "sharedReports": 2,
+          "shots": 2,
+          "state": "cover_hold",
+          "team": "blue"
+        }
+      ],
+      "second": 8
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -4.71314001083374,
+            0.000838375533930957,
+            -6.91455602645874
+          ],
+          "sharedReports": 34,
+          "shots": 5,
+          "state": "cover",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            3.95851516723633,
+            0.000561490887776017,
+            -8.98945617675781
+          ],
+          "sharedReports": 29,
+          "shots": 6,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 76,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            9.57219219207764,
+            0.000941264326684177,
+            -6.63338041305542
+          ],
+          "sharedReports": 17,
+          "shots": 28,
+          "state": "cover_move",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "red-3",
+          "peeks": 1,
+          "position": [
+            0.489999890327454,
+            0.000941269798204303,
+            -4.86179351806641
+          ],
+          "sharedReports": 43,
+          "shots": 4,
+          "state": "attack",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 52,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -13.4700117111206,
+            0.000838379317428917,
+            0.865681707859039
+          ],
+          "sharedReports": 40,
+          "shots": 14,
+          "state": "cover_hold",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 20,
+          "id": "blue-1",
+          "peeks": 1,
+          "position": [
+            5.35770225524902,
+            0.000941262464039028,
+            6.82530164718628
+          ],
+          "sharedReports": 28,
+          "shots": 8,
+          "state": "reload",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 1,
+          "position": [
+            -11.3500576019287,
+            0.000838397478219122,
+            10.6286573410034
+          ],
+          "sharedReports": 52,
+          "shots": 12,
+          "state": "cover_move",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "blue-3",
+          "peeks": 2,
+          "position": [
+            18.7980899810791,
+            0.000831991608720273,
+            8.0945520401001
+          ],
+          "sharedReports": 2,
+          "shots": 3,
+          "state": "attack",
+          "team": "blue"
+        }
+      ],
+      "second": 9
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -3.32021737098694,
+            0.000838375533930957,
+            -6.03632926940918
+          ],
+          "sharedReports": 34,
+          "shots": 5,
+          "state": "reload",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 60,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            -1.23708152770996,
+            0.000561490887776017,
+            -8.7754602432251
+          ],
+          "sharedReports": 36,
+          "shots": 6,
+          "state": "investigate",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 76,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            8.98299789428711,
+            0.000941264326684177,
+            -4.82003259658813
+          ],
+          "sharedReports": 18,
+          "shots": 28,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "red-3",
+          "peeks": 1,
+          "position": [
+            0.489999890327454,
+            0.000941269798204303,
+            -4.86179351806641
+          ],
+          "sharedReports": 46,
+          "shots": 6,
+          "state": "cover_hold",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 52,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -13.0102729797363,
+            0.000838379317428917,
+            -0.350313067436218
+          ],
+          "sharedReports": 47,
+          "shots": 14,
+          "state": "investigate",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 20,
+          "id": "blue-1",
+          "peeks": 2,
+          "position": [
+            4.40840339660645,
+            0.000941262464039028,
+            6.73769092559814
+          ],
+          "sharedReports": 31,
+          "shots": 8,
+          "state": "cover_peek",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 1,
+          "position": [
+            -10.5250606536865,
+            0.000838397478219122,
+            11.106390953064
+          ],
+          "sharedReports": 54,
+          "shots": 12,
+          "state": "cover_hold",
+          "team": "blue"
+        }
+      ],
+      "second": 10
+    },
+    {
+      "actors": [
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "red-0",
+          "peeks": 2,
+          "position": [
+            -3.32021737098694,
+            0.000838375533930957,
+            -6.03632926940918
+          ],
+          "sharedReports": 34,
+          "shots": 5,
+          "state": "reload",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "red-1",
+          "peeks": 1,
+          "position": [
+            -5.02977228164673,
+            0.000561490887776017,
+            -10.3023452758789
+          ],
+          "sharedReports": 39,
+          "shots": 6,
+          "state": "dodge",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 60,
+          "id": "red-2",
+          "peeks": 0,
+          "position": [
+            8.98299789428711,
+            0.000941264326684177,
+            -4.82003259658813
+          ],
+          "sharedReports": 18,
+          "shots": 28,
+          "state": "reload",
+          "team": "red"
+        },
+        {
+          "coverEntries": 1,
+          "health": 84,
+          "id": "red-3",
+          "peeks": 2,
+          "position": [
+            -1.16658711433411,
+            0.000941269798204303,
+            -3.17255067825317
+          ],
+          "sharedReports": 46,
+          "shots": 7,
+          "state": "reposition",
+          "team": "red"
+        },
+        {
+          "coverEntries": 2,
+          "health": 52,
+          "id": "blue-0",
+          "peeks": 0,
+          "position": [
+            -10.018723487854,
+            0.000838379317428917,
+            -2.50436043739319
+          ],
+          "sharedReports": 47,
+          "shots": 20,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 12,
+          "id": "blue-1",
+          "peeks": 2,
+          "position": [
+            1.20580124855042,
+            0.000941262464039028,
+            7.15657901763916
+          ],
+          "sharedReports": 31,
+          "shots": 9,
+          "state": "attack",
+          "team": "blue"
+        },
+        {
+          "coverEntries": 1,
+          "health": 92,
+          "id": "blue-2",
+          "peeks": 2,
+          "position": [
+            -10.2550649642944,
+            0.000838397478219122,
+            11.2627401351929
+          ],
+          "sharedReports": 54,
+          "shots": 21,
+          "state": "attack",
+          "team": "blue"
+        }
+      ],
+      "second": 11
+    }
+  ],
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc",
+  "movie": {
+    "path": "docs/review/update-031/autonomous-squads-031.mp4",
+    "sha256": "edc15eba2880e9117e086a28f8909dad8d28ecd28235e65d084bda570656e15d",
+    "bytes": 362613,
+    "frames": 120,
+    "frameRate": 10,
+    "durationSeconds": 12.0,
+    "audio": false,
+    "source": "Real Godot viewport frames; normal simulation inputs/autonomous bots; fixed fps60 sampled every6physics ticks"
+  }
+}

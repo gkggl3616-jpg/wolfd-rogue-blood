@@ -70,6 +70,7 @@ var link_flight={}
 var jumps_completed=0
 
 func _ready():
+ health=int(game.mutations.profile("normal").health) if kind=="wolf" else game.mutations.HUMAN_HEALTH
  profile=Rules.profile(difficulty)
  tactics=preload("res://scripts/bot_tactics.gd").new();tactics.actor=self;tactics.progress_origin=global_position
  opponent=game.player if team!=game.local_room.get("team","blue") else null
@@ -155,6 +156,7 @@ func play_native_muzzle():
  if not weapon_data.get("sockets",[]).any(func(s):return s.name=="Flash"):return null
  return game.clientfx.play(source,null,native_socket_transform("Flash").origin,false,0,self)
 
+func max_health():return int(game.mutations.profile("normal").health) if kind=="wolf" else game.mutations.HUMAN_HEALTH
 func uses_firearm():return kind=="human" and weapon_data.get("category","")!="knife"
 
 func _process(_delta):
@@ -204,7 +206,7 @@ func can_see_player():
 
 func line_to_player():
  if not game.actor_alive(opponent):return false
- var eye=global_position+Vector3.UP*1.4
+ var eye=global_position+Vector3.UP*minf(1.4,capsule.height*.8)
  var height=opponent.capsule.height*0.58 if is_instance_valid(opponent.capsule) else 1.0
  var query=PhysicsRayQueryParameters3D.create(eye,opponent.global_position+Vector3.UP*height,3,[get_rid()])
  var hit=get_world_3d().direct_space_state.intersect_ray(query)
@@ -224,8 +226,12 @@ func think():
  var visible_now=can_see_player()
  if visible_now:
   if not sees_player:reaction=float(profile.reaction)
-  last_known=opponent.global_position;has_target=true;memory=float(profile.memory)
+  last_known=opponent.global_position;has_target=true;memory=float(profile.memory);game.bot_squads.report(self,opponent,last_known)
  sees_player=visible_now
+ if not sees_player:
+  var shared=game.bot_squads.contact(self)
+  if not shared.is_empty():
+   last_known=shared.point;opponent=shared.target.get_ref();has_target=true;memory=minf(float(profile.memory),shared.until-game.bot_squads.clock);tactics.reports_received+=1
  if not sees_player and memory<=0:has_target=false
  if rolling or reload_remaining>0:return
  if tactics.recovery>0:destination=tactics.goal;state="reposition";return
@@ -241,8 +247,14 @@ func think():
   if cover is Vector3 and global_position.distance_to(cover)>1.2:destination=cover;state="cover";cover_clock=4.0
   else:begin_reload()
   return
+ if brain_enabled and uses_firearm():
+  if tactics.defend():return
+  if has_target and tactics.should_take_cover() and tactics.begin_cover():return
  if has_target:
   destination=last_known;state="chase" if sees_player else "investigate"
+  if not sees_player and brain_enabled:
+   if tactics.cooldown<=0:tactics.approach(last_known)
+   if tactics.goal_valid:destination=tactics.goal
   var distance=global_position.distance_to(last_known)
   if sees_player and reaction<=0:
    attack_moving=false
@@ -272,8 +284,8 @@ func find_cover():
   var angle=TAU*float(i)/count
   var candidate=global_position+Vector3(cos(angle),0,sin(angle))*(3.0+float(i%2)*2.5)
   candidate=NavigationServer3D.map_get_closest_point(game.offline_navigation_map,candidate)
-  if absf(candidate.y-global_position.y)>1 or candidate.distance_to(global_position)<1.2:continue
-  var clearance=PhysicsShapeQueryParameters3D.new();var shape=CapsuleShape3D.new();shape.radius=0.44;shape.height=1.9;clearance.shape=shape;clearance.transform=Transform3D(Basis.IDENTITY,candidate+Vector3.UP);clearance.collision_mask=1;clearance.exclude=[get_rid()]
+  if absf(candidate.y-global_position.y)>1 or candidate.distance_to(global_position)<1.2 or not game.bot_squads.available(self,candidate):continue
+  var clearance=PhysicsShapeQueryParameters3D.new();var shape=CapsuleShape3D.new();shape.radius=0.44;shape.height=1.9;clearance.shape=shape;clearance.transform=Transform3D(Basis.IDENTITY,candidate+Vector3.UP);clearance.collision_mask=3;clearance.exclude=[get_rid()]
   if not get_world_3d().direct_space_state.intersect_shape(clearance,1).is_empty():continue
   var ray=PhysicsRayQueryParameters3D.create(last_known+Vector3.UP*1.2,candidate+Vector3.UP*1.2,1,[get_rid(),game.player.get_rid()])
   if get_world_3d().direct_space_state.intersect_ray(ray).is_empty() or not reachable(candidate):continue
@@ -307,8 +319,8 @@ func fire():
  if not game.running or game.menu_open or health<=0 or attack_clock>0:return false
  if not game.actor_alive(opponent):return false
  if not uses_firearm() or ammo<=0 or reload_remaining>0 or rolling or reaction>0 or not sees_player or not line_to_player():return false
- ammo-=1;shots_fired+=1;attack_clock=fire_interval;play("attack");play_native_muzzle()
- var eye=global_position+Vector3.UP*1.4
+ ammo-=1;shots_fired+=1;tactics.last_shot=game.bot_squads.clock;attack_clock=fire_interval;play("attack");play_native_muzzle()
+ var eye=global_position+Vector3.UP*minf(1.4,capsule.height*.8)
  var target=opponent.global_position+Vector3.UP*opponent.capsule.height*0.58
  var direction=(target-eye).normalized()
  var spread=float(profile.spread)
@@ -368,13 +380,14 @@ func _physics_process(delta):
  elif reload_remaining>0:
   velocity.x=0;velocity.z=0;advance_reload(delta)
  else:
-  if capsule.height<1.5:
-   var query=PhysicsShapeQueryParameters3D.new();var shape=CapsuleShape3D.new();shape.radius=0.42;shape.height=1.9;query.shape=shape;query.transform=Transform3D(Basis.IDENTITY,global_position+Vector3.UP*0.95);query.collision_mask=1;query.exclude=[get_rid()]
-   if get_world_3d().direct_space_state.intersect_shape(query,1).is_empty():capsule.height=1.9;collider.position.y=0.95
+  if capsule.height<1.5 and not (tactics.cover_phase=="hold" or state=="cover_hold"):
+   if preload("res://scripts/character_motion.gd").can_stand(self,1.9):capsule.height=1.9;collider.position.y=.95
   if brain_enabled:
    think_clock-=delta
    if think_clock<=0:think_clock=float(profile.think);think()
-  if state=="attack" and sees_player and game.actor_alive(opponent):
+  if state=="cover_hold":
+   velocity.x=0;velocity.z=0;capsule.height=1.2;collider.position.y=.6;play("crouch")
+  elif state=="attack" and sees_player and game.actor_alive(opponent):
    velocity.x=0;velocity.z=0
    if brain_enabled and attack_moving:
     var movement=nav_direction(attack_goal);velocity.x=movement.x*3.4;velocity.z=movement.z*3.4
@@ -385,6 +398,7 @@ func _physics_process(delta):
     elif not uses_firearm() and melee_windup<=0 and pending_melee.is_empty():begin_melee()
    elif attack_clock<0.3 and melee_windup<=0 and pending_melee.is_empty():play("idle")
   else:
+   navigator.target_desired_distance=.2 if state=="cover_peek" else (.4 if state=="cover_move" else .8)
    path_clock-=delta
    if path_clock<=0:
     var map=game.offline_navigation_map
@@ -402,6 +416,10 @@ func _physics_process(delta):
     if capsule.height<1.5:velocity.x*=0.6;velocity.z*=0.6
     rotation.y=lerp_angle(rotation.y,atan2(-direction.x,-direction.z),delta*5);play("jump" if not is_on_floor() else ("crouch_run" if capsule.height<1.5 else "run"))
    else:play("idle")
+   if state=="cover_peek":
+    var aim=last_known-global_position;aim.y=0
+    if aim.length()>.1:rotation.y=lerp_angle(rotation.y,atan2(-aim.x,-aim.z),delta*7)
+   if state=="cover_peek" and sees_player and reaction<=0 and attack_clock<=0:fire()
  if not rolling:
   var motion=Vector3(velocity.x,0,velocity.z)*delta
   if not try_step(motion):try_jump(motion)
@@ -485,6 +503,7 @@ func try_step(motion):
  return true
 
 func play(clip):
+ if kind=="wolf":game.clientfx.install_wolf_pose(self,clip)
  if anim and anim.has_animation(clip) and active_clip!=clip:anim.play(clip,0.12);active_clip=clip
 
 func is_head_hit(point,ray_origin=null,ray_direction=null):
@@ -507,7 +526,7 @@ func damage(amount,context={}):
   if team==game.local_room.get("team","blue"):return false
   game.record_player_hit(mini(health,amount),context)
  elif context.get("attackerTeam",team)==team:return false
- health-=amount
+ health-=amount;tactics.under_fire=2.0
  game.clientfx.play("Impact_Flesh",null,context.get("hitPosition",global_position+Vector3.UP*1.1))
  if context.get("headshot",false):game.clientfx.play("BloodHeadshot",null,context.get("hitPosition",global_position+Vector3.UP*1.6))
  if health>0:game.clientfx.frost_hit(self,context.get("sourceActor") if context.get("actor","")=="bot" else game.player)

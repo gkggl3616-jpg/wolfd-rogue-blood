@@ -54,7 +54,7 @@
       "path": "docs/review/update-030/native-lightmap-map-50-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a8041fb4310d23b218061ed84064d6a6de14df37b796646b16e4efbc5b81b6fa"
+      "sha256": "0af01a2107f5fd35181ca0c8d7cc063876d50ef22d23f2551c66d94b1d4563fa"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-030/native-lightmap-map-65-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bf8087a885acb1bb219fdc6215a11f2e2d16ca4691706ea2d019a9532bd0b473"
+      "sha256": "f1adbb40e4407863493c41a1a466189d6652cce0b2cd5a0d09b2cbbd9152e5cd"
     },
     {
       "height": 720,
@@ -126,7 +126,7 @@
       "path": "docs/review/update-030/native-lightmap-map-92-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "67b06c2d5700516a014ba37f05c8ae25cb92e9cd6849dea752cb67a46a8cb02a"
+      "sha256": "9539550a6424d573ec816f7705ef38ed9c789609bd21d8412d7baedc251941a5"
     },
     {
       "height": 720,
@@ -134,7 +134,7 @@
       "path": "docs/review/update-030/native-lightmap-map-97-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4f0e9ec7ccd2d01ccf166954dc8cd6d00de5b94f3e915da191a7f1819a5ec97b"
+      "sha256": "487d3e74cd84222e6b846d563b49cb82f363819b4c000b4c2ecc8b1c72b76915"
     },
     {
       "height": 720,
@@ -158,7 +158,7 @@
       "path": "docs/review/update-030/native-lightmap-map-36-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "524ed0d3c339f561c6ed4f22a13e6f75af4f4ea2a83a2fd2293d9f0461c9ead2"
+      "sha256": "c55028f78870b10a8ef13486c43ecefc4067a3a962b22a3310a3c8e782c70e16"
     },
     {
       "height": 720,
@@ -206,7 +206,7 @@
       "path": "docs/review/update-030/native-lightmap-map-37-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3879929c735e6f872482b3517cab9da3fe42872f0340393dc3e049744fad2e30"
+      "sha256": "07f5fcdff4497375f8d43433bec3b79176e50f6541ddda41c8792d2799940412"
     },
     {
       "height": 720,
@@ -230,7 +230,7 @@
       "path": "docs/review/update-030/native-lightmap-map-24-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "46702d8e465dcb51493b7180a47d0eb8d68c4b9970318399bde472ecc8ec240c"
+      "sha256": "95bf9b85ea80cd80a780ec342bdc5f25e38c8a6a5fd609c1dcdc5a4d9c590ee7"
     },
     {
       "height": 720,
@@ -238,7 +238,7 @@
       "path": "docs/review/update-030/native-lightmap-map-68-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1dbf86cb088d84998a9bc97772759afe360ecbedd9c5d3231872c75b9e9f25cf"
+      "sha256": "ce6c86ee31dc6dd9c893571e55a2f5ebbc6254c22a70d5cd640280a2eecb2498"
     },
     {
       "height": 720,
@@ -254,7 +254,7 @@
       "path": "docs/review/update-030/native-lightmap-map-56-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "864c5adf41aad695e928abfe19cb8d4f6217b82405a3239d7b1d8f3a8e1a3bf6"
+      "sha256": "47e3035483cfcd72bcf5aed25e92b1b3415a25aa9b8f113d5f414affdc35df83"
     },
     {
       "height": 720,
@@ -278,7 +278,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-AK-47_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2ab74a77422b64eace62aeedebc5210a1ac8520bf96c2869f4376a2038cf6c8e"
+      "sha256": "67146c3d7333d17b7b3b5ba587a1e81dd0a1c14b363c6f4a2968e2fefd5150f3"
     },
     {
       "height": 720,
@@ -286,7 +286,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-ESA-80_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "af2a049a3ef9846e2a59495f666ef2e1e69a556301a51d5550ffaa6f3de77647"
+      "sha256": "1a45513401123e324b4773f6f39728194377b9238bdc3f95060cebd356505ae2"
     },
     {
       "height": 720,
@@ -294,7 +294,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-AUZ_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b293505645717645c66630eab796d25dc51f5ca8e9afa23a94c8736cb785e4d9"
+      "sha256": "47858646a43443109ac2ba30a69e2fe12fcb1f0dc5a4290ede3f82c900b2fa17"
     },
     {
       "height": 720,
@@ -302,7 +302,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-M4A1_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2e05e04c2126c84c50219434204c8df64fd2f06cd10523cd6a91f9269e918cbd"
+      "sha256": "a9dbe79a5d3c533ab4564e194f4c28c9746efc764d09a17cc50409c25f621c95"
     },
     {
       "height": 720,
@@ -310,7 +310,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-Scal_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "590573a41dc4d706159b1672c66d47b5bf7b9106b6f67892abebdb0190b2b3b9"
+      "sha256": "470765caeb9f73241d58a6fafde5dd91564cd7dc0f849547d99a37640843b9d0"
     },
     {
       "height": 720,
@@ -318,7 +318,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-Z3_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "16aa08fb58937f59afd3f7d181b0ecfc3ca75d7c10643887cc843115be9a58d6"
+      "sha256": "69ac7e664c105a5d0fd6f0ecf205c787f7a15cd0e9479c1d95a880f6720087b9"
     },
     {
       "height": 720,
@@ -326,7 +326,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-FANAS_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "63c3dc6bf22f6a5de177a68e90c71432939f4c320acdfb6dee96a49984b1255c"
+      "sha256": "5b4d8bea759980804ef47db8a244536e32c8c295c6a338425a3c5961446d9232"
     },
     {
       "height": 720,
@@ -334,7 +334,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-CRISS_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0e91e8020782f98af8e8fc26868e145d452909849a8d3f79b048a4fd8c4471d7"
+      "sha256": "0757489dc0ad11f2c8062ab0c69d1adf3a9e6e21a8aa1ac74cfa13bead641dc7"
     },
     {
       "height": 720,
@@ -342,7 +342,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-EMP-5_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e8f1cf917661ce9fb23c532e6fee928060f6219ffad8c6ddcf098fae8ea07d0f"
+      "sha256": "f7c84a5ab6a6f7398931c3ba9f2769a4acefc675bc1b309ca1e051680d8be4f5"
     },
     {
       "height": 720,
@@ -350,7 +350,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-SUPAS_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "04350f140ba15111c3ca0640771488bb2371a09f1ea6213a879c59f05aa004d0"
+      "sha256": "be7e5492811681b3d01a3f68ba9bb311436ed081524584b3e24ba981bea94a99"
     },
     {
       "height": 720,
@@ -358,7 +358,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-EM3_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "313398d32dbebe7b076dd8fe2690928e370ecba2aeda3936102dba6f08d1baf2"
+      "sha256": "a4c64d2bbeed9f71cd527602315119bfc1fb78a9cd12679ca4246c2e07f27e37"
     },
     {
       "height": 720,
@@ -366,7 +366,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-EXM26CS_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d0757bf504dd6e942075f01aa3616cec270d9913d14fe1f98f0f7a7f31b1eb6e"
+      "sha256": "ac9a61a26511ece6a376a3b2af22699911b7a08fb935c3dcc3d8a6a0c653dadb"
     },
     {
       "height": 720,
@@ -374,7 +374,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-EM500_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bf9a888e756f3860a881c0e9c85f19dd99985efe6fd5e6788a66089b40ae4beb"
+      "sha256": "72273fe04a66e8c591af5aa1a3833e6d46de3ee5909e616f74a5e04cd6fb82ce"
     },
     {
       "height": 720,
@@ -382,7 +382,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-M60_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b2d75a4a48b1eea72ce26189340afe9873018bef63336b38e27ae673b0ef1f7d"
+      "sha256": "9b96b606774b085b4c9a30529080cac30489ecf5ca8a0a172c844fc535bfeda8"
     },
     {
       "height": 720,
@@ -390,7 +390,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-M_92FS_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "bf25005f3113cfb8762b08060af7d0677cf0942cf31f94f09a085f4d57d26bb2"
+      "sha256": "4608127b9d22067796870bf12c96e38d80f426f94640bf4b36ae4e4fbfc4cc24"
     },
     {
       "height": 720,
@@ -398,7 +398,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-45pisol_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3c35451d96121ebeabd1dbb85dc46cf6639c41845a090d9f1faa214a6fd25338"
+      "sha256": "262aff43c666e05496855032ad8e4bc34a0fe7ea4c73422f03f4c03bae9ef528"
     },
     {
       "height": 720,
@@ -406,7 +406,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-D_EAGLE_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c3d15684b1ea0c30b99bb95e94d007f8fb8bb85c1991adb46dfb5751f90a7141"
+      "sha256": "6c801685c184f100e581d21a9626afd9e632fc909492f2b4dcf107c125424ee7"
     },
     {
       "height": 720,
@@ -414,7 +414,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-PI226R_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "73f083621d5f6de5eddb2a29d5262e3732d80efabe9132b070e6d7d94055ade7"
+      "sha256": "ab704ad656af389e79cf0162181433f538320d088068ed6b0f8d62bc000887b8"
     },
     {
       "height": 720,
@@ -422,7 +422,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-A1_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3d10c4b37ca223b6df28b150da85b8d35fcfbb76a0cad7bf314049e6275f794f"
+      "sha256": "daa0f82cfe278bd39d1184df7011b5b508b1b5efee40433e5912451bbb4bd745"
     },
     {
       "height": 720,
@@ -430,7 +430,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-EM40A3_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f3a32fe87fe38acfd519078ce77950e43391a18e649f5c983ab2175902d9613f"
+      "sha256": "7f61c6f01840f888a7b8903ffc42431e3276a41729048935b605998073a2071d"
     },
     {
       "height": 720,
@@ -438,7 +438,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-SVDR_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "018b9c7279a1f17e02cfa0c1cdc41b5274296f7fca0c120f8cb2dec8413b2435"
+      "sha256": "785286d1bc3cfe783498fe4f0ff07964494c877d569a25d9ceb9db731d39f5bf"
     },
     {
       "height": 720,
@@ -446,7 +446,7 @@
       "path": "docs/review/update-030/npc-native-muzzle-SZ552N_HH_Muzz-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "dbb7c607df5aa04340df207f43dabe00ef51dbfb4fd5921e48a2e5c67ff63b02"
+      "sha256": "36ac4c28439d0a507f35b55e36afaeff3b0ea1ef85a2598124490d02604df7c2"
     },
     {
       "height": 720,
@@ -454,33 +454,12 @@
       "path": "docs/review/update-030/npc-native-muzzle-Impact_EM-32-030.png",
       "saved": true,
       "width": 1280,
-      "sha256": "fe69c1dfa1cedd7b564b28246d5b1cbd901378176e1d3dd5220a7026929eb481"
+      "sha256": "3f8938d832d90957cacf40057d3d075194395bec7147a44e118fcadd82a5c2c8"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "scope": "34 source lightmap maps and 23 staged real native third-person muzzle groups",
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5",
-  "manualReview": {
-    "method": "All57 real captures inspected in four labelled contact sheets; source-world FT/claw capture separately opened at full resolution. Does not replace Android-device or original-renderer pixel parity checks.",
-    "pages": [
-      {
-        "path": "docs/review/update-030/overview-0.jpg",
-        "sha256": "18a9d9e7d560d6f8cd9c3d82ed1ad033466f071b3773a2b69e0279707d41c649"
-      },
-      {
-        "path": "docs/review/update-030/overview-1.jpg",
-        "sha256": "decfe13f45c556c6ada979b24ea810a69c00f03872eea1aa6a0bfd1a15a4fd53"
-      },
-      {
-        "path": "docs/review/update-030/overview-2.jpg",
-        "sha256": "68ed05ad61a5aa3eb940d23a32f33a67662a97d69cce119d8019d992c8b3e458"
-      },
-      {
-        "path": "docs/review/update-030/overview-3.jpg",
-        "sha256": "12513a1637d4817c7b49820cb2ae5be4ec1333a47458c26f56a25d06f15cb914"
-      }
-    ]
-  }
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

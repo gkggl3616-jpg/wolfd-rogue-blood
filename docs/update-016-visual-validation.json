@@ -46,7 +46,7 @@
       "path": "docs/review/update-016/allied-bot-match-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f886c244bbebd92be940eccca5b360bfddb57523523acadcc5cf6aa3a40d1ea7"
+      "sha256": "50cbbea3d7a07258771539b36004bb64edbe482bdb3e643092b972e37f87f131"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-016/tattoo-before-roar-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1db169b74599f80429b95d4f7451c5e0741eea33b0daa5ea8bc561c819c09ffc"
+      "sha256": "ca83241ce995b71dd955c24ec7a2f15b04c658ced04c31c516c8ec67956af8ca"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-016/howling_fire_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a2613de6d51b55699943049a3a98c4850208fb21603fbb16d30a44e4c54df786"
+      "sha256": "6c60e7244c1b6570d1b767789471e62a459efa24a2952cd1e6a52295c5dbc527"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-016/howling_ice_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e337cfc08220c3cf25dc4f63a79a1b3fa39cc8362643fdd57e0be139a590bab9"
+      "sha256": "9984db39e48eccfb33bb52decfbb86096cabd04187fc5b25fbf15585b2f14f93"
     },
     {
       "height": 720,
@@ -78,12 +78,12 @@
       "path": "docs/review/update-016/howling_lightning_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e6353db6c8b9d42ca2193dc3cdb3ffcd359ece84461ce7030cbdb5234f836633"
+      "sha256": "f3b4f5051067dca3b9da913ae75454691be69ab85db546426bf2d65dc69a62a6"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureActors": true,
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

@@ -55,7 +55,7 @@ func run():
 	ensure(game.health==health-8,"enemy melee still hits an unobstructed nearby player")
 	game.player.switch_form();game.player.action_time=0
 	game.player.begin_roar();game.player.shot_cooldown=0;game.attack()
-	ensure(enemy.health==100,"a roar cannot simultaneously deal a claw attack")
+	ensure(enemy.health==enemy.max_health(),"a roar cannot simultaneously deal a claw attack")
 	game.player.roar_effect.stop();game.equipment.equip_power(19601)
 	game.player.reset_combat();game.player.position=Vector3(0,0.1,0);await frames(3);game.player.wolf_running=true
 	ensure(not game.player.begin_air_attack(),"airborne attack controller cannot start on the ground; the contextual button can use the separate source ground claw")

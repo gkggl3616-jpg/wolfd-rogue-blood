@@ -84,7 +84,7 @@ func run():
 	ensure(not bot.can_see_player(),"distant bot perception respects ghost concealment")
 	game.wolf_melee_hit(1,1,"QA");ensure(not game.player.is_cloaked(),"attacking breaks concealment")
 	game.inbox.state.powerCounts={"19002":3,"19502":3};ensure(game.equip_power_item("19002") and game.equip_power_item("19502"),"accepted supplies attach to distinct power slots")
-	game.health=20;ensure(game.use_power("support") and game.health==game.max_health() and game.inbox.state.powerCounts["19002"]==3,"healing is capped by mutation health and spends one per-life use and preserves the owned pack")
+	game.health=game.max_health()-5;ensure(game.use_power("support") and game.health==game.max_health() and game.inbox.state.powerCounts["19002"]==3,"healing is capped by mutation health and spends one per-life use and preserves the owned pack")
 	ensure(not game.use_power("support") and game.inbox.state.powerCounts["19002"]==3,"full health does not spend a per-life use")
 	ensure(game.use_power("energy") and game.booster_remaining==10 and game.health<game.max_health(),"energy trades actual health for a timed boost")
 	ensure(not game.use_power("energy") and game.inbox.state.powerCounts["19502"]==3,"active FT cannot stack and the owned reusable pack is preserved")

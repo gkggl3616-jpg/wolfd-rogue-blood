@@ -3,6 +3,8 @@ import argparse, hashlib, json, os, pathlib, re, subprocess
 from validate_mobile import code_fingerprint
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SUITES={
+ 'update031wolf':('visual_wolf_031','update-031/wolf-gameplay','update-031-wolf-demo-validation.json',5),
+ 'update031':('visual_031','update-031','update-031-visual-validation.json',34),
  'update030':('visual_030','update-030','update-030-visual-validation.json',57),
  'update029source':('visual_source_029','update-029/source-worlds','update-029-source-visual-validation.json',3),
  'update029':('visual_029','update-029','update-029-visual-validation.json',26),

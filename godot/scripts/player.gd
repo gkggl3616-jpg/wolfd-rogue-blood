@@ -80,6 +80,7 @@ var landing_remaining=0.0
 func _ready():
 	collision_layer = 1
 	collision_mask = 3
+	floor_snap_length=.35;floor_max_angle=deg_to_rad(48)
 	var shape = CollisionShape3D.new()
 	body_shape = shape
 	capsule = CapsuleShape3D.new()
@@ -156,6 +157,7 @@ func choose_animation_player():
 				anim.get_animation(name).loop_mode = Animation.LOOP_LINEAR
 
 func play_clip(clip):
+	if is_wolf and is_instance_valid(game.clientfx):game.clientfx.install_wolf_pose(self,clip)
 	if anim and anim.has_animation(clip):
 		var pace=CLAW_SPEED if clip in ["attack","attack_right"] and is_wolf else 1.0
 		if is_wolf and (clip in ["run","wolf_run","crouch_run"] or clip.begins_with("run_") or clip.begins_with("crouch_")) and game.booster_remaining>0:pace*=float(game.booster_tuning.get("speedMultiplier",1.0))
@@ -548,15 +550,7 @@ func _physics_process(delta):
 		direction=air_attack_direction;speed=float(game.equipment.rules.mobileAdaptation.airAttackSpeed)
 	crouching = Input.is_action_pressed("crouch") or rolling
 	if not crouching and capsule.height < 1.8:
-		var clearance = PhysicsShapeQueryParameters3D.new()
-		var standing = CapsuleShape3D.new()
-		standing.height = 1.8
-		standing.radius = 0.36
-		clearance.shape = standing
-		clearance.transform = global_transform.translated_local(Vector3(0, 0.9, 0))
-		clearance.exclude = [get_rid()]
-		clearance.collision_mask = 1
-		crouching = not get_world_3d().direct_space_state.intersect_shape(clearance, 1).is_empty()
+		crouching = not preload("res://scripts/character_motion.gd").can_stand(self,1.8)
 	capsule.height = 1.2 if crouching else 1.8
 	body_shape.position.y = capsule.height * 0.5
 	var target_height=(0.7 if crouching else preload("res://scripts/video_layout.gd").WOLF_CAMERA_TARGET_HEIGHT) if is_wolf else (1.05 if crouching else 1.55)
@@ -575,6 +569,7 @@ func _physics_process(delta):
 		var remaining=maxf(0,ROLL_DISTANCE-roll_travel)
 		var flat=Vector2(velocity.x,velocity.z).limit_length(remaining/maxf(delta,0.0001))
 		velocity.x=flat.x;velocity.z=flat.y
+	if not rolling and not air_attacking and not wall_holding:preload("res://scripts/character_motion.gd").try_step(self,Vector3(velocity.x,0,velocity.z)*delta)
 	move_and_slide()
 	if rolling:roll_travel+=Vector2(global_position.x-before_roll.x,global_position.z-before_roll.z).length()
 	advance_roll(delta)

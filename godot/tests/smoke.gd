@@ -197,6 +197,7 @@ func run():
 	game.spawn_clock = 100
 	game.spawn_enemy()
 	var enemy = game.enemies.get_child(0)
+	enemy.health=100 # Wounded fixture: damage/finisher checks are independent of default wolf HP.
 	enemy.position = game.player.position - game.player.global_basis.z * 1.7
 	enemy.set_physics_process(false)
 	await frames(3)
@@ -213,7 +214,7 @@ func run():
 	if not ensure(game.kills==1 and not game.player.wolf_running,"running body attack requires the equipped ability and uses its own contact animation"):return
 	# The body attack already defeated this target.
 	if not ensure(game.kills == 1 and game.wallet.cash == before+25,"defeating a target grants the configured local reward"):return
-	game.take_damage(100)
+	game.take_damage(game.health+game.player.extra_health)
 	if not ensure(not game.running and game.health == 0,"zero health ends the round"):return
 	game.grant_money("gold",1000,"Smoke test")
 	if not ensure(game.wallet.gold == 1000,"local administrator can grant gold"):return

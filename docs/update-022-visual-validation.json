@@ -6,7 +6,7 @@
       "path": "docs/review/update-022/original-device-equip-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "54373345be42bfac99ac5d4effe72637e6f627005f302703568dc1e8196ea816"
+      "sha256": "e276d6ab4e01ccf70e4d0b14268f959613b65db347fbd19ced9cc93307bbe688"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-022/original-hands-and-assembly-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1485d8c70cd4a763943136ae5030ec65ba48d6c9d2596b9ab454f1fc8361c2d7"
+      "sha256": "2605841650148d7af93959655e76d095814a9680093a4f6ba9418c737129efe3"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-022/world-bomb-and-fuse-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4ec0cede72afc828e9516dde152236368df09678af434d5424bff282c328d798"
+      "sha256": "29435f6460bd84a51c9790903786b7b60da6191392976de4d941845dd95f4f46"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "aa1965fdf5509e4d3587c1a9bf07ed866fe0537bee3c35d53c986d85722ffeab"
+      "sha256": "0b5ac09083cccb31a7d1d21de6d0b418008762f1a8e7e26576cc0990f09a3541"
     },
     {
       "height": 720,
@@ -84,5 +84,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

@@ -74,7 +74,11 @@ def inspect_ltb(data):
         if child_count:stack.append([index,child_count])
     if any(remaining for _,remaining in stack): raise ValueError('LTB incomplete hierarchy')
     weight_count=r.count(4096)
-    for _ in range(weight_count): r.string(); count=r.count(nodes); r.skip(count*4)
+    weight_sets={}
+    for _ in range(weight_count):
+        name=r.string(); count=r.count(nodes); values=r.values(f"{count}f")
+        if not all(math.isfinite(v) for v in values):raise ValueError("Invalid source animation weight set")
+        weight_sets[name]=list(values)
     child_count=r.count(4096)
     if child_count<1: raise ValueError('LTB missing self model')
     child_models=[r.string() for _ in range(child_count-1)]
@@ -110,4 +114,4 @@ def inspect_ltb(data):
         count=r.count(100000)
         for _ in range(count):r.string();r.skip(24);bindings+=1
     if r.pos!=len(data):raise ValueError(f'Unconsumed LTB data: {len(data)-r.pos} bytes')
-    return dict(version=version,nodeCount=nodes,bones=bones,skeletonSha256=digest(bones),bindPoseSha256=digest(matrices),childModels=child_models,animations=animations,mesh=mesh_summary,command=command,headerAnimationCount=anims,animationCount=animation_count,sockets=socket_count,socketDefinitions=socket_defs,bindingCount=bindings,bytesParsed=r.pos)
+    return dict(weightSets=weight_sets,version=version,nodeCount=nodes,bones=bones,skeletonSha256=digest(bones),bindPoseSha256=digest(matrices),childModels=child_models,animations=animations,mesh=mesh_summary,command=command,headerAnimationCount=anims,animationCount=animation_count,sockets=socket_count,socketDefinitions=socket_defs,bindingCount=bindings,bytesParsed=r.pos)

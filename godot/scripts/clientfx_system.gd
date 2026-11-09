@@ -131,9 +131,9 @@ func install_motion(actor,clip):
 	var installed=install_action(actor,clip,{donor:motion_clips[clip]})
 	if installed:actor.anim.get_animation(clip).loop_mode=Animation.LOOP_NONE if clip=="jump_land" else Animation.LOOP_LINEAR
 	return installed
-func install_action(actor,clip,data):
+func install_action(actor,clip,data,replace_existing=false):
 	if not is_instance_valid(actor.anim):return false
-	if actor.anim.has_animation(clip):return true
+	if actor.anim.has_animation(clip) and not replace_existing:return true
 	var donor=model_record(actor).get("donor","")
 	if not data.has(donor):return false
 	var source=data[donor];var model=actor.wolf if actor==game.player else actor.body
@@ -147,8 +147,44 @@ func install_action(actor,clip,data):
 		for i in range(source.times.size()):
 			var p=row.positions[i];var q=row.rotations[i];var time=source.times[i]-source.times[0]
 			animation.track_insert_key(pos,time,Vector3(p[0],p[1],p[2]));animation.track_insert_key(rot,time,Quaternion(q[0],q[1],q[2],q[3]).normalized())
-	var library=actor.anim.get_animation_library("").duplicate();library.add_animation(clip,animation)
-	var current=actor.anim.current_animation;var time=actor.anim.current_animation_position
+	var library=actor.anim.get_animation_library("").duplicate()
+	if library.has_animation(clip):library.remove_animation(clip)
+	library.add_animation(clip,animation)
+	var current=actor.anim.current_animation;var time=actor.anim.current_animation_position if current!="" else 0.0
 	actor.anim.remove_animation_library("");actor.anim.add_animation_library("",library)
 	if current!="":actor.anim.play(current);actor.anim.seek(time,true)
 	return true
+
+var pose_index={}
+var pose_cache={}
+func install_wolf_pose(actor,clip):
+	if not is_instance_valid(actor.anim) or game.game_audio.actor_form(actor)!="wolf":return false
+	var donor=model_record(actor).get("donor","")
+	if pose_index.is_empty():pose_index=JSON.parse_string(FileAccess.get_file_as_string("res://assets/gameplay/wolf-poses/index.json")).donors
+	var entry=pose_index.get(donor,{})
+	if entry.is_empty():return false
+	var variant=clip
+	if clip in ["attack","attack_right"]:
+		var crouched=actor.crouching if actor==game.player else actor.capsule.height<1.5
+		variant+="_crouch" if crouched else ("_air" if not actor.is_on_floor() else "_stand")
+	if not variant in entry.clips:return false
+	var meta="native_wolf_pose_"+clip
+	if actor.anim.get_meta(meta,"")==variant:return true
+	if not pose_cache.has(donor):
+		if pose_cache.size()>=3:pose_cache.erase(pose_cache.keys()[0])
+		var raw=FileAccess.get_file_as_bytes(entry.asset).decompress_dynamic(64*1024*1024,FileAccess.COMPRESSION_GZIP)
+		if raw.size()<4:return false
+		var size=raw.decode_u32(0)
+		if size>raw.size()-4:return false
+		pose_cache[donor]={"header":JSON.parse_string(raw.slice(4,4+size).get_string_from_utf8()),"bytes":raw.slice(4+size)}
+	var bank=pose_cache[donor];var source=bank.header.clips[variant].duplicate(true);var tracks=[]
+	for row in source.tracks:
+		var count=int(row.count);var po=int(row.positionOffset);var qo=int(row.rotationOffset)
+		if count!=source.times.size() or po<0 or qo<0 or po+count*12>bank.bytes.size() or qo+count*16>bank.bytes.size():return false
+		var positions=bank.bytes.slice(po,po+count*12).to_vector3_array();var values=bank.bytes.slice(qo,qo+count*16).to_float32_array();var rotations=[]
+		for i in range(count):rotations.append(Vector4(values[i*4],values[i*4+1],values[i*4+2],values[i*4+3]))
+		tracks.append({"bone":row.bone,"positions":positions,"rotations":rotations})
+	source.tracks=tracks
+	if not install_action(actor,clip,{donor:source},true):return false
+	actor.anim.get_animation(clip).loop_mode=Animation.LOOP_LINEAR if clip in ["idle","run","crouch","crouch_run","jump_air"] or clip.begins_with("run_") or clip.begins_with("crouch_") else Animation.LOOP_NONE
+	actor.anim.set_meta(meta,variant);return true

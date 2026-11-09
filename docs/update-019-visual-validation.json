@@ -78,7 +78,7 @@
       "path": "docs/review/update-019/wolf-hud-powers-run-button-removed-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c7899154a7b56563a325d4c9564264571317ce7cf1bc1b0ffd33e27243a3815e"
+      "sha256": "68629a5082282965695b8541b14819f467569ca5d828ac617d063217d1c7b31a"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-019/original-left-claw-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6805eeb9358ee537315d5dbe789e2d0d3ae5f49ff1dae766ee340c61dfaf1456"
+      "sha256": "f8087d5fb6e4c1b6aee3e2120e4d58b29baa1d61137db7b30289e0bdd96e0c45"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-019/original-right-claw-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d77398f2246d52bdcb4f7a49518eb388b43e4b34593574c8a1710df8ff16e62d"
+      "sha256": "d2fc60b604876916fc02f00c3c4ab6a7290bcb3e1e98fce4dc238c654436e954"
     },
     {
       "height": 720,
@@ -102,7 +102,7 @@
       "path": "docs/review/update-019/restarted-source-howl-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "411e821229be12e6c1efc66579dbf5c904617643238c77e9c1365d7d3fafe5a6"
+      "sha256": "2e47385a98e33d8bda0f2be4f3126eee65f6ec9e88065cdb2a3d1e0644f3c8fe"
     },
     {
       "height": 720,
@@ -110,7 +110,7 @@
       "path": "docs/review/update-019/howl-extra-health-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2e2ba0bb9fad8baf5002adddbece0a18e3ca5cefcacebd955e9bb27af771c3ef"
+      "sha256": "762e4909ac98779b055cb6e105a1c9933b0691cc55e0f9fba13d7877a898fffe"
     }
   ],
   "failures": 0,
@@ -118,5 +118,5 @@
   "rendering": "gl_compatibility",
   "testFixtureCatalogueUnlocked": true,
   "testFixtureGifts": true,
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

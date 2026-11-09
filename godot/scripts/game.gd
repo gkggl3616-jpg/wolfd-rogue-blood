@@ -139,6 +139,7 @@ var transient_effects: Node3D
 var projectile_catalog={}
 var bot_weapon_profiles={}
 var native_map_lighting=preload("res://scripts/native_map_lighting.gd").new()
+var bot_squads=preload("res://scripts/bot_squad.gd").new()
 var bot_roster=preload("res://scripts/bot_roster.gd").new()
 var pending_throw={}
 var shell_reload={}
@@ -503,7 +504,7 @@ func start_map_preview():
 	player.yaw = float(anchor.yaw)
 	player.rotation.y = player.yaw
 	player.reset_locomotion()
-	health = 100
+	health = max_health()
 	ammo = weapon_capacity()
 	reserve = ammo * 4
 	weapon_ammo.clear();weapon_cooldowns.clear()
@@ -556,6 +557,9 @@ func clear_projectiles():
 			remove_child(node)
 			node.queue_free()
 
+func _physics_process(delta):
+	if is_match_active():bot_squads.advance(delta)
+
 func start_round(with_selection=false):
 	if profile_lock!=null and not profile_lock.unlocked:return false
 	if not is_local_mode(int(local_room.get("mode",0))):
@@ -563,7 +567,7 @@ func start_round(with_selection=false):
 		return false
 	if preload("res://scripts/source_match_rules.gd").supports(local_room.get("mode",0)) and not map_catalog.belongs_to_mode(int(local_room.mode),int(local_room.get("map",0))):
 		announce("Harita bu özgün moda bağlı değil.");return false
-	match_flow.reset_match();removed_bot_ids.clear();source_hud.feedback.reset()
+	match_flow.reset_match();removed_bot_ids.clear();source_hud.feedback.reset();bot_squads.game=self;bot_squads.reset()
 	spectator.stop()
 	game_audio.clear_match_voices();match_rules.configure(local_room);destruction.game=self;destruction.begin();match_sp=economy.begin();match_wallet_start=wallet.duplicate();bomb_presentation.reset();announced_last_minute=false;first_kill_announced=false
 	close_round_selection();round_selection_enabled=with_selection;match_slots.clear()
@@ -736,9 +740,13 @@ func choose_round_loadout(index):
 	if not book.select_loadout(index):announce("Ekipman seçimi kaydedilemedi.");return false
 	match_slots=(book.starter_slots if index==0 else book.loadouts[index]).duplicate()
 	match_sp-=cost;economy.spent+=cost;equip_slot("primary");close_round_selection();return true
+func round_mutation_cost(id):return 0 if id==player.mutation_id else economy.mutation_cost(id)
 func choose_round_mutation(id):
 	if not selection_active or selection_panel.kind!="wolf" or not mutations.TYPES.has(id):return false
-	var cost=economy.mutation_cost(id)
+	var cost=round_mutation_cost(id)
+	if id==player.mutation_id:
+		if not book.select_mutation(id):announce("Kurt seçimi kaydedilemedi.");return false
+		finish_round_selection();update_hud();return true
 	if match_sp<cost:announce("Yetersiz SP");return false
 	var model=player.prepare_mutation(id)
 	if model==null:announce("Kurt modeli yüklenemedi.");return false
@@ -1421,7 +1429,7 @@ func power_item(id):
 func power_bonus(slot,key,fallback):
 	var item=power_item(inbox.state.powerSlots.get(slot,""))
 	return item.get("mobileTuning",{}).get(key,fallback)
-func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else 100
+func max_health():return int(mutations.profile(player.mutation_id).health) if player.is_wolf else mutations.HUMAN_HEALTH
 func max_extra_health():return economy.yp_capacity(character_info,player.mutation_id,gear_stats(),power_bonus("bag","extraYpPercent",0))
 func wolf_damage_multiplier(kind="normal"):return float(booster_tuning.get("strongDamageMultiplier",booster_tuning.get("damageMultiplier",1.0)) if kind=="strong" else booster_tuning.get("damageMultiplier",1.0)) if booster_remaining>0 else 1.0
 func wolf_speed_multiplier():return (float(booster_tuning.get("speedMultiplier",1.0)) if booster_remaining>0 else 1.0)*(1.0+float(gear_stats().speedPercent)/100.0)

@@ -6,7 +6,7 @@
       "path": "docs/review/update-026/entry-and-local-profile-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ac2c15936c74ab105cece78e0294175fec1518e6675aeca82243978b68a18f53"
+      "sha256": "c31cb857de298500da4c6ae288700742119ebc922c3ca93c2cf65fd508820871"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-026/source-player-name-dialog-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "860287332ccb3a67851f7f91abb8fd58c0c28e938290b0cf67a08a5e8c9a87b9"
+      "sha256": "764daf47434505887e8db670d3ad00ecd730b95d1cecc1d952ad5d02883c7ea2"
     },
     {
       "height": 720,
@@ -126,7 +126,7 @@
       "path": "docs/review/update-026/source-preparation-after-loading-026.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ce83120947d114b8da4abebd2c0037e5fd9b46cf972d093504311327cc7ab829"
+      "sha256": "80d27bdc54f2801bd877fd122e200639d69d26175fbab15111a5ebaff387ecba"
     },
     {
       "height": 720,
@@ -156,5 +156,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
+  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
 }

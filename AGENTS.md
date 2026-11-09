@@ -1,5 +1,8 @@
 # Wolf Rogue Blood çalışma kuralları
 
+- 0.31 kullanıcı düzeltmesi: Normal kurt ana canı 240, insan temel canı 100; oyuncu ve botlar aynı form temellerini kullanır. Diğer mutasyonların önceki yerel can farkları korunur; doğrulanmamış karakter alanları HP diye yorumlanmaz. YP ayrı kalır. Zaten seçili kurdu onaylamak tekrar SP harcatmaz; farklı kurtların kaynak fiyatları korunur. Koşuda üst/alt gövde kaynak maskeleri birlikte kullanılır; bütün kapalı istemci animasyon izleyicileri tamamlandı diye sunulmaz. Bot siperi gerçek çarpışma/görüş ve paylaşılan görülmüş konuma bağlı olmalı; görünmeyen hedefin canlı konumunu paylaşma.
+
+
 - Son kullanıcı talimatı (0.30 çalışması): kalan PC farklarını araştırıp gider; doğrulanmış APK üret ve GitHub üzerinden paylaş. Önceki APK hazırlama/yayımlama yasağı bu açık talimatla kaldırıldı. Çevrimdışı kapsam ve video yerleşimi korunur. Çözülemeyen alanları tamamlanmış diye işaretleme.
 
 - Kalıcı FT düzeltmesi (0.25): mor el parlaması Mor Pençe sahipliğine bağlı değildir; yalnızca başarıyla etkinleştirilen enerji/FT paketi süresince görünür. FT hareketi hızlandırır ve ana candan bedel alır. İlk yardım ayrı yaşam başına kullanım sınırına sahiptir; tekrar kullanılabilen paket sahipliği her basışta tüketilmez. Kaynakta çözülemeyen hız birimi ve video/sürüm zaman farkı kesin PC değeri diye sunulmaz.
