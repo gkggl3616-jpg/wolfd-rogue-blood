@@ -22,6 +22,12 @@ func source_projectile():
 		if parent.has_meta("source_projectile") and parent.has_method("native_socket_transform"):return parent
 		parent=parent.get_parent()
 	return null
+func native_attachment():
+	var parent=get_parent()
+	while is_instance_valid(parent):
+		if parent.has_meta("source_native_attachment") and parent.has_method("native_socket_transform"):return parent
+		parent=parent.get_parent()
+	return null
 func is_viewmodel_muzzle():
 	var parent=get_parent()
 	while is_instance_valid(parent):
@@ -94,10 +100,10 @@ func _ready():
 			var colors=spec.properties.get("Ck",[])
 			if not colors.is_empty():
 				var gradient=Gradient.new();gradient.offsets=PackedFloat32Array();gradient.colors=PackedColorArray()
-				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if (group=="BloodHeadshot" or is_viewmodel_muzzle() or source_projectile()!=null) else ck[4]))
+				for ck in colors:gradient.add_point(clampf(ck[0],0,1),Color(ck[1],ck[2],ck[3],1.0-ck[4] if (group=="BloodHeadshot" or is_viewmodel_muzzle() or native_attachment()!=null or source_projectile()!=null) else ck[4]))
 				node.color_ramp=gradient;mat.vertex_color_use_as_albedo=true
 			var initial_scale=maxf(.001,float(curve(spec,"Sk",0,[0,1])[1]))*.016;node.scale_amount_min=initial_scale;node.scale_amount_max=initial_scale
-			if group in HAND_GROUPS or is_viewmodel_muzzle():
+			if group in HAND_GROUPS or is_viewmodel_muzzle() or native_attachment()!=null:
 				# This looping emitter keeps emitting new hand particles. Sk is
 				# their individual lifetime curve, not the age of the whole group.
 				var size_curve=Curve.new();size_curve.min_value=0;size_curve.max_value=1
@@ -107,10 +113,10 @@ func _ready():
 				# Viewmodel flash scales are metre-sized in the converted weapon
 				# view. This explicit visual adapter avoids a subpixel flash;
 				# it is not a verified PC renderer unit conversion.
-				var gain=HAND_VISUAL_GAIN if group in HAND_GROUPS else 1.0/.016
+				var gain=HAND_VISUAL_GAIN if group in HAND_GROUPS else (1.0/.016 if is_viewmodel_muzzle() else 1.0)
 				node.scale_amount_curve=size_curve;node.scale_amount_min=maximum*.016*gain;node.scale_amount_max=maximum*.016*gain
 			var quad=QuadMesh.new();quad.size=Vector2.ONE;mat.billboard_mode=BaseMaterial3D.BILLBOARD_PARTICLES;mat.billboard_keep_scale=true;quad.material=mat;node.mesh=quad;add_child(node);materials.append({"material":mat,"frames":spec.get("frames",[]),"fps":spec.get("fps",1)})
-			if group in HAND_GROUPS or is_viewmodel_muzzle():quad.size=Vector2(2,2)
+			if group in HAND_GROUPS or is_viewmodel_muzzle() or native_attachment()!=null:quad.size=Vector2(2,2)
 		elif kind=="DynaLight":node=OmniLight3D.new();node.shadow_enabled=false;add_child(node)
 		elif kind=="PlaySound":
 			node=AudioStreamPlayer3D.new();node.bus="WolfEffects";node.stream=load(spec.sound).duplicate();node.max_distance=maxf(1,float(val(spec,"OuterRadius",2400))*0.016);node.pitch_scale=clampf(float(val(spec,"PitchShift",1)),0.1,4);node.volume_db=linear_to_db(maxf(0.001,float(val(spec,"Volume",100))/100.0))-10
@@ -141,7 +147,7 @@ func _process(delta):
 		var life=age-float(spec.start);var phase=clampf(life/maxf(0.001,float(spec.end)-float(spec.start)),0,1);var ck=curve(spec,"Ck",phase,[0,1,1,1,1]);var color=Color(ck[1],ck[2],ck[3],ck[4]);var scale_key=curve(spec,"Sk",phase,[0,1]);var scale_value=maxf(0.001,float(scale_key[1]));node.show()
 		# Projectile Ck uses the same transparency convention as the native
 		# viewmodel emitter; zero is opaque, not an invisible energy bullet.
-		if source_projectile()!=null:color.a=1.0-color.a
+		if source_projectile()!=null or native_attachment()!=null:color.a=1.0-color.a
 		if node is TextureRect:
 			var camera=get_viewport().get_camera_3d()
 			var watched=system.game.spectator.target if system.game.spectator.active else system.game.player
@@ -160,6 +166,7 @@ func _process(delta):
 			# reference object's orientation, not the animated neck/hand basis.
 			node.global_basis=actor.global_basis.orthonormalized()
 		elif is_viewmodel_muzzle() and is_instance_valid(system.game.player.muzzle_skeleton):node.global_transform=system.game.player.muzzle_socket_transform(str(val(spec,"AttachName","Flash")))
+		elif native_attachment()!=null:node.global_transform=native_attachment().native_socket_transform(str(val(spec,"AttachName","Flash")))
 		elif source_projectile()!=null:node.global_transform=source_projectile().native_socket_transform(str(val(spec,"AttachName","")))
 		else:node.global_transform=global_transform
 		var offset=vector(val(spec,"Offset",[0,0,0]))*0.016;node.global_position+=global_basis.orthonormalized()*offset
@@ -178,7 +185,7 @@ func _process(delta):
 			if kind=="CreateFX":part.child=system.play(spec.group,null if system.catalog.groups[group].get("sourceType","")=="ProjectileFX" else actor,node.global_position,choice(spec,"Loop")==1,depth+1,node,round_effect)
 		if node is OmniLight3D:node.light_color=color;node.light_energy=color.a*0.6;node.omni_range=maxf(0.1,scale_value*0.016)
 		elif node is CPUParticles3D:
-			if not group in HAND_GROUPS and not is_viewmodel_muzzle():node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
+			if not group in HAND_GROUPS and not is_viewmodel_muzzle() and native_attachment()==null:node.scale_amount_min=scale_value*0.016;node.scale_amount_max=scale_value*0.016
 		elif kind=="LTBModel":node.scale=part.baseScale*scale_value*vector(val(spec,"ModelScale",[1,1,-1])).abs()
 		elif kind in ["Sprite","FlareSpriteFX"]:node.scale=Vector3.ONE*scale_value*0.016
 		elif kind=="CamJitter":

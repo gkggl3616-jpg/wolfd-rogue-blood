@@ -10,56 +10,56 @@
   "traces": {
     "blue-0": {
       "character": "pair-model1",
-      "maximumTravel": 10.1804704666138,
-      "minimumHealth": 4,
-      "name": "Kuzgun",
-      "origin": [
-        6.0,
-        0.100000001490116,
-        12.0
-      ],
-      "recoveries": 0,
-      "shots": 19,
-      "weapon": "weapon-36533ca892573cd83ef9",
-      "weaponName": "AKEI-47 PT"
-    },
-    "blue-1": {
-      "character": "pair-model104",
-      "maximumTravel": 17.5638446807861,
+      "maximumTravel": 16.2542152404785,
       "minimumHealth": 44,
-      "name": "Ayaz",
-      "origin": [
-        9.0,
-        0.100000001490116,
-        12.0
-      ],
-      "recoveries": 0,
-      "shots": 12,
-      "weapon": "weapon-692fe92303ae49b38fdc",
-      "weaponName": "CRISS WT"
-    },
-    "blue-2": {
-      "character": "pair-model452",
-      "maximumTravel": 16.7781448364258,
-      "minimumHealth": 52,
-      "name": "Poyraz",
+      "name": "Kuzgun",
       "origin": [
         -9.0,
         0.100000001490116,
         12.0
       ],
       "recoveries": 0,
-      "shots": 32,
+      "shots": 25,
+      "weapon": "weapon-36533ca892573cd83ef9",
+      "weaponName": "AKEI-47 PT"
+    },
+    "blue-1": {
+      "character": "pair-model104",
+      "maximumTravel": 12.9388465881348,
+      "minimumHealth": 4,
+      "name": "Ayaz",
+      "origin": [
+        6.0,
+        0.100000001490116,
+        12.0
+      ],
+      "recoveries": 0,
+      "shots": 13,
+      "weapon": "weapon-692fe92303ae49b38fdc",
+      "weaponName": "CRISS WT"
+    },
+    "blue-2": {
+      "character": "pair-model452",
+      "maximumTravel": 8.57042503356934,
+      "minimumHealth": 84,
+      "name": "Poyraz",
+      "origin": [
+        3.0,
+        0.100000001490116,
+        12.0
+      ],
+      "recoveries": 1,
+      "shots": 38,
       "weapon": "weapon-26b6ec6be986fe150647",
       "weaponName": "EM249 Minimi"
     },
     "blue-3": {
       "character": "pair-model498",
-      "maximumTravel": 7.70395660400391,
-      "minimumHealth": 36,
+      "maximumTravel": 8.53847694396973,
+      "minimumHealth": 44,
       "name": "Kıvılcım",
       "origin": [
-        -6.0,
+        9.0,
         0.100000001490116,
         12.0
       ],
@@ -70,22 +70,22 @@
     },
     "red-0": {
       "character": "pair-model0",
-      "maximumTravel": 11.41579246521,
+      "maximumTravel": 6.87059688568115,
       "minimumHealth": 4,
       "name": "Kutup",
       "origin": [
-        6.0,
+        3.0,
         0.100000001490116,
         -12.0
       ],
       "recoveries": 0,
-      "shots": 1,
+      "shots": 0,
       "weapon": "weapon-88964c6c14d0096126f2",
       "weaponName": "EXM-26 CS"
     },
     "red-1": {
       "character": "pair-model72",
-      "maximumTravel": 10.7062282562256,
+      "maximumTravel": 15.1293277740479,
       "minimumHealth": 4,
       "name": "Gölgeİz",
       "origin": [
@@ -94,40 +94,40 @@
         -12.0
       ],
       "recoveries": 0,
-      "shots": 3,
+      "shots": 19,
       "weapon": "weapon-2539adf97a42fec68b80",
       "weaponName": "CRISS WT(P)"
     },
     "red-2": {
       "character": "pair-model110",
-      "maximumTravel": 7.2210955619812,
+      "maximumTravel": 5.00026273727417,
       "minimumHealth": 4,
       "name": "Çelik",
-      "origin": [
-        -3.0,
-        0.100000001490116,
-        -12.0
-      ],
-      "recoveries": 0,
-      "shots": 35,
-      "weapon": "weapon-47e5f891e177533cda7c",
-      "weaponName": "EM-60 PT"
-    },
-    "red-3": {
-      "character": "pair-model476",
-      "maximumTravel": 13.8432741165161,
-      "minimumHealth": 4,
-      "name": "Yıldırım",
       "origin": [
         -9.0,
         0.100000001490116,
         -12.0
       ],
       "recoveries": 0,
-      "shots": 6,
+      "shots": 12,
+      "weapon": "weapon-47e5f891e177533cda7c",
+      "weaponName": "EM-60 PT"
+    },
+    "red-3": {
+      "character": "pair-model476",
+      "maximumTravel": 12.7252588272095,
+      "minimumHealth": 4,
+      "name": "Yıldırım",
+      "origin": [
+        6.0,
+        0.100000001490116,
+        -12.0
+      ],
+      "recoveries": 0,
+      "shots": 8,
       "weapon": "weapon-a653e8635c68c470ca01",
       "weaponName": "GLOC-17"
     }
   },
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

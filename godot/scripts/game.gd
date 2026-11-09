@@ -138,6 +138,7 @@ var menu_backdrop: ColorRect
 var transient_effects: Node3D
 var projectile_catalog={}
 var bot_weapon_profiles={}
+var native_map_lighting=preload("res://scripts/native_map_lighting.gd").new()
 var bot_roster=preload("res://scripts/bot_roster.gd").new()
 var pending_throw={}
 var shell_reload={}
@@ -487,6 +488,7 @@ func start_map_preview():
 	add_child(active_map)
 	for mesh in active_map.find_children("*", "MeshInstance3D", true, false):
 		mesh.create_trimesh_collision()
+	native_map_lighting.apply(active_map,int(record.number))
 	var ambient = Node3D.new()
 	ambient.set_script(MapAudio)
 	ambient.game = self
@@ -604,6 +606,7 @@ func start_round(with_selection=false):
 			mesh.create_trimesh_collision()
 			world_surfaces.bind_mesh(mesh)
 		install_navigation(record.navigation,active_map)
+		native_map_lighting.apply(active_map,map_number)
 		var ambient = Node3D.new();ambient.set_script(MapAudio);ambient.game = self
 		ambient.map_number = map_number;active_map.add_child(ambient)
 		var source_fx=Node3D.new();source_fx.set_script(preload("res://scripts/map_source_effects.gd"));source_fx.game=self;source_fx.map_number=map_number;active_map.add_child(source_fx)

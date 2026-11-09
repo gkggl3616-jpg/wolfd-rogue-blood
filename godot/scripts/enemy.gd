@@ -74,7 +74,7 @@ func _ready():
  tactics=preload("res://scripts/bot_tactics.gd").new();tactics.actor=self;tactics.progress_origin=global_position
  opponent=game.player if team!=game.local_room.get("team","blue") else null
  collision_layer=2;collision_mask=3;floor_snap_length=0.35;floor_max_angle=deg_to_rad(48)
- set_meta("enemy",true)
+ set_meta("enemy",true);set_meta("source_native_attachment",true)
  collider=CollisionShape3D.new();capsule=CapsuleShape3D.new();capsule.radius=0.42;capsule.height=1.9;collider.shape=capsule;collider.position.y=0.95;add_child(collider)
  navigator=NavigationAgent3D.new();navigator.path_desired_distance=0.55;navigator.target_desired_distance=0.8;navigator.radius=0.42;navigator.height=1.9;add_child(navigator)
  navigator.link_reached.connect(begin_link_traversal)
@@ -138,6 +138,22 @@ func prepare_weapon(next_profile={}):
  if weapon.get_parent()==null:weapon.position=Vector3(0.18,1.35,-0.4);add_child(weapon)
  fire_sound=AudioStreamPlayer3D.new();fire_sound.bus="WolfWeapons";fire_sound.max_distance=40;fire_sound.volume_db=-15;fire_sound.stream=load(weapon_data.fireSound) if weapon_data.fireSound!="" else null;add_child(fire_sound)
  reload_sound=AudioStreamPlayer3D.new();reload_sound.bus="WolfWeapons";reload_sound.max_distance=20;reload_sound.volume_db=-18;reload_sound.stream=load(weapon_data.reloadSound) if weapon_data.reloadSound!="" else null;add_child(reload_sound)
+
+func native_socket_transform(name):
+ if not is_instance_valid(weapon):return global_transform
+ var found=weapon.find_children("*","Skeleton3D",true,false)
+ if found.is_empty():return weapon.global_transform
+ var sockets=weapon_data.get("sockets",[]).filter(func(s):return s.name==name)
+ if sockets.is_empty():return weapon.global_transform
+ var socket=sockets[0];var skeleton=found[0];var bone=preload("res://scripts/native_socket_bone.gd").find(skeleton,socket,weapon_data.get("bones",[]))
+ if bone<0:return weapon.global_transform
+ var q=socket.rotation;var p=socket.position;var transform=skeleton.global_transform*skeleton.get_bone_global_pose(bone)*Transform3D(Basis(Quaternion(q[0],q[1],q[2],q[3]).normalized()),Vector3(p[0],p[1],p[2]))
+ return Transform3D(transform.basis.orthonormalized(),transform.origin)
+func play_native_muzzle():
+ var source=weapon_data.get("hhMuzzleFx","")
+ if source=="" or game.clientfx.canonical(source)=="":return null
+ if not weapon_data.get("sockets",[]).any(func(s):return s.name=="Flash"):return null
+ return game.clientfx.play(source,null,native_socket_transform("Flash").origin,false,0,self)
 
 func uses_firearm():return kind=="human" and weapon_data.get("category","")!="knife"
 
@@ -291,7 +307,7 @@ func fire():
  if not game.running or game.menu_open or health<=0 or attack_clock>0:return false
  if not game.actor_alive(opponent):return false
  if not uses_firearm() or ammo<=0 or reload_remaining>0 or rolling or reaction>0 or not sees_player or not line_to_player():return false
- ammo-=1;shots_fired+=1;attack_clock=fire_interval;play("attack")
+ ammo-=1;shots_fired+=1;attack_clock=fire_interval;play("attack");play_native_muzzle()
  var eye=global_position+Vector3.UP*1.4
  var target=opponent.global_position+Vector3.UP*opponent.capsule.height*0.58
  var direction=(target-eye).normalized()

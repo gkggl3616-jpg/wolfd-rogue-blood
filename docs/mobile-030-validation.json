@@ -1,0 +1,16 @@
+{
+  "checks": 355,
+  "failures": [],
+  "missingHhMuzzleProfiles": [
+    "weapon-e85134a6c171e0dce50a",
+    "weapon-3a87067663c63d37a16b",
+    "weapon-6333ef000d0a3a361423"
+  ],
+  "missingHhSockets": [
+    "weapon-593dbe3d98210fb5c63e"
+  ],
+  "nativeHhMuzzleGroups": 23,
+  "nativeLightedMaps": 34,
+  "passed": true,
+  "physicalAndroidDeviceTested": false
+}

@@ -1,0 +1,34 @@
+{
+  "runtimeCollisionChanged": false,
+  "nativeWorldModelTransformsVerified": false,
+  "nativeRendererRecreated": false,
+  "method": "Native MainPhysicsBSP solid polygons; bounded source model fields; excludes non-existent faces; sky faces excluded for nav; source plane winding converted to Godot winding; synchronous NavigationServer3D map iteration=1 before queries. Existing packaged nav settings used. No synthetic geometry/teleport added.",
+  "maps": [
+    {
+      "number": 37,
+      "source": "root/worlds/retailmultiplayer/crash bridge.dat",
+      "sourceSha256": "42e76e1cdc72dbc3925b3c5e7de73555048f86539cfb4673e993b7e3f663abd2",
+      "nativeSolidTriangles": 23438,
+      "nativeWalkCandidateTriangles": 23426,
+      "sourcePhysicsBlockEnd": 1770970,
+      "matchesNativeObjectSectionStart": true,
+      "navigationPolygons": 1286,
+      "crossTeamAnchorPairs": 64,
+      "connectedCrossTeamAnchorPairs": 0,
+      "appliedToGame": false
+    },
+    {
+      "number": 72,
+      "source": "root/worlds/retailmultiplayer/ruins.dat",
+      "sourceSha256": "9faf63784fb4951990d57ea89a3949da7be8ceea38ff37c03f5a565d7f885584",
+      "nativeSolidTriangles": 35168,
+      "nativeWalkCandidateTriangles": 35056,
+      "sourcePhysicsBlockEnd": 2398021,
+      "matchesNativeObjectSectionStart": true,
+      "navigationPolygons": 9520,
+      "crossTeamAnchorPairs": 256,
+      "connectedCrossTeamAnchorPairs": 0,
+      "appliedToGame": false
+    }
+  ]
+}

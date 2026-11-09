@@ -1,0 +1,486 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "native-lightmap-map-1-030",
+      "path": "docs/review/update-030/native-lightmap-map-1-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7aded6ffbac22c822238efb96c992b7cdf2bfe6f0bce022975e9012bffb4219f"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-2-030",
+      "path": "docs/review/update-030/native-lightmap-map-2-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c03bb22e5fafbfa569c50386a8b640975590906ca3cf0f04d531f35e25282461"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-26-030",
+      "path": "docs/review/update-030/native-lightmap-map-26-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "704f3867652da94f1d028cfe9d8bdd474d1161d2891a21173bfacad8cd29af24"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-31-030",
+      "path": "docs/review/update-030/native-lightmap-map-31-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c7ddd842d28399cb8fd08727534c6e46dcd13aa2dcaf9d3a02dd80c6f43c9def"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-44-030",
+      "path": "docs/review/update-030/native-lightmap-map-44-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "789a68c0d4cddcbd8f07a6e9b54c5abb9f5561c9a0239dca24322ec40972a53b"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-46-030",
+      "path": "docs/review/update-030/native-lightmap-map-46-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2e508ad88d302f44e5f43c216dae4582758791b6f7db0baffc677c80a0b17391"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-50-030",
+      "path": "docs/review/update-030/native-lightmap-map-50-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a8041fb4310d23b218061ed84064d6a6de14df37b796646b16e4efbc5b81b6fa"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-57-030",
+      "path": "docs/review/update-030/native-lightmap-map-57-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ee1848f7803fa40cfef023ed14c0dadf7d1b2761b6f8c548129e949345fcfbe7"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-58-030",
+      "path": "docs/review/update-030/native-lightmap-map-58-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b43c813cc7638422f20e24b825a93ca6ec82ac59efbd4a97b893e9742059c27c"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-59-030",
+      "path": "docs/review/update-030/native-lightmap-map-59-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "26d903d006c8cca0ba8251d3931d2195abcd292e4bd24824299d5933789297c9"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-65-030",
+      "path": "docs/review/update-030/native-lightmap-map-65-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bf8087a885acb1bb219fdc6215a11f2e2d16ca4691706ea2d019a9532bd0b473"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-72-030",
+      "path": "docs/review/update-030/native-lightmap-map-72-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b41a75fdb10a244d1ba4b689c11b7ea2f61f143f6a3893276500b8432ac72778"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-82-030",
+      "path": "docs/review/update-030/native-lightmap-map-82-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "af6883c80414d06ebbc6b62a6688e3d819876912644a34ae284c8bd4d84da06a"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-83-030",
+      "path": "docs/review/update-030/native-lightmap-map-83-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3109ef5442e6cdbd324e5207752b2a696b5fb17bd03328aa2576559d8de68301"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-84-030",
+      "path": "docs/review/update-030/native-lightmap-map-84-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "074c91c586eea218871839af41bdbede2ccb9adbeb5f90c83049cf41eae49c50"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-92-030",
+      "path": "docs/review/update-030/native-lightmap-map-92-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "67b06c2d5700516a014ba37f05c8ae25cb92e9cd6849dea752cb67a46a8cb02a"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-97-030",
+      "path": "docs/review/update-030/native-lightmap-map-97-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4f0e9ec7ccd2d01ccf166954dc8cd6d00de5b94f3e915da191a7f1819a5ec97b"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-100-030",
+      "path": "docs/review/update-030/native-lightmap-map-100-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "022bb8952c4ce422064823dbb7a341c9fdffb5260a3de7c3f05d549e64f2b903"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-110-030",
+      "path": "docs/review/update-030/native-lightmap-map-110-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "455daf4ece67b80c053f79d22ec19172194830c0270d081c4b87bd69f941404c"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-36-030",
+      "path": "docs/review/update-030/native-lightmap-map-36-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "524ed0d3c339f561c6ed4f22a13e6f75af4f4ea2a83a2fd2293d9f0461c9ead2"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-69-030",
+      "path": "docs/review/update-030/native-lightmap-map-69-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "065112d41403bb1730c225fadfd5803e386d0f6e6b9fda95da198f9cb8029af6"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-87-030",
+      "path": "docs/review/update-030/native-lightmap-map-87-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f149be6278338e1f7cc0793e995d80686418e329a9b51e743c313cb21c6c4729"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-17-030",
+      "path": "docs/review/update-030/native-lightmap-map-17-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f963c30e83ee5bf89433e124301ab6871539ab125b789bb4c78aac2ff08576ea"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-51-030",
+      "path": "docs/review/update-030/native-lightmap-map-51-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2fba2f0814a4026ff88ee2d46b109931b14e94c54c28c3fe4b151099f35ccbd6"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-89-030",
+      "path": "docs/review/update-030/native-lightmap-map-89-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "333a18b223141d37beeb689e21300aaf89167d36f4acceef9a94d5841c16d3b2"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-37-030",
+      "path": "docs/review/update-030/native-lightmap-map-37-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3879929c735e6f872482b3517cab9da3fe42872f0340393dc3e049744fad2e30"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-42-030",
+      "path": "docs/review/update-030/native-lightmap-map-42-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6f2f7494c35ca01b2332b988ba8c7b21f0da083b25c18f5805c8bf5e60b154d3"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-20-030",
+      "path": "docs/review/update-030/native-lightmap-map-20-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a17917eefae614511917514da86c88e5c4d2c313c8388414ba36f3e981c6fcf6"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-24-030",
+      "path": "docs/review/update-030/native-lightmap-map-24-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "46702d8e465dcb51493b7180a47d0eb8d68c4b9970318399bde472ecc8ec240c"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-68-030",
+      "path": "docs/review/update-030/native-lightmap-map-68-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1dbf86cb088d84998a9bc97772759afe360ecbedd9c5d3231872c75b9e9f25cf"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-41-030",
+      "path": "docs/review/update-030/native-lightmap-map-41-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "21a2326226eeae946cef77f7e07a4cb9ba650f427ef3c5f66d4d1593939f9a38"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-56-030",
+      "path": "docs/review/update-030/native-lightmap-map-56-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "864c5adf41aad695e928abfe19cb8d4f6217b82405a3239d7b1d8f3a8e1a3bf6"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-61-030",
+      "path": "docs/review/update-030/native-lightmap-map-61-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2683dfe19b3a7a06f2bf362fd3db491ed9e17a6e9d079a9305e3ea79c75a5c3b"
+    },
+    {
+      "height": 720,
+      "name": "native-lightmap-map-106-030",
+      "path": "docs/review/update-030/native-lightmap-map-106-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b06c0de9c26fb71fa94a79cef1e21532c9045eec12007df938b555dc7ab50c46"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-AK-47_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-AK-47_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2ab74a77422b64eace62aeedebc5210a1ac8520bf96c2869f4376a2038cf6c8e"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-ESA-80_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-ESA-80_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "af2a049a3ef9846e2a59495f666ef2e1e69a556301a51d5550ffaa6f3de77647"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-AUZ_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-AUZ_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b293505645717645c66630eab796d25dc51f5ca8e9afa23a94c8736cb785e4d9"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-M4A1_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-M4A1_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2e05e04c2126c84c50219434204c8df64fd2f06cd10523cd6a91f9269e918cbd"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-Scal_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-Scal_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "590573a41dc4d706159b1672c66d47b5bf7b9106b6f67892abebdb0190b2b3b9"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-Z3_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-Z3_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "16aa08fb58937f59afd3f7d181b0ecfc3ca75d7c10643887cc843115be9a58d6"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-FANAS_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-FANAS_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "63c3dc6bf22f6a5de177a68e90c71432939f4c320acdfb6dee96a49984b1255c"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-CRISS_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-CRISS_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0e91e8020782f98af8e8fc26868e145d452909849a8d3f79b048a4fd8c4471d7"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-EMP-5_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-EMP-5_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e8f1cf917661ce9fb23c532e6fee928060f6219ffad8c6ddcf098fae8ea07d0f"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-SUPAS_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-SUPAS_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "04350f140ba15111c3ca0640771488bb2371a09f1ea6213a879c59f05aa004d0"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-EM3_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-EM3_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "313398d32dbebe7b076dd8fe2690928e370ecba2aeda3936102dba6f08d1baf2"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-EXM26CS_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-EXM26CS_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d0757bf504dd6e942075f01aa3616cec270d9913d14fe1f98f0f7a7f31b1eb6e"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-EM500_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-EM500_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bf9a888e756f3860a881c0e9c85f19dd99985efe6fd5e6788a66089b40ae4beb"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-M60_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-M60_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b2d75a4a48b1eea72ce26189340afe9873018bef63336b38e27ae673b0ef1f7d"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-M_92FS_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-M_92FS_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bf25005f3113cfb8762b08060af7d0677cf0942cf31f94f09a085f4d57d26bb2"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-45pisol_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-45pisol_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3c35451d96121ebeabd1dbb85dc46cf6639c41845a090d9f1faa214a6fd25338"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-D_EAGLE_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-D_EAGLE_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c3d15684b1ea0c30b99bb95e94d007f8fb8bb85c1991adb46dfb5751f90a7141"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-PI226R_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-PI226R_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "73f083621d5f6de5eddb2a29d5262e3732d80efabe9132b070e6d7d94055ade7"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-A1_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-A1_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3d10c4b37ca223b6df28b150da85b8d35fcfbb76a0cad7bf314049e6275f794f"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-EM40A3_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-EM40A3_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f3a32fe87fe38acfd519078ce77950e43391a18e649f5c983ab2175902d9613f"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-SVDR_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-SVDR_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "018b9c7279a1f17e02cfa0c1cdc41b5274296f7fca0c120f8cb2dec8413b2435"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-SZ552N_HH_Muzz-030",
+      "path": "docs/review/update-030/npc-native-muzzle-SZ552N_HH_Muzz-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "dbb7c607df5aa04340df207f43dabe00ef51dbfb4fd5921e48a2e5c67ff63b02"
+    },
+    {
+      "height": 720,
+      "name": "npc-native-muzzle-Impact_EM-32-030",
+      "path": "docs/review/update-030/npc-native-muzzle-Impact_EM-32-030.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fe69c1dfa1cedd7b564b28246d5b1cbd901378176e1d3dd5220a7026929eb481"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "34 source lightmap maps and 23 staged real native third-person muzzle groups",
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5",
+  "manualReview": {
+    "method": "All57 real captures inspected in four labelled contact sheets; source-world FT/claw capture separately opened at full resolution. Does not replace Android-device or original-renderer pixel parity checks.",
+    "pages": [
+      {
+        "path": "docs/review/update-030/overview-0.jpg",
+        "sha256": "18a9d9e7d560d6f8cd9c3d82ed1ad033466f071b3773a2b69e0279707d41c649"
+      },
+      {
+        "path": "docs/review/update-030/overview-1.jpg",
+        "sha256": "decfe13f45c556c6ada979b24ea810a69c00f03872eea1aa6a0bfd1a15a4fd53"
+      },
+      {
+        "path": "docs/review/update-030/overview-2.jpg",
+        "sha256": "68ed05ad61a5aa3eb940d23a32f33a67662a97d69cce119d8019d992c8b3e458"
+      },
+      {
+        "path": "docs/review/update-030/overview-3.jpg",
+        "sha256": "12513a1637d4817c7b49820cb2ae5be4ec1333a47458c26f56a25d06f15cb914"
+      }
+    ]
+  }
+}

@@ -38,7 +38,7 @@
       "path": "docs/review/update-020/destruction-bomb-controls-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "df74de3943a595f22bfe708805d761ff226254fbc898af1b22f14f39cc7baf85"
+      "sha256": "6f46904765d6ea27d5c7a0c7b3a7df063a3f9f30241d2a533ea349a17992721f"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-020/destruction-bomb-planted-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8e201d6d004932bf2fb6afa19c4ac67a0e643f8fd50e82b97ed3171666da0529"
+      "sha256": "4c2f7d4ecedd5aecc694046ff2f43c036ad41c070b194d78d88ca5c0ba6c04af"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-020/destruction-round-score-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "30764d6a816982feac8f40f630112a914a20e534f1c084ea0516baed7f88da91"
+      "sha256": "b6b50d06326982b692e14ffe3ee5e06ac46e2ca2e84bf2f53e3bde0beb26fa1f"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-020/destruction-next-round-020.png",
       "saved": true,
       "width": 1280,
-      "sha256": "61559437b176555f239eff07275cd01db24b3f1aecd6b7a0f374de2fa889c031"
+      "sha256": "89b010b19e649d807b3d189ac1048c098f5e7e388ee679e39f4880dea232afd3"
     },
     {
       "height": 720,
@@ -76,5 +76,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

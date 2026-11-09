@@ -6,7 +6,7 @@
       "path": "docs/review/update-021/video-aligned-equipment-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "73202e56934a0150bbeb6875a1aed843caddc8a583e46621f268928e642dd200"
+      "sha256": "88cadbb0a12b9d603daec43dc1db6872b67b05e04e4efcd26fc54b5f6caf0047"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-021/round-preparation-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0b8ff39f88d427cee3e8c0329a1ef775ea5900aa4f2f2c63df224101c2065462"
+      "sha256": "facccd4b335a44df59c0c8a6f93260da9115c73da80dd032c1fb454c9dfc2c3e"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-021/teammate-spectator-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f66f77f363b350bee306f0be81b4ad7d4306a77de7116a33c87fc4802fa54e84"
+      "sha256": "3138165afb724ba0c0c7c70e1349b92a0ff3de986c51d655468e879a429ab52f"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-021/round-result-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b9a8c3a4ce8225c48f45cde858077c400262d6da42156d7a23eb51aff09d7c2c"
+      "sha256": "b52cbffb6e67c74554383af34587ccf10b84482c5c9f0289fb7b7d4dc01635a8"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-021/attack-defense-swap-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1424c629934417058e48065a81891e9eebc3e3da622ee7c3a37d12ffa548f2b3"
+      "sha256": "39d71624ad3ce871872814d1ca11d913e2d7efb8b3b98460093ebcd07741356c"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-021/role-spawn-and-carrier-021.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0b3ecae54c410cf948a00eb53a56ad34c4cd465c9848b2d441baabe6967dd68e"
+      "sha256": "3d0220af026e91b364ea74a4412cb9c001c1919ec948479467d630828d4cda1a"
     },
     {
       "height": 720,
@@ -76,5 +76,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

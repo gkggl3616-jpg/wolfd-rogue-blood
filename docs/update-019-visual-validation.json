@@ -54,7 +54,7 @@
       "path": "docs/review/update-019/full-card-character-gifts-019.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3061e447674308775d2afb7a5d6eab7095a3fbdbbc292877c31c2405374bdfe8"
+      "sha256": "61b5e0c82c0c4a9de341021b0a0bf42600b9378e957ffffa58a1ff867d04d0ef"
     },
     {
       "height": 450,
@@ -118,5 +118,5 @@
   "rendering": "gl_compatibility",
   "testFixtureCatalogueUnlocked": true,
   "testFixtureGifts": true,
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

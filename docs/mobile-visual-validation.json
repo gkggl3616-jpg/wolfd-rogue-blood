@@ -19,7 +19,7 @@
         "section/title"
       ],
       "width": 1280,
-      "sha256": "fd447dbef9546d6c582d20765540f7755b9c24c110f693d69680cb00b19ab913"
+      "sha256": "ac2c15936c74ab105cece78e0294175fec1518e6675aeca82243978b68a18f53"
     },
     {
       "height": 720,
@@ -653,7 +653,7 @@
       "path": "docs/review/pc-native/container-ship-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "77f0e7ad4ac802d262c3be26edb99b8725863c5a20fa4aa6e290666a914e7542"
+      "sha256": "fd222e87fbf128b65492ccc7c4a51ced4dc5a8f49af244bc47732bb2708cf076"
     },
     {
       "height": 720,
@@ -681,7 +681,7 @@
       "path": "docs/review/pc-native/offline-container-bots-1280.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4d214e7ce32f7f3455d96245c38843c28d3789a0ff7e0147177181b131a4f9b8"
+      "sha256": "faec5e74c8c34dcce0ceece1108a283414ab705a3b8987bba762ffb76aaa0747"
     },
     {
       "height": 720,
@@ -800,5 +800,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

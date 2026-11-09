@@ -7,7 +7,7 @@
       "path": "docs/review/update-029/source-worlds/native-taksim-wolf-without-ft-029.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0193f337278695731fc898b9f458fba09717531c4b26b10a10b0c36e25c9fda1"
+      "sha256": "fb4244fcad4f03b7a12f1158d204469d7c793dc700a7a27fbb8c59e438d580e0"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/update-029/source-worlds/native-taksim-ft-and-npc-source-claw-029.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b1d81c8faeb9365d46a709813342a4b31d34255d60d26d7ee27ea8ed51f03cbe"
+      "sha256": "dba72e42129b96a71eb848d4aef14bc5af425fc8b90b01bfe35f3eff30199853"
     },
     {
       "height": 720,
@@ -23,12 +23,12 @@
       "path": "docs/review/update-029/source-worlds/native-taksim-distinct-ice-hit-and-ft-029.png",
       "saved": true,
       "width": 1280,
-      "sha256": "13495241445a3c88aae3d726cea0ca0c89e2337bf6eb9a27f23c8b81e0a1f7f8"
+      "sha256": "b58607be542056137cbdfb3af1717f644c5d7f68e8820e4f178b9cbeb0b38c2b"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "scope": "Actual supplied Taksim geometry with controlled local wolf poses; no native renderer or Android-device claim",
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

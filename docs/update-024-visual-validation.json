@@ -6,7 +6,7 @@
       "path": "docs/review/update-024/purple-claw-passive-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4ac47250476658516bc32b967c88d7e5f1b12782767847aa541b5c44997c034b"
+      "sha256": "87b0a5f09fafc909a0d078b0a57c4f3eb94811100813418066a4c47ef02f8681"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-024/original-diagonal-run-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f54ea999699236a152e9ea04728b6a669573d79108defe84423de7cb5e1df880"
+      "sha256": "bd36dd53c7602c359e19824ebf770dc7906114febd0dba8da3be34f8bad7e6b6"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-024/original-crouch-back-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "665af5515624e97875ad378bcffa46c9599b6a9c8665fc3e55861c1df639d3e1"
+      "sha256": "b6bd1923bf9b310ac1b2928fd7987359d72a59d2bf28b3e871d979f33797a3a0"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-024/original-airborne-pose-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f3f5fca09eaf3cc26883664a565fda617e0b25b30b3cebb4dfa65d0e17bf2d76"
+      "sha256": "e80c742673917cebf807f09141d4e0b2698b57234f6f8714ed445edfba2f7d7c"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-024/original-landing-pose-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "1e400fd2801d286a42a24359de28314f0b5bb836cade3f6352e16880318eec4a"
+      "sha256": "ac11d709289d2f9cebb3793ff87748c92699c1e59dec865f9549ff21d57a09aa"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-024/equipped-purple-claw-swing-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "e2c35d1b643cfe1f015ad745de99152e5555a148b64a92c1efc823fe48c48033"
+      "sha256": "cea1f272dfd66777b8adaac663b6cc5bcaf34f55297be145ddb4252a108b684d"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-024/source-ice-screen-and-body-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2eeaa0cff7530570a6b96ec2ecdb473c30b3a52a0b7403b206be023cf66bf71c"
+      "sha256": "6cca11f10a3533ee32ff47825deb9823c9b9969e31e7e8cc6a8b2f0689729b0e"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-024/source-death-screen-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "17f42d9d4b00cc384d5a007fed5a6cc2c0db1eeeddefe9dd718175c78b41e1d1"
+      "sha256": "427c14582445edd81703e806495fd8a11d3bd0670940a23e86762c4bbef6f6eb"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-024/native-taksim-purple-claw-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c35adf6ff9873564bab58d50b336b5c8b90bb5417aad43c7416d8eb72b6a8e92"
+      "sha256": "386de7335201177a975a3d9af73ce9f2c94676c19f7d4da6a061ff64574df8bb"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-024/native-taksim-ice-hit-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9c2b8e4b112e790fbe613e654984bf51232e3e853ee4f9abdce66c91e0f73966"
+      "sha256": "280c0908b742e767a746580f1cc5b4738b4cf0673b116b56b7ca9feafb9fb8f3"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-024/original-weapon-select-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4bff6fd6d4c716e1b563b6c666c1ddf91b3f056f74663389c305e253957e461f"
+      "sha256": "98d5b5f3d085515f8343595cef11cc6c7922d29534556eb4f2ea1f9c81d2c6de"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-024/sniper-scope-open-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2d3ba9b3b5c63bda631a3e41d0bf26b23a7fe8f68f5439e451f1619c7dbe5089"
+      "sha256": "8a047b97f3ced6fb8e52364206dde8c5517cf3a7caef348017d4d4aea061653a"
     },
     {
       "height": 720,
@@ -102,7 +102,7 @@
       "path": "docs/review/update-024/reload-closes-scope-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2481b187deeaf638d180e56568193b4ccb67974a13a17edb0649c4ead1f217f9"
+      "sha256": "8fc2000bbfaa5e6969978a39d48e58e296a615d23c9ce716ab62cebed0f74317"
     },
     {
       "height": 720,
@@ -110,11 +110,11 @@
       "path": "docs/review/update-024/sniper-scope-closed-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f7e9efece471d1d304dc377bf39e8299442ea7dc1b2e004407ad0860168f9e62"
+      "sha256": "46e568bf1512b1575c2be3c60223255f15db56ea23bc7020d9ea2a1d06fd0ab6"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

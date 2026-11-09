@@ -7,7 +7,7 @@
       "path": "docs/review/update-015/red-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "8139ed6ecb200b69b57d86eec97868b8ebd2fd5bcae1ed25b51b227301281413"
+      "sha256": "4157d7f6a9f88682ce8fdc7f35494ff777e85a3a709f9efe7fa958a11257f1dd"
     },
     {
       "height": 992,
@@ -15,7 +15,7 @@
       "path": "docs/review/update-015/blue-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "56417cc4e9e64e2da35c1c5a880f7d162c22660d3b4f13b2045d372ba1a7fc59"
+      "sha256": "9d0a91aa501e481668ff4b58277775867c8c3ba045f51100f41994494c4ce2f6"
     },
     {
       "height": 720,
@@ -71,7 +71,7 @@
       "path": "docs/review/update-015/storage-team-spawn-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "88de39b4699e1ae3b5f852a57cfbe9a06d96ce1fca2aa3e3419d9074d14953cb"
+      "sha256": "c513717d93ebd8a73988c7feaa7bb6645d75a150fa2d0740d77db78b7f4bd1a9"
     },
     {
       "height": 720,
@@ -86,5 +86,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "safeInsetsFixture": true,
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

@@ -100,7 +100,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "bone_AK_47_0",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "AK-47_HH_Muzz"
     },
     "weapon-5a488f65c747499952b3": {
       "itemId": "weapon-5a488f65c747499952b3",
@@ -201,7 +214,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "ESA-80_HH_Muzz"
     },
     "weapon-36533ca892573cd83ef9": {
       "itemId": "weapon-36533ca892573cd83ef9",
@@ -302,7 +328,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "AK-47_HH_Muzz"
     },
     "weapon-d9a5af28e3717ae6ed43": {
       "itemId": "weapon-d9a5af28e3717ae6ed43",
@@ -403,7 +442,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "AUZ_HH_Muzz"
     },
     "weapon-0a16a139597f41011f75": {
       "itemId": "weapon-0a16a139597f41011f75",
@@ -504,7 +556,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M4A1_HH_Muzz"
     },
     "weapon-99e629ebf8a98aa967f8": {
       "itemId": "weapon-99e629ebf8a98aa967f8",
@@ -605,7 +670,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "Scal_HH_Muzz"
     },
     "weapon-65eca59fc461320735fd": {
       "itemId": "weapon-65eca59fc461320735fd",
@@ -706,7 +784,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "Z3_HH_Muzz"
     },
     "weapon-537e6d49aa155159dd8b": {
       "itemId": "weapon-537e6d49aa155159dd8b",
@@ -807,7 +898,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "FANAS_HH_Muzz"
     },
     "weapon-692fe92303ae49b38fdc": {
       "itemId": "weapon-692fe92303ae49b38fdc",
@@ -908,7 +1012,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "CRISS_HH_Muzz"
     },
     "weapon-3c8aec072d7625ddb70c": {
       "itemId": "weapon-3c8aec072d7625ddb70c",
@@ -1009,7 +1126,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "CRISS_HH_Muzz"
     },
     "weapon-2539adf97a42fec68b80": {
       "itemId": "weapon-2539adf97a42fec68b80",
@@ -1110,7 +1240,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "CRISS_HH_Muzz"
     },
     "weapon-57cc6c8a7878d8b839e5": {
       "itemId": "weapon-57cc6c8a7878d8b839e5",
@@ -1211,7 +1354,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EMP-5_HH_Muzz"
     },
     "weapon-140b0054748d763050e5": {
       "itemId": "weapon-140b0054748d763050e5",
@@ -1312,7 +1468,20 @@
         }
       ],
       "reloadPerShell": true,
-      "reloadFinishSeconds": 0.933
+      "reloadFinishSeconds": 0.933,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "SUPAS_HH_Muzz"
     },
     "weapon-056723b78b610c1ae023": {
       "itemId": "weapon-056723b78b610c1ae023",
@@ -1413,7 +1582,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 1.0
+      "reloadFinishSeconds": 1.0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EM3_HH_Muzz"
     },
     "weapon-88964c6c14d0096126f2": {
       "itemId": "weapon-88964c6c14d0096126f2",
@@ -1514,7 +1696,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EXM26CS_HH_Muzz"
     },
     "weapon-405f41cdea79ff68d3c7": {
       "itemId": "weapon-405f41cdea79ff68d3c7",
@@ -1615,7 +1810,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EM500_HH_Muzz"
     },
     "weapon-47e5f891e177533cda7c": {
       "itemId": "weapon-47e5f891e177533cda7c",
@@ -1716,7 +1924,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M60_HH_Muzz"
     },
     "weapon-26b6ec6be986fe150647": {
       "itemId": "weapon-26b6ec6be986fe150647",
@@ -1817,7 +2038,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M60_HH_Muzz"
     },
     "weapon-70b8dd82808c59a51ca6": {
       "itemId": "weapon-70b8dd82808c59a51ca6",
@@ -1918,7 +2152,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M60_HH_Muzz"
     },
     "weapon-3c673d704c72ef9166da": {
       "itemId": "weapon-3c673d704c72ef9166da",
@@ -2019,7 +2266,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M60_HH_Muzz"
     },
     "weapon-aceeacdfbd6393776065": {
       "itemId": "weapon-aceeacdfbd6393776065",
@@ -2120,7 +2380,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M_92FS_HH_Muzz"
     },
     "weapon-a653e8635c68c470ca01": {
       "itemId": "weapon-a653e8635c68c470ca01",
@@ -2221,7 +2494,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "45pisol_HH_Muzz"
     },
     "weapon-8e73df48c10f16f638d1": {
       "itemId": "weapon-8e73df48c10f16f638d1",
@@ -2322,7 +2608,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "D_EAGLE_HH_Muzz"
     },
     "weapon-3665a9a0bfca27906bc8": {
       "itemId": "weapon-3665a9a0bfca27906bc8",
@@ -2423,7 +2722,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "bone_D_EGLE_0",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "M_92FS_HH_Muzz"
     },
     "weapon-028bda30f4993554b44c": {
       "itemId": "weapon-028bda30f4993554b44c",
@@ -2524,7 +2836,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "bone_D_EGLE_0",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "D_EAGLE_HH_Muzz"
     },
     "weapon-035a292c2d2c744b7560": {
       "itemId": "weapon-035a292c2d2c744b7560",
@@ -2625,7 +2950,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "PI226R_HH_Muzz"
     },
     "weapon-784117bde2dd27028734": {
       "itemId": "weapon-784117bde2dd27028734",
@@ -2726,7 +3064,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "45pisol_HH_Muzz"
     },
     "weapon-3a3af129788aa3658d53": {
       "itemId": "weapon-3a3af129788aa3658d53",
@@ -2806,7 +3157,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EM500_HH_Muzz"
     },
     "weapon-057290c1a14e0b4d8e3a": {
       "itemId": "weapon-057290c1a14e0b4d8e3a",
@@ -2864,7 +3228,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-8c796a25874c139e3d64": {
       "itemId": "weapon-8c796a25874c139e3d64",
@@ -2922,7 +3299,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-4a928f2384e9a8cb491b": {
       "itemId": "weapon-4a928f2384e9a8cb491b",
@@ -2980,7 +3370,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-f1b3a0433fb017916bb5": {
       "itemId": "weapon-f1b3a0433fb017916bb5",
@@ -3038,7 +3441,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-f19eb9358c581f238711": {
       "itemId": "weapon-f19eb9358c581f238711",
@@ -3096,7 +3512,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-f95b206757b4909c06e2": {
       "itemId": "weapon-f95b206757b4909c06e2",
@@ -3154,7 +3583,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-ac90df0f3793702b2ea5": {
       "itemId": "weapon-ac90df0f3793702b2ea5",
@@ -3212,7 +3654,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-c0fa4123e2008cf2fbdc": {
       "itemId": "weapon-c0fa4123e2008cf2fbdc",
@@ -3270,7 +3725,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-8cd5b51c47df65759db0": {
       "itemId": "weapon-8cd5b51c47df65759db0",
@@ -3371,7 +3839,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "A1_HH_Muzz"
     },
     "weapon-94f99f28c9e606b57377": {
       "itemId": "weapon-94f99f28c9e606b57377",
@@ -3472,7 +3953,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "EM40A3_HH_Muzz"
     },
     "weapon-e8c0aea9dfc11dc0286b": {
       "itemId": "weapon-e8c0aea9dfc11dc0286b",
@@ -3573,7 +4067,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "A1_HH_Muzz"
     },
     "weapon-f958fbdadf06a88424e2": {
       "itemId": "weapon-f958fbdadf06a88424e2",
@@ -3674,7 +4181,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "SVDR_HH_Muzz"
     },
     "weapon-593dbe3d98210fb5c63e": {
       "itemId": "weapon-593dbe3d98210fb5c63e",
@@ -3732,7 +4252,45 @@
       "reloadSound": "res://assets/shared_media/audio/bf8fc82d9f5fbf13e155a3d1.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone_body",
+          "parent": 0,
+          "index": 1
+        },
+        {
+          "name": "Bone_Leg_L",
+          "parent": 1,
+          "index": 2
+        },
+        {
+          "name": "Bone_Leg_R",
+          "parent": 1,
+          "index": 3
+        },
+        {
+          "name": "Bone_Leg_B",
+          "parent": 1,
+          "index": 4
+        },
+        {
+          "name": "Dummy02",
+          "parent": 1,
+          "index": 5
+        },
+        {
+          "name": "Bone_Gun",
+          "parent": 5,
+          "index": 6
+        }
+      ],
+      "hhMuzzleFx": "M-Gun_HH_Muzz"
     },
     "weapon-e2559431e8903b245f11": {
       "itemId": "weapon-e2559431e8903b245f11",
@@ -3833,7 +4391,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "A1_HH_Muzz"
     },
     "weapon-6d6b48bb78acc0be87bc": {
       "itemId": "weapon-6d6b48bb78acc0be87bc",
@@ -3934,7 +4505,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "A1_HH_Muzz"
     },
     "weapon-4c8e07ff6511cadadb25": {
       "itemId": "weapon-4c8e07ff6511cadadb25",
@@ -4035,7 +4619,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "A1_HH_Muzz"
     },
     "weapon-e7dbb77bc02b26337999": {
       "itemId": "weapon-e7dbb77bc02b26337999",
@@ -4093,7 +4690,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-4e714d474bc09137117e": {
       "itemId": "weapon-4e714d474bc09137117e",
@@ -4151,7 +4761,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone_Bomb_0",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-8552e78d00e6f359b72f": {
       "itemId": "weapon-8552e78d00e6f359b72f",
@@ -4209,7 +4832,20 @@
       "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-98d286ff537d39ae7773": {
       "itemId": "weapon-98d286ff537d39ae7773",
@@ -4267,7 +4903,20 @@
       "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-e91dece4c2a692d1b4e8": {
       "itemId": "weapon-e91dece4c2a692d1b4e8",
@@ -4325,7 +4974,20 @@
       "reloadSound": "res://assets/shared_media/audio/9b5212b1b8011115baf7faea.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-0bf6543d1b0241bc51f4": {
       "itemId": "weapon-0bf6543d1b0241bc51f4",
@@ -4383,7 +5045,20 @@
       "reloadSound": "res://assets/shared_media/audio/4da2f384f4159cb7147918e7.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-22ac84e22ddd27bcb64c": {
       "itemId": "weapon-22ac84e22ddd27bcb64c",
@@ -4441,7 +5116,20 @@
       "reloadSound": "res://assets/shared_media/audio/4da2f384f4159cb7147918e7.wav",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-a204e0e21223a7405c1c": {
       "itemId": "weapon-a204e0e21223a7405c1c",
@@ -4499,7 +5187,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": ""
     },
     "weapon-41d6a8c37f9bb5894008": {
       "itemId": "weapon-41d6a8c37f9bb5894008",
@@ -4600,7 +5301,30 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone001",
+          "parent": 0,
+          "index": 1
+        },
+        {
+          "name": "Point001",
+          "parent": 1,
+          "index": 2
+        },
+        {
+          "name": "Bone002",
+          "parent": 2,
+          "index": 3
+        }
+      ],
+      "hhMuzzleFx": "SZ552N_HH_Muzz"
     },
     "weapon-f2837abf475b4c58109c": {
       "itemId": "weapon-f2837abf475b4c58109c",
@@ -4701,7 +5425,30 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone001",
+          "parent": 0,
+          "index": 1
+        },
+        {
+          "name": "Point001",
+          "parent": 1,
+          "index": 2
+        },
+        {
+          "name": "Bone002",
+          "parent": 2,
+          "index": 3
+        }
+      ],
+      "hhMuzzleFx": "SZ552N_HH_Muzz"
     },
     "weapon-e85134a6c171e0dce50a": {
       "itemId": "weapon-e85134a6c171e0dce50a",
@@ -4759,7 +5506,20 @@
       "reloadSound": "",
       "sockets": [],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "WT-RL2_HH_Muzz"
     },
     "weapon-3a87067663c63d37a16b": {
       "itemId": "weapon-3a87067663c63d37a16b",
@@ -4860,7 +5620,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "WT-RL2_HH_Muzz"
     },
     "weapon-6333ef000d0a3a361423": {
       "itemId": "weapon-6333ef000d0a3a361423",
@@ -4961,7 +5734,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone001",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "WT-RL2_HH_Muzz"
     },
     "weapon-d30038e9d9d225cab574": {
       "itemId": "weapon-d30038e9d9d225cab574",
@@ -5041,7 +5827,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone01",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "Impact_EM-32"
     },
     "weapon-3f6750605afe185e5163": {
       "itemId": "weapon-3f6750605afe185e5163",
@@ -5121,7 +5920,20 @@
         }
       ],
       "reloadPerShell": false,
-      "reloadFinishSeconds": 0
+      "reloadFinishSeconds": 0,
+      "bones": [
+        {
+          "name": "Scene Root",
+          "parent": null,
+          "index": 0
+        },
+        {
+          "name": "Bone001",
+          "parent": 0,
+          "index": 1
+        }
+      ],
+      "hhMuzzleFx": "Impact_EM-32"
     }
   },
   "textures": {

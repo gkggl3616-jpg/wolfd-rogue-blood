@@ -7,7 +7,7 @@
       "path": "docs/review/equipment-013/gift-inbox-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4db0134134d128d995512336e4045ec2f4efda03058ae80a36de30bbd4ede89a"
+      "sha256": "4b9685394a2319be0a85573f7a23d1f5fe3614fb3c425d90040f2b7dfafa2f1a"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/equipment-013/gift-confirmation-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "94212c131470740728458be319eebbe6e9ba73bc3c56ed38d2ba9711a4f10bc5"
+      "sha256": "c9b539059d3a63273878252c9917fabfcf1c8b4cbe5cc1d844cdc2fbb7d55a33"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/equipment-013/round-weapon-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7faa7b8b599d2437ef0eb564c4ef55d3e86ff9d8463a94b58e5a2535cd6cfe35"
+      "sha256": "008f224e1fdd89b1bbad37ea2d06c9c8e9c9767c49dc1c389a340d0696b09ea6"
     },
     {
       "height": 720,
@@ -71,7 +71,7 @@
       "path": "docs/review/equipment-013/round-wolf-selection-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "358267d597bdb2123c5d25bfbd5efd96d4794dc424811ac3be046cefc0d3ebe4"
+      "sha256": "06d6b530fbd4f035960fbb4ea2d36df6e2f922f136f29fdf16d0e9cde92ea8a9"
     },
     {
       "height": 720,
@@ -79,7 +79,7 @@
       "path": "docs/review/equipment-013/wolf-power-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "795cbfc1cabe8c834ed81e32309fab2d5198c010bf685775f75988c32a69d356"
+      "sha256": "e3272168dfae1a9e7109df31dfeef759a0fa2f5dcfce9146ced0136a21e3cbbe"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d74322605578aa26f5ac303c141c7e848b02d5362f3c3656378196264b16d0d6"
+      "sha256": "9f7638f9168405b2438416a459d2473967f011fe36bfc6d28975d6e9d101cc44"
     },
     {
       "height": 720,
@@ -95,7 +95,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-blue-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7a2af117cc16af0f5bd1bbe7ea26cd0a698d01fd4cc51365ee79076965284e01"
+      "sha256": "27e5b100a4490ba73217369899e77e7d361d2b6d7c74ec4309d9e6e8eb3c71bc"
     },
     {
       "height": 720,
@@ -103,7 +103,7 @@
       "path": "docs/review/equipment-013/wolf-power-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "27ed324de2c79d3da4fbcfd674753a24b287f6b754e573ad7a001a1d7939b7f5"
+      "sha256": "fe444e0ff8a9c489bd6884805362736f1c2eba3f47939452ad1ad766ebdbd1a2"
     },
     {
       "height": 720,
@@ -111,7 +111,7 @@
       "path": "docs/review/equipment-013/wolf-guardian-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "3f38d63fd63ce2453c26076d4a66bf4d863d7598f12e9d7de105277292713504"
+      "sha256": "c9593ba12f3a4869ee624580ca81b35126bdd69a938c81efead4fbe2c1b42987"
     },
     {
       "height": 720,
@@ -119,7 +119,7 @@
       "path": "docs/review/equipment-013/wolf-ghost-red-013.png",
       "saved": true,
       "width": 1280,
-      "sha256": "165a057b04f3fecc1d1030918b4a8a7324e95f880057f4a4efbf0fbd6af75e05"
+      "sha256": "69d05b8da90bb47285f67b164d87915428382a8fadd95b2db1a2f138c9ee93d3"
     },
     {
       "height": 768,
@@ -127,7 +127,7 @@
       "path": "docs/review/equipment-013/round-wolf-selection-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "1be52930c1ef4718b3af3740134901f5c611f75ae61cac7dcfdec43b24be3ab3"
+      "sha256": "9d77e88558882c6d6179ba327b52935e14a9a971f06d8c7fe12d464036fd3e71"
     },
     {
       "height": 768,
@@ -135,7 +135,7 @@
       "path": "docs/review/equipment-013/gift-history-native-013.png",
       "saved": true,
       "width": 1024,
-      "sha256": "1cbb1c7d4fef18c7626628282a6f670c796a75f919b7bea4148f31694ba50b8e"
+      "sha256": "01862c78431373cc3b352a477f61083885fc8e512b1277abdc9e9b89d5ace5c4"
     }
   ],
   "failures": 0,
@@ -144,5 +144,5 @@
   "testFixtureGifts": true,
   "testFixtureLocalCash": 2000,
   "testFixtureMatchSp": 10000,
-  "runtimeCodeSha256": "2b15bc62851de3ce98ed6f530765cc6b1976567c0bc0c453c2f3cab244e456a7"
+  "runtimeCodeSha256": "e9e6e5a6a84bcebe56009728f14dc63b804632ca5afcf2425925480a06ee7ca5"
 }

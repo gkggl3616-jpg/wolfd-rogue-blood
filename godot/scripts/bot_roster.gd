@@ -7,20 +7,22 @@ var members={}
 var arsenal={}
 func _init():arsenal=JSON.parse_string(FileAccess.get_file_as_string("res://assets/bots/arsenal.json")).profiles
 func configure(game):
- var next=JSON.stringify([int(game.local_room.get("mode",0)),game.local_room.get("title",""),game.book.selected_characters,game.profile_name])
+ var next=JSON.stringify([int(game.local_room.get("mode",0)),game.local_room.get("title","")])
  if next!=context:context=next;members={}
 func identity(game,team,slot):
  configure(game)
  var id=team+"-"+str(slot)
  if members.has(id):return members[id]
  var index=slot+(8 if team=="red" else 0);var name=NAMES[index%NAMES.size()]
- if name==game.profile_name:name+="_"+str(index+1)
- var used_characters=members.values().map(func(r):return r.characterId)
+ var used_names=members.values().map(func(r):return r.name)
+ if name==game.profile_name or name in used_names:name+="_"+id
+ var occupied=members.values().filter(func(r):return not r.id in game.removed_bot_ids)
+ var used_characters=occupied.map(func(r):return r.characterId)
  var pool=game.book.characters.filter(func(r):return r.get("available",false) and r.get("sourceTeam","")==team and game.clientfx.catalog.characters.has(r.id) and not r.id in used_characters and not r.id in game.book.selected_characters.values())
  if pool.is_empty():pool=game.book.characters.filter(func(r):return r.get("available",false) and r.get("sourceTeam","")==team and not r.id in used_characters)
  var character=pool[(slot*3)%pool.size()] if not pool.is_empty() else game.book.character_for_team(team)
  var rules=preload("res://scripts/source_match_rules.gd").new();rules.configure(game.local_room)
- var used=members.values().map(func(r):return r.weaponId)
+ var used=occupied.map(func(r):return r.weaponId)
  var candidates=arsenal.values().filter(func(w):return rules.weapon_allowed(w.category,w.native.sourceKind) and not w.itemId in used)
  var preferred=rules.preferred_categories() if rules.enabled else ["rifle","smg","shotgun","machinegun","sniper","pistol"]
  if int(game.local_room.get("mode",0)) not in [1022,1023,1024,1025,1026]:candidates=candidates.filter(func(w):return w.category in preferred)
@@ -30,7 +32,7 @@ func identity(game,team,slot):
   if pa<0:pa=100
   if pb<0:pb=100
   return pa<pb if pa!=pb else a.source<b.source)
- var used_models=members.values().map(func(row):return arsenal.get(row.weaponId,{}).get("source",""))
+ var used_models=occupied.map(func(row):return arsenal.get(row.weaponId,{}).get("source",""))
  var fresh=candidates.filter(func(w):return not w.source in used_models)
  if not fresh.is_empty():candidates=fresh
  var role=ROLES[index%4]
