@@ -1,0 +1,414 @@
+{
+  "artifact": "WolfRogueBlood-0.31.0-test.apk",
+  "bytes": 1688778550,
+  "sha256": "6482430f3cc0af9fb8a5b9bb776846eb564ec2e0f52b1428189fa40174632bd0",
+  "sourceCommit": "d9339687502e2c843d684b174bfcf274ede5bfcb",
+  "releaseId": 439035016,
+  "reportBase64": "ewogICJ6aXBJbnRlZ3JpdHlWZXJpZmllZCI6IHRydWUsCiAgImVudHJpZXMiOiA1NTI3NSwKICAicnVudGltZVJlZmVyZW5jZXNSZXNvbHZlZCI6IDIzODI4LAogICJjYXRhbG9ndWVzVmVyaWZpZWQiOiA0OSwKICAibmF0aXZlTGlicmFyaWVzIjogWwogICAgewogICAgICAiYWJpIjogImFybTY0LXY4YSIsCiAgICAgICJlbGZNYWNoaW5lIjogMTgzLAogICAgICAibG9hZFNlZ21lbnRBbGlnbm1lbnRzIjogWwogICAgICAgIDE2Mzg0LAogICAgICAgIDE2Mzg0LAogICAgICAgIDE2Mzg0CiAgICAgIF0sCiAgICAgICJzdXBwb3J0czE2S2lCUGFnZXMiOiB0cnVlCiAgICB9LAogICAgewogICAgICAiYWJpIjogImFybWVhYmktdjdhIiwKICAgICAgImVsZk1hY2hpbmUiOiA0MCwKICAgICAgImxvYWRTZWdtZW50QWxpZ25tZW50cyI6IFsKICAgICAgICA0MDk2LAogICAgICAgIDQwOTYsCiAgICAgICAgNDA5NgogICAgICBdLAogICAgICAic3VwcG9ydHMxNktpQlBhZ2VzIjogZmFsc2UKICAgIH0sCiAgICB7CiAgICAgICJhYmkiOiAieDg2XzY0IiwKICAgICAgImVsZk1hY2hpbmUiOiA2MiwKICAgICAgImxvYWRTZWdtZW50QWxpZ25tZW50cyI6IFsKICAgICAgICAxNjM4NCwKICAgICAgICAxNjM4NCwKICAgICAgICAxNjM4NAogICAgICBdLAogICAgICAic3VwcG9ydHMxNktpQlBhZ2VzIjogdHJ1ZQogICAgfQogIF0sCiAgInBhY2thZ2UiOiAiY29tLndvbGZyb2d1ZS5ibG9vZC5vZmZsaW5lLnRlc3QiLAogICJ2ZXJzaW9uQ29kZSI6IDMxLAogICJ2ZXJzaW9uTmFtZSI6ICIwLjMxLjAtb2ZmbGluZSIsCiAgImJ5dGVzIjogMTY4ODc3ODU1MCwKICAic2hhMjU2IjogIjY0ODI0MzBmM2NjMGFmOWZiOGE1YjliYjc3Njg0NmViNTY0ZWMyZTBmNTJiMTQyODE4OWZhNDAxNzQ2MzJiZDAiLAogICJzaWduZXJDZXJ0aWZpY2F0ZVNoYTI1NiI6ICJmMjkxNzBhMDAxNTIxYWYwMzhiMzFhMzZiOTRjMDZhMDU1M2QxN2U5NzI0NmEwMzE5MDIwNmExMTFlZmY4N2Y2IiwKICAibWluaW11bUFuZHJvaWRTZGsiOiAyNCwKICAidGFyZ2V0QW5kcm9pZFNkayI6IDM2LAogICJwZXJtaXNzaW9ucyI6IFtdLAogICJpbnRlcm5ldFBlcm1pc3Npb25SZXF1ZXN0ZWQiOiBmYWxzZSwKICAic2lnbmF0dXJlVmVyaWZpZWQiOiB0cnVlLAogICJzaWduYXR1cmVWMiI6IHRydWUsCiAgInNpZ25hdHVyZVYzIjogdHJ1ZSwKICAiemlwMTZLaUJBbGlnbm1lbnRWZXJpZmllZCI6IHRydWUsCiAgImZ1bGxPcmlnaW5hbEdhbWVQb3J0IjogZmFsc2UsCiAgInBoeXNpY2FsQW5kcm9pZERldmljZVRlc3RlZCI6IGZhbHNlLAogICJhbmRyb2lkRW11bGF0b3JUZXN0ZWQiOiBmYWxzZSwKICAicnVudGltZUNvZGVTaGEyNTYiOiAiOTRiMWNjZmJhZTVmNTk4MThmY2YyNWM0Mzc0OTZkOWMyZDgxMjA1M2E1M2U0NGY2NDYzNThlZDlmOTFjNWNmYyIsCiAgInNjb3BlIjogIkxvY2FsIGJvdCBtYXRjaGVzLCBpbXBvcnRlZCBjb2xsZWN0aW9uIGFuZCBQQy1zb3VyY2UgVUk7IHJlYWwgc2VydmVycyBleGNsdWRlZC4iLAogICJidWlsZFR5cGUiOiAic2lnbmVkLW9mZmxpbmUtcmVsZWFzZSIsCiAgImFwa1Byb2R1Y2VkIjogdHJ1ZSwKICAiYXJ0aWZhY3QiOiAiV29sZlJvZ3VlQmxvb2QtMC4zMS4wLXRlc3QuYXBrIiwKICAicGFyYWxsZWxUZXN0SW5zdGFsbCI6IHRydWUsCiAgImV4aXN0aW5nUHJvZHVjdGlvbkluc3RhbGxQcmVzZXJ2ZWQiOiB0cnVlCn0K",
+  "chunks": [
+    {
+      "sha": "55554b3e29de04d31b4f2706fb425f8db700e37f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "1dca2e76c3a610a4f93d389338b5d6eb62509541",
+      "bytes": 16777216
+    },
+    {
+      "sha": "4f8e51b5fd69340bec36414dc3c57688aeeb70a0",
+      "bytes": 16777216
+    },
+    {
+      "sha": "fa6e88fe2ae9ca3ea1ccf4c072a5d5ded7aa9422",
+      "bytes": 16777216
+    },
+    {
+      "sha": "daaddae7b998a575b961b25c2808d8ae4ed89c4b",
+      "bytes": 16777216
+    },
+    {
+      "sha": "d40e079f28663d146e435ee58950936b3d91acb0",
+      "bytes": 16777216
+    },
+    {
+      "sha": "4a97e098b36401937175f52527b771b2d48feceb",
+      "bytes": 16777216
+    },
+    {
+      "sha": "565de970d0248fb78af455931ce7a68681cccc5f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "1e7c0f4d1a1944c057616826680aedd9edac30c1",
+      "bytes": 16777216
+    },
+    {
+      "sha": "f55b27b9344dfc153d340db9f231ac8471b07a98",
+      "bytes": 16777216
+    },
+    {
+      "sha": "36abc8e7f2cd13cd56ca743756be82aa4d27cbf9",
+      "bytes": 16777216
+    },
+    {
+      "sha": "e0e018242694c88a232a9c8253285c4f110d5ef3",
+      "bytes": 16777216
+    },
+    {
+      "sha": "6305518cbd74dd03c9e2072814b1853b2dec9701",
+      "bytes": 16777216
+    },
+    {
+      "sha": "6e4dcd6fd2dd502502e9e96c5ee4799b8795c69d",
+      "bytes": 16777216
+    },
+    {
+      "sha": "e64d3cec1413596b2129a7ae271a350c9e2b32e6",
+      "bytes": 16777216
+    },
+    {
+      "sha": "d70c1caf36c19868bf1de056279839e40b6a5b92",
+      "bytes": 16777216
+    },
+    {
+      "sha": "82edc7e37e5cd0ec4f2832a75a6ecb3d20b74e57",
+      "bytes": 16777216
+    },
+    {
+      "sha": "02736d1c2583e204eecd848b3b820fac45e2c399",
+      "bytes": 16777216
+    },
+    {
+      "sha": "5db35ceb5df13154cc72162963d51a6e80aae1ff",
+      "bytes": 16777216
+    },
+    {
+      "sha": "033a9d3902c233a93ddc517cf850ce088a9f4b7e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "838707ddf5f17dd9de79dad9cde1339954bda2f3",
+      "bytes": 16777216
+    },
+    {
+      "sha": "30c629b2eebc0b40853eb2df9e605e59849b501b",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7857b5b2eae531923eeff125e314c2a74fa03da6",
+      "bytes": 16777216
+    },
+    {
+      "sha": "f5d59846eabcb23902973233e107aa17c228482f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "5d5002fa0dc005061ab274e1fa666ad5f1c5ab5f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "cf648f51a6222403c6a8627bd7a95b1d9ae73566",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0432ef4339045c55f8e97a8f5041e759141b9f8e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "34129f4812ef3b0d6837cffb12f19d987025b5d3",
+      "bytes": 16777216
+    },
+    {
+      "sha": "c909d8fee31740164a915e089a322cd9f83b3198",
+      "bytes": 16777216
+    },
+    {
+      "sha": "92a4e455ce4a7ebd8103fade132ed93d2e40ad17",
+      "bytes": 16777216
+    },
+    {
+      "sha": "788a496d6261c22d5cb7aa9b5a6b4556ae3bb6b1",
+      "bytes": 16777216
+    },
+    {
+      "sha": "c26bcdbfc31959543b37f7545be39fd98973f8b9",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7c54adf7eb9a31104d7c7ad0d03a55a0e32c0bf7",
+      "bytes": 16777216
+    },
+    {
+      "sha": "abdf1d690970dcb45bcbc6ce826227615c451409",
+      "bytes": 16777216
+    },
+    {
+      "sha": "2b92fb1aa1bd5dbaeb1496ec6088194360041da7",
+      "bytes": 16777216
+    },
+    {
+      "sha": "39eb17051d9362cb27611467274a155324c628d5",
+      "bytes": 16777216
+    },
+    {
+      "sha": "d934d4b337c44414b2ae25f269f2117a5ede020a",
+      "bytes": 16777216
+    },
+    {
+      "sha": "6ea539ad19ce5d11bedf6300ee6edf17138d1b0d",
+      "bytes": 16777216
+    },
+    {
+      "sha": "ad95f0917bfa0dd5ccfca9769545db26f6676c09",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7c26dd8926587838075f385df988c3be43036dae",
+      "bytes": 16777216
+    },
+    {
+      "sha": "ff86dbb30118d05dd6252b69715cf2b43251159b",
+      "bytes": 16777216
+    },
+    {
+      "sha": "38311053c2c373aea8024160d319053f66b7574a",
+      "bytes": 16777216
+    },
+    {
+      "sha": "bf1cbc0705057c9200d09b9d42654ce42260f599",
+      "bytes": 16777216
+    },
+    {
+      "sha": "07f916b2eb5cac84aa3c97c6753d3f9978bf10b5",
+      "bytes": 16777216
+    },
+    {
+      "sha": "c1164ea730316a40267c7656438d80d38df7e0b7",
+      "bytes": 16777216
+    },
+    {
+      "sha": "2256487cb3bae688e704624fbb4dc848e0dd5f52",
+      "bytes": 16777216
+    },
+    {
+      "sha": "309e05046622e6cf7d25bc90656ccc09dc7132be",
+      "bytes": 16777216
+    },
+    {
+      "sha": "b460ec7af9716eacd82a1809cc2ec82f12203626",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0e4e731494c315ea61cc997dde8f47a992141f74",
+      "bytes": 16777216
+    },
+    {
+      "sha": "e692614069953898f5a5bdff3661eec31d20d469",
+      "bytes": 16777216
+    },
+    {
+      "sha": "9e8921f6289a411f698be27e2d0c3bc8b0a6efc4",
+      "bytes": 16777216
+    },
+    {
+      "sha": "2a533771a354e3ea20038d2272a63f793242d29c",
+      "bytes": 16777216
+    },
+    {
+      "sha": "a0a36dacd1435c61878e28eaef1529b93ca16f50",
+      "bytes": 16777216
+    },
+    {
+      "sha": "675f2751007992a294c1ffa1d82d2f6c863c3459",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7c5ea045b6599525c9869c395013c79b810bf5a6",
+      "bytes": 16777216
+    },
+    {
+      "sha": "3b657e6e58dfda7494674701ea26e09d9b77b648",
+      "bytes": 16777216
+    },
+    {
+      "sha": "083a6b5ac71a3e722561b22b2226ff1da158c86e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "e7b62e55e28cfd1c2ab7db6cffb5bcbdba5f2d6d",
+      "bytes": 16777216
+    },
+    {
+      "sha": "ab3c9f5aa338a30ebb12cd3e45d4d587c2e1fecf",
+      "bytes": 16777216
+    },
+    {
+      "sha": "2b02a948c4cf3408b3441060f5bc885a9751b759",
+      "bytes": 16777216
+    },
+    {
+      "sha": "f20bedc367d153f4d8858bb4e3aad19b8812438e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "785cc9b3d2818580abe12427585f39fb7311b80d",
+      "bytes": 16777216
+    },
+    {
+      "sha": "fba147e1001b9be105b1f091f42bd43f4b5861a4",
+      "bytes": 16777216
+    },
+    {
+      "sha": "92ed38a026117a5637bc372b34c5f5df3a75868f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "a2e889db8c89c40844ee437a258f4cfac19c7573",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0532cc32795f73676f80cc4a455aeacd4e38d129",
+      "bytes": 16777216
+    },
+    {
+      "sha": "204dccdc085fe4f41b11f9bad8ff7eb0515f315e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "5d90a51279b4b1464ade0666133cec57ef23fec9",
+      "bytes": 16777216
+    },
+    {
+      "sha": "54e08b9b0d69faf2df25ec230a5f3e2c7fd0f7b1",
+      "bytes": 16777216
+    },
+    {
+      "sha": "96443523eb396ebfe66600b989006e0cf09a8d90",
+      "bytes": 16777216
+    },
+    {
+      "sha": "723455c6d71d79a4b98aac1098d585c98734ad43",
+      "bytes": 16777216
+    },
+    {
+      "sha": "c6977282cb51a6c6a0eb50e1b8af177997f37043",
+      "bytes": 16777216
+    },
+    {
+      "sha": "c7752ab94787969253e773f3e92f12e8711b2ceb",
+      "bytes": 16777216
+    },
+    {
+      "sha": "a3e82ffcd399bf2cb91db147df24ac9f655e7420",
+      "bytes": 16777216
+    },
+    {
+      "sha": "281e3425260b65890a45a99d669e37c9b15a53ca",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0c557abcfb43b46f8b8de948e650fb8b0b19f854",
+      "bytes": 16777216
+    },
+    {
+      "sha": "8351d826040d4058bacf517dd99825871887c701",
+      "bytes": 16777216
+    },
+    {
+      "sha": "6e40742b5b38fd7a9ee2351991e13fa308570d95",
+      "bytes": 16777216
+    },
+    {
+      "sha": "6a73e69921873f2dbacb58c382d5fcb926017c9c",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0dd765dd562434ea4eca4802867778d8b5d100e1",
+      "bytes": 16777216
+    },
+    {
+      "sha": "1895b88dff60f5e5ee06fee77fded268aa8f95eb",
+      "bytes": 16777216
+    },
+    {
+      "sha": "70d962ca25527768befb180df29a99add6640fc5",
+      "bytes": 16777216
+    },
+    {
+      "sha": "d0a696d37a83880fbf7938add7c9a5460e82dc7e",
+      "bytes": 16777216
+    },
+    {
+      "sha": "f56fd32bb658e3b3532312d2075028ec60265623",
+      "bytes": 16777216
+    },
+    {
+      "sha": "dd84c7a3917bc094827f47273b272d48cb0b11f8",
+      "bytes": 16777216
+    },
+    {
+      "sha": "0e10e84d3cc7b0bf1caa1c54977d4ad47e25a839",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7fe37dba1b022b9aaceeefd4247c158480c5c059",
+      "bytes": 16777216
+    },
+    {
+      "sha": "bf80580329b3611c2312e35b74c5a2f19617ab43",
+      "bytes": 16777216
+    },
+    {
+      "sha": "399a2ec65937f53c559dc610e1b268249afcbc64",
+      "bytes": 16777216
+    },
+    {
+      "sha": "259d15417635fca026b8d171f46aaf4a900d0b78",
+      "bytes": 16777216
+    },
+    {
+      "sha": "2c68efe458049cc24122edf655c43010e74731b7",
+      "bytes": 16777216
+    },
+    {
+      "sha": "ef45bfb2f8b4bc523d9a46b387aac8b41be122ff",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7983c7aac38d775b730bdf467488e8bd83089a2f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "3e78be7aee909aa7f21341df62bc6cf53012ebef",
+      "bytes": 16777216
+    },
+    {
+      "sha": "7e82452491b445a9b9bbdaf7a87a08a1d1716e62",
+      "bytes": 16777216
+    },
+    {
+      "sha": "23ed1eaa5031a95a8c622b49ca987728fffee265",
+      "bytes": 16777216
+    },
+    {
+      "sha": "886e82922bfcecf05a809b3471c246403c15654f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "627e7322ff98c9b2da676acf78684c44ab4fc596",
+      "bytes": 16777216
+    },
+    {
+      "sha": "cc2367f1c7579832260f27fed0f628d55ccc7d7f",
+      "bytes": 16777216
+    },
+    {
+      "sha": "d9598d175a2ad57ad02e265956a22395805941ee",
+      "bytes": 16777216
+    },
+    {
+      "sha": "4d22b9b81cfaa13424cd35b7fa99ae0f0a60b43f",
+      "bytes": 11056950
+    }
+  ]
+}
