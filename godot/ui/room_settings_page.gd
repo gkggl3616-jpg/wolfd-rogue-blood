@@ -18,10 +18,10 @@ var clock
 var role_switch
 var draft={}
 func picker(name):
- var node=view.find_widget(name);node.disabled=false;node.fit_to_longest_item=false;node.clear();node.add_theme_font_size_override("font_size",10);return node
+ var node=view.find_widget(name);node.disabled=false;node.fit_to_longest_item=false;node.clip_text=true;node.clear();node.add_theme_font_size_override("font_size",10);return node
 func build():
  draft=ui.room_draft
- for name in ["FieldName","GameMode","GameOption","MapName","MaxChars","MissionObject","RoundTime","Password","CurrentMap"]:
+ for name in ["FieldName","GameMode","MapName","MaxChars","MissionObject","RoundTime","CurrentMap"]+preload("res://ui/room_info.gd").visible_fields():
   var old=room_view.find_widget(name)
   if old:old.hide()
  ui.links.StartGame.disabled=true;ui.links.ChangeRule.disabled=true
@@ -60,7 +60,7 @@ func build():
   var button=view.find_widget(name);button.disabled=true;button.tooltip_text="Bu seçenek çevrimiçi oda hizmetinde kullanılır."
  for name in ["ClassLowerLimited","ClassLimited","WeaponOptionCombobox"]:
   var option=picker(name);option.add_item("Moda göre" if name=="WeaponOptionCombobox" else "Kapalı");option.disabled=true
- var cover=ColorRect.new();cover.position=Vector2(611,430);cover.size=Vector2(407,96);cover.color=Color("202b30");cover.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(cover)
+ var cover=ColorRect.new();cover.position=Vector2(611,430);cover.size=Vector2(407,132);cover.color=Color("202b30");cover.mouse_filter=Control.MOUSE_FILTER_IGNORE;ui.content.add_child(cover)
  ui.text(ui.content,"BOTLAR",Vector2(619,438),Vector2(100,22),12,Art.GOLD)
  difficulty=ui.map_picker(ui.content,Vector2(752,435),Vector2(250,26))
  for level in ["easy","normal","hard"]:

@@ -96,6 +96,7 @@ func room():
 	view=layout("section/field")
 	only(["BackGround","FieldNumber","FieldName","UserListTop","StartGame","Invite","RedTeam","BlueTeam","RedCurChars","RedMaxChars","BlueCurChars","BlueMaxChars","ChangeTeam","ChangeRule","CurrentMap","GameMode","MapName","MaxChars","MissionObject","RoundTime","ChatTypeGroup","ToAllChatButton","ToPrideChatButton","ChatListBox","ChatEditBox","ChannelName"])
 	var data=ui.game.local_room
+	view.find_widget("PowerMasterRoomTitle").show()
 	view.find_widget("UserListTop").texture=Art.atlas("wt_interface/battleroom/br_powermaster_tap.dtx",Rect2(0,0,603,48))
 	for name in preload("res://ui/room_info.gd").visible_fields():
 		var widget=view.find_widget(name)
@@ -104,7 +105,7 @@ func room():
 	view.set_value("FieldName",data.get("title","Yerel Oda"))
 	# Both legacy fields occupy the same rectangle; only the room title is drawn.
 	view.find_widget("FieldNumber").hide()
-	view.set_value("ChannelName","YEREL OTURUM",1)
+	view.set_value("ChannelName","Yerel Oda",1)
 	for name in ["RedTeam","BlueTeam"]:
 		var users=view.find_widget(name)
 		if users is ItemList and ((name=="RedTeam")== (data.team=="red")):users.add_item(ui.game.profile_name,Art.texture(ui.game.ranks.current(int(ui.game.wallet.gp)).asset));users.set_meta("data_origin","local_profile")
@@ -136,19 +137,17 @@ func room():
 	var start=enable("StartGame",func():ui.game.match_flow.request_start(ui))
 	if start:start.disabled=not training
 	if not training:
-		ui.paragraph(ui.content,"Özgün maç kuralları tamamlanmadı. Yalnızca geometri gezintisi açılabilir.",Vector2(617,440),Vector2(385,90),16)
+		start.tooltip_text="Bu modda yalnızca harita önizlemesi açılabilir."
 		ui.button(ui.content,"Haritayı gez",Vector2(12,542),Vector2(170,28),func():ui.mode_choice=int(data.mode);ui.map_choice=int(data.map);ui.navigate("maps"))
-	var chat=view.find_widget("ChatEditBox")
-	if chat is LineEdit:chat.placeholder_text="Çevrimiçi sohbet bağlı değil";chat.editable=false
-
 	# Translated source mode captions are longer than the old English field.
 	preload("res://ui/room_info.gd").bind(ui.game,view,data)
 	var mode_caption=view.find_widget("GameMode")
 	if mode_caption is Label:
-		mode_caption.size=Vector2(105,28);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
-		mode_caption.add_theme_font_size_override("font_size",10)
+		mode_caption.size=Vector2(105,28);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		mode_caption.add_theme_font_size_override("font_size",12)
 		mode_caption.tooltip_text=mode_caption.text
-	var change=ui.button(ui.content,"Bot ve maç ayarları",Vector2(12,542),Vector2(190,27),func():ui.navigate("room_settings"));change.disabled=ui.game.match_flow.starting()
+	ui.links["Bot ve maç ayarları"]=ui.links.ChangeRule
+	ui.room_presentation=preload("res://ui/room_presentation.gd").new();ui.room_presentation.name="RoomPresentation";ui.room_presentation.ui=ui;ui.content.add_child(ui.room_presentation);ui.room_presentation.build(view)
 	if ui.game.match_flow.phase=="countdown":
 		start.disabled=true
 		var counter=preload("res://ui/match_flow_page.gd").new();counter.ui=ui;counter.countdown()

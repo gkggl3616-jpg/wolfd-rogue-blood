@@ -33,7 +33,7 @@ def validate(godot, report=None):
         ('asset_prerequisites', [sys.executable, 'tools/check_android_ready.py']),
         ('godot_import', [godot, '--headless', '--path', 'godot', '--editor', '--import', '--quit']),
     ]
-    for script in ['mobile_032','mobile_031','mobile_030','mobile_029','mobile_028','mobile_027','mobile_026','mobile_025','mobile_024','mobile_023','mobile_022','video_layout_021','mobile_021','mobile_020','destruction_sites_020','mobile_019','presentation_018','shop_controls_017','clientfx_017', 'mobile_016', 'mobile_015', 'bot_traversals_015', 'persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'gameplay_reference', 'bot_behaviour', 'pc_reference_expansion', 'round_equipment_gifts', 'ui_templates', 'ui_flows']:
+    for script in ['mobile_033','mobile_032','mobile_031','mobile_030','mobile_029','mobile_028','mobile_027','mobile_026','mobile_025','mobile_024','mobile_023','mobile_022','video_layout_021','mobile_021','mobile_020','destruction_sites_020','mobile_019','presentation_018','shop_controls_017','clientfx_017', 'mobile_016', 'mobile_015', 'bot_traversals_015', 'persistence', 'local_panel_protocol', 'touch_ownership', 'smoke', 'mobile_lifecycle', 'map_audio', 'wall_hold', 'combat_continuation', 'offline_matches', 'gameplay_reference', 'bot_behaviour', 'pc_reference_expansion', 'round_equipment_gifts', 'ui_templates', 'ui_flows']:
         steps.append((script, [godot, '--headless', '--path', 'godot', '--fixed-fps', '60', '--script', f'res://tests/{script}.gd']))
     results = []
     for name, command in steps:

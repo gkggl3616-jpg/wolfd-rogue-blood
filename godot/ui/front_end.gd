@@ -73,6 +73,10 @@ var settings_draft = {}
 var settings_dirty = false
 var settings_tab = "Ses"
 var last_error = ""
+var room_presentation
+var room_chat_logs={}
+var room_chat_states={}
+var room_chat_channel="all"
 
 func _ready():
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -98,7 +102,7 @@ func refresh():
 		input_id=focused.get_meta("navigation_input","");caret=focused.caret_column
 	if page in ["create_room","room_settings"] and is_instance_valid(room_title) and room_title.is_inside_tree():room_draft.title=room_title.text
 	for child in get_children(): remove_child(child);child.queue_free()
-	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;wallet_label=null;currency_values.clear();gp_header_label=null;gp_header_bar=null;profile_label=null
+	links.clear();source_layouts.clear();modal = null;preview_model = null;preview_view = null;preview_container = null;detail_helper = null;room_presentation=null;wallet_label=null;currency_values.clear();gp_header_label=null;gp_header_bar=null;profile_label=null
 	var dimensions = get_viewport_rect().size
 	virtual_width = 1024.0
 	var overlay=game.running and page in ["pause","Ayarlar","maps","scoreboard","kick"]
@@ -116,8 +120,8 @@ func refresh():
 		var editor=preload("res://ui/control_editor.gd").new();editor.ui=self;add_child(editor);building=false;return
 	var desktop = PcScreens.new();desktop.ui = self;desktop.build()
 	if page not in ["entry","pause","result","loading","kick"] and not (page=="Ayarlar" and overlay):build_header()
-	if page not in ["result","loading","kick"]:text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
-	if page not in ["result","loading","kick"]:text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	if page not in ["result","loading","kick","room","room_settings"]:text(canvas,"WOLF ROGUE BLOOD  ·  YEREL OTURUM",Vector2(8,751),Vector2(600,16),10,Color("a9b6b8"))
+	if page not in ["result","loading","kick","room","room_settings"]:text(canvas,"ÇEVRİMDIŞI",Vector2(876,751),Vector2(140,16),10,Art.GOLD).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	building = false
 	if input_id!="":
 		for node in content.find_children("*","LineEdit",true,false):
@@ -173,6 +177,7 @@ func choose_section():
 		detail_helper.show_options();return
 	confirm("Menüler","",func():pass)
 	var entries=[["Güç","power"],["Kartlar","Kartlar"],["Lobi","lobby"],["Görevler","missions"],["Kutular","Kutular"],["Setler","Setler"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Profil şifresi","pin"],["Yerel yönetim","admin"],["Etkinlikler","events"],["Mağaza","Mağaza"],["Envanter","Envanter"],["Hediyeler","gifts"],["Profil","profile"],["Web","web"],["Ayarlar","Ayarlar"]]
+	if page=="room":entries.push_front(["Bot ve maç ayarları","room_settings"])
 	for i in range(entries.size()):
 		var entry=entries[i]
 		button(modal,entry[0],Vector2(296+(i%2)*230,275+int(i/2)*31),Vector2(200,28),func():close_modal();navigate(entry[1]))
