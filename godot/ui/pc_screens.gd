@@ -18,7 +18,7 @@ func build():
 		"servers":servers()
 		"lobby":lobby()
 		"room":room()
-		"create_room":create_room()
+		"create_room":lobby();create_room()
 		"room_settings":
 			room();ui.detail_helper=preload("res://ui/room_settings_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.room_view=view;ui.detail_helper.build()
 		"maps":maps()
@@ -89,54 +89,18 @@ func servers():
 	enable("NormalServer",func():ui.show_error("Çevrimiçi sunucu hizmeti bağlı değil."))
 
 func lobby():
-	view=layout("section/battle")
-	only(["LobbyBackGround","CreateBattle","QuickStart","Refresh","ChannelButtonGroup","Channel1","Channel2","Channel3","Channel4","Channel5","ChatTypeGroup","ToAllChatButton","ToPrideChatButton","ToShoutingChatButton","ChatListBox","ChatEditBox","ChannelUserListBox","RoomNumberSort","RoomStatusSort","RoomTypeSort","RoomMapNameSort","ChannelName","PlayModeSelectComboBox"])
-	enable("CreateBattle",func():ui.navigate("create_room"))
-	enable("QuickStart",func():ui.navigate("room" if not ui.game.local_room.is_empty() else "create_room"))
-	enable("Refresh",ui.refresh)
-	enable("Channel1",ui.refresh)
-	for i in range(2,6):
-		var channel=view.find_widget("Channel%d" % i);channel.disabled=true;channel.tooltip_text="Çevrimiçi kanal"
-	var filter=view.find_widget("PlayModeSelectComboBox");filter.disabled=false;filter.clear();filter.add_item("Tümü",99999)
-	for mode in [{"id":0,"displayName":"Botlu Eğitim"},{"id":ui.game.LocalHunt.MODE,"displayName":"Kurt Avı"},{"id":ui.game.WOLF_BATTLE,"displayName":"Kurt Savaşı"}]+ui.game.map_catalog.data.modes:
-		filter.add_item(mode.displayName,int(mode.id))
-		if int(mode.id)==ui.lobby_mode_filter:filter.select(filter.item_count-1)
-	filter.item_selected.connect(func(_i):ui.lobby_mode_filter=-1 if filter.get_selected_id()==99999 else filter.get_selected_id();ui.refresh())
-	for name in ["RoomNumberSort","RoomStatusSort","RoomTypeSort","RoomMapNameSort"]:enable(name,func():ui.show_error("Yerel oda listesi güncel."))
-	var users=view.find_widget("ChannelUserListBox")
-	if users is ItemList:users.add_item(ui.game.profile_name,Art.texture(ui.game.ranks.current(int(ui.game.wallet.gp)).asset));users.set_meta("data_origin","local_profile")
-	var chat=view.find_widget("ChatEditBox")
-	if chat is LineEdit:chat.placeholder_text="Çevrimiçi sohbet bağlı değil";chat.editable=false
-	view.set_value("ChannelName","YEREL KANAL",1)
-	var duplicate=view.find_widget("ChannelName",-1)
-	if duplicate:duplicate.hide()
-	if ui.game.local_room.is_empty():ui.paragraph(ui.content,"Yerel oda yok.",Vector2(28,150),Vector2(550,70),17)
-	elif ui.lobby_mode_filter!=-1 and ui.lobby_mode_filter!=int(ui.game.local_room.mode):ui.paragraph(ui.content,"Bu modda oda yok.",Vector2(28,150),Vector2(550,70),17)
-	else:
-		build_room_row()
-		var room_data=ui.game.local_room
-		Art.sprite(ui.content,Art.map_photo(ui.game.map_catalog,int(room_data.map)),Vector2(612,130),Vector2(407,120))
-		var plate=ColorRect.new();plate.color=Color("20282c");plate.position=Vector2(612,255);plate.size=Vector2(407,212);ui.content.add_child(plate)
-		var mode_name="Kurt Avı · Yerel" if int(room_data.mode)==ui.game.LocalHunt.MODE else ("Öğretici Mod" if int(room_data.mode)==ui.game.LocalTutorial.MODE else "Botlu Eğitim")
-		if not ui.game.map_catalog.mode_record(int(room_data.mode)).is_empty():mode_name=ui.game.map_catalog.mode_name(int(room_data.mode))
-		ui.paragraph(ui.content,"%s\nMod: %s\nHarita: %s\nBotlar: %s\n1 yerel oyuncu" % [room_data.get("title","Yerel Oda"),mode_name,"Eğitim Arenası" if int(room_data.map)==0 else ui.game.map_catalog.map_record(int(room_data.map)).displayName,ui.game.BotRules.profile(room_data.get("botDifficulty","normal")).name],Vector2(624,268),Vector2(382,180),16)
-
-func build_room_row():
-	var list=layout("interface/fieldlistscreen");list.show_only(["FieldListButton"])
-	for control in list.controls:control.hide()
-	var row=list.find_widget("FieldListButton",0);row.show();row.disabled=false;list.bind_action("FieldListButton",func():ui.navigate("room"),0);row.set_meta("data_origin","local_room")
-	var fields=ui.native("interface/fieldbutton",row,Vector2.ZERO,Vector2(587,21));fields.show_only(["FieldID","FieldName","GameState","CurChars","MaxChars","GameMode","MapName"])
-	var data=ui.game.local_room;fields.set_value("FieldID","1");fields.set_value("FieldName",data.get("title","Yerel Oda"));fields.set_value("GameState","BEKLEME")
-	fields.set_value("CurChars",str(1+ui.game.bot_limit("red")+ui.game.bot_limit("blue")));fields.set_value("MaxChars","/ "+str(data.get("capacity",16)))
-	fields.set_value("GameMode",ui.game.map_catalog.mode_name(int(data.mode)) if int(data.mode)!=0 else "Eğitim")
-	fields.set_value("MapName","Eğitim Arenası" if int(data.map)==0 else ui.game.map_catalog.map_record(int(data.map)).displayName)
-	row.tooltip_text=data.get("title","Yerel Oda")+" · "+fields.find_widget("MapName").text
+	ui.detail_helper=preload("res://ui/lobby_page.gd").new();ui.detail_helper.ui=ui;ui.detail_helper.build();view=ui.detail_helper.view
 
 func room():
 	if ui.game.local_room.is_empty():lobby();return
 	view=layout("section/field")
 	only(["BackGround","FieldNumber","FieldName","UserListTop","StartGame","Invite","RedTeam","BlueTeam","RedCurChars","RedMaxChars","BlueCurChars","BlueMaxChars","ChangeTeam","ChangeRule","CurrentMap","GameMode","MapName","MaxChars","MissionObject","RoundTime","ChatTypeGroup","ToAllChatButton","ToPrideChatButton","ChatListBox","ChatEditBox","ChannelName"])
 	var data=ui.game.local_room
+	view.find_widget("UserListTop").texture=Art.atlas("wt_interface/battleroom/br_powermaster_tap.dtx",Rect2(0,0,603,48))
+	for name in preload("res://ui/room_info.gd").visible_fields():
+		var widget=view.find_widget(name)
+		if widget:widget.show()
+	preload("res://ui/room_info.gd").bind(ui.game,view,data)
 	view.set_value("FieldName",data.get("title","Yerel Oda"))
 	# Both legacy fields occupy the same rectangle; only the room title is drawn.
 	view.find_widget("FieldNumber").hide()
@@ -144,7 +108,7 @@ func room():
 	for name in ["RedTeam","BlueTeam"]:
 		var users=view.find_widget(name)
 		if users is ItemList and ((name=="RedTeam")== (data.team=="red")):users.add_item(ui.game.profile_name,Art.texture(ui.game.ranks.current(int(ui.game.wallet.gp)).asset));users.set_meta("data_origin","local_profile")
-	enable("ChangeTeam",func():data.team="red" if data.team=="blue" else "blue";ui.refresh())
+	enable("ChangeTeam",change_team)
 	enable("ChangeRule",func():ui.navigate("room_settings"))
 	enable("Invite",invite_window)
 	var training=ui.game.is_local_mode(int(data.mode))
@@ -178,15 +142,22 @@ func room():
 	if chat is LineEdit:chat.placeholder_text="Çevrimiçi sohbet bağlı değil";chat.editable=false
 
 	# Translated source mode captions are longer than the old English field.
+	preload("res://ui/room_info.gd").bind(ui.game,view,data)
 	var mode_caption=view.find_widget("GameMode")
 	if mode_caption is Label:
-		mode_caption.size=Vector2(180,32);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
+		mode_caption.size=Vector2(105,28);mode_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;mode_caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_LEFT
 		mode_caption.add_theme_font_size_override("font_size",10)
 		mode_caption.tooltip_text=mode_caption.text
 	var change=ui.button(ui.content,"Bot ve maç ayarları",Vector2(12,542),Vector2(190,27),func():ui.navigate("room_settings"));change.disabled=ui.game.match_flow.starting()
 	if ui.game.match_flow.phase=="countdown":
 		start.disabled=true
 		var counter=preload("res://ui/match_flow_page.gd").new();counter.ui=ui;counter.countdown()
+
+func change_team():
+	var candidate=ui.game.local_room.duplicate(true);candidate.team="red" if candidate.team=="blue" else "blue"
+	var saved=ui.game.local_rooms.commit(candidate)
+	if saved.is_empty():ui.show_error(ui.game.local_rooms.last_error);return
+	ui.game.local_room=saved;ui.refresh()
 
 func invite_window():
 	ui.close_modal();ui.modal=Control.new();ui.modal.size=ui.canvas.size;ui.modal.mouse_filter=Control.MOUSE_FILTER_STOP;ui.modal.z_index=100;ui.canvas.add_child(ui.modal)

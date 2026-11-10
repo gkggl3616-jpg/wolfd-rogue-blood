@@ -7,7 +7,7 @@
       "path": "docs/review/pc-reference/entry-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "c31cb857de298500da4c6ae288700742119ebc922c3ca93c2cf65fd508820871"
+      "sha256": "5d9096c6bcdb1894d72f6bf28cb191fb418ba9f962e65e41a8aa974df7674ba5"
     },
     {
       "height": 720,
@@ -15,7 +15,7 @@
       "path": "docs/review/pc-reference/second-password-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2ec7812c7753a33a163adabc31ca01c9cbf937f8f38a182be58757f49e580ab9"
+      "sha256": "ebd9b675bad8ccebfd606418c356d98a21a28bb2bad662e86d99eedcbaea1ba8"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/pc-reference/rank-catalogue-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ca3ec94c176c056591216c80119b2f352ab4e56546084a2ecebbe44afcb6ae25"
+      "sha256": "2345ab1de82cb39f7e926675d53dcc9f3598df573ae3809bcbc380d7223d264d"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/pc-reference/toolbar-missions-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "46480af620e7a1a31a7acbe00327cf075898ca0993373c1af60c76adef21da9b"
+      "sha256": "1de41524cbfa78908e4ac2d86f981f543759fe714cddd101a8c06c31b50ef50e"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/pc-reference/local-missions-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "46480af620e7a1a31a7acbe00327cf075898ca0993373c1af60c76adef21da9b"
+      "sha256": "1de41524cbfa78908e4ac2d86f981f543759fe714cddd101a8c06c31b50ef50e"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/pc-reference/map-photo-gallery-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8c7b4d7a1c75421be3e2f07908ce014513d3d943d51af00e25403bb10004fc11"
+      "sha256": "662cec94ceb69826b3d05283d6d9ac61a4d07956a8e0d8eeca4208ba4a5c9124"
     },
     {
       "height": 720,
@@ -55,7 +55,7 @@
       "path": "docs/review/pc-reference/room-map-photo-rank-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "67fb3626e4c46e87fceb81c8e343874730151d561458b37d95ad40e36401b61d"
+      "sha256": "5b8519d7a3003bf0ced966ea2378da9c4092293a0999bc671b52c65c9d1d832e"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/pc-reference/wolf-tattoo-slots-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "110f9302608329d1de331cbc3842b613c09729b3564d87519235aa535346d91c"
+      "sha256": "f25028ed019475b41ae35ed473fc9e2c28f9a4cff82ef4bfbaee6e747c5f6dbf"
     },
     {
       "height": 720,
@@ -71,7 +71,7 @@
       "path": "docs/review/pc-reference/box-inventory-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "42501c7f33e3a6c31e20ed3445eaa7ccd4eedcb80c4a48f5c776766dfd0028f5"
+      "sha256": "eb2b260f12f11be2981d9e0b6c7cee0d3b41e4e30e6cb586896769e2749563c3"
     },
     {
       "height": 720,
@@ -79,7 +79,7 @@
       "path": "docs/review/pc-reference/box-opening-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f93fe3f284a56c6f16d34472da5bc1169ed3f54792a336c25c3f5be0c3456c77"
+      "sha256": "046ffa58aecd5458d378bea31a6ef5b023485bfc5ae9d34908546d8749fa4791"
     },
     {
       "height": 720,
@@ -87,7 +87,7 @@
       "path": "docs/review/pc-reference/box-reward-012.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8c8eeb0637695d4b28af51982db6f84a505aeacd077ca691684ec87fd799bbda"
+      "sha256": "8269ecf8befce37d7ba86dba63c84fd83551763f8deb90f0ef2560707e48f062"
     },
     {
       "height": 720,
@@ -127,12 +127,12 @@
       "path": "docs/review/pc-reference/map-photo-gallery-native-012.png",
       "saved": true,
       "width": 1024,
-      "sha256": "c79b6fd5643dce8db68181452ea1b17b9548a8fd669e0716c88858a90cd7d2f6"
+      "sha256": "7de776baf18adb0a6159ac21b4a7503e33209c1f2453cd5efa2e199e65da3b88"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureLocalCash": 1000,
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
 }

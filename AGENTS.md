@@ -1,5 +1,8 @@
 # Wolf Rogue Blood çalışma kuralları
 
+- 0.32: Lobi/oda/kurma ekranları kaynak arayüz alanlarını ve 1024×768 koordinatlarını kullanır; üst menü 58 kaynak biriminde sabittir, içerik dikey ölçeklenip kaydırılmaz. Oda satırı seçim/önizleme yapar; Katıl ayrı işlemdir. Yerel oda listesi gerçek oluşturulmuş kayıtlardan oluşur; çevrimiçi oda/oyuncu/ping uydurma. Oda şifresi yerel giriş kontrolüdür; düz metni kalıcı kayda yazma. Başlık için 48 karakter yerel sınırdır, özgün PC üst sınırı diye sunma. Kayıt başarısızsa oda, takım ve kimlik sayacı eski değerinde kalır.
+
+
 - 0.31 kullanıcı düzeltmesi: Normal kurt ana canı 240, insan temel canı 100; oyuncu ve botlar aynı form temellerini kullanır. Diğer mutasyonların önceki yerel can farkları korunur; doğrulanmamış karakter alanları HP diye yorumlanmaz. YP ayrı kalır. Zaten seçili kurdu onaylamak tekrar SP harcatmaz; farklı kurtların kaynak fiyatları korunur. Koşuda üst/alt gövde kaynak maskeleri birlikte kullanılır; bütün kapalı istemci animasyon izleyicileri tamamlandı diye sunulmaz. Bot siperi gerçek çarpışma/görüş ve paylaşılan görülmüş konuma bağlı olmalı; görünmeyen hedefin canlı konumunu paylaşma.
 
 

@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-09T11:06:22.197763+00:00",
+  "utc": "2026-11-09T15:00:04.277147+00:00",
   "godotVersion": "4.7.2.stable.official.ed1daf0bf",
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc",
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d",
   "runtimeUnchangedDuringValidation": true,
   "passed": true,
   "steps": [
@@ -19,6 +19,12 @@
     },
     {
       "name": "godot_import",
+      "passed": true,
+      "exitCode": 0,
+      "errors": []
+    },
+    {
+      "name": "mobile_032",
       "passed": true,
       "exitCode": 0,
       "errors": []
@@ -244,7 +250,7 @@
   "fullOriginalGamePort": false,
   "rendering": "headless_dummy",
   "physicalAndroidDeviceTested": false,
-  "resumedFromValidationUtc": "2026-11-09T11:05:22.983143+00:00",
-  "earlierPassingStagesRetained": 36,
-  "resumeReason": "The failed healing-cap fixture started at20HP and assumed an old85HP ghost. It now starts5HP below the actual current maximum; runtime unchanged. Earlier passing stage fixtures were unchanged."
+  "resumedFromValidationUtc": "2026-11-09T14:49:22.951784+00:00",
+  "earlierPassingStagesRetained": 19,
+  "resumeReason": "The old presentation fixture measured enlarged header artwork. The new fixed PC header is intentionally source-sized; the fixture now measures the real physical touch rectangle and still requires artwork within the safe area. Runtime unchanged; earlier passing stage fixtures unchanged."
 }

@@ -51,6 +51,7 @@ func run():
 	game.profile_name=local_profile
 	await click(ui.links["CreateBattle"])
 	ensure(ui.page=="create_room","original CreateBattle button opens room dialog")
+	ui.room_mode.select(0);ui.room_mode.item_selected.emit(0) # Explicit training fixture; new rooms now default to a PC mode with a real map photo.
 	ui.room_title.text="QA Yerel Oda"
 	ui.room_title.grab_focus();ui.room_title.caret_column=5
 	root.size=Vector2i(1024,768);await frames()
@@ -170,7 +171,7 @@ func run():
 	ensure(not game.menu_open and game.library_panel==null,"closing collection resumes without orphaned menu")
 	game.show_home();root.size=Vector2i(1024,768);game.show_front_screen("servers");await frames()
 	ensure(game.pc_panel.page=="servers" and game.pc_panel.is_inside_tree(),"resize followed by immediate screen replacement cannot rebuild the detached previous menu")
-	game.show_home();ui=game.pc_panel;ui.navigate("create_room");await frames()
+	game.show_home();ui=game.pc_panel;ui.navigate("create_room");await frames();ui.room_mode.select(0);ui.room_mode.item_selected.emit(0)
 	ensure(ui.room_map.item_count==35,"offline room offers all 34 real maps plus the training arena")
 	for index in range(ui.room_map.item_count):
 		if ui.room_map.get_item_id(index)==84:

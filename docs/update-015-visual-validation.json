@@ -7,7 +7,7 @@
       "path": "docs/review/update-015/red-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "8139ed6ecb200b69b57d86eec97868b8ebd2fd5bcae1ed25b51b227301281413"
+      "sha256": "dbc43b045dcc496636db2b5f40e50ca037ad7ae3672a69cc2b674f5c39be4518"
     },
     {
       "height": 992,
@@ -15,7 +15,7 @@
       "path": "docs/review/update-015/blue-characters-phone-015.png",
       "saved": true,
       "width": 2160,
-      "sha256": "56417cc4e9e64e2da35c1c5a880f7d162c22660d3b4f13b2045d372ba1a7fc59"
+      "sha256": "5adce726afa27444ba797d966051fe5fb970b21eba9eeca5d06799050e65f244"
     },
     {
       "height": 720,
@@ -23,7 +23,7 @@
       "path": "docs/review/update-015/tattoo-triplets-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "18d67c2287cd3f92768eae726eb213d3989bae9df0595ce99c330da2a7e405d5"
+      "sha256": "4b8069404c6a613e08812c32caeefa7d60c2314461270922067b746d35829c69"
     },
     {
       "height": 720,
@@ -31,7 +31,7 @@
       "path": "docs/review/update-015/red-wolf-tattoos-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "24042e11c104536b5a41fa458ced9616357819d2482161cd8faf04f4f23f1aa8"
+      "sha256": "fac0732fbdb0a0d288cd279d112d42e08e4af9751481ffe97077372156bcb8c3"
     },
     {
       "height": 720,
@@ -39,7 +39,7 @@
       "path": "docs/review/update-015/blue-wolf-tattoos-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "8757bb801dffcc8c9f6c5abad31921c493c8b51cdcd9f7ad99ce48e2f187ad45"
+      "sha256": "dc137aea0ba5cedbe1a26174345b2841d55ef406502ce42bc57b544fa1f12a85"
     },
     {
       "height": 720,
@@ -47,7 +47,7 @@
       "path": "docs/review/update-015/source-claw-powers-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "ece10bb636d70cb621b350cbdf22671ab8db22ecdd9b05e189e4597ee529fdb1"
+      "sha256": "efcce81e97712047507178c6d88e9b9c3ddfcedd43fa547361646f3aa18747b7"
     },
     {
       "height": 720,
@@ -55,7 +55,7 @@
       "path": "docs/review/update-015/weapon-quality-filter-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "a05b91a168774b1d9d575067321ff26833ad501e6f7dc3ba1c9a8cde29c66cbb"
+      "sha256": "911436fb64d9c495b12f2ffc91667af4fc59b2fea582908cd47625eb4aaedcf4"
     },
     {
       "height": 720,
@@ -63,7 +63,7 @@
       "path": "docs/review/update-015/new-maps-selection-015.png",
       "saved": true,
       "width": 1280,
-      "sha256": "f190ef9507daa36f5635e0cf284a5ed1d5a9c2af94e0d499b067d38a0892bb15"
+      "sha256": "cbd4c7d02d32c3d083bd5323b782be5fac98d902c9bdafc584b51eed7a413952"
     },
     {
       "height": 720,
@@ -86,5 +86,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "safeInsetsFixture": true,
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
 }

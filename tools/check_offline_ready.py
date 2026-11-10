@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root=ROOT):
     blockers = asset_check(root)['blockers']
     fingerprint = code_fingerprint()
-    visual_minimum={'update-031-wolf-demo-validation.json':5,'update-031-visual-validation.json':34,'update-030-visual-validation.json':57,'update-029-source-visual-validation.json':3,'update-029-visual-validation.json':26,'update-028-visual-validation.json':40,'update-027-visual-validation.json':58,'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
+    visual_minimum={'update-032-visual-validation.json':22,'update-031-wolf-demo-validation.json':5,'update-031-visual-validation.json':34,'update-030-visual-validation.json':57,'update-029-source-visual-validation.json':3,'update-029-visual-validation.json':26,'update-028-visual-validation.json':40,'update-027-visual-validation.json':58,'update-026-visual-validation.json':19,'update-025-visual-validation.json':9,'update-024-visual-validation.json':14,'update-023-visual-validation.json':13,'update-022-visual-validation.json':10,'update-021-visual-validation.json':9,'update-020-visual-validation.json':9,'update-019-visual-validation.json':12,'update-018-visual-validation.json':14,'mobile-visual-validation.json':44,'pc-reference-visual-validation.json':16,'equipment-visual-validation.json':17,'human-visual-validation.json':3,'update-015-visual-validation.json':10,'update-016-visual-validation.json':10,'update-017-visual-validation.json':18}
     for filename in ['mobile-validation.json',*visual_minimum]:
         path = root/'docs'/filename
         report = json.loads(path.read_text()) if path.is_file() else {}
@@ -33,6 +33,10 @@ def check(root=ROOT):
         report=json.loads(path.read_text()) if path.is_file() else {}
         movie=report.get('movie',{});asset=root/movie.get('path','__missing_movie__')
         if movie.get('frames')!=frames or not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest()!=movie.get('sha256'):blockers.append('Current real gameplay recording missing/changed: '+filename)
+    native32=json.loads((root/'docs/update-032-visual-validation.json').read_text()) if (root/'docs/update-032-visual-validation.json').is_file() else {}
+    if not native32.get('sourcePageAssertions'):blockers.append('Final room capture state assertions missing')
+    room32=json.loads((root/'docs/mobile-032-validation.json').read_text()) if (root/'docs/mobile-032-validation.json').is_file() else {}
+    if not room32.get('passed') or room32.get('checks',0)<48:blockers.append('Native lobby/creator, local directory/password, PC header and touch regression incomplete')
     from check_native_weapons import check as native_check
     blockers.extend(native_check(root)['blockers'])
     proof31=json.loads((root/'docs/mobile-031-validation.json').read_text()) if (root/'docs/mobile-031-validation.json').is_file() else {}

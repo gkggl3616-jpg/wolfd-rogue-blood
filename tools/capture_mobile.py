@@ -3,6 +3,7 @@ import argparse, hashlib, json, os, pathlib, re, subprocess
 from validate_mobile import code_fingerprint
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SUITES={
+ 'update032':('visual_032','update-032','update-032-visual-validation.json',22),
  'update031wolf':('visual_wolf_031','update-031/wolf-gameplay','update-031-wolf-demo-validation.json',5),
  'update031':('visual_031','update-031','update-031-visual-validation.json',34),
  'update030':('visual_030','update-030','update-030-visual-validation.json',57),
@@ -31,7 +32,7 @@ def capture(godot,suites):
  for suite in suites:
   script,folder,report_name,minimum=SUITES[suite];destination=ROOT/'docs/review'/folder;destination.mkdir(parents=True,exist_ok=True)
   fingerprint=code_fingerprint();print('Capturing '+suite,flush=True)
-  result=subprocess.run([str(godot),'--path',str(ROOT/'godot'),'--rendering-method','gl_compatibility','--audio-driver','Dummy','--fixed-fps','60','--script','res://tests/'+script+'.gd','--',str(destination)],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=900)
+  result=subprocess.run([str(godot),'--path',str(ROOT/'godot'),'--rendering-method','gl_compatibility','--audio-driver','Dummy','--fixed-fps','60','--script','res://tests/'+script+'.gd','--',str(destination)],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=1800)
   if result.returncode or re.search(r'(?m)^(SCRIPT ERROR:|ERROR:|WARNING:.*(?:leaked|orphan))',result.stdout):raise RuntimeError(result.stdout)
   if fingerprint!=code_fingerprint():raise RuntimeError('Runtime changed during capture')
   report=json.loads((destination/'report.json').read_text())

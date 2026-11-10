@@ -4,11 +4,12 @@ extends "res://ui/room_settings_page.gd"
 var options:Control
 func build():
 	draft=ui.room_draft
+	var veil=ColorRect.new();veil.name="RoomCreatorVeil";veil.color=Color(0,0,0,.48);veil.size=Vector2(1024,768);veil.mouse_filter=Control.MOUSE_FILTER_STOP;ui.content.add_child(veil)
 	view=ui.native("interface/createfield",ui.content,Vector2(303,202),Vector2(417,335))
 	view.show_only(["BackGround","FieldNameEditBox","PasswordEditBox","SelectMap","ModeTypeComboBox","GameOptionComboBox","TeamComboBox","MapComboBox","Confirm","Cancel"])
-	var title=view.find_widget("FieldNameEditBox");title.editable=true;title.text=draft.title;ui.room_title=title
+	var title=view.find_widget("FieldNameEditBox");title.editable=true;title.max_length=48;title.text=draft.title;ui.room_title=title
 	title.set_meta("navigation_input","room_title");title.text_changed.connect(func(value):draft.title=value)
-	var password=view.find_widget("PasswordEditBox");password.placeholder_text="—";password.tooltip_text="Bu cihazdaki çevrimdışı oda"
+	var password=view.find_widget("PasswordEditBox");password.editable=true;password.secret=true;password.text=str(draft.get("passwordEdit",""));password.placeholder_text="";password.set_meta("navigation_input","room_password");password.text_changed.connect(func(value):draft.passwordEdit=value)
 	family=picker("ModeTypeComboBox");variant=picker("GameOptionComboBox");maps=picker("MapComboBox");team=picker("TeamComboBox")
 	var modes=[{"id":0,"name":"Botlu Eğitim"},{"id":ui.game.LocalHunt.MODE,"name":"Kurt Avı"},{"id":ui.game.LocalTutorial.MODE,"name":"Öğretici Mod"},{"id":ui.game.WOLF_BATTLE,"name":"Kurt Savaşı"}]
 	for row in ui.game.map_catalog.data.modes:modes.append({"id":int(row.id),"name":row.displayName})
@@ -23,8 +24,8 @@ func build():
 	family.item_selected.connect(func(_i):fill_variants());variant.item_selected.connect(func(_i):draft.mode=variant.get_selected_id();fill_rules())
 	maps.item_selected.connect(func(_i):draft.map=maps.get_selected_id();refresh_photo())
 	ui.room_mode=family;ui.room_map=maps;ui.room_form=team
-	ui.button(ui.content,"Harita görselleri",Vector2(303,545),Vector2(200,28),show_maps)
-	ui.button(ui.content,"Bot ve maç ayarları",Vector2(510,545),Vector2(210,28),func():options.show();ui.call_deferred("raise_close_controls"))
+	var photo=view.find_widget("SelectMap");var gallery=preload("res://ui/touch_button.gd").new();gallery.position=photo.position;gallery.size=photo.size;gallery.ignore_texture_size=true;gallery.tooltip_text="Harita görselleri";view.add_child(gallery);gallery.pressed.connect(show_maps);ui.links["Harita görselleri"]=gallery
+	var option_action=Button.new();option_action.hide();view.add_child(option_action);option_action.pressed.connect(show_options);ui.links["Bot ve maç ayarları"]=option_action
 	build_options();fill_variants()
 	view.bind_action("Confirm",apply);view.bind_action("Cancel",ui.go_back)
 	ui.links.PLOK=view.find_widget("Confirm");ui.links.PLCancel=view.find_widget("Cancel");ui.links.PLExit=ui.links.PLCancel
@@ -74,7 +75,12 @@ func apply():
 	var title=view.find_widget("FieldNameEditBox").text.strip_edges()
 	if title.length()<2 or maps.item_count==0:ui.show_error("Oda adı ve moda uygun harita gerekli.");return
 	draft.title=title;draft.capacity=capacity.get_selected_id();draft.playerForm="wolf" if int(draft.mode)==ui.game.LocalHunt.MODE and draft.team=="red" else "human"
-	ui.game.local_room=draft.duplicate(true);ui.history=["lobby"];ui.navigate("room",false)
+	var saved=ui.game.local_rooms.commit(draft,true)
+	if saved.is_empty():ui.show_error(ui.game.local_rooms.last_error);return
+	ui.game.local_room=saved;ui.history=["lobby"];ui.navigate("room",false)
 func dismiss_overlay():
 	if not options.visible:return false
 	options.hide();return true
+
+func show_options():
+	options.show();ui.call_deferred("raise_close_controls")

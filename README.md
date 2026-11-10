@@ -1,12 +1,12 @@
 # Wolf Rogue Blood
 
-Godot **4.7.2** ile Android'e taşınan çevrimdışı oyun. **0.31 Test APK:** Normal kurt **240 HP**, insan **100 HP**; dokunmatik ilk kurt seçimi, kaynak üst/alt gövdeyle ayrı koşu/çömelme, güvenli kalkış ve basamak geçişi. Botlar ayrı yaklaşma/siper noktaları, görülmüş konum paylaşımı ve gerçek köşeden çıkıp ateş etme davranışı kullanır. Önceki 34 harita, kaynak ışık atlasları, 903 silahlık katalog, FT yüzdeleri, farklı bot kimlikleri ve mevcut GP/62 rütbeye bağlı seviye sistemi korunur.
+Godot **4.7.2** ile Android'e taşınan çevrimdışı oyun. **0.32 Test APK:** Kaynak lobi alanları, sabit PC üst menüsü, lobinin üzerinde oda kurma, seç/önizle/katıl akışı, gerçek kalıcı yerel oda listesi, filtre/sayfalama ve şifreli giriş. Oda takımları kaynak başlık/hazır/sahip/kapalı yuva resimlerini kullanır. Normal kurt240, insan100HP; 0.31 hareket/siper düzeltmeleri, 34 harita ve kaynak silah/FT/rütbe sistemi korunur.
 
-[**Android APK · 0.31.0 Test · 1.69 GB**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.31.0-offline-test/WolfRogueBlood-0.31.0-test.apk) · [**Fotoğraflar ve iki hareket kaydı**](docs/review/update-031) · [**Değişiklikler / açık PC farkları**](docs/PC_REFERANS_031.md).
+[**Android APK · 0.32 Test · 1.69 GB**](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.32.0-offline-test/WolfRogueBlood-0.32.0-test.apk) · [**22 yeni lobi/oda görüntüsü**](docs/review/update-032) · [**Çözülen ve açık farklar**](docs/PC_REFERANS_032.md).
 
-**39/39 regresyon aşaması**, 42 yeni motor kontrolü ve **23 grupta 452 gerçek OpenGL görüntüsü** geçti. APK'da 49 katalog, kaynak bağlantıları, üç ABI, v2/v3 imza ve 16 KiB hizalama doğrulandı. [Gerçek APK raporu](docs/android-offline-test-build-031.json): **1,688,778,550 bayt**. **Fiziksel telefon/emülatör testi yapılmadı; tam PC eşitliği tamamlanmadı.** Açık harita/mod/kaynak farkları inceleme belgesindedir.
+**40/40 regresyon aşaması**, 51 yeni motor kontrolü ve **24 grupta 474 gerçek OpenGL görüntüsü** doğrulandı. APK: 49 katalog, 23828 kaynak bağlantısı, üç ABI, v2/v3 imza, 16 KiBhizalama. [Gerçek paket raporu](docs/android-offline-test-build-032.json): **1,688,795,522 bayt**. **Tam PC eşitliği ve fiziksel Android cihaz/emülatör testi tamamlanmış değildir.** Farklı istemci dönemleri, erişilemeyen YouTube kaydı, web reklamları/uzak servisler ve önceki mod/harita/kaynak açıkları inceleme belgesindedir.
 
-**Wolf Rogue Blood Test** / `com.wolfrogue.blood.offline.test`, 0.25–0.30 Test ile aynı imzayı kullanır. Önceki Test kurulumu üzerine güncellenebilir; eski üretim uygulaması ayrı kalır. [Önceki 0.30 Test](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.30.0-offline-test/WolfRogueBlood-0.30.0-test.apk).
+**Wolf Rogue Blood Test** / `com.wolfrogue.blood.offline.test`, önceki0.25–0.31 Test ile aynı imzayı kullanır. Test kurulumu üzerine güncellenebilir; üretim uygulaması ayrı kalır. [Önceki0.31Test](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/tag/v0.31.0-offline-test).
 
 [Önceki üretim APK'sı · 0.20.0](https://github.com/gkggl3616-jpg/wolfd-rogue-blood/releases/download/v0.20.0-offline/WolfRogueBlood-0.20.0-offline.apk) · [Oynanış görünümü ve bot değişiklikleri](docs/OYNANIS_REFERANSI.md)
 

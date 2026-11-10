@@ -6,7 +6,7 @@
       "path": "docs/review/update-024/purple-claw-passive-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "abd7b7b06a36cf02054cc4eb87cfb9d7fc8f42e0e498551a2740cfe5ef3c2c24"
+      "sha256": "267938b862526814384440731f09af6d49f56ed9d2cfd44045f75e9755a2526f"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-024/original-diagonal-run-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "11f4276872f5281a7436c85843317f88d8009ce5cd6554f4c07c11d6f32a40dd"
+      "sha256": "c19cdc08228e1189b77607058f43fa4ae710b89bdd416caf3e408ffba02fbc22"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-024/original-crouch-back-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7ced2c6df882982fda63d1cb95a9544da78bd0c735016e7d9d99422a490848e9"
+      "sha256": "52462d78feb4bf8492a4b4c50b4015b712fddecbd94a4b246262c3088198702c"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-024/original-airborne-pose-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "75bc83a3366f9a62b0821506e82a124e4d93fcfc8904d4557e1c9a2c8a018c7d"
+      "sha256": "155e082616b14bed74418cde8278c53b3310e53d2832c54a5898d30821dd3859"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-024/original-landing-pose-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b35b2679d39f08f45449ebd18148bc80048d27cca941a32da33caea9ca7422b7"
+      "sha256": "6d22e5f6c699de09c39355d8b553492fa4fd49628e62acf7990593632e172713"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-024/equipped-purple-claw-swing-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "68c5423441e166a961fb7629dff7a65e5b1b7832b13859c6fbb744a6dd40742a"
+      "sha256": "d5c4c065e5a7510c6dd2cf1e0cabfc4879dffafdf63c581f2d03a34fcdc4e572"
     },
     {
       "height": 720,
@@ -54,7 +54,7 @@
       "path": "docs/review/update-024/source-ice-screen-and-body-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "eb4a4d8b0da2816980a9e5cc90f12d3c61d60c9fdeef8274d643eddd23b9e45e"
+      "sha256": "0c1ac4f09ef6500681b64f7fa81ad3ea00899018c801fb2317f0eb93fe4c9271"
     },
     {
       "height": 720,
@@ -62,7 +62,7 @@
       "path": "docs/review/update-024/source-death-screen-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2f0cf9f783388c83ac49c60a73b83ff6e1d24407ae6bf869c33f747043e0288b"
+      "sha256": "87287918bf6846c101fd383a297672b35e312899d3fa84175bd6b6c48c3f0e5d"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-024/native-taksim-purple-claw-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "dbedf4d475f2b86d1abfaf339bc615b705c760e224ee46032ad7f96a1c443254"
+      "sha256": "5e654d43344ea3f0469944c8c0dfa3f46675cf2ddc9a24b85963a4d53e50462b"
     },
     {
       "height": 720,
@@ -78,7 +78,7 @@
       "path": "docs/review/update-024/native-taksim-ice-hit-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "7e8ef2f9bac66ae3e5203fd2049d9d88cbad35cae997a241ca30d7fd0000935b"
+      "sha256": "2efd2f1cabc554d136250b55c77ab53effbc0517a6a90e9710f075d6e8ce289a"
     },
     {
       "height": 720,
@@ -86,7 +86,7 @@
       "path": "docs/review/update-024/original-weapon-select-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "98d5b5f3d085515f8343595cef11cc6c7922d29534556eb4f2ea1f9c81d2c6de"
+      "sha256": "34bab8bd3b2e5029c8d285ce7694230efa29669b4a0e7048dc0c4ca979b1adfc"
     },
     {
       "height": 720,
@@ -94,7 +94,7 @@
       "path": "docs/review/update-024/sniper-scope-open-024.png",
       "saved": true,
       "width": 1280,
-      "sha256": "6f14b3f2c88506fbae7880f9d9b2e6c42b0d327a2873364de80b4d10de1a3d0d"
+      "sha256": "6ee18d0f3a7bc56001594107b2ee7f4e039e0f49a35ab51cf1d741b0f20f9fa1"
     },
     {
       "height": 720,
@@ -116,5 +116,5 @@
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
 }

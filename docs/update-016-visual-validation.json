@@ -6,7 +6,7 @@
       "path": "docs/review/update-016/transparent-character-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "b0d759424b38003086fc3a49e7a1cbebd6e7aa124d562297dd06addb6b862935"
+      "sha256": "1cb1c290b96fb58866d91243158aedf399d7d6c0ec739b9fe627bc2e464db31d"
     },
     {
       "height": 720,
@@ -14,7 +14,7 @@
       "path": "docs/review/update-016/large-wolf-inventory-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "18d67c2287cd3f92768eae726eb213d3989bae9df0595ce99c330da2a7e405d5"
+      "sha256": "4b8069404c6a613e08812c32caeefa7d60c2314461270922067b746d35829c69"
     },
     {
       "height": 720,
@@ -22,7 +22,7 @@
       "path": "docs/review/update-016/power-inventory-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "d7410894e1739d0f8d18da2051df869d0fd15985b36b96e5cffb585bb72db21a"
+      "sha256": "f9bb685def85aa6b132eb99491291be3ccaa7996100df6a9d085a04593790b75"
     },
     {
       "height": 720,
@@ -30,7 +30,7 @@
       "path": "docs/review/update-016/ally-bot-selection-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "4966230274a4fc07998f02874da07a1896f6e4c8e785fde3ffbac7de1f170e3a"
+      "sha256": "1469982da898cee1dbde4b5c0f037511eb40cbd571834433e59fab4684fd8926"
     },
     {
       "height": 720,
@@ -38,7 +38,7 @@
       "path": "docs/review/update-016/team-rosters-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "03d75187121b63426ab5536f865aa57904390b6e01d920081d4dea09d80b72f3"
+      "sha256": "03a56c49e330696b5e4138c628f5e5b69311b79f7f4f81488a1adbad2089818f"
     },
     {
       "height": 720,
@@ -46,7 +46,7 @@
       "path": "docs/review/update-016/allied-bot-match-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "50cbbea3d7a07258771539b36004bb64edbe482bdb3e643092b972e37f87f131"
+      "sha256": "092a698b1d6aeb8a2c9670b97183475eb92c1d1275da2ca5ef46be2f0e33927c"
     },
     {
       "height": 720,
@@ -70,7 +70,7 @@
       "path": "docs/review/update-016/howling_ice_1-016.png",
       "saved": true,
       "width": 1280,
-      "sha256": "9984db39e48eccfb33bb52decfbb86096cabd04187fc5b25fbf15585b2f14f93"
+      "sha256": "3c62a790295a900f28b3ee1c0ba106298d1f16d83588d9d0ff7625bb9649b705"
     },
     {
       "height": 720,
@@ -85,5 +85,5 @@
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
   "testFixtureActors": true,
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
 }

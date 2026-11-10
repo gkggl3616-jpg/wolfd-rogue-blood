@@ -38,7 +38,7 @@
       "path": "docs/review/update-022/source-bomb-explosion-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "0b5ac09083cccb31a7d1d21de6d0b418008762f1a8e7e26576cc0990f09a3541"
+      "sha256": "daeb0b3efe5b5b3acfc6a6a749a437145b26cce60f0540c89ca2297ce1110ab3"
     },
     {
       "height": 720,
@@ -78,11 +78,11 @@
       "path": "docs/review/update-022/return-to-configured-room-022.png",
       "saved": true,
       "width": 1280,
-      "sha256": "2c7d19b9abf62ddc3c68f4e33f3feb298595267c76a7566951d1e1bac4746f4b"
+      "sha256": "d1ae6a6c642d4656714f5146e0faf754af80e7faa3b291626d6f10697d0bb037"
     }
   ],
   "failures": 0,
   "physicalAndroidDeviceTested": false,
   "rendering": "gl_compatibility",
-  "runtimeCodeSha256": "94b1ccfbae5f59818fcf25c437496d9c2d812053a53e44f646358ed9f91c5cfc"
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
 }

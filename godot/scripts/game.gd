@@ -133,6 +133,7 @@ var wallet_storage_path = "user://wallet.json"
 var wallet_save_blocked = false
 var current_loadout_slot = "primary"
 var local_room = {}
+var local_rooms=preload("res://scripts/local_rooms.gd").new()
 var last_result = {}
 var menu_backdrop: ColorRect
 var transient_effects: Node3D
@@ -171,6 +172,7 @@ func _ready():
 		if entry.get("available", false) and (entry.id == book.selected_character or (book.selected_character == "" and entry.id == "pair-model0")): character_info = entry
 	setup_inputs()
 	load_wallet()
+	local_rooms.configure("user://local-rooms.json",not test_mode)
 	sync_collection()
 	build_world()
 	player = CharacterBody3D.new()

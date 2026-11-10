@@ -26,10 +26,10 @@ func build():
   if old:old.hide()
  ui.links.StartGame.disabled=true;ui.links.ChangeRule.disabled=true
  view=ui.native("interface/changefielddialog",ui.content)
- var title=view.find_widget("FieldNameEditBox");title.editable=true;title.text=draft.title;ui.room_title=title
+ var title=view.find_widget("FieldNameEditBox");title.editable=true;title.max_length=48;title.text=draft.title;ui.room_title=title
  title.set_meta("navigation_input","room_title");title.text_changed.connect(func(value):draft.title=value;ui.room_draft.title=value)
- var password=view.find_widget("PasswordEditBox");password.editable=false;password.placeholder_text="—";password.tooltip_text="Çevrimdışı odada şifre kullanılmaz."
- family=picker("ModeTypeComboBox");variant=picker("GameOptionComboBox");variant.size.x=105
+ var password=view.find_widget("PasswordEditBox");password.editable=true;password.secret=true;password.text=str(draft.get("passwordEdit",""));password.placeholder_text="••••" if draft.get("passwordDigest","")!="" else "";password.set_meta("navigation_input","room_password");password.text_changed.connect(func(value):draft.passwordEdit=value)
+ family=picker("ModeTypeComboBox");variant=picker("GameOptionComboBox")
  var modes=[{"id":0,"name":"Botlu Eğitim · Yerel"},{"id":ui.game.LocalHunt.MODE,"name":"Kurt Avı Modu · Yerel"},{"id":ui.game.LocalTutorial.MODE,"name":"Öğretici Modu · Yerel"},{"id":ui.game.WOLF_BATTLE,"name":"Kurt Savaşı · Yerel"}]
  for row in ui.game.map_catalog.data.modes:modes.append({"id":int(row.id),"name":row.displayName})
  for row in modes:
@@ -48,9 +48,9 @@ func build():
  for i in range(capacity.item_count):
   if capacity.get_item_id(i)==int(draft.get("capacity",16)):capacity.select(i)
  capacity.item_selected.connect(func(_i):draft.capacity=capacity.get_selected_id();fill_bot_limits())
- maps=picker("MapComboBox");maps.size.x=365;maps.size.y=24
+ maps=picker("MapComboBox")
  maps.item_selected.connect(func(_i):draft.map=maps.get_selected_id();refresh_photo())
- ui.button(ui.content,"▣",Vector2(978,377),Vector2(42,24),func():show_maps())
+ var image=view.find_widget("SelectMap");var gallery=preload("res://ui/touch_button.gd").new();gallery.position=image.position;gallery.size=image.size;gallery.ignore_texture_size=true;gallery.tooltip_text="Harita görselleri";view.add_child(gallery);gallery.pressed.connect(show_maps);ui.links["Harita görselleri"]=gallery
  goal=picker("MissionObjectComboBox");clock=picker("RoundTimeComboBox")
  goal.item_selected.connect(func(_i):draft.pointGoal=goal.get_selected_id();draft.roundGoal=goal.get_selected_id())
  clock.item_selected.connect(func(_i):draft.matchSeconds=clock.get_selected_id())
@@ -114,4 +114,6 @@ func apply():
  var title=view.find_widget("FieldNameEditBox").text.strip_edges()
  if title.length()<2 or maps.item_count==0:ui.show_error("Oda adı ve moda uygun harita gerekli.");return
  draft.title=title;draft.capacity=capacity.get_selected_id();draft.playerForm="wolf" if int(draft.mode)==ui.game.LocalHunt.MODE and draft.team=="red" else "human"
- ui.game.local_room=draft.duplicate(true);ui.history=ui.history.filter(func(entry):return entry not in ["room","room_settings","create_room"]);ui.navigate("room",false)
+ var saved=ui.game.local_rooms.commit(draft)
+ if saved.is_empty():ui.show_error(ui.game.local_rooms.last_error);return
+ ui.game.local_room=saved;ui.history=ui.history.filter(func(entry):return entry not in ["room","room_settings","create_room"]);ui.navigate("room",false)

@@ -39,6 +39,9 @@ var preview_team="blue"
 var target_primary_slot = "primary"
 var offset = 0
 var lobby_mode_filter=-1
+var lobby_page_index=0
+var lobby_sort="number"
+var lobby_descending=false
 var room_title: LineEdit
 var room_mode: OptionButton
 var room_map: OptionButton
@@ -107,7 +110,7 @@ func refresh():
 	var lobby_background=page in ["lobby","room","room_settings","create_room","maps","pin","profile","rankbook"]
 	if not overlay and page!="loading":background("wt_interface/lobby/lb_bg.dtx" if lobby_background else "wt_interface/inven_shop/is_bg.dtx",607 if lobby_background else 352)
 	if not overlay and page not in ["entry","loading"]:
-		var clean_top=ColorRect.new();clean_top.size=Vector2(1024,94);clean_top.color=Color.BLACK;clean_top.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(clean_top)
+		var clean_top=ColorRect.new();clean_top.size=Vector2(1024,58);clean_top.color=Color.BLACK;clean_top.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(clean_top)
 	content = Control.new();content.position.y = 0;content.size = Vector2(virtual_width,768);canvas.add_child(content)
 	if page=="controls":
 		var editor=preload("res://ui/control_editor.gd").new();editor.ui=self;add_child(editor);building=false;return
@@ -131,6 +134,12 @@ func usable_rect():
 			mapped=rect.intersection(mapped)
 			if mapped.has_area():rect=mapped
 	return Rect2(rect.position+Vector2(inset.x,inset.y),Vector2(maxf(1,rect.size.x-inset.x-inset.z),maxf(1,rect.size.y-inset.y-inset.w)))
+
+func _input(event):
+	if is_visible_in_tree() and page=="lobby" and modal==null and not game.application_suspended and detail_helper!=null and detail_helper.has_method("handle_input"):detail_helper.handle_input(event)
+
+func _notification(what):
+	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT,NOTIFICATION_APPLICATION_PAUSED] and detail_helper!=null and detail_helper.has_method("cancel_input"):detail_helper.cancel_input()
 
 func trace(source):
 	if source not in source_layouts: source_layouts.append(source)
@@ -157,64 +166,11 @@ func native(source,parent,at=Vector2.ZERO,dimensions=Vector2(1024,768)):
 	return node
 
 func build_header():
-	# Physical screen coordinates keep touch targets and text readable regardless
-	# of the legacy 1024x768 canvas's separate horizontal/vertical scales.
-	var safe=usable_rect();var pixels=get_viewport().get_final_transform().get_scale().abs()
-	var density=maxf(1,minf(safe.size.x*pixels.x/1280.0,safe.size.y*pixels.y/640.0))
-	var height=72.0
-	var strip=Control.new();strip.name="ResponsiveHeader";strip.position=safe.position;strip.scale=Vector2.ONE*density/pixels;strip.size=Vector2(safe.size.x*pixels.x/density,height);add_child(strip)
-	var mark=ColorRect.new();mark.color=Color("222628");mark.size=strip.size;mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;strip.add_child(mark)
-	var header_virtual=height*density/pixels.y/canvas.scale.y
-	content.scale.y=(768-header_virtual)/(768-44)
-	content.position.y=header_virtual-44*content.scale.y
-	if page=="admin":content.position.y=header_virtual;content.scale.y=(768-header_virtual)/768
-	if is_instance_valid(preview_view):
-		preview_view.size=Vector2i(preview_container.size*canvas.scale*content.scale)
-		CameraFit.frame(preview_camera,preview_root,Vector2(preview_view.size))
-	var entries=[["Etkinlikler","events","event"],["Sıralama","ranking","ranking"],["Mağaza","Mağaza","shop"],["Envanter","Envanter","inven"],["Klan","clan","pride"],["Hediyeler","gifts","gift"],["Arkadaşlar","friends","msg"],["Profil","profile","record"],["Web","web","web"],["Ayarlar","Ayarlar","option"],["Geri","back","back"]]
-	var wallet_x=clampf(strip.size.x*0.275,132,352);var wallet_width=clampf(strip.size.x*0.133,100,170)
-	var account_width=wallet_x+wallet_width+8;var slots=maxi(4,int((strip.size.x-account_width-12)/56))
-	if slots<12:
-		var priority=["Mağaza","Envanter","Geri","Hediyeler","Ayarlar","Etkinlikler","Sıralama","Klan","Arkadaşlar","Profil","Web"].slice(0,maxi(1,slots-1))
-		entries=entries.filter(func(entry):return entry[0] in priority)
-	var start_x=account_width+8
-	var pitch=(strip.size.x-8-start_x)/(entries.size()+1)
-	var icon_size=minf(height-8,pitch-4)
-	var rank=game.ranks.current(int(game.wallet.gp))
-	rank_background=Art.sprite(strip,rank.background,Vector2(8,(height-32)/2),Vector2(32,32));rank_image=Art.sprite(strip,rank.asset,Vector2(8,(height-32)/2),Vector2(32,32));rank_image.tooltip_text=rank.name+" · Seviye %d" % game.ranks.progress(int(game.wallet.gp)).level
-	last_rank_gp=-1
-	var profile_width=wallet_x-54
-	profile_label=text(strip,game.profile_name,Vector2(46,6),Vector2(profile_width,19),12);profile_label.tooltip_text=game.profile_name
-	gp_header_bar=ProgressBar.new();gp_header_bar.position=Vector2(46,31);gp_header_bar.size=Vector2(profile_width,9);gp_header_bar.show_percentage=false;strip.add_child(gp_header_bar)
-	var bar_back=StyleBoxFlat.new();bar_back.bg_color=Color("333a3d");gp_header_bar.add_theme_stylebox_override("background",bar_back)
-	var bar_fill=StyleBoxFlat.new();bar_fill.bg_color=Color("889297");gp_header_bar.add_theme_stylebox_override("fill",bar_fill)
-	gp_header_bar.add_theme_font_size_override("font_size",1);gp_header_bar.size=Vector2(profile_width,8)
-	gp_header_label=text(strip,"",Vector2(46,44),Vector2(profile_width,16),10,Color("c1c6c8"))
-	wallet_label=Control.new();wallet_label.name="CurrencyPanel";wallet_label.position=Vector2(wallet_x,4);wallet_label.size=Vector2(wallet_width,height-8);strip.add_child(wallet_label)
-	var divider=ColorRect.new();divider.color=Color("4c5356");divider.position=Vector2(-8,0);divider.size=Vector2(1,height-8);divider.mouse_filter=Control.MOUSE_FILTER_IGNORE;wallet_label.add_child(divider)
-	for i in range(4):
-		var key=["gold","kp","cash","jt"][i];var caption=["ALTIN:","KP:","NAKİT:","JT:"][i];var y=i*(height-8)/4
-		text(wallet_label,caption,Vector2(0,y),Vector2(49,16),11,Color("c1c6c8"))
-		var value=text(wallet_label,"",Vector2(50,y),Vector2(wallet_width-50,16),11);value.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT;currency_values[key]=value
-	currency_values.jt.tooltip_text="JoyToken hesabı bağlı değil."
-	for i in range(entries.size()):
-		var entry=entries[i]
-		var node=Art.icon_button(strip,"wt_interface/all/a_lb_icon_%s.dtx" % entry[2],Vector2(start_x+i*pitch,(height-icon_size)/2),entry[0],func():
-			if entry[1]=="back":go_back()
-			else:navigate(entry[1])
-		)
-		node.size=Vector2.ONE*icon_size;node.stretch_mode=TextureButton.STRETCH_SCALE
-		links[entry[0]]=node
-		if entry[1]==page:node.modulate=Color("ffe36a")
-		if entry[1]=="gifts" and game.inbox.pending_count()>0:text(node,str(game.inbox.pending_count()),Vector2(25,0),Vector2(18,16),11,Art.GOLD)
-	links["Diğer"]=button(strip,"",Vector2(start_x+entries.size()*pitch,(height-icon_size)/2),Vector2.ONE*icon_size,choose_section)
-	links["Diğer"].tooltip_text="Diğer menüler"
-	for i in range(3):
-		var line=ColorRect.new();line.color=Color("283037");line.mouse_filter=Control.MOUSE_FILTER_IGNORE
-		line.position=Vector2(icon_size/2-9,icon_size/2-8+i*7);line.size=Vector2(18,2);links["Diğer"].add_child(line)
-	var power_link=Button.new();power_link.hide();strip.add_child(power_link);power_link.pressed.connect(func():navigate("power"));links["Güç"]=power_link
+	var strip=preload("res://ui/pc_header.gd").new();strip.name="ResponsiveHeader";strip.ui=self;strip.position=canvas.position;strip.scale=canvas.scale;strip.size=Vector2(1024,58);add_child(strip);strip.build()
 
 func choose_section():
+	if page=="create_room" and detail_helper!=null and detail_helper.has_method("show_options"):
+		detail_helper.show_options();return
 	confirm("Menüler","",func():pass)
 	var entries=[["Güç","power"],["Kartlar","Kartlar"],["Lobi","lobby"],["Görevler","missions"],["Kutular","Kutular"],["Setler","Setler"],["Arkadaşlar","friends"],["Klan","clan"],["Sıralama","ranking"],["Dövmeler","Dövmeler"],["Profil şifresi","pin"],["Yerel yönetim","admin"],["Etkinlikler","events"],["Mağaza","Mağaza"],["Envanter","Envanter"],["Hediyeler","gifts"],["Profil","profile"],["Web","web"],["Ayarlar","Ayarlar"]]
 	for i in range(entries.size()):
@@ -251,6 +207,11 @@ func navigate(next,remember=true,back_step=false):
 	if next in ["create_room","room_settings"] and page!=next:
 		room_draft={"title":"Yerel Oda","mode":0,"map":0,"team":"blue","playerForm":"human","botDifficulty":"normal"}
 		room_draft.merge(game.local_room,true)
+		if next=="create_room":
+			for key in ["roomId","passwordDigest","passwordSalt","passwordEdit"]:room_draft.erase(key)
+			if game.local_room.is_empty():
+				room_draft.mode=1000;var maps=game.map_catalog.maps_for_mode(1000,true)
+				if not maps.is_empty():room_draft.map=int(maps[0].number)
 	if next=="Dövmeler" and page!="Dövmeler":preview_angle=PI
 	if next=="Mağaza":collection_shop=true
 	elif next=="Envanter":collection_shop=false

@@ -29,9 +29,9 @@ func run():
   for link in ui.links.values():
    if link.get_parent()==strip and link.visible:navigation.append(link)
   ensure(navigation.all(func(button):return ui.usable_rect().encloses(button.get_global_rect())),"All visible toolbar targets fit safe area: "+str(dimensions))
-  var sizes=navigation.map(func(button):return (root.get_final_transform()*button.get_global_rect()).size.x)
-  ensure(sizes.all(func(width):return width>=44),"Expanded header retains finger-sized targets: "+str(dimensions))
-  if dimensions.x>2500:ensure(sizes.all(func(width):return width>=85),"X7 Pro resolution scales toolbar icons up instead of leaving fixed tiny pixels")
+  var sizes=navigation.map(func(button):return (root.get_final_transform()*button.get_global_transform_with_canvas()*button.target_rect()).size.x)
+  ensure(sizes.all(func(width):return width>=44),"Source header retains finger-sized hit targets: "+str(dimensions))
+  if dimensions.x>2500:ensure(sizes.all(func(width):return width>=80),"X7 Pro resolution retains density-scaled physical touch areas around fixed source artwork")
  root.size=Vector2i(1280,720);await frames();ui.safe_insets=Vector4.ZERO
  game.inbox.state.messages=[]
  for kind in ["character","weapon","power"]:

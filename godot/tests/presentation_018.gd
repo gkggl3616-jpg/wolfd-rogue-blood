@@ -63,8 +63,8 @@ func run():
   for key in ui.links:
    var button=ui.links[key]
    if button.get_parent().name!="ResponsiveHeader" or not button.visible:continue
-   var bounds=button.get_global_rect();var physical=transform*bounds
-   ensure(safe.encloses(bounds) and physical.size.x>=43 and physical.size.y>=43,"Phone toolbar stays within safe bounds with 44px targets: "+str(dimensions)+key)
+   var bounds=button.get_global_rect();var physical=transform*button.get_global_transform_with_canvas()*button.target_rect()
+   ensure(safe.encloses(bounds) and physical.size.x>=43 and physical.size.y>=43,"Source toolbar art stays in safe bounds with enlarged physical touch targets: "+str(dimensions)+key)
   ensure(not ui.links.has("WOLF\nPASS") and not ui.links.has("‹ KLAN ZİNCİRİ ›") and ui.links.has("Diğer"),"Removed features absent; overflow route exists")
  root.size=Vector2i(1280,720);await frames();ui.safe_insets=Vector4.ZERO;ui.navigate("Setler");await frames()
  ensure(ui.currency_values.cash.text=="∞ N" and ui.currency_values.kp.text=="∞ KP" and ui.currency_values.jt.text=="— JT","Separate currency column preserves unlimited Nakit/KP and never invents JoyToken balance")
