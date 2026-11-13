@@ -1,0 +1,160 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "captures": [
+    {
+      "height": 720,
+      "name": "starter-owned-inventory-017",
+      "path": "docs/review/update-017/starter-owned-inventory-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e631caaec9891b5c9fab32a4323107a2e9b0f84fb29317539f81ee848ce633ea"
+    },
+    {
+      "height": 720,
+      "name": "source-claw-shop-017",
+      "path": "docs/review/update-017/source-claw-shop-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0dd2e43c0d0f2e058ec7356ed162390c62c3d45a4a68deb4689c3cf7828e0cdb"
+    },
+    {
+      "height": 720,
+      "name": "source-claw-price-017",
+      "path": "docs/review/update-017/source-claw-price-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b0cc830d4175ac381027a22bab60b9959d94da0c358b204b2b7c901c225fa214"
+    },
+    {
+      "height": 720,
+      "name": "purchased-claw-gift-017",
+      "path": "docs/review/update-017/purchased-claw-gift-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b4b0c2efda6e27bef1f405da87c1c9c26bc6b66d5e83866a2608018d29e25512"
+    },
+    {
+      "height": 720,
+      "name": "owned-power-inventory-017",
+      "path": "docs/review/update-017/owned-power-inventory-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "11614bc0d8fbce8a7ab5de33bcc7a15a3d5a1a2ec9fcdbfea9234e11d4151457"
+    },
+    {
+      "height": 720,
+      "name": "wolf-run-direction-buttons-017",
+      "path": "docs/review/update-017/wolf-run-direction-buttons-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7cc7cb13636a028508677e49643c44eace31202e2b3dfd5dedd27340a5ee4bcd"
+    },
+    {
+      "height": 720,
+      "name": "source-room-options-017",
+      "path": "docs/review/update-017/source-room-options-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6c0dc6b9c410d887e9ab58a36e8b2f4730f421ab1c693be599312efe3ed1b893"
+    },
+    {
+      "height": 720,
+      "name": "source-room-roster-017",
+      "path": "docs/review/update-017/source-room-roster-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0b3e65b84580266339103059b893e88b7898320aa56903fac005660e653ec10d"
+    },
+    {
+      "height": 720,
+      "name": "source-deathmatch-hud-017",
+      "path": "docs/review/update-017/source-deathmatch-hud-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7e0634d58f051294e6fa387d99fb883774ff1260ae9e7710cb7d64bf66909530"
+    },
+    {
+      "height": 720,
+      "name": "source-transformation-017",
+      "path": "docs/review/update-017/source-transformation-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9a540c997d67903acb4d3f65b3ecef7557cc0492e3718b2484a9d932f90ae6af"
+    },
+    {
+      "height": 720,
+      "name": "source-fire-roar-017",
+      "path": "docs/review/update-017/source-fire-roar-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1cc77dc7c94f61113246d8ebf93fa24095c0c78836f3098d52399551cf8ddbc8"
+    },
+    {
+      "height": 720,
+      "name": "source-ice-roar-017",
+      "path": "docs/review/update-017/source-ice-roar-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f0d73bf7db0bae5950f591b8cec45a55015e482f3c53960cb032ed7b3dcc9bb4"
+    },
+    {
+      "height": 720,
+      "name": "source-lightning-roar-017",
+      "path": "docs/review/update-017/source-lightning-roar-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6cd3b4385dd735be3ae372b7f81096ce18e5c73498d072d564fca4ff3a9f830d"
+    },
+    {
+      "height": 720,
+      "name": "source-radiation-roar-017",
+      "path": "docs/review/update-017/source-radiation-roar-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8b5a1605cfc821ed90c80e831c3af15ea88233a185addb7a6843747e3a726e86"
+    },
+    {
+      "height": 720,
+      "name": "source-strong-claw-017",
+      "path": "docs/review/update-017/source-strong-claw-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3e92f4781c3544124377ac97b72adf0e2977e9a1d4f509fc6f0fb1b5154f701c"
+    },
+    {
+      "height": 720,
+      "name": "source-map-smoke-017",
+      "path": "docs/review/update-017/source-map-smoke-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7de777c7893fdb105615849ae0be015f6f7a2d25c11cc184a34e4c36ced5b148"
+    },
+    {
+      "height": 720,
+      "name": "source-timeout-result-017",
+      "path": "docs/review/update-017/source-timeout-result-017.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "508c07b729d7d25e05b423dadfc08381cdfd3ea2881b3b9afe38d72240f074e7"
+    },
+    {
+      "height": 992,
+      "name": "source-inventory-phone-017",
+      "path": "docs/review/update-017/source-inventory-phone-017.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "b26538ee7bb7254bf4222c60e52dd22973c05e0c86fd94c09e3f70cd06697ce1"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureCameraForMapFx": true,
+  "testFixtureCatalogueUnlockForRoars": true,
+  "testFixtureStats": true,
+  "unlimitedOfflineCurrencies": [
+    "cash",
+    "kp"
+  ],
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

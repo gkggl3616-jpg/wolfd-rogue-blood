@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "sp": {
+    "start": 0,
+    "capacity": 0,
+    "nonstarterWeaponCost": 100,
+    "mutationCosts": {
+      "normal": 50,
+      "power": 250,
+      "guardian": 900,
+      "ghost": 500
+    },
+    "streakSeconds": 8,
+    "rewards": {
+      "kill": 100,
+      "headshot": 50,
+      "streak2": 50,
+      "streak3": 100,
+      "streak4": 150,
+      "plant": 50,
+      "defuse": 50
+    }
+  },
+  "yp": {
+    "baseByMutation": {
+      "normal": 100,
+      "power": 130,
+      "guardian": 180,
+      "ghost": 85
+    },
+    "decayPerSecond": 1
+  },
+  "destruction": {
+    "prepareSeconds": 10,
+    "roleSwapAfterRounds": 8,
+    "roleSwapSeconds": 5,
+    "plantSeconds": 5.333,
+    "defuseSeconds": 5,
+    "fuseSeconds": 40,
+    "pickupRadius": 1.6
+  },
+  "evidence": {
+    "video1": "Drive 1aLtBA24fugZ04CYmRADJls8D40z33vBj 00:08/06:42: YP 196/199 disproves a common 99 cap, without establishing every character's cap.",
+    "video2": "Drive 1DSq53F7HGTBTGqgq2oOclo3W5rQvRI7Z: headshot +50 SP.",
+    "video4": "Drive 1dWltFGibelqf2i_8XReiOvH5_MS5pVse 00:50: SP 0; 01:54: plant +50, 40-second fuse; 10:36: SP 2800; 12:59: swap after eight rounds; 15:35: defuse +50.",
+    "localTuning": "Capacity 0 means no gameplay cap has been established. Kill/streak rewards, weapon prices, 5-second defuse, mutation YP bases and additive stacking are offline balance. Character wolf.values[3], tattoo healthPercent and equipment extraYpPercent contribute to capacity; undecoded fields are not HP. Eight-round swap defaults to the observed 9-win room; other room intervals are local rules.",
+    "sourcePlant": "Original WT_PV_TIMEBomb Select 0.666 + Fire INSTALL_TIMEBOMB at 4.667 = 5.333 seconds. See weapons/timebomb/device.json.",
+    "observedMutationPrices": "Video 1 00:08 and 06:42: Normal 50, Power 250, Guardian 900, Ghost 500. Automatic normal spawn/selection timeout remains free; choosing a mutation explicitly pays the displayed price."
+  }
+}

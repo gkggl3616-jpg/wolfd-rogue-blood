@@ -1,0 +1,50 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/wolf-room-1280.png",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/native-room-settings.png",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/showcase-opens-local-boxes.png",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/destruction-room-rule-state.png",
+      "width": 1280
+    },
+    {
+      "height": 720,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/mixed-room-eight-players.png",
+      "width": 1280
+    },
+    {
+      "height": 540,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/room-960x540.png",
+      "width": 960
+    },
+    {
+      "height": 992,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/room-2160x992.png",
+      "width": 2160
+    },
+    {
+      "height": 768,
+      "path": "/workspace/wolfd-rogue-blood/docs/review/update-033/room-1024x768.png",
+      "width": 1024
+    }
+  ],
+  "checks": 35,
+  "failures": [],
+  "passed": true,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Room style, source geometry, local events/channel isolation, real box navigation, role-rule state and viewport resizing"
+}

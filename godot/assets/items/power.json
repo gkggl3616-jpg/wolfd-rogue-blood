@@ -1,0 +1,969 @@
+{
+  "schemaVersion": 1,
+  "sourceTextSha256": "04a124ed80f3045a5f1a0a593171909d1e703c50536b212be1f9724c12e36554",
+  "originalPcPricesVerified": false,
+  "items": [
+    {
+      "id": "19001",
+      "sourceId": 19001,
+      "name": "İlkyardım Seti (Altın)",
+      "description": "Kurtlar için Yaşam Puanı yenilemek \niçin kullanılır.\nGüç Slotuna eklendiğinde geçerlidir.\n YP %100 iken\nkullanılamaz ve ulumaya etki etmez.\n\nEtki\nHızlı Yenilenme                            \n     +50\nDakikadaki Yenilenme Oranı           \n    +2\nEn fazla kullanım adeti                  \n      1\nSüre                                           \n     15 ikinci\nTekrar Kullanabilmek İçini Gereken \nSüre  0 ikinci",
+      "icon": "res://assets/full_ui/textures/ce00ec7680bc4c545c8a88d2.png",
+      "category": "other",
+      "slot": "support",
+      "localPrice": 20,
+      "consumable": false,
+      "mobileTuning": {
+        "heal": 50,
+        "usesPerRound": 1,
+        "seconds": 15,
+        "tickSeconds": 1,
+        "regenerationPerTick": 2
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/exitem/medical_kit.dtx",
+      "iconRegion": [
+        44,
+        0,
+        120,
+        75
+      ],
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 104865,
+        "headerHex": "394a0000ffffffffffffffff000000000000000000000000000000000000000000010000003200000002000000010000000f00000000000000",
+        "useLimit": 1,
+        "instant": 50,
+        "periodic": 2,
+        "tickSeconds": 1,
+        "seconds": 15,
+        "cooldownSeconds": 0
+      }
+    },
+    {
+      "id": "19002",
+      "sourceId": 19002,
+      "name": "İlkyardım Seti (Nakit)",
+      "description": "Kurtlar için Yaşam Puanı yenilemek \niçin kullanılır.\nGüç Slotuna eklendiğinde geçerlidir.\n YP %100 iken\nkullanılamaz ve ulumaya etki etmez.\n\nEtki\nHızlı Yenilenme                            \n       +100\nDakikadaki Yenilenme Oranı           \n      +5\nEn fazla kullanım adeti                  \n        2\nSüre                                           \n      15 ikinci\nTekrar Kullanabilmek İçini Gereken \nSüre 0 ikinci",
+      "icon": "res://assets/full_ui/textures/ce00ec7680bc4c545c8a88d2.png",
+      "category": "other",
+      "slot": "support",
+      "localPrice": 40,
+      "consumable": false,
+      "mobileTuning": {
+        "heal": 100,
+        "usesPerRound": 2,
+        "seconds": 15,
+        "tickSeconds": 1,
+        "regenerationPerTick": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/exitem/medical_kit.dtx",
+      "iconRegion": [
+        44,
+        0,
+        120,
+        75
+      ],
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105106,
+        "headerHex": "3a4a0000ffffffffffffffff000000000000000000000000000000000000000000020000006400000005000000010000000f00000000000000",
+        "useLimit": 2,
+        "instant": 100,
+        "periodic": 5,
+        "tickSeconds": 1,
+        "seconds": 15,
+        "cooldownSeconds": 0
+      }
+    },
+    {
+      "id": "19501",
+      "sourceId": 19501,
+      "name": "Enerji Paketi (Altın)",
+      "description": "Kurtların tüm yeteneklerini yü\nkselten ve İlkyardım Çantası ile \nkullanılması tavsiye edilen\npaket. Güç Slotuna eklendiğinde ge\nçerlidir.\n\nEtki\nKurt Kafa ZP                                \n       +2%\nKurt Gövde ZP                             \n       +2%\nKurt Kol ZP                                  \n       +2%\nKurt Bacak ZP                              \n      +2%\nHız Artışı                                     \n       +50\nAni YP Düşmesi                            \n      -50%\nDakika Başı YP Düşmesi                \n      -5\nEn Fazla Kullanım Adeti                 \n  -Sınırsız\nSüre                                           \n       +10\nTekrar Kullanabilmek İçin Gereken \nSüre  +0\nTemel Saldırı \n(1 Vuruş/2 Vuruş/3 Vuruş) +10%\nGüçlü Saldırı \n(2li Vuruş)                        +25%\nKurt Donmasını Azaltma                 \n      +100%",
+      "icon": "res://assets/items/energy.svg",
+      "category": "other",
+      "slot": "energy",
+      "localPrice": 30,
+      "consumable": false,
+      "mobileTuning": {
+        "seconds": 7,
+        "damageMultiplier": 1.1,
+        "speedMultiplier": 1.1,
+        "healthCostFraction": 0.5,
+        "strongDamageMultiplier": 1.25,
+        "tickSeconds": 1,
+        "healthDrainPercentPerTick": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "native_syringe_symbol",
+      "sourceIcon": "",
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [
+        "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
+      ],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105347,
+        "headerHex": "2d4c0000ffffffffffffffff000000000000000000000000003200000064000000630000003200000005000000010000000700000000000000",
+        "useLimit": 99,
+        "instant": 50,
+        "periodic": 5,
+        "tickSeconds": 1,
+        "seconds": 7,
+        "cooldownSeconds": 0
+      }
+    },
+    {
+      "id": "19502",
+      "sourceId": 19502,
+      "name": "Enerji Paketi (Nakit)",
+      "description": "Kurtların tüm yeteneklerini yü\nkselten ve İlkyardım Çantası ile \nkullanılması tavsiye edilen\npaket. Güç Slotuna eklendiğinde ge\nçerlidir.\n\nEtki\nKurt Kafa ZP                                \n       +5%\nKurt Gövde ZP                             \n       +5%\nKurt Kol ZP                                  \n       +5%\nKurt Bacak ZP                              \n      +5%\nHız Artışı                                     \n       +100\nAni YP Düşmesi                            \n      -25%\nDakika Başı YP Düşmesi                \n       -2\nEn Fazla Kullanım Adeti                 \n       -Sınırsız\nSüre                                           \n       +10\nTekrar Kullanabilmek İçin Gereken \nSüre  +0\nTemel Saldırı \n(1 Vuruş/2 Vuruş/3 Vuruş) +20%\nGüçlü Saldırı (2li Vuruş)                 \n       +50%\nKurt Donmasını Azaltma                 \n      +100%",
+      "icon": "res://assets/items/energy.svg",
+      "category": "other",
+      "slot": "energy",
+      "localPrice": 50,
+      "consumable": false,
+      "mobileTuning": {
+        "seconds": 10,
+        "damageMultiplier": 1.2,
+        "speedMultiplier": 1.15,
+        "healthCostFraction": 0.25,
+        "strongDamageMultiplier": 1.5,
+        "tickSeconds": 1,
+        "healthDrainPercentPerTick": 2
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "native_syringe_symbol",
+      "sourceIcon": "",
+      "activationPolicy": "Reusable equipped offline pack; per-life support limit and non-stacking timed energy.",
+      "unverifiedSourceParameters": [
+        "Speed +50/+100 native units; existing mobile speed multiplier remains an explicit adaptation."
+      ],
+      "nativeTiming": {
+        "source": "root/wt_attributes/exitemdata.dat",
+        "sourceSha256": "78fda8d6021532dfd99adc35153f7607e8e5ffc1fa18a4916881ab6739064444",
+        "offset": 105584,
+        "headerHex": "2e4c0000ffffffffffffffff000000000000000000000000001900000065000000630000001900000002000000010000000a00000000000000",
+        "useLimit": 99,
+        "instant": 25,
+        "periodic": 2,
+        "tickSeconds": 1,
+        "seconds": 10,
+        "cooldownSeconds": 0
+      }
+    },
+    {
+      "id": "13006",
+      "sourceId": 13006,
+      "name": "20C Uzman Çantası",
+      "description": "Uzman Çantası\n(Her iki takımdaki İnsan ve Kurtlar iç\nindir)\n\nGP                 +%15\nMaks. SP           +500\nÇanta Arama Hızı +%20\n^bc2e2e^Personel Çavuşu veya daha üst \n^bc2e2e^rütbede olmalısınız.\n\nÇift Alım ySGıldığında \nkullanım süresi arttırılır.",
+      "icon": "res://assets/full_ui/textures/2c76a295d4896827aa213b5f.png",
+      "category": "bag",
+      "slot": "bag",
+      "localPrice": 75,
+      "consumable": false,
+      "mobileTuning": {
+        "localGpBonus": 0.15
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/power/large/backpack_propack_20c.dtx"
+    },
+    {
+      "id": "19602",
+      "sourceId": 19602,
+      "name": "Kurt Pençesi",
+      "description": "Kurtların uzak mesafelere olan\nzayıflıkları için üretilmiştir.\nHer iki kola da giyilebilen pençeler\nsayesinde saldırı gücünüz ve\nmenziliniz artar.",
+      "icon": "res://assets/full_ui/textures/ddca46247a1d49e51cc3228b.png",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 75,
+      "consumable": false,
+      "mobileTuning": {
+        "damageBonus": 5,
+        "rangeBonus": 0.4
+      },
+      "sourceStatsFullyImplemented": false,
+      "iconBasis": "reused_source_art",
+      "sourceIcon": "wt_interface/item/bullets/wolf.dtx",
+      "iconRegion": [
+        0,
+        0,
+        32,
+        52
+      ]
+    },
+    {
+      "id": "16011",
+      "sourceId": 16011,
+      "name": "Ölümcül Pençe",
+      "description": "Kullanıldığında,\n\nKurt Gücü +%10\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 10,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8126,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16011-trail.png",
+      "trail": {
+        "sourceOffset": 226,
+        "texture": "WT_FX\\swingtrail\\old_SwingTrail.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          201,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16011-trail.png",
+        "sourceSha256": "942f82289afc4f61f5e72819544fe0c8a43ca1f8f09c275b5f7d42922b8cdefe",
+        "sha256": "80937f27d897ea3c42670c384fad3564d4fb9c1684f47442ccbcd63d7f1cb241"
+      }
+    },
+    {
+      "id": "16012",
+      "sourceId": 16012,
+      "name": "Karanlık Pençe",
+      "description": "Kullanıldığında,\n\nKurt Gücü +%15\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 15,
+        "rangePercent": 0
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8143,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16012-trail.png",
+      "trail": {
+        "sourceOffset": 444,
+        "texture": "WT_FX\\swingtrail\\swingTrail_Dark.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          202,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16012-trail.png",
+        "sourceSha256": "895fc6f3ec2ac3ae94cde86d0fe54ddede9e1e1596f64b1f1f1cdd14d04be7a8",
+        "sha256": "6ac39a911cd7e699d355a442d9629212418c99976bc6b3f9a3907092f6284234"
+      }
+    },
+    {
+      "id": "16013",
+      "sourceId": 16013,
+      "name": "Alev Pençesi",
+      "description": "Alev Pençe kullanıldığında,\n\nKurt gücü      +%5 \nKurt saldırı mesafesi    +%5",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 5,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8160,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16013-trail.png",
+      "trail": {
+        "sourceOffset": 664,
+        "texture": "WT_FX\\SwingTrail\\swingTrail_Pink.DTX",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          203,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16013-trail.png",
+        "sourceSha256": "ed8de11772ba2635075ca8759661922bded2fd60ffcb43979760201428827bb0",
+        "sha256": "ab459d26562d6c54148559295249344518bc41cb12eed3a7c2eb57ce3429fb48"
+      }
+    },
+    {
+      "id": "16015",
+      "sourceId": 16015,
+      "name": "Kurt Pençesi",
+      "description": "Kullanıldığında;\n\nKurt Gücü +%20\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 20,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8177,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            20,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16015-trail.png",
+      "trail": {
+        "sourceOffset": 1104,
+        "texture": "WT_FX\\swingtrail\\swingTrail_yellow.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          205,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16015-trail.png",
+        "sourceSha256": "de980bfa81a76c806cee5d73cf91d544e90f320c80ea0934a493d8be49d9d457",
+        "sha256": "5bc907f0221d42734ec04a331f183ef806d7d579ea008d5fb85a12af2047c52e"
+      }
+    },
+    {
+      "id": "16017",
+      "sourceId": 16017,
+      "name": "Aydınlık Pençe",
+      "description": "Aydınlık Pençe kullanıldığında,\n\nKurt gücü   %10 \n\nBirden çok alım ySGarsanız, süre \nuzatılacaktır.",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 10,
+        "rangePercent": 0
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8194,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            0,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16017-trail.png",
+      "trail": {
+        "sourceOffset": 1558,
+        "texture": "WT_FX\\SwingTrail\\swingTrail_Green.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          207,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16017-trail.png",
+        "sourceSha256": "5d93d8ccefd65e5f3ed7bac24df7550270de0bfc3190463c71ff9e7b83d5336e",
+        "sha256": "7f2437b0a95dd064cd6b620995d428540694433f67650a5fc56605e8c620b0fe"
+      }
+    },
+    {
+      "id": "16019",
+      "sourceId": 16019,
+      "name": "Gölge Pençesi",
+      "description": "Gölge Pençe kullanıldığında,\n\nKurt Saldırı Mesafesi    +%10\n\nBirden çok alım ySGarsanız, \n\nsure uzatılacaktır.",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 0,
+        "rangePercent": 10
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8211,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16019-trail.png",
+      "trail": {
+        "sourceOffset": 2018,
+        "texture": "WT_FX\\SwingTrail\\swingTrail_Darkblue.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          209,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16019-trail.png",
+        "sourceSha256": "9cd88ce2ae49b774daf2de26e8a31b6d7cfa4fe7a290996f64956492e8d75b85",
+        "sha256": "7f8ef4aa2788968872c3682afa45a2927bb1d5ff88eeb66c9fc88e1ec6680d2c"
+      }
+    },
+    {
+      "id": "16020",
+      "sourceId": 16020,
+      "name": "Kızıl Pençe",
+      "description": "Kurt gücü                    +%20 \nKurt saldırı mesafesi    +%10",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 20,
+        "rangePercent": 10
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 8228,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            10,
+            20,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16020-trail.png",
+      "trail": {
+        "sourceOffset": 2246,
+        "texture": "WT_FX\\SwingTrail\\SwingTrail_red.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          210,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16020-trail.png",
+        "sourceSha256": "53983bbb0f5843d632dc408aee9f2c5052fff45c48ae1e058c33358eb4246561",
+        "sha256": "0d7e48f8fd10849252b7a802ca920257ac5b07329db92214af25202d3037e6a8"
+      }
+    },
+    {
+      "id": "16014",
+      "sourceId": 16014,
+      "name": "Harika Pençe",
+      "description": "Harika Pençe\n\nKurt Gücü +%5\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 5,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 10064,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16014-trail.png",
+      "trail": {
+        "sourceOffset": 884,
+        "texture": "WT_FX\\swingtrail\\swingTrail_blue.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          204,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16014-trail.png",
+        "sourceSha256": "eec4086e32abb9bf5ff07834f6a8234ed92f45de82f61431bf8954c9941df9ef",
+        "sha256": "2643c1a3c13f03c0fbaeaeed6fe39c567767affffea6317ea3bfb3dd69e8fa60"
+      }
+    },
+    {
+      "id": "16016",
+      "sourceId": 16016,
+      "name": "Öfke Pençesi",
+      "description": "Öfke Pençesi\n\nKurt Gücü +%7\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 7,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 10081,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16016-trail.png",
+      "trail": {
+        "sourceOffset": 1328,
+        "texture": "WT_FX\\swingtrail\\swingTrail_blueGreen.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          206,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16016-trail.png",
+        "sourceSha256": "6dd47a14d91de884564a70f0f9858d5f41dc81dfc5fadd3389f823f0d16bb51c",
+        "sha256": "47800347bca190f326e7873a9cd0e0b0463c05e5eea7a6269b38023e78263ae5"
+      }
+    },
+    {
+      "id": "16018",
+      "sourceId": 16018,
+      "name": "Mor Pençe ",
+      "description": "Mor Pençe \n\nKurt Gücü +%10\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 10,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 10098,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16018-trail.png",
+      "trail": {
+        "sourceOffset": 1780,
+        "texture": "WT_FX\\swingtrail\\swingTrail_red_bluecolor.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          208,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16018-trail.png",
+        "sourceSha256": "e4c15c6237145550b8996a8d49ef652add60483ea10cbf3259618a01abb25698",
+        "sha256": "e8c65863df20a8feb939af54dbbf4d78943bacb7185cf0921cce86403c065900"
+      }
+    },
+    {
+      "id": "16800",
+      "sourceId": 16800,
+      "name": "Ölümcül Pençe",
+      "description": "Kullanıldığında,\n\nKurt Gücü +%10\nKurt Saldırı Mesafesi  +%5\n\nÇoklu alımlarda malzeme süresi \nuzar",
+      "category": "claw",
+      "slot": "claw",
+      "localPrice": 0,
+      "consumable": false,
+      "offlineAvailable": true,
+      "mobileTuning": {
+        "damagePercent": 10,
+        "rangePercent": 5
+      },
+      "sourceStatsFullyImplemented": false,
+      "sourcePerformance": [
+        {
+          "offset": 41701,
+          "flags": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "values": [
+            5,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "kind": 54
+        }
+      ],
+      "iconBasis": "source_claw_trail_texture",
+      "icon": "res://assets/items/claws/16800-trail.png",
+      "trail": {
+        "sourceOffset": 2464,
+        "texture": "WT_FX\\swingtrail\\old_SwingTrail.dtx",
+        "bones": [
+          "Bip01 L Forearm",
+          "Bip01 L Finger11",
+          "Bip01 R Forearm",
+          "Bip01 R Finger11"
+        ],
+        "configuration": [
+          0,
+          201,
+          0,
+          170,
+          50
+        ],
+        "flag": 7,
+        "tail": [
+          "",
+          "",
+          ""
+        ],
+        "asset": "res://assets/items/claws/16800-trail.png",
+        "sourceSha256": "942f82289afc4f61f5e72819544fe0c8a43ca1f8f09c275b5f7d42922b8cdefe",
+        "sha256": "80937f27d897ea3c42670c384fad3564d4fb9c1684f47442ccbcd63d7f1cb241"
+      }
+    }
+  ],
+  "sourcePerformanceSha256": "038775262727a0910cb12e05975f5ab06a41b7d8d481bb8a9b355e779d03d384",
+  "sourceTrailSha256": "a61891ffef8e631bfef5ef342eccaebb99de6ca790ea643896dba96dc9aab983",
+  "defaultClawTrail": {},
+  "missingDefaultTrailSource": "WT_FX/swingtrail/swingTrail_default.dtx",
+  "energyPresentation": {
+    "groups": [
+      "wolf_Hand_glowL",
+      "wolf_Hand_glowR"
+    ],
+    "condition": "Successfully activated FT/energy; never claw ownership",
+    "evidence": "User correction and old video 1 02:48–02:50: HP 200→150→147, same held claw."
+  },
+  "powerTimingEvidence": "docs/power-timing-source-027.json"
+}

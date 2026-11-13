@@ -447,7 +447,7 @@
       "path": "battlezone_l.dat",
       "formatVersion": 85,
       "bytes": 1880267,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 53,
@@ -498,7 +498,7 @@
       "path": "break_out.dat",
       "formatVersion": 85,
       "bytes": 11807782,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 108,
@@ -618,7 +618,7 @@
       "path": "cage.dat",
       "formatVersion": 85,
       "bytes": 7724869,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 50,
@@ -987,7 +987,7 @@
       "path": "cqc zone.dat",
       "formatVersion": 85,
       "bytes": 5786195,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 46,
@@ -1006,7 +1006,7 @@
       "path": "crash bridge.dat",
       "formatVersion": 85,
       "bytes": 13640059,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 40,
@@ -1061,7 +1061,7 @@
       "path": "explosivearsenal.dat",
       "formatVersion": 85,
       "bytes": 19642262,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 62,
@@ -1105,7 +1105,7 @@
       "path": "factory.dat",
       "formatVersion": 85,
       "bytes": 7355027,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 10,
@@ -1306,7 +1306,7 @@
       "path": "junk_field.dat",
       "formatVersion": 85,
       "bytes": 8546928,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 19,
@@ -1468,7 +1468,7 @@
       "path": "machupicchu_boss.dat",
       "formatVersion": 85,
       "bytes": 21779619,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 89,
@@ -1622,7 +1622,7 @@
       "path": "paien_lab_door.dat",
       "formatVersion": 85,
       "bytes": 4974936,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 107,
@@ -1854,7 +1854,7 @@
       "path": "purge.dat",
       "formatVersion": 85,
       "bytes": 10212547,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 100,
@@ -1883,7 +1883,7 @@
       "path": "rose.dat",
       "formatVersion": 85,
       "bytes": 8954788,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 11,
@@ -2275,7 +2275,7 @@
       "path": "station.dat",
       "formatVersion": 85,
       "bytes": 4506099,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 6,
@@ -2342,7 +2342,7 @@
       "path": "storage_bomb.dat",
       "formatVersion": 85,
       "bytes": 9120029,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 8,
@@ -2875,7 +2875,7 @@
       "path": "underworld.dat",
       "formatVersion": 85,
       "bytes": 9478500,
-      "selected": false,
+      "selected": true,
       "menuDefinitions": [
         {
           "mapId": 48,
@@ -3212,6 +3212,21 @@
     92,
     82,
     83,
-    84
+    84,
+    36,
+    69,
+    87,
+    17,
+    51,
+    89,
+    37,
+    42,
+    20,
+    24,
+    68,
+    41,
+    56,
+    61,
+    106
   ]
 }

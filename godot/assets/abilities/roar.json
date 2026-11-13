@@ -1,0 +1,7 @@
+{
+  "sourceAudio": "Root/wt_snd/player/wolf_cry1.wav",
+  "sha256": "005527c5306a8912c531f6c9497849e191a649ff3ea285293a0de205b6bc6df0",
+  "audio": "res://assets/abilities/wolf-roar.wav",
+  "sourceCharacterVoiceMappingVerified": false,
+  "scope": "Default source wolf cry; visual timing adapted for mobile, no original combat buff claimed."
+}

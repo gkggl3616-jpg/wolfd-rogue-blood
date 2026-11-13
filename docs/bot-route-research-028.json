@@ -1,0 +1,383 @@
+{
+  "candidates": 195,
+  "acceptedLinks": 122,
+  "rejected": [
+    {
+      "map": 72,
+      "candidateIndex": 49
+    },
+    {
+      "map": 72,
+      "candidateIndex": 50
+    },
+    {
+      "map": 72,
+      "candidateIndex": 52
+    },
+    {
+      "map": 72,
+      "candidateIndex": 55
+    },
+    {
+      "map": 72,
+      "candidateIndex": 56
+    },
+    {
+      "map": 72,
+      "candidateIndex": 57
+    },
+    {
+      "map": 72,
+      "candidateIndex": 59
+    },
+    {
+      "map": 72,
+      "candidateIndex": 62
+    },
+    {
+      "map": 72,
+      "candidateIndex": 63
+    },
+    {
+      "map": 72,
+      "candidateIndex": 65
+    },
+    {
+      "map": 72,
+      "candidateIndex": 68
+    },
+    {
+      "map": 72,
+      "candidateIndex": 69
+    },
+    {
+      "map": 72,
+      "candidateIndex": 70
+    },
+    {
+      "map": 72,
+      "candidateIndex": 71
+    },
+    {
+      "map": 72,
+      "candidateIndex": 72
+    },
+    {
+      "map": 72,
+      "candidateIndex": 74
+    },
+    {
+      "map": 72,
+      "candidateIndex": 76
+    },
+    {
+      "map": 72,
+      "candidateIndex": 77
+    },
+    {
+      "map": 72,
+      "candidateIndex": 78
+    },
+    {
+      "map": 72,
+      "candidateIndex": 79
+    },
+    {
+      "map": 72,
+      "candidateIndex": 80
+    },
+    {
+      "map": 72,
+      "candidateIndex": 81
+    },
+    {
+      "map": 72,
+      "candidateIndex": 84
+    },
+    {
+      "map": 72,
+      "candidateIndex": 85
+    },
+    {
+      "map": 72,
+      "candidateIndex": 86
+    },
+    {
+      "map": 72,
+      "candidateIndex": 87
+    },
+    {
+      "map": 72,
+      "candidateIndex": 89
+    },
+    {
+      "map": 72,
+      "candidateIndex": 91
+    },
+    {
+      "map": 72,
+      "candidateIndex": 92
+    },
+    {
+      "map": 72,
+      "candidateIndex": 93
+    },
+    {
+      "map": 72,
+      "candidateIndex": 96
+    },
+    {
+      "map": 72,
+      "candidateIndex": 98
+    },
+    {
+      "map": 72,
+      "candidateIndex": 100
+    },
+    {
+      "map": 37,
+      "candidateIndex": 29
+    },
+    {
+      "map": 37,
+      "candidateIndex": 30
+    },
+    {
+      "map": 37,
+      "candidateIndex": 31
+    },
+    {
+      "map": 37,
+      "candidateIndex": 32
+    },
+    {
+      "map": 37,
+      "candidateIndex": 33
+    },
+    {
+      "map": 37,
+      "candidateIndex": 34
+    },
+    {
+      "map": 37,
+      "candidateIndex": 35
+    },
+    {
+      "map": 37,
+      "candidateIndex": 36
+    },
+    {
+      "map": 37,
+      "candidateIndex": 37
+    },
+    {
+      "map": 37,
+      "candidateIndex": 38
+    },
+    {
+      "map": 37,
+      "candidateIndex": 40
+    },
+    {
+      "map": 37,
+      "candidateIndex": 41
+    },
+    {
+      "map": 37,
+      "candidateIndex": 42
+    },
+    {
+      "map": 37,
+      "candidateIndex": 43
+    },
+    {
+      "map": 37,
+      "candidateIndex": 44
+    },
+    {
+      "map": 37,
+      "candidateIndex": 45
+    },
+    {
+      "map": 37,
+      "candidateIndex": 46
+    },
+    {
+      "map": 37,
+      "candidateIndex": 47
+    },
+    {
+      "map": 37,
+      "candidateIndex": 48
+    },
+    {
+      "map": 37,
+      "candidateIndex": 49
+    },
+    {
+      "map": 37,
+      "candidateIndex": 50
+    },
+    {
+      "map": 37,
+      "candidateIndex": 51
+    },
+    {
+      "map": 37,
+      "candidateIndex": 52
+    },
+    {
+      "map": 37,
+      "candidateIndex": 53
+    },
+    {
+      "map": 37,
+      "candidateIndex": 54
+    },
+    {
+      "map": 37,
+      "candidateIndex": 55
+    },
+    {
+      "map": 37,
+      "candidateIndex": 56
+    },
+    {
+      "map": 37,
+      "candidateIndex": 57
+    },
+    {
+      "map": 37,
+      "candidateIndex": 58
+    },
+    {
+      "map": 37,
+      "candidateIndex": 59
+    },
+    {
+      "map": 37,
+      "candidateIndex": 60
+    },
+    {
+      "map": 37,
+      "candidateIndex": 62
+    },
+    {
+      "map": 37,
+      "candidateIndex": 63
+    },
+    {
+      "map": 37,
+      "candidateIndex": 64
+    },
+    {
+      "map": 37,
+      "candidateIndex": 65
+    },
+    {
+      "map": 37,
+      "candidateIndex": 66
+    },
+    {
+      "map": 37,
+      "candidateIndex": 67
+    },
+    {
+      "map": 37,
+      "candidateIndex": 68
+    },
+    {
+      "map": 37,
+      "candidateIndex": 72
+    },
+    {
+      "map": 37,
+      "candidateIndex": 76
+    }
+  ],
+  "candidateFailures": [
+    "Physical link reaches its landing without teleport: 72/49/false",
+    "Launch swept link 72/49/true",
+    "Launch swept link 72/50/false",
+    "Physical link reaches its landing without teleport: 72/52/false",
+    "Physical link reaches its landing without teleport: 72/53/false",
+    "Physical link reaches its landing without teleport: 72/54/false",
+    "Launch swept link 72/55/false",
+    "Physical link reaches its landing without teleport: 72/56/false",
+    "Launch swept link 72/57/false",
+    "Physical link reaches its landing without teleport: 72/58/true",
+    "Launch swept link 72/59/false",
+    "Launch swept link 72/62/false",
+    "Launch swept link 72/63/false",
+    "Launch swept link 72/63/true",
+    "Physical link reaches its landing without teleport: 72/64/true",
+    "Launch swept link 72/65/false",
+    "Launch swept link 72/68/false",
+    "Physical link reaches its landing without teleport: 72/69/false",
+    "Launch swept link 72/70/false",
+    "Launch swept link 72/71/false",
+    "Physical link reaches its landing without teleport: 72/72/false",
+    "Launch swept link 72/74/false",
+    "Physical link reaches its landing without teleport: 72/76/false",
+    "Physical link reaches its landing without teleport: 72/77/false",
+    "Physical link reaches its landing without teleport: 72/78/false",
+    "Physical link reaches its landing without teleport: 72/79/false",
+    "Physical link reaches its landing without teleport: 72/80/false",
+    "Physical link reaches its landing without teleport: 72/81/false",
+    "Launch swept link 72/84/false",
+    "Launch swept link 72/85/false",
+    "Physical link reaches its landing without teleport: 72/86/false",
+    "Physical link reaches its landing without teleport: 72/87/false",
+    "Launch swept link 72/89/false",
+    "Launch swept link 72/91/false",
+    "Launch swept link 72/92/false",
+    "Launch swept link 72/93/false",
+    "Launch swept link 72/96/false",
+    "Physical link reaches its landing without teleport: 72/98/false",
+    "Physical link reaches its landing without teleport: 72/100/false",
+    "Launch swept link 37/29/false",
+    "Physical link reaches its landing without teleport: 37/30/false",
+    "Launch swept link 37/31/false",
+    "Launch swept link 37/32/false",
+    "Launch swept link 37/33/false",
+    "Launch swept link 37/34/false",
+    "Launch swept link 37/35/false",
+    "Physical link reaches its landing without teleport: 37/36/false",
+    "Launch swept link 37/37/false",
+    "Launch swept link 37/38/false",
+    "Physical link reaches its landing without teleport: 37/39/false",
+    "Launch swept link 37/40/false",
+    "Launch swept link 37/41/false",
+    "Physical link reaches its landing without teleport: 37/41/true",
+    "Launch swept link 37/42/false",
+    "Launch swept link 37/43/false",
+    "Launch swept link 37/44/false",
+    "Launch swept link 37/45/false",
+    "Launch swept link 37/46/false",
+    "Launch swept link 37/47/false",
+    "Launch swept link 37/48/false",
+    "Launch swept link 37/49/false",
+    "Launch swept link 37/50/false",
+    "Launch swept link 37/51/false",
+    "Physical link reaches its landing without teleport: 37/52/false",
+    "Launch swept link 37/53/false",
+    "Launch swept link 37/54/false",
+    "Launch swept link 37/55/false",
+    "Launch swept link 37/56/false",
+    "Physical link reaches its landing without teleport: 37/57/false",
+    "Launch swept link 37/58/false",
+    "Launch swept link 37/59/false",
+    "Physical link reaches its landing without teleport: 37/60/false",
+    "Launch swept link 37/62/false",
+    "Launch swept link 37/63/false",
+    "Launch swept link 37/64/false",
+    "Launch swept link 37/65/false",
+    "Physical link reaches its landing without teleport: 37/66/false",
+    "Launch swept link 37/67/false",
+    "Launch swept link 37/68/false",
+    "Launch swept link 37/70/true",
+    "Launch swept link 37/72/false",
+    "Launch swept link 37/76/false"
+  ],
+  "scope": "Candidate research; final accepted arcs receive a separate clean physics regression."
+}

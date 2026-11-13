@@ -1,0 +1,138 @@
+{
+  "failures": [],
+  "passed": true,
+  "sites": [
+    {
+      "distanceToNavigation": 0.197277784347534,
+      "map": 26,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.343158632516861,
+      "map": 26,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 4.0
+    },
+    {
+      "distanceToNavigation": 0.250629425048828,
+      "map": 31,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 4.8
+    },
+    {
+      "distanceToNavigation": 0.258628845214844,
+      "map": 31,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.39251708984375,
+      "map": 44,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.264516830444336,
+      "map": 44,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.24798059463501,
+      "map": 87,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 2.88
+    },
+    {
+      "distanceToNavigation": 0.30398041009903,
+      "map": 87,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.394095659255981,
+      "map": 89,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.362094879150391,
+      "map": 89,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 3.2
+    },
+    {
+      "distanceToNavigation": 0.252300262451172,
+      "map": 42,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "A",
+      "sourceRadius": 1.6
+    },
+    {
+      "distanceToNavigation": 2.01642560958862,
+      "map": 42,
+      "pathFromSpawns": {
+        "blue": true,
+        "red": true
+      },
+      "reachable": true,
+      "site": "B",
+      "sourceRadius": 2.08
+    }
+  ]
+}

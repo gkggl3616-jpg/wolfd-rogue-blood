@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sourceImagesModified": false,
+  "textureFolders": [
+    "maps/textures",
+    "library/characters",
+    "library/character_skins",
+    "library/weapons",
+    "library/textures",
+    "weapons"
+  ],
+  "textureCompression": "Godot lossy WebP, quality 0.95, source PNG retained",
+  "uiIconsCompression": "lossless",
+  "audioCompression": "Godot QOA",
+  "sourceAudioModified": false,
+  "skinnedMeshes": {
+    "vertexCompression": false,
+    "generatedLods": false,
+    "shadowMeshes": false,
+    "sourceGlbsModified": false,
+    "reason": "Compatibility renderer stability for skinned character surfaces on mobile GPUs"
+  }
+}

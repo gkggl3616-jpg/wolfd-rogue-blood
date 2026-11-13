@@ -1,0 +1,90 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "captures": [
+    {
+      "height": 992,
+      "name": "red-characters-phone-015",
+      "path": "docs/review/update-015/red-characters-phone-015.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "dbc43b045dcc496636db2b5f40e50ca037ad7ae3672a69cc2b674f5c39be4518"
+    },
+    {
+      "height": 992,
+      "name": "blue-characters-phone-015",
+      "path": "docs/review/update-015/blue-characters-phone-015.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "5adce726afa27444ba797d966051fe5fb970b21eba9eeca5d06799050e65f244"
+    },
+    {
+      "height": 720,
+      "name": "tattoo-triplets-015",
+      "path": "docs/review/update-015/tattoo-triplets-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4b8069404c6a613e08812c32caeefa7d60c2314461270922067b746d35829c69"
+    },
+    {
+      "height": 720,
+      "name": "red-wolf-tattoos-015",
+      "path": "docs/review/update-015/red-wolf-tattoos-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fac0732fbdb0a0d288cd279d112d42e08e4af9751481ffe97077372156bcb8c3"
+    },
+    {
+      "height": 720,
+      "name": "blue-wolf-tattoos-015",
+      "path": "docs/review/update-015/blue-wolf-tattoos-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "dc137aea0ba5cedbe1a26174345b2841d55ef406502ce42bc57b544fa1f12a85"
+    },
+    {
+      "height": 720,
+      "name": "source-claw-powers-015",
+      "path": "docs/review/update-015/source-claw-powers-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "efcce81e97712047507178c6d88e9b9c3ddfcedd43fa547361646f3aa18747b7"
+    },
+    {
+      "height": 720,
+      "name": "weapon-quality-filter-015",
+      "path": "docs/review/update-015/weapon-quality-filter-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "911436fb64d9c495b12f2ffc91667af4fc59b2fea582908cd47625eb4aaedcf4"
+    },
+    {
+      "height": 720,
+      "name": "new-maps-selection-015",
+      "path": "docs/review/update-015/new-maps-selection-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "cbd4c7d02d32c3d083bd5323b782be5fac98d902c9bdafc584b51eed7a413952"
+    },
+    {
+      "height": 720,
+      "name": "storage-team-spawn-015",
+      "path": "docs/review/update-015/storage-team-spawn-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c513717d93ebd8a73988c7feaa7bb6645d75a150fa2d0740d77db78b7f4bd1a9"
+    },
+    {
+      "height": 720,
+      "name": "source-wolf-roar-015",
+      "path": "docs/review/update-015/source-wolf-roar-015.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "39037dfa63cc232c4ee8eefb82b6e6ad09eda00edecf7d229bada43784e233c9"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "safeInsetsFixture": true,
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

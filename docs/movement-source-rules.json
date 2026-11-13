@@ -17,10 +17,10 @@
       "sourceIcon": "Root/wt_interface/item/exitem/large/wolfdash.dtx",
       "implementedActions": [
         "double_forward_wolf_run",
-        "running_body_attack"
+        "running_body_attack",
+        "airborne_strong_attack_when_running_with_equipped_power"
       ],
       "pendingActions": [
-        "airborne_strong_attack",
         "wall_hold"
       ]
     }
@@ -30,6 +30,11 @@
     "normalSprintMultiplier": 1.3,
     "wolfRunMultiplier": 1.65,
     "sourceNumericTuningVerified": false,
-    "note": "Activation and equipment requirements come from item 19601. Tap timing, speed multipliers and attack balance are new port tuning, not decoded original values."
+    "note": "Activation and equipment requirements come from item 19601. Tap timing, speed multipliers and attack balance are new port tuning, not decoded original values. Airborne strong attack uses actual donor T_WallDashAtk poses/duration; speed, hit window, range, damage and recovery remain new port tuning.",
+    "airAttackSpeed": 10.0,
+    "airAttackRecovery": 0.15,
+    "airAttackHitFraction": 0.35,
+    "airAttackDamage": 80,
+    "airAttackRange": 3.1
   }
 }

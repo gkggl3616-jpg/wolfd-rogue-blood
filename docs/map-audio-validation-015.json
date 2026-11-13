@@ -1,0 +1,27 @@
+{
+  "boundEmitters": 81,
+  "checks": 285,
+  "missing": [
+    {
+      "map": 97,
+      "source": "wt_snd/mapsound/am_fire_sm_loop.wav"
+    },
+    {
+      "map": 97,
+      "source": "wt_snd/mapsound/am_fire_sm_loop.wav"
+    },
+    {
+      "map": 97,
+      "source": "wt_snd/mapsound/am_fire_sm_loop.wav"
+    },
+    {
+      "map": 51,
+      "source": "wt_snd/mapsound/am_harbor1.wav"
+    },
+    {
+      "map": 51,
+      "source": "wt_snd/mapsound/am_harbor1.wav"
+    }
+  ],
+  "passed": true
+}

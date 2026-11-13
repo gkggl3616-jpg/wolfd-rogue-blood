@@ -1,0 +1,2045 @@
+{
+  "source": {
+    "path": "Root/wt_attributes/weapontext.dat",
+    "sha256": "d5d10717ed19208d23f3faf54e1f9dd6d83e1e9538443d67ec2dab9eeacdc0f0",
+    "records": 298
+  },
+  "items": {
+    "weapon-057290c1a14e0b4d8e3a": {
+      "id": 2001,
+      "sourceOffset": 450,
+      "name": "Temel Bıçak",
+      "description": "Özel bir alaşımdan yapılmış \nhafif fakat çok güçlü bir bıçak.\n1. Kurt Birliği tarafından \nkullanılan en önemli yakın dövü\nş silahlarındandır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "Bıçak"
+    },
+    "weapon-6a155fbcec315f6f392b": {
+      "id": 2002,
+      "sourceOffset": 802,
+      "name": "Temel Bıçak",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-9bf8be0ceac9b0cafa24": {
+      "id": 50,
+      "sourceOffset": 2918,
+      "name": "Temel Bıçak",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-aceeacdfbd6393776065": {
+      "id": 1001,
+      "sourceOffset": 2952,
+      "name": "EM-92 FS",
+      "description": "İtalyan silah firması Veretta'n\nın ürettiği bu tabancaya \nAmerikan Ordu su tarafından EM-9\n adıverilmiştir.\nGeri tepme oranı azdırve ve bir\nçok savaş ortamında \nkullanabilirliği bu silaha ün \nkazandırmıştır. Kulland\nığı9mm'lik mühimmat Kurt'lara \nkarşı çoketkili olmasada, bu \nsilah Klan üye lerinin hizmetine \nsunulmuştur. Şarjör değiştirme sü\nresi, Klan operasyonla\nrı için özel olarak modifiye \nedilmi ştir.",
+      "weightText": "0.975 Kg",
+      "magazineText": "15 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-a653e8635c68c470ca01": {
+      "id": 1002,
+      "sourceOffset": 3866,
+      "name": "GLOC-17",
+      "description": "Bu silah Amerikan polis gücünün \nve diğer kanun koruyucularının \n%65'inde bulunan bir silahtır. \nSağlamlığının artırılmasıve\ngeri tepmeoranını azaltması \namacıyla gövdesipolimer \nmateryalden yapılmıştır. \nSilahta kullanılan materyal ve g\növ desinin dayanıklılığı \nkullanan kişiye güven verir. \n9mm mühimmat kullannan GLOC-17, \nhedefini büyük bir kesinlikle \nvurmaya odaklanan kendini \nispatlamış Klan üyelerinin \nkullanımına açıktır.",
+      "weightText": "0.82 Kg",
+      "magazineText": "17 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-8e73df48c10f16f638d1": {
+      "id": 1003,
+      "sourceOffset": 4822,
+      "name": "EM-1911A1",
+      "description": "Bu silah 20. yüzyılın başından\n beri kullanılan, kullanan savaş\nçıya büyük güven veren .45 \nkalibre bir tabancadır. Yalnı\nzca yetenekli silah kullanıcı\nlarının kullanmasıgereken bu \ntabancanın geri tepme oranı yü\nksek olmasına rağmen ateş\ngücü çok yüksektir. ",
+      "weightText": "1.08 Kg",
+      "magazineText": "7 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-3665a9a0bfca27906bc8": {
+      "id": 1004,
+      "sourceOffset": 5432,
+      "name": "USF-40",
+      "description": "80KOM MK-23 kodlu tabancanın \ngeliştirilmiş modeli olan bu \nsilah Polimer gövdesi ile sağlam \nbir yapıya ve performansa \nsahiptir.\nKlan üyeleri 40S&W'i geri tepme\noranının avantajı ve ateş gücü\nnün yüksekliği durumundan dolayı\n tercih ederler. Klan üyeleri iç\nin silah seçim seçenekleri kısı\ntlı olmadığından, \nbu silah EM-92 F8 veya GLOC-17 \nyerine kullanılmaktadır.",
+      "weightText": "0.82 Kg",
+      "magazineText": "13 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-692fe92303ae49b38fdc": {
+      "id": 1005,
+      "sourceOffset": 6254,
+      "name": "CRISS WT",
+      "description": "Geri tepme oranını performansı\nnedeniyle G. D üyeleri bu silahı\ntercih ederler. \nŞarjörü 28 kurşun taşıyabilmesine rağmen G. D. Glock \n21'in 13 kurşunluk modelini \nkullanır. WT modelinde \nhedeftutturma verimi artırılmı\nştır.",
+      "weightText": "2.18 Kg",
+      "magazineText": "13 mermi x 3",
+      "modeText": "Otomatik/2'li Atış"
+    },
+    "weapon-f88d4f231d7e01d616dc": {
+      "id": 1007,
+      "sourceOffset": 7808,
+      "name": "CRISS PT",
+      "description": "Though adopting .45 kalibre, \nIt shows great recoil control. \nGloc-21`s 13 ammo magazine is \nin use as an assistant arm. \nRegarded to physical ability of \nUS soldiers, \nPT means modified specs that acc\nuracy Is a little bit improved \ninstead of decreasing recoil con\ntrol.",
+      "weightText": "2.18 Kg",
+      "magazineText": "13 mermi x 3",
+      "modeText": "Otomatik/2'li Atış"
+    },
+    "weapon-028bda30f4993554b44c": {
+      "id": 1006,
+      "sourceOffset": 6804,
+      "name": "DE-50",
+      "description": "Bu silah İsrail'li EMI tarafı\nndan üretilmiştir. .357, .44 \nMagnum, \n50 AE ile kullanılabilir. Silah\nın ateş gücü tatmin edici olmas\nına rağmen geri tepme oranı göz\n ardı edilemeyecek kadar yü\nksektir. Bu nedenle yalnızca \nyetenekli silah kullanıcıları \nbu silahla savaşmayı göze almal\nılar.Gelişmiş ateş gücüne rağmen\n silahın kullanılabilirliği \nyetenekli savaşçılar ile kısı\ntlandığından, \nbu silah özelolarak bir kısım \nKlan üyesinin kullanımına açı\nktır. ",
+      "weightText": "2.08 Kg",
+      "magazineText": "7 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-fbf22d19d693463948d6": {
+      "id": 1009,
+      "sourceOffset": 9016,
+      "name": "DE GL",
+      "description": "İsrail Kurtuluş Günü için\nçok sınırlı üretilmiş olan 50\nkalibrelik silah. Dengeli atış\niçin altın kaplama tabanca. Hat\nıra ürünü olduğu için dayanıkl\nılığı ve\nyaralama değeri düşüktür.",
+      "weightText": "2.08 Kg",
+      "magazineText": "7 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-035a292c2d2c744b7560": {
+      "id": 1008,
+      "sourceOffset": 8454,
+      "name": "PI-226 R",
+      "description": "Bu tabanca Amerikan Navy Seal'i \nbaşta olmak üzere bir çok silahl\nI kuvvetler tarafından \nkullanılmaktadır. \nKlan'lar bu silahı GD şirketinin\nüretimi ile güçlendirip MK.2 LAM\n(Lazer Hedefleme Modülü)ve 40S&W \nkurşunları ile donattılar.",
+      "weightText": "1.18 Kg",
+      "magazineText": "12 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-784117bde2dd27028734": {
+      "id": 1010,
+      "sourceOffset": 9468,
+      "name": "RUGER",
+      "description": "Dünya Savaşı sırasında İki Tap\nı nak bölgesinde antik kurt \nprotot iplerini bulan Nazi SS \nbirlikler i bu arazide Fransız \nDirenişi il e birçok çarpış\nmalarda bulundula r. SS kazı \nekipleri her zaman en yeni silah \nmodelleri kullanmakta\nydılar ve kullandıkları \nbirincil silah PI-08'di. Geçmiş ç\narpışmalar ından dolayı PI-08'\nın izleri ara zide sıkça \nrastlanır.",
+      "weightText": "1.1 Kg",
+      "magazineText": "7 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-3a3af129788aa3658d53": {
+      "id": 1011,
+      "sourceOffset": 10276,
+      "name": "EM-500 C",
+      "description": "EM-500, 500 S&W kuşunları kullan\nan büyük çaplı bir yarı-\notomatik tabancadır. Büyük kurş\nunları ned eniyle geri tepme \noranı yüksektir.\nBu silah ordular tarafından \nkulla nılmaz, ama Kurtlar ile \nsavaşan MEDUSA tarafından tercih\n edilmek tedir. Silahın hedefi \nkesin olar ak bulma oranını yü\nkseltmek amac ıyla tabancayı \noptik ekipmanlar ile güç\nlendirilebilirsiniz. ",
+      "weightText": "2.0 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-802eaba53b42c5a574d1": {
+      "id": 1012,
+      "sourceOffset": 11102,
+      "name": "KARAKAL UAE",
+      "description": "Pistol that mass production in \nUAE\non 2007. Members of GLOC, Austria\ntake in charge to develop this \nweapon and it can be called as\nstandard 21th century pistol.\nThere are two types, standard F\ntype and compact C type. It is \nable to use with 9MM, 357SIG, 40\nS&W type of bullets but, pride is\nusing only 40 S&W type to consid\ner durability and recoil\nproblems. ",
+      "weightText": "0.82 Kg",
+      "magazineText": "16 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-a1ed4de53d3d537b063e": {
+      "id": 1013,
+      "sourceOffset": 11924,
+      "name": "EM-500",
+      "description": "EM-500, 500 S&W kuşunları kullan\nan büyük çaplı bir yarı-\notomatik tabancadır. Büyük kurş\nunları ned eniyle geri tepme \noranı yüksektir.\nBu silah ordular tarafından \nkulla nılmaz, ama Kurtlar ile \nsavaşan MEDUSA tarafından tercih\nedilmek tedir.",
+      "weightText": "2.0 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-2539adf97a42fec68b80": {
+      "id": 1015,
+      "sourceOffset": 13206,
+      "name": "CRISS WT(P)",
+      "description": "Geri tepme oranını performansı\n\nnedeniyle G. D üyeleri bu silahı\n\ntercih ederler. \nŞarjörü 28 kurşun taşı\nyabilmesine rağmen G. D. Glock \n21'in 13 kurşunluk modelini \nkullanır. WT modelinde \nhedeftutturma verimi artırılmı\nştır.",
+      "weightText": "2.18 Kg",
+      "magazineText": "28 mermi x 3",
+      "modeText": "Otomatik/2'li Atış"
+    },
+    "weapon-8b439507c000e14ab2c5": {
+      "id": 3002,
+      "sourceOffset": 14956,
+      "name": "AKEI-47 CLASSIC",
+      "description": "7.62'lik mühimmatı mükemmele yak\nın performans gösterir, belirli \nmenzi lde hedef tutturma kolaylaş\ntırılmıştır. Basit ve sade gö\nvde yapısıve soğuk savaş \nortamlarında kullanıla\nbilirliği bu silahı özel yapan \nuns urlar arasındadır. Ancak bu\n silahıkullanırken verim ve \nistikrarı boz abilecek durumlar,\nhareket halinde iken ateş \netmedeki verim düşüklüğü ve yü\nksek geri tepme oranı ile baş\na çıkabilmektir.",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-a8c856b603adc2b67844": {
+      "id": 3035,
+      "sourceOffset": 46458,
+      "name": "AKEI-47 GL",
+      "description": "Dünyada AKEI-47'i taklit eden çok\naz sayıda silah üretilmiştir. Bu\nsürüm Gun-Smith tarafından \ndetayl ı bir şekilde geliş\ntirilmiş altın kaplama bir \nseridir. AKEI-47'i anm\na amacı güttüğünden silahın sağ\nlam lığı çok fazla güven \nvermesede az bulunur olması değ\nerini artırmakt adır.",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-f4f679efd009b52c205b": {
+      "id": 3049,
+      "sourceOffset": 57812,
+      "name": "AKEI-47 GL2",
+      "description": "*Bu silahı yalnızca Silah \nJackpot Kutusundan \nbulabilirsiniz*\nDünyada AKEI-47'i taklit eden çok\naz sayıda silah üretilmiştir. Bu\n s ürüm silah uzmanları tarafı\nndan de taylı bir şekilde geliş\ntirilmiş al tın kaplama bir seri\n ürünüdür. AKE I-47'i anma amacı\n güttüğünden silah ın sağlamlığ\nı çok fazla güven ver mesede az \nbulunur olması değerini a\nrtırmaktadır. Bu silah çarpış\nmala rda çok sık kullanılmaz \nancak bazı oyuncular güç\nlendirilmiş kurşunlar\nı nedeniyle bu silahı oyunda se\nçme ktedirler. ",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-5a488f65c747499952b3": {
+      "id": 3003,
+      "sourceOffset": 15868,
+      "name": "ESA-80 BT",
+      "description": "Bu silah İngiliz Ordusu tarafı\nndan üretilmiş kısa namlulu\nbir silahtır.\nBazı kullanıcılar Orta Doğu \nsavaşlarından sonra silahın \ndayanıklılık ve güvenirliliğ\nininden şüphe etmeye başladlar, \nancak HKEI'nin piyasaya sürdüğü \nyeni modelden sonra,\nsokak savaşlarında gösterdiği \nperformanstan dolayı Klan'lar bu\n silah tan çok miktarda satın \naldılar ve kullanmaya karar \nverdiler. \nDaha modern kısa namlulu tü\nfekler piyasaya çıkmadan önce en\n fazla miktarda kullanılan kısa\n namlulu tüfek modeli budur.",
+      "weightText": "3.81 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-73ae185f5d27c04bffc5": {
+      "id": 3004,
+      "sourceOffset": 16958,
+      "name": "ESA-80 ST",
+      "description": "Bu silah İngiliz Ordusu tarafı\nndan üretilmiş kısa namlulu bir\nsilahtır.\nBazı kullanıcılar Orta Doğu \nsavaşl arından sonra silahın \ndayanıklılık ve güvenirliliğ\nininden şüphe etmey e başladlar, \nancak HKEI'nin piyasa ya sürdüğü \nyeni modelden sonra, so kak savaş\nlarında gösterdiği perfor\nmanstan dolayı Klan'lar bu \nsilahta n çok miktarda satın ald\nılar ve ku llanmaya karar \nverdiler. Daha mode rn kısa \nnamlulu tüfekler piyasaya \nçıkmadan önce en fazla miktarda \nku llanılan kısa namlulu tüfek \nmodeli budur.",
+      "weightText": "3.81 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-36533ca892573cd83ef9": {
+      "id": 3005,
+      "sourceOffset": 18064,
+      "name": "AKEI-47 PT",
+      "description": "Bu silah AKEI-47'nin geliştirilmi\nş bir modelidir. Geliştirilmiş \ndipçi k plakasıve raylı sürüm \nsistemi Po limer materyalden yap\nılmıştır. Bu gibi yapısal değ\nişiklikler silahı modern savaş\nlarda kullanılabilir k ılar. \nHedef tutturma kesinliği ço\nk yüksek olmasada seri halde ateş\netme performansı ve bir hedefe \nayn ıanda ateş edilmesi ile \nkazanılan avantaj Klan üyeleri \ntarafından sı kça tercih\nedilir.  ",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-5ac23e34115f4bff6062": {
+      "id": 3006,
+      "sourceOffset": 18968,
+      "name": "AKEI-47 PMC",
+      "description": "Bu silah AKEI-47'nin geliştirilmi\nş bir modelidir. Doğu Avrupa ve \nOrta Doğu Asya'da savaşlarda tecr\nübe kazanmış Klan üyeleri bu \nsilahı genellikle tercih \nederler. \nGeliştirilmiş dipçik plakası ve \nraylı sürüm sistemi Polimer \nmateryalden yapılmıştır. \nBu gibi yapısal değişiklikle\nr silahı modern savaşlarda \nkullanı labilir kılar.Ateş \nederken kontrol edilme oranı yü\nkseltilmiştir ve bu yüzden eski \nmodeline oranla hedef tutturma yü\nzdesi daha fazladır.",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-d9a5af28e3717ae6ed43": {
+      "id": 3007,
+      "sourceOffset": 19972,
+      "name": "AUZ A2 PT",
+      "description": "Avusturya'lı 8TTYER tarafından \nüretilen kısa namlulu bir tüfek.\nEskistil sabit 1.5X dürbün yerine\nraylısistem kullanılarak \nistenildiği takdirde savaş \nortamının gereklilik\nleri dahilinde istediğiniz \nekipman ıdonanmanıza olanak sağ\nlar.\nTüfekte hafiflik aliminyüm ve\nplastik kullanılarak sağlanmışt\nır. \nTüfeğin arka kısmındaki ağırl\nık yüzündensilah ateşlendiğinde \nnamlunun yukarı doğru atması \ndezavantajı bulunmasına rağmen,\nKlan üyeleri bu sila\nhı verimle kullanabilirler.",
+      "weightText": "3.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-55fd6ee1a5caece1ed73": {
+      "id": 3009,
+      "sourceOffset": 21764,
+      "name": "AUZ A2 COVRA",
+      "description": "Avusturya'lı8TTYER tarafından ü\nret ilen kısa namlulu bir tüfek.\n Eski stil sabit 1.5X dürbün \nyerine rayl ısistem kullanı\nlarak, istenildiği takdirde savaş\nortamına bağlı olar ak istediğ\niniz ekipmanı donanmanız\na olanak sağlar. \nTüfeğin hafifliği aliminyüm ve \nplastik kullanılarak sağlanmı\nştır. Tüfeğin arka kısmında \nbulunan daha fazla ağırlık \nyüzünden silah ateşlendiğinde\nnamlunun yukarı doğru atması\ndezavantajı bulunmasına rağmen,\nCOVRA adlı bir diğer Avusturya'l\nı firma dakikada aeş etme oranı\nnıbir kısım azaltıp bu sorunu\nçözmeye çalışmış ve tüfeğin\nperformansını artırıcı \nmodifi yelerde bulunmuştur.",
+      "weightText": "3.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-0a16a139597f41011f75": {
+      "id": 3008,
+      "sourceOffset": 21012,
+      "name": "EM-4 N",
+      "description": "Bu tüfek EM-16'nın daha \ntaşınabilir olması \niçin modifiye edilmiş bir \nversiyonudur. \nBirleşik Devlet'lerin silah\nbütünleştirme planları \nçerçevesinde üretilmiştir.\nModülarize raylı arayüz \nsistemi ile bu tüfek üstüne \ndeğişik ekipmanlar \ntakabilirsiniz, bu tür \ngüncelllemeler silaha ayrıca \ntaşınabilirlik ve güvenirlilik \ngetirmiştir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-c91daf21a95c017d90f3": {
+      "id": 3024,
+      "sourceOffset": 36080,
+      "name": "EM-4 ST",
+      "description": "Bu versiyon EM-16'nın verdiği \nrahatsızlığı telafi etmeye \nçalışan bir sürümdür. \nYeni versiyon arayüzsistemi \nile harikulade taşınabilirlik \nve güvenirlilik seçenekleri s\nunmaktadır. \n8T modeli GD güvenlik\ntakımı tarafından kullanılı\nyor ancak bu sürüm Kurt savaşlar \niçin uygun değildir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-f9c966f78a2199f38ba5": {
+      "id": 3030,
+      "sourceOffset": 41206,
+      "name": "EM-4 PT",
+      "description": "EM-16'nın taşınabilirlik adına\ngeliştirilmiş versiyonu. \nA.B.D Genel Kurmayı tarafından \nsilah bütünleştirme planları çer\nçevesinde geliştirilmiştir. \nModülarize raylı arayüz sistemi \nile bu tüfek üstüne değişik\nekipmanlar takabilirsiniz. \nPT modelikısa menzil savaşları\nnda dakikada daha çok ateş \nedebilir ve etkili ateş gücü için\n tasarlanmıştır ancak menzil \narttıkça hedef tutturmada \ndüzensizliklere karşılaş\nabilirsiniz. ",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-674296bf94c03ea59445": {
+      "id": 3031,
+      "sourceOffset": 42140,
+      "name": "EM-4 WT",
+      "description": "A.B.D Genel Kurmayı tarafından \nsi lah bütünleştirme planları ç\nerçev esinde geliştirilmiştir. \nModülariz e raylı arayüz sistemi\n ile bu tüf ek üstüne değişik \nekipmanlar takab ilirsiniz. WT \nmodeli GD firması t arafından ö\nzellikle antikurt takı mı için \ngeliştirilmiş olup, dakik\nada atacağı kurşun sayısı art\nır ılmış ve hedef tutturma \nkesinliği nde ilerleme kaydedilmi\nştir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-99e629ebf8a98aa967f8": {
+      "id": 3010,
+      "sourceOffset": 23082,
+      "name": "SCAL SF",
+      "description": "FMN şirketinin Amerikan Özel \nKuvve tleri için geliştirdiği bu \nyeni tü fek, kullanımda olan diğ\ner uzun na mlulu tüfeklere \nalternatif olarak geliştirilmiş\ntir. Tüfeğin 8F versi yonu \nAmerikan Ordu'sunun kullandığ\nı7.62'lik mühimmatın kullanım\nını desteklemekle beraber, bu ç\naptaki k urşunların geri tepme \noranlarını büyük ölçüde aşağı\nya çekmiş ve hede f tutturmada \ndaha büyük bir başarı yakalanmas\nı amaçlanmıştır.",
+      "weightText": "3.86 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-2a070d302aeca81d1279": {
+      "id": 3011,
+      "sourceOffset": 24002,
+      "name": "SCAL WT",
+      "description": "FMN şirketinin Amerikan Özel \nKuvvetleri için geliştirdiği \nbu yeni tüfek, kullanımda \nolan diğer uzun namlulu \ntüfeklere alternatif olarak \ngeliştirilmiştir. \nSilahın WT sürümü G.D'nin \nantikurt takımı MEDUSA \ntarafından kullanılmaktadır.",
+      "weightText": "3.86 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-65eca59fc461320735fd": {
+      "id": 3012,
+      "sourceOffset": 24560,
+      "name": "Z-3 C",
+      "description": "Batı standartlarının normal\nkalıbı 7.62mm kurşunu ile \nmuhteşem ateş gücü sağlayan ve\nmenzil dahilinde verimle çalı\nşan bu tüfek, otomatik ateş sı\nrasında yüksek geri tepme oranı\ndezavantajı ile çalışır.\nResmi Alman Ordusu Tüfeği\npozisyonunu Z-36'ya bırakan,\ndolayısıyla fiyatı ucuzlayan\nbu tüfek, Klan'ların ilk \nkurulduğu tarihlerde bol \nmiktarda satın alınmıştır.\nZ-3 C modelinde basitleştirilen \nna mlu ile taşınabilirlik artır\nılmı ştır. Kurt'ların savaşı\nrken uygul adığı hızla saldır\nı ve ortadan kaybolma \nstratejileri ile savaşta et\nkiliolan bu tüfek bazı savaş \nortaml arında kullanılabilecek \nen uygun s ilahlar arasındadır.",
+      "weightText": "4.5 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-6355d962e8fb28302b11": {
+      "id": 3014,
+      "sourceOffset": 26886,
+      "name": "Z-3 FB",
+      "description": "Batı standartlarının normal \nkalıbı7.62mm kurşunu ile muhteş\nem ateş gücü sağlayan ve menzil \ndahilinde verimle çalışan bu tü\nfek, otomatik ateş sırasında yü\nksek geri tepme oranı dezavantaj\nı ile çalışır. \nResmi Alman Ordusu Tüfeği \npozisyonunu Z-36'ya bırakan, \ndolayısıyla fiyatı ucuzlayan \nbu tüfek, Klan'larınilk kurulduğ\nu tarihlerde bol miktarda \nsatın alınmıştır.",
+      "weightText": "4.5 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-537e6d49aa155159dd8b": {
+      "id": 3013,
+      "sourceOffset": 25904,
+      "name": "FANAS FFW",
+      "description": "Ateş hızı diğerlerine kıyasla \ngüçlü olmasına rağmen atış \nhalindeyken namlu ucu hızla \nyukarıteper. \nUzun namlululu diğer silahlara gö\nre taşınabilirliği büyük avantaj\nsağlamaktadır. \nBu silahın bir çok versiyonu \nolmasına rağmen Klan üyeleri bu\nsilahın eski sürümlerini daha ç\nok tercih etmektedirler. Resmi \nolarak günümüze kadar kullanı\nlmamış olmasına rağmen, tek kur\nşun atışı ile Kurt savaşları\nnda çok etkili olduğu \nbilinmektedir.",
+      "weightText": "3.61 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/3'li Atış"
+    },
+    "weapon-8df86486606057df57ed": {
+      "id": 3032,
+      "sourceOffset": 42976,
+      "name": "FANAS PT",
+      "description": "Fransız Ordusu'nun kısa namlulu\ntüfek modeli. Ateş hızı diğ\nerlerine kıyasla güçlü olmasına\n rağmen atışhalindeyken namlu \nucu hızla yukarı teper. \nUzun namlululu diğer silahlara \ngöre taşınabilirliği büyük \navantaj sağlamaktadır.\nBu silahın birçok versiyonu \nolmasına rağmen Klanüyeleri bu \nsilahın eski sürümlerini daha ç\nok tercih etmektedirler. \nPT modeli kısa menzil savaşları\nnda dakikada daha çok ateş \nedebilir ve etkili ateş gücü için\ntasarlanmıştır ancak menzil \narttıkça hedef tutturmada \ndüzensizliklerle karşılaş\nabilirsiniz.",
+      "weightText": "3.61 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/3'li Atış"
+    },
+    "weapon-fdd022a02223ba2e4baa": {
+      "id": 3015,
+      "sourceOffset": 27704,
+      "name": "AKEIS-74U S",
+      "description": "Yeni Rus Ordusu tarafından \nkullanı lan AKEI-47'nin geliş\ntirilmiş bir v ersiyonu. Geri \ntepme oranı mükemme l derecede \naza indirilmesine rağmen\nkısa namlu, otomatik atış sı\nrası nda hızla yukarı teper. 8\n modeli hedef tutturma oranında \nartış için tasarlanmış ve bu \nnedenle dakikada attığı kurşun \nsayısı azaltılmı ştır. 8 \nmodeli ileride Rus Ordusu'n\nun ana saldırı silahı olacak \nve Speznatz tarafından kullanı\nlacakt ır.",
+      "weightText": "2.71 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-769990be641781bf46e1": {
+      "id": 3016,
+      "sourceOffset": 28644,
+      "name": "AKEIS-74U F",
+      "description": "Yeni Rus Ordusu tarafından \nkullanılan AKEI-47'nin geliş\ntirilmiş bir versiyonu. \nÇok yüksek hedef tutturma oranı \nve geri tepme kontrolü ile mü\nkemmmel atış kabiliyetini \ndakikada attığı kurşun \nsayısını da artırarak geliş\ntirmiştir. \nDoğu Avrupa'da savaşlara katılan\n Klan üyeleri için dakikada atı\nlan kurşun miktarı çok önemli \nbir unsurdur.",
+      "weightText": "2.71 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-61714e8dc90e172ef502": {
+      "id": 3017,
+      "sourceOffset": 29422,
+      "name": "EM-14 WT",
+      "description": "EM-14 Vietnam Savaşı sonrasında\nemekliye ayrılmış olmasına rağ\nmen U8özel kuvvetleri tarafından\nkullanılmaya devam etmiştir. \nOrta Doğu savaşı sırasında yar\nı otomatik silahlar arasında \nuzun menzil atışları,hedef \ntutturma oranı ve ateş gücü \nperformansı ile ün salmıştır. \nWT tipi hem saldırı hemde \nkeskin nişancılık durumlarında\notomatik modda kullanılabilir.",
+      "weightText": "5.1 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/Semi"
+    },
+    "weapon-09a621eb5e14579ec945": {
+      "id": 3018,
+      "sourceOffset": 30238,
+      "name": "EM-14 PT",
+      "description": "EM-14 Vietnam Savaşı sonrasında\nem ekliye ayrılmış olmasına ra\nğm en US özel kuvvetleri tarafı\nndan kullanılmaya devam etmiş\ntir. Orta Doğu savaşı sırası\nnda yarı otom atik silahlar aras\nında uzun menzil atışları, \nhedef tutturma oranıve ateş gücü\nperformansı ile ün salmı ştır.\nPT tipi ateş gücü artırılm\nış bir versiyondur; bu nedenle \nKlan üyeleri bu versiyonu tercih \nederle r.",
+      "weightText": "5.1 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/Semi"
+    },
+    "weapon-b77b076c5c8f02eb20f5": {
+      "id": 3019,
+      "sourceOffset": 31090,
+      "name": "AKEI-47 ST",
+      "description": "Kalaşnikof tarafından üretilen \nbu silah, dünyada en yaygın \nolarak kullanılan savaş mühimmat\nıdır. \n7.62'lik güçlü kurşunu, hedef \nbulma oranı yüksekliği ve basit \ngövde yapısı bu silahın güçlü \nyanları arasındadır. Ancak \nhareket halinde iken ateş edildiğ\ninde geri tepme oranı ile başa ç\nıkabilmek büyük yetenek ister. \nBu silahın artık kullanılmayan\n\nsürümlerinden 8T tipi savaş \neğitimlerinde kullanılmaktadır.",
+      "weightText": "4.3 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-6633285c368fdb562e63": {
+      "id": 3020,
+      "sourceOffset": 32004,
+      "name": "XEM-8 WT",
+      "description": "Bu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttıkç a üretiminin \n21. yüzyıla kadar devam edeceği \nöngörülüyor. \nBu silah G. D. şirketi tarafı\nndan Kurt'larla savaşta yaygın \nolarak kullanılmaktadır. ",
+      "weightText": "2.65 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/3'li Atış"
+    },
+    "weapon-d119edff4be66b92ed00": {
+      "id": 3033,
+      "sourceOffset": 44154,
+      "name": "XEM-8 PT",
+      "description": "Bu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttı kça üretiminin \n21.yüzyıla kadar devam \nedeceği öngörülüyor. Bu silah G.D\nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "2.65 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/3'li Atış"
+    },
+    "weapon-93551917879d30774117": {
+      "id": 3034,
+      "sourceOffset": 45306,
+      "name": "XEM-8 C",
+      "description": "Bu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttı kça üretiminin \n21.yüzyıla kadar devam edeceği ö\nngörülüyor. Bu silah G.D \nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "2.65 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/3'li Atış"
+    },
+    "weapon-190831f4f5577a29650f": {
+      "id": 3021,
+      "sourceOffset": 33166,
+      "name": "EF-2000 PT",
+      "description": "Belçika'lı FMN firmasının ü\nrettiği bu kısa namlulu tüfek \nPolimer gövd eye sahiptir ve ana \nyapısı PI-90 baz alınarak geli\nştirilmiştir. Boşa lan şarjörünün\nöne doğru atımı say esinde tü\nfek atış sırasında hedefi\nni şaşırmaz ve ağırlık denge \nayar ısilahın tüm gövdesine çok\nkaliteli bir şekilde dağıtılmı\nştır. Klan'l arın kullandığı \nsimdiki sürümü Kur t savaşları\nnda Kurtların çok hızlı\nhareket etmesi nedeniyle bu \nduruma göre dakika başına kurşun\n atma sis temi ile modifiye \nedilmiştir.",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-fb6898f81c9ceb0e456e": {
+      "id": 3022,
+      "sourceOffset": 34238,
+      "name": "EF-2000 WT",
+      "description": "Belçika'lı FMN firmasının ü\nretti ği bu kısa namlulu tüfek \nPolimer gövdeye sahiptir ve ana \nyapısı PI-90 baz alınarak geli\nştirilmiştir. \nBoşalan şarjörünün öne doğru atı\nmı sayesinde tüfek atış sıras\nında hedefini şaşırmaz ve ağı\nrlık denge ayarı silahın tüm g\növdesine çok kaliteli bir şekilde\n dağıtılmıştır.\nTüfeğin bu versiyonu Kurt'lar ile\nsavaş için daha fazla materyal \nile modifiye edildiğinden, \norijinal seri tüfeklerden biraz \ndaha ağır olabilir.",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-cbdfa897c2ce210988c9": {
+      "id": 3023,
+      "sourceOffset": 35240,
+      "name": "EF-2000 SPC",
+      "description": "Bu tüfek, G. D şirketinin EF-2000\nmodelini temel alarak 7MM SPC ile\nürettiği bir silahtır.\nKlan'ların kullandığı şimdiki \nversiyon, Kurt'ların hızlı \nsaldırıkabiliyetlerine karşı \nsavunma ve çok seri atış özelliğ\ni ile geliştirilmiştir. \nSimülasyon testlerinde silah gücü\ndenendi ve iyi sonuçlar alındı,\nancak G. D bu silahın gerçek \nçarpışma verilerini henüz açı\nklamış değil.",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-d380c65d62623ce3c199": {
+      "id": 3029,
+      "sourceOffset": 40246,
+      "name": "EF-2000 Rookie Only",
+      "description": "EF-2000'in ebatları küçültülmüş \nve yalnızca eğitim ve testlerde \nkullanılan versiyonu.  \nEF-2000 ile aynı oranda ateş \ngücüne sahip olmasına rağmen \nsilahın bu sürümünde özel tasar\nım modüler sistem bulunmamaktad\nır. \nAyrıca bu silah çarpışmalarda \nveri toplaması yapmaz, çünkü \nkullanan tecrübesiz savaşçı \nsilahı eğitim sonrası geri \nteslim eder.  \nEğitim başladıktan sonra 14 gün \niçerisinde bu model menünüzden \nkalkacaktır.",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-a896343d81ee0e6c015e": {
+      "id": 3102,
+      "sourceOffset": 150936,
+      "name": "EF-2000 SPC - C",
+      "description": "Bu tüfek, G. D şirketinin EF-2000\nmodelini temel alarak 7MM SPC ile\nürettiği bir silahtır.\nKlan'ların kullandığı şimdiki \nversiyon, Kurt'ların hızlı \nsaldırıkabiliyetlerine karşı \nsavunma ve çok seri atış özelliğ\ni ile geliştirilmiştir. \nSimülasyon testlerinde silah gücü\ndenendi ve iyi sonuçlar alındı,\nancak G. D bu silahın gerçek \nçarpışma verilerini henüz açı\nklamış değil.",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-49b96759b33418b78e5d": {
+      "id": 3025,
+      "sourceOffset": 36736,
+      "name": "SZ-552 N",
+      "description": "8Z-552 yüksek hedef tutturma ve\nperformans güvenilirliği açısı\nndan dünya çapında birçok özel g\nüç tarafından kullanılan bir \nsilahtır.\nDayanıklılığı ve güvenirliliğ\ninin üstün performansı nedeniyle\n N modeli CQC için modifiye \nedilmiş ve A.B.D Deniz Kuvvetleri\n tarafından yüksek hedef \ntutturma oranının başarısıyla\n her savaş alanında kullanılan \nbir tüfek olarak kabul görmüştür.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-76d87ce94d0ed60c0da1": {
+      "id": 3026,
+      "sourceOffset": 37582,
+      "name": "SZ-552 PT",
+      "description": "8Z-552 yüksek hedef tutturma ve \nperformans güvenilirliği açısı\nndan dünya çapında birçok özel g\nüç tara fından kullanılan bir \nsilahtır. D ayanıklılığı ve \ngüvenirliliğinin üstün performans\nınedeniyle PT mode li CQC'ye \nuygun olarak modifiye ed ilmiş\ntir. Silah ayrıca A.B.D Deniz\nKuvvetleri tarafından dakika baş\nı na atabildiği kurşun sayısın\nı baş ka bir zaaf taşımadan \nelde ettiği için tercih edilmiş\ntir ve yaygın o larak kullanı\nlmaktadır.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-715c58a0864612fdf290": {
+      "id": 3027,
+      "sourceOffset": 38558,
+      "name": "KEI-2 A1",
+      "description": "Kore Ordu'sunun birincil tüfeği o\nlan bu silah kurşun kalıbındaki\nyeni eklem ile taşınabilirlik ra\nhatlığı sağlamaktadır. Kore \nOrdus u tüm askerlerinin silahlar\nını tek tek güncellemek ve geli\nştirmek adına zorluklar yaş\namamak adına, tüm ordusuna \nbirincil silah olarak dağ\nıtacağı bu tüfeği ateş gücü ve \nday anıklılık oranlarını art\nırmak için geliştirmiştir.",
+      "weightText": "3.26 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-84ef8413cc95ee6c44ba": {
+      "id": 3028,
+      "sourceOffset": 39366,
+      "name": "KEI-2 T1",
+      "description": "Bu tüfek özel kuvvetlerin kullan\nımı ve ihraç etme amacı ile ü\nretilmiştir. \nAyrıca silah kurşun kalıbı\nndaki yeni eklem ile taşı\nnabilirlik rahatlığı sağlamakla\n beraber ra ylı tip namlu \nkoruması ile donanmıştır. \nBu silahın geliştirildiği \nilk zamanlarda ihraç edilen tüfek\nsayısı birkaç özel sipariş \nkadar azdı ancak geliştirilen bu\n yeni modeli le toplu şekilde dü\nnyaya yayılmaya başlamıştır.",
+      "weightText": "3.26 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-8f2f46ae66c345f4fb3a": {
+      "id": 3036,
+      "sourceOffset": 47110,
+      "name": "Z-36C CS",
+      "description": "Almanya Ordusu'nun ana saldırı \nsil ahı XEM-8'ın önceki sürümü \nZ-36'nı n ebatları küçültülmüş \nversiyonu. \nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\nve geri tepme oranını aşağı ç\nekmiştir. \nC8 modeli terör birlikleri için ü\nr etilmiş olup, dakikada atttığ\nı ku rşun sayısı azaltılmış \nancak hedef tutturma oranı yü\nkseltilmiştir. ",
+      "weightText": "2.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-99e4cc31bc23a0100f26": {
+      "id": 3037,
+      "sourceOffset": 47960,
+      "name": "Z-36C WT",
+      "description": "Almanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun sayısı\n çoğaltılmış ve ateş gücü\nyükseltilmiştir.",
+      "weightText": "2.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-e5e145f50972b2a9e8ed": {
+      "id": 7504,
+      "sourceOffset": 108300,
+      "name": "Z-36C PX",
+      "description": "Bu Z-36 daha küçük bir versiyonu \nolduğunu XEM-8 in selefi Alman \nordusunun ve büyük tüfek, \nözel kuvvet istedi.\nBu polimer gövde hızlı taşıman\nıza da yardımcı olur ve geri \ntepme azaltır. \nWT yapılır Wolf kuvvet almak iç\nin. Bu devir hızı artırır iç\nin artış ateş gücü.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-d8cc4a460c7335018354": {
+      "id": 3085,
+      "sourceOffset": 141528,
+      "name": "Z-36C WT SL",
+      "description": "Z-36 WT SL\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun sayısı\nçoğaltılmış ve ateş gücü\nyükseltilmiştir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-7a290a57a4e10acd15c7": {
+      "id": 3119,
+      "sourceOffset": 177420,
+      "name": "Z-36C WT GL",
+      "description": "XEM-8'den önceki Z-36'nın küçük \nbir versiyonudur ve Alman \nordusunun ana tüfeğidir. Polimer \nyapısı daha hızlı  hareket sağlar ve\n geri tepme azalır. \nWT, Kurt güçleri için yapılmıştır.\nAteş gücünü arttırmak için döngü \noranını arttırır.\nZ-36C WT Gold versiyonu döngü \noranında bulunan silahtan\n%20 daha güçlüdür.",
+      "weightText": "1.13 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-9c7692f0a23428a1a757": {
+      "id": 3038,
+      "sourceOffset": 48774,
+      "name": "J-89",
+      "description": "J-89 Japon Meşru Müdafaa \nKuvvetleri 'nin kullandığı \nresmi otomatik sal dırı tüfeğ\nidir. Sağlamlığı ile d\nikkat çeker ve 5.56'lık mühimmat\nı ile geri tepme oranı düşük \nseviyeye indirilmiştir. 21.Yüzyı\nl'ın ortala rında Japonya'ya \nuygulanan ambargo yüzünden fiyat\nı çok yüksek olduğun dan kullan\nımı yaygın değildi. Sil\nah şu anda satış ambargosu altı\nnda olduğundan Klan'lar bu silah\nı kull anamazlar.\nAlbay rütbesindeyken satın alı\nnabilir Rütbeniz albayın altı\nnda ise bu silahı kullanmak için\n özel lisans almanız gerekir.",
+      "weightText": "3.5 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-43b42e8395c6d43e2f01": {
+      "id": 3040,
+      "sourceOffset": 50688,
+      "name": "EM-4 C",
+      "description": "Elit Klan birlikleri bu tüfeğin \nmek anizmasını Vur ve Kaç \ntaktiklerind e kullanma amacıyla\n oldukça basitle ştirilmiş halde \nkullanırlar. Hedef şaşırtma ve \ngörünmeme stratejisi ye rine \nsilahın caydırıcı gücü belli\nedilmesi için çekici renklerle \nkullan ılır. CQC için özel \ntasarlanmış ve ünlü silah yapı\nmcıları tarafından\ngeliştirilmiştir. Elit gruplar bu\n sil ahı yakın ve orta menzil ç\narpışmal arında kullanmayı \ntercih ederler. ",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-b3870ce3ee813b98cc05": {
+      "id": 3071,
+      "sourceOffset": 126250,
+      "name": "EM-4 C AT",
+      "description": "EM-4 C Antique\nElit Klan birlikleri bu tüfeğin \nmek anizmasını Vur ve Kaç \ntaktiklerind e kullanma amacıyla\noldukça basitle ştirilmiş halde \nkullanırlar. Hedef şaşırtma ve \ngörünmeme stratejisi ye\nrine silahın caydırıcı gücü \nbelli edilmesi için çekici \nrenklerle kullan ılır. CQC için\nözel tasarlanmış ve ünlü silah \nyapımcıları tarafından\ngeliştirilmiştir. Elit gruplar bu\n sil ahı yakın ve orta menzil ç\narpışmal arında kullanmayı \ntercih ederler. ",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-c252b1c0d132fc406be4": {
+      "id": 3072,
+      "sourceOffset": 127236,
+      "name": "EM-4 C MC",
+      "description": "EM-4C kamuflaj desenli dizaynı\nyla ve orijinalinden çok daha yü\nksek hasar oranı ve seri atışı\nyla diğer silahlardan ayrı\nlmaktadır.  ",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-df3d1a8e7eef061e8422": {
+      "id": 3083,
+      "sourceOffset": 139910,
+      "name": "EM-4 C SL",
+      "description": "EM-4 C Silver\nElit Klan birlikleri bu tüfeğin \nmek anizmasını Vur ve Kaç \ntaktiklerind e kullanma amacıyla\n oldukça basitle ştirilmiş halde \nkullanırlar. Hedef şaşırtma ve \ngörünmeme stratejisi ye rine \nsilahın caydırıcı gücü belli\nedilmesi için çekici renklerle \nkullan ılır. CQC için özel \ntasarlanmış ve ünlü silah yapı\nmcıları tarafından\ngeliştirilmiştir. Elit gruplar bu\n sil ahı yakın ve orta menzil ç\narpışmal arında kullanmayı \ntercih ederler. ",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-5a9e1212960f71669acf": {
+      "id": 3088,
+      "sourceOffset": 145068,
+      "name": "EM-4 C PX",
+      "description": "EM-4 C Pixel\nElit Klan birlikleri bu tüfeğin \nmek anizmasını Vur ve Kaç \ntaktiklerind e kullanma amacıyla\n oldukça basitle ştirilmiş halde \nkullanırlar. Hedef şaşırtma ve \ngörünmeme stratejisi ye\nrine silahın caydırıcı gücü \nbelli edilmesi için çekici \nrenklerle kullan ılır. CQC için\nözel tasarlanmış ve ünlü silah \nyapımcıları tarafından\ngeliştirilmiştir. Elit gruplar bu\n sil ahı yakın ve orta menzil ç\narpışmal arında kullanmayı \ntercih ederler. ",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-dba757099b616111ae3c": {
+      "id": 3107,
+      "sourceOffset": 161386,
+      "name": "EM-4C GL",
+      "description": "Elit gruplar Vur&Kaç gibi gerilla \ntaktiklerinde silah kullanımını olduk\nça basitleştirmiştir.Kapatmak yerine \nhünerini göstermek için  havalı \nresimler kullanır. Ünlü silah ustası \ntarafından uyarlanmış ve CQC ile \nuzmanlaşmıştır Elit gruplar tarafı\nndan yakın dövüşte ve orta menzilli\n vuruşta tercih edilir. \nEM-4C Gold versiyonunun ateşleme\noranı uyarlanmış ve %20 arttırılmıştı\nr.",
+      "weightText": "1.12 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-4e9bde287b373572a8d2": {
+      "id": 3041,
+      "sourceOffset": 51640,
+      "name": "C-95",
+      "description": "Çin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 MM'lik sürümü yerine Çin \nOrdusu bu silahı 5.8MM sürümü \nile kullanmakt adır. Çarpışma \nalanında sağlamlı ğı ile güven\n verir ve geri tepme oranı ile \nbaşarı yakalamıştır ama sol el\n kullanan askerler için\nkullanıcı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-46312067541b8a993658": {
+      "id": 3076,
+      "sourceOffset": 131372,
+      "name": "C-95 EV",
+      "description": "Çin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 MM'lik sürümü yerine Çin \nOrdusu bu silahı 5.8MM sürümü \nile kullanmakt adır. Çarpışma \nalanında sağlamlı ğı ile güven\n verir ve geri tepme oranı ile \nbaşarı yakalamıştır ama sol el\nkullanan askerler için kullanıc\nı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-27a2c038ade136454baf": {
+      "id": 3042,
+      "sourceOffset": 52576,
+      "name": "EF-2000T",
+      "description": "MEDUSA antikurt timi tarafından\nEF-2000 WT temel alınarak özel g\neliştirilmiş bir sürümdür. Elit b\nirliklerin çarpışma eğilimleri \nve tecrübeleri dikkate alınarak \nüret ilen bu silah G.D'nin özel \nekipman ları arasında yerini \nalmıştır.\nUzak atışlarda çok iyi \nperformans gösterir.  ",
+      "weightText": "3.6 Kg",
+      "magazineText": "24 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-4e018d8ecd4dd6e43dc1": {
+      "id": 3043,
+      "sourceOffset": 53222,
+      "name": "ABU DHABI-16",
+      "description": "U.A.E, Abu Dhabi tarafından \nözel üretim yaptırılan \nEM-16A2'nin modifiye edilmiş \nversiyonu. \nBu ekipmanayrıca Afganistan'da \nçarpışan Amerikan Delta Gücü \ntarafından da kullanı\nlnmıştır. Taşınabilirliği y\nüksektir ancak EM-4A1 modüler \nsistemi bulunmamaktadır. \nAbu Dhabi merkezli Paralı \nAskerin brincil silah terci\nhidir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-32020bbb2089c13b7f72": {
+      "id": 3044,
+      "sourceOffset": 53960,
+      "name": "FANAS UAE",
+      "description": "Fransa'dan ithal edilen FANA8'i \nUAE Klan'ları kendi kullanımlar\nı na özel olarak tasarladılar. \nSoka k savaşlarında kullanılmas\nı için özel sürümleri mevcuttur.\n Yaylım a teşi sırasında sağ\nlamlığı ile gü ven veren bu \nsilahı kullanan Klan'\nlar silaha büyük değer \nvermektedirler. ",
+      "weightText": "3.61 Kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-606b62f97ce79a24c8ed": {
+      "id": 3045,
+      "sourceOffset": 54608,
+      "name": "AKEIS-74U AW",
+      "description": "*Bu silaha yalnızca Ex-Malzeme'nin\nAKEI8-74U LIMITED seçeneğinden ula\nşabilirsiniz*           \nDoğru Avrupa'da bulunan özel kuvve\ntler arasında dikkat çekmeye başla\nyan Klan'ların Spetnaz ile yarışa\ngirmeleri itibarlarını yüksek sev\niyelere çekti. Klan'lar ikramiye v\neya ödül peşinde olan örgütler olm\nadığından tüm savaş taktiklerinde\norganizasyon disiplini ve konsantr\nasyonu göz önünde bulundururlar. ",
+      "weightText": "2.71 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-8f7a4b049da07226dd65": {
+      "id": 3050,
+      "sourceOffset": 58906,
+      "name": "AKEIS-74U LIMITED",
+      "description": "*Bu silaha yalnızca Ex-\nMalzeme'nin AKEI8-74U LIMITED seç\neneğinden ula şabilirsiniz*\nDoğu Avrupa'da bulunan özel kuvve\ntler arasında dikkat çekmeye baş\nla yan Klan'ların Spetnaz ile \nyarışa girmeleri itibarlarını \nyüksek sevi yelere çekti. \nKlan'lar ikramiye ve ya ödül peş\ninde olan örgütler olma\ndığından tüm savaş \ntaktiklerinde organizasyon \ndisiplini ve konsantr asyonu göz \nönünde bulundururlar",
+      "weightText": "2.71 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-446e0219e82f5cb0a8d1": {
+      "id": 3064,
+      "sourceOffset": 119304,
+      "name": "AKEIS-74U AW AT",
+      "description": "Doğru Avrupa'da bulunan özel \nkuvve tler arasında dikkat ç\nekmeye başla yan Klan'ların \nSpetnaz ile yarışa girmeleri \nitibarlarını yüksek sev\niyelere çekti. Klan'lar ikramiye \nv eya ödül peşinde olan örgütler \nolm adığından tüm savaş \ntaktiklerinde organizasyon \ndisiplini ve konsantr\nasyonu göz önünde bulundururlar. ",
+      "weightText": "3.8 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-aa3e80d16ba3bd00cc44": {
+      "id": 3065,
+      "sourceOffset": 120034,
+      "name": "AKEIS-74U AW MC",
+      "description": "Doğru Avrupa'da bulunan özel \nkuvve tler arasında dikkat ç\nekmeye başla yan Klan'ların \nSpetnaz ile yarışa girmeleri \nitibarlarını yüksek sev\niyelere çekti. Klan'lar ikramiye \nv eya ödül peşinde olan örgütler \nolm adığından tüm savaş \ntaktiklerinde organizasyon \ndisiplini ve konsantr\nasyonu göz önünde bulundururlar. ",
+      "weightText": "3.9 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-c4bec712ebf7d72b34e3": {
+      "id": 3098,
+      "sourceOffset": 156660,
+      "name": "AKEIS-74U AW PX",
+      "description": "Doğru Avrupa'da bulunan özel \nkuvve tler arasında dikkat ç\nekmeye başla yan Klan'ların \nSpetnaz ile yarışa girmeleri \nitibarlarını yüksek sev\niyelere çekti. Klan'lar ikramiye \nv eya ödül peşinde olan örgütler \nolm adığından tüm savaş \ntaktiklerinde organizasyon \ndisiplini ve konsantr asyonu göz \nönünde bulundururlar. ",
+      "weightText": "3.8 Kg",
+      "magazineText": "40 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-88c8fa37c64cb58cc115": {
+      "id": 3099,
+      "sourceOffset": 157392,
+      "name": "AKEIS-74U AW SL",
+      "description": "Doğru Avrupa'da bulunan özel \nkuvve tler arasında dikkat ç\nekmeye başla yan Klan'ların \nSpetnaz ile yarışa girmeleri \nitibarlarını yüksek sev\niyelere çekti. Klan'lar ikramiye \nv eya ödül peşinde olan örgütler \nolm adığından tüm savaş \ntaktiklerinde organizasyon \ndisiplini ve konsantr asyonu göz \nönünde bulundururlar. ",
+      "weightText": "3.8 Kg",
+      "magazineText": "40 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-03eeac272791ed9791bc": {
+      "id": 3046,
+      "sourceOffset": 55508,
+      "name": "SZ-552 AW",
+      "description": "Özel Klan üyeleri ve G.D \nbirlikler i antikkurt orijin \nDNA'ları arama ktayken çarpış\nmalarının çoğunda SZ-552'yi \nkullanmayı tercih etmiş\nlerdir. İki grubun yöneticileri \nde bu silahın güvenilirliği ve ç\nok s oğuk savaş ortamlarında gö\nsterdiği performans yüzünden bu \nkuşak silahı savaşlarında \nkullandılar. ",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-ab17076a076eedc4791e": {
+      "id": 3047,
+      "sourceOffset": 56210,
+      "name": "AUZ A3 C",
+      "description": "Çeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\n sist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlı yorlar. Çok özel\n performans göster diği sö\nylenemez ancak hareketli ha\nldeyken atışlarda başarı sağ\nlayab ilir. Klan'lar bu ekipmanı\nkullana mazlar.",
+      "weightText": "3.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-f14774958341b6aaf6af": {
+      "id": 3073,
+      "sourceOffset": 127588,
+      "name": "AUZ A3 C AT",
+      "description": "AUZ A3 C Antique\nÇeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\nsist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlıyorlar. Çok özel \nperformans göster diği söylenemez\nancak hareketli ha ldeyken atış\nlarda başarı sağlayab ilir. \nKlan'lar bu ekipmanı kullana\nmazlar.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-734e0d358823e5e88aa7": {
+      "id": 3074,
+      "sourceOffset": 128290,
+      "name": "AUZ A3 C MC",
+      "description": "AUZ A3 C Multicam\nÇeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\n sist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlı yorlar. Çok özel\nperformans göster diği söylenemez\nancak hareketli ha ldeyken atış\nlarda başarı sağlayab\nilir. Klan'lar bu ekipmanı \nkullana mazlar.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-9dfc7d044444cb271d7e": {
+      "id": 3089,
+      "sourceOffset": 146052,
+      "name": "AUZ A3 C PX",
+      "description": "AUZ A3 C Pixel\nÇeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\n sist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlıyorlar. Çok özel \nperformans göster diği söylenemez\n ancak hareketli ha ldeyken atış\nlarda başarı sağlayab ilir. \nKlan'lar bu ekipmanı kullana\nmazlar.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-dd5e505a039e3fad7ad1": {
+      "id": 3096,
+      "sourceOffset": 155260,
+      "name": "AUZ A3 C SL",
+      "description": "AUZ A3 C SILVER\nÇeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\n sist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlıyorlar. Çok özel \nperformans göster diği söylenemez\n ancak hareketli ha ldeyken atış\nlarda başarı sağlayab ilir. \nKlan'lar bu ekipmanı kullana\nmazlar.",
+      "weightText": "3.8 Kg",
+      "magazineText": "40 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-ad0744bde33fc8858e9c": {
+      "id": 3097,
+      "sourceOffset": 155962,
+      "name": "AUZ A3 C GL",
+      "description": "AUZ A3 C GOLD\nÇeşitli amaçlarda kullanılmak ü\nzer e IT AUZ A2 modüler el koruma\n sist emini kurmuştur. MEDUSA ve \ndiğer t imler bu ekipmanı \nedinmeyi planlı yorlar. Çok özel\n performans göster diği sö\nylenemez ancak hareketli ha\nldeyken atışlarda başarı sağ\nlayab ilir. Klan'lar bu ekipmanı\nkullana mazlar.",
+      "weightText": "3.8 Kg",
+      "magazineText": "40 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-d4422c137a796ae31102": {
+      "id": 3048,
+      "sourceOffset": 56874,
+      "name": "SZ-550",
+      "description": "İşviçre Ordusu'nun standrat tüfeğ\ni.\nİsviçre üretimi olduğundan olağan\nü stü kesinlik ile menzil atış\nları yapabilir. Bu silah özel \n5.6MM kur şunları veya standart \n5.56MM NATO kurşunlarını aynı \nanda kullanabi liyor olması \nsilaha büyük avantaj kazandı\nrmaktadır. Bu silah İsviçr\ne Ordusu tarafından 21. Yüzyıl'\nın ortalarına kadar aktif \nolarak kull anıldı, daha sonra \nsilah satıcıl arı sayesinde \nKlan'ların erişimine açıldı.",
+      "weightText": "4.05 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-4d2dc99f1d20eab1fd41": {
+      "id": 3054,
+      "sourceOffset": 110650,
+      "name": "SZ-550 AT",
+      "description": "Standart Swiss Army tüfek için.\nmükemmel mekanizması ve dizi ç\nekimleri var İsviçre hassas ü\nretim altında.\nBu tüfek de 5.6mm özel \nkullanabilir mermi ve 5.56mm nato\n mermi birlikte.\nBu kadar isviçre ordu standart \nsilah kullanıyor 21. \nyüzyıl da orta, bazı az sayıda\ngurur için broker aracılığıyla\nkullanmaktadır.",
+      "weightText": "3.5 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-9d4bd827480a1768104d": {
+      "id": 3081,
+      "sourceOffset": 137456,
+      "name": "SZ-550 GL",
+      "description": "SZ-550 Gold\nStandart Swiss Army tüfek için.\nmükemmel mekanizması ve dizi ç\nekimleri var İsviçre hassas ü\nretim altında.\nBu tüfek de 5.6mm özel \nkullanabilir mermi ve 5.56mm nato\n mermi birlikte.\nBu kadar isviçre ordu standart \nsilah kullanıyor 21. \nyüzyıl da orta, bazı az sayıda\ngurur için broker aracılığıyla\nkullanmaktadır.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-84dcfe3628daab2d6718": {
+      "id": 3118,
+      "sourceOffset": 176488,
+      "name": "SZ-550 MC",
+      "description": "İsviçre ordusu için standart bir tü\nfek İsviçre üretim hassasiyetinde \nharika bir mekanizmi ve menzil vuru\nşu vardır. \nBu tüfek ayrıca 5.6mm özel mermiler\nve 5.56mm nato mermileri \nkullanabilir. \n21. yy'a kadar İsviçre ordusunun \nstandart tüfeğiydi şimdi bir grup\nistilacılar aracı yoluyla \nkullanmaktadır.\nSZ-550 Multicam versiyonu 5.56mm \nzır delici bomba kullanımı için \ngüçlendirilmiştir ayrıca zarar ve \ndelme %20 artmıştır.",
+      "weightText": "3.5 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-89fd946cb895b766115b": {
+      "id": 3129,
+      "sourceOffset": 190774,
+      "name": "SZ-550 SL",
+      "description": "İsviçre ordusu için standart bir tü\nfek İsviçre üretim hassasiyetinde \nharika bir mekanizmi ve menzil vuru\nşu vardır. \nBu tüfek ayrıca 5.6mm özel mermiler\nve 5.56mm nato mermileri \nkullanabilir. \n21. yy'a kadar İsviçre ordusunun \nstandart tüfeğiydi şimdi bir grup\nistilacılar aracı yoluyla \nkullanmaktadır.\nSilver versiyonu savaş kurduna gö\nre geliştirilmiştir, gümüş mermi ile \nağırlaştırma ve sersemletme etkileri\ndaha güçlenmiştir.",
+      "weightText": "3.5 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-e4b4919dd48e5c7296c6": {
+      "id": 3051,
+      "sourceOffset": 59808,
+      "name": "EF-2000 LIMITED",
+      "description": "Limitli Kullanım Süreli \nEx-Malzeme EF-2000 LIMITLI \nPAKET\n*Bu malzemeyi yalnızca \n(EF-2000 LIMITED+ALEV DÖVMESİ) \nsatın alarak kullanabilirsiniz.\n*Satış sona erdikten sonra 6 \nay boyunca satışa \nsunulmayacaktır Dönüşüme uğramı\nş Kurt'ların bazılarının \ngenleri kendilerini koruma amaçl\nı hiçbir girişimde bulunmazlar.\n(Kendisini kontrol eden gruptan\nkaçıp kendilerini saklarlar)\nBu grup antisosyal eğilimlerini \nsilahlarının rengi ile belli \neder vetasarladıkları silahlar \nile daha yüksek hasar verme \namacını güderler.",
+      "weightText": "3.6 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-3287bd41f32759545d73": {
+      "id": 3066,
+      "sourceOffset": 120764,
+      "name": "EF-2000 LIMITED AT",
+      "description": "EF-2000 Ltd Antique\nBelçika'lı FMN firmasının ü\nretti ği bu kısa namlulu tüfek \nPolimer gövdeye sahiptir ve ana \nyapısı PI-90 baz alınarak geli\nştirilmiştir. \nBoşalan şarjörünün öne doğru atı\nmı sayesinde tüfek atış sıras\nında hedefini şaşırmaz ve ağı\nrlık denge ayarı silahın tüm g\növdesine çok kaliteli bir şekilde\n dağıtılmıştır.\nTüfeğin bu versiyonu Kurt'lar ile\nsavaş için daha fazla materyal \nile modifiye edildiğinden, \norijinal seri tüfeklerden biraz \ndaha ağır olabilir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-93134c7e087078225b00": {
+      "id": 3067,
+      "sourceOffset": 121824,
+      "name": "EF-2000 LIMITED MC",
+      "description": "EF-2000 Ltd Multicam\nBelçika'lı FMN firmasının ü\nretti ği bu kısa namlulu tüfek \nPolimer gövdeye sahiptir ve ana \nyapısı PI-90 baz alınarak geli\nştirilmiştir. \nBoşalan şarjörünün öne doğru atı\nmı sayesinde tüfek atış sıras\nında hedefini şaşırmaz ve ağı\nrlık denge ayarı silahın tüm g\növdesine çok kaliteli bir şekilde\n dağıtılmıştır.\nTüfeğin bu versiyonu Kurt'lar ile\nsavaş için daha fazla materyal \nile modifiye edildiğinden, \norijinal seri tüfeklerden biraz \ndaha ağır olabilir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-f15c7ba76978bb9f8a4f": {
+      "id": 3105,
+      "sourceOffset": 160362,
+      "name": "EF-2000 LIMITED GL",
+      "description": "Belguim FN şirketinin av tüfeği \npolimer yapısını alan EF-2000 \nLIMITED versiyonu ile ergonomik \ndizayn edilmiştir.\nEF-2000 LIMITED Gold \nversiyonunun eskisine göre ateş\nleme oranı %20 artmıştır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-0679ce4db2af5121f5c2": {
+      "id": 3106,
+      "sourceOffset": 160846,
+      "name": "EF-2000 LIMITED PX",
+      "description": "Belguim FN şirketinin av tüfeği \npolimer yapısını alan EF-2000 \nLIMITED versiyonu ile ergonomik \ndizayn edilmiştir.\nEF-2000 LIMITED Pixel versiyonu \nsilahı hafifleterek  taşınabilirliği artt\nır ve hareketi %10  hızlandırır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-3754a923a5a65c3cab3a": {
+      "id": 3052,
+      "sourceOffset": 60944,
+      "name": "XEM-8 OPS",
+      "description": "*Period limited EX-ITEM \nSpecial OPS Set \nYou can purchase it only \nthrough \n(XEM-8 OPS+ GP PLUS X2)\n\nThis is type of Miniatuer \nassault rife of XEM-8 \nvariation and has strength \nof close quarter combat.\nEven though XEM-8 OPS is not \nadopted as close order drill, \nit is used by subsidiary troops \nwhich make specialty of special \ncombat instead.\nPride members are in preference \nto OPS.",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-08a9b63856542681ce07": {
+      "id": 3068,
+      "sourceOffset": 122886,
+      "name": "XEM-8 OPS AT",
+      "description": "XEM-8 OPS Antique\nBu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttıkça üretiminin \n21.yüzyıla kadar devam \nedeceği öngörülüyor. Bu silah G.D\nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-39cf705200bd582b442c": {
+      "id": 3069,
+      "sourceOffset": 124060,
+      "name": "XEM-8 OPS MC",
+      "description": "XEM-8 OPS Multicam\nBu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış \nve başarı sağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttı kça üretiminin \n21.yüzyıla kadar devam \nedeceği öngörülüyor. Bu silah G.D\nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-448e842f601d662cf9c3": {
+      "id": 3080,
+      "sourceOffset": 136284,
+      "name": "XEM-8 OPS GL",
+      "description": "XEM-8 OPS Gold\nBu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttı kça üretiminin \n21.yüzyıla kadar devam edeceği ö\nngörülüyor. Bu silah G.D \nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "3.61 Kg",
+      "magazineText": "35 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-a0b0edbaab29938091d5": {
+      "id": 3100,
+      "sourceOffset": 147116,
+      "name": "XEM-8 OPS - C",
+      "description": "XEM-8 OPS\nBu tüfek Z-36'nın hafif ve modü\nler sistemi geliştirilerek ü\nretilmiştir. \nDayanaklılığı özel kuvvetler \ntarafından eleştiriye uğradı\nktan sonra tüfeğe hafif ağırlı\nkta yüksek yoğunluklu polimer \nmateryal uyarlanmış ve başarı \nsağlanmıştır.\nGeneral Defense şirketi tarafı\nndan geliştirilen bu silahın ü\nretiminin yakaladığı satış baş\narısı ve silahın gösterdiği \nperformans arttı kça üretiminin \n21.yüzyıla kadar devam \nedeceği öngörülüyor. Bu silah G.D\nşirketi tarafından Kurt'larla \nsavaşta yaygın olarak kullanı\nlmaktadır.",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-6bf2df0fbe5ef6d35b90": {
+      "id": 3115,
+      "sourceOffset": 173142,
+      "name": "XEM-8 PX",
+      "description": "Z-36 hafifliğinin ve modüler \nsisteminin baz alınarak üretilen bir \nsilahtır. \nDayanıklılık sorunu kusurludur \nfakat G.D şirketinin ürettiği  yüksek \nbasınçlı polimer malzemesi kullanı\nlarak bu problem çözülebilir. Bu \nsilahın üretimi devam edecektir çü\nnkü dayanıklılığın geliştirişlesi \nbeklenen satışları arttırmıştır ve 21. \nyy'ın temel silahlarından biri olacağ\nı düşünülmektedir.XEM-8 Pixel \nversiyonunun taşınabilirliği ve hızlı \nkurtlarla savaşmak için kolaylığı \ngüçlendirilerek hızı artmıştır",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-f2ce337aeb0a683d0f15": {
+      "id": 3053,
+      "sourceOffset": 61804,
+      "name": "FANAS SL",
+      "description": "Amerikan Kara Kuvvetleri \nordusu önceki planlarında \ndeğişiklik yaptılar ve \nFransa Kara Kuvvetleri'nin \nkullandığı yepyeni bu \nsilahı kendi envanterlerine \ndahil ettiler.\n\nFANAS FWW silahının yakın \nmesafede delme gücü \ngeliştirildi ve bu yeni planda\nsilahın ismine GÜMÜŞ geçici \nadını verdiler.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-8e69b8573bea0f63f3af": {
+      "id": 3062,
+      "sourceOffset": 117618,
+      "name": "FANAS AT",
+      "description": "Fanas Antique\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun sayısı\n çoğaltılmış ve ateş gücü\nyükseltilmiştir.",
+      "weightText": "2.8 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-9e98d7ecb6175d356f1a": {
+      "id": 3063,
+      "sourceOffset": 118460,
+      "name": "Fanas MC",
+      "description": "Fanas Multicam\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun sayısı\n çoğaltılmış ve ateş gücü\nyükseltilmiştir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-25bbd76a56fc2b43d1d5": {
+      "id": 3078,
+      "sourceOffset": 134606,
+      "name": "FANAS PX",
+      "description": "Fanas Pixel\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun\nsayısı çoğaltılmış ve ateş gü\ncü yükseltilmiştir.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-6c63bf6cbf4604f94ec2": {
+      "id": 3079,
+      "sourceOffset": 135446,
+      "name": "FANAS GL",
+      "description": "Fanas Gold\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun sayısı\n çoğaltılmış ve ateş gücü\nyükseltilmiştir.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-50bd2f656b83dde0eb33": {
+      "id": 3101,
+      "sourceOffset": 149536,
+      "name": "FANAS SL - C",
+      "description": "Fanas Silver\nAlmanya Ordusu'nun ana saldırı \nsi lahı XEM-8'ın önceki sürümü \nZ-36' nın ebatları küçültülmüş \nversiyonu.\nBu silah özel kuvvetler tarafı\nndan talep edilmiştir. Polimer gö\nvdesi taşınabilirliği artırmış\n ve geri tepme oranını aşağı ç\nekmiştir. WT modeli Kurtlara karş\nı operasyonda kullanılır, \ndakikada attığı kurşun\nsayısı çoğaltılmış ve ateş gü\ncü yükseltilmiştir.",
+      "weightText": "3.61 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-57cc6c8a7878d8b839e5": {
+      "id": 5001,
+      "sourceOffset": 62478,
+      "name": "EMP-5 CS",
+      "description": "Bu hafif makineli tüfek, \nteröre karşı savaşta \nyaygın olarak kullanılan bir \nsilahtır. \nPI-90 ve EMP-7 ile sıkça \nberaber kullanılan bu tüfek, \n9mm mühimmata karşı güçsüzlüğü \nnedeniyle kurtlara karşı \nsavaşta tercih edilmez. \nGeri tepme oranının düşüklüğü, \nsabit dipçik plakası vekapalı \nkurşun kovan fırlatma mekan\nizması ile kurtlarla yakın \nsavaşlarda kullanılabilir. \nBu model 21. \nyüzyılda teröre karşı savaşta \nkullanılmıştır.",
+      "weightText": "2.55 kg",
+      "magazineText": "25 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-e32a92c1254ff42b2cb6": {
+      "id": 5003,
+      "sourceOffset": 64464,
+      "name": "EMP-5 GD",
+      "description": "Bu hafif makineli tüfek, teröre \nka rşı savaşta yaygın olarak \nkullanı lan bir silahtır. PI-90\nve EMP-7 i le sıkça beraber \nkullanılan bu tüfek, 9mm mü\nhimmata karşı güçsüzlüğü \nnedeniyle bio-savaşçılar ve \nkurtla ra karşı savaşta tercih \nedilmez. G eri tepme oranının d\nüşüklüğü, sabi t dipçik plakası \nve kapalı kurşun kovan fırlatma\n mekanizması ile ku\nrtlarla yakın savaşlarda kullan\nıl abilir. G.D firması hedef \ntutturma dan çok seri kurşun atı\nmında önem vermiş ve bu silahı \nurt'lara karş ı kullanmada uygun\nhale getirmeyeçalışmıştır.",
+      "weightText": "2.55 kg",
+      "magazineText": "25 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-ae53645fb183b3aa6db2": {
+      "id": 5004,
+      "sourceOffset": 65630,
+      "name": "UMF-45 PT",
+      "description": "45kalibre mühimmatıyla \nolağanüstü hasar verme \nkabiliyeti hem İnsan hemde\nKurt'lara karşı çok başarılıd\nır.\nKlan birlikleri bu silahı yakın\n s avaşta kullanmak amacıyla \nedinmiş lerdir. Dakika başına \nkurşun atma oranı yükseltilen PT\n tipi yakın s avaşta çok sık \nkullanılır.",
+      "weightText": "2.2 kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-81ec6598bc386447b80c": {
+      "id": 5005,
+      "sourceOffset": 66264,
+      "name": "UMF-45 WT",
+      "description": "45kalibre mühimmatıyla \nolağanüstü hasar verme kabiliyeti\nhem İnsan hemde Kurt'lara karşı \nçok başarılıdır.\nG.D Firması ve antkurt takımı \nM.\nE.D.U.S.A bu modeli savaşlarda s\nıkça kullanmaktdırlar. \nWT modeli'n in hasar verme \nkabiliyeti bir kısım düşürülmü\nş, ama hedef tutturmakabiliyeti \nartırılmıştır. \nDakika başına atılan kurşun say\nısı görev başarısı için yü\nkseltilmiştir.",
+      "weightText": "2.2 kg",
+      "magazineText": "25 mermi x 3",
+      "modeText": "Otomatik/2'li Atış"
+    },
+    "weapon-216e198e59ad6cc95b97": {
+      "id": 5006,
+      "sourceOffset": 67126,
+      "name": "NMP-40",
+      "description": "2.Dünya Savaşı sırasında 1 \nmilyon adetten daha fazla sayıda\n üretilmiş bu hafif makineli tü\nfek, aynı zama nda Siemens'in \nNeo Zepplininde gösteriminde de\n bulunan bir koleks iyon parçası\ndır. Kullanım için ha la geç\nerli ve uygun durumdadır. Ze\nplin teröristlerce kaçırıldı\nktan sonra yolcu kılığına \ngirmiş bir Klan üyesince ele geç\nirilmilş ve başka operasyonlarda \nkullanılmaya başlamıştır.",
+      "weightText": "4.7 Kg",
+      "magazineText": "32 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-3b723dce71183b8e0678": {
+      "id": 5007,
+      "sourceOffset": 67992,
+      "name": "PI-90",
+      "description": "Bu hafif makineli tüfek EMP-5'e \nalternatif olarak 21.yüzyılda \nüretilmiştir. \n5.7mm kurşun satışları ve \nkullanımı yaygın olduğu \nzamanlarda özel kuvvetler ve ülke\norduları tarafından tercih \nedilen bu silahın rolü kendini \nsavunmadan özel saldırı tipine\ndönüştürülmüştür. \n5.7mm mühimmatın vücut zırhlar\nını ve dayanıklı kasları \ndelmesi, \nnormal kurşunlardan daha \netkilidir. \nKlan'lar bu silahın birçok \nmodelini savaşlarda kullanmaktad\nırlar.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-421c17dcdfdd739e7bbf": {
+      "id": 5014,
+      "sourceOffset": 73864,
+      "name": "PI-90 SL",
+      "description": "Taktik ve stratejik eğitmenlerin \nverdiği Hafif makineli tüfek \neğitiminde iyi bir performans \ngösteren oyuncular bu silahı \nkullanabilirler.\nBu silahın gövdesi buhar ve \nnemin yaratabileceği negatif \netkileri hafifletmek için kaplanm\nıştır, \nbu yüzden göze çarpıcı gümüş \nbir rengi vardır.\nBu silah ile iyi bir performans\nyakalayabilirsiniz.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-de10fa3f2bf18ea54f0f": {
+      "id": 5015,
+      "sourceOffset": 74628,
+      "name": "PI-90 PX",
+      "description": "Taktik ve stratejik eğitmenlerin \nverdiği Hafif makineli tüfek \neğitiminde iyi bir performans \ngösteren oyuncular bu silahı \nkullanabilirler.\nBu silahın gövdesi buhar ve \nnemin yaratabileceği negatif \netkileri hafifletmek için kaplanm\nıştır ayrıca materyal olarak \ndijital pixel de kullanılmıştı\nr.\nBu silah ile iyi bir performans\nyakalayabilirsiniz.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-d9855bbabfcc2d7243ad": {
+      "id": 5008,
+      "sourceOffset": 68960,
+      "name": "TOMMY-45",
+      "description": "2.Dünya Savaşı Avrupa siper sava\nşl arı ve Vietnam Savaşı sıras\nında kullanılmak amacıyla geli\nştirilmi ştir. 45kalibre mühimmat\n kullanan dizili kafes sistemi ve\n silindir şarjör ile çalışır. ",
+      "weightText": "4.9 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-def8c6fc95e1a4e7ca07": {
+      "id": 5011,
+      "sourceOffset": 71132,
+      "name": "TOMMY-45/75R",
+      "description": "*Bu silahı yalnızca Silah \nJackpot Kutusundan \nbulabilirsiniz* \n2.Dünya Savaşı Avrupa siper sava\nş ları ve Vietnam Savaşı sıras\nında kullanılmak amacıyla geli\nştirilmi ştir. 45kalibre mühimmat\n kullanan dizili kafes sistemi ve\n silindir şarjör ile çalışır. \nEskiden kalma bu silahların \n75kurşun taşıyabilen şarjö\nrlerini İki Tapınak bölgesinin\ngizli yerlerinde bulabilirsiniz.",
+      "weightText": "4.9 Kg",
+      "magazineText": "75 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-c2426f404a37d257906d": {
+      "id": 5012,
+      "sourceOffset": 71974,
+      "name": "TOMMY-45/100R",
+      "description": "*Bu silahı yalnızca Silah \nJackpot Kutusundan \nbulabilirsiniz*   \n2.Dünya Savaşı Avrupa siper sava\nş ları ve Vietnam Savaşı sıras\nında kullanılmak amacıyla geli\nştirilmi ştir. 45kalibre mühimmat\n kullanan dizili kafes sistemi ve\n silindir şarjör ile çalışır. \nEskiden kalma bu silahların \n100kurşun taşıyabil en şarjö\nrlerini İki Tapınak bölge\nsinin gizli yerlerinde bulabilirs\niniz.",
+      "weightText": "4.9 Kg",
+      "magazineText": "100 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-59d9777f08a14936dec4": {
+      "id": 5009,
+      "sourceOffset": 69426,
+      "name": "STEN MK-2",
+      "description": "Dunkirk operasyonları sonucu bö\nlg eyi boşaltma ve geri çekilme \nneden iyle azalan tüfek stoğu, İ\nngiltere'\nyi STEM MK-2 hafif makineli tüfek\nüretimine zorlamıştır. Basit gö\nv desi yüzünden düşük dayanıklı\nlık ve güvenirlik gösterir. \nFransız D irenişi sırasında \ngenel amaçla ku llanıldığından\n savaşın artakalan ürünleri aras\nından sayılan bu tüf ek Alman \nSS Birlikleri ve Fransız\nDirenişi'nce tarihi bölge sayı\nlan İki Tapınak alanında da \nkullanılm ıştır. Bölgeyi araşt\nıran Klan üye leri bu silahı \nterk edilmiş halde bulmuşlar ve \nbazı acil durumlarda \nkullanmaktadırlar.",
+      "weightText": "3.26 Kg",
+      "magazineText": "32 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-14d3bd4c0d832ff7c6b6": {
+      "id": 5010,
+      "sourceOffset": 70666,
+      "name": "PI-90 UAE",
+      "description": "Klan'lar bu modeli düşük büyütme\nnoktası ile kullanırlar ancak g\nüv enirliliği yüzünden bu sürümde\n öze l modifikasyon kullanı\nlamaz. Alt parça polimer alıcıs\nı birleşik renklerle kullanılı\nr.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-8cd5b51c47df65759db0": {
+      "id": 6003,
+      "sourceOffset": 77114,
+      "name": "I-115 GL",
+      "description": "Buckingham Sarayı Muhafız Birli\nği'n in geliştirdiği özel tasarı\nm keskin nişan tüfeğinin anısı\nna üretilmiş bu tüfek savaşta \nyaygın olarak kul lanılmaz. \nAncak bu sürüm normal sü rüme gö\nre acil anlarda çok daha gü\nvenilir şekilde çalışması ve \nvuru ş gücü etkinliği nedeniyle \ndikkat çekmektedir. Orijinal \nversiyonu a nma amacı güttüğü\nnden silahın sağ lamlığı çok \nfazla güven vermesede az bulunur \nolması değerini artırm\naktadır.",
+      "weightText": "6.8 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-fe03c5cd3be8209e03c9": {
+      "id": 6004,
+      "sourceOffset": 78068,
+      "name": "I-115 T",
+      "description": "7.62mm mühimmat kullanan I-96A \nmodelinden uyarlanmış, \nAccuracy General firması \ntarafından Magnum mühimmmatı \nkullanması için modifiye edilmiş\nbir keskin nişancı tüfeği.\nT modeli Avrupa çevresinde polis\nve askerler tarafından yaygın \nolarak kullanılır. \nMagnum mühimmatının delme gücü \nve hedef tutturma kabiliyetleri \ngöz önüne alındığındaorta \nmenzil savaş stratejilerindeen \niyi performansı gösterir.",
+      "weightText": "6.8 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-e2ef8d64b92358ecfb22": {
+      "id": 6005,
+      "sourceOffset": 78960,
+      "name": "I-115 WT",
+      "description": "7.62mm mühimmat kullanan I-96A mo\ndelinden uyarlanmış, Accuracy \nGen eral firması tarafından \nMagnum m ühimmmatı kullanması i\nçin modifi ye edilmiş bir keskin \nnişancı tüf eği. Gerek duyulduğ\nunda takım ark adaşlarını \nkoruma atışları da yapabilen bu\n silah, uzak menzilden Kurt'lara \nsaldırıda verimli atışlar \nyapar.",
+      "weightText": "6.8 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-94f99f28c9e606b57377": {
+      "id": 6006,
+      "sourceOffset": 79680,
+      "name": "EM-40 PT",
+      "description": "Amerikan Birleşik Devletleri \nDeniz Piyadeleri EM-40A3'i \ntasarlarken h olografik dürbün \nkullanarak gece savaşlarında en \niyi performansıalmayıamaçladı\nlar. Klan'lar için tasarlanan PT \nmodeli kısa menzil çarpış\nmalarda dakika başına atabi\nldiği kurşun sayısı artırı\nlarak daha etkili hale getirilmiş\ntir. \nEM-118LR kurşunları kullanarak \nde taylı atışları uzak \nmenzilden de yapabilirsiniz. ",
+      "weightText": "6.57 kg ",
+      "magazineText": "6 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-16e6a0c7661c6138eb57": {
+      "id": 6007,
+      "sourceOffset": 80554,
+      "name": "EM-40 T",
+      "description": "Amerikan Birleşik Devletleri \nDeniz Piyadeleri EM-40A3'i \ntasarlarken holografik dürbün \nkullanarak gece savaşlarında en \niyi performansıalmayı amaçladı\nlar. \nKurtlar ve diğer bio askerlere \nkarşı EM-118LR yerine EM-118LR \nT'yi adapte etmişlerdir.",
+      "weightText": "6.57 kg ",
+      "magazineText": "6 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-e8c0aea9dfc11dc0286b": {
+      "id": 6008,
+      "sourceOffset": 81134,
+      "name": "I-115A1 AW",
+      "description": "Klan'lar ve G.D birliklerinin \naras ında antik orijin kurt \nDNA'larını ele geçrmek için ç\narpışmalar devam ediyor. Keskin \nnişancılık için de zavantaj say\nılan soğuk hava ve gü çlü rü\nzgarlarla uğraşmak zorundalar.\nBu nedenle her iki taraf da I-\n115'i seçtiler. Silahın uzun \nnamlusunu k amufle etmek için \nnamluyu koruyan ekipmanlar kullan\nılmaktadır.",
+      "weightText": "6.8 Kg",
+      "magazineText": "5 mermi x 3",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-f958fbdadf06a88424e2": {
+      "id": 6010,
+      "sourceOffset": 83100,
+      "name": "SVDR CLASSIC",
+      "description": "SVDR CLASSIC is Semi auto \nsniper rifle developed in \nRussia.\nIt is developed for \nsupporting platoon and \nhas a proud of its good \nperformance. \nPride memebers who play \nin East Europe use \nSVDR CLASSIC. ",
+      "weightText": "4.31 Kg",
+      "magazineText": "10 mermi x 2",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-b2a04dc44716045bcf2e": {
+      "id": 6011,
+      "sourceOffset": 83610,
+      "name": "SVDR GL",
+      "description": "SVDR GOLD is a souvenir \nfor the anniversary of \nthe founding of the \nArmed Force.\nThi is a custom-built \nand has good durability.\nOne of the pride member \nused SVDR GOLD which \nwas displayed at the \nanniversary of the \nfounding of the Armed \nForce for a repressive \ntactics . ",
+      "weightText": "4.31 Kg",
+      "magazineText": "10 mermi x 2",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-f2ad55bbe4dc66a425ee": {
+      "id": 6012,
+      "sourceOffset": 84254,
+      "name": "SVDR MODERN",
+      "description": "SVDR MODERN, EM-14 kullanan klan \nnişancıları için yarı-otomatik\nbir sniper tüfeğidir.\nTutma bölgesi polimer kaplanmış \nolup elden kayması en aza \nindirilmiştir.\nYetenekli keskin nişancılar bu \nsilahla mükemmel sonuçlar \nalabilirler.",
+      "weightText": "4.31 Kg",
+      "magazineText": "10 mermi x 2",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-140b0054748d763050e5": {
+      "id": 7001,
+      "sourceOffset": 84818,
+      "name": "SUPAS PT",
+      "description": "İtalya'da 1970 yılında FRANCHIE\nfirması tarafından geliştirilmi\nş tir. Kullanım kolaylığı ve \nolağ anüstü performansı \nnedeniyle düny a çapında birçok \nordu tarafından kullanılan bir \npompalıtüfektir. \nSabitleştirilmiş dipçiği katlanı\nlabilir hale getirilebilir. Yarı\notomatik halde kullanılabilir ol\nmasına rağmen geleneksel pompal\nı tüfek atış mekanizmasıdaha ç\nok te rcih edilir. PT modeli kı\nsa menzil saldırılarda dakika \nbaşına atabi leceği kurşun sayı\nsı artırılarak performansı \nkurt savaşları için artırılmı\nştır. ",
+      "weightText": "4.4 Kg",
+      "magazineText": "8 mermi x 3",
+      "modeText": "Pompalı"
+    },
+    "weapon-9ea69385e6d24d3da04b": {
+      "id": 7004,
+      "sourceOffset": 88064,
+      "name": "SUPAS WT",
+      "description": "İtalya'da 1970 yılında FRANCHIE\nfirması tarafından geliştirilmi\nştir. \nKullanım kolaylığıve olağanüst\nü performansı nedeniyle dünya ç\napında birçok ordu tarafından \nkullanılan bir pompalıtüfektir.\nSabitleştirilmiş dipçiği katlanı\nlabilir hale getirilebilir. \nYarıotomatik halde kullanlabilir\n olmasına rağmen geleneksel \npompalıtüfek atış mekanizması\ndaha çok tercih edilir. \nMEDUSA ve G.D antikurt takımı \ngeleneksel pompalı tüfek kullan\nımını kurtlarla savaşta \nzorunla hale getirmişlerdir.",
+      "weightText": "4.4 Kg",
+      "magazineText": "8 mermi x 3",
+      "modeText": "Pompalı"
+    },
+    "weapon-056723b78b610c1ae023": {
+      "id": 7002,
+      "sourceOffset": 85940,
+      "name": "EM-3 P",
+      "description": "Bu silah birkaç anti-terör \ntakımı tarafından kullanılmı\nş, ama yeni model pompalı\ntüfekler çıktıktan sonra \nkullanımı azalmıştır.\nYinede, bazı örgütler bu\nsilahın modifiye edilmiş\nsürümünü kullanmaya devam\netmektedirler.\nEM-3 pompalı tüfekleri \nyarı-otomatik veya geleneksel\npompalı mekanizma ile \nçalışabilirler. \nAncak Amerikan Polis Departmanı \nçarpışmalarda ölümlü vukuatları\nazaltmak amacıyla otomatik \nkullanımı yasaklamıştır.",
+      "weightText": "3.2 kg",
+      "magazineText": "8 mermi x 3",
+      "modeText": "Pompalı"
+    },
+    "weapon-b5bd174d442adfb008d4": {
+      "id": 7003,
+      "sourceOffset": 86878,
+      "name": "EM-3 CS",
+      "description": "Bu silah birkaç anti terör takım\nı tarafından kullanılmış, ama\n yeni model pompalı tüfekler çı\nktıktan sonra kullanımı azalm\nıştır. Anc ak P bu modeli yü\nksek zıplama ve hız kabiliyeti \nyüzünden kullanmaya karar vermiş\ntir. P birlikleri bu silahı \nyakın menzil çarpışmalarda\ntercih ederler. Geleneksel model\npompalı tüfek mekanizması daha \naz tutukluk yaptığından yarı \notomatik yerine bu mekanizmanın \nkullanımı tercih edilir. Silah\nın tutukluk ya pma ihtimali \nolmasına rağmen olağa nüstü ateş\n gücü taşıması bu silahı\npoüler yapan unsurlar arasındad\nır.",
+      "weightText": "3.2 kg",
+      "magazineText": "8 mermi x 3",
+      "modeText": "Pompalı"
+    },
+    "weapon-88964c6c14d0096126f2": {
+      "id": 7005,
+      "sourceOffset": 89124,
+      "name": "EXM-26 CS",
+      "description": "Afganistan savaşısırasında \nhafif piyade birlikleri \nLemington-870 pom palı tü\nfeklerini kullandılar. 20.\nYüzyıl sonunda A.B.D Ordusu Sava\nş Laboratuvarı Lemington-870'i \nmodif iye etti ve ebatını taşı\nnabilir hale getirip, C-M sistemi\n gibi deta ylar koydular. Bu yeni\n modifiye edi lmiş model EM-4 yar\nı otomatik pomp alı tüfekler \nile beraber 21. Yüzyıl'da terö\nrle savaşta popüler olarak\nkullanıldı. Uzak menzil atış\nları nda saçmalırının doğru y\nöne doğr u gitmesi kullanımını\n daha kolay hale getirmiştir.",
+      "weightText": "1.9 Kg",
+      "magazineText": "5 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-5c3c4f9143264c950c17": {
+      "id": 7006,
+      "sourceOffset": 90226,
+      "name": "EXM-26 WT",
+      "description": "Afganistan savaşı sırasında \nhafif piyade birlikleri \nLemington-870 pompalı \ntüfeklerini kullandılar. 20. \nYüzyıl sonunda A.B.D Ordusu \nSavaş Laboratuvarı \nLemington 870'i modifiye \netti ve ebatını taşınabilir \nhale getirip, C-M sistemi \ngibi detaylar koydular. \nBu yeni modifiye edilmiş \nmodel EM-4 yarı otomatik \npompalı tüfekler ile beraber 21.\nYüzyıl'da terörle savaşta \npopüler olarak kullanıldı \nG.D. firması Kurt'lara \nkarşımücadelede bu silahı \nkullanıyor ama silahın \nağırlığıdezavantajları \narasındadır.",
+      "weightText": "1.9 Kg",
+      "magazineText": "5 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-8da5dcd15f697c3ed011": {
+      "id": 7007,
+      "sourceOffset": 91332,
+      "name": "EXM-26 Rookie Only",
+      "description": "Kısa menzil çarpışmalarda \nuzmanlaşan Klan birliklerinin \nsıklıkla kullandığı \nbir silah. \nAncak silah giderlerini azaltmak \namacıyla EXM-26'nın bu sürümü \nyeni başlayanlar için bazı \nözellikleri taşımamaktadır. \nEğitim sonunda tüm oyuncular bu \nsilahı geri teslim etmek \ndurumundadırlar.\nEğitim başladıktan sonra 14 gün \niçerisinde bu model menünüzden \nkalkacaktır.",
+      "weightText": "1.9 Kg",
+      "magazineText": "5 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-47e5f891e177533cda7c": {
+      "id": 7501,
+      "sourceOffset": 92162,
+      "name": "EM-60 PT",
+      "description": "Bu tüfek Alman Ordu'sunun 2.Dünya\nSavaşı'nda mangalar bazında \nkullandığıotomatik tüfektir. \nEMG-42'den uyarlanan bu model zı\nrh delme ve havadan gelen saldır\nılara karşı büyük başarı sağ\nlar. \nPT modelinin olağanüstü gücü \nKurt'lara karşı çok başarılıd\nır. \nAncak ara vermeden 200 atıştan \nsonra namlugereğinden fazla ısı\nnır. \nBu yüzden kartuş mekanizmasının\naltına eklenen yeni bir \nmekanizma bu düzensizliği ortadan\n kaldırmayıamaçlar.",
+      "weightText": "10.2 Kg",
+      "magazineText": "50 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-3c673d704c72ef9166da": {
+      "id": 7502,
+      "sourceOffset": 93122,
+      "name": "EM-60 SL",
+      "description": "Taktik ve stratejik eğitmenlerin \nverdiği makineli tüfek eğitiminde\niyi bir performans gösteren \noyuncular bu silahı \nkullanabilirler.\nBu silahın gövdesi buhar ve \nnemin yaratabileceği negatif \netkileri hafifletmek için kaplanm\nıştır, bu yüzden göze çarpıcı\n gümüş bir rengi vardır. \nBu silah ile iyi bir performans\nyakalayabilirsiniz.",
+      "weightText": "10.2 Kg",
+      "magazineText": "75 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-3cd1060e480f8752d769": {
+      "id": 7503,
+      "sourceOffset": 93874,
+      "name": "EM-60 PX",
+      "description": "Taktik ve stratejik eğitmenlerin \nverdiği makineli tüfek eğitiminde\niyi bir performans gösteren \noyuncular bu silahı \nkullanabilirler.\nBu silahın gövdesi buhar ve \nnemin yaratabileceği negatif \netkileri hafifletmek için kaplanm\nıştır ayrı ca materyal olarak \ndijital pixel de kullanılmıştı\nr.\nBu silah ile iyi bir performans\nyakalayabilirsiniz.",
+      "weightText": "10.2 Kg",
+      "magazineText": "100 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-2ab865593f01eac06b14": {
+      "id": 8001,
+      "sourceOffset": 94646,
+      "name": "EM-2 HB",
+      "description": "12.7mm'lik mühimmat kullanan bu a\nğır makineli tüfek genellikle z\nırhı araçlar üstüne monte \nedilir. \nHavadan gelen saldırılara karş\nı ve zırhlı mobil birlikler ü\nstünde büyük hasar kabiliyeti \nvardır. \nKlan savaşlarında bu silah \nstratejik s avaş noktalarını \nkorumada ve personeli uzaktan \nkoruma ateşi amacıyla kullanı\nlmaktadır.",
+      "weightText": "32.4 Kg",
+      "magazineText": "50 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-b02f049454326a120626": {
+      "id": 8001,
+      "sourceOffset": 94646,
+      "name": "EM-2 HB",
+      "description": "12.7mm'lik mühimmat kullanan bu a\nğır makineli tüfek genellikle z\nırhı araçlar üstüne monte \nedilir. \nHavadan gelen saldırılara karş\nı ve zırhlı mobil birlikler ü\nstünde büyük hasar kabiliyeti \nvardır. \nKlan savaşlarında bu silah \nstratejik s avaş noktalarını \nkorumada ve personeli uzaktan \nkoruma ateşi amacıyla kullanı\nlmaktadır.",
+      "weightText": "32.4 Kg",
+      "magazineText": "50 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-593dbe3d98210fb5c63e": {
+      "id": 6020,
+      "sourceOffset": 195396,
+      "name": "MSD-90 PX",
+      "description": "MSD-90\nH & K PSG1 tarafından yapılan \nAlmanca yarı-otomatik keskin nişancı \ntüfekleri mevcut silah geliştirdi.\nMSD-90 Pixel versiyonu polimer yapısı \nsayesinde daha hızlıdır. Ayrıca \ntemel özelliklerinin geliştirilmesiyle \nverdiği zarar %5 artmıştır.",
+      "weightText": "3.3 Kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-e85134a6c171e0dce50a": {
+      "id": 8501,
+      "sourceOffset": 96188,
+      "name": "EM-72A5 LAW",
+      "description": "Yeni bir fırlatıcı ile \ndonatılmış ve bir çok \nyönden geliştirilmiş antitank \nfüzesi. \nKlan gibi olağanüstü savaşçılara\nkarşı bir yana, A4 ve A5 gibi \nsürümleri insana insan savaşları\nnda da sıkça kullanılır.\nKullanım kolaylığı ve basit \nyapısıile tercih edilen \nmühimmatlar arasındadır.",
+      "weightText": "5.2 Kg",
+      "magazineText": "1 mermi x 3",
+      "modeText": "Roketatar"
+    },
+    "weapon-3a87067663c63d37a16b": {
+      "id": 8503,
+      "sourceOffset": 96848,
+      "name": "WT RL-2",
+      "description": "PlzF4-XN-900 modeli temel alı\nnarak G.D firması tarafından \ngizli olarak üretilmiş bi \nroketatar. Uzak menzil\nsaldırılarındaki başarısı \nbir yana, Kurt'ların deforme \nolmuş genlerini yaymaya yarayan \nbir gaz da atar. \nYoğunlaştırılmış ve hafifleş\ntirilmiş bileşik materyali üstü\nndeki dürbünün ve fırlatıcısı\nnın daha yüksek performans \ngöstermesini amaçlar. \nBu silaha ayrıca G.D tarafından\ngeliştirilen Sıcaklık Sensörü \nve Infrared Işın Dedektörü de \neklenebilir. ",
+      "weightText": "15.7 Kg",
+      "magazineText": "1 mermi x 3",
+      "modeText": "Roketatar "
+    },
+    "weapon-d30038e9d9d225cab574": {
+      "id": 8601,
+      "sourceOffset": 97864,
+      "name": "EM-32",
+      "description": "Güney Afrika yapımı 6 \nbomba kapasiteli yarı \notomatik roketatar. \nA.B.D Deniz Kuvvetleri \ntarafından modifiye edilen \nsürümde bombaları \nyerleştirme süresi çok \nuzun süre alıyordu. \nŞimdi Kurt İşgal modunda \nyeni bir silindir eklenmiş \nsürümü ile kullanıma sunulmuş\ntur. \nKlan'lar ve G.D bu silahısavaş \nkoşullarına göre uyarlanmış \ngecikme fünyesi ile beraber \nkullanmaktadır. \nÜretim maliyetini azaltmak \namacıyla temel silahta optik \nekipman bulunmaz.",
+      "weightText": "6.3 kg ",
+      "magazineText": "6 mermi x 3",
+      "modeText": "Yarı Otomatik"
+    },
+    "weapon-986f43fda8896ca09ba0": {
+      "id": 8602,
+      "sourceOffset": 159586,
+      "name": "EM-32 MC",
+      "description": "EM-32 MC'ye kıyasla menzili daha\nuzundur.\nKurşunları bir engele çarptığı\nnda patlar.\nSadece Kurt Avı Modunda kullanı\nlır.",
+      "weightText": "6.3 kg ",
+      "magazineText": "6 mermi x 3",
+      "modeText": "Semi Auto"
+    },
+    "weapon-e7dbb77bc02b26337999": {
+      "id": 9001,
+      "sourceOffset": 99650,
+      "name": "MK-5 G",
+      "description": "Erken ve orta 21. Yüzyılda bir ç\nok ülke ordusu tarafından kullan\nılan bir el bombası. Kullanım\nının ve rdiği rahatlık ve gü\nven sayesinde kullanıcı dostu \nolarak da tanını r. Taşı\nnabilirlik ve uygulamasında\nki rahatlık nedeniyle MK-5G hem \nKl an'lar hem de G.D tarafından \nkulla nılmaktadır. Bu silah \ngenelde MK-5 WT adıyla bilinir \nama ismi bazı ül ke ordularında\n farklıdır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-e1efe46665d31b74f9fd": {
+      "id": 9025,
+      "sourceOffset": 142370,
+      "name": "Valentine Grenade",
+      "description": "Etkinlik Bombası",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-28b878e45ced06921ae6": {
+      "id": 9002,
+      "sourceOffset": 100478,
+      "name": "Smoke Grenade",
+      "description": "Bu silindir metal kaplı sis \nbombası savaşlarda takımların \nhareket kabil iyetini artırır \nveya düşmanın hed ef şaşırması\nna olanak sağlar. G.D şu anda \nKurt'lara karşı kullanılab\nilecek daha uygun sis bombaları \niç in çalışmalar yapmaktadır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-4e714d474bc09137117e": {
+      "id": 9011,
+      "sourceOffset": 105804,
+      "name": "MK-6EG",
+      "description": "Silah ekipman sistemleri ve \ngerekli tüm mühimmatları karşı\nlanmış ve donanım ve ateş gücü \naçısından ilerlemeye yeri \nbulunmayan özel timleri kışkı\nrtan özel tip bir kurşun.\nG.D AR-GE ekibi MK-6 EG'yı eski \nsürüm özel kurşunlarının yaratt\nığı hasara oranla alev alma ve \nhedefi bulduğu yerde yarattığı\npatlama gücü ikiye katlanmış bir\nhale getirdi. ",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-582b1db59f7bdb3fc99b": {
+      "id": 9013,
+      "sourceOffset": 106606,
+      "name": "MK-6E",
+      "description": "Silah ekipman sistemleri ve \ngerekli tüm mühimmatları karşı\nlanmış ve donanım ve ateş gücü \naçısından ilerlemeye yeri \nbulunmayan özel timleri kışkı\nrtan özel tip bir kurşun.\nKurt özel timinin kullandığı EG\nm odeli E modelinden daha kullan\nışlı ve verim gücü yüksek bir s\nürümdür.\nGenel birliklerin tümü için \nkışkırtıcı kurşunlar aynı \nkapasiteye sahiptir.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-8552e78d00e6f359b72f": {
+      "id": 9003,
+      "sourceOffset": 101046,
+      "name": "Mass Grenade",
+      "description": "Rus bilimadamı Ivan Petronovici \ntar afından icat edilmiştir. Fı\nrlatı lmak suretiyle kullanılan\n bu yan si lah Planodume ile güç\nlendirilmiştir. \nBu mühimmat genel olarak spor mü\nsabak aları, polis eğitimleri ve\n askeri amaçlar için de kullanı\nlmaktadır. \nKurtların yüksek zıplama \nkabiliyeti ve vuruş kapasitesine \nkarşı savunma amaçlı kullanıl\nılan genel amaçlı bir bombadı\nr.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-65ab180e3a464b193b92": {
+      "id": 9005,
+      "sourceOffset": 102706,
+      "name": "Mass Grenade SPC",
+      "description": "Rus bilimadamı Ivan Petronovici \ntarafından icat edilmiştir. \nFırlatılmak suretiyle kullanı\nlan bu yan silah Planodume ile \ngüçlendirilmiştir. \nBu mühimmat genel olarak spor \nmüsabakaları, polis eğitimleri \nve askeri amaçlar için de kullan\nı lmaktadır. \nKurtların yüksek zıplama \nkabiliyeti ve vuruş kapasitesine \nkarşı savunma amaçlı kullanıl\nılan genel amaçlı bir mühimmatt\nır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-98d286ff537d39ae7773": {
+      "id": 9004,
+      "sourceOffset": 101886,
+      "name": "MK-5 EG",
+      "description": "Erken ve orta 21. Yüzyılda bir ç\nok ülke ordusu tarafından kullan\nılan bir el bombası. Kullanım\nının verdiği rahatlık ve güven\n sayesinde kullanıcı dostu \nolarak da tanınır.\nTaşınabilirlik ve uygulaması\nndaki rahatlık nedeniyle MK-5G \nhem Klan'lar hem de G. D tarafı\nndan kullanılmaktadır. \nBu silah genelde MK-5 WT adıyla \nbilinir ama ismi bazı ülke \nordularında farklıdır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-e91dece4c2a692d1b4e8": {
+      "id": 9006,
+      "sourceOffset": 103554,
+      "name": "RED Grenade",
+      "description": "Rus bilimadamı Ivan Petronovici \ntarafından icat edilmiştir. \nFırlatılmak suretiyle kullanı\nlan bu yan silah Planodume ile \ngüçlendirilmiştir. \nBu mühimmat genel olarak spor \nmüsabakaları, polis eğitimleri \nve askeri amaçlar için de \nkullanılmaktadır. \nKurtların yüksek zıplama \nkabiliyeti ve vuruş kapasitesine \nkarşı savunma amaçlı kullanıl\nılan genel amaçlı bir mühimmatt\nır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-0bf6543d1b0241bc51f4": {
+      "id": 9007,
+      "sourceOffset": 104390,
+      "name": "STICK GRENADE",
+      "description": "2.Dünya Savaşısırasında Nazi \nSS Birlikleri prototip eski kurt \nkalı ntılarını yeryüzüne çı\nkarırlar ken Fransız Direniş\ni'nin takımlar ıyla İki Tapı\nnak bölgesinde karşı\nlaştılar. Alman birlikleri Frans\nı z Direnişi ve Kurt'larla iki \ncephede savaşmak durumunda \nolduklarından kuvvetli ateş gücü\n sağlayan yeni bi r bomba ile \ndonanmışlard. Kullanım için \nhala uygun durumdadır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-22ac84e22ddd27bcb64c": {
+      "id": 9008,
+      "sourceOffset": 105232,
+      "name": "MK-6G",
+      "description": "MK-5 G patlama kuvvetiyle kırmı\nzı bomba'nın temel kütle \norganizma çekim tabiatını \nberaber kullanan yeni bir bomba. \nMK-5 serilerinin \nkırmızı parçacık taşıma ö\nzelliğini değil, bir önceki kuşak\n bombaların yapısını taşır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-c6903f1f8494868216cf": {
+      "id": 9009,
+      "sourceOffset": 105748,
+      "name": "MK-6G_Sub",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-b857dff60ee2bae53434": {
+      "id": 9029,
+      "sourceOffset": 153112,
+      "name": "RGS-42_Sub",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-a204e0e21223a7405c1c": {
+      "id": 9015,
+      "sourceOffset": 107418,
+      "name": "SNOW GRENADE",
+      "description": "Yılbaşı Etkinliği \niçin sınırlı \nmalzeme.\nTemel bomba yerine \neklenebilir.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-293c6a7538487b71b9cb": {
+      "id": 9016,
+      "sourceOffset": 107648,
+      "name": "CHINA GRENADE",
+      "description": "",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-7223083b0ed1bcaa3fea": {
+      "id": 9021,
+      "sourceOffset": 107770,
+      "name": "Worldcup GRENADE",
+      "description": "Event GRENADE",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-8c796a25874c139e3d64": {
+      "id": 2003,
+      "sourceOffset": 107886,
+      "name": "C5-TFK",
+      "description": "Bu kısa mesafe silahı C.Q.C. B\nıçağından daha iyi performans \nsağlar ve kamuflaj boyası ile \ndaha stratejik bir silahtır.",
+      "weightText": "0.3 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "Bıçak"
+    },
+    "weapon-36f48810db30e4126479": {
+      "id": 2004,
+      "sourceOffset": 108188,
+      "name": "C5-TFK (Güçlü Saldırı)",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-1918e7ca79d81bdda887": {
+      "id": 7505,
+      "sourceOffset": 108922,
+      "name": "HKEI - MP7A1 ",
+      "description": "Hafif makineli tüfek, HEKI - \nMP7A1 bir model olarak\nyakın dövüş konusunda uzmanlaşm\nıştır.\nAtama, ancak ABD dahil GD's dayan\nıklılık kabul etmedi yeni \nmalzemelerin geliştirilmesi \nnedeniyle olmayan düzenli özel \noperasyon olarak da istihdam\nedilmiş profesyonel paralı artı\nrmak için",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-8ff0f4b3b5c0ffc466fc": {
+      "id": 3086,
+      "sourceOffset": 142494,
+      "name": "HKEI - MP7A1 GL",
+      "description": "HKEI MP7A1 GL\nHafif makineli tüfek, HEKI - \nMP7A1 bir model olarak yakın döv\nüş konusunda uzmanlaşmıştır.\nAtama, ancak ABD dahil GD's dayan\nıklılık kabul etmedi yeni \nmalzemelerin geliştirilmesi \nnedeniyle olmayan düzenli özel \noperasyon olarak da istihdam\nedilmiş profesyonel paralı artı\nrmak için",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 4",
+      "modeText": "Otomatik"
+    },
+    "weapon-63f73edb32d0722da603": {
+      "id": 3112,
+      "sourceOffset": 170560,
+      "name": "HKEI - MP7A1  AT",
+      "description": "Hafif makineli tüfek HEKI-MP7A1 \nyakın dövüş modeli olarak yapılmıştı\nr. \nAmerika'da kullanılır fakat  ham \nmalzemelerin geliştirilmesinden \ndolayı GD'nin dayanıklılığını almamı\nştır Profesyonel paralı askerleri artt\nırmak için düzensiz özel \noperasyonlarda kullanılır. \nHK MP7A1 Antique versiyonu \nkesinlik oranı oto doğrulama \nsistemi ile %20 artmıştır ve zarar da\n %5 artmıştır.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-2fac0a584de730065998": {
+      "id": 3113,
+      "sourceOffset": 171410,
+      "name": "HKEI - MP7A1  SL",
+      "description": "Hafif makineli tüfek HEKI-MP7A1 \nyakın dövüş modeli olarak yapılmıştı\nr. \nAmerika'da kullanılır fakat  ham \nmalzemelerin geliştirilmesinden \ndolayı GD'nin dayanıklılığını almamı\nştır Profesyonel paralı askerleri artt\nırmak için düzensiz özel \noperasyonlarda kullanılır. \nHK MP7A1 Silver versiyonu savaş \nkurduna göre geliştirilmiştir, gümüş \nmermi ile ağırlaştırma ve \nsersemletme etkileri \ndaha güçlenmiştir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-8131c3a114d5e4f36449": {
+      "id": 3124,
+      "sourceOffset": 183552,
+      "name": "HKEI - MP7A1 MC",
+      "description": "Hafif makineli tüfek HEKI-MP7A1 \nyakın dövüş modeli olarak yapılmıştı\nr. \nAmerika'da kullanılır fakat  ham \nmalzemelerin geliştirilmesinden \ndolayı GD'nin dayanıklılığını almamı\nştır Profesyonel paralı askerleri artt\nırmak için düzensiz özel \noperasyonlarda kullanılır. \nHK MP7A1 Multicam versiyonu silah\n fıçısı ve zırh delici bomba kullanır. \nHasar ve delme %20 artar.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-f22d31aec8cbcff2700f": {
+      "id": 3128,
+      "sourceOffset": 188674,
+      "name": "HKEI - MP7A1  PX",
+      "description": "Hafif makineli tüfek HEKI-MP7A1 \nyakın dövüş modeli olarak yapılmıştı\nr. \nAmerika'da kullanılır fakat  ham \nmalzemelerin geliştirilmesinden \ndolayı GD'nin dayanıklılığını almamı\nştır Profesyonel paralı askerleri artt\nırmak için düzensiz özel \noperasyonlarda kullanılır. \nHK MP7A1 Pixel versiyonu polimer \nyapısı sayesinde daha hızlıdır. Ayrı\nca temel özelliklerinin geliş\ntirilmesiyle verdiği zarar %5 artmıştı\nr.",
+      "weightText": "3.0 Kg",
+      "magazineText": "50 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-e2559431e8903b245f11": {
+      "id": 7506,
+      "sourceOffset": 109580,
+      "name": "Zaitsev",
+      "description": "Dünya Savaşı 2 tüfek \nbolteuaeksyeonsik atama \nsırasında Rus ordusu. Rusya'nı\nn ünlü keskin nişancı Vasili \nkarakter peu organları eski Rus \nve Fin Kış Savaşı Battle Kış \nShimo efsanevi keskin nişancı \ntarafından bir operasyon kapsam\nı nda yüksek idare idi yüksek ö\nncesi yükseltmek oldu.\nRusya'nın aşırı soğuk iklim \nbile Smooth operasyon, silah gü\nvenilir modern Ortadoğu çatışmas\nının çok iyi bir doğruluk sıkl\nıkta operasyonda tanık olmasıd\nır.",
+      "weightText": "3.3 Kg",
+      "magazineText": "15 mermi x 2",
+      "modeText": "Keskin Atış"
+    },
+    "weapon-9fde1d9b75921511d8e5": {
+      "id": 9017,
+      "sourceOffset": 110560,
+      "name": "Firework Grenade",
+      "description": "",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-ed90554320571fd1fff9": {
+      "id": 3055,
+      "sourceOffset": 111360,
+      "name": "J-89 AT",
+      "description": "J-89 Antique\nJ-89 Japon Meşru Müdafaa \nKuvvetleri 'nin kullandığı \nresmi otomatik sal dırı tüfeğ\nidir. Sağlamlığı ile d\nikkat çeker ve 5.56'lık mühimmat\nı ile geri tepme oranı düşük \nseviyeye indirilmiştir. 21.Yüzyı\nl'ın ortala rında Japonya'ya \nuygulanan ambargo yüzünden fiyat\nı çok yüksek olduğun\ndan kullanımı yaygın değildi. \nSil ah şu anda satış ambargosu \naltında olduğundan Klan'lar bu \nsilahı kull anamazlar.\nAlbay rütbesindeyken satın alı\nnabilir Rütbeniz albayın altı\nnda ise bu silahı kullanmak için\n özel lisans almanız gerekir.",
+      "weightText": "3.6 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-944e26615a48ccf37783": {
+      "id": 3056,
+      "sourceOffset": 112520,
+      "name": "J-89 MC",
+      "description": "J-89 Multicam\nZ-3'ten sonra resmi Alman tüfeği \nolarak belirlenen Z-36 modeli, Gü\nney Amerika'da da yaygın olarak \nkullanılmaktadır. Güven veren \npol imer gövdesi ve optik dürbünü\nyle 21.Yüzyılın sık kullanı\nlan sila hları arasına girmiş\ntir.\nGeneral rütbesindeyken satın al\nı nabilir Rütbeniz generalin alt\nında ise bu silahı kullanmak iç\nin özel lisans almanız gerekir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-1acd5e41e623e7229472": {
+      "id": 3094,
+      "sourceOffset": 153144,
+      "name": "J-89 GL",
+      "description": "J-89 GOLD\nJ-89 Japon Meşru Müdafaa \nKuvvetleri 'nin kullandığı \nresmi otomatik sal dırı tüfeğ\nidir. Sağlamlığı ile d\nikkat çeker ve 5.56'lık mühimmat\nı ile geri tepme oranı düşük \nseviyeye indirilmiştir. 21.Yüzyı\nl'ın ortala rında Japonya'ya \nuygulanan ambargo yüzünden fiyat\nı çok yüksek olduğun dan kullan\nımı yaygın değildi. Sil\nah şu anda satış ambargosu altı\nnda olduğundan Klan'lar bu silah\nı kull anamazlar.\nAlbay rütbesindeyken satın alı\nnabilir Rütbeniz albayın altı\nnda ise bu silahı kullanmak için\n özel lisans almanız gerekir.",
+      "weightText": "3.5 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-1d015eca6814ccffa620": {
+      "id": 3114,
+      "sourceOffset": 172316,
+      "name": "J-89 PX",
+      "description": "J-89, Savunma Güçleri tarafından \nkullanılan bir Japon resmi otomatik \ntüfeğidir. Dayanıklılığı iyidir 5.56mm\nmermi kullanarak geri tepmeyi \ndüşürür. Eskiden Japon ordusu \ntarafından kullanılırdı şimdi ise 21.\nyy ortalarında doğru oldukça popü\nler olmuştur. Ambargo altındayken, \nİsyancılar kullanamaz.\nJ-89 Pixel versiyonu plastikten \nyapılmıştır ve hareketliliği gelişmiş\ntir.",
+      "weightText": "3.5 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-ec4e1caa34ccc1213f4b": {
+      "id": 3057,
+      "sourceOffset": 113340,
+      "name": "Z-36 AT",
+      "description": "Z-36 Antique\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 Z-36 Antique\nMM'lik sürümü yerine Çin Ordusu \nbu silahı 5.8MM sürümü ile \nkullanmakt adır. Çarpışma alan\nında sağlamlı ğı ile güven \nverir ve geri tepme oranı ile ba\nşarı yakalamıştır ama sol el \nkullanan askerler için \nkullanıcı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-f67d881acdf84b5b951f": {
+      "id": 3061,
+      "sourceOffset": 116620,
+      "name": "Z-36 MC",
+      "description": "Z-36 Multicam\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 Z-36 Antique MM'lik sürümü \nyerine Çin Ordusu bu silahı \n5.8MM sürümü ile kullanmakt\nadır. Çarpışma alanında sağ\nlamlı ğı ile güven verir ve \ngeri tepme oranı ile başarı \nyakalamıştır ama sol el \nkullanan askerler için\nkullanıcı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-4f1c3905ed111b1ec8fc": {
+      "id": 3070,
+      "sourceOffset": 125238,
+      "name": "Z-36C WT AT",
+      "description": "Z-36 WT Antique\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 Z-36 Antique\nMM'lik sürümü yerine Çin Ordusu \nbu silahı 5.8MM sürümü ile \nkullanmakt adır. Çarpışma alan\nında sağlamlı ğı ile güven \nverir ve geri tepme oranı ile ba\nşarı yakalamıştır ama sol el \nkullanan askerler için kullanıc\nı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-341e63ffb809b8f619a2": {
+      "id": 3120,
+      "sourceOffset": 178128,
+      "name": "Z-36 GL",
+      "description": "Bu Z-36 , Z-3'ten sonra Alman \nordusunun  resmi tüfeği seçilmiştir. \nGüney Amerika'da da oldukça fazla\n kullanılır. Düzgün\nyapısıyla, performansı sabitler ve \npolimer tipi yapısıyla ve optik açısı\nyla 21. \nyy'a özgündür. \nZ-36 Gold silahın vuruş hızını %20 \narttırır.",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-326afeea92c9aafcdb3c": {
+      "id": 3121,
+      "sourceOffset": 178734,
+      "name": "Z-36 PX",
+      "description": "Bu Z-36 , Z-3'ten sonra Alman \nordusunun resmi tüfeği seçilmiştir. \nGüney Amerika'da da oldukça fazla\nkullanılır. Düzgün yapısıyla, \nperformansı sabitler ve polimer \ntipi yapısıyla ve optik açısıyla 21. \nyy'a özgündür. \nZ-36 Pixel versiyonu polimer yapısı\nsayesinde daha hızlıdır. Ayrıca \ntemel özelliklerinin geliştirilmesiyle \nverdiği zarar %5 artmıştır.",
+      "weightText": "2.65 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-3396c29f6df16a29e499": {
+      "id": 3059,
+      "sourceOffset": 114944,
+      "name": "C-95 AT",
+      "description": "C-95 Antique\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 MM'lik sürümü yerine Çin \nOrdusu bu silahı 5.8MM sürümü \nile kullanmakt adır. Çarpışma \nalanında sağlamlığı ile güven \nverir ve geri tepme oranı ile ba\nşarı yakalamıştır ama sol el \nkullanan askerler için kullanıc\nı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "2.71 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-6af904b701a79282d78a": {
+      "id": 3060,
+      "sourceOffset": 115914,
+      "name": "C-95 MC",
+      "description": "C-95 Multicam\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 MM'lik sürümü yerine Çin \nOrdusu bu silahı 5.8MM sürümü \nile kullanmakt adır. Çarpışma \nalanında sağlamlı ğı ile güven\n verir ve geri tepme oranı ile \nbaşarı yakalamıştır ama sol el\n kullanan askerler için\nkullanıcı dostu sayılamaz.",
+      "weightText": "3.6 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-992eea41f677ecd24f7a": {
+      "id": 3095,
+      "sourceOffset": 154298,
+      "name": "C-95 GL",
+      "description": "C-95 GOLD\nÇin Ordusu patentli kısa namlulu\ntüfek. İhraç amaçlı üretilen \n5.56 MM'lik sürümü yerine Çin \nOrdusu bu silahı 5.8MM sürümü \nile kullanmakt adır. Çarpışma \nalanında sağlamlı ğı ile güven\nverir ve geri tepme oranı ile ba\nşarı yakalamıştır ama sol el \nkullanan askerler için kullanıc\nı dostu sayılamaz.\nBinbaşı rütbesindeyken satın al\nı nabilir.Rütbeniz binbaşının \naltı nda ise bu silahı \nkullanmak için özel lisans alman\nız gerekir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-4cd38d11d8817a34ca82": {
+      "id": 3104,
+      "sourceOffset": 159910,
+      "name": "C-95 PX",
+      "description": "Çin av silahı. 5.56MM dışa aktarıma \nkıyasla,\nÇin'e özel 5.8MM av tüfeği kullanılır.\nDayanıklılık yapısı baz alındığında \nkontrol yeteneği sabittir fakat sol \nel ile kullanımında değişkendir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-8963e690deb9e8041c59": {
+      "id": 3125,
+      "sourceOffset": 185194,
+      "name": "C-95 SL",
+      "description": "Çin av silahı. 5.56MM dışa aktarıma \nkıyasla,\nÇin'e özel 5.8MM av tüfeği kullanılır.\nDayanıklılık yapısı baz alındığında \nkontrol yeteneği sabittir fakat sol \nel ile kullanımında değişkendir.",
+      "weightText": "3.4 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-95e4b4d1b9cafe049a8c": {
+      "id": 3075,
+      "sourceOffset": 128996,
+      "name": "HKE417",
+      "description": "HKE 417 \nKısa/uzun mesafelerde ve yakın \ndövüşte kullanılabilen bir tür \nsniper tüfeği. Uzun mesafede pusu\n atışı mümkündür. Amerikan \nOrdusu'na ait değildir fakat G.D.\n Yeni bir materyal geliştirdiği \nve HKE417 daha dayanıklı \nhale getirdiği için, daha çok \nparalı askerler tarafından \nkullanılmaktadır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-bb5a58def3906008f030": {
+      "id": 3087,
+      "sourceOffset": 143184,
+      "name": "HKE417 GL",
+      "description": "HKE 417 GL\nKısa/uzun mesafelerde ve yakın \ndövüşte kullanılabilen bir tür \nsniper tüfeği. Uzun mesafede pusu\natışı mümkündür. Amerikan \nOrdusu'na ait değildir fakat G.D.\nYeni bir materyal geliştirdiği ve\nHKE417 daha dayanıklı hale \ngetirdiği için, daha çok paralı \naskerler tarafından kullanı\nlmaktadır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-33caa666383c12b2e1cd": {
+      "id": 3110,
+      "sourceOffset": 168858,
+      "name": "HKE417 AT",
+      "description": "Orta/uzun mesafeli, yakın dövüşte\noldukça kullanılan bir keskin nişanc\nı tüfeği. Uzun mesafede nişan \nalmak mümkündür. Amerikan \nOrdusunda kullanılmaz fakat G.D \nyeni malzemeler üretip HKE417'yi \ndaha dayanıklı yapmasıyla paralı \naskerler tarafından kullanılmıştır.\nHKE417 Antique versiyonunun \nkesinliği oto- doğrulama sistemi ile\n %20 artmıştır ve zarar da %5 artmış\ntır.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-dc8b18893a9bfba9598a": {
+      "id": 3111,
+      "sourceOffset": 169680,
+      "name": "HKE417 SL",
+      "description": "Orta/uzun mesafeli, yakın dövüşte\noldukça kullanılan bir keskin nişanc\nı tüfeği. Uzun mesafede nişan \nalmak mümkündür. Amerikan \nOrdusunda kullanılmaz fakat G.D \nyeni malzemeler üretip HKE417'yi \ndaha dayanıklı yapmasıyla paralı \naskerler tarafından kullanılmıştır.\nHKE417 Silver versiyonu savaş \nkurduna göre geliştirilmiştir, gümüş \nmermi ile ağırlaştırma ve \nsersemletme etkileri daha güçlenmi\nştir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-e3d0fd37da87eac36299": {
+      "id": 3123,
+      "sourceOffset": 184378,
+      "name": "HK HK417 MC",
+      "description": "Orta/uzun mesafeli, yakın dövüşte \noldukça kullanılan bir keskin nişanc\nı tüfeği. Uzun mesafede nişan \nalmak mümkündür. Amerikan \nOrdusunda kullanılmaz fakat G.D \nyeni malzemeler üretip HKE417'yi \ndaha dayanıklı\nyapmasıyla paralı askerler tarafı\nndan kullanılmıştır.  \nHK HK417 Multicam versiyonu silah \nfıçısı ve zırh delici bomba kullanır. \nHasar ve delme %20 artar.",
+      "weightText": "3.10 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-eb835e0b70a6a32881b3": {
+      "id": 1016,
+      "sourceOffset": 129682,
+      "name": "EM-93R",
+      "description": "93R\nİtalyan Veretta tarafından üretilmiş,\nmakul tepme şiddetine ve geniş \nkullanım imkanlarına sahip bir silaht\nır. Yüksek dağılım oranı ve geniş \nkullanım seçenekleri büyük avantaj \nsağlar. 9 mm mermisi kurtlara\nkarşı çok büyük etkiye sahip \nolmasa da silah isyan birliktlerinde \nsıkça kullanılır. Yeniden \ntasarlanmış sürgüsü sayesinde \noperasyonların vazgeçilmez silahı \nhaline gelmiştir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-0e70b4a2857df9bb014b": {
+      "id": 1950,
+      "sourceOffset": 148278,
+      "name": "EM-93R - C",
+      "description": "93R\nİtalyan Veretta tarafından üretilmiş,\nmakul tepme şiddetine ve geniş \nkullanım imkanlarına sahip bir silaht\nır. Yüksek dağılım oranı ve geniş \nkullanım seçenekleri büyük avantaj \nsağlar. 9 mm mermisi kurtlara\nkarşı çok büyük etkiye sahip \nolmasa da silah isyan birliktlerinde \nsıkça kullanılır. Yeniden\ntasarlanmış sürgüsü sayesinde \noperasyonların vazgeçilmez silahı \nhaline gelmiştir.",
+      "weightText": "3.10 Kg",
+      "magazineText": "20 mermi x 3",
+      "modeText": "Otomatik"
+    },
+    "weapon-4a928f2384e9a8cb491b": {
+      "id": 2005,
+      "sourceOffset": 132314,
+      "name": "K3-TK ",
+      "description": "Dünyanın en cesur paralı \naskerleri olan Gurkhaların \nkullandığı, kısa ve eğimli \nKukri bıçaklarından biridir. \nBumerang misali eğimli olduğundan\n ağırlık merkezi bıçağın uç \nnoktalarındadır. \nBöylece normalden çok daha fazla \nhasara sebep olur.",
+      "weightText": "0.7 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "Bıçak"
+    },
+    "weapon-c6a4c39ff5cce4b54a73": {
+      "id": 2006,
+      "sourceOffset": 132864,
+      "name": "K3-TK (Güçlü Saldırı)",
+      "description": "",
+      "weightText": "",
+      "magazineText": "",
+      "modeText": ""
+    },
+    "weapon-498aba5d60d896825bdc": {
+      "id": 9022,
+      "sourceOffset": 132972,
+      "name": "Halloween GRENADE",
+      "description": "Balkabağı Bombası",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-bc1529c1b870bef5638b": {
+      "id": 9023,
+      "sourceOffset": 133934,
+      "name": "RGD-5S",
+      "description": "Sovyet Rusya tarafından üretilmi\nş olan RGD-5S halen pek çok ülke \ntarafından kullanılan bir el \nbombasıdır.\nWolfteam’de yer alan diğer \nbombalara göre daha uzun patlama \nsüresine sahiptir. \nTemel teçhizatlarınıza yerleş\ntirebilirsiniz.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-5f11ce4346523b82fd7b": {
+      "id": 9952,
+      "sourceOffset": 150386,
+      "name": "RGD-5S - C",
+      "description": "Sovyet Rusya tarafından üretilmi\nş olan RGD-5S halen pek çok ülke \ntarafından kullanılan bir el \nbombasıdır.\nWolfteam’de yer alan diğer \nbombalara göre daha uzun patlama \nsüresine sahiptir. \nTemel teçhizatlarınıza yerleş\ntirebilirsiniz.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-3d0940976e2eee309f39": {
+      "id": 9024,
+      "sourceOffset": 134476,
+      "name": "Hindi Budu Bombası",
+      "description": "Hindi Budu Bombası",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-6d6b48bb78acc0be87bc": {
+      "id": 6014,
+      "sourceOffset": 138892,
+      "name": "Zaitsev CF",
+      "description": "Zaitsev Camoflage\nDünya Savaşı 2 tüfek \nbolteuaeksyeonsik atama \nsırasında Rus ordusu. Rusya'nı\nn ünlü keskin nişancı Vasili \nkarakter peu organları eski Rus \nve Fin Kış Savaşı Battle Kış \nShimo efsanevi keskin nişancı \ntarafından bir operasyon kapsam\nı nda yüksek idare idi yüksek ö\nncesi yükseltmek oldu.\nRusya'nın aşırı soğuk iklim \nbile Smooth operasyon, silah gü\nvenilir modern Ortadoğu \nçatışmasının çok iyi bir doğ\nruluk sıklıkta operasyonda tan\nık olmasıdır.",
+      "weightText": "1.11 Kg",
+      "magazineText": "15 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-ed4e57580a5be862f97b": {
+      "id": 4001,
+      "sourceOffset": 186254,
+      "name": "Zaitsev CF",
+      "description": "Zaitsev Camoflage\nDünya Savaşı 2 tüfek \nbolteuaeksyeonsik atama \nsırasında Rus ordusu. Rusya'nı\nn ünlü keskin nişancı Vasili \nkarakter peu organları eski Rus \nve Fin Kış Savaşı Battle Kış \nShimo efsanevi keskin nişancı \ntarafından bir operasyon kapsam\nı nda yüksek idare idi yüksek ö\nncesi yükseltmek oldu.\nRusya'nın aşırı soğuk iklim \nbile Smooth operasyon, silah gü\nvenilir modern Ortadoğu çatışmas\nının çok iyi bir doğruluk sıkl\nıkta operasyonda tanık olmasıd\nır.",
+      "weightText": "1.11 Kg",
+      "magazineText": "15 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-f1b3a0433fb017916bb5": {
+      "id": 2007,
+      "sourceOffset": 143874,
+      "name": "T1 Balta",
+      "description": "T1 Balta\nÖzel Kuvvetlerin en zor zamanları\nnda kullandıkları el baltası. Genel \nolarak savaşlarda kullanılmasa da\nişe yarayan bir silahtır. Bıçağa kı\nyasla yıkım gücü yü ksek fakat \nyavaştır.",
+      "weightText": "2.0 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-16bc03f11a2e3d389b4c": {
+      "id": 9026,
+      "sourceOffset": 144330,
+      "name": "RGS-42",
+      "description": "Ruslar tarafından üretilen, duman\nbombası işlevine de sahip olan \nRGS-42 el bombası kullanım kolaylı\nğı sunmasa da insanlara karşı en \netkili bombalardandır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-96ba43c04ba6fb55bb98": {
+      "id": 9951,
+      "sourceOffset": 149144,
+      "name": "RGS-42 - C",
+      "description": "Ruslar tarafından üretilen, duman\nbombası işlevine de sahip olan \nRGS-42 el bombası kullanım kolaylı\nğı sunmasa da insanlara karşı en \netkili bombalardandır.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-ad1096b8e4ad7713aba3": {
+      "id": 9027,
+      "sourceOffset": 144714,
+      "name": "AT-3G",
+      "description": "AT-3G mayın veya saatli bomba \ngibi yere veya tavana döşenir. MK-\n5G kadar yüksek bir patlama gücü \nvardır. İnsanlara karşı oldukça \netkilidir.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-e0ba6b89d99edb6f48ea": {
+      "id": 9950,
+      "sourceOffset": 146754,
+      "name": "AT-3G - C",
+      "description": "AT-3G mayın veya saatli bomba \ngibi yere veya tavana döşenir. MK-\n5G kadar yüksek bir patlama gücü \nvardır. İnsanlara karşı oldukça \netkilidir.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-b10671b56b4e82ffbce2": {
+      "id": 9800,
+      "sourceOffset": 187272,
+      "name": "AT-3G",
+      "description": "AT-3G mayın veya saatli bomba \ngibi yere veya tavana döşenir. MK-\n5G kadar yüksek bir patlama gücü \nvardır. İnsanlara karşı oldukça \netkilidir.",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-f3230df481347c22e8dd": {
+      "id": 9028,
+      "sourceOffset": 151784,
+      "name": "Egg Grenade",
+      "description": "Etkinlik Bombası",
+      "weightText": "0.5 Kg",
+      "magazineText": "1 mermi",
+      "modeText": "El Bombası"
+    },
+    "weapon-4c8e07ff6511cadadb25": {
+      "id": 6015,
+      "sourceOffset": 158668,
+      "name": "MSD-90",
+      "description": "MSD-90\nH & K PSG1 tarafından yapılan \nAlmanca yarı-otomatik keskin niş\nancı tüfekleri mevcut silah geliştirdi.\nMSD-90 toplam uzunluğu PSG1 \ndaha kısa, \nağırlığı hafif ve taşıması çok kolay.\nBuna ek olarak, gelişmiş doğruluğu,\nsilah grup kullanılacak.",
+      "weightText": "3.3 Kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-56147fb75a6a10ae2f20": {
+      "id": 6019,
+      "sourceOffset": 182964,
+      "name": "MSD-90 GL",
+      "description": "MSD-90\nH & K PSG1 tarafından yapılan \nAlmanca yarı-otomatik keskin niş\nancı tüfekleri mevcut silah geliştirdi.\nMSD-90 toplam uzunluğu PSG1 \ndaha kısa, \nağırlığı hafif ve taşıması çok kolay.\nBuna ek olarak, gelişmiş doğruluğu,\nsilah grup kullanılacak.",
+      "weightText": "3.3 Kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-cffe0ead6034aea802a8": {
+      "id": 6020,
+      "sourceOffset": 195396,
+      "name": "MSD-90 PX",
+      "description": "MSD-90\nH & K PSG1 tarafından yapılan \nAlmanca yarı-otomatik keskin nişancı \ntüfekleri mevcut silah geliştirdi.\nMSD-90 Pixel versiyonu polimer yapısı \nsayesinde daha hızlıdır. Ayrıca \ntemel özelliklerinin geliştirilmesiyle \nverdiği zarar %5 artmıştır.",
+      "weightText": "3.3 Kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-405f41cdea79ff68d3c7": {
+      "id": 1017,
+      "sourceOffset": 159250,
+      "name": "SODB Shotgun",
+      "description": "Menzili kısa olsa da, yakından \nçok etkili bir ikinci silahtır.\nSağ tık 1, sol tık ikili atar.\nSadece Kurt Avında geçerlidir.",
+      "weightText": "1.9 Kg",
+      "magazineText": "2 mermi x 2",
+      "modeText": "Otomatik"
+    },
+    "weapon-dc9f94eb66c9923e4312": {
+      "id": 3108,
+      "sourceOffset": 162230,
+      "name": "EM-4 SPW",
+      "description": "EM-4-SPW\nBu silah EM-4C bazlı bir keskin \nnişancı tüfeği ile yarışabilir.\n4 kez EM-4C takılmış ve SPW tüfeği\n eklenmiştir, \nmükemmel bir isabet etme oranı ve \nzarar sağlar.\nM-4C bazlı silah sürgü sistemine \nsahiptir, \nfarklı seçenekler takılabilir, \nhareketlilik ve sağlamlık sağlar.",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-5ccd08787581bcbbcffc": {
+      "id": 3109,
+      "sourceOffset": 162868,
+      "name": "EM-4 SPW MC",
+      "description": "EM-4 SPW Multicam \nBu silah EM-4C bazlı bir keskin \nnişancı tüfeği ile yarışabilir.\n4 kez EM-4C takılmış ve SPW tüfeği\neklenmiştir, \nmükemmel bir isabet etme oranı ve \nzarar sağlar.\nM-4C bazlı silah sürgü sistemine \nsahiptir, \nfarklı seçenekler takılabilir, \nhareketlilik ve sağlamlık sağlar.\nEM-4 SPW Multicam, EM4 SPW'nin \ngeliştirilmiş bir modelidir, mermiyi gü\nçlendirerek verilen hasarı %20 arttırı\nr ve silahtaki mosin nagant \nyapısını güçlendirerek delme gücün\nü arttırır.  ",
+      "weightText": "3.0 Kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-564c76c53c0dbb6b0520": {
+      "id": 3122,
+      "sourceOffset": 179518,
+      "name": "EM-4 SPW GL",
+      "description": "EM-4-SPW Gold\nBu silah EM-4C bazlı bir keskin \nnişancı tüfeği ile yarışabilir.\n4 kez EM-4C takılmış ve SPW tüfeği\n eklenmiştir, \nmükemmel bir isabet etme oranı ve \nzarar sağlar.\nM-4C bazlı silah sürgü sistemine \nsahiptir, \nfarklı seçenekler takılabilir, \nhareketlilik ve sağlamlık sağlar.",
+      "weightText": "3.0 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-f835190f95be5bbe3cad": {
+      "id": 3127,
+      "sourceOffset": 191716,
+      "name": "EM-4 SPW PX",
+      "description": "EM-4-SPW Pixel\nBu silah EM-4C bazlı bir keskin \nnişancı tüfeği ile yarışabilir.\n4 kez EM-4C takılmış ve SPW tüfeği\neklenmiştir, \nmükemmel bir isabet etme oranı ve \nzarar sağlar.\nPixel versiyonu polimer yapısı \nsayesinde daha hızlıdır. Ayrıca \ntemel özelliklerinin geliştirilmesiyle \nverdiği zarar %5 artmıştır.",
+      "weightText": "3.0 Kg",
+      "magazineText": "35 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-26b6ec6be986fe150647": {
+      "id": 7507,
+      "sourceOffset": 163908,
+      "name": "EM249 Minimi",
+      "description": "EM249 Minimi\nBu makineli tüfek FN US şirketinde \nyapılmıştır, 5.56mm  kurşun kullanır \nayrıca dakikada 700-1000 arasında\noldukça hızlı ateşleme hızına \nsahiptir.\nVur&Kaç savaş stili için uzmanlaşmı\nştır.\nEM-60 ile karşılaştırıldığında daha \nfazla menzil, delme gücü ve şarjörü \nvardır.",
+      "weightText": "7.5 kg",
+      "magazineText": "150 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-00ea672d29986351ed3e": {
+      "id": 7508,
+      "sourceOffset": 164560,
+      "name": "EM249 Minimi MC",
+      "description": "EM249 Minimi Multicam\nBu makineli tüfek FN US şirketinde \nyapılmıştır, 5.56mm  kurşun kullanır \nayrıca dakikada 700-1000 arasında\noldukça hızlı ateşleme hızına \nsahiptir.\nVur&Kaç savaş stili için uzmanlaşmı\nştır.\nEM-60 ile karşılaştırıldığında daha \nfazla menzil, delme gücü ve şarjörü \nvardır.\nEM249 Minimi Multicam kurşunu \ngüçlendirir ve delme gücü ile \nhasar %20 artar.",
+      "weightText": "7.5 kg",
+      "magazineText": "150 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-05e7b4b2e43bda07301c": {
+      "id": 7511,
+      "sourceOffset": 180172,
+      "name": "EM249 Minimi GL",
+      "description": "EM249 Minimi Gold\nBu makineli tüfek FN US şirketinde \nyapılmıştır, 5.56mm  kurşun kullanır \nayrıca dakikada 700-1000 arasında\noldukça hızlı ateşleme hızına \nsahiptir.\nVur&Kaç savaş stili için uzmanlaşmı\nştır.\nEM-60 ile karşılaştırıldığında daha \nfazla menzil, delme gücü ve şarjörü \nvardır.\nEM249 Minimi Gold silah yapısını \ndeğiştirerek ateş etme hızını %20 \narttırır.",
+      "weightText": "7.5 kg",
+      "magazineText": "150 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-67f1a7742e596127776d": {
+      "id": 7514,
+      "sourceOffset": 193440,
+      "name": "EM249 Minimi PX",
+      "description": "EM249 Minimi Pixel\nBu makineli tüfek FN US şirketinde \nyapılmıştır, 5.56mm  kurşun kullanır \nayrıca dakikada 700-1000 arasında\noldukça hızlı ateşleme hızına \nsahiptir.\nVur&Kaç savaş stili için uzmanlaşmı\nştır.\nEM-60 ile karşılaştırıldığında daha \nfazla menzil, delme gücü ve şarjörü \nvardır.\nEM249 Minimi Pixel versiyonu \npolimer yapısı sayesinde daha hızlı\ndır. Ayrıca temel özelliklerinin geliş\ntirilmesiyle verdiği zarar %5 artmıştı\nr.",
+      "weightText": "7.5 kg",
+      "magazineText": "150 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-70b8dd82808c59a51ca6": {
+      "id": 7509,
+      "sourceOffset": 165394,
+      "name": "EMG-42",
+      "description": "EMG-42 Bu çok amaçlı makineli tü\nfek İkinci Dünya Savaşında \nAlmanya'da üretilmiştir. Bu silah \nMG-42'nin gelişmiş versiyonudur \nayrıca Hitler'in güç testeresi de \ndenir. \nAK-47'den daha dayanıklıdır \nEM249Minimi'den daha büyük zararı\nvardır. Ateşleme oranı dakikada \n1200dir, \nısıyı azaltır, silahta bir delik açar.",
+      "weightText": "11.5 kg",
+      "magazineText": "200 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-4b28d0a10e6fbd42129c": {
+      "id": 7510,
+      "sourceOffset": 166098,
+      "name": "EMG-42 MC",
+      "description": "EMG-42 Multicam\nEMG-42 Bu çok amaçlı makineli tü\nfek İkinci Dünya Savaşında \nAlmanya'da üretilmiştir. Bu silah \nMG-42'nin gelişmiş versiyonudur \nayrıca Hitler'in güç testeresi de \ndenir. \nAK-47'den daha dayanıklıdır \nEM249Minimi'den daha büyük zararı\nvardır. Ateşleme oranı dakikada \n1200dir, \nısıyı azaltır, silahta bir delik açar.\nEMG-42 Multicam versiyonu \nEM249 Minimi'nin tersi kolaylılığı\nndadır ayrıca eski EMG-42 ile karşı\nlaştırıldığında yeni yapısıyla %20 \ndaha fazla ateşleme hızı vardır.",
+      "weightText": "11.5 kg",
+      "magazineText": "200 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-8c2cc9a042b694443656": {
+      "id": 7512,
+      "sourceOffset": 180998,
+      "name": "EMG-42 GL",
+      "description": "EMG-42 Bu çok amaçlı makineli tü\nfek İkinci Dünya Savaşında \nAlmanya'da üretilmiştir. Bu silah \nMG-42'nin gelişmiş versiyonudur \nayrıca Hitler'in güç testeresi de \ndenir. \nAK-47'den daha dayanıklıdır \nEM249Minimi'den daha büyük zararı\nvardır. Ateşleme oranı dakikada \n1200dir, \nısıyı azaltır, silahta bir delik açar.\nEMG-42 Gold, mükemmel ateşleme\noranına sahip Minimi'nin tersidir ve\nayrıca eski EMG-42 ile karşılaştırıldı\nğında \nyeni yapısıyla %20 daha fazla \nateşleme hızı vardır.",
+      "weightText": "11.5 kg",
+      "magazineText": "200 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-06a5938a08e01f8cd64c": {
+      "id": 7513,
+      "sourceOffset": 194404,
+      "name": "EMG-42 PX",
+      "description": "EMG-42 Bu çok amaçlı makineli tü\nfek İkinci Dünya Savaşında \nAlmanya'da üretilmiştir. Bu silah \nMG-42'nin gelişmiş versiyonudur \nayrıca Hitler'in güç testeresi de \ndenir. \nAK-47'den daha dayanıklıdır \nEM249Minimi'den daha büyük zararı\nvardır. Ateşleme oranı dakikada \n1200dir, \nısıyı azaltır, silahta bir delik açar.\nEMG-42 Pixel versiyonu polimer \nyapısı sayesinde daha hızlıdır. Ayrı\nca temel özelliklerinin geliş\ntirilmesiyle verdiği zarar %5 artmıştı\nr.",
+      "weightText": "11.5 kg",
+      "magazineText": "200 mermi x 3",
+      "modeText": "Auto"
+    },
+    "weapon-96a768b5a8679deb21db": {
+      "id": 6016,
+      "sourceOffset": 167174,
+      "name": "ETSR-1",
+      "description": "Bu, terörizim karşıtı Alman Savuma \nEndüstrisi AMP teknoloji servisi ş\nirketi tarafından geliştirilmiştir. Bu \navcı tipli mekanizmalı silah 3 çeşit \nmermi kullanır,\nSR-100'ün yeni versiyonudur. \nVerdiği zarar  ve menzili mermi türü\nne göre değişebilir. Almanya ve \nMalezya'nın yanısıra Avrupa Birliği \nülkelerinde de kullanılır.",
+      "weightText": "5.9 kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-c1cd7033135e89503453": {
+      "id": 6017,
+      "sourceOffset": 167912,
+      "name": "ETSR-1 MC",
+      "description": "Bu, terörizim karşıtı Alman Savuma \nEndüstrisi AMP teknoloji servisi ş\nirketi tarafından geliştirilmiştir. Bu \navcı tipli mekanizmalı silah 3 çeşit \nmermi kullanır,\nSR-100'ün yeni versiyonudur. \nVerdiği zarar  ve menzili mermi türü\nne göre değişebilir. Almanya ve \nMalezya'nın yanısıra Avrupa Birliği \nülkelerinde de kullanılır.\nETSR-1 Multicam saldırı gücünü attı\nrır, \nsaldırı ve zırh delici gücü\nETSR-1'e kıyasla %20 arttırır.",
+      "weightText": "5.9 kg",
+      "magazineText": "20 mermi x 2",
+      "modeText": "Bolt Action"
+    },
+    "weapon-e9cc870d94ed95041836": {
+      "id": 6018,
+      "sourceOffset": 182042,
+      "name": "ETSR-1 GL",
+      "description": "Bu, terörizim karşıtı Alman Savuma \nEndüstrisi AMP teknoloji servisi ş\nirketi tarafından geliştirilmiştir. Bu \navcı tipli mekanizmalı silah 3 çeşit \nmermi kullanır,\nSR-100'ün yeni versiyonudur. \nVerdiği zarar  ve menzili mermi türü\nne göre değişebilir. Almanya ve \nMalezya'nın yanısıra Avrupa Birliği \nülkelerinde de kullanılır.\nETSR-1 Gold ateşleme oranını arttır\nır, ETSR-1'e kıyasla ateşleme \nh ızını %20 arttırır.",
+      "weightText": "5.9 kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Bolt Action"
+    },
+    "weapon-2fd1ddc6be9f4c5d6213": {
+      "id": 6021,
+      "sourceOffset": 192414,
+      "name": "ETSR-1 PX",
+      "description": "Bu, terörizim karşıtı Alman Savuma \nEndüstrisi AMP teknoloji servisi ş\nirketi tarafından geliştirilmiştir. Bu \navcı tipli mekanizmalı silah 3 çeşit \nmermi kullanır,\nSR-100'ün yeni versiyonudur. \nVerdiği zarar  ve menzili mermi türü\nne göre değişebilir. Almanya ve \nMalezya'nın yanısıra Avrupa Birliği \nülkelerinde de kullanılır.\nETSR-1 Pixel versiyonu polimer \nyapısı sayesinde daha hızlıdır. Ayrı\nca temel özelliklerinin geliş\ntirilmesiyle verdiği zarar %5 artmıştı\nr.",
+      "weightText": "5.9 kg",
+      "magazineText": "30 mermi x 3",
+      "modeText": "Bolt Action"
+    }
+  },
+  "unmatchedItems": 677,
+  "numericGameplayStatsVerified": false
+}

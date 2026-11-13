@@ -1,0 +1,15 @@
+# Video devamı: birinci paket
+
+İki parçanın ilki, dört Drive videosundaki kritik maç akışı farklarını ele alır. Başlangıç: `codex/mobile-continuation`, `d5cbd87e512897604eef6637f818daf7b67de61b`. Harita listesi ve çevrimdışı kapsam korunur.
+
+- SP sıfırdan başlar; 2800 ortak tavan sayılmaz. Öldürme, kafadan, seri, kurma ve çözme ayrı olaylardır. Ekipman ekranı ve harcama aynı hesabı kullanır. SP turlar arasında korunur. Ücretsiz Standart gerçek başlangıç silahlarını verir; kayıtlı pahalı set ve mutasyonlar seçim süresi dolunca ücretsiz kuşanılmaz. Envanter düzenlemesi sonraki seçim için kaydedilir; maçta ödenmiş ekipman ayrı bir anlık kopyadır.
+- YP kapasitesi mutasyon tabanı, kaynak karakterin `wolf.values[3]`, takılı dövmelerin `healthPercent` ve tanımlı çanta katkısından hesaplanır. Kükreme kademeli doldurur, hasar önce YP'yi tüketir. Ortak 99 sınırı kaldırıldı.
+- Takım kimliği saldırı/savunma rolünden ayrıdır. Gözlenen dokuz kazanma odasında sekiz tamamlanan turdan sonra roller değişir. Skor, SP, öldürme ve oyuncu takımı korunur; kaynak doğma noktaları, bomba yetkisi, bot hedefi ve HUD birlikte değişir. Oda seçeneği yerel değişimi kapatabilir.
+- Hazırlık ayrı saattir. Erken ekipman seçimi hazırlığı atlatmaz. Yıkım'da ölüm sonrası yaşayan dostun kamerası, canı ve cephanesi izlenir. Yuvarlak oklarla hedef değişir; hedef ölünce başka dosta geçilir. Yeni tur oyuncunun kamerasını ve çarpışmasını geri getirir.
+- Tek taşıyıcı kurabilir; ölürse bomba düşer, yaşayan saldıran alabilir. Bırakma, hareket, alandan çıkma ve operatör değişimi ilerlemeyi sıfırlar. Kurma/çözme bir kez ödüllendirilir. Kurulu bombanın saati normal tur saatinden bağımsızdır. Aynı karede patlama/çözme/eliminasyon iki tur kararı üretemez.
+
+`gameplay/mobile-match.json` gözlenen olgularla yerel dengeyi ayırır. 199 YP ve 2800 SP örnekleri bütün karakterlerin tavanını kanıtlamaz. Mutasyon tabanları, toplama yöntemi, öldürme/seri ödülleri, fiyatlar ve çözme süresi yerel uyarlamadır. İnsan örneğindeki 330 ana canın tam kaynak formülü henüz çözülmedi; bilinmeyen zırh baytları ana can sayılmadı.
+
+`mobile_021.gd` ekonomi, kapasite, hazırlık, iptal, tek bomba/karar, ölüm, izleme, rol değişimi ve arka plan saatlerini sınar. `visual_021.gd` gerçek OpenGL görüntülerini üretir. Yeni maç testi 50, 0.20 regresyonu 43, 0.19 regresyonu 45 ve ekipman/hediye testi 191 kontrolden geçti. Kullanıcının kalıcı yerleşim talebiyle özgün HP/YP/SP göstergeleri ve rol değişimi paneli geri bağlandı. Bilgi alanları ve hazırlık satırı 84 konum/görüş alanı kontrolünden geçti; dokuz gerçek OpenGL görüntüsü alındı. [Yerleşim kuralı](VIDEO_YERLESIM_KURALI.md). Sonuçlar `mobile-021-validation.json` ve `update-021-visual-validation.json` içindedir. Fiziksel Android testi ve yeni imzalı APK bu kaynak değişikliğinde yapılmış sayılmaz.
+
+İkinci paket özgün cihaz/kuşanma/kurma olayını, sonuç/ödül/oda geçişlerini ve efektleri ekler. İlk paketin geçici kurma süresi ikinci pakette özgün `Select` + `INSTALL_TIMEBOMB` zamanına bağlanır.

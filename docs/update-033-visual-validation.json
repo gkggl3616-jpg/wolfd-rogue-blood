@@ -1,0 +1,70 @@
+{
+  "runtimeCodeSha256": "84e35fb5b89a79934a26c0a72e5d9965ce9602c342a26f42f01b294f777f08db",
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "rendering": "gl_compatibility / OpenGL 4.5 llvmpipe",
+  "newChecks": 35,
+  "passed": true,
+  "captures": [
+    {
+      "path": "docs/review/update-033/destruction-room-rule-state.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "c7119c463b4c2d7341332d94dd8116576e74e2a4a436a9ae9af8bfb33197cb46"
+    },
+    {
+      "path": "docs/review/update-033/mixed-room-eight-players.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1f48c5f52b3cdb2e25b0b3c7fb641bc6c4727305a972de00aa5e6e3a37be7dc2"
+    },
+    {
+      "path": "docs/review/update-033/native-room-settings.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "5f7bde996480b96b9911f4ae62a0f55ffa2de24b0fef201f5b1fc0dbb5ea3d8b"
+    },
+    {
+      "path": "docs/review/update-033/room-1024x768.png",
+      "width": 1024,
+      "height": 768,
+      "sha256": "2243db8e9ead83bc9ee1090e335696e4b005f97c90f670d2eb9dfc379d2c0e73"
+    },
+    {
+      "path": "docs/review/update-033/room-2160x992.png",
+      "width": 2160,
+      "height": 992,
+      "sha256": "963a1c3dd74f5fc228bc3365b99daac71651bac0744207f5fff0bd7b0cc4a734"
+    },
+    {
+      "path": "docs/review/update-033/room-960x540.png",
+      "width": 960,
+      "height": 540,
+      "sha256": "8d084e738653f19a03b39230aaa1843cfacc0d8056301ae0ab39cab7d018b9f5"
+    },
+    {
+      "path": "docs/review/update-033/showcase-opens-local-boxes.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "5fbdc522e10d5aaaf1a44a3b487a281eb9eaf3ceb9b73cc0841821cabc9f9a10"
+    },
+    {
+      "path": "docs/review/update-033/wolf-room-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "3f1d566f35162c5130fbb7f89f5d32f6db23c6834dc016111cc9f79ff65f2ef7"
+    }
+  ],
+  "scope": "Actual room/settings/showcase navigation at 1280x720; mixed and wolf room rules; 960x540, 2160x992, 1024x768. Comparison JPG is a labelled composite.",
+  "fullPcParity": false,
+  "physicalAndroidDeviceTested": false,
+  "apkProduced": false,
+  "comparison": {
+    "path": "docs/review/update-033/pc-before-after-033.jpg",
+    "sha256": "9dfbffb0eda727a8b5fd3443b0db6bb714061cafa667eb4f5c39a45782066d62"
+  },
+  "manualReview": {
+    "allEightCapturesViewed": true,
+    "comparisonViewed": true,
+    "notes": "Room/settings overlays, visible channel states, source-sized toolbar, clipped footer, local catalogue route and four display dimensions inspected. Font/account/map/service differences remain explicit."
+  }
+}

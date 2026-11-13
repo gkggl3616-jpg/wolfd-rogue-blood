@@ -49,7 +49,7 @@ def read_objects(data):
         rows.append(dict(type=kind,properties=props,sourceOffset=start,declaredBytes=size))
     return rows
 
-def read_render(data,stride):
+def read_render(data,stride,keep_aux=False):
     if len(data)<60 or struct.unpack_from('<I',data)[0]!=85:raise ValueError('Expected DAT v85')
     offset=struct.unpack_from('<I',data,24)[0]
     if not 60<=offset<len(data):raise ValueError('Invalid render offset')
@@ -60,8 +60,10 @@ def read_render(data,stride):
         if not all(math.isfinite(x) and abs(x)<1e8 for x in center):raise ValueError('Invalid world bounds')
         sections=[]
         for _ in range(r.count(65536)):
-            texture=r.string();texture1=r.string();shader=r.unpack('B')[0];triangles=r.count();effect=r.string();w,h,size=r.unpack('3I');r.take(size)
-            sections.append(dict(texture=texture,texture1=texture1,shader=shader,triangles=triangles,effect=effect))
+            texture=r.string();texture1=r.string();shader=r.unpack('B')[0];triangles=r.count();effect=r.string();w,h,size=r.unpack('3I');lightmap=r.take(size)
+            section=dict(texture=texture,texture1=texture1,shader=shader,triangles=triangles,effect=effect)
+            if keep_aux:section.update(lightmap=lightmap,lightWidth=w,lightHeight=h)
+            sections.append(section)
         count=r.count(2000000);raw=r.take(count*stride)
         vertices=np.ndarray((count,11),dtype='<f4',buffer=raw,strides=(stride,4)).copy()
         if count and (not np.isfinite(vertices[:,:3]).all() or np.abs(vertices[:,:3]).max()>1e8):
@@ -104,10 +106,10 @@ def read_render(data,stride):
     if r.pos!=len(data):raise ValueError('Unparsed world render bytes: '+str(len(data)-r.pos))
     return blocks,dict(stride=stride,renderNodes=main_count,worldModels=models,renderEnd=r.pos,invalidUvVerticesReplaced=repaired_uv,invalidNormalsRebuilt=repaired_normals)
 
-def parse_world(data):
+def parse_world(data,keep_aux=False):
     errors=[]
     for stride in (44,68):
-        try:blocks,info=read_render(data,stride);return blocks,read_objects(data),info
+        try:blocks,info=read_render(data,stride,keep_aux);return blocks,read_objects(data),info
         except (ValueError,struct.error,UnicodeError) as exc:errors.append(str(stride)+': '+str(exc))
     raise ValueError('; '.join(errors))
 

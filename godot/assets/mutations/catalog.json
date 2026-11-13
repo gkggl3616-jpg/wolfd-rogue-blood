@@ -1,0 +1,255 @@
+{
+  "modelDefinitionsSha256": "46024afc75a5d6f0997576970c2cd714a4d32374609d0a95299c1d3b06565894",
+  "models": [
+    {
+      "asset": "res://assets/mutations/power-red.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model4",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_new_wolf_ch.ltb",
+      "donorSha256": "c06e7e9347968a1987126450bdb7ba3d37353ac97c414ace261bfca9873bbfc4",
+      "id": "power",
+      "portrait": "res://assets/mutations/power-red.png",
+      "sha256": "53a529c766c7aa0d141420935cc27fdf422bccfa3d746e683363647c3f17e888",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "skins": [
+        {
+          "sha256": "177c557b511de9fb4628f12577307ea42483e49f43e015612702de9deff47b5a",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_r.dtx"
+        },
+        {
+          "sha256": "0aa35dda8c8e6e7e1742267f821d0be3c4c77e7e2cb3864e55ccc2a31c399545",
+          "slot": 1.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_man_r.dtx"
+        },
+        {
+          "sha256": "f9ff64546ec4feef3dded2dfe95ada30898774568d2786e0b15df58abc2b184d",
+          "slot": 3.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_powershoulder_r.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_power_r.ltb",
+      "sourceSha256": "5674cda28cc4c623acb9906839c766c100a41a5bbca6b73898bb7ea2c83259ab",
+      "team": "red",
+      "triangles": 4344.0,
+      "portraitSha256": "4b3e8cd25389bc4b9aac134bcd59b6220607779d4bb72db676de3e879210667f"
+    },
+    {
+      "asset": "res://assets/mutations/power-blue.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model5",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_power_ch.ltb",
+      "donorSha256": "b8612db22690c92ce8cbffff6aae0f8f175bfd13762b61dc1708b579a41df66a",
+      "id": "power",
+      "portrait": "res://assets/mutations/power-blue.png",
+      "sha256": "b3ee6f5776090de1eba448dfe597f8f435fdcf42eb1b5d9353e368a89693acd5",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "skins": [
+        {
+          "sha256": "62823472f97f7ed525dbdfe8c7264588ebee0d502d841385266a9fc9fe6f71f8",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_b.dtx"
+        },
+        {
+          "sha256": "d2c849cdb9a2b7f890b1547c8c9d23088df63c843c5a93cc0993f05f51878376",
+          "slot": 1.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_man_b.dtx"
+        },
+        {
+          "sha256": "9798e3b97d000c2e247bc6376c3a674e4a868d994bf07b093054e9530750f386",
+          "slot": 3.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_powershoulder.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_power.ltb",
+      "sourceSha256": "b0beb547b5a86a074d2e493702e571a1c4ab0859a34284435c32fa8c243940c3",
+      "team": "blue",
+      "triangles": 4584.0,
+      "portraitSha256": "c286a62b540c77ac7dddb89dad4f4af990b8b211da4c90b37b5b012426cff00d"
+    },
+    {
+      "asset": "res://assets/mutations/guardian-red.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model6",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_guardian_ch.ltb",
+      "donorSha256": "f5e1e35d3c95726ac8f47dd9200570697dd53c725731a243dbf7b96ae704deb7",
+      "id": "guardian",
+      "portrait": "res://assets/mutations/guardian-red.png",
+      "sha256": "66873bab95bd03568064918ecca7998da4c3633bdaa079d897589e8a6da29153",
+      "skeletonSha256": "47fc2aecd817a627f53042bbae177882647d6d2a8e40117b52370d8ea9b8be89",
+      "skins": [
+        {
+          "sha256": "70f0a583337897bfb4882822181b8ae68fd4a92756bb485eec355685c114a008",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_guardian_r.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_guardian_r.ltb",
+      "sourceSha256": "17e42588a9cc9250aba1dbc5c855af1124775bb51434bd9beeafa4b4f0cb336a",
+      "team": "red",
+      "triangles": 4332.0,
+      "portraitSha256": "14344c3464b131d8629594aa249900798600e5f211b5fe27c59ff8d6aedb3249"
+    },
+    {
+      "asset": "res://assets/mutations/guardian-blue.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model7",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_guardian_ch.ltb",
+      "donorSha256": "f5e1e35d3c95726ac8f47dd9200570697dd53c725731a243dbf7b96ae704deb7",
+      "id": "guardian",
+      "portrait": "res://assets/mutations/guardian-blue.png",
+      "sha256": "ced8c9f3071d6816b91b1eca78942fd408ba93bf62cca9c9b37edd0407fc2bd3",
+      "skeletonSha256": "47fc2aecd817a627f53042bbae177882647d6d2a8e40117b52370d8ea9b8be89",
+      "skins": [
+        {
+          "sha256": "48c8a80a6790cc4b666e35a08c5250d7b89761d5aa1ab8a65f49b2eed69f4bf2",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_guardian.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_guardian.ltb",
+      "sourceSha256": "17e42588a9cc9250aba1dbc5c855af1124775bb51434bd9beeafa4b4f0cb336a",
+      "team": "blue",
+      "triangles": 4332.0,
+      "portraitSha256": "3d0fa0f9a6b1c833dc1466fdb59a6ca10c5bf3cc2a12b723c41bcc0a2e805496"
+    },
+    {
+      "asset": "res://assets/mutations/ghost-red.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model8",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_ghost_ch.ltb",
+      "donorSha256": "5612025aad3925c522eddba34e615c813eed368ceeddc92452b209efb58887f1",
+      "id": "ghost",
+      "portrait": "res://assets/mutations/ghost-red.png",
+      "sha256": "bf5bd9031732c47aa77085e92fcfd4e70a7422deb300143fe5c1dd30b7109b1b",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "skins": [
+        {
+          "sha256": "e1adff9314b798918e73a327fc6d3b469a03f2fcc4425f67eec83bad75f435ee",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_ghost_r.dtx"
+        },
+        {
+          "sha256": "224ea58bc87fe852ddb05287869bc58a4805ee949950d26e73708a27fa07451e",
+          "slot": 1.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_ghost_light_r.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_ghost_r.ltb",
+      "sourceSha256": "8709680759bf94fa2af7df4a01adbf53effbd55cccce84ef6d67f9c4912e9ae8",
+      "team": "red",
+      "triangles": 5427.0,
+      "portraitSha256": "de7e964daf73cbb8bbf23f0e5d81f49fc9717ebfd1c5614744813406e8972f49"
+    },
+    {
+      "asset": "res://assets/mutations/ghost-blue.glb",
+      "bindPoseExact": false,
+      "clips": [
+        "idle",
+        "run",
+        "jump",
+        "attack",
+        "roar",
+        "crouch",
+        "crouch_run",
+        "wolf_run",
+        "body_attack",
+        "airborne_attack",
+        "special_attack"
+      ],
+      "definition": "Model9",
+      "donor": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_ghost_ch.ltb",
+      "donorSha256": "5612025aad3925c522eddba34e615c813eed368ceeddc92452b209efb58887f1",
+      "id": "ghost",
+      "portrait": "res://assets/mutations/ghost-blue.png",
+      "sha256": "5eea5f8ae84c34da665ab31c0c68b7950c0025e92e8d9e8482d462d36c5bf816",
+      "skeletonSha256": "db5feba8367678a27283ca179f6be65a27cf4b21a58c039d1b0ff39299ca6e6d",
+      "skins": [
+        {
+          "sha256": "8fda11b3f79a466ada3a1a4e461d97f923d84ade99ff4e882f5da57ba07cf369",
+          "slot": 0.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_ghost.dtx"
+        },
+        {
+          "sha256": "c9dc814d924f628b87819359543f3d6fd234635fe7b33350a49267117464a868",
+          "slot": 1.0,
+          "source": "wolfteam kurtları/Root/wt_chars/skins/wt_wolf_ghost_light.dtx"
+        }
+      ],
+      "source": "wolfteam kurtları/Root/wt_chars/models/wt_wolf_ghost.ltb",
+      "sourceSha256": "8709680759bf94fa2af7df4a01adbf53effbd55cccce84ef6d67f9c4912e9ae8",
+      "team": "blue",
+      "triangles": 5427.0,
+      "portraitSha256": "81eaf38a3f95332667aae5a42ee6a899dd590fbb2097b334450467a4a2c2c293"
+    }
+  ],
+  "schemaVersion": 1.0,
+  "sourcePcNumericStatsVerified": false,
+  "materialPolicy": "Opaque base surfaces; PC special shaders are not reproduced by alpha masking",
+  "animationPolicy": "Exact source bone-name/parent skeleton; mesh bind matrices retained, explicit source child animation donors"
+}

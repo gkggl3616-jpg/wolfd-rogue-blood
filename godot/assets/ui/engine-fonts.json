@@ -1,0 +1,25 @@
+{
+  "source": "Root/attributes/layout.txt",
+  "sha256": "fcadf3a24eb916e13948d3c459f208b5a76243c53f50ed4869e1429a64219131",
+  "fonts": {
+    "0": {
+      "source": "WT_Interface\\Fonts\\SQR721KN.TTF",
+      "asset": "res://assets/shared_media/fonts/6b301df9d3061fafbc09818f.ttf"
+    },
+    "1": {
+      "source": "WT_Interface\\Fonts\\EXPON.TTF",
+      "asset": "res://assets/shared_media/fonts/172899b20542d349f36f855d.ttf"
+    },
+    "2": {
+      "source": "WT_Interface\\Fonts\\TYPIST.TTF",
+      "asset": "res://assets/shared_media/fonts/1965d766053f9b461068e1d0.ttf"
+    },
+    "3": {
+      "source": "WT_Interface\\Fonts\\BETHHAND.TTF",
+      "asset": "res://assets/shared_media/fonts/6a803919508d319f6796883c.ttf"
+    }
+  },
+  "unresolvedFaceIndices": [
+    51
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "original-tattoo-shop-cards-020",
+      "path": "docs/review/update-020/original-tattoo-shop-cards-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f9068e92567213f964a84b1815a17a74b005139f722083c00d91e0171566dbc3"
+    },
+    {
+      "height": 720,
+      "name": "og-family-preserved-020",
+      "path": "docs/review/update-020/og-family-preserved-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e3e0513b54e0db8527232e810dbad3d08665cf2689caf473b1fe01b925198a55"
+    },
+    {
+      "height": 720,
+      "name": "large-close-settings-020",
+      "path": "docs/review/update-020/large-close-settings-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f9c73d10c481b509d5d3bf2794f6521af07dcb3a1957dd41f56bd968db663eac"
+    },
+    {
+      "height": 720,
+      "name": "drag-resize-controls-020",
+      "path": "docs/review/update-020/drag-resize-controls-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e234d638a7d054839a206bc9b474c8e00cb167e9193e94829d7b87bb9d039ae1"
+    },
+    {
+      "height": 720,
+      "name": "destruction-bomb-controls-020",
+      "path": "docs/review/update-020/destruction-bomb-controls-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6f46904765d6ea27d5c7a0c7b3a7df063a3f9f30241d2a533ea349a17992721f"
+    },
+    {
+      "height": 720,
+      "name": "destruction-bomb-planted-020",
+      "path": "docs/review/update-020/destruction-bomb-planted-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4c2f7d4ecedd5aecc694046ff2f43c036ad41c070b194d78d88ca5c0ba6c04af"
+    },
+    {
+      "height": 720,
+      "name": "destruction-round-score-020",
+      "path": "docs/review/update-020/destruction-round-score-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b6b50d06326982b692e14ffe3ee5e06ac46e2ca2e84bf2f53e3bde0beb26fa1f"
+    },
+    {
+      "height": 720,
+      "name": "destruction-next-round-020",
+      "path": "docs/review/update-020/destruction-next-round-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "89b010b19e649d807b3d189ac1048c098f5e7e388ee679e39f4880dea232afd3"
+    },
+    {
+      "height": 720,
+      "name": "destruction-room-round-options-020",
+      "path": "docs/review/update-020/destruction-room-round-options-020.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b71cac18376d7e63e688be97fefd1885567e2492645ecf21c1fd580d74f01341"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

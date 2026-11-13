@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "version": "0.25.0",
+  "sources": [
+    {
+      "file": "/workspace/blood-moon-review/drive-videos/video-1/original.mp4",
+      "source": {
+        "number": 1,
+        "drive_id": "1aLtBA24fugZ04CYmRADJls8D40z33vBj",
+        "source_url": "https://drive.google.com/file/d/1aLtBA24fugZ04CYmRADJls8D40z33vBj/view",
+        "title": "Wolfteam  TavizYokTM  Ws HOKABAZLAR 3-3 KURT KLAN SAVAŞLARI.mp4 - Google Drive",
+        "bytes": 66246098,
+        "sha256": "9be951fc14230a818c5ac96ac220eb5d935bc53dad8a20936c293c0d0590129e",
+        "path": "/workspace/blood-moon-review/drive-videos/video-1/original.mp4",
+        "duration": 800.066757,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "30/1",
+            "nb_frames": "24002",
+            "duration": "800.066667"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "34456",
+            "duration": "800.066757"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 800.066757,
+      "reviewedContactSheets": 13,
+      "timelineStepSeconds": 1,
+      "timelineReviewedThroughEnd": true
+    },
+    {
+      "file": "/workspace/blood-moon-review/drive-videos/video-2/original.mp4",
+      "source": {
+        "number": 2,
+        "drive_id": "1DSq53F7HGTBTGqgq2oOclo3W5rQvRI7Z",
+        "source_url": "https://drive.google.com/file/d/1DSq53F7HGTBTGqgq2oOclo3W5rQvRI7Z/view",
+        "title": "Wolfteam Nielbenr yıkım.mp4 - Google Drive",
+        "bytes": 639767,
+        "sha256": "40183e666bdf5dc6b1499d4ddb65cb53ffb067e01be6ebcbe64f4dd339c00c7e",
+        "path": "/workspace/blood-moon-review/drive-videos/video-2/original.mp4",
+        "duration": 11.215238,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 360,
+            "height": 360,
+            "r_frame_rate": "30/1",
+            "nb_frames": "336",
+            "duration": "11.200000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "483",
+            "duration": "11.215238"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 11.215238,
+      "reviewedContactSheets": 1,
+      "timelineStepSeconds": 0.5,
+      "timelineReviewedThroughEnd": true
+    },
+    {
+      "file": "/workspace/blood-moon-review/drive-videos/video-3/original.mp4",
+      "source": {
+        "number": 3,
+        "drive_id": "1HELLMzyeP9t8pafwTrainoMtQPRe0iWX",
+        "source_url": "https://drive.google.com/file/d/1HELLMzyeP9t8pafwTrainoMtQPRe0iWX/view",
+        "title": "videoplayback.mp4 - Google Drive",
+        "bytes": 1753620,
+        "sha256": "e326c4c2f3d914c0b49f868cb2cf3329df757e7459fa60149a278b89b827df7e",
+        "path": "/workspace/blood-moon-review/drive-videos/video-3/original.mp4",
+        "duration": 22.442667,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 360,
+            "height": 640,
+            "r_frame_rate": "30/1",
+            "nb_frames": "671",
+            "duration": "22.366667"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "1052",
+            "duration": "22.442667"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 22.442667,
+      "reviewedContactSheets": 2,
+      "timelineStepSeconds": 0.5,
+      "timelineReviewedThroughEnd": true
+    },
+    {
+      "file": "/workspace/blood-moon-review/drive-videos/video-4/original.mp4",
+      "source": {
+        "number": 4,
+        "drive_id": "1dWltFGibelqf2i_8XReiOvH5_MS5pVse",
+        "source_url": "https://drive.google.com/file/d/1dWltFGibelqf2i_8XReiOvH5_MS5pVse/view",
+        "title": "WOLFTEAM YIKIM DA NASIL ADAM İNDİRİLİR BLOODABİ!!__.mp4 - Google Drive",
+        "bytes": 85971963,
+        "sha256": "2905f8659f882a6d6e997d7e2e92fe4eb0fc4cc86d81535542eb19430b2accea",
+        "path": "/workspace/blood-moon-review/drive-videos/video-4/original.mp4",
+        "duration": 955.338594,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "2997/100",
+            "nb_frames": "28631",
+            "duration": "955.321989"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "41143",
+            "duration": "955.338594"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 955.338594,
+      "reviewedContactSheets": 15,
+      "timelineStepSeconds": 1,
+      "timelineReviewedThroughEnd": true
+    },
+    {
+      "file": "/workspace/blood-moon-review/new-wolf-videos/video-1/original.mp4",
+      "source": {
+        "number": 1,
+        "drive_id": "1ULyjKuiP2SWVDBvRr9S1YIPOPpeh_HCl",
+        "source_url": "https://drive.google.com/file/d/1ULyjKuiP2SWVDBvRr9S1YIPOPpeh_HCl/view",
+        "title": "videoplayback (2).mp4 - Google Drive",
+        "bytes": 65246717,
+        "sha256": "0bc459127614bc720574adb2885e2de4d1a72a835873bf5f717cafee0f1a660c",
+        "path": "/workspace/blood-moon-review/new-wolf-videos/video-1/original.mp4",
+        "duration": 714.803084,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "30/1",
+            "nb_frames": "21444",
+            "duration": "714.800000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "30784",
+            "duration": "714.803084"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 714.803084,
+      "reviewedContactSheets": 6,
+      "timelineStepSeconds": 2,
+      "timelineReviewedThroughEnd": true
+    },
+    {
+      "file": "/workspace/blood-moon-review/new-wolf-videos/video-2/original.mp4",
+      "source": {
+        "number": 2,
+        "drive_id": "13klq5IIndOsdb0yukmQOq0YsGkW6ku27",
+        "source_url": "https://drive.google.com/file/d/13klq5IIndOsdb0yukmQOq0YsGkW6ku27/view",
+        "title": "videoplayback (1).mp4 - Google Drive",
+        "bytes": 134010083,
+        "sha256": "46a235e3d19da93a33aa1db210e0c57880861815fb8b6c45328bba76b7632919",
+        "path": "/workspace/blood-moon-review/new-wolf-videos/video-2/original.mp4",
+        "duration": 1989.485714,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "30/1",
+            "nb_frames": "59681",
+            "duration": "1989.366667"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "width": null,
+            "height": null,
+            "r_frame_rate": "0/0",
+            "nb_frames": "42840",
+            "duration": "1989.485714"
+          }
+        ],
+        "success": true
+      },
+      "durationSeconds": 1989.485714,
+      "reviewedContactSheets": 16,
+      "timelineStepSeconds": 2,
+      "timelineReviewedThroughEnd": true
+    }
+  ],
+  "gameplaySeconds": 4493.352054,
+  "gameplayContactSheetsReviewed": 53,
+  "screenRecording": {
+    "file": "/workspace/blood-moon-review/screen-recording/screen-recording.mp4",
+    "allDecodedFramesReviewedInSheets": 243,
+    "sheetsReviewed": 5,
+    "promptTranscript": "/workspace/blood-moon-review/SON_PROMPT_METNI.md"
+  },
+  "method": {
+    "sampledTimelineAndNativeKeyFrames": true,
+    "continuousNormalSpeedPlaybackClaimed": false,
+    "auditoryParityVerified": false
+  },
+  "corrections": {
+    "ftAura": "Active successful energy/FT only, never item16018 ownership",
+    "instantHpCost": {
+      "19501": 0.5,
+      "19502": 0.25
+    },
+    "ownedPacksConsumedOnUse": false,
+    "firstAidLifeLimits": {
+      "19001": 1,
+      "19002": 2
+    },
+    "verifiedMuzzleModel": "root/wt_guns/models_pv/wt_pv_akei47.ltb",
+    "muzzleGroup": "AK-47_PV_Muzz",
+    "sockets": [
+      "Flash",
+      "breach"
+    ]
+  },
+  "proofFrames": [
+    {
+      "timeSeconds": 168,
+      "path": "docs/review/video-reference/ft-hp-168s-025.png",
+      "sha256": "ddefc7eb181e98f4e1694ef62f91c904e85c54d10054b9dddb0476c5d3e8c5ef"
+    },
+    {
+      "timeSeconds": 169,
+      "path": "docs/review/video-reference/ft-hp-169s-025.png",
+      "sha256": "89bbf6fd5b1a63d2dee0a6e357cd2b01b231b45d8caa1e6c82ad970ddbba9192"
+    },
+    {
+      "timeSeconds": 170,
+      "path": "docs/review/video-reference/ft-hp-170s-025.png",
+      "sha256": "f5c6b78032b50614fa8c73ab7512be12753bb6b1a5d2448aef97d6facffd9e60"
+    }
+  ],
+  "openDifferences": [
+    "Native +50/+100 speed-unit conversion; mobile adapters1.10/1.15",
+    "Source per-minute HP rates and10-second duration disagree with portions of footage; exact version/timing unresolved",
+    "Modern OG skin identity in old archive",
+    "Remaining weapon-specific muzzle bindings",
+    "Native mapping of green/white bomb-site beam",
+    "Complete audio mix parity and physical Android performance"
+  ],
+  "fullPcParity": false,
+  "layoutRule": "godot/scripts/video_layout.gd",
+  "validation": {
+    "targetedChecks": 36,
+    "regressionStages": 33,
+    "runtimeCodeSha256": "031e80fc13a64dac6f446db62ab01fd5175c58b203e563703b3fb69d4551c03f",
+    "physicalAndroidDeviceTested": false,
+    "pythonTests": 40,
+    "realOpenGlCaptures": 210
+  },
+  "apk": {
+    "artifact": "WolfRogueBlood-0.25.0-test.apk",
+    "package": "com.wolfrogue.blood.offline.test",
+    "versionCode": 25,
+    "versionName": "0.25.0-offline",
+    "bytes": 1573199303,
+    "sha256": "db9a7e0bdd07956b914fa62ed86bca1206f18b9bf3378d31460a5cd4b9320522",
+    "signatureVerified": true,
+    "signatureV2": true,
+    "signatureV3": true,
+    "parallelTestInstall": true,
+    "deliveryCopySha256Verified": true
+  }
+}

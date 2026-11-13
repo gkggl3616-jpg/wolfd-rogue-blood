@@ -1,0 +1,122 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "pair-model0-wolf-idle-10-019",
+      "path": "docs/review/update-019/pair-model0-wolf-idle-10-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "526e77ade4a83e3973321ff382e2ed7f8de52244f05829c66aad893bdf4f34f2"
+    },
+    {
+      "height": 720,
+      "name": "pair-model0-wolf-idle-90-019",
+      "path": "docs/review/update-019/pair-model0-wolf-idle-90-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d4137cc5e1d07943312a4a565a9705d0283ef879f59a64379e7b402554100ad2"
+    },
+    {
+      "height": 720,
+      "name": "pair-model1-wolf-idle-10-019",
+      "path": "docs/review/update-019/pair-model1-wolf-idle-10-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4911375539673668e6332b8c4fced893993618764bad10c43009e8c4f0b31b89"
+    },
+    {
+      "height": 720,
+      "name": "pair-model1-wolf-idle-90-019",
+      "path": "docs/review/update-019/pair-model1-wolf-idle-90-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a21c3cd14e98bfd57ec47d8d44d183d53c767941e6b1a60afe27234015515f86"
+    },
+    {
+      "height": 720,
+      "name": "solid-wolf-og-overlay-019",
+      "path": "docs/review/update-019/solid-wolf-og-overlay-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fb8b320cbdb5ef155f054520aa7c7180688174cc710c40db21bb9311d5db3203"
+    },
+    {
+      "height": 720,
+      "name": "solid-wolf-front-no-showthrough-019",
+      "path": "docs/review/update-019/solid-wolf-front-no-showthrough-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "15b8e28cdab4daf4c101eabe297a2d2551151d751051d24d10bc83cb97d4be22"
+    },
+    {
+      "height": 720,
+      "name": "full-card-character-gifts-019",
+      "path": "docs/review/update-019/full-card-character-gifts-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1da2684cf1b1f06e2750266478dadf0123b5b3c37d5ebb1a01e83a38d948e7fb"
+    },
+    {
+      "height": 450,
+      "name": "expanded-small-phone-header-019",
+      "path": "docs/review/update-019/expanded-small-phone-header-019.png",
+      "saved": true,
+      "width": 800,
+      "sha256": "2c352bfab2c0107a44f671cc7a19b8d7e5b60e6a0e22f9c604507f09fcef4af4"
+    },
+    {
+      "height": 1220,
+      "name": "x7-pro-resolution-header-019",
+      "path": "docs/review/update-019/x7-pro-resolution-header-019.png",
+      "saved": true,
+      "width": 2712,
+      "sha256": "982fd0df40c086775233fc97dc9943a678b95e858e1f82c89373757283cb4b81"
+    },
+    {
+      "height": 720,
+      "name": "wolf-hud-powers-run-button-removed-019",
+      "path": "docs/review/update-019/wolf-hud-powers-run-button-removed-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "68629a5082282965695b8541b14819f467569ca5d828ac617d063217d1c7b31a"
+    },
+    {
+      "height": 720,
+      "name": "original-left-claw-019",
+      "path": "docs/review/update-019/original-left-claw-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f8087d5fb6e4c1b6aee3e2120e4d58b29baa1d61137db7b30289e0bdd96e0c45"
+    },
+    {
+      "height": 720,
+      "name": "original-right-claw-019",
+      "path": "docs/review/update-019/original-right-claw-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d2fc60b604876916fc02f00c3c4ab6a7290bcb3e1e98fce4dc238c654436e954"
+    },
+    {
+      "height": 720,
+      "name": "restarted-source-howl-019",
+      "path": "docs/review/update-019/restarted-source-howl-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2e47385a98e33d8bda0f2be4f3126eee65f6ec9e88065cdb2a3d1e0644f3c8fe"
+    },
+    {
+      "height": 720,
+      "name": "howl-extra-health-019",
+      "path": "docs/review/update-019/howl-extra-health-019.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "762e4909ac98779b055cb6e105a1c9933b0691cc55e0f9fba13d7877a898fffe"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureCatalogueUnlocked": true,
+  "testFixtureGifts": true,
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

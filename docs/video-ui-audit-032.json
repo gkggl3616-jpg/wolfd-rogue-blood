@@ -1,0 +1,96 @@
+{
+  "sources": [
+    {
+      "key": "old4",
+      "url": "https://drive.google.com/file/d/1dWltFGibelqf2i_8XReiOvH5_MS5pVse/view",
+      "videoSha256": "2905f8659f882a6d6e997d7e2e92fe4eb0fc4cc86d81535542eb19430b2accea",
+      "fullDurationSeconds": 955.338594,
+      "reviewedRangeSeconds": [
+        0,
+        36
+      ],
+      "sampleIntervalSeconds": 0.5,
+      "samples": 72
+    },
+    {
+      "key": "new2",
+      "url": "https://drive.google.com/file/d/13klq5IIndOsdb0yukmQOq0YsGkW6ku27/view",
+      "videoSha256": "46a235e3d19da93a33aa1db210e0c57880861815fb8b6c45328bba76b7632919",
+      "fullDurationSeconds": 1989.485714,
+      "reviewedRangeSeconds": [
+        0,
+        30
+      ],
+      "sampleIntervalSeconds": 0.5,
+      "samples": 60
+    }
+  ],
+  "totalSamples": 132,
+  "contactPages": [
+    {
+      "path": "docs/review/update-032/reference-ui/room-new-sheet-0.jpg",
+      "sha256": "f53fe3b978e87591423ad38146ad457c7cc569ebf62225912b3b913598534915",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room-new-sheet-1.jpg",
+      "sha256": "2ece6193ae530c62708990bb0645ac9603a7feb29dee77331137fb150224ce8e",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room-new-sheet-2.jpg",
+      "sha256": "1397d76805d9df71148417c3a6aea31800a226203e31b9bc0fe4e4f8acf3d8ec",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room-new-sheet-3.jpg",
+      "sha256": "6a3a679583228dde73e212485a107d31ebaaff7d13b641d416d1d86aa66fa616",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room4-sheet-0.jpg",
+      "sha256": "5c741d5a1e479d3f833b55ac7250e450185e7e0894b4f69bd87feba3d088da42",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room4-sheet-1.jpg",
+      "sha256": "d440f42da31382d5392fb1f4e036a2aa0435662dbd7897bc448d3a6f210c3ce2",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room4-sheet-2.jpg",
+      "sha256": "f61859f12bd0993e277848bc3ef6c2a27a0b7301db0fe2f46dcb81bcd48867b8",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room4-sheet-3.jpg",
+      "sha256": "4b06c3470f95071735bf6141a21bfd8baf0a617e952bf15a385869f8fc0cda57",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-032/reference-ui/room4-sheet-4.jpg",
+      "sha256": "93b9ab11afac8861769d30b8db3a43a3f72916478af263aee00f9a68b3c806ff",
+      "manuallyInspected": true
+    }
+  ],
+  "allNinePagesManuallyInspected": true,
+  "method": "Original local MP4 segments decoded and sampled twice per second; all nine contact sheets visually inspected. Labels are nominal fps-filter sample times, not individually verified source PTS. Gameplay/intro/editor jokes within these ranges are not copied as game UI.",
+  "observations": [
+    "In the33minute recording, the room is shown from about4s through19s; native red/blue teams, green team-title art, closed slots, room-owner/ready markers, right map/rules, bottom chat/user region and small fixed header are visible.",
+    "The15:55 recording shows a second UI skin around18.5s through35.5s; its edited blue-screen joke is not an app error screen.",
+    "Compact room creation uses the provided PC createfield layout. A fresh manual view of the separate91s YouTube creator recording was blocked; its previous semantic analysis is not treated as visual proof."
+  ],
+  "youtubeCreator": {
+    "url": "https://youtu.be/__oWuPcF2Gw",
+    "directFetch": "403 Forbidden at inherited proxy tunnel",
+    "browserAttempt": "net::ERR_TUNNEL_CONNECTION_FAILED",
+    "priorAnalysis": "docs/youtube-room-analysis-018.json",
+    "newManualPlayback": false
+  },
+  "limits": [
+    "Not a new continuous watch of every minute in all old recordings.",
+    "Different PC UI eras/skins and source revisions are present. Native archive geometry and actual local data are distinguished from pixel-perfect parity.",
+    "Local room directory/passwords are offline behaviors, not an authoritative online lobby service.",
+    "Dynamic web shop banners and online social/account services are not fabricated."
+  ]
+}

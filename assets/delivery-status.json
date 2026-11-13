@@ -1,0 +1,15 @@
+{
+  "fullReleaseReady": false,
+  "apkProduced": false,
+  "blockers": [
+    "Gerçek maç sahnesi/kuralları tamamlanmamış haritalar: 1, 2, 26, 31, 44, 46, 50, 57, 58, 59, 65, 72, 82, 83, 84, 92, 97, 100, 110",
+    "46 Göbekli Tepe için kategori+kimlik ile kanıtlanmış mod bağlantısı yok.",
+    "62 kaynak mod/alt mod için doğrulanmış maç uygulaması yok.",
+    "APK’den geri çevrilen 21682 görsel/model/ses kaynağı özgün kaynak ve görünüm doğrulamasını bekliyor.",
+    "Özgün arayüz akışlarının görüntü ve etkileşim doğrulaması tamamlanmış ve kanıtlanmış değil.",
+    "Etkileşimli harita nesneleri ve mod hedefleri tamamlanmış ve kanıtlanmış değil.",
+    "UV/yüzey eşleşmeli çalışma zamanı aydınlatması tamamlanmış ve kanıtlanmış değil.",
+    "Gerçek hesap/oda/maç ve yetkili envanter hizmetleri tamamlanmış ve kanıtlanmış değil.",
+    "Android kurulum, imza devamlılığı ve cihaz performansı tamamlanmış ve kanıtlanmış değil."
+  ]
+}

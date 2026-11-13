@@ -1,0 +1,454 @@
+{
+  "maps": {
+    "26": {
+      "geometrySha256": "c71b34e44515f9fcba94df6e6c7fa62259d0b36f9380be03efe250d7797197cd",
+      "objectsSha256": "324499d24849fe6acdbd6a398cccdf95b4cd669e555204e3d32aec8c64cb0532",
+      "sites": [
+        {
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            -5.4918203125,
+            2.38907275390625,
+            -47.26071875
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 213.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "WBombArea0",
+              "Pos": [
+                -343.23876953125,
+                149.317047119141,
+                2953.794921875
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 7716267.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            33.0841796875,
+            2.03707275390625,
+            6.37128125
+          ],
+          "radius": 4.0,
+          "sourceObject": {
+            "declaredBytes": 213.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "WBombArea1",
+              "Pos": [
+                2067.76123046875,
+                127.317047119141,
+                -398.205078125
+              ],
+              "Radius": 250.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 7716482.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "acb33a0eda970243ce377b02088925882ef0544117f2aa2e96cd8bb978592283"
+    },
+    "31": {
+      "geometrySha256": "ceb14918241a10770e3cadac87c2caa60d3ff1f6646bf65d639aadece260b857",
+      "objectsSha256": "ba169e845d2fb6096f69a4881adefea1b36ca71855a12a0df4b3ab5c764a9019",
+      "sites": [
+        {
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            -50.8160078125,
+            -43.824,
+            -41.456
+          ],
+          "radius": 4.8,
+          "sourceObject": {
+            "declaredBytes": 221.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea00",
+              "Pos": [
+                -3176.00048828125,
+                -2739.0,
+                2591.0
+              ],
+              "Radius": 300.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1577213.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            -71.5200078125,
+            -44.032,
+            30.43200390625
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 220.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea0",
+              "Pos": [
+                -4470.00048828125,
+                -2752.0,
+                -1902.00024414062
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1577436.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "1bc264a0e0fffbe895851ee676f8d32fe6760559863a699e613b734cc59a27bd"
+    },
+    "42": {
+      "geometrySha256": "6bed8b0fbd91a5b5b41ebad78831bf05c502d40c0807daa8b207bb702a5ceae8",
+      "objectsSha256": "8f53f5538f9ebc34de74668e4a35749edff934443b8e1970f45ac3a562a6166a",
+      "sites": [
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            -30.241421875,
+            18.45488671875,
+            29.169318359375
+          ],
+          "radius": 1.6,
+          "sourceObject": {
+            "declaredBytes": 206.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "b01",
+              "Pos": [
+                -1890.0888671875,
+                1153.43041992188,
+                -1823.08239746094
+              ],
+              "Radius": 100.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1071320.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "approach": [
+            18.6263198852539,
+            12.1071863174438,
+            38.1419258117676
+          ],
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            16.862578125,
+            13.04688671875,
+            37.8733203125
+          ],
+          "radius": 2.08,
+          "sourceObject": {
+            "declaredBytes": 205.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "b2",
+              "Pos": [
+                1053.9111328125,
+                815.430419921875,
+                -2367.08251953125
+              ],
+              "Radius": 130.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1071528.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "0f870a37c98647b95a4cdcdefde0129569ddf1a34f34c258ffebf0b140a80370"
+    },
+    "44": {
+      "geometrySha256": "0c2fdd0f2b9a45b1a8f1234cc9cc69d205d616a5d9ef52cfa9e893d7105d18eb",
+      "objectsSha256": "36ebffb3aaf40df16f8355d2a9f3f7597d44706fa0cf91ca70a72f63dbf00fa3",
+      "sites": [
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            6.144,
+            32.32,
+            15.7715703125
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 220.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea1",
+              "Pos": [
+                384.0,
+                2020.0,
+                -985.72314453125
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1785008.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            3.648,
+            24.848,
+            69.9155703125
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 220.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea0",
+              "Pos": [
+                228.0,
+                1553.0,
+                -4369.72314453125
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1785230.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "82964c307de1684cc5f4a35ef5ec6cf5ff588ff128602a92d026b1f2433fff8c"
+    },
+    "87": {
+      "geometrySha256": "0edf5e547d2ba367b3e976c686cd96bfbe37c7005b38874f693e0beb264e51eb",
+      "objectsSha256": "da5e18a2e317b64d031c6144bfa13c074fce5af7f0ee19f3c943de9ae43037ad",
+      "sites": [
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            0.0,
+            6.656,
+            -0.768
+          ],
+          "radius": 2.88,
+          "sourceObject": {
+            "declaredBytes": 220.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea0",
+              "Pos": [
+                0.0,
+                416.0,
+                48.0
+              ],
+              "Radius": 180.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 421613.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            -25.6,
+            0.0,
+            -20.48
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 220.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Props\\Models\\BattleStation_Body.ltb",
+              "Name": "WBombArea1",
+              "Pos": [
+                -1600.0,
+                0.0,
+                1280.0
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 421835.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "0cd9546625a3b58815d9df3c5b7d0cb4f5779b279b63362374c69c5650b1a445"
+    },
+    "89": {
+      "geometrySha256": "54aaac746e6545ffb37f32f89331a60787de21804b94884fe3858aa53de3d0ea",
+      "objectsSha256": "94519dde2ba9ddb9458e2244beefd656b4fef815f3c2e48cf6279c8326a850b7",
+      "sites": [
+        {
+          "id": 0.0,
+          "name": "A",
+          "position": [
+            -28.672,
+            3.072,
+            28.128
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 213.0,
+            "properties": {
+              "BombAreaID": 0.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "WBombArea0",
+              "Pos": [
+                -1792.0,
+                192.0,
+                -1758.0
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1225216.0,
+            "type": "WBombArea"
+          }
+        },
+        {
+          "id": 1.0,
+          "name": "B",
+          "position": [
+            19.744,
+            8.704,
+            2.816
+          ],
+          "radius": 3.2,
+          "sourceObject": {
+            "declaredBytes": 213.0,
+            "properties": {
+              "BombAreaID": 1.0,
+              "Filename": "WT_Models\\Bombarea\\mainarea.ltb",
+              "Name": "WBombArea1",
+              "Pos": [
+                1234.0,
+                544.0,
+                -176.0
+              ],
+              "Radius": 200.0,
+              "RenderGroup": 0.0,
+              "Rotation": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "sourceOffset": 1225431.0,
+            "type": "WBombArea"
+          }
+        }
+      ],
+      "sourceWorldSha256": "9ad8e8cc761285fce303555a2ebf1ec87aae21f0e8e168c2065381ae8ec3e38b"
+    }
+  },
+  "mobileTuning": {
+    "betweenRoundsSeconds": 4.0,
+    "defuseSeconds": 5.0,
+    "fuseSeconds": 40.0,
+    "plantSeconds": 3.0
+  },
+  "scope": "Exact WBombArea positions/radii and source mode win/time choices; interaction durations and bot objective policy are explicit offline tuning, not recovered server constants."
+}

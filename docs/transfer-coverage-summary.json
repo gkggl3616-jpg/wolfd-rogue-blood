@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "archiveEntries": 74967,
+  "declaredUnpackedBytesIncludingRepeatedTrees": 19660017682,
+  "topLevelTrees": {
+    "models": 5,
+    "wt_models": 24,
+    "wt_chars": 3881,
+    "wolfteam kurtları": 39875,
+    "texfx": 27,
+    "worlds": 19,
+    "wt_backpacks": 52,
+    "wt_charparts": 994,
+    "wt_env": 7,
+    "wt_fx": 1867,
+    "wt_guns": 2444,
+    "wt_interface": 19249,
+    "wt_pride": 2095,
+    "wt_props": 20,
+    "wt_tex": 3923,
+    "wt_texfx": 15,
+    "fx": 469,
+    "QO": 1
+  },
+  "catalogueLinkedSourceEntries": 38877,
+  "fullGameReady": false,
+  "fileStageMeaning": "Stages require proof for the whole file; item-specific work is in mobile validation reports.",
+  "sourceSha256Entries": 74967,
+  "sourceSha256InventoryComplete": true,
+  "catalogueClaimMatchingEntries": 38877,
+  "catalogueClaimDifferingEntries": 0,
+  "originalUnpublishedWindowsChangesAvailable": false
+}

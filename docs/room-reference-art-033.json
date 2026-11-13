@@ -1,0 +1,46 @@
+{
+  "source": "User-supplied 33-minute PC reference; retained source frame near 00:12",
+  "method": "Lossless crops of the retained reference still; no generated replacement art.",
+  "scope": "Showcase illustrations and normal-rule icon. Original box prices, PC drop tables and sale entitlements are not implemented. Showcase links to existing offline cosmetic-box catalogue.",
+  "assets": [
+    {
+      "asset": "godot/assets/ui/room_showcase/mitro.png",
+      "sha256": "d3aba78d6c9e299892c21f83a6904ea4db4ee3d25b546f7f688e713685fe524a",
+      "sourceFrame": "docs/review/video-reference/room-at-0012-026.png",
+      "sourceFrameSha256": "929f664fbf72b88d5ac9c486b200ac15b424f2ee6b18bb209aea6a6bf984f089",
+      "cropXYXY": [
+        380,
+        207,
+        509,
+        238
+      ],
+      "resampledPixels": false
+    },
+    {
+      "asset": "godot/assets/ui/room_showcase/fullmoon.png",
+      "sha256": "5071b835c1d76081a550f0b0b34ea7ee166f3967e4b680da5afa70897eca9d3a",
+      "sourceFrame": "docs/review/video-reference/room-at-0012-026.png",
+      "sourceFrameSha256": "929f664fbf72b88d5ac9c486b200ac15b424f2ee6b18bb209aea6a6bf984f089",
+      "cropXYXY": [
+        510,
+        207,
+        639,
+        238
+      ],
+      "resampledPixels": false
+    },
+    {
+      "asset": "godot/assets/ui/room_showcase/normal.png",
+      "sha256": "c11471bd640ed57af1aab8f842c36ba9d1e27a3458f27a55d372c4ea82d1c2da",
+      "sourceFrame": "docs/review/video-reference/room-at-0012-026.png",
+      "sourceFrameSha256": "929f664fbf72b88d5ac9c486b200ac15b424f2ee6b18bb209aea6a6bf984f089",
+      "cropXYXY": [
+        505,
+        59,
+        521,
+        74
+      ],
+      "resampledPixels": false
+    }
+  ]
+}

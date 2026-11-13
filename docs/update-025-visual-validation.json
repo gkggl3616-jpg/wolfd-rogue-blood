@@ -1,0 +1,80 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "owned-pack-ft-inactive-025",
+      "path": "docs/review/update-025/owned-pack-ft-inactive-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1ac624d52eecc3b1e94153155890840b99e5bca8d6bf64d4b17ec2d0d69456ed"
+    },
+    {
+      "height": 720,
+      "name": "ft-active-health-cost-025",
+      "path": "docs/review/update-025/ft-active-health-cost-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a11d8aa717bf226067ad389586ce35035d321647722331fc5720c5205d33ec55"
+    },
+    {
+      "height": 720,
+      "name": "ft-running-original-clip-025",
+      "path": "docs/review/update-025/ft-running-original-clip-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1258adb4230c1ccb8fbddc4df95beabf2c1d2af565c51a337e6d3f27ce81df48"
+    },
+    {
+      "height": 720,
+      "name": "first-aid-and-ft-025",
+      "path": "docs/review/update-025/first-aid-and-ft-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f379c2bdf3cb11f105dba3ede4792f39729a9e725b14badc3bb470f3248053fe"
+    },
+    {
+      "height": 720,
+      "name": "ft-expired-no-hand-glow-025",
+      "path": "docs/review/update-025/ft-expired-no-hand-glow-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "9e7853979d44aa83578dca337eae2d2791909eac8061fa589c13a72b3eb9afbd"
+    },
+    {
+      "height": 720,
+      "name": "first-aid-per-life-limit-025",
+      "path": "docs/review/update-025/first-aid-per-life-limit-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "7ef3ea6e6ebcf5684ef85c623778b67e986474b350da29db5b9203fc1b6c0dde"
+    },
+    {
+      "height": 720,
+      "name": "same-energy-pack-reused-025",
+      "path": "docs/review/update-025/same-energy-pack-reused-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4c44f4b23a9726f5656e0e94ff0fc6000ccf39f78215bca2bd196ef10f2c067a"
+    },
+    {
+      "height": 720,
+      "name": "ak-original-flash-socket-before-025",
+      "path": "docs/review/update-025/ak-original-flash-socket-before-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d384e6d7a7bb7d7dd1777f47eb25757a06c5dc28bd9503f43eb0fa020da47ef4"
+    },
+    {
+      "height": 720,
+      "name": "ak-original-muzzle-flash-025",
+      "path": "docs/review/update-025/ak-original-muzzle-flash-025.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c2df31d615113573871df325c51841954cd7611e9338a0500aa25a1b587069de"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

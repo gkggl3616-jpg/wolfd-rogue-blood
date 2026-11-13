@@ -1,0 +1,186 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "source-lobby-empty",
+      "path": "docs/review/update-032/source-lobby-empty-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "a6c5a9e8a75293e79ddef3d05aa23a38593f49694b66b63a5979797d71bd272d"
+    },
+    {
+      "height": 720,
+      "name": "source-create-over-lobby",
+      "path": "docs/review/update-032/source-create-over-lobby-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5c02eef2cfb18599a3f6174b7305c1efbf7e5cc4051d82a0087e5305432930ec"
+    },
+    {
+      "height": 720,
+      "name": "source-creator-private-password",
+      "path": "docs/review/update-032/source-creator-private-password-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "bb6759080953b2557b217209a6c7f2fc732b0a3b744781e5b404bc55cdc37882"
+    },
+    {
+      "height": 720,
+      "name": "creator-context-bot-options",
+      "path": "docs/review/update-032/creator-context-bot-options-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "fefb127e45a2821b5576c3406786ca59fd8bfdbd370364f6a60c0e7f5b29bf59"
+    },
+    {
+      "height": 720,
+      "name": "source-creator-map-gallery",
+      "path": "docs/review/update-032/source-creator-map-gallery-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "662cec94ceb69826b3d05283d6d9ac61a4d07956a8e0d8eeca4208ba4a5c9124"
+    },
+    {
+      "height": 720,
+      "name": "source-colored-team-room",
+      "path": "docs/review/update-032/source-colored-team-room-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "427eca0a39c8d777e4f4dc5a245171d3ee5adcbcb0814552f4f9ca8db3666bf2"
+    },
+    {
+      "height": 720,
+      "name": "source-lobby-selected-native-details",
+      "path": "docs/review/update-032/source-lobby-selected-native-details-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d99b4846f7b26641a78a4950adcdd83270ea2cfa42d72b40186c0b2c361229c2"
+    },
+    {
+      "height": 720,
+      "name": "source-destruction-creator",
+      "path": "docs/review/update-032/source-destruction-creator-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2ba30a45e759c68099276ca679cafaa95b68c20ec7389933ce7d197b76584306"
+    },
+    {
+      "height": 720,
+      "name": "source-destruction-room-rules",
+      "path": "docs/review/update-032/source-destruction-room-rules-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "c1a92f67ea3a53d077c8f1f8dc8ae65e14b007ff0ada9132dc706f787cc18b57"
+    },
+    {
+      "height": 720,
+      "name": "source-lobby-two-real-rooms",
+      "path": "docs/review/update-032/source-lobby-two-real-rooms-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "89516fcd4dc67811428803aafa79cdb884b5aa19acd2ad248a226fba107c3660"
+    },
+    {
+      "height": 720,
+      "name": "source-select-without-entering",
+      "path": "docs/review/update-032/source-select-without-entering-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "73e21699be004458d7b282a3ad523c4ca2601080f2fdfa50ea78f8f520154c03"
+    },
+    {
+      "height": 720,
+      "name": "source-password-room-entry",
+      "path": "docs/review/update-032/source-password-room-entry-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e893ea983799a71cbbb390d7420027d4509c1a64ff5be90d7a5ddac7bbc68702"
+    },
+    {
+      "height": 720,
+      "name": "source-wrong-password-keeps-lobby",
+      "path": "docs/review/update-032/source-wrong-password-keeps-lobby-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d7c0a252c53e6df1705f5960ae54b8985870603b1e0576f85e43c0dd8c8243f0"
+    },
+    {
+      "height": 720,
+      "name": "source-enter-selected-room",
+      "path": "docs/review/update-032/source-enter-selected-room-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "427eca0a39c8d777e4f4dc5a245171d3ee5adcbcb0814552f4f9ca8db3666bf2"
+    },
+    {
+      "height": 720,
+      "name": "source-room-settings",
+      "path": "docs/review/update-032/source-room-settings-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8af8f2b9a54f7730b12a64fabd29068f78571354611d5e6c23b6df3d81974568"
+    },
+    {
+      "height": 720,
+      "name": "source-cancel-settings-preserves-room",
+      "path": "docs/review/update-032/source-cancel-settings-preserves-room-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "427eca0a39c8d777e4f4dc5a245171d3ee5adcbcb0814552f4f9ca8db3666bf2"
+    },
+    {
+      "height": 540,
+      "name": "source-lobby-phone-960",
+      "path": "docs/review/update-032/source-lobby-phone-960-032.png",
+      "saved": true,
+      "width": 960,
+      "sha256": "50af248939bd08d4cebe21d44fa9071c8ee40b1c279591e4c40c895545fad262"
+    },
+    {
+      "height": 540,
+      "name": "source-room-phone-960",
+      "path": "docs/review/update-032/source-room-phone-960-032.png",
+      "saved": true,
+      "width": 960,
+      "sha256": "fa57dd753450c36832809cbe9bf1f455690c6279948a483915166602e147eded"
+    },
+    {
+      "height": 992,
+      "name": "source-creator-wide-2160",
+      "path": "docs/review/update-032/source-creator-wide-2160-032.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "3e0b91d31f844e6e692ceac7b8b407b01be0fd3a4df57c7506216789d0210fca"
+    },
+    {
+      "height": 720,
+      "name": "source-sixteen-room-page",
+      "path": "docs/review/update-032/source-sixteen-room-page-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2cc1419300bea7b0c25b0fb0c047e92f340e80ebd513c2f67e790e7123db436e"
+    },
+    {
+      "height": 720,
+      "name": "source-filter-real-room-configurations",
+      "path": "docs/review/update-032/source-filter-real-room-configurations-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "b05ab630c1c7f76cb17cbf4e9c57ecfa91c14abada9dce84843d5d3103b0b8f6"
+    },
+    {
+      "height": 720,
+      "name": "source-header-consistent-inventory",
+      "path": "docs/review/update-032/source-header-consistent-inventory-032.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "32a4135645aaefa5cbcb2ec96bc49f5e67c48078bb24dfa3c28f6f1a4890f09b"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "scope": "Real native lobby/create/room states. Directory pagination contains configurations explicitly created by the QA fixture, never remote players. All geometry uses source1024x768 coordinates. Password inputs are masked. Full PC parity is not asserted.",
+  "sourcePageAssertions": true,
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

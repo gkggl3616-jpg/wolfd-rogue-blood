@@ -1,0 +1,138 @@
+{
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "captures": [
+    {
+      "height": 720,
+      "name": "entry-012",
+      "path": "docs/review/pc-reference/entry-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5d9096c6bcdb1894d72f6bf28cb191fb418ba9f962e65e41a8aa974df7674ba5"
+    },
+    {
+      "height": 720,
+      "name": "second-password-012",
+      "path": "docs/review/pc-reference/second-password-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ebd9b675bad8ccebfd606418c356d98a21a28bb2bad662e86d99eedcbaea1ba8"
+    },
+    {
+      "height": 720,
+      "name": "rank-catalogue-012",
+      "path": "docs/review/pc-reference/rank-catalogue-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2345ab1de82cb39f7e926675d53dcc9f3598df573ae3809bcbc380d7223d264d"
+    },
+    {
+      "height": 720,
+      "name": "toolbar-missions-012",
+      "path": "docs/review/pc-reference/toolbar-missions-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1de41524cbfa78908e4ac2d86f981f543759fe714cddd101a8c06c31b50ef50e"
+    },
+    {
+      "height": 720,
+      "name": "local-missions-012",
+      "path": "docs/review/pc-reference/local-missions-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "1de41524cbfa78908e4ac2d86f981f543759fe714cddd101a8c06c31b50ef50e"
+    },
+    {
+      "height": 720,
+      "name": "map-photo-gallery-012",
+      "path": "docs/review/pc-reference/map-photo-gallery-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "662cec94ceb69826b3d05283d6d9ac61a4d07956a8e0d8eeca4208ba4a5c9124"
+    },
+    {
+      "height": 720,
+      "name": "room-map-photo-rank-012",
+      "path": "docs/review/pc-reference/room-map-photo-rank-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "5b8519d7a3003bf0ced966ea2378da9c4092293a0999bc671b52c65c9d1d832e"
+    },
+    {
+      "height": 720,
+      "name": "wolf-tattoo-slots-012",
+      "path": "docs/review/pc-reference/wolf-tattoo-slots-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "f25028ed019475b41ae35ed473fc9e2c28f9a4cff82ef4bfbaee6e747c5f6dbf"
+    },
+    {
+      "height": 720,
+      "name": "box-inventory-012",
+      "path": "docs/review/pc-reference/box-inventory-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "eb2b260f12f11be2981d9e0b6c7cee0d3b41e4e30e6cb586896769e2749563c3"
+    },
+    {
+      "height": 720,
+      "name": "box-opening-012",
+      "path": "docs/review/pc-reference/box-opening-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "046ffa58aecd5458d378bea31a6ef5b023485bfc5ae9d34908546d8749fa4791"
+    },
+    {
+      "height": 720,
+      "name": "box-reward-012",
+      "path": "docs/review/pc-reference/box-reward-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8269ecf8befce37d7ba86dba63c84fd83551763f8deb90f0ef2560707e48f062"
+    },
+    {
+      "height": 720,
+      "name": "hunt-wolf-012",
+      "path": "docs/review/pc-reference/hunt-wolf-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0a2643a3a0808dc17aa73e6803f55cbea55acba6aa8afab3bdd617901f4be94d"
+    },
+    {
+      "height": 720,
+      "name": "match-scoreboard-012",
+      "path": "docs/review/pc-reference/match-scoreboard-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "03a0d302ff951b636b2afc5581cb0ec274301b785e6b838184ed3cad88b5c633"
+    },
+    {
+      "height": 720,
+      "name": "tutorial-012",
+      "path": "docs/review/pc-reference/tutorial-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8bf8745c2c2fdc0dfb19eb4ddacebb9c476684945e3042edd40b5c9ac59cfcb6"
+    },
+    {
+      "height": 720,
+      "name": "sniper-scope-012",
+      "path": "docs/review/pc-reference/sniper-scope-012.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2070e5ae1cf2c069152a7b9677461110ea99a8b64c268f9961b1bcf8c3ed8d7f"
+    },
+    {
+      "height": 768,
+      "name": "map-photo-gallery-native-012",
+      "path": "docs/review/pc-reference/map-photo-gallery-native-012.png",
+      "saved": true,
+      "width": 1024,
+      "sha256": "7de776baf18adb0a6159ac21b4a7503e33209c1f2453cd5efa2e199e65da3b88"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "testFixtureLocalCash": 1000,
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

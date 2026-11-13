@@ -1,0 +1,62 @@
+{
+  "zipIntegrityVerified": true,
+  "entries": 54406,
+  "runtimeReferencesResolved": 23424,
+  "cataloguesVerified": 41,
+  "nativeLibraries": [
+    {
+      "abi": "arm64-v8a",
+      "elfMachine": 183,
+      "loadSegmentAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "supports16KiBPages": true
+    },
+    {
+      "abi": "armeabi-v7a",
+      "elfMachine": 40,
+      "loadSegmentAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "supports16KiBPages": false
+    },
+    {
+      "abi": "x86_64",
+      "elfMachine": 62,
+      "loadSegmentAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "supports16KiBPages": true
+    }
+  ],
+  "package": "com.wolfrogue.blood.offline.test",
+  "versionCode": 27,
+  "versionName": "0.27.0-offline",
+  "bytes": 1573507390,
+  "sha256": "c5cc9b89f27da321beb9b6ca72e93228b9223b50549d15da72a287a938d23d0f",
+  "signerCertificateSha256": "f29170a001521af038b31a36b94c06a0553d17e97246a03190206a111eff87f6",
+  "minimumAndroidSdk": 24,
+  "targetAndroidSdk": 36,
+  "permissions": [],
+  "internetPermissionRequested": false,
+  "signatureVerified": true,
+  "signatureV2": true,
+  "signatureV3": true,
+  "zip16KiBAlignmentVerified": true,
+  "fullOriginalGamePort": false,
+  "physicalAndroidDeviceTested": false,
+  "androidEmulatorTested": false,
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8",
+  "scope": "Local bot matches, imported collection and PC-source UI; real servers excluded.",
+  "buildType": "signed-offline-release",
+  "apkProduced": true,
+  "artifact": "WolfRogueBlood-0.27.0-test.apk",
+  "parallelTestInstall": true,
+  "existingProductionInstallPreserved": true
+}

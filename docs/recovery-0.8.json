@@ -1,0 +1,83 @@
+{
+  "sourceRelease": "v0.8.0-test",
+  "apkBytes": 1580410151,
+  "apkSha256": "480a486ab173527bc98dc30da922c528c208432ddc1a5bc8a8a677b3f28a36ca",
+  "tool": "GDRE Tools 2.7.4",
+  "recoveredScripts": [
+    {
+      "path": "godot/scripts/content_book.gd",
+      "sha256": "d95b64caf7f91a6c38e11192ba56c948f64cede1270f51494a280c173c6ccd63"
+    },
+    {
+      "path": "godot/scripts/enemy.gd",
+      "sha256": "baee07517eddaf6f2621c569cc45620e20fca9bec94b8c700c81dc74366ad0fa"
+    },
+    {
+      "path": "godot/scripts/equipment.gd",
+      "sha256": "96f432d5c05839e733c59cf88b4ae1a1e2ec38d5ac9ee7104f97271bb570ef45"
+    },
+    {
+      "path": "godot/scripts/front_screens.gd",
+      "sha256": "50ce580a0b1287a1d771ec5fffa29c819fdad21c461db33df9a71066ed0c2a44"
+    },
+    {
+      "path": "godot/scripts/game.gd",
+      "sha256": "2dd9f4d6f8d85a25d0ca2bf7741d1733f9f3b02941bf000bf8a8ba368d6e7cb8"
+    },
+    {
+      "path": "godot/scripts/game_audio.gd",
+      "sha256": "0253b48a0c4b88d1b918a0f609605ca65fb913ae3b6a3d0f3684f127796ddae9"
+    },
+    {
+      "path": "godot/scripts/grenade.gd",
+      "sha256": "f1673cdf4739f570e0d749e1fb6e56e92f296580929f8eaa874e91eecd768698"
+    },
+    {
+      "path": "godot/scripts/launcher_screen.gd",
+      "sha256": "71aee1d2a999fdab5f5b4a46a6f253d44f50cc6fe88312941c7a75f05a597a9a"
+    },
+    {
+      "path": "godot/scripts/library_menu.gd",
+      "sha256": "c186c9ce18e885ba731810d1cf2312f374a29518392d82d3b394659e4dc8f7d6"
+    },
+    {
+      "path": "godot/scripts/lobby.gd",
+      "sha256": "4a7fe7d912871d360fc8ac7dd1f915f557dc342de807b307a56fd223e3ebc43e"
+    },
+    {
+      "path": "godot/scripts/map_catalog.gd",
+      "sha256": "01b850c97597e7aff1b3d8d94a7c5cdafd389cb579740c6fec954a5cf755bb7b"
+    },
+    {
+      "path": "godot/scripts/pc_collection.gd",
+      "sha256": "624a840e9092284cb22b7993b3193710c21071e6aadd77dcda4ac24a22037835"
+    },
+    {
+      "path": "godot/scripts/pc_hud.gd",
+      "sha256": "af2d1964a009300adc61611b12fea9681e32186ee8355d4f9f092838a6b0b446"
+    },
+    {
+      "path": "godot/scripts/pc_item_grid.gd",
+      "sha256": "b3ec004e7c017e3233359fca943ccaf5cc9e576ccdb7932d118083c69455bb4e"
+    },
+    {
+      "path": "godot/scripts/pc_layout.gd",
+      "sha256": "df1183d2c2d0f0994a95736d917f912b545999cf8d5b8c4bc85e2ef9b73a909a"
+    },
+    {
+      "path": "godot/scripts/player.gd",
+      "sha256": "b99cb7a52442c25a03af8ae09fbbbec8c6a8a2113e9580fa124d56b795d42089"
+    },
+    {
+      "path": "godot/scripts/roar_effect.gd",
+      "sha256": "5297436bd199b2fb2305ea71fcb93424ae78eef36119523f5dc45d58c055e773"
+    },
+    {
+      "path": "godot/scripts/touch.gd",
+      "sha256": "c23e95df081dd8f561c504ee41137180f7349252ce9952c0e6d6aa6dba6d3fd8"
+    }
+  ],
+  "originalUnpublishedChangesRecovered": false,
+  "originalSourceBytesPreserved": false,
+  "note": "Scripts decompiled from the published bytecode; formatting and comments are not the original source. Imported assets recovered separately require fresh validation."
+}

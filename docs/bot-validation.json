@@ -1,0 +1,16 @@
+{
+  "actualShotDamageByDifficulty": [
+    8,
+    8,
+    8
+  ],
+  "checks": 65,
+  "originalPcBotImplementation": false,
+  "passed": true,
+  "physicalAndroidDeviceTested": false,
+  "profileRatings": [
+    80,
+    95,
+    110
+  ]
+}

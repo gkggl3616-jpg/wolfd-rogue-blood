@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "number": 1,
+      "drive_id": "1ULyjKuiP2SWVDBvRr9S1YIPOPpeh_HCl",
+      "source_url": "https://drive.google.com/file/d/1ULyjKuiP2SWVDBvRr9S1YIPOPpeh_HCl/view",
+      "title": "videoplayback (2).mp4 - Google Drive",
+      "bytes": 65246717,
+      "sha256": "0bc459127614bc720574adb2885e2de4d1a72a835873bf5f717cafee0f1a660c",
+      "duration": 714.803084,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_frames": "21444",
+          "duration": "714.800000"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "width": null,
+          "height": null,
+          "r_frame_rate": "0/0",
+          "nb_frames": "30784",
+          "duration": "714.803084"
+        }
+      ],
+      "success": true
+    },
+    {
+      "number": 2,
+      "drive_id": "13klq5IIndOsdb0yukmQOq0YsGkW6ku27",
+      "source_url": "https://drive.google.com/file/d/13klq5IIndOsdb0yukmQOq0YsGkW6ku27/view",
+      "title": "videoplayback (1).mp4 - Google Drive",
+      "bytes": 134010083,
+      "sha256": "46a235e3d19da93a33aa1db210e0c57880861815fb8b6c45328bba76b7632919",
+      "duration": 1989.485714,
+      "streams": [
+        {
+          "index": 0,
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_frames": "59681",
+          "duration": "1989.366667"
+        },
+        {
+          "index": 1,
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "width": null,
+          "height": null,
+          "r_frame_rate": "0/0",
+          "nb_frames": "42840",
+          "duration": "1989.485714"
+        }
+      ],
+      "success": true
+    }
+  ],
+  "visualReview": {
+    "fullStreamsDecoded": true,
+    "timelineStepSeconds": 2,
+    "contactSheetsViewed": 22,
+    "denseMotionFramesPerSecond": 8,
+    "denseMotionIntervals": [
+      {
+        "video": 1,
+        "start": 91,
+        "end": 93,
+        "content": "roar"
+      },
+      {
+        "video": 2,
+        "start": 41,
+        "end": 43,
+        "content": "run/jump/wall contact"
+      },
+      {
+        "video": 2,
+        "start": 51,
+        "end": 53,
+        "content": "ice/hit/air attack"
+      }
+    ],
+    "nativeResolution": [
+      640,
+      360
+    ],
+    "fullSpeedPlaybackClaimed": false,
+    "audioDecoded": true,
+    "auditoryParityVerified": false,
+    "cameraMeasurement": {
+      "sourceVideo": 1,
+      "timeSeconds": 90,
+      "approximateWolfScreenHeightRange": [
+        0.17,
+        0.28
+      ],
+      "adapterDistance": 6.2,
+      "adapterTargetHeight": 1.0,
+      "exactCameraEngineValuesVerified": false
+    }
+  },
+  "proofFrames": [
+    {
+      "video": 1,
+      "timeSeconds": 92,
+      "path": "docs/review/video-reference/new-wolf-roar-01m32.png"
+    },
+    {
+      "video": 1,
+      "timeSeconds": 260,
+      "path": "docs/review/video-reference/new-purple-run-04m20.png"
+    },
+    {
+      "video": 1,
+      "timeSeconds": 688,
+      "path": "docs/review/video-reference/new-wolf-win-11m28.png"
+    },
+    {
+      "video": 2,
+      "timeSeconds": 12,
+      "path": "docs/review/video-reference/new-wolf-room-00m12.png"
+    },
+    {
+      "video": 2,
+      "timeSeconds": 42,
+      "path": "docs/review/video-reference/new-wolf-wall-jump-00m42.png"
+    },
+    {
+      "video": 2,
+      "timeSeconds": 51,
+      "path": "docs/review/video-reference/new-wolf-frost-00m51.png"
+    },
+    {
+      "video": 2,
+      "timeSeconds": 344,
+      "path": "docs/review/video-reference/new-wolf-result-05m44.png"
+    },
+    {
+      "video": 2,
+      "timeSeconds": 930,
+      "path": "docs/review/video-reference/new-taksim-loading-15m30.png"
+    },
+    {
+      "video": 1,
+      "timeSeconds": 90,
+      "path": "docs/review/video-reference/new-standing-wolf-01m30.png"
+    }
+  ],
+  "scope": {
+    "fullPcParity": false,
+    "modernOgSkinIdentityVerified": false,
+    "freezeGameplayRulesVerified": false,
+    "purpleHandGlowAssignment": "SUPERSEDED in 0.25: item 16018 assignment was wrong. Original wolf_Hand_glowL/R now require successful active energy/FT; ownership alone never activates them."
+  },
+  "correction": "See video-audit-025.json and PC_REFERANS_025.md."
+}

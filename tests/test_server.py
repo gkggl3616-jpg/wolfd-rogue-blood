@@ -72,7 +72,7 @@ class HTTPTests(unittest.TestCase):
         status,raw=self.request('/maps.json')
         self.assertEqual(status,200)
         catalog=json.loads(raw)
-        self.assertEqual(len(catalog['maps']),19)
+        self.assertEqual(len(catalog['maps']),34)
         self.assertFalse(any(m['enabled'] for m in catalog['maps']))
     def test_origin_and_token(self):
         self.assertEqual(self.request('/api/players',{'name':'Bad'})[0],403)

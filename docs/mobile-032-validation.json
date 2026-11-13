@@ -1,0 +1,7 @@
+{
+  "checks": 51,
+  "failures": [],
+  "passed": true,
+  "physicalAndroidDeviceTested": false,
+  "scope": "Native lobby/create/room flow, fixed PC header, real touch events, source panel bindings, local directory/password persistence and transactional failure paths"
+}

@@ -1,0 +1,38 @@
+{
+  "url": "https://vt.tiktok.com/ZSpYRNoHt/",
+  "resolved": "https://www.tiktok.com/@wolftimemobile/video/7704381905512172807",
+  "videoId": "7704381905512172807",
+  "durationSeconds": 54.565442,
+  "videoSize": [
+    1080,
+    1920
+  ],
+  "gameplayCrop": [
+    0,
+    712,
+    1080,
+    496
+  ],
+  "sha256": "b5d97f57c0e6af66255861256e9e8cebb29050c2736c81544064db88cdc7a669",
+  "observed": [
+    "Centered third-person wolf camera and first-person human view",
+    "Compact top score/timer, red lower-left health, upper-right radar",
+    "Left joystick and small right action targets"
+  ],
+  "userOverrides": [
+    "Use the existing 19 maps; do not add Giris or Iki Tapinak",
+    "Round image buttons replace the reference hexagonal buttons",
+    "New local difficulty bots are separately requested; no reference bot code was available"
+  ],
+  "excluded": [
+    "TikTok caption and black bars",
+    "Custom SP/debug values and fabricated team counts",
+    "Turu kazandiniz banner as an original PC feature"
+  ],
+  "screenshots": [
+    "docs/review/gameplay/reference-wolf.jpg",
+    "docs/review/gameplay/reference-human.jpg"
+  ],
+  "pixelEquivalenceValidated": false,
+  "originalPcSourceCodeAvailable": false
+}

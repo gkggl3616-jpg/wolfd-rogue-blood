@@ -1,0 +1,448 @@
+[
+  {
+    "id": "482fba01-ce78-4fbe-b695-ebd6408a89b7",
+    "video_input_id": null,
+    "youtube_url": "https://youtu.be/__oWuPcF2Gw",
+    "status": "completed",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": [
+      {
+        "audio": "A rhythmic pop music track with a driving beat and synthesized elements begins.",
+        "label": "Opening Hook",
+        "visual": "A screen recording shows the Bandicam interface open on a Windows desktop. An error message appears saying that sound couldn't be captured. The user's mouse moves and clicks 'OK' to dismiss the alert. The desktop wallpaper is dark and cluttered with various icons for games and apps.",
+        "shot_type": "Close-Up",
+        "scene_number": 1,
+        "timestamp_end": "0:03",
+        "timestamp_start": "0:00"
+      },
+      {
+        "audio": "The pop music continues at a consistent volume and tempo.",
+        "label": "Usage Scenarios",
+        "visual": "The Bandicam window is minimized and the user's desktop is briefly shown before the screen cuts to black as a game starts to load.",
+        "shot_type": "Wide Shot",
+        "scene_number": 2,
+        "timestamp_end": "0:05",
+        "timestamp_start": "0:03"
+      },
+      {
+        "audio": "The driving pop music continues, providing a consistent energy for the gameplay footage.",
+        "label": "Product Information",
+        "visual": "The video game Wolfteam loads into the lobby. The screen shows the various menus and icons of the game's interface. The user moves their mouse over different options like 'Join' and 'Create Room'.",
+        "shot_type": "Wide Shot",
+        "scene_number": 3,
+        "timestamp_end": "0:15",
+        "timestamp_start": "0:05"
+      },
+      {
+        "audio": "The pop track continues with its upbeat and synthesized rhythm.",
+        "label": "Usage Scenarios",
+        "visual": "The user continues to navigate the Wolfteam lobby, clicking through several menus. They eventually click the 'Create Room' button and a new window pops up to select room settings.",
+        "shot_type": "Wide Shot",
+        "scene_number": 4,
+        "timestamp_end": "0:25",
+        "timestamp_start": "0:15"
+      },
+      {
+        "audio": "The pop music continues to play in the background.",
+        "label": "Usage Scenarios",
+        "visual": "In the game's room creation menu, the user interacts with several drop-down menus. They select game modes and other options. The cursor moves quickly between the various settings.",
+        "shot_type": "Wide Shot",
+        "scene_number": 5,
+        "timestamp_end": "0:40",
+        "timestamp_start": "0:25"
+      },
+      {
+        "audio": "The energetic pop music continues.",
+        "label": "Usage Scenarios",
+        "visual": "The user is still in the game's room creation menu, but now they are selecting a map from a long list. They scroll through the options before finally selecting one.",
+        "shot_type": "Wide Shot",
+        "scene_number": 6,
+        "timestamp_end": "0:55",
+        "timestamp_start": "0:40"
+      },
+      {
+        "audio": "The music continues with its consistent driving beat.",
+        "label": "Usage Scenarios",
+        "visual": "After selecting the map, the user continues to adjust other room settings. They click through several more menus, eventually setting the maximum number of players and other match parameters.",
+        "shot_type": "Wide Shot",
+        "scene_number": 7,
+        "timestamp_end": "1:10",
+        "timestamp_start": "0:55"
+      },
+      {
+        "audio": "The pop track continues at its initial tempo and volume.",
+        "label": "Usage Scenarios",
+        "visual": "The user clicks through the lobby's menu one last time. They open a 'Invite' window and a list of online players is shown. They hover the mouse over several names but don't select any.",
+        "shot_type": "Wide Shot",
+        "scene_number": 8,
+        "timestamp_end": "1:25",
+        "timestamp_start": "1:10"
+      },
+      {
+        "audio": "The music continues to play until the end of the video.",
+        "label": "Call to Action",
+        "visual": "The game is closed and the desktop is shown again. The user opens the Windows start menu, clicks through several programs, and then re-opens the Bandicam interface.",
+        "shot_type": "Close-Up",
+        "scene_number": 9,
+        "timestamp_end": "1:32",
+        "timestamp_start": "1:25"
+      }
+    ]
+  },
+  {
+    "id": "73ebfdde-dcc2-44dc-ae21-a04e056e6bbd",
+    "video_input_id": null,
+    "youtube_url": "https://youtu.be/69bvD-Q09e8",
+    "status": "completed",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": [
+      {
+        "audio": "Upbeat, rhythmic electronic music with a moderate tempo and high-energy synthesizers. Faint ambient clicking sounds from user navigation are audible.",
+        "label": "Opening Hook",
+        "visual": "A computer screen displaying the main lobby of the first-person shooter game 'Wolfteam'. The interface is dark grey and metallic. The scene is static, showing the room list, user profile details, and a rotating advertisement carousel on the right side featuring game events and items. Lighting is digital and flat with a cool temperature.",
+        "shot_type": "Wide Shot",
+        "scene_number": 1,
+        "timestamp_end": "0:04",
+        "timestamp_start": "0:00"
+      },
+      {
+        "audio": "Continuous electronic background music. Sharp digital 'click' sound effects occur when the mouse interacts with buttons.",
+        "label": "Usage Scenarios",
+        "visual": "The screen remains on the lobby interface. A mouse cursor moves across the screen to click various tabs. The advertisement panel on the right scrolls through different banners, including one featuring a male character with short dark hair and military armor.",
+        "shot_type": "Wide Shot",
+        "scene_number": 2,
+        "timestamp_end": "0:08",
+        "timestamp_start": "0:04"
+      },
+      {
+        "audio": "Electronic music continues at a steady volume. No voiceover is present.",
+        "label": "Product Information",
+        "visual": "The cursor highlights 'PVE' and 'PVP' buttons at the bottom left. The list of active game rooms updates. The right-side banner now shows a Turkish flag with a wolf silhouette. The color palette is dominated by grey, blue, and orange accents.",
+        "shot_type": "Wide Shot",
+        "scene_number": 3,
+        "timestamp_end": "0:12",
+        "timestamp_start": "0:08"
+      },
+      {
+        "audio": "The music persists. A distinct confirmation 'ping' sound effect plays upon clicking the button.",
+        "label": "Usage Scenarios",
+        "visual": "The user clicks on a specific room in the list. The background of the lobby interface remains dark. The 'Join' button at the bottom center is highlighted by the mouse cursor and then clicked.",
+        "shot_type": "Wide Shot",
+        "scene_number": 4,
+        "timestamp_end": "0:18",
+        "timestamp_start": "0:12"
+      },
+      {
+        "audio": "Electronic music continues. Short digital blips as the room settings load.",
+        "label": "Product Information",
+        "visual": "The screen transitions to a 'Room' interface. Two teams, 'Red Team' and 'Blue Team', are visible. Most slots are marked as 'Closed'. The user's name is visible on the Red Team side. Map details and game settings are displayed on the right.",
+        "shot_type": "Wide Shot",
+        "scene_number": 5,
+        "timestamp_end": "0:25",
+        "timestamp_start": "0:18"
+      },
+      {
+        "audio": "Music continues. Several quick 'click' and 'scroll' sound effects follow the mouse movement.",
+        "label": "Call to Action",
+        "visual": "The user clicks the 'Settings' button on the right. A pop-up menu appears to adjust the game mode and map. The cursor selects 'Palen Lab' from a dropdown menu. The scene remains static otherwise.",
+        "shot_type": "Wide Shot",
+        "scene_number": 6,
+        "timestamp_end": "0:30",
+        "timestamp_start": "0:25"
+      }
+    ]
+  },
+  {
+    "id": "c641d504-8a41-4b12-abb8-283474bc4ca0",
+    "video_input_id": null,
+    "youtube_url": "https://youtube.com/shorts/91tguaSMteE",
+    "status": "completed",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": [
+      {
+        "audio": "A man's voice says in Turkish: 'Guys, a place called Sandstorm has arrived, man, this just came out, look at this!'",
+        "label": "Opening Hook",
+        "visual": "A first-person perspective in a tactical shooter game. The player holds a modern assault rifle with a holographic sight. They are moving through a narrow, sunlit corridor made of light-colored stone blocks. A purple energy portal glows at the end of the alleyway. The lighting is bright and natural with hard shadows.",
+        "shot_type": "POV Shot",
+        "scene_number": 1,
+        "timestamp_end": "0:02",
+        "timestamp_start": "0:00"
+      },
+      {
+        "audio": "The man continues: 'Ugh, the place is so beautiful, man!'",
+        "label": "Usage Scenarios",
+        "visual": "The player character enters a building with patterned tile flooring and stone walls. They run up a set of stone stairs with decorative tile risers. The lighting is warm and dim inside the stairwell, contrasting with the bright exterior.",
+        "shot_type": "POV Shot",
+        "scene_number": 2,
+        "timestamp_end": "0:04",
+        "timestamp_start": "0:02"
+      },
+      {
+        "audio": "The man says: 'I think this is better than the locations in Valorant.'",
+        "label": "Product Selling Points",
+        "visual": "The player exits onto a terrace area with views of Middle Eastern-style architecture. They move through a doorway into another stone hallway. The camera movement is smooth as the player navigates the map. The environment features intricate geometric window grates and blocky stone textures.",
+        "shot_type": "POV Shot",
+        "scene_number": 3,
+        "timestamp_end": "0:07",
+        "timestamp_start": "0:04"
+      },
+      {
+        "audio": "The man says: 'Bro, protect me, I'm planting the bomb. I'm planting it. Protect me, protect me!'",
+        "label": "Product Information",
+        "visual": "The player switches from a rifle to a futuristic bomb device. The device has a keypad and a blue glowing strip. The player's hands are wearing black tactical fingerless gloves with red accents. They interact with the keypad while a beam of white light shoots upward from the device. The background shows a stone courtyard with bench seating.",
+        "shot_type": "Close-Up",
+        "scene_number": 4,
+        "timestamp_end": "0:15",
+        "timestamp_start": "0:07"
+      },
+      {
+        "audio": "The man exclaims: 'Aha, we won! Well done. Mission complete.'",
+        "label": "Real Experience",
+        "visual": "The player holds a gold and white futuristic sniper rifle. Another character in a blue and black suit is seen falling after being defeated. The setting is a stone alleyway. The colors are highly saturated, emphasizing the gold of the weapon.",
+        "shot_type": "POV Shot",
+        "scene_number": 5,
+        "timestamp_end": "0:18",
+        "timestamp_start": "0:15"
+      },
+      {
+        "audio": "The man concludes: 'Bro, the locations in Wolfteam are so beautiful. Look at this! Follow me. More to come...'",
+        "label": "Call to Action",
+        "visual": "The player looks up at a massive architectural structure resembling a palace with golden domes and intricate stone carvings against a clear blue sky. Two other player characters are visible in the foreground. The camera tilts upward to show the scale of the environment.",
+        "shot_type": "Wide Shot",
+        "scene_number": 6,
+        "timestamp_end": "0:22",
+        "timestamp_start": "0:18"
+      }
+    ]
+  },
+  {
+    "id": "81dc76c6-1aa6-4bff-9957-e71de315c962",
+    "video_input_id": null,
+    "youtube_url": "https://youtu.be/zBrgxQmGSiw",
+    "status": "in_progress",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": null
+  },
+  {
+    "id": "a8bb6edf-11ff-425f-a860-a1a142e5a11d",
+    "video_input_id": null,
+    "youtube_url": "https://youtube.com/shorts/t5mDUhSNhc8",
+    "status": "completed",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": [
+      {
+        "audio": "A loud, high-pitched sniper rifle gunshot followed by a metallic bolt-action cycling sound. A female character voice lets out a short grunt of exertion.",
+        "label": "Opening Hook",
+        "visual": "A first-person perspective in a gritty, industrial-style first-person shooter game. The player character, wearing a tactical red and gray glove, holds a bolt-action sniper rifle with a blue galaxy-patterned skin. The character is positioned on a high wooden walkway. Below is a concrete floor area with a ramp. Lighting is harsh and artificial, casting long shadows. The color palette is dominated by grays, browns, and the bright blue of the weapon.",
+        "shot_type": "POV Shot",
+        "scene_number": 1,
+        "timestamp_end": "0:01",
+        "timestamp_start": "0:00"
+      },
+      {
+        "audio": "The sound of wind rushing followed by a heavy thud as the character lands on concrete. Another short female grunt is heard.",
+        "label": "Usage Scenarios",
+        "visual": "The camera quickly tilts downward and the character jumps off the wooden ledge. The motion is rapid and handheld-style, simulating a jump. The environment is an industrial alleyway with concrete walls and metal pipes. As the character falls, the blue sniper rifle remains centered in the lower right of the frame.",
+        "shot_type": "POV Shot",
+        "scene_number": 2,
+        "timestamp_end": "0:02",
+        "timestamp_start": "0:01"
+      },
+      {
+        "audio": "A rapid succession of high-pitched gunshot sounds. Fast-paced, rhythmic electronic music with heavy bass starts playing.",
+        "label": "Product Selling Points",
+        "visual": "The player character quickly rounds a corner and encounters a large, muscular green-skinned monster-like enemy. The character fires the blue sniper rifle at point-blank range. Muzzle flash is bright white. The enemy recoils. The camera shakes with the impact. Blue digital particle effects and light trails appear across the screen as the enemy is struck.",
+        "shot_type": "POV Shot",
+        "scene_number": 3,
+        "timestamp_end": "0:04",
+        "timestamp_start": "0:02"
+      },
+      {
+        "audio": "A deep, authoritative male voiceover says in Turkish: 'Tam kafadan!' (Headshot!) followed by 'Süper kurt!' (Super wolf!).",
+        "label": "Problem Solving",
+        "visual": "The character moves through a narrow concrete corridor. The camera pans left and right rapidly. The blue sniper rifle is held steadily. The character fires at a distant target. The lighting is dim with cool blue tones in the shadows. The player successfully eliminates an enemy, indicated by the target disappearing.",
+        "shot_type": "POV Shot",
+        "scene_number": 4,
+        "timestamp_end": "0:07",
+        "timestamp_start": "0:04"
+      },
+      {
+        "audio": "Persistent electronic combat music. A final gunshot rings out followed by a character's sharp intake of breath.",
+        "label": "Call to Action",
+        "visual": "The character turns into a wider industrial room with metal pillars. Several enemies appear in the distance. The character aims the sniper rifle and fires once more. The camera remains in a tracking movement as the character strafes to the left. The scene ends as the character takes cover behind a wall. The blue glow of the gun is prominent against the dark background.",
+        "shot_type": "POV Shot",
+        "scene_number": 5,
+        "timestamp_end": "0:12",
+        "timestamp_start": "0:07"
+      }
+    ]
+  },
+  {
+    "id": "7d7e218d-b1db-4ec0-9859-b51a62d986ae",
+    "video_input_id": null,
+    "youtube_url": "https://youtu.be/AyetV4iEl8E",
+    "status": "completed",
+    "fail_reason": null,
+    "video_s3_url": null,
+    "scenes": [
+      {
+        "audio": "Upbeat, fast-paced electronic dance music with a heavy bassline plays. The sound of a buzzer corresponds with the 'GO' icon.",
+        "label": "Opening Hook",
+        "visual": "A game lobby screen shows two teams, red and blue, with players listed. The screen is filled with various game menus and interface elements. A countdown from 3 to 1 is displayed in the center, followed by a 'GO' icon. The background features a futuristic, metallic setting with crates and character models.",
+        "shot_type": "Wide Shot",
+        "scene_number": 1,
+        "timestamp_end": "0:03",
+        "timestamp_start": "0:00"
+      },
+      {
+        "audio": "The upbeat electronic music continues. Interface sound effects, like clicks and highlights, are heard as the player navigates the menus.",
+        "label": "Usage Scenarios",
+        "visual": "The screen transitions to a loading page showing a detailed isometric map of the game level titled 'GİRİŞ'. It then quickly shifts to the character selection screen where various items, weapons, and characters are displayed. The player hovers over a few options, finally selecting a character named 'HAZIR'.",
+        "shot_type": "Medium Shot",
+        "scene_number": 2,
+        "timestamp_end": "0:07",
+        "timestamp_start": "0:04"
+      },
+      {
+        "audio": "The music continues with its high-energy beat. Atmospheric game sounds, like low growls and footsteps, are audible.",
+        "label": "Usage Scenarios",
+        "visual": "The gameplay starts in a futuristic interior room. Three large, muscular, werewolf-like characters with blue energy effects around their hands are shown. The player's character, also a werewolf, stands in the center. The room has light-colored walls, a green-tinted floor, and metallic pillars. Lighting is even and slightly cool-toned.",
+        "shot_type": "Medium Shot",
+        "scene_number": 3,
+        "timestamp_end": "0:12",
+        "timestamp_start": "0:08"
+      },
+      {
+        "audio": "The music persists. Rapid footsteps and a whooshing sound from the jumps are heard, accompanied by the background track's energetic tempo.",
+        "label": "Usage Scenarios",
+        "visual": "The player character moves through a doorway onto a rooftop with light blue, hexagonal-patterned solar panels. The character runs and jumps across the panels. Other player characters, some in human form and some as werewolves, are seen moving in the distance. The sky is bright blue with scattered clouds.",
+        "shot_type": "POV Shot",
+        "scene_number": 4,
+        "timestamp_end": "0:18",
+        "timestamp_start": "0:13"
+      },
+      {
+        "audio": "The electronic music maintains its pace. Sfx for energy attacks (crackling, low-frequency hums) are prominent.",
+        "label": "Usage Scenarios",
+        "visual": "The character continues to navigate the rooftop, moving near large, metallic ventilation-like structures. They use energy-enhanced attacks, shown as glowing blue swirls and streaks. The lighting remains bright, natural-looking sunlight. Other players are intermittently visible, engaging in combat.",
+        "shot_type": "Medium Shot",
+        "scene_number": 5,
+        "timestamp_end": "0:25",
+        "timestamp_start": "0:19"
+      },
+      {
+        "audio": "A man's voice is heard speaking in Turkish, sounding excited and a bit frustrated: 'Ya 110'a bana geldi zaten ya!' (Oh, 110 already came to me!). The music continues in the background.",
+        "label": "Real Experience",
+        "visual": "A brief, high-action combat sequence on the rooftop. The player character engages an opponent, resulting in red particle effects representing hits. The camera follows the character's quick movements and jumps, with a brief transition back to an indoor area with green-glowing ceilings.",
+        "shot_type": "POV Shot",
+        "scene_number": 6,
+        "timestamp_end": "0:30",
+        "timestamp_start": "0:26"
+      },
+      {
+        "audio": "The same man's voice continues: 'Oğlum iki tane var bu piyasada bana kadar...' (Son, there are two in this market until me...). The high-tempo music remains the primary audio track.",
+        "label": "Usage Scenarios",
+        "visual": "The action returns to the rooftop. The character performs a dramatic jump-attack, with more blue energy effects. Another player is briefly seen falling off the edge. The character then moves quickly toward a metallic structure, their hands still glowing with blue energy.",
+        "shot_type": "POV Shot",
+        "scene_number": 7,
+        "timestamp_end": "0:35",
+        "timestamp_start": "0:31"
+      },
+      {
+        "audio": "The voiceover continues: 'Lan ben sana güzellik yapmaz mıyım geri zekâlı... Söz diyorum ya... Tamam 115'e bitsin ya...' (Dude, wouldn't I do you a favor, you idiot... I'm saying it's a promise... Okay, let it end at 115...). The music's beat is steady and driving.",
+        "label": "Usage Scenarios",
+        "visual": "A series of rapid combat moments follow. The player character attacks multiple opponents on the rooftop. Each successful hit is punctuated by bright red splatter effects. The movement is fast-paced, involving jumps and quick turns. Lighting is bright, showing the textured details of the rooftop and character models.",
+        "shot_type": "POV Shot",
+        "scene_number": 8,
+        "timestamp_end": "0:42",
+        "timestamp_start": "0:36"
+      },
+      {
+        "audio": "The voiceover says: 'Aşkına sen kendini deli gibi yaptın ya... İki de Allah olsun... Şapalağı bir koyacağım alnını dağıtacağım bak!' (For love, you made yourself like crazy... Let there be two gods... I'll give you a slap and scatter your forehead, look!). The electronic music continues.",
+        "label": "Real Experience",
+        "visual": "The player character continues their aggressive attack on the rooftop, knocking down several opponents in quick succession. Red effects fill the screen during hits. The camera angle is dynamic, following the character's rapid strikes. The blue-patterned rooftop provides a stark contrast to the red hit effects.",
+        "shot_type": "POV Shot",
+        "scene_number": 9,
+        "timestamp_end": "0:48",
+        "timestamp_start": "0:43"
+      },
+      {
+        "audio": "The voiceover repeats: 'Söz diyorum ya!' (I'm saying it's a promise!). The high-energy music continues its consistent rhythm.",
+        "label": "Usage Scenarios",
+        "visual": "The perspective shifts back to the interior room briefly before returning to the rooftop. The character jumps high and lands near another group of players. Blue energy flashes accompany the jumps and landings. The environment remains the same futuristic, open-air setting.",
+        "shot_type": "POV Shot",
+        "scene_number": 10,
+        "timestamp_end": "0:56",
+        "timestamp_start": "0:49"
+      },
+      {
+        "audio": "The voiceover says: 'Ben bu sefer harbiden iptalim...' (This time I'm really out/canceled...). The electronic music's driving beat continues with its steady bassline.",
+        "label": "Usage Scenarios",
+        "visual": "A montage of more combat follows, with the character striking various enemies. The camera work is fast and a bit shaky, adding to the intense feel. Some transitions show the character moving between the roof's different levels and interior passages with glowing walls.",
+        "shot_type": "POV Shot",
+        "scene_number": 11,
+        "timestamp_end": "1:05",
+        "timestamp_start": "0:57"
+      },
+      {
+        "audio": "The voiceover repeats the line: 'Tamam 115'e bitsin ya...' (Okay, let it end at 115...). The upbeat music track continues without interruption.",
+        "label": "Usage Scenarios",
+        "visual": "The character performs several powerful leaping attacks, landing on opponents and triggering massive red hit effects. They move with incredible speed, highlighted by blurred motion and energy trails. The sequence alternates between close-up combat and wider shots of the rooftop.",
+        "shot_type": "POV Shot",
+        "scene_number": 12,
+        "timestamp_end": "1:16",
+        "timestamp_start": "1:06"
+      },
+      {
+        "audio": "The electronic music continues. The voiceover says: 'Lan ben sana güzellik yapmaz mıyım geri zekâlı...' (Dude, wouldn't I do you a favor, you idiot...). Atmospheric game sounds of combat and impact are heard.",
+        "label": "Usage Scenarios",
+        "visual": "The character is seen in another series of fast-paced attacks, including a sequence where they knock down several enemies in a row. The environment remains consistent. The character's blue energy glows brightly against the more muted tones of the building structures.",
+        "shot_type": "POV Shot",
+        "scene_number": 13,
+        "timestamp_end": "1:28",
+        "timestamp_start": "1:17"
+      },
+      {
+        "audio": "The high-energy music remains the dominant audio. There is no more voiceover, only the driving beat and various combat-related sound effects.",
+        "label": "Usage Scenarios",
+        "visual": "The character moves across the rooftops, using their agility and energy attacks to dominate the field. Several 'combo' icons appear on screen briefly. The character jumps between different buildings, their movements fluid and powerful.",
+        "shot_type": "POV Shot",
+        "scene_number": 14,
+        "timestamp_end": "1:45",
+        "timestamp_start": "1:29"
+      },
+      {
+        "audio": "The electronic dance music continues its fast pace. More sounds of growls, energy discharges, and impacts are audible.",
+        "label": "Usage Scenarios",
+        "visual": "A longer, continuous sequence of combat as the character fights multiple enemies on a large open area of the roof. The blue energy effects are frequent, and the red hit markers fill the screen often. The lighting transitions slightly, becoming a bit more shadowed as the character moves near structures.",
+        "shot_type": "POV Shot",
+        "scene_number": 15,
+        "timestamp_end": "2:02",
+        "timestamp_start": "1:46"
+      },
+      {
+        "audio": "The music continues at its high-energy level. The sounds of several successive hits and character growls are prominent.",
+        "label": "Usage Scenarios",
+        "visual": "The character is shown performing a final series of attacks, including a high-leaping move that takes down several enemies. The screen flashes with various game-related messages and score updates. The character stands victoriously as the combat area clears.",
+        "shot_type": "POV Shot",
+        "scene_number": 16,
+        "timestamp_end": "2:13",
+        "timestamp_start": "2:03"
+      },
+      {
+        "audio": "The music reaches a peak and then transitions to a slightly less intense but still upbeat outro track. A final game-end sound effect, like a fanfare, is heard.",
+        "label": "Call to Action",
+        "visual": "The screen transitions back to a lobby-like view, similar to the opening scene. A 'KAZANDIK' (WE WON) message appears in large green letters. The character models are shown in a final pose. The background fades slightly, and game statistics and final score screens begin to appear.",
+        "shot_type": "Wide Shot",
+        "scene_number": 17,
+        "timestamp_end": "2:21",
+        "timestamp_start": "2:14"
+      }
+    ]
+  }
+]

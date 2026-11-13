@@ -74,7 +74,11 @@ def inspect_ltb(data):
         if child_count:stack.append([index,child_count])
     if any(remaining for _,remaining in stack): raise ValueError('LTB incomplete hierarchy')
     weight_count=r.count(4096)
-    for _ in range(weight_count): r.string(); count=r.count(nodes); r.skip(count*4)
+    weight_sets={}
+    for _ in range(weight_count):
+        name=r.string(); count=r.count(nodes); values=r.values(f"{count}f")
+        if not all(math.isfinite(v) for v in values):raise ValueError("Invalid source animation weight set")
+        weight_sets[name]=list(values)
     child_count=r.count(4096)
     if child_count<1: raise ValueError('LTB missing self model')
     child_models=[r.string() for _ in range(child_count-1)]
@@ -83,8 +87,10 @@ def inspect_ltb(data):
     for _ in range(animation_count):
         extents=r.values('3f'); name=r.string(); compression=r.integer(); interpolation=r.integer(); frames=r.count(1000000)
         if compression not in (0,1,2,3) or not frames: raise ValueError('Invalid animation compression or frame count')
-        times=[]
-        for _ in range(frames): times.append(r.integer()); r.string()
+        times=[];events=[]
+        for _ in range(frames):
+            time=r.integer();event=r.string();times.append(time)
+            if event:events.append(dict(timeMs=time,key=event))
         if times!=sorted(times): raise ValueError('Animation keyframe times are not ordered')
         start=r.pos
         for _ in range(nodes):
@@ -96,14 +102,16 @@ def inspect_ltb(data):
             else:
                 positions=r.count(frames);r.skip(positions*(6 if compression==2 else 12))
                 rotations=r.count(frames);r.skip(rotations*(16 if compression==1 else 8))
-        animations.append(dict(name=name,frames=frames,durationMs=times[-1],compression=compression,trackSha256=hashlib.sha256(data[start:r.pos]).hexdigest()))
-    socket_count=r.count(4096)
+        animations.append(dict(name=name,frames=frames,durationMs=times[-1],compression=compression,keyEvents=events,trackSha256=hashlib.sha256(data[start:r.pos]).hexdigest()))
+    socket_count=r.count(4096);socket_defs=[]
     for _ in range(socket_count):
-        bone=r.integer();r.string();r.skip(40)
+        bone=r.integer();name=r.string();rotation=r.values('4f');position=r.values('3f');scale=r.values('3f')
+        if bone>=nodes:raise ValueError('Socket references invalid bone')
+        socket_defs.append(dict(name=name,bone=bone,boneName=bones[bone]['name'],rotation=rotation,position=position,scale=scale))
         if bone>=nodes:raise ValueError('Socket references invalid bone')
     bindings=0
     for _ in range(child_count):
         count=r.count(100000)
         for _ in range(count):r.string();r.skip(24);bindings+=1
     if r.pos!=len(data):raise ValueError(f'Unconsumed LTB data: {len(data)-r.pos} bytes')
-    return dict(version=version,nodeCount=nodes,bones=bones,skeletonSha256=digest(bones),bindPoseSha256=digest(matrices),childModels=child_models,animations=animations,mesh=mesh_summary,command=command,headerAnimationCount=anims,animationCount=animation_count,sockets=socket_count,bindingCount=bindings,bytesParsed=r.pos)
+    return dict(weightSets=weight_sets,version=version,nodeCount=nodes,bones=bones,skeletonSha256=digest(bones),bindPoseSha256=digest(matrices),childModels=child_models,animations=animations,mesh=mesh_summary,command=command,headerAnimationCount=anims,animationCount=animation_count,sockets=socket_count,socketDefinitions=socket_defs,bindingCount=bindings,bytesParsed=r.pos)

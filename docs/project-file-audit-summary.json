@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "utc": "2026-11-06T19:37:03.279051+00:00",
+  "filesHashed": 54950,
+  "bytesRead": 3772694932,
+  "fileTypes": {
+    "": 1,
+    ".md": 24,
+    ".json": 150,
+    ".gz": 25,
+    ".txt": 3,
+    ".png": 25323,
+    ".jpg": 3,
+    ".import": 26978,
+    ".glb": 728,
+    ".wav": 1363,
+    ".scn": 1,
+    ".svg": 2,
+    ".res": 35,
+    ".ogg": 7,
+    ".ttf": 12,
+    ".ttc": 1,
+    ".cfg": 1,
+    ".tscn": 1,
+    ".godot": 1,
+    ".gd": 114,
+    ".uid": 112,
+    ".gdshader": 1,
+    ".dat": 1,
+    ".py": 58,
+    ".ps1": 2,
+    ".js": 1,
+    ".html": 1,
+    ".css": 1
+  },
+  "literalResourceReferencesChecked": 46988,
+  "glbHeadersChecked": 728,
+  "issues": [],
+  "expectedTestReferences": [
+    {
+      "path": "godot/tests/combat_continuation.gd",
+      "resource": "res://missing-character.glb",
+      "reason": "negative_model_fixture"
+    },
+    {
+      "path": "godot/tests/human_reference.gd",
+      "resource": "res://../docs/human-reference-validation.json",
+      "reason": "test_report_output"
+    },
+    {
+      "path": "godot/tests/pc_reference_expansion.gd",
+      "resource": "res://../docs/pc-reference-expansion-validation.json",
+      "reason": "test_report_output"
+    },
+    {
+      "path": "godot/tests/pc_reference_expansion.gd",
+      "resource": "res://not-a-reward.png",
+      "reason": "negative_reward_fixture"
+    },
+    {
+      "path": "godot/tests/persistence.gd",
+      "resource": "res://__missing_unbound_tattoo__.png",
+      "reason": "negative_tattoo_fixture"
+    },
+    {
+      "path": "godot/tests/presentation_018.gd",
+      "resource": "res://../docs/presentation-018-validation.json",
+      "reason": "test_report_output"
+    },
+    {
+      "path": "godot/tests/round_equipment_gifts.gd",
+      "resource": "res://../docs/round-equipment-gift-validation.json",
+      "reason": "test_report_output"
+    }
+  ],
+  "windowsExecutablesInProject": [
+    "legacy/WolfRogue.dat"
+  ],
+  "runtimeBehaviorValidated": false,
+  "originalPcPixelEquivalenceValidated": false,
+  "scope": "Every nonignored repository file read and SHA-256 hashed; Godot literal resource paths, JSON syntax, GLB containers and PNG headers checked. Git objects, generated caches and this audit output are excluded."
+}

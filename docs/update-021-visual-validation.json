@@ -1,0 +1,80 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "video-aligned-equipment-021",
+      "path": "docs/review/update-021/video-aligned-equipment-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "4f136c9e4ed9399c5a071458bef6fb25c00925ef249f09ed2a98d69824f68a89"
+    },
+    {
+      "height": 720,
+      "name": "round-preparation-021",
+      "path": "docs/review/update-021/round-preparation-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "ed3c900177961711008a708751bb2ac06f9ba6ed93d272b7720977eb5cc839aa"
+    },
+    {
+      "height": 720,
+      "name": "teammate-spectator-021",
+      "path": "docs/review/update-021/teammate-spectator-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "8f6712fa4a6ddb376c852b5bcab039d479c455866468b78ca4301f0997b25cb5"
+    },
+    {
+      "height": 720,
+      "name": "round-result-021",
+      "path": "docs/review/update-021/round-result-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "16920983eb43db85bbe78caf1cd0c5ac44f09d10c186500002f3e2f440a10080"
+    },
+    {
+      "height": 720,
+      "name": "attack-defense-swap-021",
+      "path": "docs/review/update-021/attack-defense-swap-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "0820fc1017a311285874a8eccd35e989971492b91b8a3e3c490d409491bccb07"
+    },
+    {
+      "height": 720,
+      "name": "role-spawn-and-carrier-021",
+      "path": "docs/review/update-021/role-spawn-and-carrier-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "257f2797d7704a43fb2bf1e855b40f4cf42f76d5abd1d490868a195361167bc1"
+    },
+    {
+      "height": 720,
+      "name": "character-yp-and-sp-021",
+      "path": "docs/review/update-021/character-yp-and-sp-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "baa4e1b68e1d6ca7e87ac30c891f451f052afcb6efff5dbcbacc13f6c19587a3"
+    },
+    {
+      "height": 720,
+      "name": "video-aligned-mutations-021",
+      "path": "docs/review/update-021/video-aligned-mutations-021.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "6c18f0bab32d6ba17f2fdc7aa45b9e7ee321dc25d765ac4cafd1d31c673176af"
+    },
+    {
+      "height": 992,
+      "name": "video-layout-wide-phone-021",
+      "path": "docs/review/update-021/video-layout-wide-phone-021.png",
+      "saved": true,
+      "width": 2160,
+      "sha256": "230a8262b8a9cd65d47833dc2121c51fdf214cb443bfa5c2c3a3fa97035d33d5"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

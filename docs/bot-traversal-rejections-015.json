@@ -1,0 +1,2552 @@
+{
+  "rejected": [
+    {
+      "map": 72,
+      "candidateIndex": 10,
+      "candidate": {
+        "backwardSeconds": 0.272508634815423,
+        "bidirectional": true,
+        "entry": [
+          18.8483734130859,
+          1.83808898925781,
+          -2.86233901977539
+        ],
+        "exit": [
+          19.8083724975586,
+          1.33808887004852,
+          -1.90233993530273
+        ],
+        "feetEntry": [
+          18.8483734130859,
+          1.71172428131104,
+          -2.86233901977539
+        ],
+        "feetExit": [
+          19.8083724975586,
+          0.969114720821381,
+          -1.90233993530273
+        ],
+        "forwardSeconds": 0.272508634815423
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 11,
+      "candidate": {
+        "backwardSeconds": 0.314584930707442,
+        "bidirectional": false,
+        "entry": [
+          -6.75163269042969,
+          0.23808890581131,
+          24.7376556396484
+        ],
+        "exit": [
+          -6.59162902832031,
+          1.23808884620667,
+          22.8176574707031
+        ],
+        "feetEntry": [
+          -6.75163269042969,
+          0.113200061023235,
+          24.7376556396484
+        ],
+        "feetExit": [
+          -6.59162902832031,
+          1.1028368473053,
+          22.8176574707031
+        ],
+        "forwardSeconds": 0.314584930707442
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 15,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.8316268920898,
+          1.43808889389038,
+          3.69765853881836
+        ],
+        "exit": [
+          -11.7916259765625,
+          0.23808890581131,
+          2.89765548706055
+        ],
+        "feetEntry": [
+          -12.8316268920898,
+          1.29958581924438,
+          3.69765853881836
+        ],
+        "feetExit": [
+          -11.7916259765625,
+          0.113200061023235,
+          2.89765548706055
+        ],
+        "forwardSeconds": 0.344439509670588
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 17,
+      "candidate": {
+        "backwardSeconds": 0.293799603109176,
+        "bidirectional": true,
+        "entry": [
+          81.8883743286133,
+          32.4380912780762,
+          -47.8223419189453
+        ],
+        "exit": [
+          82.5283737182617,
+          31.5380897521973,
+          -46.7023429870605
+        ],
+        "feetEntry": [
+          81.8883743286133,
+          32.1179237365723,
+          -47.8223419189453
+        ],
+        "feetExit": [
+          82.5283737182617,
+          31.2547416687012,
+          -46.7023429870605
+        ],
+        "forwardSeconds": 0.293799603109176
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 18,
+      "candidate": {
+        "backwardSeconds": 0.365893534251622,
+        "bidirectional": true,
+        "entry": [
+          -48.591625213623,
+          34.2380905151367,
+          80.09765625
+        ],
+        "exit": [
+          -48.6716232299805,
+          34.5380897521973,
+          82.6576614379883
+        ],
+        "feetEntry": [
+          -48.591625213623,
+          33.9391708374023,
+          80.09765625
+        ],
+        "feetExit": [
+          -48.6716232299805,
+          34.1469802856445,
+          82.6576614379883
+        ],
+        "forwardSeconds": 0.365893534251622
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 19,
+      "candidate": {
+        "backwardSeconds": 0.395255875584207,
+        "bidirectional": false,
+        "entry": [
+          2.04837036132812,
+          16.2380886077881,
+          -24.5423431396484
+        ],
+        "exit": [
+          0.608367919921875,
+          14.6380882263184,
+          -23.4490089416504
+        ],
+        "feetEntry": [
+          2.04837036132812,
+          15.9827470779419,
+          -24.5423431396484
+        ],
+        "feetExit": [
+          0.608367919921875,
+          14.4204750061035,
+          -23.4490089416504
+        ],
+        "forwardSeconds": 0.395255875584207
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 20,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -15.0716323852539,
+          1.43808889389038,
+          3.77765655517578
+        ],
+        "exit": [
+          -15.9516296386719,
+          0.23808890581131,
+          2.89765930175781
+        ],
+        "feetEntry": [
+          -15.0716323852539,
+          1.30758488178253,
+          3.77765655517578
+        ],
+        "feetExit": [
+          -15.9516296386719,
+          0.113200001418591,
+          2.89765930175781
+        ],
+        "forwardSeconds": 0.345598738476277
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 21,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          22.7683715820312,
+          1.43808889389038,
+          -23.4223403930664
+        ],
+        "exit": [
+          22.6083755493164,
+          0.23808890581131,
+          -24.4623413085938
+        ],
+        "feetEntry": [
+          22.7683715820312,
+          1.16432321071625,
+          -23.4223403930664
+        ],
+        "feetExit": [
+          22.6083755493164,
+          0.113200001418591,
+          -24.4623413085938
+        ],
+        "forwardSeconds": 0.324210303552749
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 23,
+      "candidate": {
+        "backwardSeconds": 0.469308139392134,
+        "bidirectional": false,
+        "entry": [
+          -44.1516265869141,
+          17.5380897521973,
+          -31.342342376709
+        ],
+        "exit": [
+          -42.9116249084473,
+          15.5380887985229,
+          -33.5023422241211
+        ],
+        "feetEntry": [
+          -44.1516265869141,
+          17.3964500427246,
+          -31.342342376709
+        ],
+        "feetExit": [
+          -42.9116249084473,
+          15.1939487457275,
+          -33.5023422241211
+        ],
+        "forwardSeconds": 0.469308139392134
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 24,
+      "candidate": {
+        "backwardSeconds": 0.236626151830225,
+        "bidirectional": true,
+        "entry": [
+          108.608383178711,
+          31.0380897521973,
+          -3.50233840942383
+        ],
+        "exit": [
+          108.848373413086,
+          31.5380897521973,
+          -5.02234268188477
+        ],
+        "feetEntry": [
+          108.608383178711,
+          30.7106761932373,
+          -3.50233840942383
+        ],
+        "feetExit": [
+          108.848373413086,
+          31.2705955505371,
+          -5.02234268188477
+        ],
+        "forwardSeconds": 0.236626151830225
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 26,
+      "candidate": {
+        "backwardSeconds": 0.465314969273376,
+        "bidirectional": false,
+        "entry": [
+          -24.5116271972656,
+          13.9380893707275,
+          -29.5823402404785
+        ],
+        "exit": [
+          -21.8316192626953,
+          11.7380886077881,
+          -29.7423400878906
+        ],
+        "feetEntry": [
+          -24.5116271972656,
+          13.7584009170532,
+          -29.5823402404785
+        ],
+        "feetExit": [
+          -21.8316192626953,
+          11.5932207107544,
+          -29.7423400878906
+        ],
+        "forwardSeconds": 0.465314969273376
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 29,
+      "candidate": {
+        "backwardSeconds": 0.310890470232282,
+        "bidirectional": true,
+        "entry": [
+          -38.991626739502,
+          10.3380889892578,
+          17.4576606750488
+        ],
+        "exit": [
+          -38.3516273498535,
+          10.1380882263184,
+          19.5376586914062
+        ],
+        "feetEntry": [
+          -38.991626739502,
+          10.1349515914917,
+          17.4576606750488
+        ],
+        "feetExit": [
+          -38.3516273498535,
+          9.87042140960693,
+          19.5376586914062
+        ],
+        "forwardSeconds": 0.310890470232282
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 30,
+      "candidate": {
+        "backwardSeconds": 0.238253508295332,
+        "bidirectional": true,
+        "entry": [
+          47.9683685302734,
+          17.2380886077881,
+          53.6976547241211
+        ],
+        "exit": [
+          49.6323776245117,
+          16.6380882263184,
+          53.5856475830078
+        ],
+        "feetEntry": [
+          47.9683685302734,
+          16.8621234893799,
+          53.6976547241211
+        ],
+        "feetExit": [
+          49.6323776245117,
+          16.368480682373,
+          53.5856475830078
+        ],
+        "forwardSeconds": 0.238253508295332
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 32,
+      "candidate": {
+        "backwardSeconds": 0.457202742264501,
+        "bidirectional": false,
+        "entry": [
+          -142.59162902832,
+          49.0380897521973,
+          -15.7423400878906
+        ],
+        "exit": [
+          -143.391632080078,
+          46.9380912780762,
+          -17.7423400878906
+        ],
+        "feetEntry": [
+          -142.59162902832,
+          48.7577781677246,
+          -15.7423400878906
+        ],
+        "feetExit": [
+          -143.391632080078,
+          46.6674346923828,
+          -17.7423400878906
+        ],
+        "forwardSeconds": 0.457202742264501
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 36,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -126.271621704102,
+          25.3380889892578,
+          -30.3823394775391
+        ],
+        "exit": [
+          -124.91162109375,
+          24.1380882263184,
+          -29.8223419189453
+        ],
+        "feetEntry": [
+          -126.271621704102,
+          24.9435863494873,
+          -30.3823394775391
+        ],
+        "feetExit": [
+          -124.91162109375,
+          23.7672271728516,
+          -29.8223419189453
+        ],
+        "forwardSeconds": 0.342980929008559
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 38,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -69.2316284179688,
+          50.6380920410156,
+          93.7776489257812
+        ],
+        "exit": [
+          -69.9516220092773,
+          49.3380889892578,
+          95.5376586914062
+        ],
+        "feetEntry": [
+          -69.2316284179688,
+          50.4211578369141,
+          93.7776489257812
+        ],
+        "feetExit": [
+          -69.9516220092773,
+          48.9645729064941,
+          95.5376586914062
+        ],
+        "forwardSeconds": 0.381652319581569
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 39,
+      "candidate": {
+        "backwardSeconds": 0.300982836262484,
+        "bidirectional": false,
+        "entry": [
+          79.8483657836914,
+          32.9380912780762,
+          65.957649230957
+        ],
+        "exit": [
+          81.0883712768555,
+          34.0380935668945,
+          67.1376571655273
+        ],
+        "feetEntry": [
+          79.8483657836914,
+          32.8134269714355,
+          65.957649230957
+        ],
+        "feetExit": [
+          81.0883712768555,
+          33.7193336486816,
+          67.1376571655273
+        ],
+        "forwardSeconds": 0.300982836262484
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 40,
+      "candidate": {
+        "backwardSeconds": 0.399570425154569,
+        "bidirectional": false,
+        "entry": [
+          -79.5516204833984,
+          51.1380920410156,
+          72.0176544189453
+        ],
+        "exit": [
+          -80.3916244506836,
+          49.4380912780762,
+          70.5376586914062
+        ],
+        "feetEntry": [
+          -79.5516204833984,
+          50.7512054443359,
+          72.0176544189453
+        ],
+        "feetExit": [
+          -80.3916244506836,
+          49.1546401977539,
+          70.5376586914062
+        ],
+        "forwardSeconds": 0.399570425154569
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 42,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -54.591625213623,
+          20.2380886077881,
+          19.3776550292969
+        ],
+        "exit": [
+          -54.3516273498535,
+          18.8380889892578,
+          21.1376647949219
+        ],
+        "feetEntry": [
+          -54.591625213623,
+          19.9294033050537,
+          19.3776550292969
+        ],
+        "feetExit": [
+          -54.3516273498535,
+          18.4748554229736,
+          21.1376647949219
+        ],
+        "forwardSeconds": 0.381385353950578
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 44,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          51.0883712768555,
+          30.4380893707275,
+          -60.1423416137695
+        ],
+        "exit": [
+          49.968376159668,
+          28.8380889892578,
+          -58.8623428344727
+        ],
+        "feetEntry": [
+          51.0883712768555,
+          30.2022895812988,
+          -60.1423416137695
+        ],
+        "feetExit": [
+          49.968376159668,
+          28.4941635131836,
+          -58.8623428344727
+        ],
+        "forwardSeconds": 0.413294818273256
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 45,
+      "candidate": {
+        "backwardSeconds": 0.423546763606941,
+        "bidirectional": false,
+        "entry": [
+          -78.7516250610352,
+          53.5380935668945,
+          74.2576599121094
+        ],
+        "exit": [
+          -79.5516204833984,
+          51.8380928039551,
+          72.8176498413086
+        ],
+        "feetEntry": [
+          -78.7516250610352,
+          53.2666854858398,
+          74.2576599121094
+        ],
+        "feetExit": [
+          -79.5516204833984,
+          51.4727668762207,
+          72.8176498413086
+        ],
+        "forwardSeconds": 0.423546763606941
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 46,
+      "candidate": {
+        "backwardSeconds": 0.494329725427681,
+        "bidirectional": false,
+        "entry": [
+          55.4083709716797,
+          46.8380889892578,
+          -73.7423400878906
+        ],
+        "exit": [
+          53.9683685302734,
+          44.4380912780762,
+          -75.2623443603516
+        ],
+        "feetEntry": [
+          55.4083709716797,
+          46.5367088317871,
+          -73.7423400878906
+        ],
+        "feetExit": [
+          53.9683685302734,
+          44.093090057373,
+          -75.2623443603516
+        ],
+        "forwardSeconds": 0.494329725427681
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 47,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -123.711624145508,
+          26.2380886077881,
+          0.0176582336425781
+        ],
+        "exit": [
+          -122.111618041992,
+          24.7380886077881,
+          0.9776611328125
+        ],
+        "feetEntry": [
+          -123.711624145508,
+          25.8456325531006,
+          0.0176582336425781
+        ],
+        "feetExit": [
+          -122.111618041992,
+          24.3785877227783,
+          0.9776611328125
+        ],
+        "forwardSeconds": 0.383020212302467
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 50,
+      "candidate": {
+        "backwardSeconds": 0.464765782589484,
+        "bidirectional": false,
+        "entry": [
+          -74.6716232299805,
+          51.9380912780762,
+          70.8176574707031
+        ],
+        "exit": [
+          -75.1516265869141,
+          49.7380905151367,
+          68.977653503418
+        ],
+        "feetEntry": [
+          -74.6716232299805,
+          51.5473823547363,
+          70.8176574707031
+        ],
+        "feetExit": [
+          -75.1516265869141,
+          49.3873100280762,
+          68.977653503418
+        ],
+        "forwardSeconds": 0.464765782589484
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 51,
+      "candidate": {
+        "backwardSeconds": 0.450142562324444,
+        "bidirectional": false,
+        "entry": [
+          113.968368530273,
+          38.4380912780762,
+          -0.0623435974121094
+        ],
+        "exit": [
+          112.528366088867,
+          36.4380912780762,
+          -0.702339172363281
+        ],
+        "feetEntry": [
+          113.968368530273,
+          38.141227722168,
+          -0.0623435974121094
+        ],
+        "feetExit": [
+          112.528366088867,
+          36.1149444580078,
+          -0.702339172363281
+        ],
+        "forwardSeconds": 0.450142562324444
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 53,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -6.91162872314453,
+          46.5380897521973,
+          116.657661437988
+        ],
+        "exit": [
+          -8.75162506103516,
+          44.2380905151367,
+          114.657661437988
+        ],
+        "feetEntry": [
+          -6.91162872314453,
+          46.2103996276855,
+          116.657661437988
+        ],
+        "feetExit": [
+          -8.75162506103516,
+          43.8692321777344,
+          114.657661437988
+        ],
+        "forwardSeconds": 0.483856120138122
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 55,
+      "candidate": {
+        "backwardSeconds": 0.460090920129007,
+        "bidirectional": false,
+        "entry": [
+          85.968376159668,
+          46.2380905151367,
+          -55.1823425292969
+        ],
+        "exit": [
+          85.4083709716797,
+          44.1380920410156,
+          -53.2623405456543
+        ],
+        "feetEntry": [
+          85.968376159668,
+          45.9399719238281,
+          -55.1823425292969
+        ],
+        "feetExit": [
+          85.4083709716797,
+          43.8231353759766,
+          -53.2623405456543
+        ],
+        "forwardSeconds": 0.460090920129007
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 58,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          56.2083740234375,
+          29.2380886077881,
+          -50.1423416137695
+        ],
+        "exit": [
+          55.7683715820312,
+          26.7380886077881,
+          -47.3823432922363
+        ],
+        "feetEntry": [
+          56.2083740234375,
+          28.9491806030273,
+          -50.1423416137695
+        ],
+        "feetExit": [
+          55.7683715820312,
+          26.5093517303467,
+          -47.3823432922363
+        ],
+        "forwardSeconds": 0.493946239248834
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 62,
+      "candidate": {
+        "backwardSeconds": 0.394079719270979,
+        "bidirectional": false,
+        "entry": [
+          -69.7116241455078,
+          39.1380920410156,
+          -76.1423416137695
+        ],
+        "exit": [
+          -70.5116271972656,
+          37.7380905151367,
+          -73.5023345947266
+        ],
+        "feetEntry": [
+          -69.7116241455078,
+          38.8490333557129,
+          -76.1423416137695
+        ],
+        "feetExit": [
+          -70.5116271972656,
+          37.3385963439941,
+          -73.5023345947266
+        ],
+        "forwardSeconds": 0.394079719270979
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 66,
+      "candidate": {
+        "backwardSeconds": 0.428381374904088,
+        "bidirectional": false,
+        "entry": [
+          -43.3916282653809,
+          16.9380893707275,
+          -30.5423393249512
+        ],
+        "exit": [
+          -42.9116249084473,
+          15.5380887985229,
+          -33.5023422241211
+        ],
+        "feetEntry": [
+          -43.3916282653809,
+          16.6418991088867,
+          -30.5423393249512
+        ],
+        "feetExit": [
+          -42.9116249084473,
+          15.1939487457275,
+          -33.5023422241211
+        ],
+        "forwardSeconds": 0.428381374904088
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 67,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          20.3683776855469,
+          14.8380889892578,
+          -73.40234375
+        ],
+        "exit": [
+          20.3683776855469,
+          12.0380887985229,
+          -69.8223419189453
+        ],
+        "feetEntry": [
+          20.3683776855469,
+          14.526969909668,
+          -73.40234375
+        ],
+        "feetExit": [
+          20.3683776855469,
+          11.8052701950073,
+          -69.8223419189453
+        ],
+        "forwardSeconds": 0.521699119671544
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 70,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          22.0483703613281,
+          16.5380897521973,
+          -30.7343406677246
+        ],
+        "exit": [
+          24.9283676147461,
+          14.0380887985229,
+          -29.342342376709
+        ],
+        "feetEntry": [
+          22.0483703613281,
+          16.5293140411377,
+          -30.7343406677246
+        ],
+        "feetExit": [
+          24.9283676147461,
+          13.7969999313354,
+          -29.342342376709
+        ],
+        "forwardSeconds": 0.522715420645139
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 72,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -54.6716270446777,
+          17.7380905151367,
+          23.5376586914062
+        ],
+        "exit": [
+          -56.2982940673828,
+          15.4380893707275,
+          25.9376602172852
+        ],
+        "feetEntry": [
+          -54.6716270446777,
+          17.363338470459,
+          23.5376586914062
+        ],
+        "feetExit": [
+          -56.2982940673828,
+          15.1409511566162,
+          25.9376602172852
+        ],
+        "forwardSeconds": 0.471422031076484
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 73,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          76.448371887207,
+          56.3380889892578,
+          -64.782341003418
+        ],
+        "exit": [
+          76.3683700561523,
+          53.8380889892578,
+          -61.9023399353027
+        ],
+        "feetEntry": [
+          76.448371887207,
+          56.0424880981445,
+          -64.782341003418
+        ],
+        "feetExit": [
+          76.3683700561523,
+          53.4524230957031,
+          -61.9023399353027
+        ],
+        "forwardSeconds": 0.508926812266892
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 72,
+      "candidateIndex": 75,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -124.191627502441,
+          30.1380882263184,
+          -10.1423416137695
+        ],
+        "exit": [
+          -122.59162902832,
+          27.3380889892578,
+          -7.82234191894531
+        ],
+        "feetEntry": [
+          -124.191627502441,
+          29.73362159729,
+          -10.1423416137695
+        ],
+        "feetExit": [
+          -122.59162902832,
+          26.9813232421875,
+          -7.82234191894531
+        ],
+        "forwardSeconds": 0.524623517877586
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 0,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.5105228424072,
+          1.25690841674805,
+          -76.8413009643555
+        ],
+        "exit": [
+          -10.7505216598511,
+          0.256908416748047,
+          -75.9613037109375
+        ],
+        "feetEntry": [
+          -12.5105228424072,
+          1.14399993419647,
+          -76.8413009643555
+        ],
+        "feetExit": [
+          -10.7505216598511,
+          0.119999937713146,
+          -75.9613037109375
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 2,
+      "candidate": {
+        "backwardSeconds": 0.229463512171257,
+        "bidirectional": false,
+        "entry": [
+          -8.35052108764648,
+          1.55690574645996,
+          66.918701171875
+        ],
+        "exit": [
+          -8.27052211761475,
+          2.15690803527832,
+          68.1186981201172
+        ],
+        "feetEntry": [
+          -8.35052108764648,
+          1.39578378200531,
+          66.918701171875
+        ],
+        "feetExit": [
+          -8.27052211761475,
+          1.922318816185,
+          68.1186981201172
+        ],
+        "forwardSeconds": 0.229463512171257
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 3,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          0.193479537963867,
+          7.85690689086914,
+          -8.90529632568359
+        ],
+        "exit": [
+          -0.830522537231445,
+          6.65690612792969,
+          -8.52130126953125
+        ],
+        "feetEntry": [
+          0.193479537963867,
+          8.02104759216309,
+          -8.90529632568359
+        ],
+        "feetExit": [
+          -0.830522537231445,
+          6.40294981002808,
+          -8.52130126953125
+        ],
+        "forwardSeconds": 0.402255861627274
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 4,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          5.9694766998291,
+          1.25690841674805,
+          49.4786987304688
+        ],
+        "exit": [
+          6.28947639465332,
+          0.256908416748047,
+          51.1586990356445
+        ],
+        "feetEntry": [
+          5.9694766998291,
+          1.14399993419647,
+          49.4786987304688
+        ],
+        "feetExit": [
+          6.28947639465332,
+          0.119999937713146,
+          51.1586990356445
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 5,
+      "candidate": {
+        "backwardSeconds": 0.279405564720645,
+        "bidirectional": false,
+        "entry": [
+          -14.0305213928223,
+          3.05690765380859,
+          -54.5213012695312
+        ],
+        "exit": [
+          -12.6705226898193,
+          3.85690689086914,
+          -55.6412963867188
+        ],
+        "feetEntry": [
+          -14.0305213928223,
+          2.90140151977539,
+          -54.5213012695312
+        ],
+        "feetExit": [
+          -12.6705226898193,
+          3.68207621574402,
+          -55.6412963867188
+        ],
+        "forwardSeconds": 0.279405564720645
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 6,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -2.27052307128906,
+          0.256908416748047,
+          51.2387008666992
+        ],
+        "exit": [
+          -0.990520477294922,
+          1.25690841674805,
+          51.798698425293
+        ],
+        "feetEntry": [
+          -2.27052307128906,
+          0.122699968516827,
+          51.2387008666992
+        ],
+        "feetExit": [
+          -0.990520477294922,
+          1.09112465381622,
+          51.798698425293
+        ],
+        "forwardSeconds": 0.311195225750556
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 8,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -1.15052223205566,
+          1.25690841674805,
+          23.2386932373047
+        ],
+        "exit": [
+          0.0494785308837891,
+          0.256908416748047,
+          22.5186996459961
+        ],
+        "feetEntry": [
+          -1.15052223205566,
+          1.14399993419647,
+          23.2386932373047
+        ],
+        "feetExit": [
+          0.0494785308837891,
+          0.119999937713146,
+          22.5186996459961
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 10,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          9.88947677612305,
+          1.25690841674805,
+          -29.8813018798828
+        ],
+        "exit": [
+          7.72947883605957,
+          0.256908416748047,
+          -30.2813034057617
+        ],
+        "feetEntry": [
+          9.88947677612305,
+          1.14399993419647,
+          -29.8813018798828
+        ],
+        "feetExit": [
+          7.72947883605957,
+          0.119999997317791,
+          -30.2813034057617
+        ],
+        "forwardSeconds": 0.319999990137294
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 11,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          9.27614402770996,
+          4.95690727233887,
+          4.83869171142578
+        ],
+        "exit": [
+          8.12947845458984,
+          3.65690612792969,
+          6.59870147705078
+        ],
+        "feetEntry": [
+          9.27614402770996,
+          4.64012050628662,
+          4.83869171142578
+        ],
+        "feetExit": [
+          8.12947845458984,
+          3.41458749771118,
+          6.59870147705078
+        ],
+        "forwardSeconds": 0.350076135801262
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 13,
+      "candidate": {
+        "backwardSeconds": 0.31999999945052,
+        "bidirectional": false,
+        "entry": [
+          -1.63052368164062,
+          1.25690841674805,
+          22.918701171875
+        ],
+        "exit": [
+          -2.99052238464355,
+          0.256908416748047,
+          23.4786987304688
+        ],
+        "feetEntry": [
+          -1.63052368164062,
+          1.14399993419647,
+          22.918701171875
+        ],
+        "feetExit": [
+          -2.99052238464355,
+          0.119999937713146,
+          23.4786987304688
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 14,
+      "candidate": {
+        "backwardSeconds": 0.435186965124948,
+        "bidirectional": true,
+        "entry": [
+          -4.83052062988281,
+          6.85690689086914,
+          27.5587005615234
+        ],
+        "exit": [
+          -1.87052154541016,
+          7.25690650939941,
+          26.8386993408203
+        ],
+        "feetEntry": [
+          -4.83052062988281,
+          6.71400356292725,
+          27.5587005615234
+        ],
+        "feetExit": [
+          -1.87052154541016,
+          6.98723316192627,
+          26.8386993408203
+        ],
+        "forwardSeconds": 0.435186965124948
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 15,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -9.55052185058594,
+          1.85690689086914,
+          -27.8813018798828
+        ],
+        "exit": [
+          -8.59052181243896,
+          0.856906890869141,
+          -26.0412979125977
+        ],
+        "feetEntry": [
+          -9.55052185058594,
+          1.73877370357513,
+          -27.8813018798828
+        ],
+        "feetExit": [
+          -8.59052181243896,
+          0.687300026416779,
+          -26.0412979125977
+        ],
+        "forwardSeconds": 0.324264348511882
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 16,
+      "candidate": {
+        "backwardSeconds": 0.237379424959374,
+        "bidirectional": true,
+        "entry": [
+          4.76947784423828,
+          4.85690689086914,
+          50.2787017822266
+        ],
+        "exit": [
+          4.28947830200195,
+          4.25690841674805,
+          51.5586929321289
+        ],
+        "feetEntry": [
+          4.76947784423828,
+          4.61899995803833,
+          50.2787017822266
+        ],
+        "feetExit": [
+          4.28947830200195,
+          4.0555100440979,
+          51.5586929321289
+        ],
+        "forwardSeconds": 0.237379424959374
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 17,
+      "candidate": {
+        "backwardSeconds": 0.365116300213479,
+        "bidirectional": false,
+        "entry": [
+          -4.51052093505859,
+          3.45690536499023,
+          -48.9213027954102
+        ],
+        "exit": [
+          -3.07052230834961,
+          2.25690841674805,
+          -49.5079650878906
+        ],
+        "feetEntry": [
+          -4.51052093505859,
+          3.3687744140625,
+          -48.9213027954102
+        ],
+        "feetExit": [
+          -3.07052230834961,
+          2.0356752872467,
+          -49.5079650878906
+        ],
+        "forwardSeconds": 0.365116300213479
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 18,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          9.72947692871094,
+          1.25690841674805,
+          -73.2413024902344
+        ],
+        "exit": [
+          8.44947814941406,
+          0.256908416748047,
+          -73.3213043212891
+        ],
+        "feetEntry": [
+          9.72947692871094,
+          1.14399993419647,
+          -73.2413024902344
+        ],
+        "feetExit": [
+          8.44947814941406,
+          0.119999937713146,
+          -73.3213043212891
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 19,
+      "candidate": {
+        "backwardSeconds": 0.320000008763745,
+        "bidirectional": false,
+        "entry": [
+          9.72947692871094,
+          1.25690841674805,
+          -7.48130035400391
+        ],
+        "exit": [
+          8.12947845458984,
+          0.256908416748047,
+          -7.00130462646484
+        ],
+        "feetEntry": [
+          9.72947692871094,
+          1.14399993419647,
+          -7.48130035400391
+        ],
+        "feetExit": [
+          8.12947845458984,
+          0.119999878108501,
+          -7.00130462646484
+        ],
+        "forwardSeconds": 0.320000008763745
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 20,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -0.510520935058594,
+          5.25690841674805,
+          21.15869140625
+        ],
+        "exit": [
+          1.64947700500488,
+          3.95690727233887,
+          21.5586929321289
+        ],
+        "feetEntry": [
+          -0.510520935058594,
+          5.01719999313354,
+          21.15869140625
+        ],
+        "feetExit": [
+          1.64947700500488,
+          3.68046021461487,
+          21.5586929321289
+        ],
+        "forwardSeconds": 0.365614520843836
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 22,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -10.8305215835571,
+          3.25690841674805,
+          44.6786956787109
+        ],
+        "exit": [
+          -10.5105218887329,
+          2.05690765380859,
+          46.1186981201172
+        ],
+        "feetEntry": [
+          -10.8305215835571,
+          3.14568567276001,
+          44.6786956787109
+        ],
+        "feetExit": [
+          -10.5105218887329,
+          1.90365374088287,
+          46.1186981201172
+        ],
+        "forwardSeconds": 0.352424734074829
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 24,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -0.510520935058594,
+          1.45690536499023,
+          51.3186950683594
+        ],
+        "exit": [
+          1.00947761535645,
+          0.256908416748047,
+          52.7586975097656
+        ],
+        "feetEntry": [
+          -0.510520935058594,
+          1.1546835899353,
+          51.3186950683594
+        ],
+        "feetExit": [
+          1.00947761535645,
+          0.119999997317791,
+          52.7586975097656
+        ],
+        "forwardSeconds": 0.321664979849767
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 25,
+      "candidate": {
+        "backwardSeconds": 0.339609474241788,
+        "bidirectional": false,
+        "entry": [
+          7.3294792175293,
+          1.45690536499023,
+          -8.84130096435547
+        ],
+        "exit": [
+          8.76947784423828,
+          0.256908416748047,
+          -8.04129791259766
+        ],
+        "feetEntry": [
+          7.3294792175293,
+          1.27604591846466,
+          -8.84130096435547
+        ],
+        "feetExit": [
+          8.76947784423828,
+          0.122699968516827,
+          -8.04129791259766
+        ],
+        "forwardSeconds": 0.339609474241788
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 28,
+      "candidate": {
+        "backwardSeconds": 0.319999990137294,
+        "bidirectional": false,
+        "entry": [
+          -12.4838562011719,
+          1.45690727233887,
+          -30.4679718017578
+        ],
+        "exit": [
+          -10.8305225372314,
+          0.256908416748047,
+          -30.6812973022461
+        ],
+        "feetEntry": [
+          -12.4838562011719,
+          1.14399993419647,
+          -30.4679718017578
+        ],
+        "feetExit": [
+          -10.8305225372314,
+          0.119999997317791,
+          -30.6812973022461
+        ],
+        "forwardSeconds": 0.319999990137294
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 30,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.6705226898193,
+          1.25690841674805,
+          -27.9613037109375
+        ],
+        "exit": [
+          -10.7505226135254,
+          0.256908416748047,
+          -26.7612991333008
+        ],
+        "feetEntry": [
+          -12.6705226898193,
+          1.14399993419647,
+          -27.9613037109375
+        ],
+        "feetExit": [
+          -10.7505226135254,
+          0.120000056922436,
+          -26.7612991333008
+        ],
+        "forwardSeconds": 0.323451144354684
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 31,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.6705226898193,
+          1.25690841674805,
+          -11.5613021850586
+        ],
+        "exit": [
+          -10.9905223846436,
+          0.256908416748047,
+          -11.4813003540039
+        ],
+        "feetEntry": [
+          -12.6705226898193,
+          1.14399993419647,
+          -11.5613021850586
+        ],
+        "feetExit": [
+          -10.9905223846436,
+          0.119999937713146,
+          -11.4813003540039
+        ],
+        "forwardSeconds": 0.31999999945052
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 34,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          13.4894771575928,
+          5.65690803527832,
+          2.51869964599609
+        ],
+        "exit": [
+          12.5561447143555,
+          4.15690612792969,
+          4.17202758789062
+        ],
+        "feetEntry": [
+          13.4894771575928,
+          5.40846109390259,
+          2.51869964599609
+        ],
+        "feetExit": [
+          12.5561447143555,
+          3.82288503646851,
+          4.17202758789062
+        ],
+        "forwardSeconds": 0.398192925280458
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 35,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          4.60947799682617,
+          4.45690536499023,
+          -31.1613006591797
+        ],
+        "exit": [
+          5.46281051635742,
+          2.65690612792969,
+          -29.4546279907227
+        ],
+        "feetEntry": [
+          4.60947799682617,
+          4.20367336273193,
+          -31.1613006591797
+        ],
+        "feetExit": [
+          5.46281051635742,
+          2.51489114761353,
+          -29.4546279907227
+        ],
+        "forwardSeconds": 0.410947954748337
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 36,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -10.7505216598511,
+          6.45690536499023,
+          -61.4813003540039
+        ],
+        "exit": [
+          -12.670521736145,
+          4.45690536499023,
+          -62.0413017272949
+        ],
+        "feetEntry": [
+          -10.7505216598511,
+          6.15703296661377,
+          -61.4813003540039
+        ],
+        "feetExit": [
+          -12.670521736145,
+          4.2757830619812,
+          -62.0413017272949
+        ],
+        "forwardSeconds": 0.433733778328662
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 37,
+      "candidate": {
+        "backwardSeconds": 0.42286695491976,
+        "bidirectional": false,
+        "entry": [
+          -4.83052062988281,
+          6.25690841674805,
+          -25.0012969970703
+        ],
+        "exit": [
+          -6.0305233001709,
+          4.45690536499023,
+          -23.6413040161133
+        ],
+        "feetEntry": [
+          -4.83052062988281,
+          5.97448778152466,
+          -25.0012969970703
+        ],
+        "feetExit": [
+          -6.0305233001709,
+          4.18632316589355,
+          -23.6413040161133
+        ],
+        "forwardSeconds": 0.42286695491976
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 38,
+      "candidate": {
+        "backwardSeconds": 0.423478083055798,
+        "bidirectional": false,
+        "entry": [
+          3.32947731018066,
+          6.95690727233887,
+          -51.8812942504883
+        ],
+        "exit": [
+          4.2094783782959,
+          5.25690841674805,
+          -53.6413040161133
+        ],
+        "feetEntry": [
+          3.32947731018066,
+          6.78941011428833,
+          -51.8812942504883
+        ],
+        "feetExit": [
+          4.2094783782959,
+          4.9960732460022,
+          -53.6413040161133
+        ],
+        "forwardSeconds": 0.423478083055798
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 40,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          2.28947639465332,
+          6.25690841674805,
+          52.0386962890625
+        ],
+        "exit": [
+          5.24947738647461,
+          4.05690765380859,
+          51.7986907958984
+        ],
+        "feetEntry": [
+          2.28947639465332,
+          6.13341188430786,
+          52.0386962890625
+        ],
+        "feetExit": [
+          5.24947738647461,
+          3.88673233985901,
+          51.7986907958984
+        ],
+        "forwardSeconds": 0.473991513051537
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 41,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          9.72947692871094,
+          1.25690841674805,
+          -48.0413017272949
+        ],
+        "exit": [
+          7.96947860717773,
+          0.256908416748047,
+          -49.2413024902344
+        ],
+        "feetEntry": [
+          9.72947692871094,
+          1.14399993419647,
+          -48.0413017272949
+        ],
+        "feetExit": [
+          7.96947860717773,
+          0.119999878108501,
+          -49.2413024902344
+        ],
+        "forwardSeconds": 0.320000008763745
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 43,
+      "candidate": {
+        "backwardSeconds": 0.436235604342429,
+        "bidirectional": false,
+        "entry": [
+          -6.27052307128906,
+          2.25690841674805,
+          -27.7212982177734
+        ],
+        "exit": [
+          -8.03052234649658,
+          0.256908416748047,
+          -28.6813049316406
+        ],
+        "feetEntry": [
+          -6.27052307128906,
+          2.02301502227783,
+          -27.7212982177734
+        ],
+        "feetExit": [
+          -8.03052234649658,
+          0.119999997317791,
+          -28.6813049316406
+        ],
+        "forwardSeconds": 0.436235604342429
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 44,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          3.56947898864746,
+          2.65690612792969,
+          -14.0412979125977
+        ],
+        "exit": [
+          6.76947784423828,
+          0.256908416748047,
+          -13.6412963867188
+        ],
+        "feetEntry": [
+          3.56947898864746,
+          2.4077775478363,
+          -14.0412979125977
+        ],
+        "feetExit": [
+          6.76947784423828,
+          0.119999878108501,
+          -13.6412963867188
+        ],
+        "forwardSeconds": 0.478307188920238
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 45,
+      "candidate": {
+        "backwardSeconds": 0.355596967775614,
+        "bidirectional": false,
+        "entry": [
+          -1.95052337646484,
+          6.65690612792969,
+          -10.1212997436523
+        ],
+        "exit": [
+          -0.510520935058594,
+          5.25690841674805,
+          -11.8013000488281
+        ],
+        "feetEntry": [
+          -1.95052337646484,
+          6.40298366546631,
+          -10.1212997436523
+        ],
+        "feetExit": [
+          -0.510520935058594,
+          5.1384916305542,
+          -11.8013000488281
+        ],
+        "forwardSeconds": 0.355596967775614
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 48,
+      "candidate": {
+        "backwardSeconds": 0.443745382043155,
+        "bidirectional": false,
+        "entry": [
+          7.56947898864746,
+          3.45690536499023,
+          -69.9613037109375
+        ],
+        "exit": [
+          8.2094783782959,
+          1.45690536499023,
+          -71.8013000488281
+        ],
+        "feetEntry": [
+          7.56947898864746,
+          3.18469977378845,
+          -69.9613037109375
+        ],
+        "feetExit": [
+          8.2094783782959,
+          1.2156001329422,
+          -71.8013000488281
+        ],
+        "forwardSeconds": 0.443745382043155
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 50,
+      "candidate": {
+        "backwardSeconds": 0.451741058527115,
+        "bidirectional": false,
+        "entry": [
+          7.56947898864746,
+          3.45690536499023,
+          -69.9613037109375
+        ],
+        "exit": [
+          9.88947677612305,
+          1.25690841674805,
+          -70.8412933349609
+        ],
+        "feetEntry": [
+          7.56947898864746,
+          3.18469977378845,
+          -69.9613037109375
+        ],
+        "feetExit": [
+          9.88947677612305,
+          1.14399993419647,
+          -70.8412933349609
+        ],
+        "forwardSeconds": 0.451741058527115
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 53,
+      "candidate": {
+        "backwardSeconds": 0.434435776301793,
+        "bidirectional": false,
+        "entry": [
+          2.28947639465332,
+          6.25690841674805,
+          52.0386962890625
+        ],
+        "exit": [
+          4.76947784423828,
+          4.85690689086914,
+          50.2787017822266
+        ],
+        "feetEntry": [
+          2.28947639465332,
+          6.13341188430786,
+          52.0386962890625
+        ],
+        "feetExit": [
+          4.76947784423828,
+          4.61899995803833,
+          50.2787017822266
+        ],
+        "forwardSeconds": 0.434435776301793
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 54,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.8305225372314,
+          1.25690841674805,
+          -0.281303405761719
+        ],
+        "exit": [
+          -14.8305215835571,
+          -0.743091583251953,
+          1.63870239257812
+        ],
+        "feetEntry": [
+          -12.8305225372314,
+          1.14399993419647,
+          -0.281303405761719
+        ],
+        "feetExit": [
+          -14.8305215835571,
+          -0.903999924659729,
+          1.63870239257812
+        ],
+        "forwardSeconds": 0.452548324365056
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 56,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -12.5105228424072,
+          6.45690536499023,
+          -30.9212951660156
+        ],
+        "exit": [
+          -10.3505220413208,
+          4.45690536499023,
+          -28.9212951660156
+        ],
+        "feetEntry": [
+          -12.5105228424072,
+          6.26399993896484,
+          -30.9212951660156
+        ],
+        "feetExit": [
+          -10.3505220413208,
+          4.18634653091431,
+          -28.9212951660156
+        ],
+        "forwardSeconds": 0.45581283527897
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 58,
+      "candidate": {
+        "backwardSeconds": 0.529428686414446,
+        "bidirectional": true,
+        "entry": [
+          -16.1105213165283,
+          6.95690727233887,
+          24.5986938476562
+        ],
+        "exit": [
+          -15.2305221557617,
+          6.45690536499023,
+          28.1986999511719
+        ],
+        "feetEntry": [
+          -16.1105213165283,
+          6.77524900436401,
+          24.5986938476562
+        ],
+        "feetExit": [
+          -15.2305221557617,
+          6.26359987258911,
+          28.1986999511719
+        ],
+        "forwardSeconds": 0.529428686414446
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 63,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          7.64947700500488,
+          3.55690574645996,
+          7.31869506835938
+        ],
+        "exit": [
+          9.56947708129883,
+          1.15690803527832,
+          9.87870025634766
+        ],
+        "feetEntry": [
+          7.64947700500488,
+          3.38943815231323,
+          7.31869506835938
+        ],
+        "feetExit": [
+          9.56947708129883,
+          0.829729616641998,
+          9.87870025634766
+        ],
+        "forwardSeconds": 0.505935621959082
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 37,
+      "candidateIndex": 65,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          15.1161441802979,
+          3.15690612792969,
+          7.71869659423828
+        ],
+        "exit": [
+          17.889476776123,
+          0.356906890869141,
+          5.95869445800781
+        ],
+        "feetEntry": [
+          15.1161441802979,
+          2.75689673423767,
+          7.71869659423828
+        ],
+        "feetExit": [
+          17.889476776123,
+          0.156557023525238,
+          5.95869445800781
+        ],
+        "forwardSeconds": 0.509935261647244
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 0,
+      "candidate": {
+        "backwardSeconds": 0.224013465187127,
+        "bidirectional": true,
+        "entry": [
+          15.1061038970947,
+          3.29103374481201,
+          -1.7782130241394
+        ],
+        "exit": [
+          16.5461044311523,
+          3.79103374481201,
+          -1.53821325302124
+        ],
+        "feetEntry": [
+          15.1061038970947,
+          3.14033269882202,
+          -1.7782130241394
+        ],
+        "feetExit": [
+          16.5461044311523,
+          3.64215302467346,
+          -1.53821325302124
+        ],
+        "forwardSeconds": 0.224013465187127
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 2,
+      "candidate": {
+        "backwardSeconds": 0.323790927494554,
+        "bidirectional": false,
+        "entry": [
+          15.0261039733887,
+          3.29103374481201,
+          2.38178634643555
+        ],
+        "exit": [
+          16.3061027526855,
+          2.39103388786316,
+          1.26178693771362
+        ],
+        "feetEntry": [
+          15.0261039733887,
+          3.13558721542358,
+          2.38178634643555
+        ],
+        "feetExit": [
+          16.3061027526855,
+          2.08718156814575,
+          1.26178693771362
+        ],
+        "forwardSeconds": 0.323790927494554
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 4,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          15.1061038970947,
+          3.29103374481201,
+          -1.7782130241394
+        ],
+        "exit": [
+          16.3061027526855,
+          2.29103398323059,
+          -0.0182132720947266
+        ],
+        "feetEntry": [
+          15.1061038970947,
+          3.14033269882202,
+          -1.7782130241394
+        ],
+        "feetExit": [
+          16.3061027526855,
+          1.88075816631317,
+          -0.0182132720947266
+        ],
+        "forwardSeconds": 0.354904850982464
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 8,
+      "candidate": {
+        "backwardSeconds": 0.412062883377075,
+        "bidirectional": true,
+        "entry": [
+          17.7461051940918,
+          3.99103379249573,
+          3.10178661346436
+        ],
+        "exit": [
+          18.7061042785645,
+          3.99103379249573,
+          5.82178592681885
+        ],
+        "feetEntry": [
+          17.7461051940918,
+          3.59016299247742,
+          3.10178661346436
+        ],
+        "feetExit": [
+          18.7061042785645,
+          3.67789769172668,
+          5.82178592681885
+        ],
+        "forwardSeconds": 0.412062883377075
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 9,
+      "candidate": {
+        "backwardSeconds": 0,
+        "bidirectional": false,
+        "entry": [
+          -22.0938949584961,
+          3.29103374481201,
+          3.66178607940674
+        ],
+        "exit": [
+          -22.2538948059082,
+          0.591033935546875,
+          5.45178699493408
+        ],
+        "feetEntry": [
+          -22.0938949584961,
+          3.052006483078,
+          3.66178607940674
+        ],
+        "feetExit": [
+          -22.2538948059082,
+          0.342102646827698,
+          5.45178699493408
+        ],
+        "forwardSeconds": 0.520567367038149
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    },
+    {
+      "map": 106,
+      "candidateIndex": 11,
+      "candidate": {
+        "backwardSeconds": 0.541659730552011,
+        "bidirectional": false,
+        "entry": [
+          5.90610504150391,
+          3.29103374481201,
+          -3.61821269989014
+        ],
+        "exit": [
+          6.22610473632812,
+          0.291033864021301,
+          -6.81821298599243
+        ],
+        "feetEntry": [
+          5.90610504150391,
+          3.05395269393921,
+          -3.61821269989014
+        ],
+        "feetExit": [
+          6.22610473632812,
+          0.120000056922436,
+          -6.81821298599243
+        ],
+        "forwardSeconds": 0.541659730552011
+      },
+      "reason": "Every enabled direction must launch and land within 0.85m in actual bot collision physics"
+    }
+  ],
+  "candidateFailures": [
+    "Launch swept link 72/10/false",
+    "Physical link reaches its landing without teleport: 72/10/true",
+    "Launch swept link 72/11/false",
+    "Launch swept link 72/15/false",
+    "Physical link reaches its landing without teleport: 72/17/false",
+    "Physical link reaches its landing without teleport: 72/18/true",
+    "Launch swept link 72/19/false",
+    "Physical link reaches its landing without teleport: 72/20/false",
+    "Physical link reaches its landing without teleport: 72/21/false",
+    "Launch swept link 72/23/false",
+    "Physical link reaches its landing without teleport: 72/24/true",
+    "Launch swept link 72/26/false",
+    "Launch swept link 72/29/false",
+    "Launch swept link 72/29/true",
+    "Physical link reaches its landing without teleport: 72/30/false",
+    "Launch swept link 72/32/false",
+    "Physical link reaches its landing without teleport: 72/36/false",
+    "Launch swept link 72/38/false",
+    "Launch swept link 72/39/false",
+    "Physical link reaches its landing without teleport: 72/40/false",
+    "Physical link reaches its landing without teleport: 72/42/false",
+    "Physical link reaches its landing without teleport: 72/44/false",
+    "Physical link reaches its landing without teleport: 72/45/false",
+    "Physical link reaches its landing without teleport: 72/46/false",
+    "Physical link reaches its landing without teleport: 72/47/false",
+    "Launch swept link 72/50/false",
+    "Launch swept link 72/51/false",
+    "Physical link reaches its landing without teleport: 72/53/false",
+    "Physical link reaches its landing without teleport: 72/55/false",
+    "Launch swept link 72/58/false",
+    "Launch swept link 72/62/false",
+    "Launch swept link 72/66/false",
+    "Launch swept link 72/67/false",
+    "Launch swept link 72/70/false",
+    "Launch swept link 72/72/false",
+    "Physical link reaches its landing without teleport: 72/73/false",
+    "Physical link reaches its landing without teleport: 72/75/false",
+    "Launch swept link 37/0/false",
+    "Physical link reaches its landing without teleport: 37/2/false",
+    "Launch swept link 37/3/false",
+    "Launch swept link 37/4/false",
+    "Launch swept link 37/5/false",
+    "Launch swept link 37/6/false",
+    "Launch swept link 37/8/false",
+    "Physical link reaches its landing without teleport: 37/10/false",
+    "Launch swept link 37/11/false",
+    "Launch swept link 37/13/false",
+    "Physical link reaches its landing without teleport: 37/14/false",
+    "Launch swept link 37/15/false",
+    "Launch swept link 37/16/false",
+    "Physical link reaches its landing without teleport: 37/16/true",
+    "Launch swept link 37/17/false",
+    "Launch swept link 37/18/false",
+    "Launch swept link 37/19/false",
+    "Launch swept link 37/20/false",
+    "Launch swept link 37/22/false",
+    "Launch swept link 37/24/false",
+    "Launch swept link 37/25/false",
+    "Launch swept link 37/28/false",
+    "Launch swept link 37/30/false",
+    "Launch swept link 37/31/false",
+    "Physical link reaches its landing without teleport: 37/34/false",
+    "Launch swept link 37/35/false",
+    "Physical link reaches its landing without teleport: 37/36/false",
+    "Launch swept link 37/37/false",
+    "Launch swept link 37/38/false",
+    "Launch swept link 37/40/false",
+    "Physical link reaches its landing without teleport: 37/41/false",
+    "Physical link reaches its landing without teleport: 37/43/false",
+    "Launch swept link 37/44/false",
+    "Launch swept link 37/45/false",
+    "Launch swept link 37/48/false",
+    "Launch swept link 37/50/false",
+    "Physical link reaches its landing without teleport: 37/53/false",
+    "Launch swept link 37/54/false",
+    "Launch swept link 37/56/false",
+    "Launch swept link 37/58/true",
+    "Launch swept link 37/63/false",
+    "Launch swept link 37/65/false",
+    "Physical link reaches its landing without teleport: 106/0/true",
+    "Launch swept link 106/2/false",
+    "Launch swept link 106/4/false",
+    "Physical link reaches its landing without teleport: 106/8/false",
+    "Launch swept link 106/9/false",
+    "Launch swept link 106/11/false"
+  ],
+  "finalLinkCount": 78
+}

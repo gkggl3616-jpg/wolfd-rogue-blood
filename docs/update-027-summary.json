@@ -1,0 +1,23 @@
+{
+  "version": "0.27.0-offline",
+  "runtimeCodeSha256": "bc06363f6a33473630d2b7d621eb280c34945e71c8d9a2543fcf7ade9d2b36e8",
+  "regressionStages": 35,
+  "passed": true,
+  "targetedChecks": 1431,
+  "realOpenGlCaptures": 287,
+  "maps": 34,
+  "weaponRecords": 903,
+  "remainingCrossTeamRoutes": [
+    72,
+    37
+  ],
+  "fullPcParity": false,
+  "physicalAndroidDeviceTested": false,
+  "references": [
+    "PC_REFERANS_027.md",
+    "power-timing-source-027.json",
+    "weapon-fx-source-027.json",
+    "surface-source-027.json",
+    "video-audit-027.json"
+  ]
+}

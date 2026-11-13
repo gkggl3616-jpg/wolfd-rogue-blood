@@ -1,0 +1,84 @@
+{
+  "url": "https://vt.tiktok.com/ZSpDPBqGD/",
+  "canonicalUrl": "https://www.tiktok.com/@wolf.metrix/video/7705405781419609352",
+  "videoSha256": "7d6c2282bc40b1be2389b3f3148143534f22489aae9dba89402a34db9806f59a",
+  "videoBytes": 3964373,
+  "durationSeconds": 33.877914,
+  "width": 1024,
+  "height": 576,
+  "fps": 30,
+  "sampleIntervalSeconds": 0.2,
+  "sampleCount": 169,
+  "pages": [
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-0.jpg",
+      "sha256": "5c989653688433a05d19a851736f0dfebeaf5decefb968cd978ec2a44914ca9c",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-1.jpg",
+      "sha256": "03b6521951b390dc618b67ab20afa553d649d303665c871605b3e0298ffa2e9e",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-2.jpg",
+      "sha256": "3a575579efc09399b3fe1a6dd3d325bdabb37379a6d443b43decf0a09e85d6c5",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-3.jpg",
+      "sha256": "0ec47fbe728e0613256cca0658c8bebbf045280281ffa420ae417dd42ac3c05f",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-4.jpg",
+      "sha256": "5b2f624d19e696bffc7cf365d6c53ed4b02d15a2f30ce6d667f074948001b677",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-5.jpg",
+      "sha256": "368d6051aabd7ac8a51dbaea2e5389ea0a9610220309f418d348460fe803b83a",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-6.jpg",
+      "sha256": "47455d09d7f6346437cfff8bccd253c7b3b927e4263a50cce8b9567ecccc85b5",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-7.jpg",
+      "sha256": "78e5ef531f7d390cf9384034ffe54bec370ad823a71b1f7b84ce8e2b3c4eb3bd",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-8.jpg",
+      "sha256": "d5318f9fcf32cd8e8c1c5e0a4ec89fdbd52120710e33abb90423e6b32f90c750",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-9.jpg",
+      "sha256": "6f8bb8794b3717b070d3dc28dee551dfb0a1179fcabacf58cf25b329053bc414",
+      "manuallyInspected": true
+    },
+    {
+      "path": "docs/review/update-031/reference-tiktok/tiktok031-sheet-10.jpg",
+      "sha256": "fc5b8c47dbd7d935dccc69855011596565324e4bdf9d4685a93c400a1e4bb8cf",
+      "manuallyInspected": true
+    }
+  ],
+  "continuousRealtimeHumanPlayback": false,
+  "method": "Ordinary browser successfully played the public TikTok; captured complete browser-delivered MP4. FFmpeg decoded video through its end and produced five samples per second; all eleven contact sheets inspected. Page labels are nominal fps-filter sample times, not individually verified native PTS.",
+  "observations": [
+    "Standing/running, crouched movement and recovery to standing are distinct poses. Upper/lower source tracks must be combined with the original weight set.",
+    "Stationary and moving rolls, ledge/roof jumps, alternating claws, crouched attack poses, temporary transparency and a separate repeated white/purple howl effect are visible.",
+    "The recording shows a wolf movement demonstration, not coordinated bot combat; squad features are the user-requested local AI behavior.",
+    "Cut/speed changes and the match clock prevent deriving exact game movement speed from clip duration.",
+    "No new FT/HP effect rule inferred from overlapping purple hand/head effects; prior source FT percentage timing preserved.",
+    "Normal-wolf 240HP is an explicit user configuration request; this recording does not establish universal character HP statistics."
+  ],
+  "limits": [
+    "Not every original frame individually inspected; no continuous human playback claim.",
+    "No separate audio/mechanic inference claimed.",
+    "Native upper/lower clip composition uses local phase alignment, not the complete closed-source animation tracker."
+  ]
+}

@@ -1,54 +1,110 @@
 extends Node2D
+const Art=preload("res://ui/source_theme.gd")
+const VideoLayout=preload("res://scripts/video_layout.gd")
+
+# A touch belongs to exactly one target until release. Visual targets deliberately
+# do not use TouchScreenButton's independent global input handling.
+class TouchTarget extends Node2D:
+	signal pressed
+	var action = ""
 
 var game
 var move_finger = -1
 var look_finger = -1
 var center = Vector2.ZERO
 var thumb = Vector2.ZERO
-var look_last = Vector2.ZERO
 var buttons = []
 var last_size = Vector2.ZERO
 var direction_buttons = true
+var action_fingers = {}
+var ui_scale = 1.0
+var stick_radius = 64.0
+var icon_textures = {}
+var last_icon_state = []
 
 func _ready():
-	for item in [["fire", "ATEŞ"], ["jump", "ZIPLA"], ["crouch", "EĞİL"], ["reload", "ŞARJÖR"], ["transform", "DÖNÜŞ"], ["sprint", "KOŞ"], ["aim", "NİŞAN"], ["forward", "İLERİ"], ["backward", "GERİ"], ["left", "SOL"], ["right", "SAĞ"]]:
-		var button = TouchScreenButton.new()
+	var catalog=JSON.parse_string(FileAccess.get_file_as_string("res://assets/ui/control-icons.json"))
+	if catalog is Dictionary:
+		for key in catalog:
+			var entry=catalog[key]
+			icon_textures[key]=Art.atlas(entry.asset,Rect2(entry.region[0],entry.region[1],entry.region[2],entry.region[3])) if entry.has("region") else Art.texture(entry.asset)
+	for item in [["fire", "ATEŞ"], ["jump", "ZIPLA"], ["crouch", "EĞİL"], ["reload", "ŞARJÖR"], ["transform", "DÖNÜŞ"], ["sprint", "KOŞ"], ["aim", "NİŞAN"], ["forward", "İLERİ"], ["backward", "GERİ"], ["left", "SOL"], ["right", "SAĞ"], ["roll", "TAKLA"],["interact","BOMBA"]]:
+		var button = TouchTarget.new()
 		button.action = item[0]
-		var shape = CircleShape2D.new()
-		shape.radius = 44 if item[0] == "fire" else 33
-		button.shape = shape
-		button.shape_centered = true
 		add_child(button)
 		var text = Label.new()
 		text.text = item[1]
-		text.position = Vector2(-32, -9)
-		text.size = Vector2(64, 20)
+		text.position = Vector2(-34, -8)
+		text.size = Vector2(68, 20)
 		text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		text.add_theme_font_size_override("font_size", 12)
+		text.add_theme_font_size_override("font_size", 10)
+		text.add_theme_font_override("font",Art.font())
 		text.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		button.add_child(text)
+		var icon=Sprite2D.new();icon.name="ActionImage";button.add_child(icon)
 		buttons.append(button)
 	buttons[5].pressed.connect(func():
-		if game.running and not game.menu_open:
-			game.player.normal_run_toggled = not game.player.normal_run_toggled
+		if can_control():
+			if game.player.is_wolf:
+				if game.player.can_wolf_run():game.player.wolf_run_armed=not game.player.wolf_run_armed
+			else:game.player.normal_run_toggled = not game.player.normal_run_toggled
 	)
+	icon_textures.interact=Art.texture("wt_interface/play/bomb_setup.dtx")
 	resize()
 
+func can_control():
+	return game.is_combat_active()
+
 func resize():
+	reset()
 	last_size = get_viewport_rect().size
-	center = Vector2(115, last_size.y - 132)
-	var locations = [Vector2(-108,-132),Vector2(-195,-205),Vector2(-195,-64),Vector2(-280,-132),Vector2(-105,-265),Vector2(225,-95),Vector2(-280,-235)]
-	for i in range(7):
-		buttons[i].position = Vector2(last_size.x, last_size.y) + locations[i] if i != 5 else Vector2(265,last_size.y - 205)
+	ui_scale = minf(last_size.y / 720.0, last_size.x / 1024.0)
+	stick_radius = 64.0 * ui_scale
+	center = last_size * VideoLayout.MOVE
+	for button in buttons:
+		if VideoLayout.TOUCH.has(button.action):button.position=last_size*VideoLayout.TOUCH[button.action]
 	for i in range(4):
-		buttons[i+7].position = center + [Vector2(0,-70),Vector2(0,70),Vector2(-70,0),Vector2(70,0)][i]
+		buttons[i+7].position=center+[Vector2(0,-70),Vector2(0,70),Vector2(-70,0),Vector2(70,0)][i]*ui_scale
+	for button in buttons:
+		var custom=preload("res://scripts/control_layout.gd");var factor=custom.scale_for(game.book.control_layout,button.action)
+		button.scale=Vector2.ONE*ui_scale*factor;button.position=custom.center(game.book.control_layout,button.action,button.position,last_size,38*ui_scale*factor)
 	queue_redraw()
 
 func _process(_delta):
-	visible = game.running and not game.menu_open
-	for i in range(7,buttons.size()):
+	visible = can_control()
+	for i in range(7, 11):
 		buttons[i].visible = direction_buttons
-	buttons[5].get_child(0).text = "KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞ"
+	buttons[12].visible=game.destruction.enabled and game.health>0
+	buttons[11].visible = game.player.is_wolf
+	buttons[4].visible = not game.hunt.active and int(game.local_room.get("mode",0))!=game.WOLF_BATTLE
+	buttons[5].visible=not game.player.is_wolf
+	buttons[5].get_child(0).text = "KURT KOŞ" if game.player.is_wolf else ("KOŞ AÇIK" if game.player.normal_run_toggled else "KOŞU")
+	buttons[3].get_child(0).text = "KÜKRE" if game.player.is_wolf else "ŞARJÖR"
+	buttons[6].get_child(0).text = "GÜÇLÜ" if game.player.is_wolf else "NİŞAN"
+	buttons[0].get_child(0).visible = false
+	buttons[4].get_child(0).visible = false
+	buttons[2].get_child(0).text = "ÇÖMEL"
+	var icon_state=[game.player.is_wolf,game.player.weapon_info.get("category","rifle"),game.player.mutation_id,game.equipment.has_wolf_ability()]
+	if last_icon_state!=icon_state:
+		last_icon_state=icon_state
+		for button in buttons:
+			var key=button.action
+			if key=="fire" and game.player.is_wolf:key="wolf_fire"
+			elif key=="fire" and icon_state[1]=="knife":key="knife_fire"
+			elif key=="fire" and icon_state[1]=="grenade":key="grenade_fire"
+			if key=="reload" and game.player.is_wolf:key="roar"
+			if key=="aim" and game.player.is_wolf:key="strong"
+			var image=button.get_child(1) as Sprite2D
+			image.texture=icon_textures.get(key)
+			if key=="sprint" and game.player.is_wolf:image.texture=Art.atlas("res://assets/items/wolf-dash.png",Rect2(0,0,288,168))
+			if key=="strong" and game.player.mutation_id in ["guardian","ghost"]:image.texture=Art.texture("wt_interface/play/common/skillup_%swolf.dtx" % game.player.mutation_id)
+			if button.action=="transform" and game.player.is_wolf:image.texture=Art.texture("res://assets/ui/form-icons/human.png")
+			if image.texture:
+				image.scale=Vector2.ONE*(44.0/maxf(image.texture.get_width(),image.texture.get_height()))
+			button.get_child(0).visible=image.texture==null and not button.action in ["forward","backward","left","right"]
+			if key=="sprint":
+				button.get_child(0).visible=game.player.is_wolf
+				button.get_child(0).position.y=27 if game.player.is_wolf else -8
 	if get_viewport_rect().size != last_size:
 		resize()
 	if not visible:
@@ -59,56 +115,104 @@ func reset():
 	move_finger = -1
 	look_finger = -1
 	thumb = Vector2.ZERO
+	action_fingers.clear()
 	game.player.move_axis = Vector2.ZERO
 	for button in buttons:
 		Input.action_release(button.action)
 
+func release_finger(index):
+	if action_fingers.has(index):
+		var action = action_fingers[index]
+		action_fingers.erase(index)
+		if not action in action_fingers.values():
+			Input.action_release(action)
+	if index == move_finger:
+		move_finger = -1
+		thumb = Vector2.ZERO
+		game.player.move_axis = Vector2.ZERO
+	if index == look_finger:
+		look_finger = -1
+
 func _input(event):
-	if not visible:
-		return
-	if event is InputEventScreenTouch:
-		if event.pressed:
-			for button in buttons:
-				if button.visible and event.position.distance_to(button.position) < (52 if button.action == "fire" else 42):
-					return
-			if event.position.x < last_size.x * 0.35 and move_finger == -1:
-				if direction_buttons:
-					return
-				move_finger = event.index
-				update_stick(event.position)
-			elif look_finger == -1:
-				look_finger = event.index
-				look_last = event.position
-		else:
-			if event.index == move_finger:
-				move_finger = -1
-				thumb = Vector2.ZERO
-				game.player.move_axis = Vector2.ZERO
-				queue_redraw()
-			if event.index == look_finger:
-				look_finger = -1
-	if event is InputEventScreenDrag:
+	# Owned releases must be received even when a GUI now covers this finger.
+	if event is InputEventScreenTouch and not event.pressed:
+		release_finger(event.index)
+	elif event is InputEventScreenDrag and can_control():
 		if event.index == move_finger:
 			update_stick(event.position)
-		elif event.index == look_finger:
-			game.player.look(event.relative)
+		elif event.index == look_finger or (action_fingers.get(event.index,"")=="fire" and not game.player.is_wolf):
+			game.player.look(event.relative * (720.0 / maxf(1.0, last_size.y)))
+
+func _unhandled_input(event):
+	if not event is InputEventScreenTouch or not event.pressed or not can_control():
+		return
+	if action_fingers.has(event.index) or event.index == move_finger or event.index == look_finger:
+		return
+	if game.gameplay_touch_blocked(event.position):
+		return
+	for button in buttons:
+		if not button.visible or (button.action == "roll" and not game.player.is_wolf):
+			continue
+		if button.action in ["forward", "backward", "left", "right"] and not direction_buttons:
+			continue
+		if event.position.distance_to(button.position) <= (38 if button.action == "fire" else 34) * button.scale.x:
+			var was_held = button.action in action_fingers.values()
+			action_fingers[event.index] = button.action
+			if not was_held:
+				Input.action_press(button.action)
+				button.pressed.emit()
+			get_viewport().set_input_as_handled()
+			return
+	if event.position.x < last_size.x * 0.35:
+		if direction_buttons or move_finger != -1:
+			return
+		move_finger = event.index
+		update_stick(event.position)
+	elif look_finger == -1:
+		look_finger = event.index
+	get_viewport().set_input_as_handled()
 
 func update_stick(point):
-	thumb = (point - center).limit_length(64)
-	game.player.move_axis = thumb / 64 if thumb.length() > 8 else Vector2.ZERO
+	thumb = (point - center).limit_length(stick_radius)
+	var deadzone = stick_radius * 0.125
+	game.player.move_axis = thumb.normalized() * ((thumb.length()-deadzone)/(stick_radius-deadzone)) if thumb.length() > deadzone else Vector2.ZERO
 	queue_redraw()
 
 func _draw():
 	if not direction_buttons:
-		draw_circle(center, 76, Color(0.1, 0.14, 0.2, 0.6))
-		draw_arc(center, 76, 0, TAU, 64, Color(0.7, 0.8, 0.9, 0.4), 2)
-		draw_circle(center + thumb, 28, Color(0.7, 0.8, 0.9, 0.4))
+		draw_circle(center, 76 * ui_scale, Color(0.04,0.05,0.06,0.20))
+		draw_arc(center, 76 * ui_scale, 0, TAU, 64, Color(0.7,0.8,0.9,0.32), 1.5 * ui_scale)
+		draw_circle(center + thumb, 31 * ui_scale, Color(0.04,0.05,0.06,0.55))
+		draw_arc(center + thumb, 31 * ui_scale, 0, TAU, 40, Color(0.66,0.53,0.26,0.7), 2 * ui_scale)
 	for button in buttons:
 		if not button.visible:
 			continue
-		var radius = 45 if button.action == "fire" else 34
-		var color = Color(0.68,0.2,0.18,0.65) if button.action == "fire" else Color(0.14,0.2,0.28,0.75)
-		if Input.is_action_pressed(button.action) or (button.action == "sprint" and game.player.normal_run_toggled):
+		var radius = (32 if button.action == "fire" else 27) * button.scale.x
+		var color = Color(0.04,0.05,0.06,0.64)
+		if Input.is_action_pressed(button.action) or (button.action == "sprint" and (game.player.wolf_run_armed if game.player.is_wolf else game.player.normal_run_toggled)):
 			color = color.lightened(0.35)
-		draw_circle(button.position, radius, color)
-		draw_arc(button.position, radius, 0, TAU, 40, Color(0.8,0.8,0.85,0.5), 1.5)
+		draw_circle(button.position,radius,color)
+		var border = Color(0.67,0.73,0.75,0.55)
+		if button.action == "transform":border = Color("b19a38")
+		if button.action == "aim" and game.player.is_wolf:border=Color("bd944b")
+		if button.action == "sprint" and game.player.is_wolf:border=Color("7ecbe2")
+		draw_arc(button.position,radius,0,TAU,48,border,1.4*button.scale.x,true)
+		if button.action in ["forward","backward","left","right"]:
+			var direction={"forward":Vector2.UP,"backward":Vector2.DOWN,"left":Vector2.LEFT,"right":Vector2.RIGHT}[button.action]
+			var across=Vector2(-direction.y,direction.x)
+			draw_colored_polygon(PackedVector2Array([button.position+direction*13*button.scale.x,button.position-direction*7*button.scale.x+across*9*button.scale.x,button.position-direction*7*button.scale.x-across*9*button.scale.x]),Color("d6dddd"))
+		if button.get_child(1).texture!=null:continue
+		if button.action == "fire":
+			if game.player.is_wolf:
+				for i in range(3):
+					var at = button.position + Vector2(-12+i*8,-8)*button.scale.x
+					draw_line(at,at+Vector2(9,17)*button.scale.x,Color(0.9,0.92,0.94,0.9),3*button.scale.x,true)
+			else:
+				draw_arc(button.position,11*button.scale.x,0,TAU,24,Color(0.9,0.92,0.94,0.9),1.5*button.scale.x,true)
+				for i in range(4):
+					var dir = Vector2.from_angle(PI*i/2)
+					draw_line(button.position+dir*7*button.scale.x,button.position+dir*16*button.scale.x,Color.WHITE,1.5*button.scale.x,true)
+		elif button.action == "transform":
+			for offset in [Vector2(-8,-6),Vector2(-3,-11),Vector2(4,-11),Vector2(9,-5)]:
+				draw_circle(button.position+offset*button.scale.x,3*button.scale.x,Color("d8c063"))
+			draw_circle(button.position+Vector2(0,5)*button.scale.x,7*button.scale.x,Color("d8c063"))

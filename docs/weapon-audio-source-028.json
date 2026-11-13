@@ -1,0 +1,33 @@
+{
+  "records": 903,
+  "uniqueSounds": 243,
+  "addedOriginalSounds": 0,
+  "issues": [
+    {
+      "source": "root/wt_snd/mainweapon/venelly/venelly_reload.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    },
+    {
+      "source": "root/wt_snd/mainweapon/ff-2000/ff-2000_fire.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    },
+    {
+      "source": "root/wt_snd/mainweapon/ff-2000/ff-2000_reload1.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    },
+    {
+      "source": "root/wt_snd/mainweapon/ff-2000/ff-2000_reload3.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    },
+    {
+      "source": "root/wt_snd/mainweapon/ff-2000/ff-2000_reload2.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    },
+    {
+      "source": "root/wt_snd/specialweapon/smokegrenade/smokegrenade_button.wav",
+      "reason": "Exact source sound is absent from the supplied archive"
+    }
+  ],
+  "sourceSha256": "2d66831198c297d37ddb55de79c8f0de73868bdedee0343d1b81630c532e007a",
+  "scope": "Native sound keys1-3 reload,4 select,10 fire, matched to original animation events. Other native sound-key meanings remain unverified."
+}

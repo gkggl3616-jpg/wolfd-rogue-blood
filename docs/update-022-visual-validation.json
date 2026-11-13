@@ -1,0 +1,88 @@
+{
+  "captures": [
+    {
+      "height": 720,
+      "name": "original-device-equip-022",
+      "path": "docs/review/update-022/original-device-equip-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "e276d6ab4e01ccf70e4d0b14268f959613b65db347fbd19ced9cc93307bbe688"
+    },
+    {
+      "height": 720,
+      "name": "original-hands-and-assembly-022",
+      "path": "docs/review/update-022/original-hands-and-assembly-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "2605841650148d7af93959655e76d095814a9680093a4f6ba9418c737129efe3"
+    },
+    {
+      "height": 720,
+      "name": "cancel-restores-weapon-022",
+      "path": "docs/review/update-022/cancel-restores-weapon-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "3fb21950f32343be454c64c4693bf9cc753247e75491007e66f02e46294016e8"
+    },
+    {
+      "height": 720,
+      "name": "world-bomb-and-fuse-022",
+      "path": "docs/review/update-022/world-bomb-and-fuse-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "29435f6460bd84a51c9790903786b7b60da6191392976de4d941845dd95f4f46"
+    },
+    {
+      "height": 720,
+      "name": "source-bomb-explosion-022",
+      "path": "docs/review/update-022/source-bomb-explosion-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "daeb0b3efe5b5b3acfc6a6a749a437145b26cce60f0540c89ca2297ce1110ab3"
+    },
+    {
+      "height": 720,
+      "name": "separate-defuse-progress-022",
+      "path": "docs/review/update-022/separate-defuse-progress-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "810ea0feae7ab8fedf466536ac56f2fecb4465cd96221290855e01fd6288c96f"
+    },
+    {
+      "height": 720,
+      "name": "match-summary-022",
+      "path": "docs/review/update-022/match-summary-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "25bf876a5a1d099ed7a5740ce1d7b60fe279bf0705a169d930ea02d7e5b82c62"
+    },
+    {
+      "height": 720,
+      "name": "credited-award-cards-022",
+      "path": "docs/review/update-022/credited-award-cards-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "25bf876a5a1d099ed7a5740ce1d7b60fe279bf0705a169d930ea02d7e5b82c62"
+    },
+    {
+      "height": 720,
+      "name": "detailed-match-result-022",
+      "path": "docs/review/update-022/detailed-match-result-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "42dcbd6c357fee5c1d25f51ef48fb6ab5f6f05686181c572c0a2dc3c8fdc4ab6"
+    },
+    {
+      "height": 720,
+      "name": "return-to-configured-room-022",
+      "path": "docs/review/update-022/return-to-configured-room-022.png",
+      "saved": true,
+      "width": 1280,
+      "sha256": "d1ae6a6c642d4656714f5146e0faf754af80e7faa3b291626d6f10697d0bb037"
+    }
+  ],
+  "failures": 0,
+  "physicalAndroidDeviceTested": false,
+  "rendering": "gl_compatibility",
+  "runtimeCodeSha256": "ea2cdb6e83c431506a95ea7ef4c849ed9dde822ad17ceeb3a354733cbe80833d"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "contentScanSha256": "c3e409f3fa2cdd9c7e902166bad26a46e8a0051f00ddf74e88b92f123eebb16a",
+  "recordsChecked": 19231,
+  "matchingOriginalSourceBytes": {
+    "layout": 365,
+    "texture": 18862,
+    "font": 4
+  },
+  "issues": [],
+  "originalPixelEquivalenceVerified": false,
+  "completeOriginalUiFlow": false,
+  "scope": "Original source-byte identity for layout/texture/font catalogue claims. Decoded pixels, render styles and original C++ screen composition still require independent validation."
+}
